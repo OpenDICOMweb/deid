@@ -1,0 +1,25 @@
+# Typical Dart .gitignore
+build
+packages
+.DS_Store
+.idea/
+.project
+*.iml
+*.ipr
+*.iws
+
+*.dart.js
+*.dart.precompiled.js
+*.js_
+*.js.deps
+*.js.map
+*.swp
+
+#JFP added
+pubspec.lock
+bin
+
+
+
+
+

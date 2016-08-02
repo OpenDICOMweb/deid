@@ -1,0 +1,12 @@
+name: deid
+version: 0.1.0
+description: A library for de-identifying DICOM Studies.
+author: Jim Philbin <jfphilbin@gmail.com>
+description: DICOM De-Identification library
+
+dependencies:
+  core:
+    path: C:/odw/sdk/core
+
+dev_dependencies:
+  test: any

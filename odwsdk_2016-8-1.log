@@ -1,0 +1,7 @@
+"Open DICOMweb log file (opened at 2016-08-01 18:06:39.998204)"
+000: 2016-08-01 18:06:40.013245 [CONFIG] System: System Log Created with Root Level: CONFIG
+001: 2016-08-01 18:06:40.018308 [CONFIG] System: Logger is Hierarchical
+002: 2016-08-01 18:06:40.022318 [CONFIG] System: LogFileName: odwsdk_2016-8-1.log
+003: 2016-08-01 18:06:40.026329 [CONFIG] System: System running: /C:/odw/sdk/de_id/bin/deid_test.dart
+004: 2016-08-01 18:06:40.031342 [CONFIG] System: Study Cache: {} created.
+005: 2016-08-01 18:06:40.034350 [CONFIG] System: Reading file: File: 'C:/odw/sdk/convert/test_data/PID_MINT10/CR.2.16.840.1.114255.393386351.1568457295.17895.5.dcm'
