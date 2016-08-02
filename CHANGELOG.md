@@ -1,4 +1,4 @@
-# ODW SDK Changelog
+# ODW De-Identification Changelog
 
 ## 0.0.1
 
@@ -6,11 +6,12 @@
 
 ## 0.1.0
 
-- added .gitignore
-- added .gitattributes
-- added .analysis_options
-- updated README.md
-- updated pubspec.yaml
+- initial commit
+
+## 0.1.1
+
+- clean up yaml
+- minor name changes
 
 ### TODO:
 1. update license
