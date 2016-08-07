@@ -86,7 +86,7 @@ String arrayToString(List data) {
 }
 
 void main() {
-  File input = new File("C:/odw/sdk/de_id/lib/src/gen/deid.csv");
+  File input = new File("C:/odw/sdk/deidentification/lib/src/gen/deid.csv");
   File output = new File('./deid.json');
 
   List<String> lines = input.readAsLinesSync(encoding: SYSTEM_ENCODING);
