@@ -19,7 +19,7 @@ void main() {
   File   output;
 
   String jsonFilename        = 'c:/odw/sdk/deidentification/lib/src/gen/deid.json';
-  String classFilename       = 'deid.dart';
+  String classFilename       = 'deidentification.dart';
 
   DeIdClassTable table = DeIdClassTable.read(jsonFilename);
 

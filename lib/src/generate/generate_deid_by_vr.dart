@@ -6,7 +6,7 @@
 
 
 import 'package:core/core.dart';
-import 'package:deid/deid.dart';
+import 'package:deid/deidentification.dart';
 
 List vrs = new List(32);
 List vrTags = new List(32);

@@ -1,11 +1,12 @@
 // Copyright (c) 2016, Open DICOMweb Project. All rights reserved.
-
 // Use of this source code is governed by the open source license
 // that can be found in the LICENSE file.
 // Original author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
-{
+import 'package:core/base.dart';
+
+Map<VR, List<Element>> deidElementsByVR = {
 VR.AE: [Element: (0032,1021), VR.AE, VM.k1_n, ScheduledStudyLocationAETitle, (Retired),
 Element: (0040, 0001), VR.AE, VM.k1_n, ScheduledStationAETitle,
 Element: (0040,0241), VR.AE, VM.k1, PerformedStationAETitle]
