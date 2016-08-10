@@ -3,13 +3,10 @@
 // that can be found in the LICENSE file.
 // Author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
-library odw.sdk.deid.deidentifier;
 
-import 'package:core/attribute.dart';
-import 'package:core/dataset_sop.dart';
+import 'package:core/dicom.dart';
 
 import 'basic_profile.dart';
-import 'deid_class.dart';
 import 'deid_tags.dart';
 import 'option.dart';
 

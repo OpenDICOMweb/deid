@@ -7,12 +7,10 @@
 import 'dart:io';
 
 import 'package:logger/logger.dart';
-import 'package:convert/convert.dart';
-import 'package:core/dataset_sop.dart';
-import 'package:core/system.dart';
+import 'package:convert/dicom.dart';
+import 'package:core/dicom.dart';
 
-import 'package:deid/src/basic_profile.dart';
-import 'package:deid/src/deidentifier.dart';
+import 'package:deidentification/src/deidentifier.dart';
 
 String testData = "C:/odw/sdk/convert/test_data/";
 String testOutput = "C:/odw/sdk/convert/test_output/";
@@ -29,7 +27,7 @@ String crf2 = "PID_MINT10/CR.2.16.840.1.114255.393386351.1568457295.48879.7.dcm"
 String output = "output.dcm";
 
 void main() {
-  Logger log = System.init(level: Level.config);
+  Logger log = new Logger("deid_test", Level.debug);
   String inPath = testData + crf1;
 
   File file = new File(inPath);

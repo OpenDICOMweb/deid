@@ -5,7 +5,10 @@
 // See the AUTHORS file for other contributors.
 library odw.sdk.deid.patient;
 
-import 'package:core/core.dart';
+import 'package:uuid/uuid_v4.dart';
+import 'package:core/dicom.dart';
+
+import 'option.dart';
 
 /// Defines a patient and related attributes
 /// Includes some transformation functions
@@ -17,11 +20,11 @@ abstract class Patient {
   List<String>    pids;
 
   String get initials => name.first[0] + name.middle[0] + name.last[0];
-  Uuid   get uuid => Uuid.random;
+  Uuid   get uuid => new Uuid();
   String get hash;
 
   /// Returns a de-identified version of the patient record
-  Patient deidentify([List<Options> options]) {
+  Patient deidentify([List<Option> options]) {
 
   }
 }

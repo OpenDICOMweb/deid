@@ -5,11 +5,10 @@
 // See the AUTHORS file for other contributors.
 library odw.sdk.deid.private_characteristics;
 
+import 'package:core/base.dart';
 import 'package:core/attribute.dart';
 import 'package:core/dataset_sop.dart';
-import 'package:core/tag.dart';
-import 'package:core/vm.dart';
-import 'package:core/vr.dart';
+
 
 import 'deid_action.dart';
 
@@ -42,7 +41,7 @@ class PrivateCharacteristics {
       "Private Group Reference",
       VR.kUS,
       VM.k1,
-      AT.k1,
+      AType.k1,
       false);
 
   ///The value of the Private Creator Data Element value used to reserve the block of

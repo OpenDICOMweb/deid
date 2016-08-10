@@ -16,7 +16,7 @@ const String fileExt = '.txt';
 
 ///TODO: doc
 void main() {
-  List<String> filesWithErrors = [];
+  List<List<String>> filesWithErrors = [];
   List<FileSystemEntity> dirList;
   List<String> fileList = [];
 
@@ -38,9 +38,10 @@ void main() {
   for (String filePath in fileList) {
     Protocol protocol = Protocol.parseFile(filePath);
     //print(protocol.json);
-    if (protocol.errors.length > 0)
-      filesWithErrors.add(filePath);
-
+    if (protocol.errors.length > 0) {
+      List entry = [filePath, protocol.errors];
+      filesWithErrors.add(entry);
+    }
     var fname = path.basenameWithoutExtension(filePath);
     print('fname: $fname');
     var outPath = path.join(path.normalize(outputDir), '$fname.json');

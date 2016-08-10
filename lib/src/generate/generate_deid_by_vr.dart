@@ -4,9 +4,11 @@
 // Original author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
+import 'dart:io';
 
-import 'package:core/core.dart';
-import 'package:deid/deidentification.dart';
+import 'package:core/dicom.dart';
+import 'package:core/new_base.dart';
+import 'package:deidentification/deidentification.dart';
 
 List vrs = new List(32);
 List vrTags = new List(32);
@@ -21,15 +23,14 @@ void main() {
       print('bad Tag: ${hex(tag)}');
     } else {
       var i = e.vr.index;
-      print("${e.vr}, Index= $i");
+     // print("${e.vr}, Index= $i");
       if (vrTags[i] == null) {
         if (vrs[i] == null)
           vrs[i] = e.vr;
-        vrTags[i] = [];
+        vrTags[i] = [e.code];
       }
-      var list = vrTags[i];
-      list.add(e);
-      //print('${hex(tag)}: ${e.vr}');
+      vrTags[i].add(e.code);
+      //print('${hex(tag)}: ${e.vr}: ${vrTags[i]}');
     }
   }
 
@@ -43,18 +44,27 @@ void main() {
     if (vrTags[i] != null)
       print('$i(${vrTags[i].length}): ${vrTags[i]}');
   }
+  print(toByVRJson(vrs, vrTags));
+  writeJson(vrs, vrTags);
 
-  print(toJson(vrs, vrTags));
 
   // print('${hex(tag)}: ${Element.lookup(tag)}');
 }
 
-String toJson(List vrs, List vrTags) {
+String toByVRJson(List vrs, List<List<int>> vrTags) {
   var s = '{\n';
+  var vrList = [];
   for (int i = 0; i < vrTags.length; i++) {
-    if (vrs[i] == null) continue;
-    List<Element> elt = vrTags[i];
-      s += '${vrs[i]}: [${Tag.hex(elt.code)}\n';
+    if ((vrs[i] == null) || (vrTags[i].length == 0)) continue;
+    vrList.add('"${vrs[i].name}": [${vrTags[i].length}, ${vrTags[i].join(', ')}]');
   }
-  return s += '}\n';
+  s += vrList.join(',\n');
+  return s += '\n}';
+}
+
+String outDirPath = "C:/odw/sdk/deidentification/lib/src/generate/output";
+
+void writeJson(List vrs, List<List<int>> vrTags) {
+  File outFile = new File('$outDirPath/deid_by_vr.json');
+  outFile.writeAsStringSync(toByVRJson(vrs, vrTags));
 }

@@ -3,12 +3,9 @@
 // that can be found in the LICENSE file.
 // Author: Jim Philbin <jfphilbin@gmail.edu> -
 // See the AUTHORS file for other contributors.
-library odw.sdk.deid.deid_action;
 
-import 'package:core/attribute.dart';
-import 'package:core/dataset_sop.dart';
-import 'package:core/uid.dart';
-import 'package:core/vr.dart';
+
+import 'package:core/dicom.dart';
 
 /// This library implements DICOM study de-identification.  It conforms to
 /// DICOM PS3.15 Appendix E.
