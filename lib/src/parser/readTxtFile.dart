@@ -3,7 +3,7 @@
 // that can be found in the LICENSE file.
 // Author: Jim Philbin <jfphilbin@gmail.edu>
 // See the AUTHORS file for other contributors.
-library odw.sdk.deidentification.parser.parse_text;
+
 
 import 'dart:io';
 

@@ -27,11 +27,40 @@ var s7 = 'set.[0012,0031] ClinicalTrialSiteName = @blank(1)';
 
 var sList = [s0, s1, s2, s3, s4, s5, s6, s7];
 
-
+/// Rule RegExp
 //set.[0008,0020] StudyDate = @blank(0)
 final RegExp setter = new RegExp(r'set\.\[([0-9a-fA-F]{4}),([0-9a-fA-F]{4})\] ([0-9a-zA-F]+) = (@[a-zA-Z]+)(\([\w\s]+\))');
 
 final RegExp tag = new RegExp(r'set.\[([0-9a-fA-F]{4}),([0-9a-fA-F]{4})\]\s(\w+)\s=\s@(\w+)\(([@|\-|\d|\w]+)\)');
+
+/// @param(string)
+const String pSpecial = r'[\w|!|@|#|$|%|^|&|*|-|=|+|~|`|?]+';
+const String legal = '[\w$pSpecial]+';
+const String paramArg = '[\w$pSpecial]+';
+const String function = '@\w+\\(';
+const String script = '\\{$legal\\}';
+const String reset = 'RESET|Reset|reset(\/\d*)+';
+
+const String atParamPattern = '@param\\($paramArg\\)';
+final RegExp atParam = new RegExp(atParamPattern);
+
+const String blank = '@blank\(([@|\w]*)\)';
+const String pName = '(\w*^)';
+const String param1 = '@param\((([@|\w]*[^]?)*)';
+const String time = '@time\((@\w+)|([\*|\&|\w]+)\)';
+
+
+/// (<string>)
+const String legalNonWords = r'[@|$|*|&|^';
+const String paramArg = r'[\w| @ ';
+
+const String tagRegExp = r"(\d+)";
+const String tagListRegExp = r'(/$tag)';
+
+const String reset = r'RESET/\d+/113103/113105/113107/113108/113109/113111/11111/2222';
+
+
+
 void main() {
 
   for (String s in pList) {
