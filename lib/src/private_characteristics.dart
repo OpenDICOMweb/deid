@@ -178,7 +178,7 @@ class PrivateDataCharacteristics {
   BlockStatus status;
   List<int> nonPhiElements;
   List<int> phiElements;
-  List<DeIdAction> actions;
+  List<Action> actions;
 
 }
 

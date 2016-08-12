@@ -6,6 +6,15 @@
 
 import 'package:core/dicom.dart';
 
+class Replacement {
+  Pattern pattern;
+
+  Replacement(this.pattern);
+
+  static parse(String replacement) {
+
+  }
+}
 abstract class Function {
   static const String name = "";
   final List args;
@@ -77,10 +86,12 @@ class Contents extends Function {
 
   Contents(int tag, Pattern regex, Replacement replacement);
 
-  String call(int tag, Pattern pattern, Replacement replacement) {
+  List<String> call(Dataset ds, int tag, Pattern pattern, Replacement replacement) {
     List<String> values = ds.lookup(tag).values;
+    List<String> results = [];
     for(String s in values)
-        s.replaceAll(pattern, replacement);
+        results.add(s.replaceAll(pattern, replacement.pattern));
+    return results;
   }
 
   static parse(String args) {
@@ -92,7 +103,7 @@ class Contents extends Function {
 /// @date(String sep)
 class Date extends Function {
 
-  Contents(int tag, Pattern regex, Replacement replacement);
+  Date(int tag, Pattern regex, Replacement replacement);
 
   String call([String sep]) {
     if (sep == null) sep = "-";
@@ -113,27 +124,14 @@ class Encrypt extends Function {
 
   Encrypt(int tag, [key]);
 
-  String call(int tag,  key) {
+  String call(int tag, key) {
 
-}
-
-static parse(String args) {
-
-}
-
-}
-
-
-
-/// @blank(int n)
-class Empty extends Function {
-  // The number of blanks - n must be non-negative
-  Empty(int n);
-
-  String call() => Blank.call(0);
+  }
 
   static parse(String args) {
 
   }
 
 }
+
+

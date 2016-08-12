@@ -16,517 +16,517 @@ class DeId {
   final int tag;
   final bool isRetired;
   final bool InStdCompIOD;
-  final DeIdAction basicProfile;
-  final DeIdAction safePrivate;
-  final DeIdAction uids;
-  final DeIdAction deviceIdent;
-  final DeIdAction patientChars;
-  final DeIdAction longFullDates;
-  final DeIdAction longModifDates;
-  final DeIdAction cleanDesc;
-  final DeIdAction cleanStructCont;
-  final DeIdAction cleanGraph;
+  final Action basicProfile;
+  final Action safePrivate;
+  final Action uids;
+  final Action deviceIdent;
+  final Action patientChars;
+  final Action longFullDates;
+  final Action longModifDates;
+  final Action cleanDesc;
+  final Action cleanStructCont;
+  final Action cleanGraph;
 
   const DeId(this.keyword, this.tag, this.isRetired, this.InStdCompIOD, this.basicProfile, this.safePrivate, this.uids, this.deviceIdent, this.patientChars, this.longFullDates, this.longModifDates, this.cleanDesc, this.cleanStructCont, this.cleanGraph);
 
   static DeId lookup(int tag) => tagToDeId[tag];
   
   //(0008,0050)
-  static const AccessionNumber = const DeId("AccessionNumber", 0x00080050, false, true, DeIdAction.Z, null, null, null, null, null, null, null, null, null);
+  static const AccessionNumber = const DeId("AccessionNumber", 0x00080050, false, true, Action.Z, null, null, null, null, null, null, null, null, null);
   //(0018,4000)
-  static const AcquisitionComments = const DeId("AcquisitionComments", 0x00184000, true, false, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const AcquisitionComments = const DeId("AcquisitionComments", 0x00184000, true, false, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0040,0555)
-  static const AcquisitionContextSequence = const DeId("AcquisitionContextSequence", 0x00400555, false, true, DeIdAction.X, null, null, null, null, null, null, null, DeIdAction.C, null);
+  static const AcquisitionContextSequence = const DeId("AcquisitionContextSequence", 0x00400555, false, true, Action.X, null, null, null, null, null, null, null, Action.C, null);
   //(0008,0022)
-  static const AcquisitionDate = const DeId("AcquisitionDate", 0x00080022, false, true, DeIdAction.XZ, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const AcquisitionDate = const DeId("AcquisitionDate", 0x00080022, false, true, Action.XZ, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0008,002A)
-  static const AcquisitionDateTime = const DeId("AcquisitionDateTime", 0x0008002A, false, true, DeIdAction.XD, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const AcquisitionDateTime = const DeId("AcquisitionDateTime", 0x0008002A, false, true, Action.XD, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0018,1400)
-  static const AcquisitionDeviceProcessingDescription = const DeId("AcquisitionDeviceProcessingDescription", 0x00181400, false, true, DeIdAction.XD, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const AcquisitionDeviceProcessingDescription = const DeId("AcquisitionDeviceProcessingDescription", 0x00181400, false, true, Action.XD, null, null, null, null, null, null, Action.C, null, null);
   //(0018,9424)
-  static const AcquisitionProtocolDescription = const DeId("AcquisitionProtocolDescription", 0x00189424, false, true, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const AcquisitionProtocolDescription = const DeId("AcquisitionProtocolDescription", 0x00189424, false, true, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0008,0032)
-  static const AcquisitionTime = const DeId("AcquisitionTime", 0x00080032, false, true, DeIdAction.XZ, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const AcquisitionTime = const DeId("AcquisitionTime", 0x00080032, false, true, Action.XZ, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0040,4035)
-  static const ActualHumanPerformersSequence = const DeId("ActualHumanPerformersSequence", 0x00404035, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ActualHumanPerformersSequence = const DeId("ActualHumanPerformersSequence", 0x00404035, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,21B0)
-  static const AdditionalPatientsHistory = const DeId("AdditionalPatientsHistory", 0x001021B0, false, true, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const AdditionalPatientsHistory = const DeId("AdditionalPatientsHistory", 0x001021B0, false, true, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0038,0010)
-  static const AdmissionID = const DeId("AdmissionID", 0x00380010, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const AdmissionID = const DeId("AdmissionID", 0x00380010, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0038,0020)
-  static const AdmittingDate = const DeId("AdmittingDate", 0x00380020, false, false, DeIdAction.X, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const AdmittingDate = const DeId("AdmittingDate", 0x00380020, false, false, Action.X, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0008,1084)
-  static const AdmittingDiagnosesCodeSequence = const DeId("AdmittingDiagnosesCodeSequence", 0x00081084, false, true, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const AdmittingDiagnosesCodeSequence = const DeId("AdmittingDiagnosesCodeSequence", 0x00081084, false, true, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0008,1080)
-  static const AdmittingDiagnosesDescription = const DeId("AdmittingDiagnosesDescription", 0x00081080, false, true, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const AdmittingDiagnosesDescription = const DeId("AdmittingDiagnosesDescription", 0x00081080, false, true, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0038,0021)
-  static const AdmittingTime = const DeId("AdmittingTime", 0x00380021, false, false, DeIdAction.X, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const AdmittingTime = const DeId("AdmittingTime", 0x00380021, false, false, Action.X, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0000,1000)
-  static const AffectedSOPInstanceUID = const DeId("AffectedSOPInstanceUID", 0x00001000, false, false, DeIdAction.X, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const AffectedSOPInstanceUID = const DeId("AffectedSOPInstanceUID", 0x00001000, false, false, Action.X, null, Action.K, null, null, null, null, null, null, null);
   //(0010,2110)
-  static const Allergies = const DeId("Allergies", 0x00102110, false, false, DeIdAction.X, null, null, null, DeIdAction.C, null, null, DeIdAction.C, null, null);
+  static const Allergies = const DeId("Allergies", 0x00102110, false, false, Action.X, null, null, null, Action.C, null, null, Action.C, null, null);
   //(4000,0010)
-  static const Arbitrary = const DeId("Arbitrary", 0x40000010, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const Arbitrary = const DeId("Arbitrary", 0x40000010, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0040,A078)
-  static const AuthorObserverSequence = const DeId("AuthorObserverSequence", 0x0040A078, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const AuthorObserverSequence = const DeId("AuthorObserverSequence", 0x0040A078, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,1081)
-  static const BranchofService = const DeId("BranchofService", 0x00101081, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const BranchofService = const DeId("BranchofService", 0x00101081, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0018,1007)
-  static const CassetteID = const DeId("CassetteID", 0x00181007, false, true, DeIdAction.X, null, null, DeIdAction.K, null, null, null, null, null, null);
+  static const CassetteID = const DeId("CassetteID", 0x00181007, false, true, Action.X, null, null, Action.K, null, null, null, null, null, null);
   //(0040,0280)
-  static const CommentsonthePerformedProcedureStep = const DeId("CommentsonthePerformedProcedureStep", 0x00400280, false, true, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const CommentsonthePerformedProcedureStep = const DeId("CommentsonthePerformedProcedureStep", 0x00400280, false, true, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0020,9161)
-  static const ConcatenationUID = const DeId("ConcatenationUID", 0x00209161, false, true, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const ConcatenationUID = const DeId("ConcatenationUID", 0x00209161, false, true, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0040,3001)
-  static const ConfidentialityConstraintonPatientDataDescription = const DeId("ConfidentialityConstraintonPatientDataDescription", 0x00403001, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ConfidentialityConstraintonPatientDataDescription = const DeId("ConfidentialityConstraintonPatientDataDescription", 0x00403001, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0070,0084)
-  static const ContentCreatorsName = const DeId("ContentCreatorsName", 0x00700084, false, true, DeIdAction.Z, null, null, null, null, null, null, null, null, null);
+  static const ContentCreatorsName = const DeId("ContentCreatorsName", 0x00700084, false, true, Action.Z, null, null, null, null, null, null, null, null, null);
   //(0070,0086)
-  static const ContentCreatorsIdentificationCodeSequence = const DeId("ContentCreatorsIdentificationCodeSequence", 0x00700086, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ContentCreatorsIdentificationCodeSequence = const DeId("ContentCreatorsIdentificationCodeSequence", 0x00700086, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0008,0023)
-  static const ContentDate = const DeId("ContentDate", 0x00080023, false, true, DeIdAction.ZD, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const ContentDate = const DeId("ContentDate", 0x00080023, false, true, Action.ZD, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0040,A730)
-  static const ContentSequence = const DeId("ContentSequence", 0x0040A730, false, true, DeIdAction.X, null, null, null, null, null, null, null, DeIdAction.C, null);
+  static const ContentSequence = const DeId("ContentSequence", 0x0040A730, false, true, Action.X, null, null, null, null, null, null, null, Action.C, null);
   //(0008,0033)
-  static const ContentTime = const DeId("ContentTime", 0x00080033, false, true, DeIdAction.ZD, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const ContentTime = const DeId("ContentTime", 0x00080033, false, true, Action.ZD, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0008,010D)
-  static const ContextGroupExtensionCreatorUID = const DeId("ContextGroupExtensionCreatorUID", 0x0008010D, false, true, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const ContextGroupExtensionCreatorUID = const DeId("ContextGroupExtensionCreatorUID", 0x0008010D, false, true, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0018,0010)
-  static const ContrastBolusAgent = const DeId("ContrastBolusAgent", 0x00180010, false, true, DeIdAction.ZD, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const ContrastBolusAgent = const DeId("ContrastBolusAgent", 0x00180010, false, true, Action.ZD, null, null, null, null, null, null, Action.C, null, null);
   //(0018,A003)
-  static const ContributionDescription = const DeId("ContributionDescription", 0x0018A003, false, true, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const ContributionDescription = const DeId("ContributionDescription", 0x0018A003, false, true, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0010,2150)
-  static const CountryofResidence = const DeId("CountryofResidence", 0x00102150, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const CountryofResidence = const DeId("CountryofResidence", 0x00102150, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0008,9123)
-  static const CreatorVersionUID = const DeId("CreatorVersionUID", 0x00089123, false, true, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const CreatorVersionUID = const DeId("CreatorVersionUID", 0x00089123, false, true, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0038,0300)
-  static const CurrentPatientLocation = const DeId("CurrentPatientLocation", 0x00380300, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const CurrentPatientLocation = const DeId("CurrentPatientLocation", 0x00380300, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(50xx,xxxx)
-  static const CurveData = const DeId("CurveData", 0x50000000, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, DeIdAction.C);
+  static const CurveData = const DeId("CurveData", 0x50000000, true, false, Action.X, null, null, null, null, null, null, null, null, Action.C);
   //(0008,0025)
-  static const CurveDate = const DeId("CurveDate", 0x00080025, true, true, DeIdAction.X, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const CurveDate = const DeId("CurveDate", 0x00080025, true, true, Action.X, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0008,0035)
-  static const CurveTime = const DeId("CurveTime", 0x00080035, true, true, DeIdAction.X, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const CurveTime = const DeId("CurveTime", 0x00080035, true, true, Action.X, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0040,A07C)
-  static const CustodialOrganizationSequence = const DeId("CustodialOrganizationSequence", 0x0040A07C, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const CustodialOrganizationSequence = const DeId("CustodialOrganizationSequence", 0x0040A07C, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(FFFC,FFFC)
-  static const DataSetTrailingPadding = const DeId("DataSetTrailingPadding", 0xFFFCFFFC, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const DataSetTrailingPadding = const DeId("DataSetTrailingPadding", 0xFFFCFFFC, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0008,2111)
-  static const DerivationDescription = const DeId("DerivationDescription", 0x00082111, false, true, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const DerivationDescription = const DeId("DerivationDescription", 0x00082111, false, true, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0018,700A)
-  static const DetectorID = const DeId("DetectorID", 0x0018700A, false, true, DeIdAction.XD, null, null, DeIdAction.K, null, null, null, null, null, null);
+  static const DetectorID = const DeId("DetectorID", 0x0018700A, false, true, Action.XD, null, null, Action.K, null, null, null, null, null, null);
   //(0018,1000)
-  static const DeviceSerialNumber = const DeId("DeviceSerialNumber", 0x00181000, false, true, DeIdAction.XZD, null, null, DeIdAction.K, null, null, null, null, null, null);
+  static const DeviceSerialNumber = const DeId("DeviceSerialNumber", 0x00181000, false, true, Action.XZD, null, null, Action.K, null, null, null, null, null, null);
   //(0018,1002)
-  static const DeviceUID = const DeId("DeviceUID", 0x00181002, false, true, DeIdAction.U, null, DeIdAction.K, DeIdAction.K, null, null, null, null, null, null);
+  static const DeviceUID = const DeId("DeviceUID", 0x00181002, false, true, Action.U, null, Action.K, Action.K, null, null, null, null, null, null);
   //(0400,0100)
-  static const DigitalSignatureUID = const DeId("DigitalSignatureUID", 0x04000100, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const DigitalSignatureUID = const DeId("DigitalSignatureUID", 0x04000100, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(FFFA,FFFA)
-  static const DigitalSignaturesSequence = const DeId("DigitalSignaturesSequence", 0xFFFAFFFA, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const DigitalSignaturesSequence = const DeId("DigitalSignaturesSequence", 0xFFFAFFFA, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0020,9164)
-  static const DimensionOrganizationUID = const DeId("DimensionOrganizationUID", 0x00209164, false, true, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const DimensionOrganizationUID = const DeId("DimensionOrganizationUID", 0x00209164, false, true, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0038,0040)
-  static const DischargeDiagnosisDescription = const DeId("DischargeDiagnosisDescription", 0x00380040, true, false, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const DischargeDiagnosisDescription = const DeId("DischargeDiagnosisDescription", 0x00380040, true, false, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(4008,011A)
-  static const DistributionAddress = const DeId("DistributionAddress", 0x4008011A, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const DistributionAddress = const DeId("DistributionAddress", 0x4008011A, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(4008,0119)
-  static const DistributionName = const DeId("DistributionName", 0x40080119, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const DistributionName = const DeId("DistributionName", 0x40080119, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(300A,0013)
-  static const DoseReferenceUID = const DeId("DoseReferenceUID", 0x300A0013, false, true, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const DoseReferenceUID = const DeId("DoseReferenceUID", 0x300A0013, false, true, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0010,2160)
-  static const EthnicGroup = const DeId("EthnicGroup", 0x00102160, false, true, DeIdAction.X, null, null, null, DeIdAction.K, null, null, null, null, null);
+  static const EthnicGroup = const DeId("EthnicGroup", 0x00102160, false, true, Action.X, null, null, null, Action.K, null, null, null, null, null);
   //(0008,0058)
-  static const FailedSOPInstanceUIDList = const DeId("FailedSOPInstanceUIDList", 0x00080058, false, false, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const FailedSOPInstanceUIDList = const DeId("FailedSOPInstanceUIDList", 0x00080058, false, false, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0070,031A)
-  static const FiducialUID = const DeId("FiducialUID", 0x0070031A, false, true, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const FiducialUID = const DeId("FiducialUID", 0x0070031A, false, true, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0040,2017)
-  static const FillerOrderNumber_ImagingServiceRequest = const DeId("FillerOrderNumber_ImagingServiceRequest", 0x00402017, false, true, DeIdAction.Z, null, null, null, null, null, null, null, null, null);
+  static const FillerOrderNumber_ImagingServiceRequest = const DeId("FillerOrderNumber_ImagingServiceRequest", 0x00402017, false, true, Action.Z, null, null, null, null, null, null, null, null, null);
   //(0020,9158)
-  static const FrameComments = const DeId("FrameComments", 0x00209158, false, true, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const FrameComments = const DeId("FrameComments", 0x00209158, false, true, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0020,0052)
-  static const FrameofReferenceUID = const DeId("FrameofReferenceUID", 0x00200052, false, true, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const FrameofReferenceUID = const DeId("FrameofReferenceUID", 0x00200052, false, true, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0018,1008)
-  static const GantryID = const DeId("GantryID", 0x00181008, false, true, DeIdAction.X, null, null, DeIdAction.K, null, null, null, null, null, null);
+  static const GantryID = const DeId("GantryID", 0x00181008, false, true, Action.X, null, null, Action.K, null, null, null, null, null, null);
   //(0018,1005)
-  static const GeneratorID = const DeId("GeneratorID", 0x00181005, false, true, DeIdAction.X, null, null, DeIdAction.K, null, null, null, null, null, null);
+  static const GeneratorID = const DeId("GeneratorID", 0x00181005, false, true, Action.X, null, null, Action.K, null, null, null, null, null, null);
   //(0070,0001)
-  static const GraphicAnnotationSequence = const DeId("GraphicAnnotationSequence", 0x00700001, false, true, DeIdAction.D, null, null, null, null, null, null, null, null, DeIdAction.C);
+  static const GraphicAnnotationSequence = const DeId("GraphicAnnotationSequence", 0x00700001, false, true, Action.D, null, null, null, null, null, null, null, null, Action.C);
   //(0040,4037)
-  static const HumanPerformersName = const DeId("HumanPerformersName", 0x00404037, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const HumanPerformersName = const DeId("HumanPerformersName", 0x00404037, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0040,4036)
-  static const HumanPerformersOrganization = const DeId("HumanPerformersOrganization", 0x00404036, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const HumanPerformersOrganization = const DeId("HumanPerformersOrganization", 0x00404036, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0088,0200)
-  static const IconImageSequence0xseeNote12 = const DeId("IconImageSequence0xseeNote12", 0x00880200, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const IconImageSequence0xseeNote12 = const DeId("IconImageSequence0xseeNote12", 0x00880200, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0008,4000)
-  static const IdentifyingComments = const DeId("IdentifyingComments", 0x00084000, true, false, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const IdentifyingComments = const DeId("IdentifyingComments", 0x00084000, true, false, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0020,4000)
-  static const ImageComments = const DeId("ImageComments", 0x00204000, false, true, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const ImageComments = const DeId("ImageComments", 0x00204000, false, true, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0028,4000)
-  static const ImagePresentationComments = const DeId("ImagePresentationComments", 0x00284000, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ImagePresentationComments = const DeId("ImagePresentationComments", 0x00284000, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0040,2400)
-  static const ImagingServiceRequestComments = const DeId("ImagingServiceRequestComments", 0x00402400, false, false, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const ImagingServiceRequestComments = const DeId("ImagingServiceRequestComments", 0x00402400, false, false, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(4008,0300)
-  static const Impressions = const DeId("Impressions", 0x40080300, true, false, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const Impressions = const DeId("Impressions", 0x40080300, true, false, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0008,0014)
-  static const InstanceCreatorUID = const DeId("InstanceCreatorUID", 0x00080014, false, true, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const InstanceCreatorUID = const DeId("InstanceCreatorUID", 0x00080014, false, true, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0008,0081)
-  static const InstitutionAddress = const DeId("InstitutionAddress", 0x00080081, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const InstitutionAddress = const DeId("InstitutionAddress", 0x00080081, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0008,0082)
-  static const InstitutionCodeSequence = const DeId("InstitutionCodeSequence", 0x00080082, false, true, DeIdAction.XZD, null, null, null, null, null, null, null, null, null);
+  static const InstitutionCodeSequence = const DeId("InstitutionCodeSequence", 0x00080082, false, true, Action.XZD, null, null, null, null, null, null, null, null, null);
   //(0008,0080)
-  static const InstitutionName = const DeId("InstitutionName", 0x00080080, false, true, DeIdAction.XZD, null, null, null, null, null, null, null, null, null);
+  static const InstitutionName = const DeId("InstitutionName", 0x00080080, false, true, Action.XZD, null, null, null, null, null, null, null, null, null);
   //(0008,1040)
-  static const InstitutionalDepartmentName = const DeId("InstitutionalDepartmentName", 0x00081040, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const InstitutionalDepartmentName = const DeId("InstitutionalDepartmentName", 0x00081040, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,1050)
-  static const InsurancePlanIdentification = const DeId("InsurancePlanIdentification", 0x00101050, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const InsurancePlanIdentification = const DeId("InsurancePlanIdentification", 0x00101050, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0040,1011)
-  static const IntendedRecipientsofResultsIdentificationSequence = const DeId("IntendedRecipientsofResultsIdentificationSequence", 0x00401011, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const IntendedRecipientsofResultsIdentificationSequence = const DeId("IntendedRecipientsofResultsIdentificationSequence", 0x00401011, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(4008,0111)
-  static const InterpretationApproverSequence = const DeId("InterpretationApproverSequence", 0x40080111, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const InterpretationApproverSequence = const DeId("InterpretationApproverSequence", 0x40080111, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(4008,010C)
-  static const InterpretationAuthor = const DeId("InterpretationAuthor", 0x4008010C, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const InterpretationAuthor = const DeId("InterpretationAuthor", 0x4008010C, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(4008,0115)
-  static const InterpretationDiagnosisDescription = const DeId("InterpretationDiagnosisDescription", 0x40080115, true, false, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const InterpretationDiagnosisDescription = const DeId("InterpretationDiagnosisDescription", 0x40080115, true, false, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(4008,0202)
-  static const InterpretationIDIssuer = const DeId("InterpretationIDIssuer", 0x40080202, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const InterpretationIDIssuer = const DeId("InterpretationIDIssuer", 0x40080202, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(4008,0102)
-  static const InterpretationRecorder = const DeId("InterpretationRecorder", 0x40080102, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const InterpretationRecorder = const DeId("InterpretationRecorder", 0x40080102, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(4008,010B)
-  static const InterpretationText = const DeId("InterpretationText", 0x4008010B, true, false, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const InterpretationText = const DeId("InterpretationText", 0x4008010B, true, false, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(4008,010A)
-  static const InterpretationTranscriber = const DeId("InterpretationTranscriber", 0x4008010A, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const InterpretationTranscriber = const DeId("InterpretationTranscriber", 0x4008010A, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0008,3010)
-  static const IrradiationEventUID = const DeId("IrradiationEventUID", 0x00083010, false, true, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const IrradiationEventUID = const DeId("IrradiationEventUID", 0x00083010, false, true, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0038,0011)
-  static const IssuerofAdmissionID = const DeId("IssuerofAdmissionID", 0x00380011, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const IssuerofAdmissionID = const DeId("IssuerofAdmissionID", 0x00380011, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,0021)
-  static const IssuerofPatientID = const DeId("IssuerofPatientID", 0x00100021, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const IssuerofPatientID = const DeId("IssuerofPatientID", 0x00100021, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0038,0061)
-  static const IssuerofServiceEpisodeID = const DeId("IssuerofServiceEpisodeID", 0x00380061, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const IssuerofServiceEpisodeID = const DeId("IssuerofServiceEpisodeID", 0x00380061, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0028,1214)
-  static const LargePaletteColorLookupTableUID = const DeId("LargePaletteColorLookupTableUID", 0x00281214, true, false, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const LargePaletteColorLookupTableUID = const DeId("LargePaletteColorLookupTableUID", 0x00281214, true, false, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0010,21D0)
-  static const LastMenstrualDate = const DeId("LastMenstrualDate", 0x001021D0, false, false, DeIdAction.X, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const LastMenstrualDate = const DeId("LastMenstrualDate", 0x001021D0, false, false, Action.X, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0400,0404)
-  static const MAC = const DeId("MAC", 0x04000404, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const MAC = const DeId("MAC", 0x04000404, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0002,0003)
-  static const MediaStorageSOPInstanceUID = const DeId("MediaStorageSOPInstanceUID", 0x00020003, false, false, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const MediaStorageSOPInstanceUID = const DeId("MediaStorageSOPInstanceUID", 0x00020003, false, false, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0010,2000)
-  static const MedicalAlerts = const DeId("MedicalAlerts", 0x00102000, false, false, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const MedicalAlerts = const DeId("MedicalAlerts", 0x00102000, false, false, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0010,1090)
-  static const MedicalRecordLocator = const DeId("MedicalRecordLocator", 0x00101090, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const MedicalRecordLocator = const DeId("MedicalRecordLocator", 0x00101090, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,1080)
-  static const MilitaryRank = const DeId("MilitaryRank", 0x00101080, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const MilitaryRank = const DeId("MilitaryRank", 0x00101080, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0400,0550)
-  static const ModifiedAttributesSequence = const DeId("ModifiedAttributesSequence", 0x04000550, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ModifiedAttributesSequence = const DeId("ModifiedAttributesSequence", 0x04000550, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0020,3406)
-  static const ModifiedImageDescription = const DeId("ModifiedImageDescription", 0x00203406, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ModifiedImageDescription = const DeId("ModifiedImageDescription", 0x00203406, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0020,3401)
-  static const ModifyingDeviceID = const DeId("ModifyingDeviceID", 0x00203401, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ModifyingDeviceID = const DeId("ModifyingDeviceID", 0x00203401, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0020,3404)
-  static const ModifyingDeviceManufacturer = const DeId("ModifyingDeviceManufacturer", 0x00203404, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ModifyingDeviceManufacturer = const DeId("ModifyingDeviceManufacturer", 0x00203404, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0008,1060)
-  static const NameofPhysician0xsReadingStudy = const DeId("NameofPhysician0xsReadingStudy", 0x00081060, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const NameofPhysician0xsReadingStudy = const DeId("NameofPhysician0xsReadingStudy", 0x00081060, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0040,1010)
-  static const NamesofIntendedRecipientofResults = const DeId("NamesofIntendedRecipientofResults", 0x00401010, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const NamesofIntendedRecipientofResults = const DeId("NamesofIntendedRecipientofResults", 0x00401010, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,2180)
-  static const Occupation = const DeId("Occupation", 0x00102180, false, true, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const Occupation = const DeId("Occupation", 0x00102180, false, true, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0008,1072)
-  static const OperatorsIdentificationSequence = const DeId("OperatorsIdentificationSequence", 0x00081072, false, true, DeIdAction.XD, null, null, null, null, null, null, null, null, null);
+  static const OperatorsIdentificationSequence = const DeId("OperatorsIdentificationSequence", 0x00081072, false, true, Action.XD, null, null, null, null, null, null, null, null, null);
   //(0008,1070)
-  static const OperatorsName = const DeId("OperatorsName", 0x00081070, false, true, DeIdAction.XZD, null, null, null, null, null, null, null, null, null);
+  static const OperatorsName = const DeId("OperatorsName", 0x00081070, false, true, Action.XZD, null, null, null, null, null, null, null, null, null);
   //(0400,0561)
-  static const OriginalAttributesSequence = const DeId("OriginalAttributesSequence", 0x04000561, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const OriginalAttributesSequence = const DeId("OriginalAttributesSequence", 0x04000561, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0040,2010)
-  static const OrderCallbackPhoneNumber = const DeId("OrderCallbackPhoneNumber", 0x00402010, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const OrderCallbackPhoneNumber = const DeId("OrderCallbackPhoneNumber", 0x00402010, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0040,2008)
-  static const OrderEnteredBy = const DeId("OrderEnteredBy", 0x00402008, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const OrderEnteredBy = const DeId("OrderEnteredBy", 0x00402008, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0040,2009)
-  static const OrderEntererLocation = const DeId("OrderEntererLocation", 0x00402009, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const OrderEntererLocation = const DeId("OrderEntererLocation", 0x00402009, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,1000)
-  static const OtherPatientIDs = const DeId("OtherPatientIDs", 0x00101000, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const OtherPatientIDs = const DeId("OtherPatientIDs", 0x00101000, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,1002)
-  static const OtherPatientIDsSequence = const DeId("OtherPatientIDsSequence", 0x00101002, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const OtherPatientIDsSequence = const DeId("OtherPatientIDsSequence", 0x00101002, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,1001)
-  static const OtherPatientNames = const DeId("OtherPatientNames", 0x00101001, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const OtherPatientNames = const DeId("OtherPatientNames", 0x00101001, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(60xx,4000)
-  static const OverlayComments = const DeId("OverlayComments", 0x60004000, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, DeIdAction.C);
+  static const OverlayComments = const DeId("OverlayComments", 0x60004000, true, false, Action.X, null, null, null, null, null, null, null, null, Action.C);
   //(60xx,3000)
-  static const OverlayData = const DeId("OverlayData", 0x60003000, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, DeIdAction.C);
+  static const OverlayData = const DeId("OverlayData", 0x60003000, false, true, Action.X, null, null, null, null, null, null, null, null, Action.C);
   //(0008,0024)
-  static const OverlayDate = const DeId("OverlayDate", 0x00080024, true, true, DeIdAction.X, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const OverlayDate = const DeId("OverlayDate", 0x00080024, true, true, Action.X, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0008,0034)
-  static const OverlayTime = const DeId("OverlayTime", 0x00080034, true, true, DeIdAction.X, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const OverlayTime = const DeId("OverlayTime", 0x00080034, true, true, Action.X, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0028,1199)
-  static const PaletteColorLookupTableUID = const DeId("PaletteColorLookupTableUID", 0x00281199, false, true, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const PaletteColorLookupTableUID = const DeId("PaletteColorLookupTableUID", 0x00281199, false, true, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0040,A07A)
-  static const ParticipantSequence = const DeId("ParticipantSequence", 0x0040A07A, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ParticipantSequence = const DeId("ParticipantSequence", 0x0040A07A, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,1040)
-  static const PatientAddress = const DeId("PatientAddress", 0x00101040, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const PatientAddress = const DeId("PatientAddress", 0x00101040, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,4000)
-  static const PatientComments = const DeId("PatientComments", 0x00104000, false, true, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const PatientComments = const DeId("PatientComments", 0x00104000, false, true, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0010,0020)
-  static const PatientID = const DeId("PatientID", 0x00100020, false, true, DeIdAction.Z, null, null, null, null, null, null, null, null, null);
+  static const PatientID = const DeId("PatientID", 0x00100020, false, true, Action.Z, null, null, null, null, null, null, null, null, null);
   //(0010,2203)
-  static const PatientSexNeutered = const DeId("PatientSexNeutered", 0x00102203, false, true, DeIdAction.XZ, null, null, null, DeIdAction.K, null, null, null, null, null);
+  static const PatientSexNeutered = const DeId("PatientSexNeutered", 0x00102203, false, true, Action.XZ, null, null, null, Action.K, null, null, null, null, null);
   //(0038,0500)
-  static const PatientState = const DeId("PatientState", 0x00380500, false, false, DeIdAction.X, null, null, null, DeIdAction.C, null, null, DeIdAction.C, null, null);
+  static const PatientState = const DeId("PatientState", 0x00380500, false, false, Action.X, null, null, null, Action.C, null, null, Action.C, null, null);
   //(0040,1004)
-  static const PatientTransportArrangements = const DeId("PatientTransportArrangements", 0x00401004, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const PatientTransportArrangements = const DeId("PatientTransportArrangements", 0x00401004, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,1010)
-  static const PatientsAge = const DeId("PatientsAge", 0x00101010, false, true, DeIdAction.X, null, null, null, DeIdAction.K, null, null, null, null, null);
+  static const PatientsAge = const DeId("PatientsAge", 0x00101010, false, true, Action.X, null, null, null, Action.K, null, null, null, null, null);
   //(0010,0030)
-  static const PatientsBirthDate = const DeId("PatientsBirthDate", 0x00100030, false, true, DeIdAction.Z, null, null, null, null, null, null, null, null, null);
+  static const PatientsBirthDate = const DeId("PatientsBirthDate", 0x00100030, false, true, Action.Z, null, null, null, null, null, null, null, null, null);
   //(0010,1005)
-  static const PatientsBirthName = const DeId("PatientsBirthName", 0x00101005, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const PatientsBirthName = const DeId("PatientsBirthName", 0x00101005, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,0032)
-  static const PatientsBirthTime = const DeId("PatientsBirthTime", 0x00100032, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const PatientsBirthTime = const DeId("PatientsBirthTime", 0x00100032, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0038,0400)
-  static const PatientsInstitutionResidence = const DeId("PatientsInstitutionResidence", 0x00380400, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const PatientsInstitutionResidence = const DeId("PatientsInstitutionResidence", 0x00380400, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,0050)
-  static const PatientsInsurancePlanCodeSequence = const DeId("PatientsInsurancePlanCodeSequence", 0x00100050, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const PatientsInsurancePlanCodeSequence = const DeId("PatientsInsurancePlanCodeSequence", 0x00100050, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,1060)
-  static const PatientsMothersBirthName = const DeId("PatientsMothersBirthName", 0x00101060, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const PatientsMothersBirthName = const DeId("PatientsMothersBirthName", 0x00101060, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,0010)
-  static const PatientsName = const DeId("PatientsName", 0x00100010, false, true, DeIdAction.Z, null, null, null, null, null, null, null, null, null);
+  static const PatientsName = const DeId("PatientsName", 0x00100010, false, true, Action.Z, null, null, null, null, null, null, null, null, null);
   //(0010,0101)
-  static const PatientsPrimaryLanguageCodeSequence = const DeId("PatientsPrimaryLanguageCodeSequence", 0x00100101, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const PatientsPrimaryLanguageCodeSequence = const DeId("PatientsPrimaryLanguageCodeSequence", 0x00100101, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,0102)
-  static const PatientsPrimaryLanguageModifierCodeSequence = const DeId("PatientsPrimaryLanguageModifierCodeSequence", 0x00100102, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const PatientsPrimaryLanguageModifierCodeSequence = const DeId("PatientsPrimaryLanguageModifierCodeSequence", 0x00100102, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,21F0)
-  static const PatientsReligiousPreference = const DeId("PatientsReligiousPreference", 0x001021F0, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const PatientsReligiousPreference = const DeId("PatientsReligiousPreference", 0x001021F0, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,0040)
-  static const PatientsSex = const DeId("PatientsSex", 0x00100040, false, true, DeIdAction.Z, null, null, null, DeIdAction.K, null, null, null, null, null);
+  static const PatientsSex = const DeId("PatientsSex", 0x00100040, false, true, Action.Z, null, null, null, Action.K, null, null, null, null, null);
   //(0010,1020)
-  static const PatientsSize = const DeId("PatientsSize", 0x00101020, false, true, DeIdAction.X, null, null, null, DeIdAction.K, null, null, null, null, null);
+  static const PatientsSize = const DeId("PatientsSize", 0x00101020, false, true, Action.X, null, null, null, Action.K, null, null, null, null, null);
   //(0010,2154)
-  static const PatientsTelephoneNumbers = const DeId("PatientsTelephoneNumbers", 0x00102154, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const PatientsTelephoneNumbers = const DeId("PatientsTelephoneNumbers", 0x00102154, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,1030)
-  static const PatientsWeight = const DeId("PatientsWeight", 0x00101030, false, true, DeIdAction.X, null, null, null, DeIdAction.K, null, null, null, null, null);
+  static const PatientsWeight = const DeId("PatientsWeight", 0x00101030, false, true, Action.X, null, null, null, Action.K, null, null, null, null, null);
   //(0040,0243)
-  static const PerformedLocation = const DeId("PerformedLocation", 0x00400243, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const PerformedLocation = const DeId("PerformedLocation", 0x00400243, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0040,0254)
-  static const PerformedProcedureStepDescription = const DeId("PerformedProcedureStepDescription", 0x00400254, false, true, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const PerformedProcedureStepDescription = const DeId("PerformedProcedureStepDescription", 0x00400254, false, true, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0040,0250)
-  static const PerformedProcedureStepEndDate = const DeId("PerformedProcedureStepEndDate", 0x00400250, false, true, DeIdAction.X, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const PerformedProcedureStepEndDate = const DeId("PerformedProcedureStepEndDate", 0x00400250, false, true, Action.X, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0040,0251)
-  static const PerformedProcedureStepEndTime = const DeId("PerformedProcedureStepEndTime", 0x00400251, false, true, DeIdAction.X, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const PerformedProcedureStepEndTime = const DeId("PerformedProcedureStepEndTime", 0x00400251, false, true, Action.X, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0040,0253)
-  static const PerformedProcedureStepID = const DeId("PerformedProcedureStepID", 0x00400253, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const PerformedProcedureStepID = const DeId("PerformedProcedureStepID", 0x00400253, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0040,0244)
-  static const PerformedProcedureStepStartDate = const DeId("PerformedProcedureStepStartDate", 0x00400244, false, true, DeIdAction.X, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const PerformedProcedureStepStartDate = const DeId("PerformedProcedureStepStartDate", 0x00400244, false, true, Action.X, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0040,0245)
-  static const PerformedProcedureStepStartTime = const DeId("PerformedProcedureStepStartTime", 0x00400245, false, true, DeIdAction.X, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const PerformedProcedureStepStartTime = const DeId("PerformedProcedureStepStartTime", 0x00400245, false, true, Action.X, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0040,0241)
-  static const PerformedStationAETitle = const DeId("PerformedStationAETitle", 0x00400241, false, false, DeIdAction.X, null, null, DeIdAction.K, null, null, null, null, null, null);
+  static const PerformedStationAETitle = const DeId("PerformedStationAETitle", 0x00400241, false, false, Action.X, null, null, Action.K, null, null, null, null, null, null);
   //(0040,4030)
-  static const PerformedStationGeographicLocationCodeSequence = const DeId("PerformedStationGeographicLocationCodeSequence", 0x00404030, false, false, DeIdAction.X, null, null, DeIdAction.K, null, null, null, null, null, null);
+  static const PerformedStationGeographicLocationCodeSequence = const DeId("PerformedStationGeographicLocationCodeSequence", 0x00404030, false, false, Action.X, null, null, Action.K, null, null, null, null, null, null);
   //(0040,0242)
-  static const PerformedStationName = const DeId("PerformedStationName", 0x00400242, false, false, DeIdAction.X, null, null, DeIdAction.K, null, null, null, null, null, null);
+  static const PerformedStationName = const DeId("PerformedStationName", 0x00400242, false, false, Action.X, null, null, Action.K, null, null, null, null, null, null);
   //(0040,4028)
-  static const PerformedStationNameCodeSequence = const DeId("PerformedStationNameCodeSequence", 0x00404028, false, false, DeIdAction.X, null, null, DeIdAction.K, null, null, null, null, null, null);
+  static const PerformedStationNameCodeSequence = const DeId("PerformedStationNameCodeSequence", 0x00404028, false, false, Action.X, null, null, Action.K, null, null, null, null, null, null);
   //(0008,1052)
-  static const PerformingPhysicianIdentificationSequence = const DeId("PerformingPhysicianIdentificationSequence", 0x00081052, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const PerformingPhysicianIdentificationSequence = const DeId("PerformingPhysicianIdentificationSequence", 0x00081052, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0008,1050)
-  static const PerformingPhysiciansName = const DeId("PerformingPhysiciansName", 0x00081050, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const PerformingPhysiciansName = const DeId("PerformingPhysiciansName", 0x00081050, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0040,1102)
-  static const PersonAddress = const DeId("PersonAddress", 0x00401102, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const PersonAddress = const DeId("PersonAddress", 0x00401102, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0040,1101)
-  static const PersonIdentificationCodeSequence = const DeId("PersonIdentificationCodeSequence", 0x00401101, false, true, DeIdAction.D, null, null, null, null, null, null, null, null, null);
+  static const PersonIdentificationCodeSequence = const DeId("PersonIdentificationCodeSequence", 0x00401101, false, true, Action.D, null, null, null, null, null, null, null, null, null);
   //(0040,A123)
-  static const PersonName = const DeId("PersonName", 0x0040A123, false, true, DeIdAction.D, null, null, null, null, null, null, null, null, null);
+  static const PersonName = const DeId("PersonName", 0x0040A123, false, true, Action.D, null, null, null, null, null, null, null, null, null);
   //(0040,1103)
-  static const PersonTelephoneNumbers = const DeId("PersonTelephoneNumbers", 0x00401103, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const PersonTelephoneNumbers = const DeId("PersonTelephoneNumbers", 0x00401103, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(4008,0114)
-  static const PhysicianApprovingInterpretation = const DeId("PhysicianApprovingInterpretation", 0x40080114, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const PhysicianApprovingInterpretation = const DeId("PhysicianApprovingInterpretation", 0x40080114, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0008,1062)
-  static const Physician0xsReadingStudyIdentificationSequence = const DeId("Physician0xsReadingStudyIdentificationSequence", 0x00081062, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const Physician0xsReadingStudyIdentificationSequence = const DeId("Physician0xsReadingStudyIdentificationSequence", 0x00081062, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0008,1048)
-  static const Physician0xsofRecord = const DeId("Physician0xsofRecord", 0x00081048, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const Physician0xsofRecord = const DeId("Physician0xsofRecord", 0x00081048, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0008,1049)
-  static const Physician0xsofRecordIdentificationSequence = const DeId("Physician0xsofRecordIdentificationSequence", 0x00081049, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const Physician0xsofRecordIdentificationSequence = const DeId("Physician0xsofRecordIdentificationSequence", 0x00081049, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0040,2016)
-  static const PlacerOrderNumber_ImagingServiceRequest = const DeId("PlacerOrderNumber_ImagingServiceRequest", 0x00402016, false, true, DeIdAction.Z, null, null, null, null, null, null, null, null, null);
+  static const PlacerOrderNumber_ImagingServiceRequest = const DeId("PlacerOrderNumber_ImagingServiceRequest", 0x00402016, false, true, Action.Z, null, null, null, null, null, null, null, null, null);
   //(0018,1004)
-  static const PlateID = const DeId("PlateID", 0x00181004, false, true, DeIdAction.X, null, null, DeIdAction.K, null, null, null, null, null, null);
+  static const PlateID = const DeId("PlateID", 0x00181004, false, true, Action.X, null, null, Action.K, null, null, null, null, null, null);
   //(0040,0012)
-  static const Pre_Medication = const DeId("Pre_Medication", 0x00400012, false, false, DeIdAction.X, null, null, null, DeIdAction.C, null, null, null, null, null);
+  static const Pre_Medication = const DeId("Pre_Medication", 0x00400012, false, false, Action.X, null, null, null, Action.C, null, null, null, null, null);
   //(0010,21C0)
-  static const PregnancyStatus = const DeId("PregnancyStatus", 0x001021C0, false, false, DeIdAction.X, null, null, null, DeIdAction.K, null, null, null, null, null);
+  static const PregnancyStatus = const DeId("PregnancyStatus", 0x001021C0, false, false, Action.X, null, null, null, Action.K, null, null, null, null, null);
   //(0018,1030)
-  static const ProtocolName = const DeId("ProtocolName", 0x00181030, false, true, DeIdAction.XD, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const ProtocolName = const DeId("ProtocolName", 0x00181030, false, true, Action.XD, null, null, null, null, null, null, Action.C, null, null);
   //(0040,2001)
-  static const ReasonfortheImagingServiceRequest = const DeId("ReasonfortheImagingServiceRequest", 0x00402001, true, false, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const ReasonfortheImagingServiceRequest = const DeId("ReasonfortheImagingServiceRequest", 0x00402001, true, false, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0032,1030)
-  static const ReasonforStudy = const DeId("ReasonforStudy", 0x00321030, true, false, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const ReasonforStudy = const DeId("ReasonforStudy", 0x00321030, true, false, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0400,0402)
-  static const ReferencedDigitalSignatureSequence = const DeId("ReferencedDigitalSignatureSequence", 0x04000402, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ReferencedDigitalSignatureSequence = const DeId("ReferencedDigitalSignatureSequence", 0x04000402, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(3006,0024)
-  static const ReferencedFrameofReferenceUID = const DeId("ReferencedFrameofReferenceUID", 0x30060024, false, true, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const ReferencedFrameofReferenceUID = const DeId("ReferencedFrameofReferenceUID", 0x30060024, false, true, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0040,4023)
-  static const ReferencedGeneralPurposeScheduledProcedureStepTransactionUID = const DeId("ReferencedGeneralPurposeScheduledProcedureStepTransactionUID", 0x00404023, true, false, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const ReferencedGeneralPurposeScheduledProcedureStepTransactionUID = const DeId("ReferencedGeneralPurposeScheduledProcedureStepTransactionUID", 0x00404023, true, false, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0008,1140)
-  static const ReferencedImageSequence = const DeId("ReferencedImageSequence", 0x00081140, false, true, DeIdAction.XZU, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const ReferencedImageSequence = const DeId("ReferencedImageSequence", 0x00081140, false, true, Action.XZU, null, Action.K, null, null, null, null, null, null, null);
   //(0038,0004)
-  static const ReferencedPatientAliasSequence = const DeId("ReferencedPatientAliasSequence", 0x00380004, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ReferencedPatientAliasSequence = const DeId("ReferencedPatientAliasSequence", 0x00380004, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0008,1120)
-  static const ReferencedPatientSequence = const DeId("ReferencedPatientSequence", 0x00081120, false, true, DeIdAction.X, null, DeIdAction.X, null, null, null, null, null, null, null);
+  static const ReferencedPatientSequence = const DeId("ReferencedPatientSequence", 0x00081120, false, true, Action.X, null, Action.X, null, null, null, null, null, null, null);
   //(0008,1111)
-  static const ReferencedPerformedProcedureStepSequence = const DeId("ReferencedPerformedProcedureStepSequence", 0x00081111, false, true, DeIdAction.XZD, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const ReferencedPerformedProcedureStepSequence = const DeId("ReferencedPerformedProcedureStepSequence", 0x00081111, false, true, Action.XZD, null, Action.K, null, null, null, null, null, null, null);
   //(0400,0403)
-  static const ReferencedSOPInstanceMACSequence = const DeId("ReferencedSOPInstanceMACSequence", 0x04000403, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ReferencedSOPInstanceMACSequence = const DeId("ReferencedSOPInstanceMACSequence", 0x04000403, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0008,1155)
-  static const ReferencedSOPInstanceUID = const DeId("ReferencedSOPInstanceUID", 0x00081155, false, true, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const ReferencedSOPInstanceUID = const DeId("ReferencedSOPInstanceUID", 0x00081155, false, true, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0004,1511)
-  static const ReferencedSOPInstanceUIDinFile = const DeId("ReferencedSOPInstanceUIDinFile", 0x00041511, false, false, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const ReferencedSOPInstanceUIDinFile = const DeId("ReferencedSOPInstanceUIDinFile", 0x00041511, false, false, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0008,1110)
-  static const ReferencedStudySequence = const DeId("ReferencedStudySequence", 0x00081110, false, true, DeIdAction.XZ, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const ReferencedStudySequence = const DeId("ReferencedStudySequence", 0x00081110, false, true, Action.XZ, null, Action.K, null, null, null, null, null, null, null);
   //(0008,0092)
-  static const ReferringPhysiciansAddress = const DeId("ReferringPhysiciansAddress", 0x00080092, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ReferringPhysiciansAddress = const DeId("ReferringPhysiciansAddress", 0x00080092, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0008,0096)
-  static const ReferringPhysiciansIdentificationSequence = const DeId("ReferringPhysiciansIdentificationSequence", 0x00080096, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ReferringPhysiciansIdentificationSequence = const DeId("ReferringPhysiciansIdentificationSequence", 0x00080096, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0008,0090)
-  static const ReferringPhysiciansName = const DeId("ReferringPhysiciansName", 0x00080090, false, true, DeIdAction.Z, null, null, null, null, null, null, null, null, null);
+  static const ReferringPhysiciansName = const DeId("ReferringPhysiciansName", 0x00080090, false, true, Action.Z, null, null, null, null, null, null, null, null, null);
   //(0008,0094)
-  static const ReferringPhysiciansTelephoneNumbers = const DeId("ReferringPhysiciansTelephoneNumbers", 0x00080094, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ReferringPhysiciansTelephoneNumbers = const DeId("ReferringPhysiciansTelephoneNumbers", 0x00080094, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,2152)
-  static const RegionofResidence = const DeId("RegionofResidence", 0x00102152, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const RegionofResidence = const DeId("RegionofResidence", 0x00102152, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(3006,00C2)
-  static const RelatedFrameofReferenceUID = const DeId("RelatedFrameofReferenceUID", 0x300600C2, false, true, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const RelatedFrameofReferenceUID = const DeId("RelatedFrameofReferenceUID", 0x300600C2, false, true, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0040,0275)
-  static const RequestAttributesSequence = const DeId("RequestAttributesSequence", 0x00400275, false, true, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const RequestAttributesSequence = const DeId("RequestAttributesSequence", 0x00400275, false, true, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0032,1070)
-  static const RequestedContrastAgent = const DeId("RequestedContrastAgent", 0x00321070, false, false, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const RequestedContrastAgent = const DeId("RequestedContrastAgent", 0x00321070, false, false, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0040,1400)
-  static const RequestedProcedureComments = const DeId("RequestedProcedureComments", 0x00401400, false, false, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const RequestedProcedureComments = const DeId("RequestedProcedureComments", 0x00401400, false, false, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0032,1060)
-  static const RequestedProcedureDescription = const DeId("RequestedProcedureDescription", 0x00321060, false, true, DeIdAction.XZ, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const RequestedProcedureDescription = const DeId("RequestedProcedureDescription", 0x00321060, false, true, Action.XZ, null, null, null, null, null, null, Action.C, null, null);
   //(0040,1001)
-  static const RequestedProcedureID = const DeId("RequestedProcedureID", 0x00401001, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const RequestedProcedureID = const DeId("RequestedProcedureID", 0x00401001, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0040,1005)
-  static const RequestedProcedureLocation = const DeId("RequestedProcedureLocation", 0x00401005, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const RequestedProcedureLocation = const DeId("RequestedProcedureLocation", 0x00401005, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0000,1001)
-  static const RequestedSOPInstanceUID = const DeId("RequestedSOPInstanceUID", 0x00001001, false, false, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const RequestedSOPInstanceUID = const DeId("RequestedSOPInstanceUID", 0x00001001, false, false, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0032,1032)
-  static const RequestingPhysician = const DeId("RequestingPhysician", 0x00321032, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const RequestingPhysician = const DeId("RequestingPhysician", 0x00321032, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0032,1033)
-  static const RequestingService = const DeId("RequestingService", 0x00321033, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const RequestingService = const DeId("RequestingService", 0x00321033, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,2299)
-  static const ResponsibleOrganization = const DeId("ResponsibleOrganization", 0x00102299, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ResponsibleOrganization = const DeId("ResponsibleOrganization", 0x00102299, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,2297)
-  static const ResponsiblePerson = const DeId("ResponsiblePerson", 0x00102297, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ResponsiblePerson = const DeId("ResponsiblePerson", 0x00102297, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(4008,4000)
-  static const ResultsComments = const DeId("ResultsComments", 0x40084000, true, false, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const ResultsComments = const DeId("ResultsComments", 0x40084000, true, false, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(4008,0118)
-  static const ResultsDistributionListSequence = const DeId("ResultsDistributionListSequence", 0x40080118, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ResultsDistributionListSequence = const DeId("ResultsDistributionListSequence", 0x40080118, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(4008,0042)
-  static const ResultsIDIssuer = const DeId("ResultsIDIssuer", 0x40080042, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ResultsIDIssuer = const DeId("ResultsIDIssuer", 0x40080042, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(300E,0008)
-  static const ReviewerName = const DeId("ReviewerName", 0x300E0008, false, true, DeIdAction.XZ, null, null, null, null, null, null, null, null, null);
+  static const ReviewerName = const DeId("ReviewerName", 0x300E0008, false, true, Action.XZ, null, null, null, null, null, null, null, null, null);
   //(0040,4034)
-  static const ScheduledHumanPerformersSequence = const DeId("ScheduledHumanPerformersSequence", 0x00404034, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ScheduledHumanPerformersSequence = const DeId("ScheduledHumanPerformersSequence", 0x00404034, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0038,001E)
-  static const ScheduledPatientInstitutionResidence = const DeId("ScheduledPatientInstitutionResidence", 0x0038001E, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ScheduledPatientInstitutionResidence = const DeId("ScheduledPatientInstitutionResidence", 0x0038001E, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0040,000B)
-  static const ScheduledPerformingPhysicianIdentificationSequence = const DeId("ScheduledPerformingPhysicianIdentificationSequence", 0x0040000B, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ScheduledPerformingPhysicianIdentificationSequence = const DeId("ScheduledPerformingPhysicianIdentificationSequence", 0x0040000B, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0040,0006)
-  static const ScheduledPerformingPhysicianName = const DeId("ScheduledPerformingPhysicianName", 0x00400006, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ScheduledPerformingPhysicianName = const DeId("ScheduledPerformingPhysicianName", 0x00400006, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0040,0004)
-  static const ScheduledProcedureStepEndDate = const DeId("ScheduledProcedureStepEndDate", 0x00400004, false, false, DeIdAction.X, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const ScheduledProcedureStepEndDate = const DeId("ScheduledProcedureStepEndDate", 0x00400004, false, false, Action.X, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0040,0005)
-  static const ScheduledProcedureStepEndTime = const DeId("ScheduledProcedureStepEndTime", 0x00400005, false, false, DeIdAction.X, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const ScheduledProcedureStepEndTime = const DeId("ScheduledProcedureStepEndTime", 0x00400005, false, false, Action.X, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0040,0007)
-  static const ScheduledProcedureStepDescription = const DeId("ScheduledProcedureStepDescription", 0x00400007, false, true, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const ScheduledProcedureStepDescription = const DeId("ScheduledProcedureStepDescription", 0x00400007, false, true, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0040,0011)
-  static const ScheduledProcedureStepLocation = const DeId("ScheduledProcedureStepLocation", 0x00400011, false, false, DeIdAction.X, null, null, DeIdAction.K, null, null, null, null, null, null);
+  static const ScheduledProcedureStepLocation = const DeId("ScheduledProcedureStepLocation", 0x00400011, false, false, Action.X, null, null, Action.K, null, null, null, null, null, null);
   //(0040,0002)
-  static const ScheduledProcedureStepStartDate = const DeId("ScheduledProcedureStepStartDate", 0x00400002, false, false, DeIdAction.X, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const ScheduledProcedureStepStartDate = const DeId("ScheduledProcedureStepStartDate", 0x00400002, false, false, Action.X, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0040,0003)
-  static const ScheduledProcedureStepStartTime = const DeId("ScheduledProcedureStepStartTime", 0x00400003, false, false, DeIdAction.X, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const ScheduledProcedureStepStartTime = const DeId("ScheduledProcedureStepStartTime", 0x00400003, false, false, Action.X, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0040,0001)
-  static const ScheduledStationAETitle = const DeId("ScheduledStationAETitle", 0x00400001, false, false, DeIdAction.X, null, null, DeIdAction.K, null, null, null, null, null, null);
+  static const ScheduledStationAETitle = const DeId("ScheduledStationAETitle", 0x00400001, false, false, Action.X, null, null, Action.K, null, null, null, null, null, null);
   //(0040,4027)
-  static const ScheduledStationGeographicLocationCodeSequence = const DeId("ScheduledStationGeographicLocationCodeSequence", 0x00404027, false, false, DeIdAction.X, null, null, DeIdAction.K, null, null, null, null, null, null);
+  static const ScheduledStationGeographicLocationCodeSequence = const DeId("ScheduledStationGeographicLocationCodeSequence", 0x00404027, false, false, Action.X, null, null, Action.K, null, null, null, null, null, null);
   //(0040,0010)
-  static const ScheduledStationName = const DeId("ScheduledStationName", 0x00400010, false, false, DeIdAction.X, null, null, DeIdAction.K, null, null, null, null, null, null);
+  static const ScheduledStationName = const DeId("ScheduledStationName", 0x00400010, false, false, Action.X, null, null, Action.K, null, null, null, null, null, null);
   //(0040,4025)
-  static const ScheduledStationNameCodeSequence = const DeId("ScheduledStationNameCodeSequence", 0x00404025, false, false, DeIdAction.X, null, null, DeIdAction.K, null, null, null, null, null, null);
+  static const ScheduledStationNameCodeSequence = const DeId("ScheduledStationNameCodeSequence", 0x00404025, false, false, Action.X, null, null, Action.K, null, null, null, null, null, null);
   //(0032,1020)
-  static const ScheduledStudyLocation = const DeId("ScheduledStudyLocation", 0x00321020, true, false, DeIdAction.X, null, null, DeIdAction.K, null, null, null, null, null, null);
+  static const ScheduledStudyLocation = const DeId("ScheduledStudyLocation", 0x00321020, true, false, Action.X, null, null, Action.K, null, null, null, null, null, null);
   //(0032,1021)
-  static const ScheduledStudyLocationAETitle = const DeId("ScheduledStudyLocationAETitle", 0x00321021, true, false, DeIdAction.X, null, null, DeIdAction.K, null, null, null, null, null, null);
+  static const ScheduledStudyLocationAETitle = const DeId("ScheduledStudyLocationAETitle", 0x00321021, true, false, Action.X, null, null, Action.K, null, null, null, null, null, null);
   //(0008,0021)
-  static const SeriesDate = const DeId("SeriesDate", 0x00080021, false, true, DeIdAction.XD, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const SeriesDate = const DeId("SeriesDate", 0x00080021, false, true, Action.XD, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0008,103E)
-  static const SeriesDescription = const DeId("SeriesDescription", 0x0008103E, false, true, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const SeriesDescription = const DeId("SeriesDescription", 0x0008103E, false, true, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0020,000E)
-  static const SeriesInstanceUID = const DeId("SeriesInstanceUID", 0x0020000E, false, true, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const SeriesInstanceUID = const DeId("SeriesInstanceUID", 0x0020000E, false, true, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0008,0031)
-  static const SeriesTime = const DeId("SeriesTime", 0x00080031, false, true, DeIdAction.XD, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const SeriesTime = const DeId("SeriesTime", 0x00080031, false, true, Action.XD, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0038,0062)
-  static const ServiceEpisodeDescription = const DeId("ServiceEpisodeDescription", 0x00380062, false, true, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const ServiceEpisodeDescription = const DeId("ServiceEpisodeDescription", 0x00380062, false, true, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0038,0060)
-  static const ServiceEpisodeID = const DeId("ServiceEpisodeID", 0x00380060, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const ServiceEpisodeID = const DeId("ServiceEpisodeID", 0x00380060, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0010,21A0)
-  static const SmokingStatus = const DeId("SmokingStatus", 0x001021A0, false, false, DeIdAction.X, null, null, null, DeIdAction.K, null, null, null, null, null);
+  static const SmokingStatus = const DeId("SmokingStatus", 0x001021A0, false, false, Action.X, null, null, null, Action.K, null, null, null, null, null);
   //(0008,0018)
-  static const SOPInstanceUID = const DeId("SOPInstanceUID", 0x00080018, false, true, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const SOPInstanceUID = const DeId("SOPInstanceUID", 0x00080018, false, true, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0008,2112)
-  static const SourceImageSequence = const DeId("SourceImageSequence", 0x00082112, false, true, DeIdAction.XZU, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const SourceImageSequence = const DeId("SourceImageSequence", 0x00082112, false, true, Action.XZU, null, Action.K, null, null, null, null, null, null, null);
   //(0038,0050)
-  static const SpecialNeeds = const DeId("SpecialNeeds", 0x00380050, false, false, DeIdAction.X, null, null, null, DeIdAction.C, null, null, null, null, null);
+  static const SpecialNeeds = const DeId("SpecialNeeds", 0x00380050, false, false, Action.X, null, null, null, Action.C, null, null, null, null, null);
   //(0008,1010)
-  static const StationName = const DeId("StationName", 0x00081010, false, true, DeIdAction.XZD, null, null, DeIdAction.K, null, null, null, null, null, null);
+  static const StationName = const DeId("StationName", 0x00081010, false, true, Action.XZD, null, null, Action.K, null, null, null, null, null, null);
   //(0088,0140)
-  static const StorageMediaFile_setUID = const DeId("StorageMediaFile_setUID", 0x00880140, false, true, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const StorageMediaFile_setUID = const DeId("StorageMediaFile_setUID", 0x00880140, false, true, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0032,4000)
-  static const StudyComments = const DeId("StudyComments", 0x00324000, true, false, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const StudyComments = const DeId("StudyComments", 0x00324000, true, false, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0008,0020)
-  static const StudyDate = const DeId("StudyDate", 0x00080020, false, true, DeIdAction.Z, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const StudyDate = const DeId("StudyDate", 0x00080020, false, true, Action.Z, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0008,1030)
-  static const StudyDescription = const DeId("StudyDescription", 0x00081030, false, true, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const StudyDescription = const DeId("StudyDescription", 0x00081030, false, true, Action.X, null, null, null, null, null, null, Action.C, null, null);
   //(0020,0010)
-  static const StudyID = const DeId("StudyID", 0x00200010, false, true, DeIdAction.Z, null, null, null, null, null, null, null, null, null);
+  static const StudyID = const DeId("StudyID", 0x00200010, false, true, Action.Z, null, null, null, null, null, null, null, null, null);
   //(0032,0012)
-  static const StudyIDIssuer = const DeId("StudyIDIssuer", 0x00320012, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const StudyIDIssuer = const DeId("StudyIDIssuer", 0x00320012, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0020,000D)
-  static const StudyInstanceUID = const DeId("StudyInstanceUID", 0x0020000D, false, true, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const StudyInstanceUID = const DeId("StudyInstanceUID", 0x0020000D, false, true, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0008,0030)
-  static const StudyTime = const DeId("StudyTime", 0x00080030, false, true, DeIdAction.Z, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const StudyTime = const DeId("StudyTime", 0x00080030, false, true, Action.Z, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0020,0200)
-  static const SynchronizationFrameofReferenceUID = const DeId("SynchronizationFrameofReferenceUID", 0x00200200, false, true, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const SynchronizationFrameofReferenceUID = const DeId("SynchronizationFrameofReferenceUID", 0x00200200, false, true, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0040,DB0D)
-  static const TemplateExtensionCreatorUID = const DeId("TemplateExtensionCreatorUID", 0x0040DB0D, true, false, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const TemplateExtensionCreatorUID = const DeId("TemplateExtensionCreatorUID", 0x0040DB0D, true, false, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0040,DB0C)
-  static const TemplateExtensionOrganizationUID = const DeId("TemplateExtensionOrganizationUID", 0x0040DB0C, true, false, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const TemplateExtensionOrganizationUID = const DeId("TemplateExtensionOrganizationUID", 0x0040DB0C, true, false, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(4000,4000)
-  static const TextComments = const DeId("TextComments", 0x40004000, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const TextComments = const DeId("TextComments", 0x40004000, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(2030,0020)
-  static const TextString = const DeId("TextString", 0x20300020, false, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const TextString = const DeId("TextString", 0x20300020, false, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0008,0201)
-  static const TimezoneOffsetFromUTC = const DeId("TimezoneOffsetFromUTC", 0x00080201, false, true, DeIdAction.X, null, null, null, null, DeIdAction.K, DeIdAction.C, null, null, null);
+  static const TimezoneOffsetFromUTC = const DeId("TimezoneOffsetFromUTC", 0x00080201, false, true, Action.X, null, null, null, null, Action.K, Action.C, null, null, null);
   //(0088,0910)
-  static const TopicAuthor = const DeId("TopicAuthor", 0x00880910, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const TopicAuthor = const DeId("TopicAuthor", 0x00880910, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0088,0912)
-  static const TopicKeywords = const DeId("TopicKeywords", 0x00880912, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const TopicKeywords = const DeId("TopicKeywords", 0x00880912, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0088,0906)
-  static const TopicSubject = const DeId("TopicSubject", 0x00880906, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const TopicSubject = const DeId("TopicSubject", 0x00880906, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0088,0904)
-  static const TopicTitle = const DeId("TopicTitle", 0x00880904, true, false, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const TopicTitle = const DeId("TopicTitle", 0x00880904, true, false, Action.X, null, null, null, null, null, null, null, null, null);
   //(0008,1195)
-  static const TransactionUID = const DeId("TransactionUID", 0x00081195, false, false, DeIdAction.U, null, DeIdAction.K, null, null, null, null, null, null, null);
+  static const TransactionUID = const DeId("TransactionUID", 0x00081195, false, false, Action.U, null, Action.K, null, null, null, null, null, null, null);
   //(0040,A124)
-  static const UID = const DeId("UID", 0x0040A124, false, true, DeIdAction.U, null, null, null, null, null, null, null, null, null);
+  static const UID = const DeId("UID", 0x0040A124, false, true, Action.U, null, null, null, null, null, null, null, null, null);
   //(0040,A088)
-  static const VerifyingObserverIdentificationCodeSequence = const DeId("VerifyingObserverIdentificationCodeSequence", 0x0040A088, false, true, DeIdAction.Z, null, null, null, null, null, null, null, null, null);
+  static const VerifyingObserverIdentificationCodeSequence = const DeId("VerifyingObserverIdentificationCodeSequence", 0x0040A088, false, true, Action.Z, null, null, null, null, null, null, null, null, null);
   //(0040,A075)
-  static const VerifyingObserverName = const DeId("VerifyingObserverName", 0x0040A075, false, true, DeIdAction.D, null, null, null, null, null, null, null, null, null);
+  static const VerifyingObserverName = const DeId("VerifyingObserverName", 0x0040A075, false, true, Action.D, null, null, null, null, null, null, null, null, null);
   //(0040,A073)
-  static const VerifyingObserverSequence = const DeId("VerifyingObserverSequence", 0x0040A073, false, true, DeIdAction.D, null, null, null, null, null, null, null, null, null);
+  static const VerifyingObserverSequence = const DeId("VerifyingObserverSequence", 0x0040A073, false, true, Action.D, null, null, null, null, null, null, null, null, null);
   //(0040,A027)
-  static const VerifyingOrganization = const DeId("VerifyingOrganization", 0x0040A027, false, true, DeIdAction.X, null, null, null, null, null, null, null, null, null);
+  static const VerifyingOrganization = const DeId("VerifyingOrganization", 0x0040A027, false, true, Action.X, null, null, null, null, null, null, null, null, null);
   //(0038,4000)
-  static const VisitComments = const DeId("VisitComments", 0x00384000, false, false, DeIdAction.X, null, null, null, null, null, null, DeIdAction.C, null, null);
+  static const VisitComments = const DeId("VisitComments", 0x00384000, false, false, Action.X, null, null, null, null, null, null, Action.C, null, null);
 
 static const Map<int, DeId> tagToDeId = const {
     0x00080050: AccessionNumber,

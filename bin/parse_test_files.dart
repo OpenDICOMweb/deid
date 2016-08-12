@@ -47,9 +47,16 @@ void main() {
     var outPath = path.join(path.normalize(outputDir), '$fname.json');
     protocol.writeFile(outPath);
   }
+  writeErrorFile(filesWithErrors);
+}
 
+void writeErrorFile(List fileWithErrors) {
   var s = 'Files with Errors:\n';
-  s += filesWithErrors.join('\n');
+  fileWithErrors.forEach((file){
+    s += '${file[0]}\n';
+    for (var value in file[1])
+    s += '  $value\n';
+  });
   File errors = new File('$outputDir/errors.txt');
   errors.writeAsStringSync(s);
 }

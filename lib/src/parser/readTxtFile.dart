@@ -39,8 +39,6 @@ String validateIdentifier(String s) {
 
 }
 
-
-
 class Param {
   static const String start = "param.";
   static const int offset = start.length;
@@ -68,7 +66,7 @@ class Param {
   }
 }
 
-class Assignment {
+class Set {
   static const String start = "set.[";
   static const int offset = start.length;
   int targetTag;

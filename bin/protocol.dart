@@ -73,9 +73,20 @@ class Parameter {
 // Rule expressions look as follows:
 //    set.[0008,0020] StudyDate = @blank(0)
 class Rule {
+  static const String tagExp = r"\[([0-9a-fA-F]{4}),([0-9a-fA-F]{4})\]";
+  static const String kwExp = r'(\w+)';
+  static const String funcExp = r'([@\w]+)';
+  static const String argExp = r'([\w\s|@|\-|\^|\,|\"|$|*|&]*)';
+  String foo = r'([\$|@|\-|\d|\w]+)';
   static const String ruleExp =
-      r'set.\[([0-9a-fA-F]{4}),([0-9a-fA-F]{4})\]\s(\w+)\s=\s@(\w+)\(([\s|@|\-|\,|\"|\d|\w]*)\)';
+      'set.$tagExp\\s$kwExp\\s=\\s$funcExp\\($argExp\\)';
   static final RegExp ruleRegExp = new RegExp(ruleExp);
+  static const String reset = r'RESET|Reset|reset(\/\d*)+';
+  static const String resetExp =
+      'set.$tagExp\\s$kwExp\\s=\\s$reset\\($argExp\\)';
+  static final RegExp resetRuleRegExp = new RegExp(resetExp);
+  // If Rule
+  static const ifExp = r'@if(()';
   int targetTag;
   String keyword;
   String function;
@@ -99,10 +110,15 @@ class Rule {
   String toString() => 'set.[$targetTag] $keyword = @$function($args)$scripts';
 
   static parse(int lineNo, String line) {
+    bool isReset = false;
     var s = line.trim();
     if (s.indexOf("set.[") == 0) {
       Match m = ruleRegExp.firstMatch(s);
-      if (m == null) return new ParseError(lineNo, line);
+      if (m == null) {
+        m = resetRuleRegExp.firstMatch(s);
+        if (m == null) return new ParseError(lineNo, line);
+        isReset = true;
+      }
 
       var group = m[1];
       var element = m[2];
@@ -112,10 +128,17 @@ class Rule {
       //    var tag = Tag.lookup(target);
       var keyword = m[3];
       var function = m[4];
-      var args = m[5];
-      List argList = args.split(",");
-      int index = argList.indexOf("this");
-      if (index >= 0) argList[index] = target;
+      String args = m[5];
+      List argList;
+      if (args == null) {
+        argList = [];
+      } else if (isReset) {
+        argList = [args];
+      } else {
+        argList = args.split(",");
+        int index = argList.indexOf("this");
+        if (index >= 0) argList[index] = target;
+      }
 
       //TODO: Parse Scripts
       var scripts = [];

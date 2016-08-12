@@ -41,8 +41,6 @@ String genMember(Element e) {
       '= const DeIdElement($tag, "k$keyword", VR.k${vr.name}, VM.${vm.name}, ${vm.isSingleton});';
 }
 
-String generateMethod()
-
 
 String outDirPath = "C:/odw/sdk/deidentification/lib/src/generate/output";
 

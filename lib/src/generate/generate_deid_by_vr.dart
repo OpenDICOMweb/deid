@@ -8,7 +8,7 @@ import 'dart:io';
 
 import 'package:core/dicom.dart';
 import 'package:core/new_base.dart';
-import 'package:deidentification/deidentification.dart';
+import 'package:deidentification/src/generate/deid_tags.dart';
 
 List vrs = new List(32);
 List vrTags = new List(32);

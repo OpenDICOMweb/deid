@@ -4,7 +4,7 @@
 // Original author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
-import '../lib/src/deid_tags.dart';
+import 'package:deidentification/src/generate/deid_tags.dart';
 
 void main() {
 

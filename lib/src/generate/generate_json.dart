@@ -14,28 +14,7 @@ import 'dart:io';
 /// *.json generate a Dart compile time constant class.
 
 // Utilities
-// TODO move to generators.dart library
-/*
-String cleanKeyword(String s) {
-  // Remove spaces and apsotrophies
-  String result = "";
-  String tmp = "";
-  bool doPrint = false;
-  for(int i = 0; i < s.length; i++) {
-    tmp = s[i];
-    if ((tmp == " ") || tmp == "'") {
-      doPrint = true;
-      continue;
-    }
-    result += tmp;
-  }
-  if (doPrint) {
-    print(s);
-    print(result);
-  }
-  return result;
-}
-*/
+
 // TODO move to generators.dart library
 String cleanKeyword(String s) {
   // Remove spaces and apsotrophies
@@ -48,7 +27,7 @@ String cleanKeyword(String s) {
 }
 
 //Remove '/' and '*'
-String removeSlashes(String s) {
+String removeSlashesAndStars(String s) {
   s = s.replaceAll("/", "");
   return s.replaceAll('*', "");
 }
@@ -70,7 +49,7 @@ String convertDeIdActionCodes(String value) {
   if (value == "") {
     return 'null';
   } else if (value.length > 1) {
-    var s = removeSlashes(value);
+    var s = removeSlashesAndStars(value);
     return 'DeIdAction.$s';
   } else {
     return 'DeIdAction.$value';
