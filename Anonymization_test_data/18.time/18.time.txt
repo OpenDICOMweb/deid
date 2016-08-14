@@ -1,0 +1,7 @@
+# TRIAD Anonymization Profile: 18.time.5/28/2015 1:20 AM
+param.ONE=$
+set.[0008,0020] StudyDate = @time()
+set.[0008,0021] SeriesDate = @time(*)
+set.[0008,0030] StudyTime = @time(@ONE)
+set.[0008,0031] SeriesTime = @time(&)
+set.[0008,0032] AcquisitionTime = @time(A)

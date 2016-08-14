@@ -1,0 +1,2 @@
+# TRIAD Anonymization Profile: 40.DeIdentificationMethodCodeSeq Element.5/27/2015 7:43 AM
+set.[0012,0064] DeIdentificationMethodCodeSequence = RESET/113101/113103/113105/113107/113108/113109/113111/11111/2222

@@ -1,0 +1,16 @@
+# TRIAD Anonymization Profile: @append().5/27/2015 4:47 AM
+param.TRI=3
+param.TRIAD=triad
+set.[0008,0020] StudyDate = @append()
+set.[0008,0021] SeriesDate = @append()BB
+set.[0008,0022] AcquisitionDate = @append()@TRIAD
+set.[0008,0031] SeriesTime = @append()@TRI
+set.[0008,0050] AccessionNumber = @append(){AA//BB//CC}
+set.[0008,0060] Modality = @append(){TRIAD QA TEAM}
+set.[0008,0070] Manufacturer = @append()AA
+set.[0008,0080] InstitutionName = @append(){AA\\BB\\CC}
+set.[0008,0081] InstitutionAddress = @append()TRIADQATEAM
+set.[0008,1030] StudyDescription = @append(){}
+set.[0010,0010] PatientsName = @append(){"TRIAD"}
+set.[0010,0020] PatientId = @append(){"@TRI"}
+set.[0012,0063] DeIdentificationMethod = @append(){1\\2\\3}

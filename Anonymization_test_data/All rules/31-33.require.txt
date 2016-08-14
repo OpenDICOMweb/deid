@@ -1,0 +1,23 @@
+# TRIAD Anonymization Profile: 31.require_rule.5/27/2015 7:16 AM
+param.3=THREE
+param.FIVE=Five
+param.Four=4
+param.ONE=one
+param.TWO=2
+set.[0008,0001] LengthToEndRetired = @require(SeriesNumber)
+set.[0008,0005] SpecificCharacterSet = @require(Modality)
+set.[0008,0012] InstanceCreationDate = @require(InstanceNumber,SeriesDate)
+set.[0008,0020] StudyDate = @require(RequestingPhysician,"TRIAD")
+set.[0008,0021] SeriesDate = @require(PatientsSex,TRIAD)
+set.[0008,0022] AcquisitionDate = @require(InstanceNumber,"QATEAM")
+set.[0008,0023] ContentDate = @require(RequestingPhysician,@3)
+set.[0008,002a] AcquisitionDatetime = @require(Modality,@FIVE)
+set.[0008,0031] SeriesTime = @require(CT,@Four)
+set.[0008,0054] RetrieveAeTitle = @require("@3")
+set.[0008,0056] InstanceAvailability = @require(CT)
+set.[0008,0080] InstitutionName = @require(@ONE)
+set.[0008,1010] StationName = @require("PatientsName")
+set.[0008,1030] StudyDescription = @require(@FIVE)
+set.[0010,0020] PatientId = @require()
+set.[0010,0030] PatientsBirthDate = @require()
+set.[0010,0032] PatientsBirthTime = @require()

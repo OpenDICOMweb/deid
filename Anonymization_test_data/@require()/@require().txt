@@ -1,0 +1,12 @@
+# TRIAD Anonymization Profile: @require().5/26/2015 5:24 AM
+param.DATEINC=1
+set.[0008,0020] StudyDate = @require()
+set.[0008,0022] AcquisitionDate = @require(PatientsName)
+set.[0008,0023] ContentDate = @require(Modality)
+set.[0008,002a] AcquisitionDatetime = @require(StudyDate,TRIAD)
+set.[0008,0030] StudyTime = @require(Modality,"TRIAD")
+set.[0008,0070] Manufacturer = @require()
+set.[0008,0090] ReferringPhysiciansName = @require(DATEINC)
+set.[0020,0010] StudyId = @require(StudyDescription,"")
+set.[0020,0011] SeriesNumber = @require(BeamMeterset)
+set.[300a,0086] BeamMeterset = @require(Modality)

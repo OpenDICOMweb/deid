@@ -1,0 +1,15 @@
+# TRIAD Anonymization Profile: @encrypt().5/25/2015 9:39 AM
+param.EIGHT=AAAAAAAA
+param.NINE=AAAAAAAAA
+param.SEVEN=AAAAAAA
+param.SIX=AAAAAA
+param.TEN=AAAAAAAAAA
+set.[0008,0008] ImageType = @encrypt(ImageType,@NINE)
+set.[0008,0020] StudyDate = @encrypt(StudyDate,@SEVEN)
+set.[0008,0030] StudyTime = @encrypt(this,"TTTTTTT")
+set.[0008,0070] Manufacturer = @encrypt(this,@EIGHT)
+set.[0008,0080] InstitutionName = @encrypt(this,@TEN)
+set.[0008,1010] StationName = @encrypt(this,@SIX)
+set.[0008,1030] StudyDescription = @encrypt(this,"TTTTTTTT")
+set.[0008,103e] SeriesDescription = @encrypt(this,"TTTTTTTTT")
+set.[0008,1090] ManufacturersModelName = @encrypt(this,"TTTTTT")

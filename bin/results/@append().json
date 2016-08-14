@@ -1,0 +1,18 @@
+{
+    "name": "",
+    "parameters": [{"name": "TRI", "value": 3},
+{"name": "TRIAD", "value": "triad"}],
+    "rules": [{"target":"0x00080020","keyword":"StudyDate","function":"@append","args":[""],"scripts":["{1\\\\2\\\\3}"]},
+{"target":"0x00080021","keyword":"SeriesDate","function":"@append","args":[""],"scripts":[]},
+{"target":"0x00080022","keyword":"AcquisitionDate","function":"@append","args":[""],"scripts":[]},
+{"target":"0x00080031","keyword":"SeriesTime","function":"@append","args":[""],"scripts":[]},
+{"target":"0x00080050","keyword":"AccessionNumber","function":"@append","args":[""],"scripts":["{AA//BB//CC}"]},
+{"target":"0x00080060","keyword":"Modality","function":"@append","args":[""],"scripts":[]},
+{"target":"0x00080070","keyword":"Manufacturer","function":"@append","args":[""],"scripts":[]},
+{"target":"0x00080080","keyword":"InstitutionName","function":"@append","args":[""],"scripts":["{AA\\\\BB\\\\CC}"]},
+{"target":"0x00080081","keyword":"InstitutionAddress","function":"@append","args":[""],"scripts":[]},
+{"target":"0x00120063","keyword":"DeIdentificationMethod","function":"@append","args":[""],"scripts":[]}],
+    "errors": [],
+    "filename": "C://odw/Anonymization_test_data/@append()\@append().txt",
+    "lines": []
+}

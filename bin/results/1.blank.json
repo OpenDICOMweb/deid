@@ -1,0 +1,18 @@
+{
+    "name": "",
+    "parameters": [{"name": "NEGATIVE", "value": -1},
+{"name": "ONE", "value": 1},
+{"name": "TWO", "value": 2},
+{"name": "ZERO", "value": 0}],
+    "rules": [{"target":"0x00080020","keyword":"StudyDate","function":"@blank","args":["0"],"scripts":[]},
+{"target":"0x00080021","keyword":"SeriesDate","function":"@blank","args":["@ONE"],"scripts":[]},
+{"target":"0x00080023","keyword":"ContentDate","function":"@blank","args":["@TWO"],"scripts":[]},
+{"target":"0x00080030","keyword":"StudyTime","function":"@blank","args":["-5"],"scripts":[]},
+{"target":"0x00080050","keyword":"AccessionNumber","function":"@blank","args":["@NEGATIVE"],"scripts":[]},
+{"target":"0x00080060","keyword":"Modality","function":"@blank","args":["@ZERO"],"scripts":[]},
+{"target":"0x00080070","keyword":"Manufacturer","function":"@blank","args":["4"],"scripts":[]},
+{"target":"0x00120031","keyword":"ClinicalTrialSiteName","function":"@blank","args":["1"],"scripts":[]}],
+    "errors": [],
+    "filename": "C://odw/Anonymization_test_data/All rules\1.blank.txt",
+    "lines": []
+}

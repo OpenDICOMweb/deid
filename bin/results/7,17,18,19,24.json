@@ -1,0 +1,22 @@
+{
+    "name": "",
+    "parameters": [],
+    "rules": [{"target":"0x00080030","keyword":"StudyTime","function":"@time","args":["             "],"scripts":[]},
+{"target":"0x00080060","keyword":"Modality","function":"@process","args":[""],"scripts":[]},
+{"target":"0x00080070","keyword":"Manufacturer","function":"@process","args":[""],"scripts":[]},
+{"target":"0x00081030","keyword":"StudyDescription","function":"@time","args":[""],"scripts":[]},
+{"target":"0x00081120","keyword":"ReferencedPatientSequence","function":"@process","args":[""],"scripts":[]},
+{"target":"0x00081140","keyword":"ReferencedImageSequence","function":"@process","args":[""],"scripts":[]},
+{"target":"0x00100010","keyword":"PatientsName","function":"@empty","args":[""],"scripts":[]},
+{"target":"0x00100020","keyword":"PatientId","function":"@empty","args":[""],"scripts":[]},
+{"target":"0x00100040","keyword":"PatientsSex","function":"@empty","args":[""],"scripts":[]},
+{"target":"0x00101010","keyword":"PatientsAge","function":"@remove","args":[""],"scripts":[]},
+{"target":"0x00120010","keyword":"ClinicalTrialSponsorName","function":"@remove","args":[""],"scripts":[]},
+{"target":"0x00120020","keyword":"ClinicalTrialProtocolId","function":"@remove","args":[""],"scripts":[]},
+{"target":"0x00181190","keyword":"FocalSpots","function":"@keep","args":[""],"scripts":[]},
+{"target":"0x00181210","keyword":"ConvolutionKernel","function":"@keep","args":[""],"scripts":[]},
+{"target":"0x00185100","keyword":"PatientPosition","function":"@keep","args":[""],"scripts":[]}],
+    "errors": [],
+    "filename": "C://odw/Anonymization_test_data/All rules\7,17,18,19,24.txt",
+    "lines": []
+}

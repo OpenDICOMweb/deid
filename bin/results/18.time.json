@@ -1,0 +1,12 @@
+{
+    "name": "",
+    "parameters": [{"name": "ONE", "value": "$"}],
+    "rules": [{"target":"0x00080020","keyword":"StudyDate","function":"@time","args":[""],"scripts":[]},
+{"target":"0x00080021","keyword":"SeriesDate","function":"@time","args":["*"],"scripts":[]},
+{"target":"0x00080030","keyword":"StudyTime","function":"@time","args":["@ONE"],"scripts":[]},
+{"target":"0x00080031","keyword":"SeriesTime","function":"@time","args":["&"],"scripts":[]},
+{"target":"0x00080032","keyword":"AcquisitionTime","function":"@time","args":["A"],"scripts":[]}],
+    "errors": [],
+    "filename": "C://odw/Anonymization_test_data/18.time\18.time.txt",
+    "lines": []
+}
