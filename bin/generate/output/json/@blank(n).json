@@ -1,0 +1,18 @@
+{
+    "@type": "Clinical Study Protocol",
+    "name": "parse_text_file.dart",
+    "path": "C://odw/Anonymization_test_data/@blank(n)\@blank(n).txt",
+    "parameters": {"NEGATIVE":"-1","ONE":"1","TWO":"2","ZERO":"0"},
+    "rules": [
+{"index":5,"target":524320,"keyword":"StudyDate","function":"@blank","args":["0"],"scripts":null},
+{"index":6,"target":524321,"keyword":"SeriesDate","function":"@blank","args":["@ONE"],"scripts":null},
+{"index":7,"target":524323,"keyword":"ContentDate","function":"@blank","args":["@TWO"],"scripts":null},
+{"index":8,"target":524336,"keyword":"StudyTime","function":"@blank","args":["-5"],"scripts":null},
+{"index":9,"target":524368,"keyword":"AccessionNumber","function":"@blank","args":["@NEGATIVE"],"scripts":null},
+{"index":10,"target":524384,"keyword":"Modality","function":"@blank","args":["@ZERO"],"scripts":null},
+{"index":11,"target":524400,"keyword":"Manufacturer","function":"@blank","args":["4"],"scripts":null},
+{"index":12,"target":1179697,"keyword":"ClinicalTrialSiteName","function":"@blank","args":["1"],"scripts":null}
+],
+    "comments": {"0":"# TRIAD Anonymization Profile: @blank().5/26/2015 5:01 AM"},
+    "errors": {}
+}

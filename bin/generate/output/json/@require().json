@@ -1,0 +1,20 @@
+{
+    "@type": "Clinical Study Protocol",
+    "name": "parse_text_file.dart",
+    "path": "C://odw/Anonymization_test_data/@require()\@require().txt",
+    "parameters": {"DATEINC":"1"},
+    "rules": [
+{"index":2,"target":524320,"keyword":"StudyDate","function":"@require","args":[],"scripts":null},
+{"index":3,"target":524322,"keyword":"AcquisitionDate","function":"@require","args":["PatientsName"],"scripts":null},
+{"index":4,"target":524323,"keyword":"ContentDate","function":"@require","args":["Modality"],"scripts":null},
+{"index":5,"target":524330,"keyword":"AcquisitionDatetime","function":"@require","args":["StudyDate","TRIAD"],"scripts":null},
+{"index":6,"target":524336,"keyword":"StudyTime","function":"@require","args":["Modality","\"TRIAD\""],"scripts":null},
+{"index":7,"target":524400,"keyword":"Manufacturer","function":"@require","args":[],"scripts":null},
+{"index":8,"target":524432,"keyword":"ReferringPhysiciansName","function":"@require","args":["DATEINC"],"scripts":null},
+{"index":9,"target":2097168,"keyword":"StudyId","function":"@require","args":["StudyDescription","\"\""],"scripts":null},
+{"index":10,"target":2097169,"keyword":"SeriesNumber","function":"@require","args":["BeamMeterset"],"scripts":null},
+{"index":11,"target":805961862,"keyword":"BeamMeterset","function":"@require","args":["Modality"],"scripts":null}
+],
+    "comments": {"0":"# TRIAD Anonymization Profile: @require().5/26/2015 5:24 AM"},
+    "errors": {}
+}

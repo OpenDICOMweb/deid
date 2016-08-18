@@ -1,0 +1,31 @@
+{
+    "@type": "Clinical Study Protocol",
+    "name": "parse_text_file.dart",
+    "path": "C://odw/Anonymization_test_data/All rules\41-45.if rule.txt",
+    "parameters": {"6":"SIX","EMPTY":"@empty()","five":"FIVE","FOUR":"four","ONE":"1","THREE":"three","TWO":"2"},
+    "rules": [
+{"index":8,"target":524293,"keyword":"SpecificCharacterSet","function":"@if","args":["@ONE","exists"],"scripts":["{C}","{D}"]},
+{"index":10,"target":524320,"keyword":"StudyDate","function":"@if","args":["this","exists"],"scripts":["{Yes}","{No}"]},
+{"index":12,"target":524336,"keyword":"StudyTime","function":"@if","args":["this","exists"],"scripts":["{Yes}","{No}"]},
+{"index":13,"target":524337,"keyword":"SeriesTime","function":"@if","args":["this","equals","\"1\""],"scripts":["{True}","{False}"]},
+{"index":14,"target":524338,"keyword":"AcquisitionTime","function":"@if","args":["this","contains","\"1\""],"scripts":["{Yes}","{No}"]},
+{"index":15,"target":524368,"keyword":"AccessionNumber","function":"@if","args":["this","exists"],"scripts":["{True}","{False}"]},
+{"index":16,"target":524384,"keyword":"Modality","function":"@if","args":["this","isblank"],"scripts":["{True}","{False}"]},
+{"index":17,"target":524400,"keyword":"Manufacturer","function":"@if","args":["this","equals","\"SIEmens\""],"scripts":["{True}","{False}"]},
+{"index":18,"target":524417,"keyword":"InstitutionAddress","function":"@if","args":["this","isblank"],"scripts":["{True}","{False}"]},
+{"index":19,"target":524432,"keyword":"ReferringPhysiciansName","function":"@if","args":["this","equals","\"\""],"scripts":["{Yes}","{No}"]},
+{"index":20,"target":528400,"keyword":"StationName","function":"@if","args":["this","contains","\"\""],"scripts":["{Yes}","{No}"]},
+{"index":21,"target":528432,"keyword":"StudyDescription","function":"@if","args":["this","matches","[a-z]"],"scripts":["{Yes}","{No}"]},
+{"index":22,"target":528446,"keyword":"SeriesDescription","function":"@if","args":["this","matches","\"[a-z][0-9]\""],"scripts":["{True}","{False}"]},
+{"index":24,"target":528496,"keyword":"OperatorsName","function":"@if","args":["this","contains","\"WM\""],"scripts":["{Yes}","{No}"]},
+{"index":25,"target":1048592,"keyword":"PatientsName","function":"@if","args":["this","matches","[a-z]"],"scripts":["{True}","{False}"]},
+{"index":26,"target":1048608,"keyword":"PatientId","function":"@if","args":["this","exists"],"scripts":["{True}","{False}"]},
+{"index":27,"target":1048624,"keyword":"PatientsBirthDate","function":"@if","args":["this","equals","\"\""],"scripts":["{True}","{False}"]},
+{"index":28,"target":1048640,"keyword":"PatientsSex","function":"@if","args":["this","isblank"],"scripts":["{True}","{False}"]},
+{"index":30,"target":1052704,"keyword":"PatientsSize","function":"@if","args":["this","equals","\"     \""],"scripts":["{True}","{False}"]},
+{"index":31,"target":1052720,"keyword":"PatientsWeight","function":"@if","args":["this","contains","\"\""],"scripts":["{Yes}","{No}"]},
+{"index":32,"target":1052736,"keyword":"PatientsAddress","function":"@if","args":["this","matches","\"[a-z]\""],"scripts":["{Yes}","{No}"]}
+],
+    "comments": {"0":"# TRIAD Anonymization Profile: 41-45.if rule.5/27/2015 7:46 AM"},
+    "errors": {"9":"set.[0008,0012] InstanceCreationDate = @if(@EMPTY,exists){Non-Empty}","11":"set.[0008,0021] SeriesDate = @if(this,exists)){Yes1}{No1}{Yes2}{No2}","23":"set.[0008,1050] PerformingPhysiciansName = @if(this,isblank){True}","29":"set.[0010,1005] PatientsBirthName = @if(this,matches,\"[a-z]\"){Yes}{No"}
+}

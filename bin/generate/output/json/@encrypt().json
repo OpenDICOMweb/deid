@@ -1,0 +1,19 @@
+{
+    "@type": "Clinical Study Protocol",
+    "name": "parse_text_file.dart",
+    "path": "C://odw/Anonymization_test_data/@encrypt()\@encrypt().txt",
+    "parameters": {"EIGHT":"AAAAAAAA","NINE":"AAAAAAAAA","SEVEN":"AAAAAAA","SIX":"AAAAAA","TEN":"AAAAAAAAAA"},
+    "rules": [
+{"index":6,"target":524296,"keyword":"ImageType","function":"@encrypt","args":["ImageType","@NINE"],"scripts":null},
+{"index":7,"target":524320,"keyword":"StudyDate","function":"@encrypt","args":["StudyDate","@SEVEN"],"scripts":null},
+{"index":8,"target":524336,"keyword":"StudyTime","function":"@encrypt","args":["this","\"TTTTTTT\""],"scripts":null},
+{"index":9,"target":524400,"keyword":"Manufacturer","function":"@encrypt","args":["this","@EIGHT"],"scripts":null},
+{"index":10,"target":524416,"keyword":"InstitutionName","function":"@encrypt","args":["this","@TEN"],"scripts":null},
+{"index":11,"target":528400,"keyword":"StationName","function":"@encrypt","args":["this","@SIX"],"scripts":null},
+{"index":12,"target":528432,"keyword":"StudyDescription","function":"@encrypt","args":["this","\"TTTTTTTT\""],"scripts":null},
+{"index":13,"target":528446,"keyword":"SeriesDescription","function":"@encrypt","args":["this","\"TTTTTTTTT\""],"scripts":null},
+{"index":14,"target":528528,"keyword":"ManufacturersModelName","function":"@encrypt","args":["this","\"TTTTTT\""],"scripts":null}
+],
+    "comments": {"0":"# TRIAD Anonymization Profile: @encrypt().5/25/2015 9:39 AM"},
+    "errors": {}
+}

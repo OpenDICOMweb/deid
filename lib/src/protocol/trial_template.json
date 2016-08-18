@@ -1,0 +1,28 @@
+{
+  "Trial": {
+    "TRIALNO": <int>,
+    "TRIAL": "<name>",
+    "SPONSOR": "<string>",
+    "SITEID": "<string>",
+    "SITENAME": "<string>",
+    "PREFIX": "<string>",
+    "SUFFIX": "<string>",
+    "UIDROOT": "<string>",
+    "DATEINC": "<int>",
+    "KEY": "<string>"
+  },
+  "Project": {
+    "ProjectNo": "",
+    "ProjectName": "",
+    "TrialNo": "",
+    "GroupName": "",
+    "GroupNo": "",
+    "SiteNo": "",
+    "CaseNo": "",
+    "TrialName": "",
+    "SiteName": "",
+    "SubmissionType": "",
+    "TimePointID": "",
+    "TimePointDescription": ""
+  }
+}

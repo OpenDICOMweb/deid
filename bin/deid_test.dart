@@ -10,7 +10,7 @@ import 'package:logger/logger.dart';
 import 'package:convert/dicom.dart';
 import 'package:core/dicom.dart';
 
-import 'package:deidentification/src/deidentifier.dart';
+import 'package:deid/src/deid/deidentifier.dart';
 
 String testData = "C:/odw/sdk/convert/test_data/";
 String testOutput = "C:/odw/sdk/convert/test_output/";

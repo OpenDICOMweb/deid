@@ -1,8 +1,0 @@
-{
-    "name": "",
-    "parameters": [],
-    "rules": [{"target":"0x00120064","keyword":"DeIdentificationMethodCodeSequence","function":"RESET","args":null,"scripts":[]}],
-    "errors": [],
-    "filename": "C://odw/Anonymization_test_data/All rules\40.DeIdentificationMethodCodeSeq Element.txt",
-    "lines": []
-}

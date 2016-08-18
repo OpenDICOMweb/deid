@@ -7,8 +7,6 @@
 
 import 'dart:io';
 import 'package:path/path.dart';
-import 'protocol.dart';
-
 
 const String testDirPath = 'C://odw/Anonymization_test_data/';
 const String outputDir = 'C:/odw/sdk/deidentification/bin/results/';

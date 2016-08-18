@@ -1,5 +1,5 @@
-name: deidentification
-version: 0.2.0
+name: deid
+version: 0.3.0
 description: A library for de-identifying DICOM Studies.
 author: Jim Philbin <jfphilbin@gmail.com>
 description: DICOM De-Identification library

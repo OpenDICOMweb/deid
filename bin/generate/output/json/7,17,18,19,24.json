@@ -1,0 +1,25 @@
+{
+    "@type": "Clinical Study Protocol",
+    "name": "parse_text_file.dart",
+    "path": "C://odw/Anonymization_test_data/All rules\7,17,18,19,24.txt",
+    "parameters": {},
+    "rules": [
+{"index":1,"target":524336,"keyword":"StudyTime","function":"@time","args":["             "],"scripts":null},
+{"index":2,"target":524384,"keyword":"Modality","function":"@process","args":[],"scripts":null},
+{"index":3,"target":524400,"keyword":"Manufacturer","function":"@process","args":[],"scripts":null},
+{"index":4,"target":528432,"keyword":"StudyDescription","function":"@time","args":[],"scripts":null},
+{"index":5,"target":528672,"keyword":"ReferencedPatientSequence","function":"@process","args":[],"scripts":null},
+{"index":6,"target":528704,"keyword":"ReferencedImageSequence","function":"@process","args":[],"scripts":null},
+{"index":7,"target":1048592,"keyword":"PatientsName","function":"@empty","args":[],"scripts":null},
+{"index":8,"target":1048608,"keyword":"PatientId","function":"@empty","args":[],"scripts":null},
+{"index":9,"target":1048640,"keyword":"PatientsSex","function":"@empty","args":[],"scripts":null},
+{"index":10,"target":1052688,"keyword":"PatientsAge","function":"@remove","args":[],"scripts":null},
+{"index":11,"target":1179664,"keyword":"ClinicalTrialSponsorName","function":"@remove","args":[],"scripts":null},
+{"index":12,"target":1179680,"keyword":"ClinicalTrialProtocolId","function":"@remove","args":[],"scripts":null},
+{"index":13,"target":1577360,"keyword":"FocalSpots","function":"@keep","args":[],"scripts":null},
+{"index":14,"target":1577488,"keyword":"ConvolutionKernel","function":"@keep","args":[],"scripts":null},
+{"index":15,"target":1593600,"keyword":"PatientPosition","function":"@keep","args":[],"scripts":null}
+],
+    "comments": {"0":"# TRIAD Anonymization Profile: @emp_rem_process_time_keep.5/26/2015 5:11 AM"},
+    "errors": {}
+}

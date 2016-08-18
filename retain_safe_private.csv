@@ -1,0 +1,87 @@
+Data Element|Private Creator|VR|VM|Meaning
+(7053,xx00)|Philips PET Private Group|DS|1|SUV Factor - Multiplying stored pixel values by Rescale Slope then this factor results in SUVbw in g/l
+(7053,xx09)|Philips PET Private Group|DS|1|Activity Concentration Factor - Multiplying stored pixel values by Rescale Slope then this factor results in MBq/ml.
+(00E1,xx21)|ELSCINT1|DS|1|DLP
+(01E1,xx26)|ELSCINT1|CS|1|Phantom Type
+(01E1,xx50)|ELSCINT1|DS|1|Acquisition Duration
+(01F1,xx01)|ELSCINT1|CS|1|Acquisition Type
+(01F1,xx07)|ELSCINT1|DS|1|Table Velocity
+(01F1,xx26)|ELSCINT1|DS|1|Pitch
+(01F1,xx27)|ELSCINT1|DS|1|Rotation Time
+(0019,xx23)|GEMS_ACQU_01|DS|1|Table Speed [mm/rotation]
+(0019,xx24)|GEMS_ACQU_01|DS|1|Mid Scan Time [sec]
+(0019,xx27)|GEMS_ACQU_01|DS|1|Rotation Speed (Gantry Period)
+(0019,xx9E)|GEMS_ACQU_01|LO|1|Internal Pulse Sequence Name
+(0043,xx27)|GEMS_PARM_01|SH|1|"Scan Pitch Ratio in the form ""n.nnn:1"""
+(0045,xx01)|GEMS_HELIOS_01|SS|1|Number of Macro Rows in Detector
+(0045,xx02)|GEMS_HELIOS_01|FL|1|Macro width at ISO Center
+(0903,xx10)|GEIIS PACS|US|1|Reject Image Flag
+(0903,xx11)|GEIIS PACS|US|1|Significant Flag
+(0903,xx12)|GEIIS PACS|US|1|Confidential Flag
+(2001,xx03)|Philips Imaging DD 001|FL|1|Diffusion B-Factor
+(2001,xx04)|Philips Imaging DD 001|CS|1|Diffusion Direction
+(0019,xx0C)|SIEMENS MR HEADER|IS|1|B Value
+(0019,xx0D)|SIEMENS MR HEADER|CS|1|Diffusion Directionality
+(0019,xx0E)|SIEMENS MR HEADER|FD|3|Diffusion Gradient Direction
+(0019,xx27)|SIEMENS MR HEADER|FD|6|B Matrix
+(0043,xx39)|GEMS_PARM_01|IS|4|1stvalue is B Value
+(0043,xx6F)|GEMS_PARM_01|DS|3-4|Scanner Table Entry + Gradient Coil Selected
+(0025,xx07)|GEMS_SERS_01|SL|1|Images in Series
+(7E01,xx01)|HOLOGIC, Inc.|LO|1|Codec Version
+(7E01,xx02)|HOLOGIC, Inc.|SH|1|Codec Content Type
+(7E01,xx10)|HOLOGIC, Inc.|SQ|1|High Resolution Data Sequence
+(7E01,xx11)|HOLOGIC, Inc.|SQ|1|Low Resolution Data Sequence
+(7E01,xx12)|HOLOGIC, Inc.|OB|1|Codec Content
+(0099,xx01)|NQHeader|UI|1|Version
+(0099,xx02)|NQHeader|UI|1|Analyzed Series UID
+(0099,xx04)|NQHeader|SS|1|Return Code
+(0099,xx05)|NQHeader|LT|1|Return Message
+(0099,xx10)|NQHeader|FL|1|MI
+(0099,xx20)|NQHeader|SH|1|Units
+(0099,xx21)|NQHeader|FL|1|ICV
+(0199,xx01)|NQLeft|FL|1|Left Cortical White Matter
+(0199,xx02)|NQLeft|FL|1|Left Cortical Gray Matter
+(0199,xx03)|NQLeft|FL|1|Left 3rd Ventricle
+(0199,xx04)|NQLeft|FL|1|Left 4th Ventricle
+(0199,xx05)|NQLeft|FL|1|Left 5th Ventricle
+(0199,xx06)|NQLeft|FL|1|Left Lateral Ventricle
+(0199,xx07)|NQLeft|FL|1|Left Inferior Lateral Ventricle
+(0199,xx08)|NQLeft|FL|1|Left Inferior CSF
+(0199,xx09)|NQLeft|FL|1|Left Cerebellar White Matter
+(0199,xx0a)|NQLeft|FL|1|Left Cerebellar Gray Matter
+(0199,xx0b)|NQLeft|FL|1|Left Hippocampus
+(0199,xx0c)|NQLeft|FL|1|Left Amygdala
+(0199,xx0d)|NQLeft|FL|1|Left Thalamus
+(0199,xx0e)|NQLeft|FL|1|Left Caudate
+(0199,xx0f)|NQLeft|FL|1|Left Putamen
+(0199,xx10)|NQLeft|FL|1|Left Pallidum
+(0199,xx11)|NQLeft|FL|1|Left Ventral Diencephalon
+(0199,xx12)|NQLeft|FL|1|Left Nucleus Accumbens
+(0199,xx13)|NQLeft|FL|1|Left Brain Stem
+(0199,xx14)|NQLeft|FL|1|Left Exterior CSF
+(0199,xx15)|NQLeft|FL|1|Left WM Hypo
+(0199,xx16)|NQLeft|FL|1|Left Other
+(0299,xx01)|NQRight|FL|1|Right Cortical White Matter
+(0299,xx02)|NQRight|FL|1|Right Cortical Gray Matter
+(0299,xx03)|NQRight|FL|1|Right 3rd Ventricle
+(0299,xx04)|NQRight|FL|1|Right 4th Ventricle
+(0299,xx05)|NQRight|FL|1|Right 5th Ventricle
+(0299,xx06)|NQRight|FL|1|Right Lateral Ventricle
+(0299,xx07)|NQRight|FL|1|Right Inferior Lateral Ventricle
+(0299,xx08)|NQRight|FL|1|Right Inferior CSF
+(0299,xx09)|NQRight|FL|1|Right Cerebellar White Matter
+(0299,xx0a)|NQRight|FL|1|Right Cerebellar Gray Matter
+(0299,xx0b)|NQRight|FL|1|Right Hippocampus
+(0299,xx0c)|NQRight|FL|1|Right Amygdala
+(0299,xx0d)|NQRight|FL|1|Right Thalamus
+(0299,xx0e)|NQRight|FL|1|Right Caudate
+(0299,xx0f)|NQRight|FL|1|Right Putamen
+(0299,xx10)|NQRight|FL|1|Right Pallidum
+(0299,xx11)|NQRight|FL|1|Right Ventral Diencephalon
+(0299,xx12)|NQRight|FL|1|Right Nucleus Accumbens
+(0299,xx13)|NQRight|FL|1|Right Brain Stem
+(0299,xx14)|NQRight|FL|1|Right Exterior CSF
+(0299,xx15)|NQRight|FL|1|Right WM Hypo
+(0299,xx16)|NQRight|FL|1|Right Other
+(2005,xx0D)|Philips MR Imaging DD 001|FL|1|Scale Intercept
+(2005,xx0E)|Philips MR Imaging DD 001|FL|1|Scale Slope

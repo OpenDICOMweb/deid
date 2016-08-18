@@ -1,0 +1,4 @@
+{NEGATIVE: -1,
+  ONE: 1, TWO: 2,
+  ZERO: 0, EIGHT: AAAAAAAA, NINE: AAAAAAAAA, SEVEN: AAAAAAA, SIX: AAAAAA, TEN: AAAAAAAAAA, DATEINC: 0, KEY: 0, PREFIX: Basic, SPONSOR: 0, SUFFIX: Basic, TRIAD: triad, TRIAL: Basic, UIDROOT: 2, 3: THREE, FIVE: Five, Four: 4, TRI: 3, 6: SIX, EMPTY: @empty(), five: FIVE, FOUR: four, THREE: three}
+protocol: Protocol: ParamTest

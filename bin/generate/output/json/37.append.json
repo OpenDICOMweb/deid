@@ -1,0 +1,22 @@
+{
+    "@type": "Clinical Study Protocol",
+    "name": "parse_text_file.dart",
+    "path": "C://odw/Anonymization_test_data/All rules\37.append.txt",
+    "parameters": {"TRI":"3","TRIAD":"triad"},
+    "rules": [
+{"index":3,"target":524320,"keyword":"StudyDate","function":"@append","args":[],"scripts":[""]},
+{"index":4,"target":524321,"keyword":"SeriesDate","function":"@append","args":[],"scripts":["BB"]},
+{"index":5,"target":524322,"keyword":"AcquisitionDate","function":"@append","args":[],"scripts":["@TRIAD"]},
+{"index":6,"target":524337,"keyword":"SeriesTime","function":"@append","args":[],"scripts":["@TRI"]},
+{"index":8,"target":524384,"keyword":"Modality","function":"@append","args":[],"scripts":["{TRIAD QA TEAM}"]},
+{"index":9,"target":524400,"keyword":"Manufacturer","function":"@append","args":[],"scripts":["AA"]},
+{"index":10,"target":524416,"keyword":"InstitutionName","function":"@append","args":[],"scripts":["{AA\\\\BB\\\\CC}"]},
+{"index":11,"target":524417,"keyword":"InstitutionAddress","function":"@append","args":[],"scripts":["TRIADQATEAM"]},
+{"index":12,"target":528432,"keyword":"StudyDescription","function":"@append","args":[],"scripts":["{}"]},
+{"index":13,"target":1048592,"keyword":"PatientsName","function":"@append","args":[],"scripts":["{\"TRIAD\"}"]},
+{"index":14,"target":1048608,"keyword":"PatientId","function":"@append","args":[],"scripts":["{\"@TRI\"}"]},
+{"index":15,"target":1179747,"keyword":"DeIdentificationMethod","function":"@append","args":[],"scripts":["{1\\\\2\\\\3}"]}
+],
+    "comments": {"0":"# TRIAD Anonymization Profile: @append().5/27/2015 4:47 AM"},
+    "errors": {"7":"set.[0008,0050] AccessionNumber = @append(){AA//BB//CC}"}
+}

@@ -1,0 +1,11 @@
+{
+    "@type": "Clinical Study Protocol",
+    "name": "parse_text_file.dart",
+    "path": "C://odw/Anonymization_test_data/All rules\40.DeIdentificationMethodCodeSeq Element.txt",
+    "parameters": {},
+    "rules": [
+{"index":1,"target":1179748,"keyword":"DeIdentificationMethodCodeSequence","function":"RESET","args":["","113101","113103","113105","113107","113108","113109","113111","11111","2222"],"scripts":null}
+],
+    "comments": {"0":"# TRIAD Anonymization Profile: 40.DeIdentificationMethodCodeSeq Element.5/27/2015 7:43 AM"},
+    "errors": {}
+}

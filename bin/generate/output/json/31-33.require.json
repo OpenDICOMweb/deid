@@ -1,0 +1,27 @@
+{
+    "@type": "Clinical Study Protocol",
+    "name": "parse_text_file.dart",
+    "path": "C://odw/Anonymization_test_data/All rules\31-33.require.txt",
+    "parameters": {"3":"THREE","FIVE":"Five","Four":"4","ONE":"one","TWO":"2"},
+    "rules": [
+{"index":6,"target":524289,"keyword":"LengthToEndRetired","function":"@require","args":["SeriesNumber"],"scripts":null},
+{"index":7,"target":524293,"keyword":"SpecificCharacterSet","function":"@require","args":["Modality"],"scripts":null},
+{"index":8,"target":524306,"keyword":"InstanceCreationDate","function":"@require","args":["InstanceNumber","SeriesDate"],"scripts":null},
+{"index":9,"target":524320,"keyword":"StudyDate","function":"@require","args":["RequestingPhysician","\"TRIAD\""],"scripts":null},
+{"index":10,"target":524321,"keyword":"SeriesDate","function":"@require","args":["PatientsSex","TRIAD"],"scripts":null},
+{"index":11,"target":524322,"keyword":"AcquisitionDate","function":"@require","args":["InstanceNumber","\"QATEAM\""],"scripts":null},
+{"index":12,"target":524323,"keyword":"ContentDate","function":"@require","args":["RequestingPhysician","@3"],"scripts":null},
+{"index":13,"target":524330,"keyword":"AcquisitionDatetime","function":"@require","args":["Modality","@FIVE"],"scripts":null},
+{"index":14,"target":524337,"keyword":"SeriesTime","function":"@require","args":["CT","@Four"],"scripts":null},
+{"index":15,"target":524372,"keyword":"RetrieveAeTitle","function":"@require","args":["\"@3\""],"scripts":null},
+{"index":16,"target":524374,"keyword":"InstanceAvailability","function":"@require","args":["CT"],"scripts":null},
+{"index":17,"target":524416,"keyword":"InstitutionName","function":"@require","args":["@ONE"],"scripts":null},
+{"index":18,"target":528400,"keyword":"StationName","function":"@require","args":["\"PatientsName\""],"scripts":null},
+{"index":19,"target":528432,"keyword":"StudyDescription","function":"@require","args":["@FIVE"],"scripts":null},
+{"index":20,"target":1048608,"keyword":"PatientId","function":"@require","args":[],"scripts":null},
+{"index":21,"target":1048624,"keyword":"PatientsBirthDate","function":"@require","args":[],"scripts":null},
+{"index":22,"target":1048626,"keyword":"PatientsBirthTime","function":"@require","args":[],"scripts":null}
+],
+    "comments": {"0":"# TRIAD Anonymization Profile: 31.require_rule.5/27/2015 7:16 AM"},
+    "errors": {}
+}

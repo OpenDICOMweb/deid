@@ -1,0 +1,15 @@
+{
+    "@type": "Clinical Study Protocol",
+    "name": "parse_text_file.dart",
+    "path": "C://odw/Anonymization_test_data/18.time\18.time.txt",
+    "parameters": {"ONE":"$"},
+    "rules": [
+{"index":2,"target":524320,"keyword":"StudyDate","function":"@time","args":[],"scripts":null},
+{"index":3,"target":524321,"keyword":"SeriesDate","function":"@time","args":["*"],"scripts":null},
+{"index":4,"target":524336,"keyword":"StudyTime","function":"@time","args":["@ONE"],"scripts":null},
+{"index":5,"target":524337,"keyword":"SeriesTime","function":"@time","args":["&"],"scripts":null},
+{"index":6,"target":524338,"keyword":"AcquisitionTime","function":"@time","args":["A"],"scripts":null}
+],
+    "comments": {"0":"# TRIAD Anonymization Profile: 18.time.5/28/2015 1:20 AM"},
+    "errors": {}
+}

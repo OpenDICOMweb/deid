@@ -1,0 +1,17 @@
+Files with Errors:
+C://odw/Anonymization_test_data/37.append\37.append.txt
+  7: set.[0008,0050] AccessionNumber = @append(){AA//BB//CC}
+C://odw/Anonymization_test_data/41-45.if rule\41-45.if rule.txt
+  9: set.[0008,0012] InstanceCreationDate = @if(@EMPTY,exists){Non-Empty}
+  11: set.[0008,0021] SeriesDate = @if(this,exists)){Yes1}{No1}{Yes2}{No2}
+  23: set.[0008,1050] PerformingPhysiciansName = @if(this,isblank){True}
+  29: set.[0010,1005] PatientsBirthName = @if(this,matches,"[a-z]"){Yes}{No
+C://odw/Anonymization_test_data/@append()\@append().txt
+  7: set.[0008,0050] AccessionNumber = @append(){AA//BB//CC}
+C://odw/Anonymization_test_data/All rules\37.append.txt
+  7: set.[0008,0050] AccessionNumber = @append(){AA//BB//CC}
+C://odw/Anonymization_test_data/All rules\41-45.if rule.txt
+  9: set.[0008,0012] InstanceCreationDate = @if(@EMPTY,exists){Non-Empty}
+  11: set.[0008,0021] SeriesDate = @if(this,exists)){Yes1}{No1}{Yes2}{No2}
+  23: set.[0008,1050] PerformingPhysiciansName = @if(this,isblank){True}
+  29: set.[0010,1005] PatientsBirthName = @if(this,matches,"[a-z]"){Yes}{No
