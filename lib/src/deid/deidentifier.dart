@@ -11,11 +11,16 @@ import 'deid_tags.dart';
 import 'option.dart';
 
 //TODO: handle Options
+//TODO: support Modified Attribute Sequence
+//TODO: support Encrypted Attributes Data Set
 class DeIdentifier {
+  static const String methodIdentifier = "Open DICOMweb DeIdentifier";
+  static const String version = "0.3.0";
   static const defaultOptions = const [Option.kNone];
   final List<Option> options;
   final List<int> tagsNotPresent = [];
 
+  static String get method => '$methodIdentifier($version)';
 
   DeIdentifier([this.options = defaultOptions]);
 

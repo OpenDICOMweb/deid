@@ -11,6 +11,8 @@ import 'package:core/new_base.dart';
 
 import 'src/deid_tags.dart';
 
+/// Create a JSON object of [DeId] [Elements] by [VR] and [VM]
+
 List vrs = new List(32);
 List<List<Element>> vrElements = new List(32);
 String hex(int i) => '0x' + i.toRadixString(16).padLeft(8, '0');

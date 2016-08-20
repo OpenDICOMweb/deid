@@ -30,7 +30,5 @@ class CleanGraphicsOption {
   static const List<String> values = const [
     kGraphicAnnotationSequence];
 
-
-
 }
   

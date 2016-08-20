@@ -7,7 +7,7 @@
 /// generate_class
 
 import 'dart:io';
-import 'src/deid_class_table.dart';
+import 'src/create_class_table.dart';
 
 /**
  * This program generates the DeID class using the 'deid.json' file that was created

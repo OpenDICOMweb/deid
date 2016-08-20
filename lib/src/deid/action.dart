@@ -40,6 +40,7 @@ class Action {
 
   const Action(this.keyword, this.name, this.action);
 
+  static const A = const Action("A", "AddIfMissing", addIfMissing);
   static const D = const Action("D", "Replace Non-Zero", replaceNonZero);
   static const Z = const Action("Z", "Replace Zero", zeroOrDummy);
   static const X = const Action("X", "Remove", remove);
@@ -62,7 +63,8 @@ class Action {
   static replaceNonZero(Dataset ds, int tag, List values) =>
       ds.dummy(tag, values);
 
-  //TODO: remove
+  //TODO: fix or remove
+  /*
   //static replace(Dataset ds, int tag, arg, AType aType, bool emptyAllowed) {
   static replace(Dataset ds, int tag, values, {bool emptyAllowed: true}) {
     Attribute a = ds.lookup(tag);
@@ -70,7 +72,7 @@ class Action {
     if ((a != null) && emptyAllowed && (values.length >= 0)) {
       a.replace(values);
     }
-//TODO: fix and finish
+    //TODO: fix and finish
     if (values == null) throw "Null Values";
     if (values is Function) values = arg(values);
     if (values == null) throw "Null Values";
@@ -78,6 +80,7 @@ class Action {
       throw "dummy actions must have values.";
     a.replace(values);
   }
+  */
 
   /// Replace with a zero length value, or a non-zero length value
   /// that may be a dummy value and consistent with the VR'.
@@ -96,7 +99,7 @@ class Action {
   /// Clean, that is replace with values of similar meaning known
   /// not to contain identifying information and consistent with the VR.
   //static clean(Dataset ds, int tag, arg, AType aType) =>
-  static clean(Dataset ds, int tag, arg) => replace(ds, tag, arg);
+  static clean(Dataset ds, int tag, arg) => rep laceNonZero(ds, tag, arg);
 
   /// Replace with a non-zero length UID that is internally consistent
   /// within a set of Instances';

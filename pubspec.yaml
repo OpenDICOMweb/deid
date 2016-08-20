@@ -3,7 +3,7 @@ version: 0.3.0
 description: A library for de-identifying DICOM Studies.
 author: Jim Philbin <jfphilbin@gmail.com>
 description: DICOM De-Identification library
-homepage: https://github.com/OpenDICOMweb/deidentification
+homepage: https://github.com/OpenDICOMweb/deid
 
 dependencies:
   convert:

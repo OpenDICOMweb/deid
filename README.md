@@ -1,9 +1,15 @@
 [**Open DICOMweb**(TM)]()
 # DICOM De-Identification
 
-The DICOM De-Identification library, part of the Open DICOMweb SDK.
+The Open DICOMweb De-Identification library, part of the Open DICOMweb SDK.
 
-[TODO]
+## Notes
+
+- The default dummy value is "De-Identified".  This is for attributes that have a "D" action but no values have been supplied to the DeIdentifier.
+
+-
+
+## TODO
 
 ## Usage [TODO]
 
