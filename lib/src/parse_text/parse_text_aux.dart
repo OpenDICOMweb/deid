@@ -4,7 +4,7 @@
 // Original author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
-import 'package:deid/protocol.dart';
+import 'package:deid/profile.dart';
 
 import 'parse_text.dart';
 

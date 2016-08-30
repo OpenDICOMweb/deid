@@ -6,7 +6,7 @@
 
 import 'dart:io';
 
-import 'package:deid/protocol.dart';
+import 'package:deid/profile.dart';
 import 'package:deid/text_protocol_parser.dart';
 
 const String testDirPath = 'C://odw/Anonymization_test_data/';
@@ -35,7 +35,7 @@ void parseDefOnly(String path) {
     }
   }
   print('Success $success, Failure: $failure of ${lines.length} lines');
-  print('map = ${protocol.pMap}');
+  print('map = ${protocol.parameters}');
   print('errors: ${protocol.errors}');
 }
 
@@ -53,8 +53,8 @@ void parseFullLine(String path) {
     }
   }
   print('Success $success, Failure: $failure of ${lines.length} lines');
-  print('map = ${protocol.pMap}');
-  print('protocol: $protocol');
+  print('map = ${protocol.parameters}');
+  print('profile: $protocol');
 }
 
 void success(Match m, String s) {

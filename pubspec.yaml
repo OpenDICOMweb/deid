@@ -12,6 +12,8 @@ dependencies:
     path: C:/odw/sdk/core
   logger:
     path: C:/odw/sdk/logger
+  io:
+    path: C:/odw/sdk/io
   path: '>= 1.3.9'
 
 dev_dependencies:

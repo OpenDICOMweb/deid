@@ -12,7 +12,7 @@
 
 import 'dart:io';
 
-import 'package:deid/protocol.dart';
+import 'package:deid/profile.dart';
 import 'package:deid/text_protocol_parser.dart';
 
 const String id = r'(\w+)';
@@ -82,7 +82,7 @@ void parseFullLine(String path) {
     }
   }
   print('Success $success, Failure: $failure of ${lines.length} lines');
-  print('protocol: ${protocol.json}');
+  print('profile: ${protocol.json}');
 }
 
 void success(Match m, String s) {

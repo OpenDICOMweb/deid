@@ -24,7 +24,8 @@ class DeIdentifier {
 
   DeIdentifier([this.options = defaultOptions]);
 
-  call(Dataset ds) {
+  Dataset call(Dataset ds) {
+    var map = BasicProfile.map;
     for(int tag in deIdTags) {
       Attribute a = ds.lookup(tag);
       if (a != null) {
@@ -38,6 +39,7 @@ class DeIdentifier {
         tagsNotPresent.add(tag);
       }
     }
+    return ds;
   }
 
   deIdentifySequence(SQ a) {

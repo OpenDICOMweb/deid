@@ -5,7 +5,7 @@
 // See the AUTHORS file for other contributors.
 
 
-import 'package:core/new_dicom.dart';
+import 'package:core/dicom.dart';
 import 'package:deid/src/deid/action.dart';
 
 //TODO: add the ability to
@@ -14,44 +14,33 @@ class CleanPixelData {
   final String keyword;
   final Action action;
 
-  const CleanPixelData(this.tag, this.keyword, this.action);
+  CleanPixelData(this.tag, this.keyword, this.action);
 
-  static const kAttributeBurnedInAnnotation =
-    const CleanPixelData(0x00280301, "Attribute Burned In Annotation", Action.add);
+  static final kAttributeBurnedInAnnotation =
+    new CleanPixelData(0x00280301, "Attribute Burned In Annotation", Action.A);
 
   call(Dataset ds, {
-      bool removePixelData: false,
-      bool removeIconPixelData: false,
-      bool removeFloatPixelData: false,
-      bool removeDoubleFloatPixelData: false
+      bool removePixelDataFlag: false,
+      bool removeIconPixelDataFlag: false,
+      bool removeFloatPixelDataFlag: false,
+      bool removeDoubleFloatPixelDataFlag: false
       }) {
     Attribute a = ds.lookup(kAttributeBurnedInAnnotation);
     if ((a != null) && (a.value == "NO")) return true;
-    if (removeIconPixelData) removeIconPixelData(ds);
-    if (removeFloatPixelData) ds.remove(kFloatPixelData);
-    if (removeDoubleFloatPixelData) ds.remove(kDoubleFloadPixelData);
+    if (removeIconPixelDataFlag) removeIconPixelData(ds);
+    if (removeFloatPixelDataFlag) ds.remove(kFloatPixelData);
+    if (removeDoubleFloatPixelDataFlag) ds.remove(kDoubleFloatPixelData);
     return false;
   }
 
+  bool removeIconPixelData(ds) {
 
-  static lookup(int tag) => map[tag];
-
-  static const Map<int, String> map = const {
-    0x00280301: kAttributeBurnedInAnnotation
-  };
-
-  static const List<int> keys = const [
-    0x00280301
-  ];
-
-  static const List<String> values = const [
-    kAttributeBurnedInAnnotation
-  ];
+  }
 
 }
 
-"Clean Recognizable Visual Features Options"
-
+//TODO: doc
+///Clean Recognizable Visual Features Options
 class CleanRecognizableVisualFeaturesOptions {
   final int tag;
   final String keyword;
@@ -59,21 +48,8 @@ class CleanRecognizableVisualFeaturesOptions {
 
   const CleanRecognizableVisualFeaturesOptions(this.tag, this.keyword, this.action);
 
-  static const kAttributeBurnedInAnnotation =
-  const CleanPixelData(0x00280301, "Attribute Burned In Annotation", Action.add);
+  static final kAttributeBurnedInAnnotation =
+  new CleanPixelData(0x00280301, "Attribute Burned In Annotation", Action.A);
 
-  static lookup(int tag) => map[tag];
-
-  static const Map<int, String> map = const {
-    0x00280301: kAttributeBurnedInAnnotation
-  };
-
-  static const List<int> keys = const [
-    0x00280301
-  ];
-
-  static const List<String> values = const [
-    kAttributeBurnedInAnnotation
-  ];
 
 }

@@ -14,7 +14,7 @@ const String fileExt = '.txt';
 
 ///TODO: doc
 void main() {
-  List<List<String>> filesWithErrors = [];
+  //List<List<String>> filesWithErrors = [];
   List<FileSystemEntity> dirList;
   List<String> fileList = [];
 

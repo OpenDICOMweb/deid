@@ -1,0 +1,291 @@
+{
+  "VR.SH": {
+    "VM.k1": {
+      "AccessionNumber": ["0x00080050", "Z"],
+      "DetectorID": ["0x0018700a", "XD"],
+      "EthnicGroup": ["0x00102160", "X"],
+      "Occupation": ["0x00102180", "X"],
+      "OrderCallbackPhoneNumber": ["0x00402010", "X"],
+      "OrderEntererLocation": ["0x00402009", "X"],
+      "PerformedLocation": ["0x00400243", "X"],
+      "PerformedProcedureStepID": ["0x00400253", "X"],
+      "PerformedStationName": ["0x00400242", "X"],
+      "RequestedProcedureID": ["0x00401001", "X"],
+      "ScheduledProcedureStepLocation": ["0x00400011", "X"],
+      "StationName": ["0x00081010", "XZD"],
+      "StudyID": ["0x00200010", "Z"],
+      "TimezoneOffsetFromUTC": ["0x00080201", "X"]
+    }, "VM.k1_n": {
+      "PatientTelephoneNumbers": ["0x00102154", "X"],
+      "ReferringPhysicianTelephoneNumbers": ["0x00080094", "X"],
+      "ScheduledStationName": ["0x00400010", "X"]
+    }
+  },
+  "VR.LT": {
+  "VM.k1": {
+    "AcquisitionComments": ["0x00184000", "X"],
+    "AcquisitionProtocolDescription": ["0x00189424", "X"],
+    "AdditionalPatientHistory": ["0x001021b0", "X"],
+    "Arbitrary": ["0x40000010", "X"],
+    "FrameComments": ["0x00209158", "X"],
+    "IdentifyingComments": ["0x00084000", "X"],
+    "ImageComments": ["0x00204000", "X"],
+    "ImagePresentationComments": ["0x00284000", "X"],
+    "ImagingServiceRequestComments": ["0x00402400", "X"],
+    "InterpretationDiagnosisDescription": ["0x40080115", "X"],
+    "OverlayComments": ["0x60004000", "X"],
+    "PatientComments": ["0x00104000", "X"],
+    "RequestedProcedureComments": ["0x00401400", "X"],
+    "StudyComments": ["0x00324000", "X"],
+    "TextComments": ["0x40004000", "X"],
+    "VisitComments": ["0x00384000", "X"]
+  }
+}, "VR.SQ": {
+  "VM.k1": {
+    "AcquisitionContextSequence": ["0x00400555", "X"],
+    "ActualHumanPerformersSequence": ["0x00404035", "X"],
+    "AdmittingDiagnosesCodeSequence": ["0x00081084", "X"],
+    "AuthorObserverSequence": ["0x0040a078", "X"],
+    "ContentCreatorIdentificationCodeSequence": ["0x00700086", "X"],
+    "ContentSequence": ["0x0040a730", "X"],
+    "CustodialOrganizationSequence": ["0x0040a07c", "X"],
+    "DigitalSignaturesSequence": ["0xfffafffa", "X"],
+    "GraphicAnnotationSequence": ["0x00700001", "D"],
+    "IconImageSequence": ["0x00880200", "X"],
+    "InstitutionCodeSequence": ["0x00080082", "XZD"],
+    "IntendedRecipientsOfResultsIdentificationSequence": ["0x00401011", "X"],
+    "InterpretationApproverSequence": ["0x40080111", "X"],
+    "ModifiedAttributesSequence": ["0x04000550", "X"],
+    "OperatorIdentificationSequence": ["0x00081072", "XD"],
+    "OriginalAttributesSequence": ["0x04000561", "X"],
+    "OtherPatientIDsSequence": ["0x00101002", "X"],
+    "ParticipantSequence": ["0x0040a07a", "X"],
+    "PatientInsurancePlanCodeSequence": ["0x00100050", "X"],
+    "PatientPrimaryLanguageCodeSequence": ["0x00100101", "X"],
+    "PatientPrimaryLanguageModifierCodeSequence": ["0x00100102", "X"],
+    "PerformedStationGeographicLocationCodeSequence": ["0x00404030", "X"],
+    "PerformedStationNameCodeSequence": ["0x00404028", "X"],
+    "PerformingPhysicianIdentificationSequence": ["0x00081052", "X"],
+    "PersonIdentificationCodeSequence": ["0x00401101", "D"],
+    "PhysiciansReadingStudyIdentificationSequence": ["0x00081062", "X"],
+    "PhysiciansOfRecordIdentificationSequence": ["0x00081049", "X"],
+    "ReferencedDigitalSignatureSequence": ["0x04000402", "X"],
+    "ReferencedImageSequence": ["0x00081140", "XZU"],
+    "ReferencedPatientAliasSequence": ["0x00380004", "X"],
+    "ReferencedPatientSequence": ["0x00081120", "X"],
+    "ReferencedPerformedProcedureStepSequence": ["0x00081111", "XZD"],
+    "ReferencedSOPInstanceMACSequence": ["0x04000403", "X"],
+    "ReferencedStudySequence": ["0x00081110", "XZ"],
+    "ReferringPhysicianIdentificationSequence": ["0x00080096", "X"],
+    "RequestAttributesSequence": ["0x00400275", "X"],
+    "ResultsDistributionListSequence": ["0x40080118", "X"],
+    "ScheduledHumanPerformersSequence": ["0x00404034", "X"],
+    "ScheduledPerformingPhysicianIdentificationSequence": ["0x0040000b", "X"],
+    "ScheduledStationGeographicLocationCodeSequence": ["0x00404027", "X"],
+    "ScheduledStationNameCodeSequence": ["0x00404025", "X"],
+    "SourceImageSequence": ["0x00082112", "XZU"],
+    "VerifyingObserverIdentificationCodeSequence": ["0x0040a088", "Z"],
+    "VerifyingObserverSequence": ["0x0040a073", "D"]
+  }
+}, "VR.DA": {
+  "VM.k1": {
+    "AcquisitionDate": ["0x00080022", "XZ"],
+    "AdmittingDate": ["0x00380020", "X"],
+    "ContentDate": ["0x00080023", "ZD"],
+    "CurveDate": ["0x00080025", "X"],
+    "LastMenstrualDate": ["0x001021d0", "X"],
+    "OverlayDate": ["0x00080024", "X"],
+    "PatientBirthDate": ["0x00100030", "Z"],
+    "PerformedProcedureStepEndDate": ["0x00400250", "X"],
+    "PerformedProcedureStepStartDate": ["0x00400244", "X"],
+    "ScheduledProcedureStepEndDate": ["0x00400004", "X"],
+    "ScheduledProcedureStepStartDate": ["0x00400002", "X"],
+    "SeriesDate": ["0x00080021", "XD"],
+    "StudyDate": ["0x00080020", "Z"]
+  }
+}, "VR.DT": {
+  "VM.k1": {
+    "AcquisitionDateTime": ["0x0008002a", "XD"]
+  }
+}, "VR.LO": {
+  "VM.k1": {
+    "AcquisitionDeviceProcessingDescription": ["0x00181400", "XD"],
+    "AdmissionID": ["0x00380010", "X"],
+    "BranchOfService": ["0x00101081", "X"],
+    "CassetteID": ["0x00181007", "X"],
+    "ConfidentialityConstraintOnPatientDataDescription": ["0x00403001", "X"],
+    "ContrastBolusAgent": ["0x00180010", "ZD"],
+    "CountryOfResidence": ["0x00102150", "X"],
+    "CurrentPatientLocation": ["0x00380300", "X"],
+    "DeviceSerialNumber": ["0x00181000", "XZD"],
+    "DischargeDiagnosisDescription": ["0x00380040", "X"],
+    "DistributionAddress": ["0x4008011a", "X"],
+    "FillerOrderNumberImagingServiceRequest": ["0x00402017", "Z"],
+    "GantryID": ["0x00181008", "X"],
+    "GeneratorID": ["0x00181005", "X"],
+    "HumanPerformerOrganization": ["0x00404036", "X"],
+    "InstitutionName": ["0x00080080", "XZD"],
+    "InstitutionalDepartmentName": ["0x00081040", "X"],
+    "InterpretationIDIssuer": ["0x40080202", "X"],
+    "IssuerOfAdmissionID": ["0x00380011", "X"],
+    "IssuerOfPatientID": ["0x00100021", "X"],
+    "IssuerOfServiceEpisodeID": ["0x00380061", "X"],
+    "MedicalRecordLocator": ["0x00101090", "X"],
+    "MilitaryRank": ["0x00101080", "X"],
+    "ModifiedImageDescription": ["0x00203406", "X"],
+    "ModifyingDeviceManufacturer": ["0x00203404", "X"],
+    "PatientAddress": ["0x00101040", "X"],
+    "PatientID": ["0x00100020", "Z"],
+    "PatientState": ["0x00380500", "X"],
+    "PatientTransportArrangements": ["0x00401004", "X"],
+    "PatientInstitutionResidence": ["0x00380400", "X"],
+    "PatientReligiousPreference": ["0x001021f0", "X"],
+    "PerformedProcedureStepDescription": ["0x00400254", "X"],
+    "PlacerOrderNumberImagingServiceRequest": ["0x00402016", "Z"],
+    "PlateID": ["0x00181004", "X"],
+    "PreMedication": ["0x00400012", "X"],
+    "ProtocolName": ["0x00181030", "XD"],
+    "ReasonForTheImagingServiceRequest": ["0x00402001", "X"],
+    "ReasonForStudy": ["0x00321030", "X"],
+    "RegionOfResidence": ["0x00102152", "X"],
+    "RequestedContrastAgent": ["0x00321070", "X"],
+    "RequestedProcedureDescription": ["0x00321060", "XZ"],
+    "RequestedProcedureLocation": ["0x00401005", "X"],
+    "RequestingService": ["0x00321033", "X"],
+    "ResponsibleOrganization": ["0x00102299", "X"],
+    "ResultsIDIssuer": ["0x40080042", "X"],
+    "ScheduledPatientInstitutionResidence": ["0x0038001e", "X"],
+    "ScheduledProcedureStepDescription": ["0x00400007", "X"],
+    "ScheduledStudyLocation": ["0x00321020", "X"],
+    "SeriesDescription": ["0x0008103e", "X"],
+    "ServiceEpisodeDescription": ["0x00380062", "X"],
+    "ServiceEpisodeID": ["0x00380060", "X"],
+    "SpecialNeeds": ["0x00380050", "X"],
+    "StudyDescription": ["0x00081030", "X"],
+    "StudyIDIssuer": ["0x00320012", "X"],
+    "TextString": ["0x20300020", "X"],
+    "TopicAuthor": ["0x00880910", "X"],
+    "TopicTitle": ["0x00880904", "X"],
+    "VerifyingOrganization": ["0x0040a027", "X"]
+  }, "VM.k1_n": {
+    "AdmittingDiagnosesDescription": ["0x00081080", "X"],
+    "Allergies": ["0x00102110", "X"],
+    "InsurancePlanIdentification": ["0x00101050", "X"],
+    "MedicalAlerts": ["0x00102000", "X"],
+    "OtherPatientIDs": ["0x00101000", "X"],
+    "PersonTelephoneNumbers": ["0x00401103", "X"]
+  }, "VM.k1_32": {"TopicKeywords": ["0x00880912", "X"]}
+}, "VR.TM": {
+  "VM.k1": {
+    "AcquisitionTime": ["0x00080032", "XZ"],
+    "AdmittingTime": ["0x00380021", "X"],
+    "ContentTime": ["0x00080033", "ZD"],
+    "CurveTime": ["0x00080035", "X"],
+    "OverlayTime": ["0x00080034", "X"],
+    "PatientBirthTime": ["0x00100032", "X"],
+    "PerformedProcedureStepEndTime": ["0x00400251", "X"],
+    "PerformedProcedureStepStartTime": ["0x00400245", "X"],
+    "ScheduledProcedureStepEndTime": ["0x00400005", "X"],
+    "ScheduledProcedureStepStartTime": ["0x00400003", "X"],
+    "SeriesTime": ["0x00080031", "XD"],
+    "StudyTime": ["0x00080030", "Z"]
+  }
+}, "VR.UI": {
+  "VM.k1": {
+    "AffectedSOPInstanceUID": ["0x00001000", "X"],
+    "ConcatenationUID": ["0x00209161", "U"],
+    "ContextGroupExtensionCreatorUID": ["0x0008010d", "U"],
+    "CreatorVersionUID": ["0x00089123", "U"],
+    "DeviceUID": ["0x00181002", "U"],
+    "DigitalSignatureUID": ["0x04000100", "X"],
+    "DimensionOrganizationUID": ["0x00209164", "U"],
+    "DoseReferenceUID": ["0x300a0013", "U"],
+    "FiducialUID": ["0x0070031a", "U"],
+    "FrameOfReferenceUID": ["0x00200052", "U"],
+    "InstanceCreatorUID": ["0x00080014", "U"],
+    "LargePaletteColorLookupTableUID": ["0x00281214", "U"],
+    "MediaStorageSOPInstanceUID": ["0x00020003", "U"],
+    "PaletteColorLookupTableUID": ["0x00281199", "U"],
+    "ReferencedFrameOfReferenceUID": ["0x30060024", "U"],
+    "ReferencedGeneralPurposeScheduledProcedureStepTransactionUID": ["0x00404023", "U"],
+    "ReferencedSOPInstanceUID": ["0x00081155", "U"],
+    "RelatedFrameOfReferenceUID": ["0x300600c2", "U"],
+    "RequestedSOPInstanceUID": ["0x00001001", "U"],
+    "SeriesInstanceUID": ["0x0020000e", "U"],
+    "SOPInstanceUID": ["0x00080018", "U"],
+    "StorageMediaFileSetUID": ["0x00880140", "U"],
+    "StudyInstanceUID": ["0x0020000d", "U"],
+    "SynchronizationFrameOfReferenceUID": ["0x00200200", "U"],
+    "TemplateExtensionCreatorUID": ["0x0040db0d", "U"],
+    "TemplateExtensionOrganizationUID": ["0x0040db0c", "U"],
+    "TransactionUID": ["0x00081195", "U"],
+    "UID": ["0x0040a124", "U"]
+  }, "VM.k1_n": {
+    "FailedSOPInstanceUIDList": ["0x00080058", "U"], "IrradiationEventUID": ["0x00083010", "U"]
+  }
+}, "VR.ST": {
+  "VM.k1": {
+    "CommentsOnThePerformedProcedureStep": ["0x00400280", "X"],
+    "ContributionDescription": ["0x0018a003", "X"],
+    "DerivationDescription": ["0x00082111", "X"],
+    "Impressions": ["0x40080300", "X"],
+    "InstitutionAddress": ["0x00080081", "X"],
+    "InterpretationText": ["0x4008010b", "X"],
+    "PersonAddress": ["0x00401102", "X"],
+    "ReferringPhysicianAddress": ["0x00080092", "X"],
+    "ResultsComments": ["0x40084000", "X"],
+    "TopicSubject": ["0x00880906", "X"]
+  }
+}, "VR.PN": {
+  "VM.k1": {
+    "ContentCreatorName": ["0x00700084", "Z"],
+    "DistributionName": ["0x40080119", "X"],
+    "HumanPerformerName": ["0x00404037", "X"],
+    "InterpretationAuthor": ["0x4008010c", "X"],
+    "InterpretationRecorder": ["0x40080102", "X"],
+    "InterpretationTranscriber": ["0x4008010a", "X"],
+    "OrderEnteredBy": ["0x00402008", "X"],
+    "PatientBirthName": ["0x00101005", "X"],
+    "PatientMotherBirthName": ["0x00101060", "X"],
+    "PatientName": ["0x00100010", "Z"],
+    "PersonName": ["0x0040a123", "D"],
+    "PhysicianApprovingInterpretation": ["0x40080114", "X"],
+    "ReferringPhysicianName": ["0x00080090", "Z"],
+    "RequestingPhysician": ["0x00321032", "X"],
+    "ResponsiblePerson": ["0x00102297", "X"],
+    "ReviewerName": ["0x300e0008", "XZ"],
+    "ScheduledPerformingPhysicianName": ["0x00400006", "X"],
+    "VerifyingObserverName": ["0x0040a075", "D"]
+  }, "VM.k1_n": {
+    "NameOfPhysiciansReadingStudy": ["0x00081060", "X"],
+    "NamesOfIntendedRecipientsOfResults": ["0x00401010", "X"],
+    "OperatorsName": ["0x00081070", "XZD"],
+    "OtherPatientNames": ["0x00101001", "X"],
+    "PerformingPhysicianName": ["0x00081050", "X"],
+    "PhysiciansOfRecord": ["0x00081048", "X"]
+  }
+}, "VR.OB": {
+  "VM.k1": {"DataSetTrailingPadding": ["0xfffcfffc", "X"],
+    "MAC": ["0x04000404", "X"]}
+}, "VR.CS": {
+  "VM.k1": {
+    "ModifyingDeviceID": ["0x00203401", "X"],
+    "PatientSexNeutered": ["0x00102203", "XZ"],
+    "PatientSex": ["0x00100040", "Z"],
+    "SmokingStatus": ["0x001021a0", "X"]
+  }
+}, "VR.OBOW": {
+  "VM.k1": {"OverlayData": ["0x60003000", "X"]}
+}, "VR.AS": {
+  "VM.k1": {"PatientAge": ["0x00101010", "X"]}
+}, "VR.DS": {
+  "VM.k1": {"PatientSize": ["0x00101020", "X"], "PatientWeight": ["0x00101030", "X"]}
+}, "VR.AE": {
+  "VM.k1": {"PerformedStationAETitle": ["0x00400241", "X"]}, "VM.k1_n": {
+    "ScheduledStationAETitle": ["0x00400001", "X"],
+    "ScheduledStudyLocationAETitle": ["0x00321021", "X"]
+  }
+}, "VR.US": {
+  "VM.k1": {"PregnancyStatus": ["0x001021c0", "X"]}
+}
+}
