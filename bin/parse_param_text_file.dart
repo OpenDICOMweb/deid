@@ -23,38 +23,38 @@ void main(args) {
 
 void parseDefOnly(String path) {
   List<String> lines = readLinesFromFile(path);
-  Protocol protocol = new Protocol('ParamTest', path, lines);
+  Profile profile = new Profile('ParamTest', path, lines);
 
   int success = 0;
   int failure = 0;
   for (int i = 0; i < lines.length; i++) {
-    if (parseParameterDefLine(protocol, i, lines[i])) {
+    if (parseParameterDefLine(profile, i, lines[i])) {
       success++;
     } else {
       failure++;
     }
   }
   print('Success $success, Failure: $failure of ${lines.length} lines');
-  print('map = ${protocol.parameters}');
-  print('errors: ${protocol.errors}');
+  print('map = ${profile.parameters}');
+  print('errors: ${profile.errors}');
 }
 
 void parseFullLine(String path) {
   List<String> lines = readLinesFromFile(path);
-  Protocol protocol = new Protocol('ParamTest', path, lines);
+  Profile profile = new Profile('ParamTest', path, lines);
 
   int success = 0;
   int failure = 0;
   for (int i = 0; i < lines.length; i++) {
-    if (parseParameterLine(protocol, i, lines[i])) {
+    if (parseParameterLine(profile, i, lines[i])) {
       success++;
     } else {
       failure++;
     }
   }
   print('Success $success, Failure: $failure of ${lines.length} lines');
-  print('map = ${protocol.parameters}');
-  print('profile: $protocol');
+  print('map = ${profile.parameters}');
+  print('profile: $profile');
 }
 
 void success(Match m, String s) {

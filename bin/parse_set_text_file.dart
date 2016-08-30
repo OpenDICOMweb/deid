@@ -52,37 +52,37 @@ void main(args) {
 
 void parseFunctionOnly(String path) {
   List<String> lines = readLinesFromFile(path);
-  Protocol protocol = new Protocol('ParamTest', path, lines);
+  Profile profile = new Profile('ParamTest', path, lines);
 
   int success = 0;
   int failure = 0;
   for (int i = 0; i < lines.length; i++) {
-    if (parseSetFunctionLine(protocol, i, lines[i])) {
+    if (parseSetFunctionLine(profile, i, lines[i])) {
       success++;
     } else {
       failure++;
     }
   }
   print('Success $success, Failure: $failure of ${lines.length} lines');
-  print('map = ${protocol.rules}');
-  print('errors: ${protocol.errors}');
+  print('map = ${profile.rules}');
+  print('errors: ${profile.errors}');
 }
 
 void parseFullLine(String path) {
   List<String> lines = readLinesFromFile(path);
-  Protocol protocol = new Protocol('ParamTest', path, lines);
+  Profile profile = new Profile('ParamTest', path, lines);
 
   int success = 0;
   int failure = 0;
   for (int i = 0; i < lines.length; i++) {
-    if (parseSetLine(protocol, i, lines[i])) {
+    if (parseSetLine(profile, i, lines[i])) {
       success++;
     } else {
       failure++;
     }
   }
   print('Success $success, Failure: $failure of ${lines.length} lines');
-  print('profile: ${protocol.json}');
+  print('profile: ${profile.json}');
 }
 
 void success(Match m, String s) {

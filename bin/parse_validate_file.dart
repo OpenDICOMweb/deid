@@ -36,36 +36,36 @@ void main() {
     print('  $s');
 
   for (String filePath in fileList) {
-    Protocol protocol = parseFile(filePath);
-    if (protocol.errors.length > 0)
-      filesWithErrors.add([filePath, protocol.errors]);
+    Profile profile = parseFile(filePath);
+    if (profile.errors.length > 0)
+      filesWithErrors.add([filePath, profile.errors]);
 
     var fname = path.basenameWithoutExtension(filePath);
     print('fname: $fname');
     var outPath = path.join(outputDir, '$fname.json');
-    writeProtocolFile(outPath, protocol);
+    writeProfileFile(outPath, profile);
   }
   writeErrorFile(filesWithErrors);
 }
 
-Protocol parseFile(String path) {
+Profile parseFile(String path) {
   List<String> lines = readLinesFromFile(path);
-  Protocol protocol = new Protocol('parse_text_file.dart', path, lines);
+  Profile profile = new Profile('parse_text_file.dart', path, lines);
   int success = 0;
   int failure = 0;
 
   for (int i = 0; i < lines.length; i++) {
 
-    if (parseLine(protocol, i, lines[i])) {
+    if (parseLine(profile, i, lines[i])) {
       success++;
     } else {
       failure++;
     }
   }
   print('Success $success, Failure: $failure of ${lines.length} lines');
-  print('map = ${protocol.parameters}');
-  print('profile: $protocol');
-  return protocol;
+  print('map = ${profile.parameters}');
+  print('profile: $profile');
+  return profile;
 }
 
 List<String> readLinesFromFile(String path) {
@@ -74,10 +74,10 @@ List<String> readLinesFromFile(String path) {
   return lines;
 }
 
-void writeProtocolFile(outPath, Protocol protocol) {
+void writeProfileFile(outPath, Profile profile) {
   File outFile = new File(outPath);
   print('outFile: ${outFile.path}');
-  outFile.writeAsStringSync(protocol.json);
+  outFile.writeAsStringSync(profile.json);
 }
 
 

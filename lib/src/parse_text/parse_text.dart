@@ -18,22 +18,22 @@ const String paramLine = '\\s*param\.$paramDef';
 // Parameter RegExp
 final paramLineRE = new RegExp('^$paramLine');
 
-bool parseLine(Protocol protocol, int index, String line) {
-  if ((parseParameterLine(protocol, index, line)) ||
-      (parseSetLine(protocol, index, line)) ||
-      (parseCommentLine(protocol, index, line))) {
+bool parseLine(Profile profile, int index, String line) {
+  if ((parseParameterLine(profile, index, line)) ||
+      (parseSetLine(profile, index, line)) ||
+      (parseCommentLine(profile, index, line))) {
     return true;
   }
   return false;
 }
 
-bool parseParameterLine(Protocol protocol, int index, String line) {
+bool parseParameterLine(Profile profile, int index, String line) {
   Match m = paramLineRE.firstMatch(line);
   if (m == null) return false;
   var key = m[1];
   var value = m[2];
   // print('Parameter: "$key":"$value"');
-  protocol.addVariable(key, value);
+  profile.addVariable(key, value);
   return true;
 }
 
@@ -52,7 +52,7 @@ final setFunctionRE = new RegExp('$setFunction');
 
 
 /// Parse 'set.[gggg,eeee] <keyword> = <function>...'
-bool parseSetLine(Protocol protocol, int index, String line) {
+bool parseSetLine(Profile profile, int index, String line) {
   Match m = setPrefixRE.firstMatch(line);
   if (m == null) return false;
   var group = m[1];
@@ -62,16 +62,16 @@ bool parseSetLine(Protocol protocol, int index, String line) {
   var keyword = m[3];
   // print('tag: $tagText, keyword: $keyword');
   Rule rule = new Rule(index, targetTag, keyword);
-  if ((parseFunction(protocol, rule, line)) ||
-      (parseReset(protocol, rule, line)) ||
-      (parseCommentLine(protocol, index, line)))
+  if ((parseFunction(profile, rule, line)) ||
+      (parseReset(profile, rule, line)) ||
+      (parseCommentLine(profile, index, line)))
     return true;
   // print('end of parseSetLine');
-  return protocol.error(index, line);
+  return profile.error(index, line);
 }
 
 /// Function - Parse: '@<id>(<args>){<script>}...'
-bool parseFunction(Protocol protocol, Rule rule, String line) {
+bool parseFunction(Profile profile, Rule rule, String line) {
   Match m = setFunctionRE.firstMatch(line);
   if (m == null) return false;
   rule.function = m[1];
@@ -80,17 +80,17 @@ bool parseFunction(Protocol protocol, Rule rule, String line) {
   // print('function: ${rule.function}, args: ${rule.args}, rest: $line');
   switch (rule.function) {
     case "@append":
-      return parseAppend(protocol, rule, line);
+      return parseAppend(profile, rule, line);
     case "@if":
-      return parseIf(protocol, rule, line);
+      return parseIf(profile, rule, line);
     case "@param":
-      return parseParam(protocol, rule, line);
+      return parseParam(profile, rule, line);
     default:
       var s = line.trim();
       if (s != "") {
-        protocol.error(rule.index, line);
+        profile.error(rule.index, line);
       } else {
-        protocol.addRule(rule);
+        profile.addRule(rule);
         return true;
       }
   }
@@ -101,14 +101,14 @@ const String reset = r'\s*(\w+)((\/\d*)+)\s*';
 final RegExp resetRE = new RegExp(reset);
 
 /// Reset - Parse: 'RESET/<int>/<int>...'
-bool parseReset(Protocol protocol, Rule rule, String line) {
+bool parseReset(Profile profile, Rule rule, String line) {
   Match m = resetRE.firstMatch(line);
   if (m == null) return false;
   if (m[1].toLowerCase() != "reset") return false;
   rule.function = m[1];
   rule.args = m[2].split("/");
   // print('function: ${rule.function}, args: ${rule.args}');
-  protocol.addRule(rule);
+  profile.addRule(rule);
   return true;
 }
 
@@ -158,28 +158,28 @@ final RegExp appendScriptRE = new RegExp(appendScript);
 
 
 /// Scripts - Parse: '{<id>} | <id>...'
-bool parseAppend(Protocol protocol, Rule rule, String line) {
+bool parseAppend(Profile profile, Rule rule, String line) {
   if (rule.args.length != 0) {
     print('Append Script: "$line"');
     print('Append args: ${rule.args}, length: ${rule.args.length}');
-    return protocol.error(rule.index, 'Append takes no args');
+    return profile.error(rule.index, 'Append takes no args');
   }
   Match m = appendScriptRE.firstMatch(line);
   if (m == null) {
     print('Append Script: "$line"');
     print('Append Script Error: $line');
-    return protocol.error(rule.index, 'Append invalid script: "$line"');
+    return profile.error(rule.index, 'Append invalid script: "$line"');
   }
   rule.scripts = [m[0]];
   if (m.end != line.length) {
     var s = line.substring(m.end);
     print('Append Script: "$line"');
     print('Append Left Over: $s');
-    return protocol.error(rule.index, 'Append left over script: "$s"');
+    return profile.error(rule.index, 'Append left over script: "$s"');
   }
   //print('append success: "${m[0]}"');
   //printMatch(m);
-  protocol.addRule(rule);
+  profile.addRule(rule);
   return true;
 }
 
@@ -194,13 +194,13 @@ const String script = r'\{(\w+)\}';
 final RegExp ifScriptRE = new RegExp(script);
 
 /// Scripts - Parse: '{<id>} | <id>...'
-bool parseIf(Protocol protocol, Rule rule, String line) {
+bool parseIf(Profile profile, Rule rule, String line) {
   print('Script: $line');
   var sList = [];
   for (int i = 0; i < 2; i++) {
     Match m = ifScriptRE.firstMatch(line);
     if (m == null)
-        return protocol.error(rule.index, line);
+        return profile.error(rule.index, line);
    // printMatch(m);
     print('len=${line.length}, script: "$line"');
     sList.add(m[0]);
@@ -209,17 +209,17 @@ bool parseIf(Protocol protocol, Rule rule, String line) {
   rule.scripts = sList;
   print('scripts: $sList');
   if (line.length > 0)
-    return protocol.error(rule.index, line);
-  protocol.addRule(rule);
+    return profile.error(rule.index, line);
+  profile.addRule(rule);
   return true;
 }
 
 /// Scripts - Parse: '{<id>} | <id>...'
-bool parseParam(Protocol protocol, Rule rule, String line) {
+bool parseParam(Profile profile, Rule rule, String line) {
   if (line != "")
     print('Param Script: $line');
   rule.scripts = (line != "") ? [line] : [];
-  protocol.addRule(rule);
+  profile.addRule(rule);
   return true;
 }
 
@@ -227,12 +227,12 @@ const String comment = r'\s*#';
 final RegExp commentRE = new RegExp(comment);
 
 /// Comment - Parse: '# <comment>'
-bool parseCommentLine(Protocol protocol, int index, String line) {
+bool parseCommentLine(Profile profile, int index, String line) {
   // print('in comment');
   Match m = commentRE.firstMatch(line);
   if (m == null) return false;
   // print('comment: $index: $line');
-  protocol.comment(index, line);
+  profile.comment(index, line);
   return true;
 }
 

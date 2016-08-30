@@ -39,17 +39,14 @@ void main() {
   Instance instance = decoder.readSopInstance(inPath);
   var study = instance.study;
   print(study.summary);
-  Format fmt = new Format(depth: -1);
-  var s = fmt.study(study);
-  print(s);
+  print(study.format(new Prefixer()));
+
 
   //De-Identify
   DeIdentifier deid = new DeIdentifier();
-  deid(instance);
+  //deid(instance);
   study = instance.study;
   print('main:study: $study');
   print(study.summary);
-  fmt = new Format(depth: -1);
-  s = fmt.study(study);
-  print(s);
+  print(study.format(new Prefixer()));
 }

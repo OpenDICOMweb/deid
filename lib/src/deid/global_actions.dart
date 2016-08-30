@@ -81,7 +81,7 @@ class GlobalActions {
   /// Process the Global Rules for de-identifying the [Dataset].
   void process(Dataset ds) {
     processPrivateTags(ds);
-    List<int> tags = ds.aMap.keys;
+    List<int> tags = ds.deMap.keys;
     for (int tag in tags) {
       if (isKeeper(tag)) continue;
       if (remove.contains(tag) || inRemoveGroup(tag)) ds.remove(tag);

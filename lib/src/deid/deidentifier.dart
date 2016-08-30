@@ -33,7 +33,7 @@ class DeIdentifier {
           deIdentifySequence(a);
         } else {
           var profile = BasicProfile.lookup(tag);
-          profile.action(ds, a, []);
+       //**   profile.action(ds, a, []);
         }
       } else {
         tagsNotPresent.add(tag);

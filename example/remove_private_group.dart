@@ -34,7 +34,7 @@ void main() {
 
     List<Attribute> removed = [];
     Dataset ds = instance.dataset;
-    removed = ds.removePrivateGroup("EMAGEON STUDY HOME", returnList: true};
+  //  removed = ds.removePrivateGroup("EMAGEON STUDY HOME", returnList: true};
 
     print('Final Total Elements: ${instance.dataset.deMap.values.length}');
     print('Removed Elements: ${removed.length}');

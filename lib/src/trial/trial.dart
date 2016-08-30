@@ -21,7 +21,7 @@ class Trial {
   Map<String, String> parameters;
 
   Trial(this.id, this.name,  this.profile, this.parameters) {
-    keepTags = keepTags.addAll(profile.keepTags);
+    keepTags.addAll(profile.keepTags);
     profile.evaluateTrial(this);
   }
 
@@ -72,8 +72,8 @@ class Trial {
     return profile.parameters[name];
   }
 
-  Map<int, Rule> evaluateRules() {
-    Map<int, Rule> rules = profile.rules;
+  List<Rule> evaluateRules() {
+    List<Rule> rules = profile.rules;
   }
 }
 
