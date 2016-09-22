@@ -4,6 +4,7 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu> -
 // See the AUTHORS file for other contributors.
 
+export 'src/utils/compare.dart';
 export 'src/deid/action.dart';
 export 'src/deid/basic_profile.dart';
 export 'src/deid/clean_descriptors.dart';

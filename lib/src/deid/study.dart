@@ -11,12 +11,12 @@ class DeIdentifiedStudy {
 
   /// De-Identify a DICOM Study
   DeIdentifiedStudy(this.study) {
-    study.uid = new UuidUid();
+    study.uid = new Uid();
 
     for (Series series in study.series.values) {
-      series.uid = new UuidUid();
+      series.uid = new Uid();
       for (Instance instance in series.instances.values)
-        instance.uid = new UuidUid();
+        instance.uid = new Uid();
     }
   }
 }

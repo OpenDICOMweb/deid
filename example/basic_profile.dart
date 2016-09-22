@@ -31,19 +31,30 @@ void main() {
     log.config('Reading file: $file');
 
     DeIdentify deIdentify = new DeIdentify(null);
-    Instance instance = readSopInstance(file1);
-    print('Initial Total Elements: ${instance.dataset.deMap.values.length}');
+    Instance instance0 = readSopInstance(file1);
+    print('***Identified:\n${instance0.format(new Prefixer(depth: 5))}');
+    DSComparison compare = new DSComparison(instance0.dataset, instance0.dataset);
+
+    print('same: ${compare.same}');
+    print('diff: ${compare.diff}');
+
+    /*
+    print('Initial Total Elements: ${instance0.dataset.deMap.values.length}');
     //  print('***Identified:\n${instance.patient.format(new Prefixer(depth: 5))}');
+   //Study study0 = instance0.study;
+    Study instance1 = instance0.study.copy;
+    print('***Copy:\n${instance1.format(new Prefixer(depth: 5))}');
+    print('FMI instance1: ${instance1.fmi}');
+    deIdentify.fmi(instance1.fmi);
 
-    deIdentify.fmi(instance.fmi);
-
-    Dataset ds = deIdentify(instance.dataset);
+    Dataset ds = deIdentify(instance1.dataset);
 
     print('Final Total Elements: ${ds.deMap.values.length}');
     print('Removed Elements: ${ds.removed.length}');
     for (Attribute a in ds.removed)
       print('  $a');
-    print('***DeIdentified:\n${instance.patient.format(new Prefixer(depth: 5))}');
+    print('***DeIdentified:\n${instance1.patient.format(new Prefixer(depth: 5))}');
+    */
   }
 
 

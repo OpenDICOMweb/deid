@@ -109,9 +109,10 @@ class DeIdentify {
 
   //List<String> getValues(Trial trial, List<String> values) {}
 
-  Dataset fmi(Fmi ds) {
-    replaceUid(ds, kMediaStorageSOPInstanceUID, trial, deIdInstanceUid);
-    return ds;
+  Dataset fmi(Fmi fmi) {
+    print('FMI: $fmi');
+    replaceUid(fmi, kMediaStorageSOPInstanceUID, trial, deIdInstanceUid);
+    return fmi;
   }
 
   Dataset call(Dataset ds) {
@@ -199,7 +200,7 @@ class DeIdentify {
   }
 
   bool replaceUid(Dataset ds, int tag, Trial trial, [List values]) {
-    print('tag: ${tagToDcm(tag)}, values=$values');
+    print('DS: $ds, tag: ${tagToDcm(tag)}, values=$values');
     Element e = Element.lookup(tag);
     if (e.vr != VR.kUI) return false;
     switch (tag) {

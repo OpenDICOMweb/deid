@@ -25,8 +25,6 @@ class Trial {
     profile.evaluateTrial(this);
   }
 
-
-
   // Subject Level
   String get sponsor => parameters["SPONSOR"];
   String get protocolID => parameters["ProtocolID"];
@@ -79,10 +77,9 @@ class Trial {
 
 class Site {
   final String id;
-  final int number;
   final String name;
 
-  Site(this.id, this.number, this.name);
+  Site(this.id, this.name);
 }
 
 class Group {
