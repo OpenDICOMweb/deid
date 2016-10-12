@@ -10,29 +10,29 @@ class ClinicalTrialSubjectModule {
 
     ClinicalTrialSubjectModule();
 
-    static const Map<int, Element> map = const {
-        kClinicalTrialSponsorName: EType.k1,
-        kClinicalTrialProtocolID: EType.k1,
-        kClinicalTrialProtocolName: EType.k2,
-        kClinicalTrialSiteID: EType.k2,
-        kClinicalTrialSiteName: EType.k2,
-        kClinicalTrialSubjectID: EType.k1c,
-        kClinicalTrialSubjectReadingID: EType.k1c,
-        kClinicalTrialProtocolEthicsCommitteeName: EType.k1c,
-        kClinicalTrialProtocolEthicsCommitteeApprovalNumber: EType.k1c
+    static const Map<int, DED> map = const {
+        kClinicalTrialSponsorName: DEType.k1,
+        kClinicalTrialProtocolID: DEType.k1,
+        kClinicalTrialProtocolName: DEType.k2,
+        kClinicalTrialSiteID: DEType.k2,
+        kClinicalTrialSiteName: DEType.k2,
+        kClinicalTrialSubjectID: DEType.k1c,
+        kClinicalTrialSubjectReadingID: DEType.k1c,
+        kClinicalTrialProtocolEthicsCommitteeName: DEType.k1c,
+        kClinicalTrialProtocolEthicsCommitteeApprovalNumber: DEType.k1c
 
     };
 
-    static const List<Element> list = const [
-      Element.kClinicalTrialSponsorName,
-      Element.kClinicalTrialProtocolID,
-      Element.kClinicalTrialProtocolName,
-      Element.kClinicalTrialSiteID,
-      Element.kClinicalTrialSiteName,
-      Element.kClinicalTrialSubjectID,
-      Element.kClinicalTrialSubjectReadingID,
-      Element.kClinicalTrialProtocolEthicsCommitteeName,
-      Element.kClinicalTrialProtocolEthicsCommitteeApprovalNumber
+    static const List<DED> list = const [
+      DED.kClinicalTrialSponsorName,
+      DED.kClinicalTrialProtocolID,
+      DED.kClinicalTrialProtocolName,
+      DED.kClinicalTrialSiteID,
+      DED.kClinicalTrialSiteName,
+      DED.kClinicalTrialSubjectID,
+      DED.kClinicalTrialSubjectReadingID,
+      DED.kClinicalTrialProtocolEthicsCommitteeName,
+      DED.kClinicalTrialProtocolEthicsCommitteeApprovalNumber
     ];
 }
 
@@ -40,28 +40,28 @@ class ClinicalTrialStudyModule {
 
     ClinicalTrialStudyModule();
 
-    static const Map<int, Element> map = const {
-        kClinicalTrialTimePointID: EType.k2,
-        kClinicalTrialTimePointDescription: EType.k3,
-        kConsentForClinicalTrialUseSequence: EType.k3
+    static const Map<int, DED> map = const {
+        kClinicalTrialTimePointID: DEType.k2,
+        kClinicalTrialTimePointDescription: DEType.k3,
+        kConsentForClinicalTrialUseSequence: DEType.k3
     };
 
-    static const List<Element> list = const [
-        Element.kClinicalTrialTimePointID,
-        Element.kClinicalTrialTimePointDescription,
-        Element.kConsentForClinicalTrialUseSequence
+    static const List<DED> list = const [
+        DED.kClinicalTrialTimePointID,
+        DED.kClinicalTrialTimePointDescription,
+        DED.kConsentForClinicalTrialUseSequence
     ];
 
-    static const Map<int, Element> clinicalTrialUseSequence = const {
-        kDistributionType: EType.k1c,
-        kClinicalTrialProtocolID: EType.k1c,
-        kConsentForDistributionFlag: EType.k1
+    static const Map<int, DED> clinicalTrialUseSequence = const {
+        kDistributionType: DEType.k1c,
+        kClinicalTrialProtocolID: DEType.k1c,
+        kConsentForDistributionFlag: DEType.k1
     };
 
-    static const List<Element> clinicalTrialUseSequenceElements = const [
-        Element.kDistributionType,
-        Element.kClinicalTrialProtocolID,
-        Element.kConsentForDistributionFlag
+    static const List<DED> clinicalTrialUseSequenceDEDs = const [
+        DED.kDistributionType,
+        DED.kClinicalTrialProtocolID,
+        DED.kConsentForDistributionFlag
     ];
 
   List<String> distributionTypes = const [
@@ -83,16 +83,16 @@ class ClinicalTrialSeriesModule {
 
   ClinicalTrialSeriesModule();
 
-  static const Map<int, Element> map = const {
-    kClinicalTrialCoordinatingCenterName: EType.k2,
-    kClinicalTrialSeriesID: EType.k3,
-    kClinicalTrialSeriesDescription: EType.k3,
+  static const Map<int, DED> map = const {
+    kClinicalTrialCoordinatingCenterName: DEType.k2,
+    kClinicalTrialSeriesID: DEType.k3,
+    kClinicalTrialSeriesDescription: DEType.k3,
   };
 
-  static const List<Element> list = const [
-    Element.kClinicalTrialCoordinatingCenterName,
-    Element.kClinicalTrialSeriesID,
-    Element.kClinicalTrialSeriesDescription
+  static const List<DED> list = const [
+    DED.kClinicalTrialCoordinatingCenterName,
+    DED.kClinicalTrialSeriesID,
+    DED.kClinicalTrialSeriesDescription
   ];
 
 }

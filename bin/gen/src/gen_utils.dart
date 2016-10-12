@@ -6,7 +6,7 @@
 
 import 'dart:io';
 
-import 'package:core/base.dart';
+import 'package:core/dictionary.dart';
 
 import 'gen_deid_utils.dart';
 

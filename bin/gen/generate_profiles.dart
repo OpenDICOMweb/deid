@@ -4,9 +4,6 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu> -
 // See the AUTHORS file for other contributors.
 
-/// generate_class
-
-
 import 'src/profile_table.dart';
 import 'src/gen_deid_utils.dart';
 

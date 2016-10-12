@@ -5,23 +5,21 @@
 // See the AUTHORS file for other contributors.
 
 import 'package:core/dicom.dart';
-import 'package:core/new_base.dart';
 
 import 'src/deid_tags.dart';
-import 'src/gen_deid_utils.dart';
 import 'src/gen_utils.dart';
 
 /// Create a JSON object of [DeId] [Elements] by [VR] and [VM]
 
 List vrs = new List(32);
-List<List<Element>> vrElements = new List(32);
+List<List<DED>> vrElements = new List(32);
 String hex(int i) => '0x' + i.toRadixString(16).padLeft(8, '0');
 
 void main() {
 
   for (int i = 0; i < deIdTags.length; i++) {
     int tag = deIdTags[i];
-    Element e = Element.lookup(tag);
+    DED e = DED.lookup(tag);
     if (e == null) {
       print('bad Tag: ${hex(tag)}');
     } else {
@@ -52,13 +50,13 @@ void checkCount(vrElements) {
   }
 }
 
-String toJson(List vrs, List<List<Element>> vrElements) {
+String toJson(List vrs, List<List<DED>> vrElements) {
   var s = '{\n';
   var vrList = [];
   for (int i = 0; i < vrElements.length; i++) {
     if ((vrs[i] == null) || (vrElements[i] == null)) continue;
     List<String> elts = [];
-    vrElements[i].forEach((Element e) {
+    vrElements[i].forEach((DED e) {
       if (e != null)
         elts.add('"${hex(e.code)}": "${e.keyword}"');
     });

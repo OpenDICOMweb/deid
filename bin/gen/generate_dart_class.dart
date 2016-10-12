@@ -4,8 +4,6 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
-import 'dart:io';
-
 import 'src/deid_table.dart';
 import 'src/deid_tags.dart';
 import 'src/gen_utils.dart';

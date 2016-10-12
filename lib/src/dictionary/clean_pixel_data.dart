@@ -8,7 +8,8 @@
 import 'package:core/dicom.dart';
 import 'package:deid/src/deid/action.dart';
 
-//TODO: add the ability to
+//TODO: add the ability to do this.
+/// Clean Pixel Data Option to the Basic De-Identification Profile.
 class CleanPixelData {
   final int tag;
   final String keyword;
@@ -25,7 +26,7 @@ class CleanPixelData {
       bool removeFloatPixelDataFlag: false,
       bool removeDoubleFloatPixelDataFlag: false
       }) {
-    Attribute a = ds.lookup(kAttributeBurnedInAnnotation);
+    Element a = ds.lookup(kAttributeBurnedInAnnotation);
     if ((a != null) && (a.value == "NO")) return true;
     if (removeIconPixelDataFlag) removeIconPixelData(ds);
     if (removeFloatPixelDataFlag) ds.remove(kFloatPixelData);
@@ -34,7 +35,8 @@ class CleanPixelData {
   }
 
   bool removeIconPixelData(ds) {
-
+    //TODO: implement
+    return false;
   }
 
 }

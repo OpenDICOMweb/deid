@@ -6,7 +6,7 @@
 
 import 'dart:io';
 
-import 'package:core/new_base.dart';
+import 'package:core/dictionary.dart';
 import 'package:deid/deid.dart';
 import 'src/gen_utils.dart';
 
@@ -14,9 +14,8 @@ import 'src/gen_utils.dart';
 /// Create a JSON Map<VR, Map<VM, List<int>>>
 
 void main() {
-  Map<VR, Map<VM, List<Element>>> vrMap = {};
+  Map<VR, Map<VM, List<DED>>> vrMap = {};
   var vmMap;
-  var eList;
 
   List<int> tagList = deIdTags.toList(growable: false);
 
@@ -24,7 +23,7 @@ void main() {
     int code = tagList[i];
     //print('tag: ${toHexString(code)}');
 
-    Element e = Element.lookup(code);
+    DED e = DED.lookup(code);
     //   print('i: $i, element: $e');
     if (e == null) {
       print('bad Tag 1: ${tagToHex(code)}');
@@ -63,14 +62,14 @@ bool checkMap(int tagCount, Map vrMap) {
   return tagCount == count;
 }
 
-String vrMapToJson(Map<VR, Map<VM, List<Element>>> vrMap) {
+String vrMapToJson(Map<VR, Map<VM, List<DED>>> vrMap) {
   var vrList = <String>[];
-  vrMap.forEach((VR vr, Map<VM, List<Element>> vmMap) {
+  vrMap.forEach((VR vr, Map<VM, List<DED>> vmMap) {
     var vmList = <String>[];
-    vmMap.forEach((VM vm, List<Element> elements) {
+    vmMap.forEach((VM vm, List<DED> elements) {
       var eList = <String>[];
-      elements.forEach((Element e) {
-        DeIdElement de = DeIdElement.lookup(e.code);
+      elements.forEach((DED e) {
+        DED de = DED.lookup(e.code);
         BasicProfile bp = BasicProfile.lookup(e.code);
         //print('de: $de');
         if (de == null) {

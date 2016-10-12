@@ -8,7 +8,7 @@ import 'src/deid_tags_unsorted.dart';
 
 void main() {
 
-  int compare(int a, int b) => a.compareTo(b);
+ // int compare(int a, int b) => a.compareTo(b);
 
   List<int> tags = new List<int>(deIdTagsUnsorted.length);
   for(int i = 0; i < deIdTagsUnsorted.length; i++)

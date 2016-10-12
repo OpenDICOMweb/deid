@@ -1,5 +1,4 @@
 // Copyright (c) 2016, Open DICOMweb Project. All rights reserved.
-
 // Use of this source code is governed by the open source license
 // that can be found in the LICENSE file.
 // Author: Jim Philbin <jfphilbin@gmail.edu> -
@@ -81,7 +80,7 @@ class GlobalActions {
   /// Process the Global Rules for de-identifying the [Dataset].
   void process(Dataset ds) {
     processPrivateTags(ds);
-    List<int> tags = ds.deMap.keys;
+    List<int> tags = ds.eMap.keys;
     for (int tag in tags) {
       if (isKeeper(tag)) continue;
       if (remove.contains(tag) || inRemoveGroup(tag)) ds.remove(tag);

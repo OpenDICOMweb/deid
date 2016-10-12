@@ -18,7 +18,7 @@ class DeIdMethod {
       throw "Invalid code in List";
   }
 
-  Map<int, Attribute> get elements => {
+  Map<int, Element> get elements => {
     //TODO: make e1 a constant
     kPatientIdentityRemoved: new CS(kPatientIdentityRemoved, ["Yes"]),
     kDeidentificationMethod: new LO(kDeidentificationMethod, [codes]),
@@ -29,7 +29,7 @@ class DeIdMethod {
   String get values => codes.map((code) => code.toString()).toList().join('\\');
 
   //TODO: once CodeSequenceMacro is available
-  Map<int, Attribute> get sequence => {
+  Map<int, Element> get sequence => {
 
   };
 

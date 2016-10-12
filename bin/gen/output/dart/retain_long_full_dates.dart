@@ -7,76 +7,71 @@
 // *** This is a generated class ***
 // ----------------------------------------------------------
 
-import 'package:core/base.dart';
-//import 'package:deid/src/deid/action.dart';
+import 'package:core/dictionary.dart';
 
 // DICOM attributes in De-Identification Profile (and Options)
-class RetainLongModifiedDatesOption {
+class RetainLongFullDatesOption {
   final String keyword;
   final int tag;
   final VR vr;
   final String action;
 
-  const RetainLongModifiedDatesOption(this.keyword, this.tag, this.vr, this.action);
+  const RetainLongFullDatesOption(this.keyword, this.tag, this.vr, this.action);
 
-  static RetainLongModifiedDatesOption lookup(int tag) => map[tag];
+  static RetainLongFullDatesOption lookup(int tag) => map[tag];
 
   static const kStudyDate =
-    const RetainLongModifiedDatesOption("StudyDate", 0x00080020, VR.kDA, "C");
+    const RetainLongFullDatesOption("StudyDate", 0x00080020, VR.kDA, "K");
   static const kSeriesDate =
-    const RetainLongModifiedDatesOption("SeriesDate", 0x00080021, VR.kDA, "C");
+    const RetainLongFullDatesOption("SeriesDate", 0x00080021, VR.kDA, "K");
   static const kAcquisitionDate =
-    const RetainLongModifiedDatesOption("AcquisitionDate", 0x00080022, VR.kDA, "C");
+    const RetainLongFullDatesOption("AcquisitionDate", 0x00080022, VR.kDA, "K");
   static const kContentDate =
-    const RetainLongModifiedDatesOption("ContentDate", 0x00080023, VR.kDA, "C");
+    const RetainLongFullDatesOption("ContentDate", 0x00080023, VR.kDA, "K");
   static const kOverlayDate =
-    const RetainLongModifiedDatesOption("OverlayDate", 0x00080024, VR.kDA, "C");
+    const RetainLongFullDatesOption("OverlayDate", 0x00080024, VR.kDA, "K");
   static const kCurveDate =
-    const RetainLongModifiedDatesOption("CurveDate", 0x00080025, VR.kDA, "C");
+    const RetainLongFullDatesOption("CurveDate", 0x00080025, VR.kDA, "K");
   static const kAcquisitionDateTime =
-    const RetainLongModifiedDatesOption("AcquisitionDateTime", 0x0008002a, VR.kDT, "C");
+    const RetainLongFullDatesOption("AcquisitionDateTime", 0x0008002a, VR.kDT, "K");
   static const kStudyTime =
-    const RetainLongModifiedDatesOption("StudyTime", 0x00080030, VR.kTM, "C");
+    const RetainLongFullDatesOption("StudyTime", 0x00080030, VR.kTM, "K");
   static const kSeriesTime =
-    const RetainLongModifiedDatesOption("SeriesTime", 0x00080031, VR.kTM, "C");
+    const RetainLongFullDatesOption("SeriesTime", 0x00080031, VR.kTM, "K");
   static const kAcquisitionTime =
-    const RetainLongModifiedDatesOption("AcquisitionTime", 0x00080032, VR.kTM, "C");
+    const RetainLongFullDatesOption("AcquisitionTime", 0x00080032, VR.kTM, "K");
   static const kContentTime =
-    const RetainLongModifiedDatesOption("ContentTime", 0x00080033, VR.kTM, "C");
+    const RetainLongFullDatesOption("ContentTime", 0x00080033, VR.kTM, "K");
   static const kOverlayTime =
-    const RetainLongModifiedDatesOption("OverlayTime", 0x00080034, VR.kTM, "C");
+    const RetainLongFullDatesOption("OverlayTime", 0x00080034, VR.kTM, "K");
   static const kCurveTime =
-    const RetainLongModifiedDatesOption("CurveTime", 0x00080035, VR.kTM, "C");
+    const RetainLongFullDatesOption("CurveTime", 0x00080035, VR.kTM, "K");
   static const kTimezoneOffsetFromUTC =
-    const RetainLongModifiedDatesOption("TimezoneOffsetFromUTC", 0x00080201, VR.kSH, "C");
+    const RetainLongFullDatesOption("TimezoneOffsetFromUTC", 0x00080201, VR.kSH, "K");
   static const kLastMenstrualDate =
-    const RetainLongModifiedDatesOption("LastMenstrualDate", 0x001021d0, VR.kDA, "C");
+    const RetainLongFullDatesOption("LastMenstrualDate", 0x001021d0, VR.kDA, "K");
   static const kAdmittingDate =
-    const RetainLongModifiedDatesOption("AdmittingDate", 0x00380020, VR.kDA, "C");
+    const RetainLongFullDatesOption("AdmittingDate", 0x00380020, VR.kDA, "K");
   static const kAdmittingTime =
-    const RetainLongModifiedDatesOption("AdmittingTime", 0x00380021, VR.kTM, "C");
+    const RetainLongFullDatesOption("AdmittingTime", 0x00380021, VR.kTM, "K");
   static const kScheduledProcedureStepStartDate =
-    const RetainLongModifiedDatesOption("ScheduledProcedureStepStartDate", 0x00400002, VR.kDA, "C");
+    const RetainLongFullDatesOption("ScheduledProcedureStepStartDate", 0x00400002, VR.kDA, "K");
   static const kScheduledProcedureStepStartTime =
-    const RetainLongModifiedDatesOption("ScheduledProcedureStepStartTime", 0x00400003, VR.kTM, "C");
+    const RetainLongFullDatesOption("ScheduledProcedureStepStartTime", 0x00400003, VR.kTM, "K");
   static const kScheduledProcedureStepEndDate =
-    const RetainLongModifiedDatesOption("ScheduledProcedureStepEndDate", 0x00400004, VR.kDA, "C");
+    const RetainLongFullDatesOption("ScheduledProcedureStepEndDate", 0x00400004, VR.kDA, "K");
   static const kScheduledProcedureStepEndTime =
-    const RetainLongModifiedDatesOption("ScheduledProcedureStepEndTime", 0x00400005, VR.kTM, "C");
+    const RetainLongFullDatesOption("ScheduledProcedureStepEndTime", 0x00400005, VR.kTM, "K");
   static const kPerformedProcedureStepStartDate =
-    const RetainLongModifiedDatesOption("PerformedProcedureStepStartDate", 0x00400244, VR.kDA, "C");
+    const RetainLongFullDatesOption("PerformedProcedureStepStartDate", 0x00400244, VR.kDA, "K");
   static const kPerformedProcedureStepStartTime =
-    const RetainLongModifiedDatesOption("PerformedProcedureStepStartTime", 0x00400245, VR.kTM, "C");
+    const RetainLongFullDatesOption("PerformedProcedureStepStartTime", 0x00400245, VR.kTM, "K");
   static const kPerformedProcedureStepEndDate =
-    const RetainLongModifiedDatesOption("PerformedProcedureStepEndDate", 0x00400250, VR.kDA, "C");
+    const RetainLongFullDatesOption("PerformedProcedureStepEndDate", 0x00400250, VR.kDA, "K");
   static const kPerformedProcedureStepEndTime =
-    const RetainLongModifiedDatesOption("PerformedProcedureStepEndTime", 0x00400251, VR.kTM, "C");
+    const RetainLongFullDatesOption("PerformedProcedureStepEndTime", 0x00400251, VR.kTM, "K");
 
 static const List<int> keep = const [
-
-  ];
-
-static const List<int> remove = const [
   0x00080020,
   0x00080021,
   0x00080022,
@@ -104,7 +99,11 @@ static const List<int> remove = const [
   0x00400251
   ];
 
-static const Map<int, RetainLongModifiedDatesOption> map = const {
+static const List<int> remove = const [
+
+  ];
+
+static const Map<int, RetainLongFullDatesOption> map = const {
   0x00080020: kStudyDate,
   0x00080021: kSeriesDate,
   0x00080022: kAcquisitionDate,

@@ -4,8 +4,6 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
-import 'package:core/new_base.dart';
-
 import '../profile/profile.dart';
 import '../profile/rule.dart';
 

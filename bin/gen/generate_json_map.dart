@@ -6,10 +6,9 @@
 
 import 'package:core/dicom.dart';
 
-import 'src/deid_element.dart';
 import 'src/deId_tags.dart';
 import 'src/gen_utils.dart';
-import 'src/gen_deid_utils.dart';
+
 
 
 List vrs = new List(32);
@@ -21,7 +20,7 @@ void main() {
   List<String> sList1 = [types];
   for (int i = 0; i < deIdTags.length; i++) {
     int tag = deIdTags[i];
-    Element e = Element.lookup(tag);
+    DED e = DED.lookup(tag);
     if (e == null) {
       print('bad Tag: ${hex(tag)}');
     } else {

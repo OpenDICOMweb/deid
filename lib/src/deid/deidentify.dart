@@ -12,16 +12,18 @@
 // See the AUTHORS file for other contributors.
 
 import 'package:core/dicom.dart';
+import 'package:deid/dictionary.dart';
 import 'package:deid/profile.dart';
-import 'package:deid/deid.dart';
 
+
+/*
 class AType {
   String name;
   int value;
   bool isConditional;
   AType(String name, int value, bool isConditional);
 }
-
+*/
 // In static frequency order
 /*
 Map<String, DeIdentifer> actions = {
@@ -109,7 +111,7 @@ class DeIdentify {
 
   //List<String> getValues(Trial trial, List<String> values) {}
 
-  Dataset fmi(Fmi fmi) {
+  Dataset fmi(Dataset fmi) {
     print('FMI: $fmi');
     replaceUid(fmi, kMediaStorageSOPInstanceUID, trial, deIdInstanceUid);
     return fmi;
@@ -132,7 +134,7 @@ class DeIdentify {
 
     for (BasicProfile bp in bpList) {
       int tag = bp.tag;
-      Attribute a = ds.lookup(bp.tag);
+      Element a = ds.lookup(bp.tag);
       if (a == null) continue;
     //  print('begin: $a');
       //DeIdentifier f = actions[bp.action];
@@ -183,7 +185,7 @@ class DeIdentify {
   }
 
   bool remove(Dataset ds, int tag, Trial trial, [List values]) {
-    Attribute a = ds.lookup(tag);
+    Element a = ds.lookup(tag);
   //  print('remove: $a');
     if (a is SQ)
       return removeSequence(a, tag, trial);
@@ -201,7 +203,7 @@ class DeIdentify {
 
   bool replaceUid(Dataset ds, int tag, Trial trial, [List values]) {
     print('DS: $ds, tag: ${tagToDcm(tag)}, values=$values');
-    Element e = Element.lookup(tag);
+    DED e = DED.lookup(tag);
     if (e.vr != VR.kUI) return false;
     switch (tag) {
       case kStudyInstanceUID:

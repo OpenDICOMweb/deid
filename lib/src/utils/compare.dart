@@ -11,15 +11,15 @@ class DSComparison {
   List diff = [];
 
   DSComparison(Dataset ds0, Dataset ds1) {
-    List<Attribute> elements0 = ds0.deMap.values.toList(growable: false);
-    List<Attribute> elements1 = ds1.deMap.values.toList(growable: false);
+    List<Element> elements0 = ds0.eMap.values.toList(growable: false);
+    List<Element> elements1 = ds1.eMap.values.toList(growable: false);
     int length0 = elements0.length;
     int length1 = elements1.length;
     int index0 = 0;
     int index1 = 1;
     while ((index0 < length0) && (index1 < length1)) {
-      Attribute e0 = elements0[index0];
-      Attribute e1 = elements0[index1];
+      Element e0 = elements0[index0];
+      Element e1 = elements0[index1];
       int tag0 = e0.tag;
       int tag1 = e1.tag;
       if (tag0 == tag1) {
@@ -40,15 +40,15 @@ class DSComparison {
   }
 
   void compareDatasets(Dataset ds0, Dataset ds1) {
-    List<Attribute> elements0 = ds0.values;
+    List<Element> elements0 = ds0.values;
     int length0 = elements0.length;
-    List<Attribute> elements1 = ds1.values;
+    List<Element> elements1 = ds1.values;
     int length1 = elements1.length;
     int index0 = 0;
     int index1 = 1;
     while ((index0 < length0) && (index1 < length1)) {
-      Attribute e0 = elements0[index0];
-      Attribute e1 = elements0[index1];
+      Element e0 = elements0[index0];
+      Element e1 = elements0[index1];
       int tag0 = e0.tag;
       int tag1 = e1.tag;
       if (tag0 == tag1) {
@@ -68,7 +68,7 @@ class DSComparison {
     }
   }
 
-  void compareElements(Attribute e0, Attribute e1) {
+  void compareElements(Element e0, Element e1) {
     print('Elements:\n\te0: $e0\n\te1: $e1');
     if (e0.tag != e1.tag) throw "Incomparable Tags: $e0, $e1";
     if (e0.vr != e1.vr) throw "VRs are not equivalent: $e0, $e1";
@@ -77,7 +77,7 @@ class DSComparison {
 
   void compareSequences(SQ sq0, SQ sq1) {
     print('sq0: $sq0\nsq1: $sq1');
-    List<Attribute> same = [];
+    List<Element> same = [];
     List<List> diff = [];
     if (sq0.items.length == sq1.items.length) {
       if (sq0.length == 0) return same.add(sq0);
@@ -91,8 +91,8 @@ class DSComparison {
 
   void compareItems(Item item0, Item item1) {
     print('item0: $item0\nitem1: $item1');
-    var map0 = item0.deMap.values.toList(growable: false);
-    var map1 = item1.deMap.values.toList(growable: false);
+    var map0 = item0.eMap.values.toList(growable: false);
+    var map1 = item1.eMap.values.toList(growable: false);
     print('map0: $map0\nmap1: $map1');
 
     if (map0.length == map1.length) {
@@ -111,7 +111,7 @@ class DSComparison {
 
   }
 
-  void compareValues(Attribute e0, Attribute e1) {
+  void compareValues(Element e0, Element e1) {
     print('e0: $e0\ne1: $e1');
     List v0 = e0.values;
     List v1 = e1.values;

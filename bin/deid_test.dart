@@ -10,8 +10,6 @@ import 'package:logger/logger.dart';
 import 'package:convert/dicom.dart';
 import 'package:core/dicom.dart';
 
-import 'package:deid/src/deid/deidentifier.dart';
-
 String testData = "C:/odw/sdk/convert/test_data/";
 String testOutput = "C:/odw/sdk/convert/test_output/";
 
@@ -43,7 +41,7 @@ void main() {
 
 
   //De-Identify
-  DeIdentifier deid = new DeIdentifier();
+  //DeIdentifier deid = new DeIdentifier();
   //deid(instance);
   study = instance.study;
   print('main:study: $study');

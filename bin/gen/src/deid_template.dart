@@ -4,9 +4,6 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
-import 'package:core/dicom.dart';
-
-import 'package:deid/profile.dart';
 
 
 String template = '''

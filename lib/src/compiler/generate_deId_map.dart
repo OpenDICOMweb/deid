@@ -6,6 +6,7 @@
 
 import 'package:core/dicom.dart';
 import 'package:deid/profile.dart';
+import 'package:deid/deid.dart';
 
 class AType {
   String name;
@@ -16,10 +17,10 @@ class AType {
 
 class GenerateDeIdentifier {
   String cName = "DeIdentifier";
-  Protocol protocol;
+  Profile profile;
   Trial trial;
 
-  GenerateDeIdentifier(Protocol protocol, Trial trial);
+  GenerateDeIdentifier(Profile protocol, Trial trial);
 
   String get code => """
 // Copyright (c) 2016, Open DICOMweb Project. All rights reserved.
@@ -64,11 +65,11 @@ class $cName {
 ''';
  
   String genRemove(String keyword, int tag, VR vr, [AType aType, List values]) {
-    Element e = Element.lookup(tag);
+    DEDict e = DEDict.lookup(tag);
     String code = "";
     if (e is SQ)
       code += '(Dataset ds) {}';
-    (protocol.keep(tag)) ? "" : '$keyword: ds.remove($tag);';
+    (profile.keep(tag)) ? "" : '$keyword: ds.remove($tag);';
   }
 
   String genReplaceUid(String keyword, int tag, VR vr, [AType aType, List values]) {
@@ -108,7 +109,7 @@ class $cName {
   }
     
 
-    static const Map<String, Function> actionMap = const {
+  static  Map<String, Function> actionMap = const {
       "X": genRemove,
       "U": genReplaceUid,
       "Z": genZeroOrDummy,

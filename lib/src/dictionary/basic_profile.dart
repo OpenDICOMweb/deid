@@ -7,10 +7,10 @@
 // *** This is a generated class ***
 // ----------------------------------------------------------
 
-import 'package:core/base.dart';
-import 'package:deid/deid.dart';
+import 'package:core/dictionary.dart';
+import 'basic_profile_options.dart';
 
-// DICOM attributes in De-Identification Profile (and Options)
+/// Basic De-Identification Profile.
 class BasicProfile {
   final String keyword;
   final int tag;
@@ -19,18 +19,19 @@ class BasicProfile {
 
   const BasicProfile(this.keyword, this.tag, this.vr, this.action);
 
-  static const options = const [
-    CleanDescriptorsOption,
-    CleanGraphicsOption,
-    // CleanPixelDataOption,
-    // CleanRecognizableVisualFeaturesOption,
-    CleanStructuredContentOption,
-    RetainDeviceIdentityOption,
-    RetainLongFullDatesOption,
-    RetainLongModifiedDatesOption,
-    RetainPatientCharacteristicsOption,
-    RetainSafePrivateOption,
-    RetainUidsOption
+  static final options =  [
+    BasicProfileOptions.kCleanDescriptors,
+    BasicProfileOptions.kCleanGraphics,
+    BasicProfileOptions.kCleanPixelData,
+    //FIX
+    //BasicProfileOptions.kCleanRecognizableVisualFeatures,
+    BasicProfileOptions.kCleanStructuredContent,
+    BasicProfileOptions.kRetainDeviceIdentity,
+    BasicProfileOptions.kRetainFullDates,
+    BasicProfileOptions.kRetainModifiedDates,
+    BasicProfileOptions.kRetainPatientCharacteristics,
+    BasicProfileOptions.kRetainSafePrivate,
+    BasicProfileOptions.kRetainUids
   ];
 
   /*

@@ -7,7 +7,6 @@
 import 'dart:io';
 
 import 'package:core/dicom.dart';
-import 'package:core/new_base.dart';
 
 import 'src/deid_tags.dart';
 
@@ -33,7 +32,7 @@ void main() {
   for (int i = 0; i < deIdTags.length; i++) {
     int code = deIdTags[i];
 
-    Element e = Element.lookup(code);
+    DED e = DED.lookup(code);
     //   print('i: $i, element: $e');
     if (e == null) {
       print('bad Tag: ${tagToHex(code)}');

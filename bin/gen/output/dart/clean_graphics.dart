@@ -7,10 +7,11 @@
 // *** This is a generated class ***
 // ----------------------------------------------------------
 
-import 'package:core/base.dart';
-//import 'package:deid/src/deid/action.dart';
+import 'package:core/dictionary.dart';
 
-// DICOM attributes in De-Identification Profile (and Options)
+/// Clean Graphics Option
+///
+/// DICOM De-Identification Profile Option
 class CleanGraphicsOption {
   final String keyword;
   final int tag;

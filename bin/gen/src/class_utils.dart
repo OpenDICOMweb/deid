@@ -4,9 +4,7 @@
 // Original author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
-import 'package:core/base.dart';
-import 'package:deid/deid.dart';
-import 'gen_utils.dart';
+import 'package:core/dictionary.dart';
 
 String commaSeparatedString(String prefix, List args, String suffix, {last: false}) {
   String s = "";
@@ -50,7 +48,7 @@ String getMembers(String cName, List<String> fieldTypes, List<List<String>> memb
       continue;
     var keyword = row[0];
     var tag = row[1];
-    Element e = Element.lookup(int.parse(tag));
+    DED e = DED.lookup(int.parse(tag));
     VR vr = e.vr;
     members.add('  static const k$keyword =\n'
                     '    const $cName("$keyword", $tag, VR.k${vr.name}, "$action");');

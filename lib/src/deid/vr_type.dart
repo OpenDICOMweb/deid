@@ -6,10 +6,12 @@
 
 import 'package:core/dicom.dart';
 
+
 //TODO: All VR Classes should have a static validator(List<type>);
+//TODO: move this to the Element Library
 class VRClass {
 
-  Map<VR, Attribute> constructors = {
+  Map<VR, Element> constructors = {
     // String VRs
     VR.kAE: AE,
     VR.kAS: AS,
@@ -46,7 +48,7 @@ class VRClass {
     VR.kOF: OF
   };
 
-  Map<VR, Attribute> types = {
+  Map<VR, Element> types = {
     // String VRs
     VR.kAE: AE,
     VR.kAS: AS,

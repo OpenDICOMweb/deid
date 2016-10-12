@@ -7,15 +7,11 @@
 // *** This is a generated class ***
 // ----------------------------------------------------------
 
-import 'package:core/base.dart';
-import 'package:deid/deid.dart';
+import 'package:core/dictionary.dart';
+import 'basic_profile.dart';
 
 // DICOM attributes in De-Identification Profile (and Options)
 class CleanDescriptorsOption extends BasicProfile {
-  //final String keyword;
-  //final int tag;
-  //final VR vr;
-  //final String action;
 
   const CleanDescriptorsOption(String keyword, int tag, VR vr, String action)
       : super(keyword, tag, vr, action);

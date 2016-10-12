@@ -5,10 +5,7 @@
 // See the AUTHORS file for other contributors.
 
 //import 'package:test/test.dart';
-import 'package:core/dicom.dart';
-import 'package:io/io.dart';
 
-import 'package:deid/src/deid/deidentify.dart';
 
 main() {
   //Test();

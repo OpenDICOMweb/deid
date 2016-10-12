@@ -7,10 +7,10 @@
 // *** This is a generated class ***
 // ----------------------------------------------------------
 
-import 'package:core/base.dart';
-//import 'package:deid/src/deid/action.dart';
+import 'package:core/dictionary.dart';
 
-// DICOM attributes in De-Identification Profile (and Options)
+// TODO: finish.
+// Retain Safe Private Option (a DICOM de-identification aption).
 class RetainSafePrivateOption {
   final String keyword;
   final int tag;

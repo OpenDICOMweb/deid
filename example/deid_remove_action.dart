@@ -29,16 +29,16 @@ void main() {
     log.config('Reading file: $file');
 
     Instance instance = readSopInstance(file1);
-    print('Initial Total Elements: ${instance.dataset.deMap.values.length}');
+    print('Initial Total Elements: ${instance.dataset.eMap.values.length}');
     print('***Identified:\n${instance.patient.format(new Prefixer(depth: 5))}');
 
-    List<Attribute> removed = [];
+    List<Element> removed = [];
     Dataset ds = instance.dataset;
     for (BasicProfile bp in BasicProfile.map.values) {
 
 
       if (bp.action == "X") {
-        Attribute a = ds.lookup(bp.tag);
+        Element a = ds.lookup(bp.tag);
         if (a == null) {
         //  print('${tagToDcm(bp.tag)} Not Present');
         } else {
@@ -50,9 +50,9 @@ void main() {
         }
       }
     }
-    print('Final Total Elements: ${instance.dataset.deMap.values.length}');
+    print('Final Total Elements: ${instance.dataset.eMap.values.length}');
     print('Removed Elements: ${removed.length}');
-    for (Attribute a in removed)
+    for (Element a in removed)
     print('  $a');
    print('***DeIdentified:\n${instance.patient.format(new Prefixer(depth: 5))}');
   }

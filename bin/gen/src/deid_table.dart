@@ -10,11 +10,7 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu> -
 // See the AUTHORS file for other contributors.
 
-import 'dart:io';
-
-import 'package:core/base.dart';
-import 'deid_tags.dart';
-import 'class_utils.dart';
+import 'package:core/dictionary.dart';
 import 'gen_utils.dart';
 
 class DeIdTable {
@@ -33,11 +29,11 @@ class DeIdTable {
 
     for (int i = 0; i < deIdTags.length; i++) {
       int tag = deIdTags[i];
-      Element e = Element.lookup(tag);
+      DED e = DED.lookup(tag);
       if (e == null) {
         print('bad Tag: ${tagToHex(tag)}');
       } else {
-        var tag = intToHex(e.code, 8);
+        var tag = toHex(e.code);
         var keyword = e.keyword;
         var vr = 'VR.k${e.vr.name}';
         var vm = e.vm;
@@ -57,11 +53,11 @@ class DeIdTable {
 
     for (int i = 0; i < deIdTags.length; i++) {
       int tag = deIdTags[i];
-      Element e = Element.lookup(tag);
+      DED e = DED.lookup(tag);
       if (e == null) {
         print('bad Tag: ${tagToHex(tag)}');
       } else {
-        var tag = intToHex(e.code, 8);
+        var tag = toHex(e.code);
         var keyword = e.keyword;
         kvPairs.add('    $tag: k$keyword');
         keyList.add('    $tag');

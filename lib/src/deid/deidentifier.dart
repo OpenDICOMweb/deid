@@ -6,9 +6,9 @@
 
 import 'package:core/dicom.dart';
 
-import 'basic_profile.dart';
-import 'deid_tags.dart';
-import 'option.dart';
+import 'package:deid/src/dictionary/basic_profile.dart';
+import 'package:deid/src/dictionary/deid_tags.dart';
+import 'package:deid/src/dictionary/basic_profile_options.dart';
 
 //TODO: handle Options
 //TODO: support Modified Attribute Sequence
@@ -16,8 +16,8 @@ import 'option.dart';
 class DeIdentifier {
   static const String methodIdentifier = "Open DICOMweb DeIdentifier";
   static const String version = "0.3.0";
-  static const defaultOptions = const [Option.kNone];
-  final List<Option> options;
+  static const defaultOptions = const [BasicProfileOptions.kNone];
+  final List<BasicProfileOptions> options;
   final List<int> tagsNotPresent = [];
 
   static String get method => '$methodIdentifier($version)';
@@ -27,7 +27,7 @@ class DeIdentifier {
   Dataset call(Dataset ds) {
     var map = BasicProfile.map;
     for(int tag in deIdTags) {
-      Attribute a = ds.lookup(tag);
+      Element a = ds.lookup(tag);
       if (a != null) {
         if (a.vr is SQ) {
           deIdentifySequence(a);

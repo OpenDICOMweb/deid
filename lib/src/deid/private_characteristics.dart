@@ -6,22 +6,8 @@
 
 import 'dart:typed_data';
 
-import 'package:core/new_base.dart';
-import 'package:core/new_dicom.dart';
+import 'package:core/dicom.dart';
 
-class AType {
-  final String name;
-  final int level;
-  final bool conditional;
-
-  const AType(this.name, this.level, this.conditional);
-
-  static const k1 = const AType("Type 1", 1, false);
-  static const k1C = const AType("Type 1C", 1, true);
-  static const k2 = const AType("Type 2", 2, false);
-  static const k2C = const AType("Type 2C", 2, true);
-  static const k3 = const AType("Type 3", 3, false);
-}
 
 class PrivateDataCharacteristics {
   final String keyword;
@@ -29,7 +15,7 @@ class PrivateDataCharacteristics {
   final String name;
   final VR vr;
   final VM vm;
-  final AType at;
+  final DEType at;
   final bool isRetired;
 
   const PrivateDataCharacteristics(this.keyword, this.code, this.name,
@@ -42,7 +28,7 @@ class PrivateDataCharacteristics {
       "Private​Data​Element​Characteristics​Sequence",
       VR.kSQ,
       VM.k1,
-      AType.k3,
+      DEType.k3,
       false);
 
   /// Odd group number within which the Private Data Element block is reserved.
@@ -52,7 +38,7 @@ class PrivateDataCharacteristics {
       "Private Group Reference",
       VR.kUS,
       VM.k1,
-      AType.k1,
+      DEType.k1,
       false);
 
   ///The value of the Private Creator Data Element value used to reserve the block of
@@ -68,7 +54,7 @@ class PrivateDataCharacteristics {
       "Private Creator Reference",
       VR.kLO,
       VM.k1,
-      AType.k1,
+      DEType.k1,
       false);
 
   /// Specifies whether some or all of the Private Data Elements in the block are safe from
@@ -84,7 +70,7 @@ class PrivateDataCharacteristics {
       "Block Identifying Information Status",
       VR.kCS,
       VM.k1,
-      AType.k1,
+      DEType.k1,
       false);
 
   ///  List of Private Data Elements in block that do not contain identifying
@@ -102,7 +88,7 @@ class PrivateDataCharacteristics {
       "Nonidentifying Private Elements",
       VR.kUS,
       VM.k1_n,
-      AType.k1C,
+      DEType.k1c,
       false);
 
   /// Actions to be performed on element within the block that are not
@@ -113,7 +99,7 @@ class PrivateDataCharacteristics {
       "Deidentification Action Sequence",
       VR.kSQ,
       VM.k1,
-      AType.k3,
+      DEType.k3,
       false);
 
   /// List of Private Data Elements in block that may contain identifying
@@ -129,7 +115,7 @@ class PrivateDataCharacteristics {
       "Identifying Private Elements",
       VR.kUS,
       VM.k1_n,
-      AType.k1,
+      DEType.k1,
       false);
 
   /// Recommended action to be performed during de-identification on elements
@@ -166,7 +152,7 @@ class PrivateDataCharacteristics {
       "Deidentification Action",
       VR.kCS,
       VM.k1,
-      AType.k1,
+      DEType.k1,
       false);
 
   static SQ get(Dataset ds) =>
@@ -184,7 +170,7 @@ class PrivateDataCharacteristics {
       int pdBase = privateGroupBase(creator);
       String status = item[kBlockIdentifyingInformationStatus].value;
       if ((keepSafe == false) || (status == "UNSAFE")) {
-        ds.removePrivateGroup(creator);
+        ds.removePrivateGroup(creatorToken);
       } else if ((status == "SAFE") && (keepSafe == true)) {
         continue;
       } else if (status == "MIXED") {

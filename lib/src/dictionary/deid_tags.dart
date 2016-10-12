@@ -5,7 +5,7 @@
 // See the AUTHORS file for other contributors.
 
 /// Data Element Tags from PS3.15 Annex E Table 1-1 in order of increasing value.
-List<int> deIdTags = [
+const List<int> deIdTags = const [
   0x00001000,
   0x00001001,
   0x00020003,

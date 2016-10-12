@@ -4,7 +4,7 @@
 // Original author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
-import 'package:core/new_dicom.dart';
+import 'package:core/dicom.dart';
 
 class TagGroup {
   final String name;
@@ -23,7 +23,7 @@ class TagGroup {
   static const curves = group50;
   static const overLays = group60;
 
-  void kep(Dataset ds) {
+  void keep(Dataset ds) {
     for (int i = min; i <= max; i++)
       ds.keep(i);
   }
