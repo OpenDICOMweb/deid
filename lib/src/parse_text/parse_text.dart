@@ -93,6 +93,7 @@ bool parseFunction(Profile profile, Rule rule, String line) {
         profile.addRule(rule);
         return true;
       }
+      return false;
   }
 }
 

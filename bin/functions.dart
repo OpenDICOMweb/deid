@@ -4,7 +4,7 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
-import 'package:core/dicom.dart';
+import 'package:core/core.dart';
 
 class Replacement {
   Pattern pattern;
@@ -94,9 +94,7 @@ class Contents extends Function {
     return results;
   }
 
-  static parse(String args) {
-
-  }
+  static parse(String args) {}
 
 }
 
@@ -105,15 +103,13 @@ class Date extends Function {
 
   Date(int tag, Pattern regex, Replacement replacement);
 
-  String call([String sep]) {
-    if (sep == null) sep = "-";
-    if (sep.length != 1) throw "Invalid separator: $sep";
+  String call([String sep = ""]) {
+    if ((sep == null) || (sep.length >= 1)) throw "Invalid separator: $sep";
+    if (sep == "-") ;
 
   }
 
-  static parse(String args) {
-
-  }
+  static parse(String args) {}
 
 }
 

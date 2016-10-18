@@ -9,10 +9,10 @@ import 'dart:typed_data';
 
 import 'package:logger/logger.dart';
 import 'package:convert/dicom.dart';
-import 'package:core/dicom.dart';
+import 'package:core/core.dart';
 import 'package:deid/deid.dart';
 
-import 'package:deid/src/deid/deidentify.dart';
+import 'package:deid/src/deid/deidentifier.dart';
 
 String inputDir = "C:/odw/test_data/sfd/CR/PID_MINT10/1_DICOM_Original/";
 String test_output = "C:/odw/sdk/deid/example/output";
@@ -30,20 +30,24 @@ void main() {
     print('Reading file: $file');
     log.config('Reading file: $file');
 
-    DeIdentify deIdentify = new DeIdentify(null);
+    DeIdentifier deIdentify = new DeIdentifier(null);
     Instance instance0 = readSopInstance(file1);
-    print('***Identified:\n${instance0.format(new Prefixer(depth: 5))}');
-    DSComparison compare = new DSComparison(instance0.dataset, instance0.dataset);
+    var dataset0 = instance0.dataset;
+    print('***Identified:\n${instance0.format(new Formatter(maxDepth: 5))}');
+    Instance instance1 = readSopInstance(file1);
+    var dataset1 = deIdentify(instance1.dataset);
+
+    DSComparison compare = new DSComparison(dataset0, dataset1);
 
     print('same: ${compare.same}');
     print('diff: ${compare.diff}');
 
     /*
     print('Initial Total Elements: ${instance0.dataset.deMap.values.length}');
-    //  print('***Identified:\n${instance.patient.format(new Prefixer(depth: 5))}');
+    //  print('***Identified:\n${instance.patient.format(new Formatter(maxDepth: 5))}');
    //Study study0 = instance0.study;
     Study instance1 = instance0.study.copy;
-    print('***Copy:\n${instance1.format(new Prefixer(depth: 5))}');
+    print('***Copy:\n${instance1.format(new Formatter(maxDepth: 5))}');
     print('FMI instance1: ${instance1.fmi}');
     deIdentify.fmi(instance1.fmi);
 
@@ -53,7 +57,7 @@ void main() {
     print('Removed Elements: ${ds.removed.length}');
     for (Attribute a in ds.removed)
       print('  $a');
-    print('***DeIdentified:\n${instance1.patient.format(new Prefixer(depth: 5))}');
+    print('***DeIdentified:\n${instance1.patient.format(new Formatter(maxDepth: 5))}');
     */
   }
 

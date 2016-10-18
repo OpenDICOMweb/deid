@@ -114,9 +114,7 @@ class Profile {
     }
   }
 
-  Profile evaluateTrial(Trial trial) {
-
-  }
+  Profile evaluateTrial(Trial trial) {}
 
   String toString() => 'Profile: $name';
 

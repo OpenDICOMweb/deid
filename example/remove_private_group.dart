@@ -9,7 +9,7 @@ import 'dart:typed_data';
 
 import 'package:logger/logger.dart';
 import 'package:convert/dicom.dart';
-import 'package:core/dicom.dart';
+import 'package:core/core.dart';
 
 String inputDir = "C:/odw/test_data/sfd/CR/PID_MINT10/1_DICOM_Original/";
 String test_output = "C:/odw/sdk/deid/example/output";
@@ -29,17 +29,16 @@ void main() {
 
     Instance instance = readSopInstance(file1);
     print('Initial Total Elements: ${instance.dataset.eMap.values.length}');
-    print('***Identified:\n${instance.patient.format(new Prefixer(depth: 5))}');
+    print('***Identified:\n${instance.patient.format(new Formatter(maxDepth: 5))}');
 
     List<Element> removed = [];
-    Dataset ds = instance.dataset;
-  //  removed = ds.removePrivateGroup("EMAGEON STUDY HOME", returnList: true};
+    instance.dataset.removePrivateGroup("EMAGEON STUDY HOME");
 
     print('Final Total Elements: ${instance.dataset.eMap.values.length}');
     print('Removed Elements: ${removed.length}');
     for (Element a in removed)
       print('  $a');
-    print('***With Private Tags removed:\n${instance.patient.format(new Prefixer(depth: 5))}');
+    print('***With Private Tags removed:\n${instance.patient.format(new Formatter(maxDepth: 5))}');
   }
 
 

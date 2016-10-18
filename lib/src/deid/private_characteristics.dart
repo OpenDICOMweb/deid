@@ -6,7 +6,7 @@
 
 import 'dart:typed_data';
 
-import 'package:core/dicom.dart';
+import 'package:core/core.dart';
 
 
 class PrivateDataCharacteristics {

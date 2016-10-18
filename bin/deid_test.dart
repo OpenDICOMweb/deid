@@ -8,7 +8,7 @@ import 'dart:io';
 
 import 'package:logger/logger.dart';
 import 'package:convert/dicom.dart';
-import 'package:core/dicom.dart';
+import 'package:core/core.dart';
 
 String testData = "C:/odw/sdk/convert/test_data/";
 String testOutput = "C:/odw/sdk/convert/test_output/";
@@ -37,7 +37,7 @@ void main() {
   Instance instance = decoder.readSopInstance(inPath);
   var study = instance.study;
   print(study.summary);
-  print(study.format(new Prefixer()));
+  print(study.format(new Formatter()));
 
 
   //De-Identify
@@ -46,5 +46,5 @@ void main() {
   study = instance.study;
   print('main:study: $study');
   print(study.summary);
-  print(study.format(new Prefixer()));
+  print(study.format(new Formatter()));
 }

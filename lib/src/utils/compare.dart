@@ -4,7 +4,7 @@
 // Original author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
-import 'package:core/dicom.dart';
+import 'package:core/core.dart';
 
 class DSComparison {
   List same = [];
@@ -40,9 +40,9 @@ class DSComparison {
   }
 
   void compareDatasets(Dataset ds0, Dataset ds1) {
-    List<Element> elements0 = ds0.values;
+    List<Element> elements0 = ds0.elements;
     int length0 = elements0.length;
-    List<Element> elements1 = ds1.values;
+    List<Element> elements1 = ds1.elements;
     int length1 = elements1.length;
     int index0 = 0;
     int index1 = 1;

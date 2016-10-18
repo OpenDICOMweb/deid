@@ -7,7 +7,7 @@
 // *** This is a generated class ***
 // ----------------------------------------------------------
 
-import 'package:core/dicom.dart';
+import 'package:core/core.dart';
 
 /// Retain Long Modified Dates Option to the Basic De-Identification Profile.
 class RetainLongModifiedDatesOption {

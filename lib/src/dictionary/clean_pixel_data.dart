@@ -5,7 +5,7 @@
 // See the AUTHORS file for other contributors.
 
 
-import 'package:core/dicom.dart';
+import 'package:core/core.dart';
 import 'package:deid/src/deid/action.dart';
 
 //TODO: add the ability to do this.

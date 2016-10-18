@@ -20,5 +20,5 @@ export 'src/dictionary/retain_patient_characteristics.dart';
 export 'src/dictionary/retain_safe_private.dart';
 export 'src/dictionary/retain_uids.dart';
 
-export 'src/deid/deidentify.dart';
+export 'src/deid/deidentifier.dart';
 

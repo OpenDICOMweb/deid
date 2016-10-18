@@ -94,12 +94,12 @@ void main() {
   for (String s in sList) {
     Match m = tag.firstMatch(s);
     print(m.groups([1, 2, 3, 4, 5]));
-    var group = m[1];
-    var element = m[2];
-    var target = '0x$group$element';
-    var keyword = m[3];
+    //var group = m[1];
+    //var element = m[2];
+    //var target = '0x$group$element';
+    //var keyword = m[3];
     //var func = lookupFunction(m[4]);
-    var args = m[5];
+    //var args = m[5];
 
     var v = '0x${m[1]}${m[2]}, ${m[3]}, ${m[4]}, ${m[5]}';
     print(v);

@@ -4,8 +4,8 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
-import 'package:core/dicom.dart';
-import 'deidentifier.dart';
+import 'package:core/core.dart';
+import 'package:deid/src/deid/other/deidentifier.dart';
 import 'deid_method_code.dart';
 
 class DeIdMethod {

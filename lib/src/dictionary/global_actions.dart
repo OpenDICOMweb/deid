@@ -4,7 +4,7 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu> -
 // See the AUTHORS file for other contributors.
 
-import 'package:core/dicom.dart';
+import 'package:core/core.dart';
 import 'basic_profile.dart';
 import 'tag_group.dart';
 

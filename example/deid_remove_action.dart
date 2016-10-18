@@ -9,7 +9,7 @@ import 'dart:typed_data';
 
 import 'package:logger/logger.dart';
 import 'package:convert/dicom.dart';
-import 'package:core/dicom.dart';
+import 'package:core/core.dart';
 import 'package:deid/deid.dart';
 
 String inputDir = "C:/odw/test_data/sfd/CR/PID_MINT10/1_DICOM_Original/";
@@ -30,7 +30,7 @@ void main() {
 
     Instance instance = readSopInstance(file1);
     print('Initial Total Elements: ${instance.dataset.eMap.values.length}');
-    print('***Identified:\n${instance.patient.format(new Prefixer(depth: 5))}');
+    print('***Identified:\n${instance.patient.format(new Formatter(maxDepth: 5))}');
 
     List<Element> removed = [];
     Dataset ds = instance.dataset;
@@ -54,7 +54,7 @@ void main() {
     print('Removed Elements: ${removed.length}');
     for (Element a in removed)
     print('  $a');
-   print('***DeIdentified:\n${instance.patient.format(new Prefixer(depth: 5))}');
+   print('***DeIdentified:\n${instance.patient.format(new Formatter(maxDepth: 5))}');
   }
 
 

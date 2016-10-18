@@ -6,7 +6,7 @@
 
 import 'dart:io';
 
-import 'package:core/dicom.dart';
+import 'package:core/core.dart';
 
 import 'src/deid_tags.dart';
 
