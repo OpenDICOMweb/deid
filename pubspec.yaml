@@ -6,8 +6,8 @@ description: DICOM De-Identification library
 homepage: https://github.com/OpenDICOMweb/deid
 
 dependencies:
-  convert:
-    path: C:/odw/sdk/convert
+  encode:
+    path: C:/odw/sdk/encode
   core:
     path: C:/odw/sdk/core
   logger:

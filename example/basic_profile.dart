@@ -8,7 +8,7 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:logger/logger.dart';
-import 'package:convert/dicom.dart';
+import 'package:encode/dicom.dart';
 import 'package:core/core.dart';
 import 'package:deid/deid.dart';
 
