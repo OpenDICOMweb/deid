@@ -7,7 +7,7 @@
 // *** This is a generated class ***
 // ----------------------------------------------------------
 
-import 'package:core/dictionary.dart';
+import 'package:dictionary/dictionary.dart';
 
 // TODO: finish.
 // Retain Safe Private Option (a DICOM de-identification aption).

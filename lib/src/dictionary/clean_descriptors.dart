@@ -7,7 +7,8 @@
 // *** This is a generated class ***
 // ----------------------------------------------------------
 
-import 'package:core/dictionary.dart';
+import 'package:dictionary/dictionary.dart';
+
 import 'basic_profile.dart';
 
 // DICOM attributes in De-Identification Profile (and Options)

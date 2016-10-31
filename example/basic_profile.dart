@@ -7,12 +7,10 @@
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:logger/logger.dart';
-import 'package:encode/dicom.dart';
 import 'package:core/core.dart';
 import 'package:deid/deid.dart';
-
 import 'package:deid/src/deid/deidentifier.dart';
+import 'package:encode/encoder.dart';
 
 String inputDir = "C:/odw/test_data/sfd/CR/PID_MINT10/1_DICOM_Original/";
 String test_output = "C:/odw/sdk/deid/example/output";
@@ -23,7 +21,7 @@ String file2 = inputDir + "CR.2.16.840.1.114255.393386351.1568457295.48879.7.dcm
 List<String> filesList = [file1];
 
 void main() {
-  Logger log = Logger.init(level: Level.fine);
+  Logger log = Logger.init();
   //var deidentifier = new DeIdentifier();
   for (String path in filesList) {
     File file = new File(path);
@@ -31,10 +29,10 @@ void main() {
     log.config('Reading file: $file');
 
     DeIdentifier deIdentify = new DeIdentifier(null);
-    Instance instance0 = readSopInstance(file1);
+    Instance instance0 = readEntity(file1);
     var dataset0 = instance0.dataset;
     print('***Identified:\n${instance0.format(new Formatter(maxDepth: 5))}');
-    Instance instance1 = readSopInstance(file1);
+    Instance instance1 = readEntity(file1);
     var dataset1 = deIdentify(instance1.dataset);
 
     DSComparison compare = new DSComparison(dataset0, dataset1);
@@ -66,9 +64,8 @@ void main() {
 }
 
 
-Instance readSopInstance(String path) {
+Instance readEntity(String path) {
   File file = new File(path);
   Uint8List bytes = file.readAsBytesSync();
-  DcmDecoder decoder = new DcmDecoder(bytes);
-  return decoder.readSopInstance(file.path);
+  return DcmDecoder.decode(bytes);
 }

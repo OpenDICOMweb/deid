@@ -4,7 +4,7 @@
 // Original author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
-import 'package:core/dictionary.dart';
+import 'package:dictionary/dictionary.dart';
 
 String commaSeparatedString(String prefix, List args, String suffix, {last: false}) {
   String s = "";

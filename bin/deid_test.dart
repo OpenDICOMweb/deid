@@ -6,9 +6,8 @@
 
 import 'dart:io';
 
-import 'package:logger/logger.dart';
-import 'package:convert/dicom.dart';
 import 'package:core/core.dart';
+import 'package:encode/dicom.dart';
 
 String testData = "C:/odw/sdk/convert/test_data/";
 String testOutput = "C:/odw/sdk/convert/test_output/";
@@ -25,19 +24,16 @@ String crf2 = "PID_MINT10/CR.2.16.840.1.114255.393386351.1568457295.48879.7.dcm"
 String output = "output.dcm";
 
 void main() {
-  Logger log = new Logger("deid_test", Level.debug);
+  Logger log = new Logger("deid_test");
   String inPath = testData + crf1;
 
   File file = new File(inPath);
   log.config('Reading file: $file');
   var bytes = file.readAsBytesSync();
-  DcmDecoder decoder = new DcmDecoder(bytes);
-  print('decoder: $decoder');
-
-  Instance instance = decoder.readSopInstance(inPath);
+  Instance instance = DcmDecoder.decode(bytes);
   var study = instance.study;
   print(study.summary);
-  print(study.format(new Formatter()));
+  print(instance.format(new Formatter()));
 
 
   //De-Identify
