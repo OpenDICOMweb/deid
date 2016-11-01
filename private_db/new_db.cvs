@@ -1,0 +1,31 @@
+Private Creator | Manufacturer | Modality | Action | Description | VR | Default Group | Default Element
+GEMS_ACQU_01    | GEMS         | MR       |  K     | GEHC Private Creator ID | LO | 0019 | 0010
+Element | VR  | Action | Description
+1002  | SL  | KB  | Number of cells I in Detector
+1003  | DS  | KB  | Cell number at Theta
+1004  | DS  | KB  | Cell spacing
+100f  | DS  | KB  | Horiz. Frame of ref.
+1011  | SS  | KB  | Series Contrast
+1013  | SS  | KB  | Start number for baseline
+1014  | SS  | KB  | End number for baseline
+1015  | SS  | KB  | Start number for enhanced scans
+1016  | SS  | KB  | End number for enhanced scans
+1017  | SS  | KB  | Series plane
+1018  | LO  | R   | First scan ras
+1019  | DS  | KB  | First scan location
+101a  | LO  | R   | Last scan ras
+101b  | DS  | KB  | Last scan loc
+101e  | DS  | KB  | Display field of view
+1023  | DS  | KB  | Table speed [mm/rotation]
+1024  | DS  | R   | Mid scan time
+1025  | SS  | KB  | Mid scan flag
+1026  | SL  | KB  | Degrees of azimuth / Tube Azimuth [degree]
+1027  | DS  | KB  | Gantry period / Rotation Speed [msec]
+102a  | DS  | KB  | x-ray On position
+102b  | DS  | KB  | x-ray Off position
+102c  | SL  | KB  | Number of triggers
+102e  | DS  | KB  | Angle of first view
+102f  | DS  | KB  | Trigger frequency
+1039  | SS  | KB  | Scan FOV type
+1040  | SS  | KB  | Stat recon flag
+1041  | SS  | KB  | Compute type

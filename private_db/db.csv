@@ -1,0 +1,31 @@
+Button | Group  | Element  | Modality  | VR  | Action  | Manufacturer  | Private Creator  |Description
+Select  | 0019  | 0010  | MR  | LO  | K  | GEMS  | GEMS_ACQU_01  | GEHC Private Creator ID
+Select  | 0019  | 1002  | MR  | SL  | KB  | GEMS  | GEMS_ACQU_01  | Number of cells I in Detector
+Select  | 0019  | 1003  | MR  | DS  | KB  | GEMS  | GEMS_ACQU_01  | Cell number at Theta
+Select  | 0019  | 1004  | MR  | DS  | KB  | GEMS  | GEMS_ACQU_01  | Cell spacing
+Select  | 0019  | 100f  | MR  | DS  | KB  | GEMS  | GEMS_ACQU_01  | Horiz. Frame of ref.
+Select  | 0019  | 1011  | MR  | SS  | KB  | GEMS  | GEMS_ACQU_01  | Series Contrast
+Select  | 0019  | 1013  | MR  | SS  | KB  | GEMS  | GEMS_ACQU_01  | Start number for baseline
+Select  | 0019  | 1014  | MR  | SS  | KB  | GEMS  | GEMS_ACQU_01  | End number for baseline
+Select  | 0019  | 1015  | MR  | SS  | KB  | GEMS  | GEMS_ACQU_01  | Start number for enhanced scans
+Select  | 0019  | 1016  | MR  | SS  | KB  | GEMS  | GEMS_ACQU_01  | End number for enhanced scans
+Select  | 0019  | 1017  | MR  | SS  | KB  | GEMS  | GEMS_ACQU_01  | Series plane
+Select  | 0019  | 1018  | MR  | LO  | R  | GEMS  | GEMS_ACQU_01  | First scan ras
+Select  | 0019  | 1019  | MR  | DS  | KB  | GEMS  | GEMS_ACQU_01  | First scan location
+Select  | 0019  | 101a  | MR  | LO  | R  | GEMS  | GEMS_ACQU_01  | Last scan ras
+Select  | 0019  | 101b  | MR  | DS  | KB  | GEMS  | GEMS_ACQU_01  | Last scan loc
+Select  | 0019  | 101e  | MR  | DS  | KB  | GEMS  | GEMS_ACQU_01  | Display field of view
+Select  | 0019  | 1023  | MR  | DS  | KB  | GEMS  | GEMS_ACQU_01  | Table speed [mm/rotation]
+Select  | 0019  | 1024  | MR  | DS  | R  | GEMS  | GEMS_ACQU_01  | Mid scan time
+Select  | 0019  | 1025  | MR  | SS  | KB  | GEMS  | GEMS_ACQU_01  | Mid scan flag
+Select  | 0019  | 1026  | MR  | SL  | KB  | GEMS  | GEMS_ACQU_01  | Degrees of azimuth / Tube Azimuth [degree]
+Select  | 0019  | 1027  | MR  | DS  | KB  | GEMS  | GEMS_ACQU_01  | Gantry period / Rotation Speed [msec]
+Select  | 0019  | 102a  | MR  | DS  | KB  | GEMS  | GEMS_ACQU_01  | x-ray On position
+Select  | 0019  | 102b  | MR  | DS  | KB  | GEMS  | GEMS_ACQU_01  | x-ray Off position
+Select  | 0019  | 102c  | MR  | SL  | KB  | GEMS  | GEMS_ACQU_01  | Number of triggers
+Select  | 0019  | 102e  | MR  | DS  | KB  | GEMS  | GEMS_ACQU_01  | Angle of first view
+Select  | 0019  | 102f  | MR  | DS  | KB  | GEMS  | GEMS_ACQU_01  | Trigger frequency
+Select  | 0019  | 1039  | MR  | SS  | KB  | GEMS  | GEMS_ACQU_01  | Scan FOV type
+Select  | 0019  | 1040  | MR  | SS  | KB  | GEMS  | GEMS_ACQU_01  | Stat recon flag
+Select  | 0019  | 1041  | MR  | SS  | KB  | GEMS  | GEMS_ACQU_01  | Compute type
+Select  | 0019  | 1042  | MR  | SS  | KB  | GEMS  | GEMS_ACQU_01  | Segment number
