@@ -14,7 +14,7 @@ void printLine(int i, var s) {
 
 void main(List<String> args) {
   var csvFile = "C:/odw/sdk/deid/private_db/new1_db.csv";
-  var jsonFile = "C:/odw/sdk/deid/private_db/db_entry.json";
+  var jsonFile = "C:/odw/sdk/deid/private_db/private_tags.json";
 
   var inFile = new File(csvFile);
   var lines = inFile.readAsLinesSync(encoding: SYSTEM_ENCODING);

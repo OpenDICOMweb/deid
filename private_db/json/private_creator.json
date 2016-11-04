@@ -1,0 +1,25 @@
+{ "@type": "PrivateCreator",
+  "@fields": {
+    "name": "String",
+    "manufacturer": "String",
+    "modality": "Modality",
+    "vr": "VR",
+    "action": "Action",
+    "group": "int",
+    "element": "int",
+    "description": "String",
+    "dataElements": "List<PrivateData>"
+  },
+  "@Data": [{
+    "Private Creator": "GEMS_ACQU_01",
+    "Manufacturer": "GEMS",
+    "Modality": "MR",
+    "VR": "LO",
+    "Action": "K",
+    "Group": "0019",
+    "Element": "0010",
+    "Description": "GEHC Private Creator ID"
+  }]
+}
+
+

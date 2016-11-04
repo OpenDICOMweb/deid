@@ -1,47 +1,16 @@
-{
-  "@type": "PrivateCreator",
+{ "@type": "PrivateData",
   "@fields": {
-    "name": "String",
-    "manufacturer": "String",
-    "modality": "Modality",
+    "number": "int",
     "vr": "VR",
     "action": "Action",
-    "group": "int",
-    "element": "int",
-    "description": "String",
-    "dataElements": "List<DataElement>"
+    "description": "String"
   },
-  "@fieldNames": [
-    "name", "manufacturer", "modality", "vr", "action",
-    "group", "element", "description", "dataElements"
-  ],
-  "@fieldTypes": [
-    "String", "String", "Modality", "VR", "Action",
-    "int", "int", "String", "String"
-  ],
-  "Private Creator": "GEMS_ACQU_01",
-  "Manufacturer": "GEMS",
-  "Modality": "MR",
-  "VR": "LO",
-  "Action": "K",
-  "Group": "0019",
-  "Element": "0010",
-  "Description": "GEHC Private Creator ID",
-  "elements": {
-    "@type": "List<PrivateData>",
-    "@fields": {
-      "number": "int",
-      "vr": "VR",
-      "action": "Action",
-      "description": "String"
-},
-  }[
-    {
-      "Element": "1002",
-      "VR": "SL",
-      "Action": "KB",
-      "Description": "Number of cells I in Detector"
-    },
+  "@data": [{
+    "Element": "1002",
+    "VR": "SL",
+    "Action": "KB",
+    "Description": "Number of cells I in Detector"
+  },
     {
       "Element": "1003",
       "VR": "DS",

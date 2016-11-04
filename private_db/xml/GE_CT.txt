@@ -1,0 +1,354 @@
+ <!-- CTP processing instructions for private elements found in GE CT devices  -->
+ <!-- Mallinckrodt Institute of Radiology                                             -->
+ <!-- Revision History:                                                               -->
+ <!--   5/6/2013  Steve Moore       Original
+        9/12/2013 Dave Maffitt	    fixed 0049 elements labeled as 0045
+        10/21/2015 Dave Maffitt	    add elements from 2014 DCS Optima-540  -->
+
+ <e en="T" t="0009[GEMS_IDEN_01]01" n="Full Fidelity"> @keep() </e>
+ <e en="T" t="0009[GEMS_IDEN_01]02" n="Suite Id"> @keep() </e>
+ <e en="T" t="0009[GEMS_IDEN_01]04" n="Product Id"> @keep() </e>
+ <e en="T" t="0009[GEMS_IDEN_01]30" n="Service id"> @keep() </e>
+ <e en="T" t="0009[GEMS_IDEN_01]27" n="Actual Image Date/time"> @remove() </e>
+ <e en="T" t="0009[GEMS_IDEN_01]e3" n="Equipment UID"> @keep() </e>
+ <e en="T" t="0009[GEMS_IDEN_01]e6" n="Genesis Version - now"> @keep() </e>
+
+ <!-- Group 0x0011 has patient status; omit the entire group -->
+
+ <e en="T" t="0019[GEMS_ACQU_01]02" n="Number of cells I in Detector"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]03" n="Cell number at Theta"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]04" n="Cell spacing"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]0f" n="Horizontal Frame of Ref"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]11" n="Series Contrast"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]13" n="Start number for baseline"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]14" n="End number for baseline"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]15" n="Start number for enhanced scans"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]16" n="End number for enhanced scans"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]17" n="Series plane"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]18" n="First Scan ras"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]19" n="First Scan location"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]1a" n="Last Scan ras"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]1b" n="Last Scan location"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]1e" n="Display Field of View"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]23" n="Table speed">         @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]24" n="Mid scan time">       @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]25" n="Mid scan flag">       @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]26" n="Degrees of azimuth / Tube Azimuth (degree)"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]27" n="Gantry period / Rotation Speed (msec)"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]2a" n="x-ray On position">       @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]2b" n="x-ray Off position">      @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]2c" n="Number of triggers">      @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]2e" n="Angle of first view">     @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]2f" n="Trigger frequency">       @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]39" n="Scan FOV type">           @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]40" n="Stat reconf flag">        @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]41" n="Compute type">            @keep() </e>
+
+ <e en="T" t="0019[GEMS_ACQU_01]42" n="Segment number">          @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]43" n="Total segments requested"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]44" n="Interscan delay">         @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]47" n="View compression factor"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]4a" n="Total no. of ref channels"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]4b" n="Data size for scan data"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]52" n="Recon post proc. Flag">   @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]57" n="CT water number">         @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]58" n="CT bone number">          @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]5e" n="Number of channels (1...512)"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]5f" n="Increment between channels"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]60" n="Starting view">           @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]61" n="Number of views">         @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]62" n="Increment between views"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]6a" n="Dependent on #views processed"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]6b" n="Field of view in detector cells"> @keep() </e>
+
+ <e en="T" t="0019[GEMS_ACQU_01]70" n="value of back projection button">   @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]71" n="Set if fatq estimates were used">   @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]72" n="Z can avg over views">              @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]73" n="Avg of left ref chans over views">  @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]74" n="Max left chan over views">          @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]75" n="Avg of right ref chans over views"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]76" n="Max right chan over views">         @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]da" n="Reference channel used">            @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]db" n="Back projector coefficient">        @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]dc" n="Primary speed correction used">     @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]dd" n="Overrange correction used">         @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]de" n="Dynamic Z alpha value">             @keep() </e>
+
+ <e en="T" t="0021[GEMS_RELA_01]03" n="Series from which prescribed">      @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]05" n="Genesis Version - now">             @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]18" n="Genesis version - Now">             @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]35" n="Series Prescribed From">            @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]36" n="Image Prescribed From">             @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]37" n="Screen format">                     @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]4a" n="Anatomical reference for scout">    @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]90" n="Tube focal spot position">          @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]91" n="Biopsy position">                   @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]92" n="Biopsy T location">                 @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]93" n="Biopsy ref location">               @keep() </e>
+
+ <e en="T" t="0023[GEMS_STDY_01]70" n="Start time(secs) in first axial">   @keep() </e>
+
+ <e en="T" t="0025[GEMS_SERS_01]06" n="Last Pulse sequence used">         @keep() </e>
+ <e en="T" t="0025[GEMS_SERS_01]07" n="Images in series">                 @keep() </e>
+ <e en="T" t="0025[GEMS_SERS_01]10" n="Landmark counter">                 @keep() </e>
+ <e en="T" t="0025[GEMS_SERS_01]11" n="Number of acquisitions">           @keep() </e>
+
+ <e en="T" t="0027[GEMS_IMAG_01]10" n="Scout type">                       @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]1c" n="Vma mamp">                         @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]1d" n="Vma phase">                        @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]1e" n="Vma mod">                          @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]1f" n="Vma clip / GE Noise Index * 10">   @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]20" n="Smart scan  ON/OFF flag">          @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]30" n="Foreign Image Revision">           @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]35" n="Plane Type">                       @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]40" n="RAS Letter of Image Location">     @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]41" n="Image Location">                   @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]42" n="Center R cood of plane image">     @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]43" n="Center A cood of plane image">     @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]44" n="Center S cood of plane image">     @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]45" n="Normal R coord">                   @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]46" n="Normal A coord">                   @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]47" n="Normal S coord">                   @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]48" n="R coord of top right corner">      @keep()</e>
+ <e en="T" t="0027[GEMS_IMAG_01]49" n="A coord of top right corner">      @keep()</e>
+ <e en="T" t="0027[GEMS_IMAG_01]4a" n="S coord of top right corner">      @keep()</e>
+ <e en="T" t="0027[GEMS_IMAG_01]4b" n="R coord of bottom right corner">   @keep()</e>
+ <e en="T" t="0027[GEMS_IMAG_01]4c" n="A coord of bottom right corner">   @keep()</e>
+ <e en="T" t="0027[GEMS_IMAG_01]4d" n="S coord of bottom right corner">   @keep()</e>
+ <e en="T" t="0027[GEMS_IMAG_01]50" n="Table start location">             @keep()</e>
+ <e en="T" t="0027[GEMS_IMAG_01]51" n="Table end location">               @keep()</e>
+ <e en="T" t="0027[GEMS_IMAG_01]52" n="RAS letter for side of image">     @keep()</e>
+ <e en="T" t="0027[GEMS_IMAG_01]53" n="RAS letter for anterior/posterior"> @keep()</e>
+ <e en="T" t="0027[GEMS_IMAG_01]54" n="RAS letter for scout start loc">   @keep()</e>
+ <e en="T" t="0027[GEMS_IMAG_01]55" n="RAS letter for scout end loc">     @keep()</e>
+
+ <e en="T" t="0029[GEMS_CT_FLRO_01]01" n="CT Int Fluoro">           @keep() </e>
+ <e en="T" t="0029[GEMS_CT_FLRO_01]02" n="Image Precise Location">  @keep() </e>
+
+ <e en="T" t="0029[GEMS_IMPS_01]04" n="Lower range of Pixels1">     @keep() </e>
+ <e en="T" t="0029[GEMS_IMPS_01]05" n="Lower range of Pixels1">     @keep() </e>
+ <e en="T" t="0029[GEMS_IMPS_01]06" n="Lower range of Pixels1">     @keep() </e>
+ <e en="T" t="0029[GEMS_IMPS_01]07" n="Lower range of Pixels1">     @keep() </e>
+ <e en="T" t="0029[GEMS_IMPS_01]08" n="Lower range of Pixels1">     @keep() </e>
+ <e en="T" t="0029[GEMS_IMPS_01]09" n="Lower range of Pixels1">     @keep() </e>
+ <e en="T" t="0029[GEMS_IMPS_01]0a" n="Lower range of Pixels1">     @keep() </e>
+ <e en="T" t="0029[GEMS_IMPS_01]26" n="Version of Header Structure"> @keep() </e>
+ <e en="T" t="0029[GEMS_IMPS_01]34" n="Advantage Comp Overflow">    @keep() </e>
+
+ <e en="T" t="0039[GEMS_0039]95" n="SR Application Name">           @keep() </e>
+
+ <e en="T" t="0043[GEMS_PARM_01]10" n="Window value">                  @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]11" n="Total input views">             @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]12" n="X-ray chain">                   @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]13" n="Decon kernal parameters">       @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]14" n="Calibration parameters">        @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]15" n="Total output views">            @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]16" n="Number of overranges">          @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]17" n="IBH image scale factors">       @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]18" n="BBH coefficients">              @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]19" n="Number of BBH chains to blend"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]1a" n="Starting channel number">       @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]1b" n="Ppscan parameters">             @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]1c" n="GE Image Integrity">            @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]1d" n="Level value">                   @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]1e" n="Delta start time">              @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]1f" n="Max overranges in a view">      @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]20" n="Avg overranges all views">      @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]21" n="Corrected after glow terms">    @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]25" n="Reference channels">            @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]26" n="No views ref chans blocked">    @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]27" n="Scan pitch ratio">              @keep() </e>
+ <!-- Omitted (0043, 1028), (0043, 1029), (0043, 102a) because of type OB -->
+
+ <e en="T" t="0043[GEMS_PARM_01]2b" n="Private Scan Options">          @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]31" n="RA cord of target recon center"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]40" n="Trigger on position">           @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]41" n="Degree of rotation">            @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]42" n="DAS trigger source">            @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]43" n="DAS fpa gain">                  @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]44" n="DAS output source">             @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]45" n="DAS ad input">                  @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]46" n="DAS cal mode">                  @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]47" n="DAS cal frequency">             @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]48" n="DAS reg xm">                    @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]49" n="DAS auto zero">                 @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]4a" n="Starting channel of view">      @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]4b" n="DAS xm pattern">                @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]4c" n="TGGC trigger mode">             @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]4d" n="Start scan to X-ray on delay">  @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]4e" n="Duration of X-ray on">          @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]64" n="Recon filter">                  @keep() </e>
+
+ <e en="T" t="0043[GEMS_PARM_01]65" n="Motion Correction Indicator">   @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]66" n="Helical Correction Indicator">  @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]67" n="IBO Correction Indicator">      @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]68" n="Cross-talk Correction Indicator"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]69" n="Q-cal Correction Indicator">    @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]6a" n="Afterglow Correction Indicator"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]6b" n="L-MDK Correction Indictor">     @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]6c" n="Detector Row">                  @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]6d" n="Area Size / Z-smoothing size">  @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]6e" n="Auto mA Mode">                  @keep() </e>
+
+ <e en="T" t="0045[GEMS_HELIOS_01]01" n="Number of Macro Rows in Detector"> @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]02" n="Macro width at ISO Center">        @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]03" n="DAS type">                         @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]04" n="DAS gain">                         @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]05" n="DAS Temprature">                   @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]06" n="Table Direction">                  @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]07" n="Z smoothing Factor">               @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]08" n="View Weighting Mode">              @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]09" n="Sigma Row number">                 @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]0a" n="Minimum DAS value">                @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]0b" n="Maximum Offset Value">             @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]0c" n="Number of Views shifted">          @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]0d" n="Z tracking Flag">                  @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]0e" n="Mean Z error">                     @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]0f" n="Z tracking Error">                 @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]10" n="Start View 2A">                    @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]11" n="Number of Views 2A">               @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]12" n="Start View 1A">                    @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]13" n="Sigma Mode">                       @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]14" n="Number of Views 1A">               @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]15" n="Start View 2B">                    @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]16" n="Number Views 2B">                  @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]17" n="Start View 1B">                    @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]18" n="Number of Views 1B">               @keep() </e>
+
+ <!-- calibration dates omitted, encoded as SS -->
+ <!-- 0x0040: 09, 1a, 1b, 1c, 1d, 1e, 1f 20    -->
+
+ <e en="T" t="0045[GEMS_HELIOS_01]21" n="Iterbone Flag">                    @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]22" n="Perisstaltic Flag">                @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]30" n="CardiacReconAlgorithm">            @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]31" n="AvgHeartRateForImage">             @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]32" n="TemporalResolution">               @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]33" n="PctRpeakDelay">                    @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]34" n="ActualPctRpeakDelay">               @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]36" n="EkgFullMaStartPhase">               @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]37" n="EkgFullMaEndPhase">                 @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]38" n="EkgModulationMaxMa">                @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]39" n="EkgModulationMinMa">                @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]3b" n="Noise ReductionImageFilterDesc">    @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]3f" n="RPeakTimeDelay">                    @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]44" n="ActualRPeakTimeDelay">              @keep() </e>
+ <e en="T" t="0045[GEMS_HELIOS_01]45" n="CardiacScanOption">                 @keep() </e>
+
+ <!-- How do I keep a sequence REPAIR -->
+ <e en="T" t="0049[GEMS_CT_CARDIAC_001]01" n="CT Cardiac Sequence">               @keep() </e>
+ <!-- elements 0002 thru 000b are elements in the sequence, all retained -->
+ <e en="T" t="0049[GEMS_CT_CARDIAC_001]0c" n="RpeakTimeStamps">                   @keep() </e>
+ <e en="T" t="0049[GEMS_CT_CARDIAC_001]16" n="EkgGatingType">                     @keep() </e>
+ <e en="T" t="0049[GEMS_CT_CARDIAC_001]1b" n="EkgWave Time Off First Data Point"> @keep() </e>
+ <e en="T" t="0049[GEMS_CT_CARDIAC_001]22" n="TemporalAlg">                       @keep() </e>
+ <e en="T" t="0049[GEMS_CT_CARDIAC_001]23" n="PhaseLocation">                     @keep() </e>
+ <e en="T" t="0049[GEMS_CT_CARDIAC_001]24" n="PreBlendedCycle1">                  @keep() </e>
+ <e en="T" t="0049[GEMS_CT_CARDIAC_001]25" n="PreBlendedCycle2">                  @keep() </e>
+ <e en="T" t="0049[GEMS_CT_CARDIAC_001]26" n="CompressionAlg">                    @keep() </e>
+
+ <e en="T" t="004b[GEMS_HINO_CT_01]01" n="Beam Thickness">                   @keep() </e>
+ <e en="T" t="004b[GEMS_HINO_CT_01]02" n="R Time">                           @keep() </e>
+ <e en="T" t="004b[GEMS_HINO_CT_01]03" n="HBC number">                       @keep() </e>
+
+ <!-- Group 0x0051 contains CTVESSequence and is omitted -->
+
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]01" n="MultiEnergyNoiseRedBlendingFact">    @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]02" n="MultiEnergyNoiseRedScaleFact">       @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]03" n="MultiEnergyMDTransformEnergies">     @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]20" n="ShuttleFlag">                        @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]21" n="TableSpeedNotReachesTargetFlag">     @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]40" n="IterativeReconAnnotation">           @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]41" n="IterativeReconMode">                 @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]42" n="IterativeReconConfiguration">        @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]43" n="IterativeReconLevel">                @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]60" n="ReconFlipRotateAnno">                @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]61" n="HiResMod">                           @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]62" n="RespiratoryFlag">                    @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]63" n="Image Position Patient Setting">     @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]64" n="Shutter Mode">                       @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]65" n="Shutter Mode Percent">               @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]66" n="Image Browser Annotation">           @remove() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]67" n="Overlapped Recon Flag">              @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]68" n="Row Number Annotation Flag">         @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]69" n="Image Check Annotation">             @remove() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]6a" n="ODMFlag">                            @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]6b" n="ODMReductionPercent">                @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]70" n="MultiEnergySourceCount">             @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]71" n="MultiEnergyScanType">                @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]72" n="MultiEnergyReconType">               @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]73" n="MultiEnergyImageType">               @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]74" n="MultiEnergyMaterialType">            @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]75" n="MonchromaticEnergy">                 @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]76" n="multiEnergyWeightedSubtractinWidth1">  @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]77" n="MultiEnergyWeightedSubtractionWidth2"> @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]78" n="MultiEnergyWeightedSubtractionType">   @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]79" n="MultiEnergyAcqMethod">                 @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]7a" n="MultiEnergyFeatAnnotName">           @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]7b" n="MultiEnergyNoiseReduced">            @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]7c" n="MultiEnergyNoiseReducdeMethod">      @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]7d" n="SubOptimalIQString">                 @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]7e" n="MultiEnergyHighLowRatio">            @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]83" n="AnnotationmA">                       @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]84" n="CommandedFirstkVp">                  @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]85" n="CommandedFirstmA">                   @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]86" n="CommandedSecondkVp">                 @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]87" n="CommandedSecondmA">                  @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]88" n="MultiEnergyKVAnnotName">             @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]89" n="MultiEnergyKVUnitLabel">             @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]8a" n="MaterialType#1">                     @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]8b" n="MaterialType#2">                     @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]8c" n="GSIScanModePresent">                 @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]8d" n="MonoWindowLow">                      @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]8e" n="MonoWindoHigh">                      @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]8f" n="MD1AttenuationCurve">                @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]92" n="MD1intercept">                       @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]93" n="MD1slope">                           @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]98" n="MD2intercept">                       @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]99" n="MD2slope">                           @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]9b" n="MD2attenuationCurve">                @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]9c" n="GSIdataVersion">                     @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]9d" n="MARsAnnotation">                     @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]9e" n="MultiEnergyNumNoiseRedPair">         @keep() </e>
+ <e en="T" t="0053[GEHC_CT_ADVAPP_001]9f" n="MultiEnergyNoiseRedPairString">      @keep() </e>
+
+ <e en="T" t="0019[GE_YMS_NJ001]02" n="Detector Channel">                 @keep() </e>
+ <e en="T" t="0019[GE_YMS_NJ001]23" n="Table speed">                      @keep() </e>
+ <e en="T" t="0019[GE_YMS_NJ001]24" n="Mid scan time">                    @keep() </e>
+ <e en="T" t="0019[GE_YMS_NJ001]26" n="Tube Azimuth">                     @keep() </e>
+ <e en="T" t="0019[GE_YMS_NJ001]27" n="Gantry Velocity">                  @keep() </e>
+ <e en="T" t="0019[GE_YMS_NJ001]39" n="SFOV type">                        @keep() </e>
+ <e en="T" t="0019[GE_YMS_NJ001]42" n="Segment number">                   @keep() </e>
+ <e en="T" t="0019[GE_YMS_NJ001]43" n="Total segments required">          @keep() </e>
+
+ <e en="T" t="0027[GE_YMS_NJ001]10" n="Scout Type">                       @keep() </e>
+ <e en="T" t="0027[GE_YMS_NJ001]50" n="Scan start location">              @keep() </e>
+ <e en="T" t="0027[GE_YMS_NJ001]51" n="Scan end location">                @keep() </e>
+
+ <e en="T" t="0043[GE_YMS_NJ001]12" n="X-Ray Chain">                      @keep() </e>
+ <e en="T" t="0043[GE_YMS_NJ001]1e" n="Delta start time (msec)">          @keep() </e>
+ <e en="T" t="0043[GE_YMS_NJ001]37" n="Gantry Type">                      @keep() </e>
+ <e en="T" t="0043[GE_YMS_NJ001]39" n="Reconstruction Matrix">            @keep() </e>
+ <e en="T" t="0043[GE_YMS_NJ001]40" n="Image Filter">                     @keep() </e>
+ <e en="T" t="0043[GE_YMS_NJ001]41" n="Prospective Addition Indicator">   @keep() </e>
+ <e en="T" t="0043[GE_YMS_NJ001]43" n="Motion Correction Indicator">      @keep() </e>
+ <e en="T" t="0043[GE_YMS_NJ001]44" n="Helical Correction Indicator">     @keep() </e>
+ <e en="T" t="0043[GE_YMS_NJ001]45" n="Cine Correction Indicator">        @keep() </e>
+ <e en="T" t="0043[GE_YMS_NJ001]46" n="IBO Correction Indicator">         @keep() </e>
+ <e en="T" t="0043[GE_YMS_NJ001]47" n="BBH Correction Indicator">         @keep() </e>
+ <e en="T" t="0043[GE_YMS_NJ001]48" n="Advanced Noise Reduction Indicator"> @keep() </e>
+ <e en="T" t="0043[GE_YMS_NJ001]49" n="Scatter Correction Indicator">     @keep() </e>
+ <e en="T" t="0043[GE_YMS_NJ001]4a" n="Recon Center Coordinates">         @keep() </e>
+ <e en="T" t="0043[GE_YMS_NJ001]50" n="Cross-Talk Correction Indicator">  @keep() </e>
+ <e en="T" t="0043[GE_YMS_NJ001]51" n="Q-Cal Correction Indicator">       @keep() </e>
+ <e en="T" t="0043[GE_YMS_NJ001]52" n="Afterglow Correction Indicator">   @keep() </e>
+ <e en="T" t="0043[GE_YMS_NJ001]53" n="Local Decon Correction Indicator"> @keep() </e>
+ <e en="T" t="0043[GE_YMS_NJ001]54" n="Scan Start location">              @keep() </e>
+ <e en="T" t="0043[GE_YMS_NJ001]55" n="Scan End location">                @keep() </e>
+ <e en="T" t="0043[GE_YMS_NJ001]56" n="Detector Row">                     @keep() </e>
+ <e en="T" t="0043[GE_YMS_NJ001]57" n="Tube Focus">                       @keep() </e>
+
+ <e en="T" t="004b[GE_YMS_NJ001]01" n="Beam Thickness">       @keep() </e>
+ <e en="T" t="004b[GE_YMS_NJ001]02" n="R Time">               @keep() </e>
+ <e en="T" t="004b[GE_YMS_NJ001]03" n="HBC number">           @keep() </e>
+
+

@@ -18,10 +18,12 @@ Map generatePrivateGroup(String creator, String manufacturer, String modality,
   return privateGroup;
 }
 
-Map generatePrivateElements() {
+Map generatePrivateElements(Element ) {
   Map elements = {[
     {"type": "PrivateElement",
       "number": element,
       "vr": vr}]
   };
 }
+
+class Pr

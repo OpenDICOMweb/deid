@@ -1,0 +1,203 @@
+{
+  "@type": "PrivateCreator",
+  "@fields": {
+    "name": "String",
+    "manufacturer": "String",
+    "modality": "Modality",
+    "vr": "VR",
+    "action": "Action",
+    "group": "int",
+    "number": "int",
+    "description": "String",
+    "data": "PrivateData"
+  },
+  "@Data": {
+    "name": "GEMS_ACQU_01",
+    "manufacturer": "GEMS",
+    "modality": "MR",
+    "vr": "LO",
+    "action": "K",
+    "group": "0019",
+    "number": "0010",
+    "description": "GEHC Private Creator ID",
+    "data": {
+      "@type": "List<PrivateData>",
+      "@fields": {
+        "number": "int",
+        "vr": "VR",
+        "action": "Action",
+        "description": "String"
+      },
+      "@data": [
+        {
+          "number": "1002",
+          "vr": "SL",
+          "action": "KB",
+          "description": "Number of cells I in Detector"
+        },
+        {
+          "number": "1003",
+          "vr": "DS",
+          "action": "KB",
+          "description": "Cell number at Theta"
+        },
+        {
+          "number": "1004",
+          "vr": "DS",
+          "action": "KB",
+          "description": "Cell spacing"
+        },
+        {
+          "number": "100f",
+          "vr": "DS",
+          "action": "KB",
+          "description": "Horiz. Frame of ref."
+        },
+        {
+          "number": "1011",
+          "vr": "SS",
+          "action": "KB",
+          "description": "Series Contrast"
+        },
+        {
+          "number": "1013",
+          "vr": "SS",
+          "action": "KB",
+          "description": "Start number for baseline"
+        },
+        {
+          "number": "1014",
+          "vr": "SS",
+          "action": "KB",
+          "description": "End number for baseline"
+        },
+        {
+          "number": "1015",
+          "vr": "SS",
+          "action": "KB",
+          "description": "Start number for enhanced scans"
+        },
+        {
+          "number": "1016",
+          "vr": "SS",
+          "action": "KB",
+          "description": "End number for enhanced scans"
+        },
+        {
+          "number": "1017",
+          "vr": "SS",
+          "action": "KB",
+          "description": "Series plane"
+        },
+        {
+          "number": "1018",
+          "vr": "LO",
+          "action": "R",
+          "description": "First scan ras"
+        },
+        {
+          "number": "1019",
+          "vr": "DS",
+          "action": "KB",
+          "description": "First scan location"
+        },
+        {
+          "number": "101a",
+          "vr": "LO",
+          "action": "R",
+          "description": "Last scan ras"
+        },
+        {
+          "number": "101b",
+          "vr": "DS",
+          "action": "KB",
+          "description": "Last scan loc"
+        },
+        {
+          "number": "101e",
+          "vr": "DS",
+          "action": "KB",
+          "description": "Display field of view"
+        },
+        {
+          "number": "1023",
+          "vr": "DS",
+          "action": "KB",
+          "description": "Table speed [mm/rotation]"
+        },
+        {
+          "number": "1024",
+          "vr": "DS",
+          "action": "R",
+          "description": "Mid scan time"
+        },
+        {
+          "number": "1025",
+          "vr": "SS",
+          "action": "KB",
+          "description": "Mid scan flag"
+        },
+        {
+          "number": "1026",
+          "vr": "SL",
+          "action": "KB",
+          "description": "Degrees of azimuth / Tube Azimuth [degree]"
+        },
+        {
+          "number": "1027",
+          "vr": "DS",
+          "action": "KB",
+          "description": "Gantry period / Rotation Speed [msec]"
+        },
+        {
+          "number": "102a",
+          "vr": "DS",
+          "action": "KB",
+          "description": "x-ray On position"
+        },
+        {
+          "number": "102b",
+          "vr": "DS",
+          "action": "KB",
+          "description": "x-ray Off position"
+        },
+        {
+          "number": "102c",
+          "vr": "SL",
+          "action": "KB",
+          "description": "Number of triggers"
+        },
+        {
+          "number": "102e",
+          "vr": "DS",
+          "action": "KB",
+          "description": "Angle of first view"
+        },
+        {
+          "number": "102f",
+          "vr": "DS",
+          "action": "KB",
+          "description": "Trigger frequency"
+        },
+        {
+          "number": "1039",
+          "vr": "SS",
+          "action": "KB",
+          "description": "Scan FOV type"
+        },
+        {
+          "number": "1040",
+          "vr": "SS",
+          "action": "KB",
+          "description": "Stat recon flag"
+        },
+        {
+          "number": "1041",
+          "vr": "SS",
+          "action": "KB",
+          "description": "Compute type"
+        }
+      ]
+    }
+  }
+}
