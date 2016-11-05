@@ -1,0 +1,130 @@
+{
+  "GEMS": {
+    "id": "GEMS",
+    "mIndex": 1,
+    "name": "General Electric Medical Systems",
+    "creators": {
+      "GEMS_IDEN_01": {
+        "groups": ["0x0009"],
+        "modality": "MR",
+        "description": "GEMS_IDEN_01",
+        "elements": {
+          "groupNo": "0x0009",
+          "gIndex": 9,
+          "0x01": {
+            "element": "0x01",
+            "eIndex": 1,
+            "action": "Full Fidelity",
+            "description": "keep"
+          },
+          "0x02": {"element": "0x02", "eIndex": 2, "action": "Suite Id", "description": "keep"},
+          "0x04": {"element": "0x04", "eIndex": 4, "action": "Product Id", "description": "keep"},
+          "0x30": {"element": "0x30", "eIndex": 48, "action": "Sevice Id", "description": "keep"},
+          "0x27": {
+            "element": "0x27",
+            "eIndex": 39,
+            "action": "Actual Image Date/time",
+            "description": "remove"
+          },
+          "0xe3": {
+            "element": "0xe3",
+            "eIndex": 227,
+            "action": "Equipment UID",
+            "description": "keep"
+          },
+          "0xe6": {
+            "element": "0xe6",
+            "eIndex": 230,
+            "action": "Genesis Version - now",
+            "description": "keep"
+          }
+        }
+      }
+    },
+    "GEMS_PATI_01": {
+      "creator": "GEMS_PATI_01",
+      "mIndex": 1,
+      "groups": ["0x0011"],
+      "modality": "MR",
+      "description": "GEMS_PATI_01"
+    },
+    "GEMS_ACQU_01": {
+      "creator": "GEMS_ACQU_01",
+      "mIndex": 1,
+      "groups": ["0x0019"],
+      "modality": "MR",
+      "description": "Acquisition Parameters"
+    },
+    "GEMS_RELA_01": {
+      "creator": "GEMS_RELA_01",
+      "mIndex": 1,
+      "groups": ["0x0021"],
+      "modality": "MR",
+      "description": "GEMS_RELA_01"
+    },
+    "GEMS_STDY_01": {
+      "creator": "GEMS_STDY_01",
+      "mIndex": 1,
+      "groups": ["0x0023"],
+      "modality": "MR",
+      "description": "GEMS_STDY_01"
+    },
+    "GEMS_SERS_01": {
+      "creator": "GEMS_SERS_01",
+      "mIndex": 1,
+      "groups": ["0x0025"],
+      "modality": "MR",
+      "description": "GEMS_SERS_01"
+    },
+    "GEMS_IMAG_01": {
+      "creator": "GEMS_IMAG_01",
+      "mIndex": 1,
+      "groups": ["0x0027"],
+      "modality": "MR",
+      "description": "GEMS_IMAG_01"
+    },
+    "GEMS_IMPS_01": {
+      "creator": "GEMS_IMPS_01",
+      "mIndex": 1,
+      "groups": ["0x0029"],
+      "modality": "MR",
+      "description": "GEMS_IMPS_01"
+    },
+    "GEMS_0039": {
+      "creator": "GEMS_0039",
+      "mIndex": 1,
+      "groups": ["0x0039"],
+      "modality": "MR",
+      "description": "GEMS_0039"
+    },
+    "GEMS_PARM_01": {
+      "creator": "GEMS_PARM_01",
+      "mIndex": 1,
+      "groups": ["0x0043"],
+      "modality": "MR",
+      "description": "GEMS_PARM_01"
+    },
+    "GEMS_FUNCTOOL_01": {
+      "creator": "GEMS_FUNCTOOL_01",
+      "mIndex": 1,
+      "groups": ["0x0051"],
+      "modality": "MR",
+      "description": "GEMS_FUNCTOOL_01"
+    }
+  },
+  "Philips": {
+    "id": "Philips", "mIndex": 2, "name": "Philips"
+  },
+  "Siemens": {"id": "Siemens", "mIndex": 3, "name": "Siemens"},
+  "Toshiba": {"id": "Toshiba", "mIndex": 4, "name": "Toshiba"},
+  "Hitachi": {"id": "Hitachi", "mIndex": 5, "name": "Hitachi"},
+  "RSNA": {"id": "RSNA", "mIndex": 6, "name": "RSNA"},
+  "MIR/ERL": {
+    "id": "MIR/ERL", "mIndex": 7, "name": "MIR/ERL"
+  },
+  "Fuji": {"id": "Fuji", "mIndex": 8, "name": "Fuji Film"},
+  "Hologic": {"id": "Hologic", "mIndex": 9, "name": "Hologic"},
+  "UCSF": {
+    "id": "UCSF", "mIndex": 10, "name": "UCSF Segmentations"
+  }
+}

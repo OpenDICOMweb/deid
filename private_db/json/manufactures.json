@@ -1,0 +1,24 @@
+[
+  {
+    "GEMS": {"id": "GEMS", "mIndex": 1, "name": "General Electric Medical Systems"},
+    "Philips": {"id": "Philips", "mIndex": 2, "name": "Philips"},
+    "Siemens": {"id": "Siemens", "mIndex": 3, "name": "Siemens"},
+    "Toshiba": {"id": "Toshiba", "mIndex": 4, "name": "Toshiba"},
+    "Hitachi": {"id": "Hitachi", "mIndex": 5, "name": "Hitachi"},
+    "RSNA": {"id": "RSNA", "mIndex": 6, "name": "RSNA"},
+    "MIR/ERL": {"id": "MIR/ERL", "mIndex": 7, "name": "MIR/ERL"},
+    "Fuji": {"id": "Fuji", "mIndex": 8, "name": "Fuji Film"},
+    "Hologic": {"id": "Hologic", "mIndex": 9, "name": "Hologic"},
+    "UCSF": {"id": "UCSF", "mIndex": 10, "name": "UCSF Segmentations"}
+  },
+  {"id": "GEMS", "mIndex": 1, "name": "General Electric Medical Systems"},
+  {"id": "Philips", "mIndex": 2, "name": "Philips"},
+  {"id": "Siemens", "mIndex": 3, "name": "Siemens"},
+  {"id": "Toshiba", "mIndex": 4, "name": "Toshiba"},
+  {"id": "Hitachi", "mIndex": 5, "name": "Hitachi"},
+  {"id": "RSNA", "mIndex": 6, "name": "RSNA"},
+  {"id": "MIR/ERL", "mIndex": 7, "name": "MIR/ERL"},
+  {"id": "Fuji", "mIndex": 8, "name": "Fuji Film"},
+  {"id": "Hologic", "mIndex": 9, "name": "Hologic"},
+  {"id": "UCSF", "mIndex": 10, "name": "UCSF Segmentations"}
+]

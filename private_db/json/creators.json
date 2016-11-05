@@ -1,0 +1,289 @@
+{
+  "GEMS_IDEN_01": {
+    "creator": "GEMS_IDEN_01",
+    "mIndex": 1,
+    "groups": ["0x0009"],
+    "modality": "MR",
+    "description": "GEMS_IDEN_01"
+  },
+  "GEMS_PATI_01": {
+    "creator": "GEMS_PATI_01",
+    "mIndex": 1,
+    "groups": ["0x0011"],
+    "modality": "MR",
+    "description": "GEMS_PATI_01"
+  },
+  "GEMS_ACQU_01": {
+    "creator": "GEMS_ACQU_01",
+    "mIndex": 1,
+    "groups": ["0x0019"],
+    "modality": "MR",
+    "description": "Acquisition Parameters"
+  },
+  "GEMS_RELA_01": {
+    "creator": "GEMS_RELA_01",
+    "mIndex": 1,
+    "groups": ["0x0021"],
+    "modality": "MR",
+    "description": "GEMS_RELA_01"
+  },
+  "GEMS_STDY_01": {
+    "creator": "GEMS_STDY_01",
+    "mIndex": 1,
+    "groups": ["0x0023"],
+    "modality": "MR",
+    "description": "GEMS_STDY_01"
+  },
+  "GEMS_SERS_01": {
+    "creator": "GEMS_SERS_01",
+    "mIndex": 1,
+    "groups": ["0x0025"],
+    "modality": "MR",
+    "description": "GEMS_SERS_01"
+  },
+  "GEMS_IMAG_01": {
+    "creator": "GEMS_IMAG_01",
+    "mIndex": 1,
+    "groups": ["0x0027"],
+    "modality": "MR",
+    "description": "GEMS_IMAG_01"
+  },
+  "GEMS_IMPS_01": {
+    "creator": "GEMS_IMPS_01",
+    "mIndex": 1,
+    "groups": ["0x0029"],
+    "modality": "MR",
+    "description": "GEMS_IMPS_01"
+  },
+  "GEMS_0039": {
+    "creator": "GEMS_0039",
+    "mIndex": 1,
+    "groups": ["0x0039"],
+    "modality": "MR",
+    "description": "GEMS_0039"
+  },
+  "GEMS_PARM_01": {
+    "creator": "GEMS_PARM_01",
+    "mIndex": 1,
+    "groups": ["0x0043"],
+    "modality": "MR",
+    "description": "GEMS_PARM_01"
+  },
+  "GEMS_FUNCTOOL_01": {
+    "creator": "GEMS_FUNCTOOL_01",
+    "mIndex": 1,
+    "groups": ["0x0051"],
+    "modality": "MR",
+    "description": "GEMS_FUNCTOOL_01"
+  },
+  "BrainWave: 1.2.840.113819.3": {
+    "creator": "BrainWave: 1.2.840.113819.3",
+    "mIndex": 1,
+    "groups": ["0x2001"],
+    "modality": "MR",
+    "description": "BrainWave: 1.2.840.113819.3"
+  },
+  "GEMS_MR_RAW_01": {
+    "creator": "GEMS_MR_RAW_01",
+    "mIndex": 1,
+    "groups": ["0x7001"],
+    "modality": "MR",
+    "description": "GEMS_MR_RAW_01"
+  },
+  "GE_YMS_NJ001": {
+    "creator": "GE_YMS_NJ001",
+    "mIndex": 1,
+    "groups": ["0x0009", "0x0019", "0x0027", "0x0043", "0x004B"],
+    "modality": "CT",
+    "description": "GE_YMS_NJ001"
+  },
+  "GEMS_CT_FLRO_01": {
+    "creator": "GEMS_CT_FLRO_01",
+    "mIndex": 1,
+    "groups": ["0x0029"],
+    "modality": "CT",
+    "description": "GEMS_CT_FLRO_01"
+  },
+  "GEMS_HELIOS_01": {
+    "creator": "GEMS_HELIOS_01",
+    "mIndex": 1,
+    "groups": ["0x0045"],
+    "modality": "CT",
+    "description": "GEMS_HELIOS_01"
+  },
+  "GEMS_CT_CARDIAC_001": {
+    "creator": "GEMS_CT_CARDIAC_001",
+    "mIndex": 1,
+    "groups": ["0x0049"],
+    "modality": "CT",
+    "description": "GEMS_CT_CARDIAC_001"
+  },
+  "GEMS_HINO_CT_01": {
+    "creator": "GEMS_HINO_CT_01",
+    "mIndex": 1,
+    "groups": ["0x004b"],
+    "modality": "CT",
+    "description": "GEMS_HINO_CT_01"
+  },
+  "GEHC_CT_ADVAPP_001": {
+    "creator": "GEHC_CT_ADVAPP_001",
+    "mIndex": 1,
+    "groups": ["0x0053"],
+    "modality": "CT",
+    "description": "GEHC_CT_ADVAPP_001"
+  },
+  "GEMS_PETD_01": {
+    "creator": "GEMS_PETD_01",
+    "mIndex": 1,
+    "groups": ["0x0091", "0x0009", "0x0011", "0x0013"],
+    "modality": "CT",
+    "description": "GEMS_PETD_01"
+  },
+  "SIEMENS CSA NON-IMAGE": {
+    "creator": "SIEMENS CSA NON-IMAGE",
+    "mIndex": 3,
+    "groups": ["0x0029"],
+    "modality": "MR",
+    "description": "SIEMENS CSA NON-IMAGE"
+  },
+  "SIEMENS CSA HEADER": {
+    "creator": "SIEMENS CSA HEADER",
+    "mIndex": 3,
+    "groups": ["0x0029"],
+    "modality": "MR",
+    "description": "SIEMENS CSA HEADER"
+  },
+  "SIEMENS CT VA0  COAD": {
+    "creator": "SIEMENS CT VA0  COAD",
+    "mIndex": 3,
+    "groups": ["0x0019"],
+    "modality": "MR",
+    "description": "SIEMENS CT VA0  COAD"
+  },
+  "SIEMENS CSA REPORT": {
+    "creator": "SIEMENS CSA REPORT",
+    "mIndex": 3,
+    "groups": ["0x0029"],
+    "modality": "MR",
+    "description": "SIEMENS CSA REPORT"
+  },
+  "SIEMENS CSA ENVELOPE": {
+    "creator": "SIEMENS CSA ENVELOPE",
+    "mIndex": 3,
+    "groups": ["0x0029"],
+    "modality": "MR",
+    "description": "SIEMENS CSA ENVELOPE"
+  },
+  "SIEMENS MEDCOM HEADER": {
+    "creator": "SIEMENS MEDCOM HEADER",
+    "mIndex": 3,
+    "groups": ["0x0029"],
+    "modality": "MR",
+    "description": "SIEMENS MEDCOM HEADER"
+  },
+  "SIEMENS MEDCOM HEADER2": {
+    "creator": "SIEMENS MEDCOM HEADER2",
+    "mIndex": 3,
+    "groups": ["0x0029"],
+    "modality": "MR",
+    "description": "SIEMENS MEDCOM HEADER2"
+  },
+  "SIEMENS MEDCOM OOG": {
+    "creator": "SIEMENS MEDCOM OOG",
+    "mIndex": 3,
+    "groups": ["0x0029"],
+    "modality": "MR",
+    "description": "SIEMENS MEDCOM OOG"
+  },
+  "SIEMENS MED": {
+    "creator": "SIEMENS MED",
+    "mIndex": 3,
+    "groups": ["0x0021"],
+    "modality": "CT",
+    "description": "SIEMENS MED"
+  },
+  "SIEMENS MED PT": {
+    "creator": "SIEMENS MED PT",
+    "mIndex": 3,
+    "groups": ["0x0071"],
+    "modality": "PT",
+    "description": "SIEMENS MED PT"
+  },
+  "SIEMENS MED PT WAVEFORM": {
+    "creator": "SIEMENS MED PT WAVEFORM",
+    "mIndex": 3,
+    "groups": ["0x0071"],
+    "modality": "PT",
+    "description": "SIEMENS MED PT WAVEFORM"
+  },
+  "ADAC_IMG": {
+    "creator": "ADAC_IMG",
+    "mIndex": 2,
+    "groups": ["0x0019"],
+    "modality": "NM",
+    "description": "ADAC_IMG"
+  },
+  "Philips Imaging DD 001": {
+    "creator": "Philips Imaging DD 001",
+    "mIndex": 2,
+    "groups": ["0x2001"],
+    "modality": "MR",
+    "description": "Philips Imaging DD 001"
+  },
+  "Philips MR Imaging DD 001": {
+    "creator": "Philips MR Imaging DD 001",
+    "mIndex": 2,
+    "groups": ["0x2005"],
+    "modality": "MR",
+    "description": "Philips MR Imaging DD 001"
+  },
+  "ELSCINT1": {
+    "creator": "ELSCINT1",
+    "mIndex": 2,
+    "groups": ["0x00E1", "0x01E1", "0x01F1"],
+    "modality": "CT",
+    "description": "ELSCINT1"
+  },
+  "Philips PET Private Group": {
+    "creator": "Philips PET Private Group",
+    "mIndex": 2,
+    "groups": ["0x7053"],
+    "modality": "PT",
+    "description": "Philips PET Private Group"
+  },
+  "CTP": {
+    "creator": "CTP",
+    "mIndex": 6,
+    "groups": ["0x0013"],
+    "modality": "MR",
+    "description": "CTP"
+  },
+  "FDMS 1.0": {
+    "creator": "FDMS 1.0",
+    "mIndex": 8,
+    "groups": ["0x0009", "0x0019", "0x0021", "0x0025", "0x0029", "0x50f1"],
+    "modality": "CR",
+    "description": "FDMS 1.0"
+  },
+  "TOSHIBA_MEC_CT3": {
+    "creator": "TOSHIBA_MEC_CT3",
+    "mIndex": 4,
+    "groups": ["0x7005"],
+    "modality": "CT",
+    "description": "TOSHIBA_MEC_CT3"
+  },
+  "TOSHIBA_MEC_MR3": {
+    "creator": "TOSHIBA_MEC_MR3",
+    "mIndex": 4,
+    "groups": ["0x700D"],
+    "modality": "MR",
+    "description": "TOSHIBA_MEC_MR3"
+  },
+  "MMCPRIVATE": {
+    "creator": "MMCPRIVATE",
+    "mIndex": 5,
+    "groups": ["0x0009", "0x0011", "0x0019", "0x0029", "0x0041", "0x0071"],
+    "modality": "MR",
+    "description": "MMCPRIVATE"
+  }
+}

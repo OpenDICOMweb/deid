@@ -1,0 +1,5178 @@
+{
+  "FDMS 1.0": {
+    "creator": "FDMS 1.0",
+    "groupNo": "0x0009",
+    "gIndex": 9,
+    "0x08": {
+      "element": "0x08",
+      "eIndex": 8,
+      "action": "Energy Subtraction Param. 2",
+      "description": "keep"
+    },
+    "0x10": {
+      "element": "0x10",
+      "eIndex": 16,
+      "action": "Not in Conformance. Explicit remove to overcome CTP behavior",
+      "description": "remove"
+    },
+    "0xf0": {
+      "element": "0xf0",
+      "eIndex": 240,
+      "action": "Blackening Process Flag",
+      "description": "keep"
+    },
+    "0xf1": {
+      "element": "0xf1",
+      "eIndex": 241,
+      "action": "Processing Information Flag",
+      "description": "keep"
+    },
+    "0x40": {
+      "element": "0x40",
+      "eIndex": 64,
+      "action": "Image Processing Type",
+      "description": "keep"
+    },
+    "0x50": {
+      "element": "0x50",
+      "eIndex": 80,
+      "action": "Data Compression Code",
+      "description": "keep"
+    },
+    "0x70": {
+      "element": "0x70",
+      "eIndex": 112,
+      "action": "Split Exposure Format",
+      "description": "keep"
+    },
+    "0x71": {
+      "element": "0x71",
+      "eIndex": 113,
+      "action": "No. of Split Exposure Frames",
+      "description": "keep"
+    },
+    "0x80": {
+      "element": "0x80",
+      "eIndex": 128,
+      "action": "Reading Position Specification",
+      "description": "keep"
+    },
+    "0x81": {
+      "element": "0x81",
+      "eIndex": 129,
+      "action": "Reading Sensitivity Center",
+      "description": "keep"
+    },
+    "0x11": {
+      "element": "0x11",
+      "eIndex": 17,
+      "action": "Term of Correction for Each IP Type St",
+      "description": "keep"
+    },
+    "0x12": {"element": "0x12", "eIndex": 18, "action": "Reading Gain Gp", "description": "keep"},
+    "0x06": {
+      "element": "0x06",
+      "eIndex": 6,
+      "action": "Energy Subtraction Param",
+      "description": "keep"
+    },
+    "0x07": {
+      "element": "0x07",
+      "eIndex": 7,
+      "action": "Subtraction Registration Result",
+      "description": "keep"
+    },
+    "0x09": {
+      "element": "0x09",
+      "eIndex": 9,
+      "action": "Afin Conversion Coefficient",
+      "description": "keep"
+    },
+    "0x0a": {"element": "0x0a", "eIndex": 10, "action": "FNC Parameters", "description": "keep"},
+    "0x20": {
+      "element": "0x20",
+      "eIndex": 32,
+      "action": "Image Processing Modification Flag",
+      "description": "keep"
+    }
+  },
+  "GEMS_IDEN_01": {
+    "creator": "GEMS_IDEN_01",
+    "groupNo": "0x0009",
+    "gIndex": 9,
+    "0x01": {"element": "0x01", "eIndex": 1, "action": "Full Fidelity", "description": "keep"},
+    "0x02": {"element": "0x02", "eIndex": 2, "action": "Suite Id", "description": "keep"},
+    "0x04": {"element": "0x04", "eIndex": 4, "action": "Product Id", "description": "keep"},
+    "0x30": {"element": "0x30", "eIndex": 48, "action": "Sevice Id", "description": "keep"},
+    "0x27": {
+      "element": "0x27",
+      "eIndex": 39,
+      "action": "Actual Image Date/time",
+      "description": "remove"
+    },
+    "0xe3": {"element": "0xe3", "eIndex": 227, "action": "Equipment UID", "description": "keep"},
+    "0xe6": {
+      "element": "0xe6",
+      "eIndex": 230,
+      "action": "Genesis Version - now",
+      "description": "keep"
+    }
+  },
+  "GEMS_ACQU_01": {
+    "creator": "GEMS_ACQU_01",
+    "groupNo": "0x0019",
+    "gIndex": 25,
+    "0x02": {
+      "element": "0x02",
+      "eIndex": 2,
+      "action": "Number of cells I in Detector",
+      "description": "keep"
+    },
+    "0x03": {
+      "element": "0x03",
+      "eIndex": 3,
+      "action": "Cell number at Theta",
+      "description": "keep"
+    },
+    "0x04": {"element": "0x04", "eIndex": 4, "action": "Cell spacing", "description": "keep"},
+    "0x0f": {
+      "element": "0x0f",
+      "eIndex": 15,
+      "action": "Horizontal Frame of Ref",
+      "description": "keep"
+    },
+    "0x11": {"element": "0x11", "eIndex": 17, "action": "Series Contrast", "description": "keep"},
+    "0x13": {
+      "element": "0x13",
+      "eIndex": 19,
+      "action": "Start number for baseline",
+      "description": "keep"
+    },
+    "0x14": {
+      "element": "0x14",
+      "eIndex": 20,
+      "action": "End number for baseline",
+      "description": "keep"
+    },
+    "0x15": {
+      "element": "0x15",
+      "eIndex": 21,
+      "action": "Start number for enhanced scans",
+      "description": "keep"
+    },
+    "0x16": {
+      "element": "0x16",
+      "eIndex": 22,
+      "action": "End number for enhanced scans",
+      "description": "keep"
+    },
+    "0x17": {"element": "0x17", "eIndex": 23, "action": "Series plane", "description": "keep"},
+    "0x18": {"element": "0x18", "eIndex": 24, "action": "First Scan ras", "description": "keep"},
+    "0x19": {
+      "element": "0x19",
+      "eIndex": 25,
+      "action": "First Scan location",
+      "description": "keep"
+    },
+    "0x1a": {"element": "0x1a", "eIndex": 26, "action": "Last Scan ras", "description": "keep"},
+    "0x1b": {
+      "element": "0x1b",
+      "eIndex": 27,
+      "action": "Last Scan location",
+      "description": "keep"
+    },
+    "0x1e": {
+      "element": "0x1e",
+      "eIndex": 30,
+      "action": "Display Field of View",
+      "description": "keep"
+    },
+    "0x23": {"element": "0x23", "eIndex": 35, "action": "Table speed", "description": "keep"},
+    "0x24": {"element": "0x24", "eIndex": 36, "action": "Mid scan time", "description": "keep"},
+    "0x25": {"element": "0x25", "eIndex": 37, "action": "Mid scan flag", "description": "keep"},
+    "0x26": {
+      "element": "0x26",
+      "eIndex": 38,
+      "action": "Degrees of azimuth / Tube Azimuth (degree)",
+      "description": "keep"
+    },
+    "0x27": {
+      "element": "0x27",
+      "eIndex": 39,
+      "action": "Gantry period / Rotation Speed (msec)",
+      "description": "keep"
+    },
+    "0x2a": {"element": "0x2a", "eIndex": 42, "action": "x-ray On position", "description": "keep"},
+    "0x2b": {
+      "element": "0x2b",
+      "eIndex": 43,
+      "action": "x-ray Off position",
+      "description": "keep"
+    },
+    "0x2c": {
+      "element": "0x2c",
+      "eIndex": 44,
+      "action": "Number of triggers",
+      "description": "keep"
+    },
+    "0x2e": {
+      "element": "0x2e",
+      "eIndex": 46,
+      "action": "Angle of first view",
+      "description": "keep"
+    },
+    "0x2f": {"element": "0x2f", "eIndex": 47, "action": "Trigger frequency", "description": "keep"},
+    "0x39": {"element": "0x39", "eIndex": 57, "action": "Scan FOV type", "description": "keep"},
+    "0x40": {"element": "0x40", "eIndex": 64, "action": "Stat reconf flag", "description": "keep"},
+    "0x41": {"element": "0x41", "eIndex": 65, "action": "Compute type", "description": "keep"},
+    "0x42": {"element": "0x42", "eIndex": 66, "action": "Segment number", "description": "keep"},
+    "0x43": {
+      "element": "0x43",
+      "eIndex": 67,
+      "action": "Total segments requested",
+      "description": "keep"
+    },
+    "0x44": {"element": "0x44", "eIndex": 68, "action": "Interscan delay", "description": "keep"},
+    "0x47": {
+      "element": "0x47",
+      "eIndex": 71,
+      "action": "View compression factor",
+      "description": "keep"
+    },
+    "0x4a": {
+      "element": "0x4a",
+      "eIndex": 74,
+      "action": "Total no. of ref channels",
+      "description": "keep"
+    },
+    "0x4b": {
+      "element": "0x4b",
+      "eIndex": 75,
+      "action": "Data size for scan data",
+      "description": "keep"
+    },
+    "0x52": {
+      "element": "0x52",
+      "eIndex": 82,
+      "action": "Recon post proc. Flag",
+      "description": "keep"
+    },
+    "0x57": {"element": "0x57", "eIndex": 87, "action": "CT water number", "description": "keep"},
+    "0x58": {"element": "0x58", "eIndex": 88, "action": "CT bone number", "description": "keep"},
+    "0x5e": {
+      "element": "0x5e",
+      "eIndex": 94,
+      "action": "Number of channels (1...512)",
+      "description": "keep"
+    },
+    "0x5f": {
+      "element": "0x5f",
+      "eIndex": 95,
+      "action": "Increment between channels",
+      "description": "keep"
+    },
+    "0x60": {"element": "0x60", "eIndex": 96, "action": "Starting view", "description": "keep"},
+    "0x61": {"element": "0x61", "eIndex": 97, "action": "Number of views", "description": "keep"},
+    "0x62": {
+      "element": "0x62",
+      "eIndex": 98,
+      "action": "Increment between views",
+      "description": "keep"
+    },
+    "0x6a": {
+      "element": "0x6a",
+      "eIndex": 106,
+      "action": "Dependent on #views processed",
+      "description": "keep"
+    },
+    "0x6b": {
+      "element": "0x6b",
+      "eIndex": 107,
+      "action": "Field of view in detector cells",
+      "description": "keep"
+    },
+    "0x70": {
+      "element": "0x70",
+      "eIndex": 112,
+      "action": "value of back projection button",
+      "description": "keep"
+    },
+    "0x71": {
+      "element": "0x71",
+      "eIndex": 113,
+      "action": "Set if fatq estimates were used",
+      "description": "keep"
+    },
+    "0x72": {
+      "element": "0x72",
+      "eIndex": 114,
+      "action": "Z can avg over views",
+      "description": "keep"
+    },
+    "0x73": {
+      "element": "0x73",
+      "eIndex": 115,
+      "action": "Avg of left ref chans over views",
+      "description": "keep"
+    },
+    "0x74": {
+      "element": "0x74",
+      "eIndex": 116,
+      "action": "Max left chan over views",
+      "description": "keep"
+    },
+    "0x75": {
+      "element": "0x75",
+      "eIndex": 117,
+      "action": "Avg of right ref chans over views",
+      "description": "keep"
+    },
+    "0x76": {
+      "element": "0x76",
+      "eIndex": 118,
+      "action": "Max right chan over views",
+      "description": "keep"
+    },
+    "0xda": {
+      "element": "0xda",
+      "eIndex": 218,
+      "action": "Reference channel used",
+      "description": "keep"
+    },
+    "0xdb": {
+      "element": "0xdb",
+      "eIndex": 219,
+      "action": "Back projector coefficient",
+      "description": "keep"
+    },
+    "0xdc": {
+      "element": "0xdc",
+      "eIndex": 220,
+      "action": "Primary speed correction used",
+      "description": "keep"
+    },
+    "0xdd": {
+      "element": "0xdd",
+      "eIndex": 221,
+      "action": "Overrange correction used",
+      "description": "keep"
+    },
+    "0xde": {
+      "element": "0xde",
+      "eIndex": 222,
+      "action": "Dynamic Z alpha value",
+      "description": "keep"
+    },
+    "0x12": {"element": "0x12", "eIndex": 18, "action": "Last pseq", "description": "keep"},
+    "0x5a": {
+      "element": "0x5a",
+      "eIndex": 90,
+      "action": "Acquisition Duration",
+      "description": "keep"
+    },
+    "0x7d": {"element": "0x7d", "eIndex": 125, "action": "Second Echo", "description": "keep"},
+    "0x7e": {"element": "0x7e", "eIndex": 126, "action": "Number of Echos", "description": "keep"},
+    "0x7f": {"element": "0x7f", "eIndex": 127, "action": "Table delta", "description": "keep"},
+    "0x81": {"element": "0x81", "eIndex": 129, "action": "Contiguous", "description": "keep"},
+    "0x84": {"element": "0x84", "eIndex": 132, "action": "Peak SAR", "description": "keep"},
+    "0x85": {"element": "0x85", "eIndex": 133, "action": "Monitor SAR", "description": "keep"},
+    "0x87": {
+      "element": "0x87",
+      "eIndex": 135,
+      "action": "Cardiac Repetition Time",
+      "description": "keep"
+    },
+    "0x88": {
+      "element": "0x88",
+      "eIndex": 136,
+      "action": "Images per cardiac cycle",
+      "description": "keep"
+    },
+    "0x8a": {
+      "element": "0x8a",
+      "eIndex": 138,
+      "action": "Actual receive gain analog",
+      "description": "keep"
+    },
+    "0x8b": {
+      "element": "0x8b",
+      "eIndex": 139,
+      "action": "Actual receive gain digital",
+      "description": "keep"
+    },
+    "0x8d": {
+      "element": "0x8d",
+      "eIndex": 141,
+      "action": "Delay after trigger",
+      "description": "keep"
+    },
+    "0x8f": {"element": "0x8f", "eIndex": 143, "action": "Swappf", "description": "keep"},
+    "0x90": {"element": "0x90", "eIndex": 144, "action": "Pause interval", "description": "keep"},
+    "0x91": {"element": "0x91", "eIndex": 145, "action": "Pause time", "description": "keep"},
+    "0x92": {
+      "element": "0x92",
+      "eIndex": 146,
+      "action": "Slice offset on freq axis",
+      "description": "keep"
+    },
+    "0x93": {
+      "element": "0x93",
+      "eIndex": 147,
+      "action": "Auto prescan center freq",
+      "description": "keep"
+    },
+    "0x94": {
+      "element": "0x94",
+      "eIndex": 148,
+      "action": "Auto prescan transmit gain",
+      "description": "keep"
+    },
+    "0x95": {
+      "element": "0x95",
+      "eIndex": 149,
+      "action": "Auto prescan analog receiver gain",
+      "description": "keep"
+    },
+    "0x96": {
+      "element": "0x96",
+      "eIndex": 150,
+      "action": "Auto prescan digital receiver gain",
+      "description": "keep"
+    },
+    "0x97": {
+      "element": "0x97",
+      "eIndex": 151,
+      "action": "Bitmap defining CVs",
+      "description": "keep"
+    },
+    "0x98": {
+      "element": "0x98",
+      "eIndex": 152,
+      "action": "Center freq method",
+      "description": "keep"
+    },
+    "0x9b": {
+      "element": "0x9b",
+      "eIndex": 155,
+      "action": "Pulse sequence mode",
+      "description": "keep"
+    },
+    "0x9c": {
+      "element": "0x9c",
+      "eIndex": 156,
+      "action": "Pulse sequence name",
+      "description": "keep"
+    },
+    "0x9d": {
+      "element": "0x9d",
+      "eIndex": 157,
+      "action": "Pulse sequence date",
+      "description": "empty"
+    },
+    "0x9e": {
+      "element": "0x9e",
+      "eIndex": 158,
+      "action": "Internal Pulse sequence name",
+      "description": "keep"
+    },
+    "0x9f": {
+      "element": "0x9f",
+      "eIndex": 159,
+      "action": "Transmitting Coil Type",
+      "description": "keep"
+    },
+    "0xa0": {
+      "element": "0xa0",
+      "eIndex": 160,
+      "action": "Surface Coil Type",
+      "description": "keep"
+    },
+    "0xa1": {
+      "element": "0xa1",
+      "eIndex": 161,
+      "action": "Extremity coil flag",
+      "description": "keep"
+    },
+    "0xa2": {
+      "element": "0xa2",
+      "eIndex": 162,
+      "action": "Raw data run number",
+      "description": "keep"
+    },
+    "0xa3": {
+      "element": "0xa3",
+      "eIndex": 163,
+      "action": "Calibrated field strength",
+      "description": "keep"
+    },
+    "0xa4": {
+      "element": "0xa4",
+      "eIndex": 164,
+      "action": "SAT fat/water/bone",
+      "description": "keep"
+    },
+    "0xa5": {
+      "element": "0xa5",
+      "eIndex": 165,
+      "action": "Receive bandwidth",
+      "description": "keep"
+    },
+    "0xa7": {"element": "0xa7", "eIndex": 167, "action": "User data 0", "description": "keep"},
+    "0xa8": {"element": "0xa8", "eIndex": 168, "action": "User data 1", "description": "keep"},
+    "0xa9": {"element": "0xa9", "eIndex": 169, "action": "User data 2", "description": "keep"},
+    "0xaa": {"element": "0xaa", "eIndex": 170, "action": "User data 3", "description": "keep"},
+    "0xab": {"element": "0xab", "eIndex": 171, "action": "User data 4", "description": "keep"},
+    "0xac": {"element": "0xac", "eIndex": 172, "action": "User data 5", "description": "keep"},
+    "0xad": {"element": "0xad", "eIndex": 173, "action": "User data 6", "description": "keep"},
+    "0xae": {"element": "0xae", "eIndex": 174, "action": "User data 7", "description": "keep"},
+    "0xaf": {"element": "0xaf", "eIndex": 175, "action": "User data 8", "description": "keep"},
+    "0xb0": {"element": "0xb0", "eIndex": 176, "action": "User data 9", "description": "keep"},
+    "0xb1": {"element": "0xb1", "eIndex": 177, "action": "User data 10", "description": "keep"},
+    "0xb2": {"element": "0xb2", "eIndex": 178, "action": "User data 11", "description": "keep"},
+    "0xb3": {"element": "0xb3", "eIndex": 179, "action": "User data 12", "description": "keep"},
+    "0xb4": {"element": "0xb4", "eIndex": 180, "action": "User data 13", "description": "keep"},
+    "0xb5": {"element": "0xb5", "eIndex": 181, "action": "User data 14", "description": "keep"},
+    "0xb6": {"element": "0xb6", "eIndex": 182, "action": "User data 15", "description": "keep"},
+    "0xb7": {"element": "0xb7", "eIndex": 183, "action": "User data 16", "description": "keep"},
+    "0xb8": {"element": "0xb8", "eIndex": 184, "action": "User data 17", "description": "keep"},
+    "0xb9": {"element": "0xb9", "eIndex": 185, "action": "User data 18", "description": "keep"},
+    "0xba": {"element": "0xba", "eIndex": 186, "action": "User data 19", "description": "keep"},
+    "0xbb": {"element": "0xbb", "eIndex": 187, "action": "User data 20", "description": "keep"},
+    "0xbc": {"element": "0xbc", "eIndex": 188, "action": "User data 21", "description": "keep"},
+    "0xbd": {"element": "0xbd", "eIndex": 189, "action": "User data 22", "description": "keep"},
+    "0xbe": {"element": "0xbe", "eIndex": 190, "action": "Projection angle", "description": "keep"},
+    "0xc0": {
+      "element": "0xc0",
+      "eIndex": 192,
+      "action": "Saturation planes",
+      "description": "keep"
+    },
+    "0xc1": {
+      "element": "0xc1",
+      "eIndex": 193,
+      "action": "Surface coil intensity",
+      "description": "keep"
+    },
+    "0xc2": {"element": "0xc2", "eIndex": 194, "action": "SAT location R", "description": "keep"},
+    "0xc3": {"element": "0xc3", "eIndex": 195, "action": "SAT location L", "description": "keep"},
+    "0xc4": {"element": "0xc4", "eIndex": 196, "action": "SAT location A", "description": "keep"},
+    "0xc5": {"element": "0xc5", "eIndex": 197, "action": "SAT location P", "description": "keep"},
+    "0xc6": {"element": "0xc6", "eIndex": 198, "action": "SAT location H", "description": "keep"},
+    "0xc7": {"element": "0xc7", "eIndex": 199, "action": "SAT location F", "description": "keep"},
+    "0xc8": {
+      "element": "0xc8",
+      "eIndex": 200,
+      "action": "SAT thickness R/L",
+      "description": "keep"
+    },
+    "0xc9": {
+      "element": "0xc9",
+      "eIndex": 201,
+      "action": "SAT thickness A/P",
+      "description": "keep"
+    },
+    "0xca": {
+      "element": "0xca",
+      "eIndex": 202,
+      "action": "SAT thickness H/F",
+      "description": "keep"
+    },
+    "0xcb": {
+      "element": "0xcb",
+      "eIndex": 203,
+      "action": "Phase Contrast flow axis",
+      "description": "keep"
+    },
+    "0xcc": {
+      "element": "0xcc",
+      "eIndex": 204,
+      "action": "Velocity encoding",
+      "description": "keep"
+    },
+    "0xcd": {
+      "element": "0xcd",
+      "eIndex": 205,
+      "action": "Thickness disclaimer",
+      "description": "keep"
+    },
+    "0xce": {"element": "0xce", "eIndex": 206, "action": "Prescan type", "description": "keep"},
+    "0xcf": {"element": "0xcf", "eIndex": 207, "action": "Prescan status", "description": "keep"},
+    "0xd0": {"element": "0xd0", "eIndex": 208, "action": "Raw data type", "description": "keep"},
+    "0xd2": {
+      "element": "0xd2",
+      "eIndex": 210,
+      "action": "Projection Algorithm",
+      "description": "keep"
+    },
+    "0xd3": {
+      "element": "0xd3",
+      "eIndex": 211,
+      "action": "Projection Algorithm Name",
+      "description": "keep"
+    },
+    "0xd5": {"element": "0xd5", "eIndex": 213, "action": "Fractional echo", "description": "keep"},
+    "0xd6": {"element": "0xd6", "eIndex": 214, "action": "Prep pulse", "description": "keep"},
+    "0xd7": {
+      "element": "0xd7",
+      "eIndex": 215,
+      "action": "Cardiac phase number",
+      "description": "keep"
+    },
+    "0xd8": {
+      "element": "0xd8",
+      "eIndex": 216,
+      "action": "Variable echoflag",
+      "description": "keep"
+    },
+    "0xd9": {"element": "0xd9", "eIndex": 217, "action": "Concatenated SAT", "description": "keep"},
+    "0xdf": {"element": "0xdf", "eIndex": 223, "action": "User data 23", "description": "keep"},
+    "0xe0": {"element": "0xe0", "eIndex": 224, "action": "User data 24", "description": "keep"},
+    "0xe2": {
+      "element": "0xe2",
+      "eIndex": 226,
+      "action": "Velocity Encode Scale",
+      "description": "keep"
+    },
+    "0xf2": {"element": "0xf2", "eIndex": 242, "action": "Fast phases", "description": "keep"},
+    "0xf9": {"element": "0xf9", "eIndex": 249, "action": "Transmit gain", "description": "keep"}
+  },
+  "GEMS_RELA_01": {
+    "creator": "GEMS_RELA_01",
+    "groupNo": "0x0021",
+    "gIndex": 33,
+    "0x03": {
+      "element": "0x03",
+      "eIndex": 3,
+      "action": "Series from which prescribed",
+      "description": "keep"
+    },
+    "0x05": {
+      "element": "0x05",
+      "eIndex": 5,
+      "action": "Genesis Version - now",
+      "description": "keep"
+    },
+    "0x18": {
+      "element": "0x18",
+      "eIndex": 24,
+      "action": "Genesis version - Now",
+      "description": "keep"
+    },
+    "0x35": {
+      "element": "0x35",
+      "eIndex": 53,
+      "action": "Series from which prescribed",
+      "description": "keep"
+    },
+    "0x36": {
+      "element": "0x36",
+      "eIndex": 54,
+      "action": "Image from which prescribed",
+      "description": "keep"
+    },
+    "0x37": {"element": "0x37", "eIndex": 55, "action": "Screen format", "description": "keep"},
+    "0x4a": {
+      "element": "0x4a",
+      "eIndex": 74,
+      "action": "Anatomical reference for scout",
+      "description": "keep"
+    },
+    "0x90": {
+      "element": "0x90",
+      "eIndex": 144,
+      "action": "Tube focal spot position",
+      "description": "keep"
+    },
+    "0x91": {"element": "0x91", "eIndex": 145, "action": "Biopsy position", "description": "keep"},
+    "0x92": {
+      "element": "0x92",
+      "eIndex": 146,
+      "action": "Biopsy T location",
+      "description": "keep"
+    },
+    "0x93": {
+      "element": "0x93",
+      "eIndex": 147,
+      "action": "Biopsy ref location",
+      "description": "keep"
+    },
+    "0x20": {
+      "element": "0x20",
+      "eIndex": 32,
+      "action": "Table start location",
+      "description": "keep"
+    },
+    "0x4f": {
+      "element": "0x4f",
+      "eIndex": 79,
+      "action": "Locations in acquisition",
+      "description": "keep"
+    },
+    "0x50": {
+      "element": "0x50",
+      "eIndex": 80,
+      "action": "Graphically prescribed",
+      "description": "keep"
+    },
+    "0x51": {
+      "element": "0x51",
+      "eIndex": 81,
+      "action": "Rotation from source x rot",
+      "description": "keep"
+    },
+    "0x52": {
+      "element": "0x52",
+      "eIndex": 82,
+      "action": "Rotation from source y rot",
+      "description": "keep"
+    },
+    "0x53": {
+      "element": "0x53",
+      "eIndex": 83,
+      "action": "Rotation from source z rot",
+      "description": "keep"
+    },
+    "0x54": {"element": "0x54", "eIndex": 84, "action": "Image position", "description": "keep"},
+    "0x55": {"element": "0x55", "eIndex": 85, "action": "Image orientation", "description": "keep"},
+    "0x56": {"element": "0x56", "eIndex": 86, "action": "Num 3D slabs", "description": "keep"},
+    "0x57": {"element": "0x57", "eIndex": 87, "action": "Locs per 3D slabs", "description": "keep"},
+    "0x58": {"element": "0x58", "eIndex": 88, "action": "Overlaps", "description": "keep"},
+    "0x59": {
+      "element": "0x59",
+      "eIndex": 89,
+      "action": "Image Filtering 0.5/0.2T",
+      "description": "keep"
+    },
+    "0x5a": {
+      "element": "0x5a",
+      "eIndex": 90,
+      "action": "Diffusion direction",
+      "description": "keep"
+    },
+    "0x5b": {
+      "element": "0x5b",
+      "eIndex": 91,
+      "action": "lhtagfa / Tagging Flip Angle",
+      "description": "keep"
+    },
+    "0x5c": {
+      "element": "0x5c",
+      "eIndex": 92,
+      "action": "lhtagor / Tagging Orientation",
+      "description": "keep"
+    },
+    "0x5d": {
+      "element": "0x5d",
+      "eIndex": 93,
+      "action": "lhbspti / Tag Spacing",
+      "description": "keep"
+    },
+    "0x5e": {"element": "0x5e", "eIndex": 94, "action": "RTIA_timer", "description": "keep"},
+    "0x5f": {"element": "0x5f", "eIndex": 95, "action": "fps", "description": "keep"},
+    "0x81": {
+      "element": "0x81",
+      "eIndex": 129,
+      "action": "Auto window/level alpha",
+      "description": "keep"
+    },
+    "0x82": {
+      "element": "0x82",
+      "eIndex": 130,
+      "action": "Auto window/level beta",
+      "description": "keep"
+    },
+    "0x83": {
+      "element": "0x83",
+      "eIndex": 131,
+      "action": "Auto window/level window",
+      "description": "keep"
+    },
+    "0x84": {
+      "element": "0x84",
+      "eIndex": 132,
+      "action": "Auto window/level level",
+      "description": "keep"
+    }
+  },
+  "GEMS_STDY_01": {
+    "creator": "GEMS_STDY_01",
+    "groupNo": "0x0023",
+    "gIndex": 35,
+    "0x70": {
+      "element": "0x70",
+      "eIndex": 112,
+      "action": "Start time(secs) in first axial",
+      "description": "keep"
+    }
+  },
+  "GEMS_SERS_01": {
+    "creator": "GEMS_SERS_01",
+    "groupNo": "0x0025",
+    "gIndex": 37,
+    "0x06": {
+      "element": "0x06",
+      "eIndex": 6,
+      "action": "Last Pulse sequence used",
+      "description": "keep"
+    },
+    "0x07": {"element": "0x07", "eIndex": 7, "action": "Images in series", "description": "keep"},
+    "0x10": {"element": "0x10", "eIndex": 16, "action": "Landmark counter", "description": "keep"},
+    "0x11": {
+      "element": "0x11",
+      "eIndex": 17,
+      "action": "Number of acquisitions",
+      "description": "keep"
+    }
+  },
+  "GEMS_IMAG_01": {
+    "creator": "GEMS_IMAG_01",
+    "groupNo": "0x0027",
+    "gIndex": 39,
+    "0x10": {"element": "0x10", "eIndex": 16, "action": "Scout type", "description": "keep"},
+    "0x1c": {"element": "0x1c", "eIndex": 28, "action": "Vma mamp", "description": "keep"},
+    "0x1d": {"element": "0x1d", "eIndex": 29, "action": "Vma phase", "description": "keep"},
+    "0x1e": {"element": "0x1e", "eIndex": 30, "action": "Vma mod", "description": "keep"},
+    "0x1f": {
+      "element": "0x1f",
+      "eIndex": 31,
+      "action": "Vma clip / GE Noise Index * 10",
+      "description": "keep"
+    },
+    "0x20": {
+      "element": "0x20",
+      "eIndex": 32,
+      "action": "Smart scan  ON/OFF flag",
+      "description": "keep"
+    },
+    "0x30": {
+      "element": "0x30",
+      "eIndex": 48,
+      "action": "Foreign Image Revision",
+      "description": "keep"
+    },
+    "0x35": {"element": "0x35", "eIndex": 53, "action": "Plane Type", "description": "keep"},
+    "0x40": {
+      "element": "0x40",
+      "eIndex": 64,
+      "action": "RAS Letter of Image Location",
+      "description": "keep"
+    },
+    "0x41": {"element": "0x41", "eIndex": 65, "action": "Image Location", "description": "keep"},
+    "0x42": {
+      "element": "0x42",
+      "eIndex": 66,
+      "action": "Center R cood of plane image",
+      "description": "keep"
+    },
+    "0x43": {
+      "element": "0x43",
+      "eIndex": 67,
+      "action": "Center A cood of plane image",
+      "description": "keep"
+    },
+    "0x44": {
+      "element": "0x44",
+      "eIndex": 68,
+      "action": "Center S cood of plane image",
+      "description": "keep"
+    },
+    "0x45": {"element": "0x45", "eIndex": 69, "action": "Normal R coord", "description": "keep"},
+    "0x46": {"element": "0x46", "eIndex": 70, "action": "Normal A coord", "description": "keep"},
+    "0x47": {"element": "0x47", "eIndex": 71, "action": "Normal S coord", "description": "keep"},
+    "0x48": {
+      "element": "0x48",
+      "eIndex": 72,
+      "action": "R coord of top right corner",
+      "description": "keep"
+    },
+    "0x49": {
+      "element": "0x49",
+      "eIndex": 73,
+      "action": "A coord of top right corner",
+      "description": "keep"
+    },
+    "0x4a": {
+      "element": "0x4a",
+      "eIndex": 74,
+      "action": "S coord of top right corner",
+      "description": "keep"
+    },
+    "0x4b": {
+      "element": "0x4b",
+      "eIndex": 75,
+      "action": "R coord of bottom right corner",
+      "description": "keep"
+    },
+    "0x4c": {
+      "element": "0x4c",
+      "eIndex": 76,
+      "action": "A coord of bottom right corner",
+      "description": "keep"
+    },
+    "0x4d": {
+      "element": "0x4d",
+      "eIndex": 77,
+      "action": "S coord of bottom right corner",
+      "description": "keep"
+    },
+    "0x50": {
+      "element": "0x50",
+      "eIndex": 80,
+      "action": "Table start location",
+      "description": "keep"
+    },
+    "0x51": {
+      "element": "0x51",
+      "eIndex": 81,
+      "action": "Table end location",
+      "description": "keep"
+    },
+    "0x52": {
+      "element": "0x52",
+      "eIndex": 82,
+      "action": "RAS letter for side of image",
+      "description": "keep"
+    },
+    "0x53": {
+      "element": "0x53",
+      "eIndex": 83,
+      "action": "RAS letter for anterior/posterior",
+      "description": "keep"
+    },
+    "0x54": {
+      "element": "0x54",
+      "eIndex": 84,
+      "action": "RAS letter for scout start loc",
+      "description": "keep"
+    },
+    "0x55": {
+      "element": "0x55",
+      "eIndex": 85,
+      "action": "RAS letter for scout end loc",
+      "description": "keep"
+    },
+    "0x31": {"element": "0x31", "eIndex": 49, "action": "Imaging Mode", "description": "keep"},
+    "0x32": {"element": "0x32", "eIndex": 50, "action": "Pulse Sequence", "description": "keep"},
+    "0x33": {"element": "0x33", "eIndex": 51, "action": "Imaging Options", "description": "keep"},
+    "0x36": {"element": "0x36", "eIndex": 54, "action": "Oblique Plane", "description": "keep"},
+    "0x60": {
+      "element": "0x60",
+      "eIndex": 96,
+      "action": "Image dimension - X",
+      "description": "keep"
+    },
+    "0x61": {
+      "element": "0x61",
+      "eIndex": 97,
+      "action": "Image dimension - Y",
+      "description": "keep"
+    },
+    "0x62": {
+      "element": "0x62",
+      "eIndex": 98,
+      "action": "Number of Excitations",
+      "description": "keep"
+    }
+  },
+  "GEMS_CT_FLRO_01": {
+    "creator": "GEMS_CT_FLRO_01",
+    "groupNo": "0x0029",
+    "gIndex": 41,
+    "0x01": {"element": "0x01", "eIndex": 1, "action": "CT Int Fluoro", "description": "keep"},
+    "0x02": {
+      "element": "0x02",
+      "eIndex": 2,
+      "action": "Image Precise Location",
+      "description": "keep"
+    }
+  },
+  "GEMS_IMPS_01": {
+    "creator": "GEMS_IMPS_01",
+    "groupNo": "0x0029",
+    "gIndex": 41,
+    "0x04": {
+      "element": "0x04",
+      "eIndex": 4,
+      "action": "Lower range of Pixels1",
+      "description": "keep"
+    },
+    "0x05": {
+      "element": "0x05",
+      "eIndex": 5,
+      "action": "Lower range of Pixels1",
+      "description": "keep"
+    },
+    "0x06": {
+      "element": "0x06",
+      "eIndex": 6,
+      "action": "Lower range of Pixels1",
+      "description": "keep"
+    },
+    "0x07": {
+      "element": "0x07",
+      "eIndex": 7,
+      "action": "Lower range of Pixels1",
+      "description": "keep"
+    },
+    "0x08": {
+      "element": "0x08",
+      "eIndex": 8,
+      "action": "Lower range of Pixels1",
+      "description": "keep"
+    },
+    "0x09": {
+      "element": "0x09",
+      "eIndex": 9,
+      "action": "Lower range of Pixels1",
+      "description": "keep"
+    },
+    "0x0a": {
+      "element": "0x0a",
+      "eIndex": 10,
+      "action": "Lower range of Pixels1",
+      "description": "keep"
+    },
+    "0x26": {
+      "element": "0x26",
+      "eIndex": 38,
+      "action": "Version of Header Structure",
+      "description": "keep"
+    },
+    "0x34": {
+      "element": "0x34",
+      "eIndex": 52,
+      "action": "Advantage Comp Overflow",
+      "description": "keep"
+    },
+    "0x15": {
+      "element": "0x15",
+      "eIndex": 21,
+      "action": "Lower Range of Pixels1",
+      "description": "keep"
+    },
+    "0x16": {
+      "element": "0x16",
+      "eIndex": 22,
+      "action": "Upper Range of Pixels1",
+      "description": "keep"
+    },
+    "0x17": {
+      "element": "0x17",
+      "eIndex": 23,
+      "action": "Lower Range of Pixels2",
+      "description": "keep"
+    },
+    "0x18": {
+      "element": "0x18",
+      "eIndex": 24,
+      "action": "Upper Range of Pixels2",
+      "description": "keep"
+    },
+    "0x35": {
+      "element": "0x35",
+      "eIndex": 53,
+      "action": "Advantage Comp Underflow",
+      "description": "keep"
+    }
+  },
+  "GEMS_0039": {
+    "creator": "GEMS_0039",
+    "groupNo": "0x0039",
+    "gIndex": 57,
+    "0x95": {
+      "element": "0x95",
+      "eIndex": 149,
+      "action": "SR Application Name",
+      "description": "keep"
+    }
+  },
+  "GEMS_PARM_01": {
+    "creator": "GEMS_PARM_01",
+    "groupNo": "0x0043",
+    "gIndex": 67,
+    "0x10": {"element": "0x10", "eIndex": 16, "action": "Window value", "description": "keep"},
+    "0x11": {"element": "0x11", "eIndex": 17, "action": "Total input views", "description": "keep"},
+    "0x12": {"element": "0x12", "eIndex": 18, "action": "X-ray chain", "description": "keep"},
+    "0x13": {
+      "element": "0x13",
+      "eIndex": 19,
+      "action": "Decon kernal parameters",
+      "description": "keep"
+    },
+    "0x14": {
+      "element": "0x14",
+      "eIndex": 20,
+      "action": "Calibration parameters",
+      "description": "keep"
+    },
+    "0x15": {
+      "element": "0x15",
+      "eIndex": 21,
+      "action": "Total output views",
+      "description": "keep"
+    },
+    "0x16": {
+      "element": "0x16",
+      "eIndex": 22,
+      "action": "Number of overranges",
+      "description": "keep"
+    },
+    "0x17": {
+      "element": "0x17",
+      "eIndex": 23,
+      "action": "IBH image scale factors",
+      "description": "keep"
+    },
+    "0x18": {"element": "0x18", "eIndex": 24, "action": "BBH coefficients", "description": "keep"},
+    "0x19": {
+      "element": "0x19",
+      "eIndex": 25,
+      "action": "Number of BBH chains to blend",
+      "description": "keep"
+    },
+    "0x1a": {
+      "element": "0x1a",
+      "eIndex": 26,
+      "action": "Starting channel number",
+      "description": "keep"
+    },
+    "0x1b": {"element": "0x1b", "eIndex": 27, "action": "Ppscan parameters", "description": "keep"},
+    "0x1c": {
+      "element": "0x1c",
+      "eIndex": 28,
+      "action": "GE Image Integrity",
+      "description": "keep"
+    },
+    "0x1d": {"element": "0x1d", "eIndex": 29, "action": "Level value", "description": "keep"},
+    "0x1e": {"element": "0x1e", "eIndex": 30, "action": "Delta start time", "description": "keep"},
+    "0x1f": {
+      "element": "0x1f",
+      "eIndex": 31,
+      "action": "Max overranges in a view",
+      "description": "keep"
+    },
+    "0x20": {
+      "element": "0x20",
+      "eIndex": 32,
+      "action": "Avg overranges all views",
+      "description": "keep"
+    },
+    "0x21": {
+      "element": "0x21",
+      "eIndex": 33,
+      "action": "Corrected after glow terms",
+      "description": "keep"
+    },
+    "0x25": {
+      "element": "0x25",
+      "eIndex": 37,
+      "action": "Reference channels",
+      "description": "keep"
+    },
+    "0x26": {
+      "element": "0x26",
+      "eIndex": 38,
+      "action": "No views ref chans blocked",
+      "description": "keep"
+    },
+    "0x27": {"element": "0x27", "eIndex": 39, "action": "Scan pitch ratio", "description": "keep"},
+    "0x2b": {
+      "element": "0x2b",
+      "eIndex": 43,
+      "action": "Private Scan Options",
+      "description": "keep"
+    },
+    "0x31": {
+      "element": "0x31",
+      "eIndex": 49,
+      "action": "RA cord of target recon center",
+      "description": "keep"
+    },
+    "0x40": {
+      "element": "0x40",
+      "eIndex": 64,
+      "action": "Trigger on position",
+      "description": "keep"
+    },
+    "0x41": {
+      "element": "0x41",
+      "eIndex": 65,
+      "action": "Degree of rotation",
+      "description": "keep"
+    },
+    "0x42": {
+      "element": "0x42",
+      "eIndex": 66,
+      "action": "DAS trigger source",
+      "description": "keep"
+    },
+    "0x43": {"element": "0x43", "eIndex": 67, "action": "DAS fpa gain", "description": "keep"},
+    "0x44": {"element": "0x44", "eIndex": 68, "action": "DAS output source", "description": "keep"},
+    "0x45": {"element": "0x45", "eIndex": 69, "action": "DAS ad input", "description": "keep"},
+    "0x46": {"element": "0x46", "eIndex": 70, "action": "DAS cal mode", "description": "keep"},
+    "0x47": {"element": "0x47", "eIndex": 71, "action": "DAS cal frequency", "description": "keep"},
+    "0x48": {"element": "0x48", "eIndex": 72, "action": "DAS reg xm", "description": "keep"},
+    "0x49": {"element": "0x49", "eIndex": 73, "action": "DAS auto zero", "description": "keep"},
+    "0x4a": {
+      "element": "0x4a",
+      "eIndex": 74,
+      "action": "Starting channel of view",
+      "description": "keep"
+    },
+    "0x4b": {"element": "0x4b", "eIndex": 75, "action": "DAS xm pattern", "description": "keep"},
+    "0x4c": {"element": "0x4c", "eIndex": 76, "action": "TGGC trigger mode", "description": "keep"},
+    "0x4d": {
+      "element": "0x4d",
+      "eIndex": 77,
+      "action": "Start scan to X-ray on delay",
+      "description": "keep"
+    },
+    "0x4e": {
+      "element": "0x4e",
+      "eIndex": 78,
+      "action": "Duration of X-ray on",
+      "description": "keep"
+    },
+    "0x64": {"element": "0x64", "eIndex": 100, "action": "Recon filter", "description": "keep"},
+    "0x65": {
+      "element": "0x65",
+      "eIndex": 101,
+      "action": "Motion Correction Indicator",
+      "description": "keep"
+    },
+    "0x66": {
+      "element": "0x66",
+      "eIndex": 102,
+      "action": "Helical Correction Indicator",
+      "description": "keep"
+    },
+    "0x67": {
+      "element": "0x67",
+      "eIndex": 103,
+      "action": "IBO Correction Indicator",
+      "description": "keep"
+    },
+    "0x68": {
+      "element": "0x68",
+      "eIndex": 104,
+      "action": "Cross-talk Correction Indicator",
+      "description": "keep"
+    },
+    "0x69": {
+      "element": "0x69",
+      "eIndex": 105,
+      "action": "Q-cal Correction Indicator",
+      "description": "keep"
+    },
+    "0x6a": {
+      "element": "0x6a",
+      "eIndex": 106,
+      "action": "Afterglow Correction Indicator",
+      "description": "keep"
+    },
+    "0x6b": {
+      "element": "0x6b",
+      "eIndex": 107,
+      "action": "L-MDK Correction Indictor",
+      "description": "keep"
+    },
+    "0x6c": {"element": "0x6c", "eIndex": 108, "action": "Detector Row", "description": "keep"},
+    "0x6d": {
+      "element": "0x6d",
+      "eIndex": 109,
+      "action": "Area Size / Z-smoothing size",
+      "description": "keep"
+    },
+    "0x6e": {"element": "0x6e", "eIndex": 110, "action": "Auto mA Mode", "description": "keep"},
+    "0x01": {
+      "element": "0x01",
+      "eIndex": 1,
+      "action": "Bitmap of Prescan Options",
+      "description": "keep"
+    },
+    "0x02": {
+      "element": "0x02",
+      "eIndex": 2,
+      "action": "Gradient offset in X",
+      "description": "keep"
+    },
+    "0x03": {
+      "element": "0x03",
+      "eIndex": 3,
+      "action": "Gradient offset in Y",
+      "description": "keep"
+    },
+    "0x04": {
+      "element": "0x04",
+      "eIndex": 4,
+      "action": "Gradient offset in Z",
+      "description": "keep"
+    },
+    "0x05": {
+      "element": "0x05",
+      "eIndex": 5,
+      "action": "Img is original or unoriginal",
+      "description": "keep"
+    },
+    "0x06": {
+      "element": "0x06",
+      "eIndex": 6,
+      "action": "Number of EPI shots",
+      "description": "keep"
+    },
+    "0x07": {"element": "0x07", "eIndex": 7, "action": "Views per segment", "description": "keep"},
+    "0x08": {
+      "element": "0x08",
+      "eIndex": 8,
+      "action": "Respiratory rate, bpm",
+      "description": "keep"
+    },
+    "0x09": {
+      "element": "0x09",
+      "eIndex": 9,
+      "action": "Respiratory trigger point",
+      "description": "keep"
+    },
+    "0x0a": {
+      "element": "0x0a",
+      "eIndex": 10,
+      "action": "Type of receiver used",
+      "description": "keep"
+    },
+    "0x0b": {
+      "element": "0x0b",
+      "eIndex": 11,
+      "action": "dB/dt Peak rate of change of gradient field",
+      "description": "keep"
+    },
+    "0x0c": {
+      "element": "0x0c",
+      "eIndex": 12,
+      "action": "dB/dt Limits in units of percent",
+      "description": "keep"
+    },
+    "0x0d": {
+      "element": "0x0d",
+      "eIndex": 13,
+      "action": "PSD estimated limit",
+      "description": "keep"
+    },
+    "0x0e": {
+      "element": "0x0e",
+      "eIndex": 14,
+      "action": "PSD estimated limit in tesla per second",
+      "description": "keep"
+    },
+    "0x0f": {"element": "0x0f", "eIndex": 15, "action": "Saravghead", "description": "keep"},
+    "0x2c": {
+      "element": "0x2c",
+      "eIndex": 44,
+      "action": "Effective Echo spacing",
+      "description": "keep"
+    },
+    "0x2d": {
+      "element": "0x2d",
+      "eIndex": 45,
+      "action": "Filter Mode (string slop field",
+      "description": "keep"
+    },
+    "0x2e": {
+      "element": "0x2e",
+      "eIndex": 46,
+      "action": "string slop field 2",
+      "description": "keep"
+    },
+    "0x2f": {
+      "element": "0x2f",
+      "eIndex": 47,
+      "action": "Image Type (real, imag, phase, mag)",
+      "description": "keep"
+    },
+    "0x30": {"element": "0x30", "eIndex": 48, "action": "Vas collapse flag", "description": "keep"},
+    "0x32": {"element": "0x32", "eIndex": 50, "action": "Vas flags", "description": "keep"},
+    "0x33": {"element": "0x33", "eIndex": 51, "action": "Neg scan spacing", "description": "keep"},
+    "0x34": {"element": "0x34", "eIndex": 52, "action": "Offset frequency", "description": "keep"},
+    "0x35": {"element": "0x35", "eIndex": 53, "action": "User usage tag", "description": "keep"},
+    "0x36": {"element": "0x36", "eIndex": 54, "action": "User fill map MSW", "description": "keep"},
+    "0x37": {"element": "0x37", "eIndex": 55, "action": "User fill map LSW", "description": "keep"},
+    "0x38": {
+      "element": "0x38",
+      "eIndex": 56,
+      "action": "User data 25...User data 48 {User48=Effective Resolution for spiral)",
+      "description": "keep"
+    },
+    "0x39": {
+      "element": "0x39",
+      "eIndex": 57,
+      "action": "slop_int_6; slop_int_9; 6: b_value; 7: private imaging options 2; 8: ihtagging; 9: ihtagspc",
+      "description": "keep"
+    },
+    "0x60": {
+      "element": "0x60",
+      "eIndex": 96,
+      "action": "Slop_int_10; slop_int_17; 10: ihfcineim; 11: ihfcinent; 12: Reserved; 13: oprtarr; 14: averages; 15: Current Station #; 16: Total # of Stations; 17: private imaging options 3",
+      "description": "keep"
+    },
+    "0x61": {
+      "element": "0x61",
+      "eIndex": 97,
+      "action": "Scanner Study Entity UID",
+      "description": "hashuid"
+    },
+    "0x6f": {
+      "element": "0x6f",
+      "eIndex": 111,
+      "action": "Scanner Table Entry (single gradient coil systems only); Scanner table Entry + Gradient Coil Selected 1: table entry, 2: table swing angle, 3: table lateral offset, 4: gradient ",
+      "description": "keep"
+    },
+    "0x70": {"element": "0x70", "eIndex": 112, "action": "Paradigm Name", "description": "keep"},
+    "0x71": {
+      "element": "0x71",
+      "eIndex": 113,
+      "action": "Paradigm Description",
+      "description": "keep"
+    },
+    "0x73": {"element": "0x73", "eIndex": 115, "action": "Experiment Type", "description": "keep"},
+    "0x74": {"element": "0x74", "eIndex": 116, "action": "#rest volumes", "description": "keep"},
+    "0x75": {"element": "0x75", "eIndex": 117, "action": "#active volumes", "description": "keep"},
+    "0x76": {"element": "0x76", "eIndex": 118, "action": "#dummy scans", "description": "keep"},
+    "0x77": {"element": "0x77", "eIndex": 119, "action": "Application Name", "description": "keep"},
+    "0x78": {
+      "element": "0x78",
+      "eIndex": 120,
+      "action": "Application Version",
+      "description": "keep"
+    },
+    "0x79": {
+      "element": "0x79",
+      "eIndex": 121,
+      "action": "Slices Per Volume",
+      "description": "keep"
+    },
+    "0x7a": {
+      "element": "0x7a",
+      "eIndex": 122,
+      "action": "Expected Time Points",
+      "description": "keep"
+    },
+    "0x7b": {"element": "0x7b", "eIndex": 123, "action": "Regressor Values", "description": "keep"},
+    "0x7c": {
+      "element": "0x7c",
+      "eIndex": 124,
+      "action": "Delay after slice group",
+      "description": "keep"
+    },
+    "0x7d": {
+      "element": "0x7d",
+      "eIndex": 125,
+      "action": "Recon mode flag word",
+      "description": "keep"
+    },
+    "0x7e": {
+      "element": "0x7e",
+      "eIndex": 126,
+      "action": "PACC specific information",
+      "description": "keep"
+    },
+    "0x7f": {"element": "0x7f", "eIndex": 127, "action": "Grad Shim Values", "description": "keep"},
+    "0x80": {"element": "0x80", "eIndex": 128, "action": "Coil ID Name", "description": "keep"},
+    "0x81": {"element": "0x81", "eIndex": 129, "action": "GE Coil Name", "description": "keep"},
+    "0x82": {
+      "element": "0x82",
+      "eIndex": 130,
+      "action": "System Configuration Info",
+      "description": "keep"
+    },
+    "0x83": {"element": "0x83", "eIndex": 131, "action": "Asset R Factors", "description": "keep"},
+    "0x84": {
+      "element": "0x84",
+      "eIndex": 132,
+      "action": "Additional Asset data",
+      "description": "keep"
+    },
+    "0x87": {
+      "element": "0x87",
+      "eIndex": 135,
+      "action": "Software Versions Long",
+      "description": "keep"
+    },
+    "0x88": {
+      "element": "0x88",
+      "eIndex": 136,
+      "action": "PURE Acquistion Calibration Series UID",
+      "description": "hashuid"
+    },
+    "0x89": {
+      "element": "0x89",
+      "eIndex": 137,
+      "action": "Governing body, dB/dt, and SAR defintion",
+      "description": "keep"
+    },
+    "0x8a": {
+      "element": "0x8a",
+      "eIndex": 138,
+      "action": "Private In-plane Phase Encoding Direction",
+      "description": "keep"
+    },
+    "0x8c": {"element": "0x8c", "eIndex": 140, "action": "Voxel Location", "description": "keep"},
+    "0x8d": {
+      "element": "0x8d",
+      "eIndex": 141,
+      "action": "SAT Band Locations",
+      "description": "keep"
+    },
+    "0x8e": {
+      "element": "0x8e",
+      "eIndex": 142,
+      "action": "Spectro Prescan Values",
+      "description": "keep"
+    },
+    "0x8f": {
+      "element": "0x8f",
+      "eIndex": 143,
+      "action": "Spectro Parameters",
+      "description": "keep"
+    },
+    "0x90": {"element": "0x90", "eIndex": 144, "action": "SAR Definition", "description": "keep"},
+    "0x91": {"element": "0x91", "eIndex": 145, "action": "SAR Value", "description": "keep"},
+    "0x93": {
+      "element": "0x93",
+      "eIndex": 147,
+      "action": "Spectro Quantitation Values",
+      "description": "keep"
+    },
+    "0x94": {
+      "element": "0x94",
+      "eIndex": 148,
+      "action": "Spectro Ratio Values",
+      "description": "keep"
+    },
+    "0x95": {
+      "element": "0x95",
+      "eIndex": 149,
+      "action": "Prescan Reuse String",
+      "description": "keep"
+    },
+    "0x96": {
+      "element": "0x96",
+      "eIndex": 150,
+      "action": "Content Qualification",
+      "description": "keep"
+    },
+    "0x97": {
+      "element": "0x97",
+      "eIndex": 151,
+      "action": "Image Filtering Params",
+      "description": "keep"
+    },
+    "0x98": {
+      "element": "0x98",
+      "eIndex": 152,
+      "action": "ASSET Acquisition Calibration Series UID",
+      "description": "hashuid"
+    },
+    "0x99": {"element": "0x99", "eIndex": 153, "action": "Extended Options", "description": "keep"},
+    "0x9a": {
+      "element": "0x9a",
+      "eIndex": 154,
+      "action": "Rx Stack Indication",
+      "description": "keep"
+    },
+    "0x9b": {"element": "0x9b", "eIndex": 155, "action": "NPW factor", "description": "keep"},
+    "0xa2": {"element": "0xa2", "eIndex": 162, "action": "MEG Data", "description": "keep"},
+    "0xa3": {
+      "element": "0xa3",
+      "eIndex": 163,
+      "action": "ASL Contrast technique",
+      "description": "keep"
+    },
+    "0xa4": {
+      "element": "0xa4",
+      "eIndex": 164,
+      "action": "Detailed text for ASL labeling technique",
+      "description": "keep"
+    },
+    "0xa5": {
+      "element": "0xa5",
+      "eIndex": 165,
+      "action": "Duration of the label or control pulse",
+      "description": "keep"
+    },
+    "0xa6": {
+      "element": "0xa6",
+      "eIndex": 166,
+      "action": "Offset frequency value for FastB1map",
+      "description": "keep"
+    },
+    "0xa7": {
+      "element": "0xa7",
+      "eIndex": 167,
+      "action": "Motion Encoding Factor",
+      "description": "keep"
+    },
+    "0xa8": {
+      "element": "0xa8",
+      "eIndex": 168,
+      "action": "Dual Drive Mode, Amplitude Attentuation and Phase Offset",
+      "description": "keep"
+    }
+  },
+  "GEMS_HELIOS_01": {
+    "creator": "GEMS_HELIOS_01",
+    "groupNo": "0x0045",
+    "gIndex": 69,
+    "0x01": {
+      "element": "0x01",
+      "eIndex": 1,
+      "action": "Number of Macro Rows in Detector",
+      "description": "keep"
+    },
+    "0x02": {
+      "element": "0x02",
+      "eIndex": 2,
+      "action": "Macro width at ISO Center",
+      "description": "keep"
+    },
+    "0x03": {"element": "0x03", "eIndex": 3, "action": "DAS type", "description": "keep"},
+    "0x04": {"element": "0x04", "eIndex": 4, "action": "DAS gain", "description": "keep"},
+    "0x05": {"element": "0x05", "eIndex": 5, "action": "DAS Temprature", "description": "keep"},
+    "0x06": {"element": "0x06", "eIndex": 6, "action": "Table Direction", "description": "keep"},
+    "0x07": {"element": "0x07", "eIndex": 7, "action": "Z smoothing Factor", "description": "keep"},
+    "0x08": {
+      "element": "0x08",
+      "eIndex": 8,
+      "action": "View Weighting Mode",
+      "description": "keep"
+    },
+    "0x09": {"element": "0x09", "eIndex": 9, "action": "Sigma Row number", "description": "keep"},
+    "0x0a": {"element": "0x0a", "eIndex": 10, "action": "Minimum DAS value", "description": "keep"},
+    "0x0b": {
+      "element": "0x0b",
+      "eIndex": 11,
+      "action": "Maximum Offset Value",
+      "description": "keep"
+    },
+    "0x0c": {
+      "element": "0x0c",
+      "eIndex": 12,
+      "action": "Number of Views shifted",
+      "description": "keep"
+    },
+    "0x0d": {"element": "0x0d", "eIndex": 13, "action": "Z tracking Flag", "description": "keep"},
+    "0x0e": {"element": "0x0e", "eIndex": 14, "action": "Mean Z error", "description": "keep"},
+    "0x0f": {"element": "0x0f", "eIndex": 15, "action": "Z tracking Error", "description": "keep"},
+    "0x10": {"element": "0x10", "eIndex": 16, "action": "Start View 2A", "description": "keep"},
+    "0x11": {
+      "element": "0x11",
+      "eIndex": 17,
+      "action": "Number of Views 2A",
+      "description": "keep"
+    },
+    "0x12": {"element": "0x12", "eIndex": 18, "action": "Start View 1A", "description": "keep"},
+    "0x13": {"element": "0x13", "eIndex": 19, "action": "Sigma Mode", "description": "keep"},
+    "0x14": {
+      "element": "0x14",
+      "eIndex": 20,
+      "action": "Number of Views 1A",
+      "description": "keep"
+    },
+    "0x15": {"element": "0x15", "eIndex": 21, "action": "Start View 2B", "description": "keep"},
+    "0x16": {"element": "0x16", "eIndex": 22, "action": "Number Views 2B", "description": "keep"},
+    "0x17": {"element": "0x17", "eIndex": 23, "action": "Start View 1B", "description": "keep"},
+    "0x18": {
+      "element": "0x18",
+      "eIndex": 24,
+      "action": "Number of Views 1B",
+      "description": "keep"
+    },
+    "0x21": {"element": "0x21", "eIndex": 33, "action": "Iterbone Flag", "description": "keep"},
+    "0x22": {"element": "0x22", "eIndex": 34, "action": "Perisstaltic Flag", "description": "keep"},
+    "0x30": {
+      "element": "0x30",
+      "eIndex": 48,
+      "action": "CardiacReconAlgorithm",
+      "description": "keep"
+    },
+    "0x31": {
+      "element": "0x31",
+      "eIndex": 49,
+      "action": "AvgHeartRateForImage",
+      "description": "keep"
+    },
+    "0x32": {
+      "element": "0x32",
+      "eIndex": 50,
+      "action": "TemporalResolution",
+      "description": "keep"
+    },
+    "0x33": {"element": "0x33", "eIndex": 51, "action": "PctRpeakDelay", "description": "keep"},
+    "0x34": {
+      "element": "0x34",
+      "eIndex": 52,
+      "action": "ActualPctRpeakDelay",
+      "description": "keep"
+    },
+    "0x36": {
+      "element": "0x36",
+      "eIndex": 54,
+      "action": "EkgFullMaStartPhase",
+      "description": "keep"
+    },
+    "0x37": {"element": "0x37", "eIndex": 55, "action": "EkgFullMaEndPhase", "description": "keep"},
+    "0x38": {
+      "element": "0x38",
+      "eIndex": 56,
+      "action": "EkgModulationMaxMa",
+      "description": "keep"
+    },
+    "0x39": {
+      "element": "0x39",
+      "eIndex": 57,
+      "action": "EkgModulationMinMa",
+      "description": "keep"
+    },
+    "0x3b": {
+      "element": "0x3b",
+      "eIndex": 59,
+      "action": "Noise ReductionImageFilterDesc",
+      "description": "keep"
+    },
+    "0x3f": {"element": "0x3f", "eIndex": 63, "action": "RPeakTimeDelay", "description": "keep"},
+    "0x44": {
+      "element": "0x44",
+      "eIndex": 68,
+      "action": "ActualRPeakTimeDelay",
+      "description": "keep"
+    },
+    "0x45": {"element": "0x45", "eIndex": 69, "action": "CardiacScanOption", "description": "keep"}
+  },
+  "GEMS_CT_CARDIAC_001": {
+    "creator": "GEMS_CT_CARDIAC_001",
+    "groupNo": "0x0049",
+    "gIndex": 73,
+    "0x01": {
+      "element": "0x01",
+      "eIndex": 1,
+      "action": "CT Cardiac Sequence",
+      "description": "keep"
+    },
+    "0x0c": {"element": "0x0c", "eIndex": 12, "action": "RpeakTimeStamps", "description": "keep"},
+    "0x16": {"element": "0x16", "eIndex": 22, "action": "EkgGatingType", "description": "keep"},
+    "0x1b": {
+      "element": "0x1b",
+      "eIndex": 27,
+      "action": "EkgWave Time Off First Data Point",
+      "description": "keep"
+    },
+    "0x22": {"element": "0x22", "eIndex": 34, "action": "TemporalAlg", "description": "keep"},
+    "0x23": {"element": "0x23", "eIndex": 35, "action": "PhaseLocation", "description": "keep"},
+    "0x24": {"element": "0x24", "eIndex": 36, "action": "PreBlendedCycle1", "description": "keep"},
+    "0x25": {"element": "0x25", "eIndex": 37, "action": "PreBlendedCycle2", "description": "keep"},
+    "0x26": {"element": "0x26", "eIndex": 38, "action": "CompressionAlg", "description": "keep"}
+  },
+  "GEMS_HINO_CT_01": {
+    "creator": "GEMS_HINO_CT_01",
+    "groupNo": "0x004b",
+    "gIndex": 75,
+    "0x01": {"element": "0x01", "eIndex": 1, "action": "Beam Thickness", "description": "keep"},
+    "0x02": {"element": "0x02", "eIndex": 2, "action": "R Time", "description": "keep"},
+    "0x03": {"element": "0x03", "eIndex": 3, "action": "HBC number", "description": "keep"}
+  },
+  "GEHC_CT_ADVAPP_001": {
+    "creator": "GEHC_CT_ADVAPP_001",
+    "groupNo": "0x0053",
+    "gIndex": 83,
+    "0x01": {
+      "element": "0x01",
+      "eIndex": 1,
+      "action": "MultiEnergyNoiseRedBlendingFact",
+      "description": "keep"
+    },
+    "0x02": {
+      "element": "0x02",
+      "eIndex": 2,
+      "action": "MultiEnergyNoiseRedScaleFact",
+      "description": "keep"
+    },
+    "0x03": {
+      "element": "0x03",
+      "eIndex": 3,
+      "action": "MultiEnergyMDTransformEnergies",
+      "description": "keep"
+    },
+    "0x20": {"element": "0x20", "eIndex": 32, "action": "ShuttleFlag", "description": "keep"},
+    "0x21": {
+      "element": "0x21",
+      "eIndex": 33,
+      "action": "TableSpeedNotReachesTargetFlag",
+      "description": "keep"
+    },
+    "0x40": {
+      "element": "0x40",
+      "eIndex": 64,
+      "action": "IterativeReconAnnotation",
+      "description": "keep"
+    },
+    "0x41": {
+      "element": "0x41",
+      "eIndex": 65,
+      "action": "IterativeReconMode",
+      "description": "keep"
+    },
+    "0x42": {
+      "element": "0x42",
+      "eIndex": 66,
+      "action": "IterativeReconConfiguration",
+      "description": "keep"
+    },
+    "0x43": {
+      "element": "0x43",
+      "eIndex": 67,
+      "action": "IterativeReconLevel",
+      "description": "keep"
+    },
+    "0x60": {
+      "element": "0x60",
+      "eIndex": 96,
+      "action": "ReconFlipRotateAnno",
+      "description": "keep"
+    },
+    "0x61": {"element": "0x61", "eIndex": 97, "action": "HiResMod", "description": "keep"},
+    "0x62": {"element": "0x62", "eIndex": 98, "action": "RespiratoryFlag", "description": "keep"},
+    "0x63": {
+      "element": "0x63",
+      "eIndex": 99,
+      "action": "Image Position Patient Setting",
+      "description": "keep"
+    },
+    "0x64": {"element": "0x64", "eIndex": 100, "action": "Shutter Mode", "description": "keep"},
+    "0x65": {
+      "element": "0x65",
+      "eIndex": 101,
+      "action": "Shutter Mode Percent",
+      "description": "keep"
+    },
+    "0x66": {
+      "element": "0x66",
+      "eIndex": 102,
+      "action": "Image Browser Annotation",
+      "description": "remove"
+    },
+    "0x67": {
+      "element": "0x67",
+      "eIndex": 103,
+      "action": "Overlapped Recon Flag",
+      "description": "keep"
+    },
+    "0x68": {
+      "element": "0x68",
+      "eIndex": 104,
+      "action": "Row Number Annotation Flag",
+      "description": "keep"
+    },
+    "0x69": {
+      "element": "0x69",
+      "eIndex": 105,
+      "action": "Image Check Annotation",
+      "description": "remove"
+    },
+    "0x6a": {"element": "0x6a", "eIndex": 106, "action": "ODMFlag", "description": "keep"},
+    "0x6b": {
+      "element": "0x6b",
+      "eIndex": 107,
+      "action": "ODMReductionPercent",
+      "description": "keep"
+    },
+    "0x70": {
+      "element": "0x70",
+      "eIndex": 112,
+      "action": "MultiEnergySourceCount",
+      "description": "keep"
+    },
+    "0x71": {
+      "element": "0x71",
+      "eIndex": 113,
+      "action": "MultiEnergyScanType",
+      "description": "keep"
+    },
+    "0x72": {
+      "element": "0x72",
+      "eIndex": 114,
+      "action": "MultiEnergyReconType",
+      "description": "keep"
+    },
+    "0x73": {
+      "element": "0x73",
+      "eIndex": 115,
+      "action": "MultiEnergyImageType",
+      "description": "keep"
+    },
+    "0x74": {
+      "element": "0x74",
+      "eIndex": 116,
+      "action": "MultiEnergyMaterialType",
+      "description": "keep"
+    },
+    "0x75": {
+      "element": "0x75",
+      "eIndex": 117,
+      "action": "MonchromaticEnergy",
+      "description": "keep"
+    },
+    "0x76": {
+      "element": "0x76",
+      "eIndex": 118,
+      "action": "multiEnergyWeightedSubtractinWidth1",
+      "description": "keep"
+    },
+    "0x77": {
+      "element": "0x77",
+      "eIndex": 119,
+      "action": "MultiEnergyWeightedSubtractionWidth2",
+      "description": "keep"
+    },
+    "0x78": {
+      "element": "0x78",
+      "eIndex": 120,
+      "action": "MultiEnergyWeightedSubtractionType",
+      "description": "keep"
+    },
+    "0x79": {
+      "element": "0x79",
+      "eIndex": 121,
+      "action": "MultiEnergyAcqMethod",
+      "description": "keep"
+    },
+    "0x7a": {
+      "element": "0x7a",
+      "eIndex": 122,
+      "action": "MultiEnergyFeatAnnotName",
+      "description": "keep"
+    },
+    "0x7b": {
+      "element": "0x7b",
+      "eIndex": 123,
+      "action": "MultiEnergyNoiseReduced",
+      "description": "keep"
+    },
+    "0x7c": {
+      "element": "0x7c",
+      "eIndex": 124,
+      "action": "MultiEnergyNoiseReducdeMethod",
+      "description": "keep"
+    },
+    "0x7d": {
+      "element": "0x7d",
+      "eIndex": 125,
+      "action": "SubOptimalIQString",
+      "description": "keep"
+    },
+    "0x7e": {
+      "element": "0x7e",
+      "eIndex": 126,
+      "action": "MultiEnergyHighLowRatio",
+      "description": "keep"
+    },
+    "0x83": {"element": "0x83", "eIndex": 131, "action": "AnnotationmA", "description": "keep"},
+    "0x84": {
+      "element": "0x84",
+      "eIndex": 132,
+      "action": "CommandedFirstkVp",
+      "description": "keep"
+    },
+    "0x85": {"element": "0x85", "eIndex": 133, "action": "CommandedFirstmA", "description": "keep"},
+    "0x86": {
+      "element": "0x86",
+      "eIndex": 134,
+      "action": "CommandedSecondkVp",
+      "description": "keep"
+    },
+    "0x87": {
+      "element": "0x87",
+      "eIndex": 135,
+      "action": "CommandedSecondmA",
+      "description": "keep"
+    },
+    "0x88": {
+      "element": "0x88",
+      "eIndex": 136,
+      "action": "MultiEnergyKVAnnotName",
+      "description": "keep"
+    },
+    "0x89": {
+      "element": "0x89",
+      "eIndex": 137,
+      "action": "MultiEnergyKVUnitLabel",
+      "description": "keep"
+    },
+    "0x8a": {"element": "0x8a", "eIndex": 138, "action": "MaterialType#1", "description": "keep"},
+    "0x8b": {"element": "0x8b", "eIndex": 139, "action": "MaterialType#2", "description": "keep"},
+    "0x8c": {
+      "element": "0x8c",
+      "eIndex": 140,
+      "action": "GSIScanModePresent",
+      "description": "keep"
+    },
+    "0x8d": {"element": "0x8d", "eIndex": 141, "action": "MonoWindowLow", "description": "keep"},
+    "0x8e": {"element": "0x8e", "eIndex": 142, "action": "MonoWindoHigh", "description": "keep"},
+    "0x8f": {
+      "element": "0x8f",
+      "eIndex": 143,
+      "action": "MD1AttenuationCurve",
+      "description": "keep"
+    },
+    "0x92": {"element": "0x92", "eIndex": 146, "action": "MD1intercept", "description": "keep"},
+    "0x93": {"element": "0x93", "eIndex": 147, "action": "MD1slope", "description": "keep"},
+    "0x98": {"element": "0x98", "eIndex": 152, "action": "MD2intercept", "description": "keep"},
+    "0x99": {"element": "0x99", "eIndex": 153, "action": "MD2slope", "description": "keep"},
+    "0x9b": {
+      "element": "0x9b",
+      "eIndex": 155,
+      "action": "MD2attenuationCurve",
+      "description": "keep"
+    },
+    "0x9c": {"element": "0x9c", "eIndex": 156, "action": "GSIdataVersion", "description": "keep"},
+    "0x9d": {"element": "0x9d", "eIndex": 157, "action": "MARsAnnotation", "description": "keep"},
+    "0x9e": {
+      "element": "0x9e",
+      "eIndex": 158,
+      "action": "MultiEnergyNumNoiseRedPair",
+      "description": "keep"
+    },
+    "0x9f": {
+      "element": "0x9f",
+      "eIndex": 159,
+      "action": "MultiEnergyNoiseRedPairString",
+      "description": "keep"
+    }
+  },
+  "GE_YMS_NJ001": {
+    "creator": "GE_YMS_NJ001",
+    "groupNo": "0x0019",
+    "gIndex": 25,
+    "0x02": {"element": "0x02", "eIndex": 2, "action": "R Time", "description": "keep"},
+    "0x23": {"element": "0x23", "eIndex": 35, "action": "Table speed", "description": "keep"},
+    "0x24": {"element": "0x24", "eIndex": 36, "action": "Mid scan time", "description": "keep"},
+    "0x26": {"element": "0x26", "eIndex": 38, "action": "Tube Azimuth", "description": "keep"},
+    "0x27": {"element": "0x27", "eIndex": 39, "action": "Gantry Velocity", "description": "keep"},
+    "0x39": {
+      "element": "0x39",
+      "eIndex": 57,
+      "action": "Reconstruction Matrix",
+      "description": "keep"
+    },
+    "0x42": {"element": "0x42", "eIndex": 66, "action": "Segment number", "description": "keep"},
+    "0x43": {
+      "element": "0x43",
+      "eIndex": 67,
+      "action": "Motion Correction Indicator",
+      "description": "keep"
+    },
+    "0x10": {"element": "0x10", "eIndex": 16, "action": "Scout Type", "description": "keep"},
+    "0x50": {
+      "element": "0x50",
+      "eIndex": 80,
+      "action": "Cross-Talk Correction Indicator",
+      "description": "keep"
+    },
+    "0x51": {
+      "element": "0x51",
+      "eIndex": 81,
+      "action": "Q-Cal Correction Indicator",
+      "description": "keep"
+    },
+    "0x12": {"element": "0x12", "eIndex": 18, "action": "X-Ray Chain", "description": "keep"},
+    "0x1e": {
+      "element": "0x1e",
+      "eIndex": 30,
+      "action": "Delta start time (msec)",
+      "description": "keep"
+    },
+    "0x37": {"element": "0x37", "eIndex": 55, "action": "Gantry Type", "description": "keep"},
+    "0x40": {"element": "0x40", "eIndex": 64, "action": "Image Filter", "description": "keep"},
+    "0x41": {
+      "element": "0x41",
+      "eIndex": 65,
+      "action": "Prospective Addition Indicator",
+      "description": "keep"
+    },
+    "0x44": {
+      "element": "0x44",
+      "eIndex": 68,
+      "action": "Helical Correction Indicator",
+      "description": "keep"
+    },
+    "0x45": {
+      "element": "0x45",
+      "eIndex": 69,
+      "action": "Cine Correction Indicator",
+      "description": "keep"
+    },
+    "0x46": {
+      "element": "0x46",
+      "eIndex": 70,
+      "action": "IBO Correction Indicator",
+      "description": "keep"
+    },
+    "0x47": {
+      "element": "0x47",
+      "eIndex": 71,
+      "action": "BBH Correction Indicator",
+      "description": "keep"
+    },
+    "0x48": {
+      "element": "0x48",
+      "eIndex": 72,
+      "action": "Advanced Noise Reduction Indicator",
+      "description": "keep"
+    },
+    "0x49": {
+      "element": "0x49",
+      "eIndex": 73,
+      "action": "Scatter Correction Indicator",
+      "description": "keep"
+    },
+    "0x4a": {
+      "element": "0x4a",
+      "eIndex": 74,
+      "action": "Recon Center Coordinates",
+      "description": "keep"
+    },
+    "0x52": {
+      "element": "0x52",
+      "eIndex": 82,
+      "action": "Afterglow Correction Indicator",
+      "description": "keep"
+    },
+    "0x53": {
+      "element": "0x53",
+      "eIndex": 83,
+      "action": "Local Decon Correction Indicator",
+      "description": "keep"
+    },
+    "0x54": {
+      "element": "0x54",
+      "eIndex": 84,
+      "action": "Scan Start location",
+      "description": "keep"
+    },
+    "0x55": {"element": "0x55", "eIndex": 85, "action": "Scan End location", "description": "keep"},
+    "0x56": {"element": "0x56", "eIndex": 86, "action": "Detector Row", "description": "keep"},
+    "0x57": {"element": "0x57", "eIndex": 87, "action": "Tube Focus", "description": "keep"},
+    "0x01": {"element": "0x01", "eIndex": 1, "action": "Beam Thickness", "description": "keep"},
+    "0x03": {"element": "0x03", "eIndex": 3, "action": "HBC number", "description": "keep"}
+  },
+  "BrainWave: 1.2.840.113819.3": {
+    "creator": "BrainWave: 1.2.840.113819.3",
+    "groupNo": "0x2001",
+    "gIndex": 8193,
+    "0x10": {
+      "element": "0x10",
+      "eIndex": 16,
+      "action": "DICOM Implementation UID",
+      "description": "hashuid"
+    },
+    "0x11": {
+      "element": "0x11",
+      "eIndex": 17,
+      "action": "DICOM Implementation Version",
+      "description": "keep"
+    },
+    "0x12": {
+      "element": "0x12",
+      "eIndex": 18,
+      "action": "Within-DICOM-Implementation SOP Instance UID",
+      "description": "hashuid"
+    },
+    "0x13": {"element": "0x13", "eIndex": 19, "action": "Application Name", "description": "keep"},
+    "0x14": {
+      "element": "0x14",
+      "eIndex": 20,
+      "action": "Application Version",
+      "description": "keep"
+    },
+    "0x15": {
+      "element": "0x15",
+      "eIndex": 21,
+      "action": "Compatibility Version",
+      "description": "keep"
+    },
+    "0x31": {
+      "element": "0x31",
+      "eIndex": 49,
+      "action": "Number of Objects Averaged",
+      "description": "keep"
+    },
+    "0x41": {
+      "element": "0x41",
+      "eIndex": 65,
+      "action": "Number of Expected Time Points",
+      "description": "keep"
+    },
+    "0x51": {
+      "element": "0x51",
+      "eIndex": 81,
+      "action": "Number of Slices Per Volume",
+      "description": "keep"
+    },
+    "0x60": {"element": "0x60", "eIndex": 96, "action": "BW Image Type", "description": "keep"},
+    "0x61": {"element": "0x61", "eIndex": 97, "action": "Experiment Type", "description": "keep"},
+    "0x71": {"element": "0x71", "eIndex": 113, "action": "Paradigm UID", "description": "hashuid"},
+    "0x72": {"element": "0x72", "eIndex": 114, "action": "Paradigm Name", "description": "keep"},
+    "0x73": {
+      "element": "0x73",
+      "eIndex": 115,
+      "action": "Paradigm Description",
+      "description": "keep"
+    },
+    "0x81": {"element": "0x81", "eIndex": 129, "action": "Regressor Values", "description": "keep"},
+    "0x86": {
+      "element": "0x86",
+      "eIndex": 134,
+      "action": "Number of Degrees of Freedom",
+      "description": "keep"
+    },
+    "0x8a": {"element": "0x8a", "eIndex": 138, "action": "Z Threshold", "description": "keep"},
+    "0x8b": {"element": "0x8b", "eIndex": 139, "action": "p Threshold", "description": "keep"},
+    "0xa0": {
+      "element": "0xa0",
+      "eIndex": 160,
+      "action": "Motion Parameters",
+      "description": "keep"
+    },
+    "0xa1": {
+      "element": "0xa1",
+      "eIndex": 161,
+      "action": "Registration Parameters",
+      "description": "keep"
+    },
+    "0xa2": {"element": "0xa2", "eIndex": 162, "action": "Subject Data", "description": "keep"}
+  },
+  "GEMS_FUNCTOOL_01": {
+    "creator": "GEMS_FUNCTOOL_01",
+    "groupNo": "0x0051",
+    "gIndex": 81,
+    "0x01": {
+      "element": "0x01",
+      "eIndex": 1,
+      "action": "Functional Proc group name",
+      "description": "keep"
+    },
+    "0x02": {
+      "element": "0x02",
+      "eIndex": 2,
+      "action": "Functional Processing name",
+      "description": "keep"
+    },
+    "0x03": {
+      "element": "0x03",
+      "eIndex": 3,
+      "action": "Bias of Functional image",
+      "description": "keep"
+    },
+    "0x04": {
+      "element": "0x04",
+      "eIndex": 4,
+      "action": "Scale of Functional image",
+      "description": "keep"
+    },
+    "0x05": {
+      "element": "0x05",
+      "eIndex": 5,
+      "action": "Length of Parameters String",
+      "description": "keep"
+    },
+    "0x06": {
+      "element": "0x06",
+      "eIndex": 6,
+      "action": "Store Parameters String",
+      "description": "keep"
+    },
+    "0x07": {
+      "element": "0x07",
+      "eIndex": 7,
+      "action": "Functional Image version",
+      "description": "keep"
+    },
+    "0x08": {"element": "0x08", "eIndex": 8, "action": "Store Color ramp", "description": "keep"},
+    "0x09": {
+      "element": "0x09",
+      "eIndex": 9,
+      "action": "Store width of functional image",
+      "description": "keep"
+    },
+    "0x0a": {
+      "element": "0x0a",
+      "eIndex": 10,
+      "action": "Store level of functional image",
+      "description": "keep"
+    },
+    "0x0b": {
+      "element": "0x0b",
+      "eIndex": 11,
+      "action": "Store B-Value with functional image",
+      "description": "keep"
+    },
+    "0x0c": {"element": "0x0c", "eIndex": 12, "action": "Analysis Package", "description": "keep"}
+  },
+  "GEMS_PETD_01": {
+    "creator": "GEMS_PETD_01",
+    "groupNo": "0x0009",
+    "gIndex": 9,
+    "0x01": {"element": "0x01", "eIndex": 1, "action": "PET raw_data_type", "description": "keep"},
+    "0x03": {
+      "element": "0x03",
+      "eIndex": 3,
+      "action": "PET software_version",
+      "description": "keep"
+    },
+    "0x04": {
+      "element": "0x04",
+      "eIndex": 4,
+      "action": "PET cal_datetime ",
+      "description": "incrementdate"
+    },
+    "0x05": {"element": "0x05", "eIndex": 5, "action": "PET cal_type", "description": "keep"},
+    "0x06": {
+      "element": "0x06",
+      "eIndex": 6,
+      "action": "PET cal_description",
+      "description": "keep"
+    },
+    "0x07": {"element": "0x07", "eIndex": 7, "action": "PET cal_hardware", "description": "keep"},
+    "0x08": {"element": "0x08", "eIndex": 8, "action": "PET coefficients", "description": "keep"},
+    "0x09": {
+      "element": "0x09",
+      "eIndex": 9,
+      "action": "PET activity_factor_hr",
+      "description": "keep"
+    },
+    "0x0a": {
+      "element": "0x0a",
+      "eIndex": 10,
+      "action": "PET activity_factor_hs",
+      "description": "keep"
+    },
+    "0x0b": {
+      "element": "0x0b",
+      "eIndex": 11,
+      "action": "PET activity_factor_3d",
+      "description": "keep"
+    },
+    "0x0c": {"element": "0x0c", "eIndex": 12, "action": "PET scan_id", "description": "keep"},
+    "0x0d": {
+      "element": "0x0d",
+      "eIndex": 13,
+      "action": "PET scan_datetime",
+      "description": "incrementdate"
+    },
+    "0x0e": {
+      "element": "0x0e",
+      "eIndex": 14,
+      "action": "PET hosp_identifier",
+      "description": "keep"
+    },
+    "0x0f": {"element": "0x0f", "eIndex": 15, "action": "PET meas_activity", "description": "keep"},
+    "0x11": {
+      "element": "0x11",
+      "eIndex": 17,
+      "action": "PET axial_filter_3d",
+      "description": "keep"
+    },
+    "0x12": {
+      "element": "0x12",
+      "eIndex": 18,
+      "action": "PET axial_cutoff_3d",
+      "description": "keep"
+    },
+    "0x13": {"element": "0x13", "eIndex": 19, "action": "PET default_flag", "description": "keep"},
+    "0x14": {"element": "0x14", "eIndex": 20, "action": "PET archived", "description": "keep"},
+    "0x15": {
+      "element": "0x15",
+      "eIndex": 21,
+      "action": "PET wc_cal_rec_method",
+      "description": "keep"
+    },
+    "0x16": {
+      "element": "0x16",
+      "eIndex": 22,
+      "action": "PET activity_factor_2d",
+      "description": "keep"
+    },
+    "0x17": {"element": "0x17", "eIndex": 23, "action": "PET isotope", "description": "keep"},
+    "0x18": {
+      "element": "0x18",
+      "eIndex": 24,
+      "action": "WCC Image Set ID",
+      "description": "hashuid"
+    },
+    "0x19": {"element": "0x19", "eIndex": 25, "action": "PET scan_mode", "description": "keep"},
+    "0x1a": {
+      "element": "0x1a",
+      "eIndex": 26,
+      "action": "Physio Gating Type",
+      "description": "keep"
+    },
+    "0x1b": {
+      "element": "0x1b",
+      "eIndex": 27,
+      "action": "Total Number of Bins",
+      "description": "keep"
+    },
+    "0x1c": {"element": "0x1c", "eIndex": 28, "action": "% Phase Value", "description": "keep"},
+    "0x1d": {
+      "element": "0x1d",
+      "eIndex": 29,
+      "action": "Phase Matched Series",
+      "description": "keep"
+    },
+    "0x1e": {
+      "element": "0x1e",
+      "eIndex": 30,
+      "action": "CTAC Percent Value",
+      "description": "keep"
+    },
+    "0x1f": {
+      "element": "0x1f",
+      "eIndex": 31,
+      "action": "PET Recon Parameters Exists",
+      "description": "keep"
+    },
+    "0x20": {
+      "element": "0x20",
+      "eIndex": 32,
+      "action": "First Packet Number",
+      "description": "keep"
+    },
+    "0x21": {
+      "element": "0x21",
+      "eIndex": 33,
+      "action": "IR Loop Filter Ratio",
+      "description": "keep"
+    },
+    "0x22": {
+      "element": "0x22",
+      "eIndex": 34,
+      "action": "IR Loop Filter Correction",
+      "description": "keep"
+    },
+    "0x23": {"element": "0x23", "eIndex": 35, "action": "BP3d Filter FlagU", "description": "keep"},
+    "0x24": {
+      "element": "0x24",
+      "eIndex": 36,
+      "action": "BP3d Filter CutoffU",
+      "description": "keep"
+    },
+    "0x25": {
+      "element": "0x25",
+      "eIndex": 37,
+      "action": "BP3d Filter OrderU",
+      "description": "keep"
+    },
+    "0x26": {"element": "0x26", "eIndex": 38, "action": "BP3d Filter FlagV", "description": "keep"},
+    "0x27": {
+      "element": "0x27",
+      "eIndex": 39,
+      "action": "BP3d Filter OrderV",
+      "description": "keep"
+    },
+    "0x28": {
+      "element": "0x28",
+      "eIndex": 40,
+      "action": "BP3d Filter CutoffV",
+      "description": "keep"
+    },
+    "0x29": {"element": "0x29", "eIndex": 41, "action": "Decay Flag", "description": "keep"},
+    "0x2a": {"element": "0x2a", "eIndex": 42, "action": "PET collimation", "description": "keep"},
+    "0x2b": {"element": "0x2b", "eIndex": 43, "action": "PET scan_fov", "description": "keep"},
+    "0x2c": {"element": "0x2c", "eIndex": 44, "action": "PET axial_fov", "description": "keep"},
+    "0x2d": {
+      "element": "0x2d",
+      "eIndex": 45,
+      "action": "PET event_separation",
+      "description": "keep"
+    },
+    "0x2e": {
+      "element": "0x2e",
+      "eIndex": 46,
+      "action": "Image filter 3d flag",
+      "description": "keep"
+    },
+    "0x2f": {"element": "0x2f", "eIndex": 47, "action": "WCC Cal Flag", "description": "keep"},
+    "0x30": {
+      "element": "0x30",
+      "eIndex": 48,
+      "action": "Emission Scatter Flag",
+      "description": "keep"
+    },
+    "0x31": {"element": "0x31", "eIndex": 49, "action": "Recon Algorithm", "description": "keep"},
+    "0x32": {
+      "element": "0x32",
+      "eIndex": 50,
+      "action": "Normalization Flag",
+      "description": "keep"
+    },
+    "0x33": {
+      "element": "0x33",
+      "eIndex": 51,
+      "action": "Emission Deadtime Flag",
+      "description": "keep"
+    },
+    "0x34": {
+      "element": "0x34",
+      "eIndex": 52,
+      "action": "Emission Random Flag",
+      "description": "keep"
+    },
+    "0x35": {"element": "0x35", "eIndex": 53, "action": "Blank Scan Flag", "description": "keep"},
+    "0x36": {"element": "0x36", "eIndex": 54, "action": "PET tracer_name", "description": "keep"},
+    "0x37": {
+      "element": "0x37",
+      "eIndex": 55,
+      "action": "PET batch_description",
+      "description": "keep"
+    },
+    "0x38": {
+      "element": "0x38",
+      "eIndex": 56,
+      "action": "PET tracer_activity",
+      "description": "keep"
+    },
+    "0x39": {
+      "element": "0x39",
+      "eIndex": 57,
+      "action": "Event histogram Format",
+      "description": "keep"
+    },
+    "0x3a": {
+      "element": "0x3a",
+      "eIndex": 58,
+      "action": "Number of Detector Rows",
+      "description": "keep"
+    },
+    "0x3b": {
+      "element": "0x3b",
+      "eIndex": 59,
+      "action": "Number of Detector Columns",
+      "description": "keep"
+    },
+    "0x3c": {"element": "0x3c", "eIndex": 60, "action": "Recon Matrix Size", "description": "keep"},
+    "0x3d": {"element": "0x3d", "eIndex": 61, "action": "PET Sharp IR Flag", "description": "keep"},
+    "0x3e": {"element": "0x3e", "eIndex": 62, "action": "PET Scatter Limit", "description": "keep"},
+    "0x3f": {"element": "0x3f", "eIndex": 63, "action": "PET half_life", "description": "keep"},
+    "0x40": {
+      "element": "0x40",
+      "eIndex": 64,
+      "action": "PET positron_fraction",
+      "description": "keep"
+    },
+    "0x41": {
+      "element": "0x41",
+      "eIndex": 65,
+      "action": "PET source1_holder",
+      "description": "keep"
+    },
+    "0x42": {
+      "element": "0x42",
+      "eIndex": 66,
+      "action": "PET source1_activity",
+      "description": "keep"
+    },
+    "0x43": {
+      "element": "0x43",
+      "eIndex": 67,
+      "action": "PET source1_meas_dt",
+      "description": "incrementdate"
+    },
+    "0x44": {
+      "element": "0x44",
+      "eIndex": 68,
+      "action": "PET source1_radnuclide",
+      "description": "keep"
+    },
+    "0x45": {
+      "element": "0x45",
+      "eIndex": 69,
+      "action": "PET source1_half_life",
+      "description": "keep"
+    },
+    "0x46": {
+      "element": "0x46",
+      "eIndex": 70,
+      "action": "PET source2_holder",
+      "description": "keep"
+    },
+    "0x47": {
+      "element": "0x47",
+      "eIndex": 71,
+      "action": "PET source2_activity",
+      "description": "keep"
+    },
+    "0x48": {
+      "element": "0x48",
+      "eIndex": 72,
+      "action": "PET source2_meas_dt",
+      "description": "incrementdate"
+    },
+    "0x49": {
+      "element": "0x49",
+      "eIndex": 73,
+      "action": "PET source2_radnuclide",
+      "description": "keep"
+    },
+    "0x4a": {
+      "element": "0x4a",
+      "eIndex": 74,
+      "action": "PET source2_half_life",
+      "description": "keep"
+    },
+    "0x4b": {"element": "0x4b", "eIndex": 75, "action": "PET source_speed", "description": "keep"},
+    "0x4c": {
+      "element": "0x4c",
+      "eIndex": 76,
+      "action": "PET source_location",
+      "description": "keep"
+    },
+    "0x4d": {
+      "element": "0x4d",
+      "eIndex": 77,
+      "action": "PET emission_present",
+      "description": "keep"
+    },
+    "0x4e": {
+      "element": "0x4e",
+      "eIndex": 78,
+      "action": "PET lower_axial_acc",
+      "description": "keep"
+    },
+    "0x4f": {
+      "element": "0x4f",
+      "eIndex": 79,
+      "action": "PET upper_axial_acc",
+      "description": "keep"
+    },
+    "0x50": {
+      "element": "0x50",
+      "eIndex": 80,
+      "action": "PET lower_coinc_limit",
+      "description": "keep"
+    },
+    "0x51": {
+      "element": "0x51",
+      "eIndex": 81,
+      "action": "PET upper_coinc_limit",
+      "description": "keep"
+    },
+    "0x52": {
+      "element": "0x52",
+      "eIndex": 82,
+      "action": "PET coinc_delay_offset",
+      "description": "keep"
+    },
+    "0x53": {
+      "element": "0x53",
+      "eIndex": 83,
+      "action": "PET coinc_output_mode",
+      "description": "keep"
+    },
+    "0x54": {
+      "element": "0x54",
+      "eIndex": 84,
+      "action": "PET upper_energy_limit",
+      "description": "keep"
+    },
+    "0x55": {
+      "element": "0x55",
+      "eIndex": 85,
+      "action": "PET lower_energy_limit",
+      "description": "keep"
+    },
+    "0x56": {
+      "element": "0x56",
+      "eIndex": 86,
+      "action": "PET normal_cal_id",
+      "description": "hashuid"
+    },
+    "0x57": {
+      "element": "0x57",
+      "eIndex": 87,
+      "action": "PET normal_2d_cal_id",
+      "description": "hashuid"
+    },
+    "0x58": {
+      "element": "0x58",
+      "eIndex": 88,
+      "action": "PET blank_cal_id",
+      "description": "hashuid"
+    },
+    "0x59": {"element": "0x59", "eIndex": 89, "action": "PET wc_cal_id", "description": "hashuid"},
+    "0x5a": {"element": "0x5a", "eIndex": 90, "action": "PET derived", "description": "keep"},
+    "0x5b": {
+      "element": "0x5b",
+      "eIndex": 91,
+      "action": "PET contrast_agent",
+      "description": "keep"
+    },
+    "0x5c": {"element": "0x5c", "eIndex": 92, "action": "PET frame_id", "description": "hashuid"},
+    "0x5d": {"element": "0x5d", "eIndex": 93, "action": "PET scan_id", "description": "hashuid"},
+    "0x5e": {"element": "0x5e", "eIndex": 94, "action": "PET exam_id", "description": "hashuid"},
+    "0x60": {
+      "element": "0x60",
+      "eIndex": 96,
+      "action": "PET compatible_version",
+      "description": "keep"
+    },
+    "0x61": {
+      "element": "0x61",
+      "eIndex": 97,
+      "action": "PET software_version",
+      "description": "keep"
+    },
+    "0x62": {
+      "element": "0x62",
+      "eIndex": 98,
+      "action": "PET where_is_frame",
+      "description": "keep"
+    },
+    "0x63": {"element": "0x63", "eIndex": 99, "action": "PET frame_size", "description": "keep"},
+    "0x64": {"element": "0x64", "eIndex": 100, "action": "PET file_exists", "description": "keep"},
+    "0x65": {
+      "element": "0x65",
+      "eIndex": 101,
+      "action": "PET patient_entry",
+      "description": "keep"
+    },
+    "0x66": {"element": "0x66", "eIndex": 102, "action": "PET table_height", "description": "keep"},
+    "0x67": {
+      "element": "0x67",
+      "eIndex": 103,
+      "action": "PET table_z_position",
+      "description": "keep"
+    },
+    "0x68": {
+      "element": "0x68",
+      "eIndex": 104,
+      "action": "PET landmark_datetime",
+      "description": "incrementdate"
+    },
+    "0x69": {"element": "0x69", "eIndex": 105, "action": "PET slice_count", "description": "keep"},
+    "0x6a": {
+      "element": "0x6a",
+      "eIndex": 106,
+      "action": "PET start_location",
+      "description": "keep"
+    },
+    "0x6b": {"element": "0x6b", "eIndex": 107, "action": "PET acq_delay", "description": "keep"},
+    "0x6c": {
+      "element": "0x6c",
+      "eIndex": 108,
+      "action": "PET acq_start",
+      "description": "incrementdate"
+    },
+    "0x6d": {"element": "0x6d", "eIndex": 109, "action": "PET acq_duration", "description": "keep"},
+    "0x6e": {"element": "0x6e", "eIndex": 110, "action": "PET acq_bin_dur", "description": "keep"},
+    "0x6f": {
+      "element": "0x6f",
+      "eIndex": 111,
+      "action": "PET acq_bin_start",
+      "description": "keep"
+    },
+    "0x70": {
+      "element": "0x70",
+      "eIndex": 112,
+      "action": "PET actual_stop_cond",
+      "description": "keep"
+    },
+    "0x71": {
+      "element": "0x71",
+      "eIndex": 113,
+      "action": "PET total_prompts",
+      "description": "keep"
+    },
+    "0x72": {"element": "0x72", "eIndex": 114, "action": "PET total_delays", "description": "keep"},
+    "0x73": {"element": "0x73", "eIndex": 115, "action": "PET frame_valid", "description": "keep"},
+    "0x74": {
+      "element": "0x74",
+      "eIndex": 116,
+      "action": "PET validity_info",
+      "description": "keep"
+    },
+    "0x75": {"element": "0x75", "eIndex": 117, "action": "PET archived", "description": "keep"},
+    "0x76": {"element": "0x76", "eIndex": 118, "action": "PET compression", "description": "keep"},
+    "0x77": {
+      "element": "0x77",
+      "eIndex": 119,
+      "action": "PET uncompressed_size",
+      "description": "keep"
+    },
+    "0x78": {
+      "element": "0x78",
+      "eIndex": 120,
+      "action": "PET accum_bin_dur",
+      "description": "keep"
+    },
+    "0x79": {
+      "element": "0x79",
+      "eIndex": 121,
+      "action": "PET compatible_version",
+      "description": "keep"
+    },
+    "0x7a": {
+      "element": "0x7a",
+      "eIndex": 122,
+      "action": "PET software_version",
+      "description": "keep"
+    },
+    "0x7b": {
+      "element": "0x7b",
+      "eIndex": 123,
+      "action": "PET is_datetime",
+      "description": "incrementdate"
+    },
+    "0x7c": {"element": "0x7c", "eIndex": 124, "action": "PET is_source", "description": "keep"},
+    "0x7d": {"element": "0x7d", "eIndex": 125, "action": "PET is_contents", "description": "keep"},
+    "0x7e": {"element": "0x7e", "eIndex": 126, "action": "PET is_type", "description": "keep"},
+    "0x7f": {"element": "0x7f", "eIndex": 127, "action": "PET is_reference", "description": "keep"},
+    "0x80": {
+      "element": "0x80",
+      "eIndex": 128,
+      "action": "PET multi_patient",
+      "description": "keep"
+    },
+    "0x81": {
+      "element": "0x81",
+      "eIndex": 129,
+      "action": "PET number_of_normals",
+      "description": "keep"
+    },
+    "0x82": {
+      "element": "0x82",
+      "eIndex": 130,
+      "action": "PET color_map_id",
+      "description": "hashuid"
+    },
+    "0x83": {
+      "element": "0x83",
+      "eIndex": 131,
+      "action": "PET window_level_type",
+      "description": "keep"
+    },
+    "0x84": {"element": "0x84", "eIndex": 132, "action": "PET rotate", "description": "keep"},
+    "0x85": {"element": "0x85", "eIndex": 133, "action": "PET flip", "description": "keep"},
+    "0x86": {"element": "0x86", "eIndex": 134, "action": "PET zoom", "description": "keep"},
+    "0x87": {"element": "0x87", "eIndex": 135, "action": "PET pan_x", "description": "keep"},
+    "0x88": {"element": "0x88", "eIndex": 136, "action": "PET pan_y", "description": "keep"},
+    "0x89": {
+      "element": "0x89",
+      "eIndex": 137,
+      "action": "PET window_level_min",
+      "description": "keep"
+    },
+    "0x8a": {
+      "element": "0x8a",
+      "eIndex": 138,
+      "action": "PET window_level_max",
+      "description": "keep"
+    },
+    "0x8b": {"element": "0x8b", "eIndex": 139, "action": "PET recon_method", "description": "keep"},
+    "0x8c": {"element": "0x8c", "eIndex": 140, "action": "PET attenuation", "description": "keep"},
+    "0x8d": {
+      "element": "0x8d",
+      "eIndex": 141,
+      "action": "PET atten_coefficient",
+      "description": "keep"
+    },
+    "0x8e": {"element": "0x8e", "eIndex": 142, "action": "PET bp_filter", "description": "keep"},
+    "0x8f": {
+      "element": "0x8f",
+      "eIndex": 143,
+      "action": "PET bp_filter_cutoff",
+      "description": "keep"
+    },
+    "0x90": {
+      "element": "0x90",
+      "eIndex": 144,
+      "action": "PET bp_filter_order",
+      "description": "keep"
+    },
+    "0x91": {"element": "0x91", "eIndex": 145, "action": "PET bp_center_l", "description": "keep"},
+    "0x92": {"element": "0x92", "eIndex": 146, "action": "PET bp_center_p", "description": "keep"},
+    "0x93": {"element": "0x93", "eIndex": 147, "action": "PET atten_smooth", "description": "keep"},
+    "0x94": {
+      "element": "0x94",
+      "eIndex": 148,
+      "action": "PET atten_smooth_param",
+      "description": "keep"
+    },
+    "0x95": {
+      "element": "0x95",
+      "eIndex": 149,
+      "action": "PET angle_smooth_param",
+      "description": "keep"
+    },
+    "0x96": {
+      "element": "0x96",
+      "eIndex": 150,
+      "action": "PET wellcountercal_id",
+      "description": "hashuid"
+    },
+    "0x97": {
+      "element": "0x97",
+      "eIndex": 151,
+      "action": "PET trans_scan_id",
+      "description": "hashuid"
+    },
+    "0x98": {
+      "element": "0x98",
+      "eIndex": 152,
+      "action": "PET norm_cal_id",
+      "description": "hashuid"
+    },
+    "0x99": {
+      "element": "0x99",
+      "eIndex": 153,
+      "action": "PET blnk_cal_id",
+      "description": "hashuid"
+    },
+    "0x9a": {
+      "element": "0x9a",
+      "eIndex": 154,
+      "action": "PET cac_edge_threshold",
+      "description": "keep"
+    },
+    "0x9b": {
+      "element": "0x9b",
+      "eIndex": 155,
+      "action": "PET cac_skull_offset",
+      "description": "keep"
+    },
+    "0x9c": {
+      "element": "0x9c",
+      "eIndex": 156,
+      "action": "PET emiss_sub_id",
+      "description": "hashuid"
+    },
+    "0x9d": {
+      "element": "0x9d",
+      "eIndex": 157,
+      "action": "PET radial_filter_3d",
+      "description": "keep"
+    },
+    "0x9e": {
+      "element": "0x9e",
+      "eIndex": 158,
+      "action": "PET radial_cutoff_3d",
+      "description": "keep"
+    },
+    "0x9f": {
+      "element": "0x9f",
+      "eIndex": 159,
+      "action": "PET axial_filter_3d",
+      "description": "keep"
+    },
+    "0xa0": {
+      "element": "0xa0",
+      "eIndex": 160,
+      "action": "PET axial_cutoff_3d",
+      "description": "keep"
+    },
+    "0xa1": {"element": "0xa1", "eIndex": 161, "action": "PET axial_start", "description": "keep"},
+    "0xa2": {
+      "element": "0xa2",
+      "eIndex": 162,
+      "action": "PET axial_spacing",
+      "description": "keep"
+    },
+    "0xa3": {
+      "element": "0xa3",
+      "eIndex": 163,
+      "action": "PET axial_angles_used",
+      "description": "keep"
+    },
+    "0xa4": {
+      "element": "0xa4",
+      "eIndex": 164,
+      "action": "PET compatible_version",
+      "description": "keep"
+    },
+    "0xa5": {
+      "element": "0xa5",
+      "eIndex": 165,
+      "action": "PET software_version",
+      "description": "keep"
+    },
+    "0xa6": {"element": "0xa6", "eIndex": 166, "action": "PET slice_number", "description": "keep"},
+    "0xa7": {"element": "0xa7", "eIndex": 167, "action": "PET total_counts", "description": "keep"},
+    "0xa9": {
+      "element": "0xa9",
+      "eIndex": 169,
+      "action": "PET other_atts_size",
+      "description": "keep"
+    },
+    "0xaa": {"element": "0xaa", "eIndex": 170, "action": "PET archived", "description": "keep"},
+    "0xab": {"element": "0xab", "eIndex": 171, "action": "PET bp_center_x", "description": "keep"},
+    "0xac": {"element": "0xac", "eIndex": 172, "action": "PET bp_center_y", "description": "keep"},
+    "0xad": {
+      "element": "0xad",
+      "eIndex": 173,
+      "action": "PET trans_frame_id",
+      "description": "hashuid"
+    },
+    "0xae": {
+      "element": "0xae",
+      "eIndex": 174,
+      "action": "PET tpulse_frame_id",
+      "description": "hashuid"
+    },
+    "0xb1": {
+      "element": "0xb1",
+      "eIndex": 177,
+      "action": "PET profile_spacing",
+      "description": "keep"
+    },
+    "0xb2": {
+      "element": "0xb2",
+      "eIndex": 178,
+      "action": "PET ir_num_iterations",
+      "description": "keep"
+    },
+    "0xb3": {
+      "element": "0xb3",
+      "eIndex": 179,
+      "action": "PET ir_num_subsets",
+      "description": "keep"
+    },
+    "0xb4": {"element": "0xb4", "eIndex": 180, "action": "PET ir_recon_fov", "description": "keep"},
+    "0xb5": {
+      "element": "0xb5",
+      "eIndex": 181,
+      "action": "PET ir_corr_model",
+      "description": "keep"
+    },
+    "0xb6": {
+      "element": "0xb6",
+      "eIndex": 182,
+      "action": "PET ir_loop_filter",
+      "description": "keep"
+    },
+    "0xb7": {
+      "element": "0xb7",
+      "eIndex": 183,
+      "action": "PET ir_pre_filt_parm",
+      "description": "keep"
+    },
+    "0xb8": {
+      "element": "0xb8",
+      "eIndex": 184,
+      "action": "PET ir_loop_filt_parm",
+      "description": "keep"
+    },
+    "0xb9": {
+      "element": "0xb9",
+      "eIndex": 185,
+      "action": "PET response_filt_parm",
+      "description": "keep"
+    },
+    "0xba": {"element": "0xba", "eIndex": 186, "action": "PET post_filter", "description": "keep"},
+    "0xbb": {
+      "element": "0xbb",
+      "eIndex": 187,
+      "action": "PET post_filt_parm",
+      "description": "keep"
+    },
+    "0xbc": {
+      "element": "0xbc",
+      "eIndex": 188,
+      "action": "PET ir_regularize",
+      "description": "keep"
+    },
+    "0xbd": {
+      "element": "0xbd",
+      "eIndex": 189,
+      "action": "PET regularize_parm",
+      "description": "keep"
+    },
+    "0xbe": {"element": "0xbe", "eIndex": 190, "action": "PET ac_bp_filter", "description": "keep"},
+    "0xbf": {
+      "element": "0xbf",
+      "eIndex": 191,
+      "action": "PET ac_bp_filt_cut_off",
+      "description": "keep"
+    },
+    "0xc0": {
+      "element": "0xc0",
+      "eIndex": 192,
+      "action": "PET ac_bp_filt_order",
+      "description": "keep"
+    },
+    "0xc1": {
+      "element": "0xc1",
+      "eIndex": 193,
+      "action": "PET ac_img_smooth",
+      "description": "keep"
+    },
+    "0xc2": {
+      "element": "0xc2",
+      "eIndex": 194,
+      "action": "PET ac_img_smooth_parm",
+      "description": "keep"
+    },
+    "0xc3": {
+      "element": "0xc3",
+      "eIndex": 195,
+      "action": "PET scatter_method",
+      "description": "keep"
+    },
+    "0xc4": {
+      "element": "0xc4",
+      "eIndex": 196,
+      "action": "PET scatter_num_iter",
+      "description": "keep"
+    },
+    "0xc5": {"element": "0xc5", "eIndex": 197, "action": "PET scatter_parm", "description": "keep"},
+    "0xc6": {"element": "0xc6", "eIndex": 198, "action": "PET seg_qc_parm", "description": "keep"},
+    "0xc7": {"element": "0xc7", "eIndex": 199, "action": "PET overlap", "description": "keep"},
+    "0xc8": {
+      "element": "0xc8",
+      "eIndex": 200,
+      "action": "PET ovlp_frm_id",
+      "description": "hashuid"
+    },
+    "0xc9": {
+      "element": "0xc9",
+      "eIndex": 201,
+      "action": "PET ovlp_trans_frm_id",
+      "description": "hashuid"
+    },
+    "0xca": {
+      "element": "0xca",
+      "eIndex": 202,
+      "action": "PET ovlp_tpulse_frm_id",
+      "description": "hashuid"
+    },
+    "0xcb": {
+      "element": "0xcb",
+      "eIndex": 203,
+      "action": "PET vqc_x_axis_trans",
+      "description": "keep"
+    },
+    "0xcc": {
+      "element": "0xcc",
+      "eIndex": 204,
+      "action": "PET vqc_x_axis_tilt",
+      "description": "keep"
+    },
+    "0xcd": {
+      "element": "0xcd",
+      "eIndex": 205,
+      "action": "PET vqc_y_axis_trans",
+      "description": "keep"
+    },
+    "0xce": {
+      "element": "0xce",
+      "eIndex": 206,
+      "action": "PET vqc_y_axis_swivel",
+      "description": "keep"
+    },
+    "0xcf": {
+      "element": "0xcf",
+      "eIndex": 207,
+      "action": "PET vqc_z_axis_trans",
+      "description": "keep"
+    },
+    "0xd0": {
+      "element": "0xd0",
+      "eIndex": 208,
+      "action": "PET vqc_z_axis_roll",
+      "description": "keep"
+    },
+    "0xd1": {
+      "element": "0xd1",
+      "eIndex": 209,
+      "action": "PET ctac_conv_scale",
+      "description": "keep"
+    },
+    "0xd2": {
+      "element": "0xd2",
+      "eIndex": 210,
+      "action": "PET image_set_id",
+      "description": "hashuid"
+    },
+    "0xd3": {
+      "element": "0xd3",
+      "eIndex": 211,
+      "action": "PET constrast_route",
+      "description": "keep"
+    },
+    "0xd4": {
+      "element": "0xd4",
+      "eIndex": 212,
+      "action": "PET ctac_conv_scale",
+      "description": "keep"
+    },
+    "0xd5": {
+      "element": "0xd5",
+      "eIndex": 213,
+      "action": "PET loop_filter_parm",
+      "description": "keep"
+    },
+    "0xd6": {
+      "element": "0xd6",
+      "eIndex": 214,
+      "action": "PET image_one_loc",
+      "description": "keep"
+    },
+    "0xd7": {
+      "element": "0xd7",
+      "eIndex": 215,
+      "action": "PET image_index_loc",
+      "description": "keep"
+    },
+    "0xd8": {"element": "0xd8", "eIndex": 216, "action": "PET frame_number", "description": "keep"},
+    "0xd9": {
+      "element": "0xd9",
+      "eIndex": 217,
+      "action": "PET list_file_exists",
+      "description": "keep"
+    },
+    "0xda": {
+      "element": "0xda",
+      "eIndex": 218,
+      "action": "PET where_is_list_frame",
+      "description": "keep"
+    },
+    "0xdb": {
+      "element": "0xdb",
+      "eIndex": 219,
+      "action": "PET ir_z_filter_flag",
+      "description": "keep"
+    },
+    "0xdc": {
+      "element": "0xdc",
+      "eIndex": 220,
+      "action": "PET ir_z_filter_ratio",
+      "description": "keep"
+    },
+    "0xdd": {
+      "element": "0xdd",
+      "eIndex": 221,
+      "action": "PET num_of_rr_interval",
+      "description": "keep"
+    },
+    "0xde": {
+      "element": "0xde",
+      "eIndex": 222,
+      "action": "PET num_of_time_slots",
+      "description": "keep"
+    },
+    "0xdf": {
+      "element": "0xdf",
+      "eIndex": 223,
+      "action": "PET num_of_slices",
+      "description": "keep"
+    },
+    "0xe0": {
+      "element": "0xe0",
+      "eIndex": 224,
+      "action": "PET num_of_time_slices",
+      "description": "keep"
+    },
+    "0xe1": {
+      "element": "0xe1",
+      "eIndex": 225,
+      "action": "PET unlisted_scan",
+      "description": "keep"
+    },
+    "0xe2": {"element": "0xe2", "eIndex": 226, "action": "PET rest_stress", "description": "keep"},
+    "0xe3": {
+      "element": "0xe3",
+      "eIndex": 227,
+      "action": "PET phase percentage",
+      "description": "keep"
+    },
+    "0xe4": {"element": "0xe4", "eIndex": 228, "action": "Recon Protocol", "description": "keep"},
+    "0xe5": {"element": "0xe5", "eIndex": 229, "action": "PET left shift", "description": "keep"},
+    "0xe6": {
+      "element": "0xe6",
+      "eIndex": 230,
+      "action": "PET posterior shift",
+      "description": "keep"
+    },
+    "0xe7": {
+      "element": "0xe7",
+      "eIndex": 231,
+      "action": "PET superior shift",
+      "description": "keep"
+    },
+    "0xe8": {"element": "0xe8", "eIndex": 232, "action": "PET acq_bin_num", "description": "keep"},
+    "0xe9": {
+      "element": "0xe9",
+      "eIndex": 233,
+      "action": "PET acq_bin_dur_percent",
+      "description": "keep"
+    },
+    "0xea": {"element": "0xea", "eIndex": 234, "action": "3D Filter flag", "description": "keep"},
+    "0xeb": {"element": "0xeb", "eIndex": 235, "action": "3D Filter cutoff", "description": "keep"},
+    "0xec": {"element": "0xec", "eIndex": 236, "action": "3D Filter order", "description": "keep"},
+    "0xf0": {
+      "element": "0xf0",
+      "eIndex": 240,
+      "action": "Reformat group",
+      "description": "hashuid"
+    },
+    "0xf1": {"element": "0xf1", "eIndex": 241, "action": "PET prompt gamma", "description": "keep"},
+    "0xf2": {
+      "element": "0xf2",
+      "eIndex": 242,
+      "action": "PET tracerInjection_UID",
+      "description": "hashuid"
+    },
+    "0x02": {"element": "0x02", "eIndex": 2, "action": "PET raw_data_blob", "description": "keep"},
+    "0x10": {
+      "element": "0x10",
+      "eIndex": 16,
+      "action": "PET meas_datetime",
+      "description": "incrementdate"
+    }
+  },
+  "MMCPRIVATE": {
+    "creator": "MMCPRIVATE",
+    "groupNo": "0x0009",
+    "gIndex": 9,
+    "0x06": {
+      "element": "0x06",
+      "eIndex": 6,
+      "action": "ForegroundMagnification",
+      "description": "keep"
+    },
+    "0x0a": {"element": "0x0a", "eIndex": 10, "action": "RawData", "description": "keep"},
+    "0x0b": {"element": "0x0b", "eIndex": 11, "action": "RawDataMRInfo", "description": "keep"},
+    "0x0c": {"element": "0x0c", "eIndex": 12, "action": "NumberOfVoxels", "description": "keep"},
+    "0x0d": {"element": "0x0d", "eIndex": 13, "action": "MixingTime", "description": "keep"},
+    "0x16": {"element": "0x16", "eIndex": 22, "action": "LowOrderShim", "description": "keep"},
+    "0x26": {
+      "element": "0x26",
+      "eIndex": 38,
+      "action": "NaviMaxGatePosition",
+      "description": "keep"
+    },
+    "0x2b": {
+      "element": "0x2b",
+      "eIndex": 43,
+      "action": "NaviFinalGateWidth",
+      "description": "keep"
+    },
+    "0x2c": {
+      "element": "0x2c",
+      "eIndex": 44,
+      "action": "NaviInitialGatePosition",
+      "description": "keep"
+    },
+    "0x2d": {
+      "element": "0x2d",
+      "eIndex": 45,
+      "action": "NaviFinalGatePosition",
+      "description": "keep"
+    },
+    "0x2e": {
+      "element": "0x2e",
+      "eIndex": 46,
+      "action": "NaviAverageGatePosition",
+      "description": "keep"
+    },
+    "0x39": {"element": "0x39", "eIndex": 57, "action": "Gating", "description": "keep"},
+    "0x3a": {"element": "0x3a", "eIndex": 58, "action": "Plane", "description": "keep"},
+    "0x3b": {"element": "0x3b", "eIndex": 59, "action": "SequenceType", "description": "keep"},
+    "0x48": {
+      "element": "0x48",
+      "eIndex": 72,
+      "action": "RespiratoryMotionCompensationTechnique",
+      "description": "keep"
+    },
+    "0x4e": {
+      "element": "0x4e",
+      "eIndex": 78,
+      "action": "VolumeBasedCalculationTechnique",
+      "description": "keep"
+    },
+    "0x01": {
+      "element": "0x01",
+      "eIndex": 1,
+      "action": "ForegroundTransparency",
+      "description": "keep"
+    },
+    "0x02": {
+      "element": "0x02",
+      "eIndex": 2,
+      "action": "IsDisplayBackgroundImage",
+      "description": "keep"
+    },
+    "0x03": {
+      "element": "0x03",
+      "eIndex": 3,
+      "action": "ForegroundHorizontalShift",
+      "description": "keep"
+    },
+    "0x04": {
+      "element": "0x04",
+      "eIndex": 4,
+      "action": "ForegroundVerticalShift",
+      "description": "keep"
+    },
+    "0x05": {
+      "element": "0x05",
+      "eIndex": 5,
+      "action": "ForegroundRotationAngle",
+      "description": "keep"
+    },
+    "0x07": {"element": "0x07", "eIndex": 7, "action": "ApplicationData", "description": "keep"},
+    "0x08": {"element": "0x08", "eIndex": 8, "action": "SliceEncodeNumber", "description": "keep"},
+    "0x09": {"element": "0x09", "eIndex": 9, "action": "NsaNumber", "description": "keep"},
+    "0x0f": {"element": "0x0f", "eIndex": 15, "action": "ScanTime", "description": "keep"},
+    "0x10": {"element": "0x10", "eIndex": 16, "action": "NumPreSat", "description": "keep"},
+    "0x11": {"element": "0x11", "eIndex": 17, "action": "EchoAllocation", "description": "keep"},
+    "0x20": {"element": "0x20", "eIndex": 32, "action": "MultiEchoNumber", "description": "keep"},
+    "0x0e": {"element": "0x0e", "eIndex": 14, "action": "ADDiff", "description": "keep"},
+    "0x12": {"element": "0x12", "eIndex": 18, "action": "Voi1", "description": "keep"},
+    "0x13": {"element": "0x13", "eIndex": 19, "action": "Voi2", "description": "keep"},
+    "0x14": {"element": "0x14", "eIndex": 20, "action": "VoxelSize", "description": "keep"},
+    "0x15": {"element": "0x15", "eIndex": 21, "action": "FreqPoint", "description": "keep"},
+    "0x17": {"element": "0x17", "eIndex": 23, "action": "EccLevel", "description": "keep"},
+    "0x18": {"element": "0x18", "eIndex": 24, "action": "FwhmHz", "description": "keep"},
+    "0x1c": {
+      "element": "0x1c",
+      "eIndex": 28,
+      "action": "IsScalableWindowLevel",
+      "description": "keep"
+    },
+    "0x1d": {
+      "element": "0x1d",
+      "eIndex": 29,
+      "action": "ThreeDSettingLineAngle",
+      "description": "keep"
+    },
+    "0x1e": {"element": "0x1e", "eIndex": 30, "action": "MPGTotalAxis", "description": "keep"},
+    "0x1f": {"element": "0x1f", "eIndex": 31, "action": "MPGAxisNumber", "description": "keep"},
+    "0x21": {
+      "element": "0x21",
+      "eIndex": 33,
+      "action": "NaviAverageGateWidth",
+      "description": "keep"
+    },
+    "0x22": {
+      "element": "0x22",
+      "eIndex": 34,
+      "action": "ShimCompensateValue",
+      "description": "keep"
+    },
+    "0x23": {"element": "0x23", "eIndex": 35, "action": "GCOffset", "description": "keep"},
+    "0x24": {"element": "0x24", "eIndex": 36, "action": "NaviMaxGateWidth", "description": "keep"},
+    "0x25": {"element": "0x25", "eIndex": 37, "action": "NaviMinGateWidth", "description": "keep"},
+    "0x27": {
+      "element": "0x27",
+      "eIndex": 39,
+      "action": "NaviMinGatePosition",
+      "description": "keep"
+    },
+    "0x28": {"element": "0x28", "eIndex": 40, "action": "TimeDuration", "description": "keep"},
+    "0x29": {"element": "0x29", "eIndex": 41, "action": "TablePosition", "description": "keep"},
+    "0x2a": {
+      "element": "0x2a",
+      "eIndex": 42,
+      "action": "NaviInitialGateWidth",
+      "description": "keep"
+    },
+    "0x30": {"element": "0x30", "eIndex": 48, "action": "DiffusionBValue", "description": "keep"},
+    "0x31": {
+      "element": "0x31",
+      "eIndex": 49,
+      "action": "SharedFunctionalGroupsSequence",
+      "description": "keep"
+    },
+    "0x32": {
+      "element": "0x32",
+      "eIndex": 50,
+      "action": "PerFrameFunctionalGroupsSequence",
+      "description": "keep"
+    },
+    "0x33": {
+      "element": "0x33",
+      "eIndex": 51,
+      "action": "LossyImageCompressionRatio",
+      "description": "keep"
+    },
+    "0x34": {
+      "element": "0x34",
+      "eIndex": 52,
+      "action": "InstanceCreatorUID",
+      "description": "hashuid"
+    },
+    "0x35": {
+      "element": "0x35",
+      "eIndex": 53,
+      "action": "RelatedGeneralSOPClassUID",
+      "description": "keep"
+    },
+    "0x36": {
+      "element": "0x36",
+      "eIndex": 54,
+      "action": "OriginalSpecializedSOPClassUID",
+      "description": "keep"
+    },
+    "0x3c": {
+      "element": "0x3c",
+      "eIndex": 60,
+      "action": "ConcatenationFrameOffsetNumber",
+      "description": "keep"
+    },
+    "0x3d": {
+      "element": "0x3d",
+      "eIndex": 61,
+      "action": "RepresentativeFrameNumber",
+      "description": "keep"
+    },
+    "0x3e": {
+      "element": "0x3e",
+      "eIndex": 62,
+      "action": "ConcatenationUID",
+      "description": "hashuid"
+    },
+    "0x3f": {
+      "element": "0x3f",
+      "eIndex": 63,
+      "action": "InConcatenationNumber",
+      "description": "keep"
+    },
+    "0x40": {
+      "element": "0x40",
+      "eIndex": 64,
+      "action": "CardiacSynchronizationTechnique",
+      "description": "keep"
+    },
+    "0x41": {
+      "element": "0x41",
+      "eIndex": 65,
+      "action": "CardiacSignalSource",
+      "description": "keep"
+    },
+    "0x42": {
+      "element": "0x42",
+      "eIndex": 66,
+      "action": "CardiacRRIntervalSpecified",
+      "description": "keep"
+    },
+    "0x43": {
+      "element": "0x43",
+      "eIndex": 67,
+      "action": "CardiacBeatRejectionTechnique",
+      "description": "keep"
+    },
+    "0x44": {"element": "0x44", "eIndex": 68, "action": "LowRRValue", "description": "keep"},
+    "0x45": {"element": "0x45", "eIndex": 69, "action": "HighRRValue", "description": "keep"},
+    "0x46": {"element": "0x46", "eIndex": 70, "action": "IntervalsAcquired", "description": "keep"},
+    "0x47": {"element": "0x47", "eIndex": 71, "action": "IntervalsRejected", "description": "keep"},
+    "0x49": {
+      "element": "0x49",
+      "eIndex": 73,
+      "action": "RespiratorySignalSource",
+      "description": "keep"
+    },
+    "0x4a": {
+      "element": "0x4a",
+      "eIndex": 74,
+      "action": "BulkMotionCompensationTechnique",
+      "description": "keep"
+    },
+    "0x4b": {
+      "element": "0x4b",
+      "eIndex": 75,
+      "action": "BulkMotionSignalSource",
+      "description": "keep"
+    },
+    "0x4c": {"element": "0x4c", "eIndex": 76, "action": "PixelPresentation", "description": "keep"},
+    "0x4d": {
+      "element": "0x4d",
+      "eIndex": 77,
+      "action": "VolumetricProperties",
+      "description": "keep"
+    },
+    "0x50": {
+      "element": "0x50",
+      "eIndex": 80,
+      "action": "ModalityLUTSequence",
+      "description": "keep"
+    },
+    "0x51": {"element": "0x51", "eIndex": 81, "action": "LUTDescriptor", "description": "keep"},
+    "0x52": {"element": "0x52", "eIndex": 82, "action": "LUTExplanation", "description": "keep"},
+    "0x53": {"element": "0x53", "eIndex": 83, "action": "LUTData", "description": "keep"},
+    "0x54": {
+      "element": "0x54",
+      "eIndex": 84,
+      "action": "PresentationLUTShape",
+      "description": "keep"
+    },
+    "0x55": {
+      "element": "0x55",
+      "eIndex": 85,
+      "action": "FrameAnatomySequence",
+      "description": "keep"
+    },
+    "0x56": {"element": "0x56", "eIndex": 86, "action": "FrameLaterality", "description": "keep"},
+    "0x57": {
+      "element": "0x57",
+      "eIndex": 87,
+      "action": "AnatomicRegionSequence",
+      "description": "keep"
+    },
+    "0x58": {
+      "element": "0x58",
+      "eIndex": 88,
+      "action": "AnatomicRegionCodeValue",
+      "description": "keep"
+    },
+    "0x59": {
+      "element": "0x59",
+      "eIndex": 89,
+      "action": "AnatomicRegionCodingSchemeDesignator",
+      "description": "keep"
+    },
+    "0x5a": {
+      "element": "0x5a",
+      "eIndex": 90,
+      "action": "AnatomicRegionCodingSchemeVersion",
+      "description": "keep"
+    },
+    "0x5b": {
+      "element": "0x5b",
+      "eIndex": 91,
+      "action": "AnatomicRegionCodeMeaning",
+      "description": "keep"
+    },
+    "0x5c": {
+      "element": "0x5c",
+      "eIndex": 92,
+      "action": "PixelValueTransformationSequence",
+      "description": "keep"
+    },
+    "0x5d": {"element": "0x5d", "eIndex": 93, "action": "RescaleType", "description": "keep"},
+    "0x5e": {
+      "element": "0x5e",
+      "eIndex": 94,
+      "action": "CardiacTriggerSequence",
+      "description": "keep"
+    },
+    "0x5f": {"element": "0x5f", "eIndex": 95, "action": "TriggerDelayTime", "description": "keep"},
+    "0x60": {
+      "element": "0x60",
+      "eIndex": 96,
+      "action": "FrameVOILUTSequence",
+      "description": "keep"
+    },
+    "0x61": {
+      "element": "0x61",
+      "eIndex": 97,
+      "action": "WindowCenterAndWidthExplanation",
+      "description": "keep"
+    },
+    "0x62": {
+      "element": "0x62",
+      "eIndex": 98,
+      "action": "AcquisitionContrast",
+      "description": "keep"
+    },
+    "0x63": {
+      "element": "0x63",
+      "eIndex": 99,
+      "action": "MRModifierSequence",
+      "description": "keep"
+    },
+    "0x64": {
+      "element": "0x64",
+      "eIndex": 100,
+      "action": "ParallelAcquisitionTechnic",
+      "description": "keep"
+    },
+    "0x65": {
+      "element": "0x65",
+      "eIndex": 101,
+      "action": "ParallelReductionFactorSecIn",
+      "description": "keep"
+    },
+    "0x66": {
+      "element": "0x66",
+      "eIndex": 102,
+      "action": "InversionRecovery",
+      "description": "keep"
+    },
+    "0x67": {"element": "0x67", "eIndex": 103, "action": "FlowCompensation", "description": "keep"},
+    "0x68": {
+      "element": "0x68",
+      "eIndex": 104,
+      "action": "FlowCompensationDirection",
+      "description": "keep"
+    },
+    "0x69": {
+      "element": "0x69",
+      "eIndex": 105,
+      "action": "SpatialPreSaturation",
+      "description": "keep"
+    },
+    "0x6a": {"element": "0x6a", "eIndex": 106, "action": "PartialFourier", "description": "keep"},
+    "0x6b": {
+      "element": "0x6b",
+      "eIndex": 107,
+      "action": "PartialFourierDirection",
+      "description": "keep"
+    },
+    "0x6c": {"element": "0x6c", "eIndex": 108, "action": "ResonantNucleus", "description": "keep"},
+    "0x6d": {"element": "0x6d", "eIndex": 109, "action": "KSpaceFiltering", "description": "keep"},
+    "0x6e": {
+      "element": "0x6e",
+      "eIndex": 110,
+      "action": "ApplicableSafetyStandardAgency",
+      "description": "keep"
+    },
+    "0x6f": {
+      "element": "0x6f",
+      "eIndex": 111,
+      "action": "ApplicableSafetyStandardDescription",
+      "description": "keep"
+    },
+    "0x70": {
+      "element": "0x70",
+      "eIndex": 112,
+      "action": "MRReceiveCoilSequence",
+      "description": "keep"
+    },
+    "0x71": {
+      "element": "0x71",
+      "eIndex": 113,
+      "action": "ReceiveCoilManufacturerName",
+      "description": "keep"
+    },
+    "0x72": {"element": "0x72", "eIndex": 114, "action": "ReceiveCoilType", "description": "keep"},
+    "0x73": {
+      "element": "0x73",
+      "eIndex": 115,
+      "action": "QuadratureReceiveCoil",
+      "description": "keep"
+    },
+    "0x74": {
+      "element": "0x74",
+      "eIndex": 116,
+      "action": "MultiCoilConfiguration",
+      "description": "keep"
+    },
+    "0x75": {
+      "element": "0x75",
+      "eIndex": 117,
+      "action": "ComplexImageComponent",
+      "description": "keep"
+    },
+    "0x76": {
+      "element": "0x76",
+      "eIndex": 118,
+      "action": "PulseSequenceName",
+      "description": "keep"
+    },
+    "0x77": {
+      "element": "0x77",
+      "eIndex": 119,
+      "action": "EchoPulseSequence",
+      "description": "keep"
+    },
+    "0x78": {"element": "0x78", "eIndex": 120, "action": "MultipleSpinEcho", "description": "keep"},
+    "0x79": {
+      "element": "0x79",
+      "eIndex": 121,
+      "action": "MultiPlanarExcitation",
+      "description": "keep"
+    },
+    "0x7a": {"element": "0x7a", "eIndex": 122, "action": "PhaseContrast", "description": "keep"},
+    "0x7b": {
+      "element": "0x7b",
+      "eIndex": 123,
+      "action": "TimeOfFlightContrast",
+      "description": "keep"
+    },
+    "0x7c": {
+      "element": "0x7c",
+      "eIndex": 124,
+      "action": "SteadyStatePulseSequence",
+      "description": "keep"
+    },
+    "0x7d": {
+      "element": "0x7d",
+      "eIndex": 125,
+      "action": "EchoPlanarPulseSequence",
+      "description": "keep"
+    },
+    "0x7e": {
+      "element": "0x7e",
+      "eIndex": 126,
+      "action": "SpectrallySelectedSuppression",
+      "description": "keep"
+    },
+    "0x7f": {
+      "element": "0x7f",
+      "eIndex": 127,
+      "action": "OversamplingPhase",
+      "description": "keep"
+    },
+    "0x80": {
+      "element": "0x80",
+      "eIndex": 128,
+      "action": "SegmentedKSpaceTraversal",
+      "description": "keep"
+    },
+    "0x81": {"element": "0x81", "eIndex": 129, "action": "CoverageOfKSpace", "description": "keep"},
+    "0x82": {
+      "element": "0x82",
+      "eIndex": 130,
+      "action": "MRTimingAndRelatedParametersSequence",
+      "description": "keep"
+    },
+    "0x83": {
+      "element": "0x83",
+      "eIndex": 131,
+      "action": "RFEchoTrainLength",
+      "description": "keep"
+    },
+    "0x84": {
+      "element": "0x84",
+      "eIndex": 132,
+      "action": "GradientEchoTrainLength",
+      "description": "keep"
+    },
+    "0x85": {
+      "element": "0x85",
+      "eIndex": 133,
+      "action": "GradientOutputType",
+      "description": "keep"
+    },
+    "0x86": {"element": "0x86", "eIndex": 134, "action": "GradientOutput", "description": "keep"},
+    "0x87": {
+      "element": "0x87",
+      "eIndex": 135,
+      "action": "MRFOVGeometrySequence",
+      "description": "keep"
+    },
+    "0x88": {
+      "element": "0x88",
+      "eIndex": 136,
+      "action": "MRAcquisitionFrequencyEncodingSteps",
+      "description": "keep"
+    },
+    "0x89": {
+      "element": "0x89",
+      "eIndex": 137,
+      "action": "MRAcquisitionPhaseEncodingStepsInPlane",
+      "description": "keep"
+    },
+    "0x8a": {
+      "element": "0x8a",
+      "eIndex": 138,
+      "action": "MRAcquisitionPhaseEncodingStepsOutOfPlane",
+      "description": "keep"
+    },
+    "0x8b": {
+      "element": "0x8b",
+      "eIndex": 139,
+      "action": "MRTransmitCoilSequence",
+      "description": "keep"
+    },
+    "0x8c": {"element": "0x8c", "eIndex": 140, "action": "TransmitCoilName", "description": "keep"},
+    "0x8d": {
+      "element": "0x8d",
+      "eIndex": 141,
+      "action": "TransmitCoilManufacturerName",
+      "description": "keep"
+    },
+    "0x8e": {"element": "0x8e", "eIndex": 142, "action": "TransmitCoilType", "description": "keep"},
+    "0x8f": {"element": "0x8f", "eIndex": 143, "action": "MREchoSequence", "description": "keep"},
+    "0x90": {
+      "element": "0x90",
+      "eIndex": 144,
+      "action": "EffectiveEchoTime",
+      "description": "keep"
+    },
+    "0x91": {
+      "element": "0x91",
+      "eIndex": 145,
+      "action": "MRMetaboliteMapSequence",
+      "description": "keep"
+    },
+    "0x92": {
+      "element": "0x92",
+      "eIndex": 146,
+      "action": "MetaboliteMapDescription",
+      "description": "keep"
+    },
+    "0x93": {
+      "element": "0x93",
+      "eIndex": 147,
+      "action": "MetaboliteMapCodeSequence",
+      "description": "keep"
+    },
+    "0x94": {
+      "element": "0x94",
+      "eIndex": 148,
+      "action": "MetaboliteMapCodeValue",
+      "description": "keep"
+    },
+    "0x95": {
+      "element": "0x95",
+      "eIndex": 149,
+      "action": "MetaboliteMapCodingSchemeDesignator",
+      "description": "keep"
+    },
+    "0x96": {
+      "element": "0x96",
+      "eIndex": 150,
+      "action": "MetaboliteMapCodingSchemeVersion",
+      "description": "keep"
+    },
+    "0x97": {
+      "element": "0x97",
+      "eIndex": 151,
+      "action": "MetaboliteMapCodeMeaning",
+      "description": "keep"
+    },
+    "0x98": {
+      "element": "0x98",
+      "eIndex": 152,
+      "action": "MRImagingModifierSequence",
+      "description": "keep"
+    },
+    "0x99": {
+      "element": "0x99",
+      "eIndex": 153,
+      "action": "MagnetizationTransfer",
+      "description": "keep"
+    },
+    "0x9a": {
+      "element": "0x9a",
+      "eIndex": 154,
+      "action": "BloodSignalNulling",
+      "description": "keep"
+    },
+    "0x9b": {"element": "0x9b", "eIndex": 155, "action": "Tagging", "description": "keep"},
+    "0x9c": {
+      "element": "0x9c",
+      "eIndex": 156,
+      "action": "TagSpacingFirstDimension",
+      "description": "keep"
+    },
+    "0x9d": {
+      "element": "0x9d",
+      "eIndex": 157,
+      "action": "TagSpacingSecondDimension",
+      "description": "keep"
+    },
+    "0x9e": {
+      "element": "0x9e",
+      "eIndex": 158,
+      "action": "TagAngleFirstAxis",
+      "description": "keep"
+    },
+    "0x9f": {
+      "element": "0x9f",
+      "eIndex": 159,
+      "action": "TagAngleSecondAxis",
+      "description": "keep"
+    },
+    "0xa0": {"element": "0xa0", "eIndex": 160, "action": "TagThickness", "description": "keep"},
+    "0xa1": {"element": "0xa1", "eIndex": 161, "action": "TaggingDelay", "description": "keep"},
+    "0xa2": {
+      "element": "0xa2",
+      "eIndex": 162,
+      "action": "TransmitterFrequency",
+      "description": "keep"
+    },
+    "0xa3": {"element": "0xa3", "eIndex": 163, "action": "PixelBandwidth", "description": "keep"},
+    "0xa4": {
+      "element": "0xa4",
+      "eIndex": 164,
+      "action": "MRVelocityEncodingSequence",
+      "description": "keep"
+    },
+    "0xa5": {
+      "element": "0xa5",
+      "eIndex": 165,
+      "action": "VelocityEncodingDirection",
+      "description": "keep"
+    },
+    "0xa6": {
+      "element": "0xa6",
+      "eIndex": 166,
+      "action": "VelocityEncodingMinimumValue",
+      "description": "keep"
+    },
+    "0xa7": {
+      "element": "0xa7",
+      "eIndex": 167,
+      "action": "VelocityEncodingMaximumValue",
+      "description": "keep"
+    },
+    "0xa8": {
+      "element": "0xa8",
+      "eIndex": 168,
+      "action": "MRImageFrameTypeSequence",
+      "description": "keep"
+    },
+    "0xa9": {"element": "0xa9", "eIndex": 169, "action": "FrameType", "description": "keep"},
+    "0xaa": {
+      "element": "0xaa",
+      "eIndex": 170,
+      "action": "PixelPresentation",
+      "description": "keep"
+    },
+    "0xab": {
+      "element": "0xab",
+      "eIndex": 171,
+      "action": "VolumetricProperties",
+      "description": "keep"
+    },
+    "0xac": {
+      "element": "0xac",
+      "eIndex": 172,
+      "action": "VolumeBasedCalculationTechnique",
+      "description": "keep"
+    },
+    "0xbd": {
+      "element": "0xbd",
+      "eIndex": 189,
+      "action": "BackgroundImageInstanceUID",
+      "description": "keep"
+    },
+    "0xbf": {"element": "0xbf", "eIndex": 191, "action": "Voi1", "description": "keep"},
+    "0xc1": {"element": "0xc1", "eIndex": 193, "action": "Voi2", "description": "keep"},
+    "0xc2": {"element": "0xc2", "eIndex": 194, "action": "MixingTime", "description": "keep"},
+    "0xc3": {
+      "element": "0xc3",
+      "eIndex": 195,
+      "action": "SelectiveIRPosition",
+      "description": "keep"
+    },
+    "0xc4": {"element": "0xc4", "eIndex": 196, "action": "SelectiveIRRow", "description": "keep"},
+    "0xc5": {
+      "element": "0xc5",
+      "eIndex": 197,
+      "action": "SelectiveIRColumn",
+      "description": "keep"
+    },
+    "0xc6": {
+      "element": "0xc6",
+      "eIndex": 198,
+      "action": "SelectiveIROrientation",
+      "description": "keep"
+    },
+    "0xc7": {
+      "element": "0xc7",
+      "eIndex": 199,
+      "action": "SelectiveIRThickness",
+      "description": "keep"
+    },
+    "0xc8": {
+      "element": "0xc8",
+      "eIndex": 200,
+      "action": "RephaseOrderSlice",
+      "description": "keep"
+    },
+    "0xc9": {
+      "element": "0xc9",
+      "eIndex": 201,
+      "action": "RephaseOrderPhase",
+      "description": "keep"
+    },
+    "0xca": {"element": "0xca", "eIndex": 202, "action": "RephaseOrderFreq", "description": "keep"},
+    "0xcb": {
+      "element": "0xcb",
+      "eIndex": 203,
+      "action": "MetaboliteMapDescription",
+      "description": "keep"
+    },
+    "0xcc": {
+      "element": "0xcc",
+      "eIndex": 204,
+      "action": "volumeLocalizationSeq",
+      "description": "keep"
+    },
+    "0xcd": {"element": "0xcd", "eIndex": 205, "action": "SlabThickness", "description": "keep"},
+    "0xce": {"element": "0xce", "eIndex": 206, "action": "SlabOrientation", "description": "keep"},
+    "0xcf": {"element": "0xcf", "eIndex": 207, "action": "MidSlabPosition", "description": "keep"},
+    "0xd0": {"element": "0xd0", "eIndex": 208, "action": "AcqModeSliceDir", "description": "keep"},
+    "0xd1": {"element": "0xd1", "eIndex": 209, "action": "IRThicknessRatio", "description": "keep"},
+    "0xd2": {
+      "element": "0xd2",
+      "eIndex": 210,
+      "action": "BBIRThicknessRatio",
+      "description": "keep"
+    },
+    "0xd3": {"element": "0xd3", "eIndex": 211, "action": "DeltaAngle", "description": "keep"},
+    "0xd4": {
+      "element": "0xd4",
+      "eIndex": 212,
+      "action": "MultiFrameFrameNumber",
+      "description": "keep"
+    },
+    "0xd5": {
+      "element": "0xd5",
+      "eIndex": 213,
+      "action": "EnhancedSopInstanceUid",
+      "description": "keep"
+    },
+    "0xd6": {
+      "element": "0xd6",
+      "eIndex": 214,
+      "action": "PolarityOfPhaseEncoding",
+      "description": "keep"
+    },
+    "0x19": {"element": "0x19", "eIndex": 25, "action": "FwhmPpm", "description": "keep"},
+    "0x1a": {"element": "0x1a", "eIndex": 26, "action": "WaterSupRate", "description": "keep"}
+  },
+  "ELSCINT1": {
+    "creator": "ELSCINT1",
+    "groupNo": "0x00E1",
+    "gIndex": 225,
+    "0x21": {
+      "element": "0x21",
+      "eIndex": 33,
+      "action": "Dose Length Product",
+      "description": "keep"
+    }
+  },
+  "Philips Imaging DD 001": {
+    "creator": "Philips Imaging DD 001",
+    "groupNo": "0x2001",
+    "gIndex": 8193,
+    "0x01": {"element": "0x01", "eIndex": 1, "action": "Chemical Shift", "description": "keep"},
+    "0x02": {
+      "element": "0x02",
+      "eIndex": 2,
+      "action": "Chemical Shift Number MR",
+      "description": "keep"
+    },
+    "0x03": {"element": "0x03", "eIndex": 3, "action": "Diffusion B-Factor", "description": "keep"},
+    "0x04": {
+      "element": "0x04",
+      "eIndex": 4,
+      "action": "Diffusion Direction",
+      "description": "keep"
+    },
+    "0x06": {"element": "0x06", "eIndex": 6, "action": "Image Enhanced", "description": "keep"},
+    "0x07": {"element": "0x07", "eIndex": 7, "action": "Image Type ED ES", "description": "keep"},
+    "0x08": {"element": "0x08", "eIndex": 8, "action": "Phase Number", "description": "keep"},
+    "0x09": {
+      "element": "0x09",
+      "eIndex": 9,
+      "action": "Image Prepulse Delay",
+      "description": "keep"
+    },
+    "0x0a": {"element": "0x0a", "eIndex": 10, "action": "Slice Number MR", "description": "keep"},
+    "0x0b": {"element": "0x0b", "eIndex": 11, "action": "Slice Orientation", "description": "keep"},
+    "0x0c": {
+      "element": "0x0c",
+      "eIndex": 12,
+      "action": "Arrhythmia Rejection",
+      "description": "keep"
+    },
+    "0x0e": {"element": "0x0e", "eIndex": 14, "action": "Cardiac Cycled", "description": "keep"},
+    "0x0f": {
+      "element": "0x0f",
+      "eIndex": 15,
+      "action": "Cardiac Gate Width",
+      "description": "keep"
+    },
+    "0x10": {"element": "0x10", "eIndex": 16, "action": "Cardiac Sync", "description": "keep"},
+    "0x11": {
+      "element": "0x11",
+      "eIndex": 17,
+      "action": "Diffusion Echo Time",
+      "description": "keep"
+    },
+    "0x12": {"element": "0x12", "eIndex": 18, "action": "Dynamic Series", "description": "keep"},
+    "0x13": {"element": "0x13", "eIndex": 19, "action": "EPI Factor", "description": "keep"},
+    "0x14": {"element": "0x14", "eIndex": 20, "action": "Number of Echoes", "description": "keep"},
+    "0x15": {
+      "element": "0x15",
+      "eIndex": 21,
+      "action": "Number of Locations",
+      "description": "keep"
+    },
+    "0x16": {
+      "element": "0x16",
+      "eIndex": 22,
+      "action": "Number of PC Directions",
+      "description": "keep"
+    },
+    "0x17": {
+      "element": "0x17",
+      "eIndex": 23,
+      "action": "Number of Phases MR",
+      "description": "keep"
+    },
+    "0x18": {
+      "element": "0x18",
+      "eIndex": 24,
+      "action": "Number of Slices MR",
+      "description": "keep"
+    },
+    "0x19": {
+      "element": "0x19",
+      "eIndex": 25,
+      "action": "Partial Matrix Scanned",
+      "description": "keep"
+    },
+    "0x1a": {"element": "0x1a", "eIndex": 26, "action": "PC Velocity", "description": "keep"},
+    "0x1b": {"element": "0x1b", "eIndex": 27, "action": "Prepulse Delay", "description": "keep"},
+    "0x1c": {"element": "0x1c", "eIndex": 28, "action": "Prepulse Type", "description": "keep"},
+    "0x1d": {
+      "element": "0x1d",
+      "eIndex": 29,
+      "action": "Reconstruction Number MR",
+      "description": "keep"
+    },
+    "0x1f": {"element": "0x1f", "eIndex": 31, "action": "Respiration Sync", "description": "keep"},
+    "0x20": {
+      "element": "0x20",
+      "eIndex": 32,
+      "action": "Scanning Technique",
+      "description": "keep"
+    },
+    "0x21": {"element": "0x21", "eIndex": 33, "action": "SPIR", "description": "keep"},
+    "0x22": {"element": "0x22", "eIndex": 34, "action": "Water Fat Shift", "description": "keep"},
+    "0x23": {
+      "element": "0x23",
+      "eIndex": 35,
+      "action": "Flip Angle Philips",
+      "description": "keep"
+    },
+    "0x24": {
+      "element": "0x24",
+      "eIndex": 36,
+      "action": "Series is Interactive",
+      "description": "keep"
+    },
+    "0x25": {"element": "0x25", "eIndex": 37, "action": "Echo Time Display", "description": "keep"},
+    "0x2D": {
+      "element": "0x2D",
+      "eIndex": 45,
+      "action": "Stack Number of Slices",
+      "description": "keep"
+    },
+    "0x32": {
+      "element": "0x32",
+      "eIndex": 50,
+      "action": "Stack Radial Angle",
+      "description": "keep"
+    },
+    "0x33": {"element": "0x33", "eIndex": 51, "action": "Stack Radial Axis", "description": "keep"},
+    "0x35": {
+      "element": "0x35",
+      "eIndex": 53,
+      "action": "Stack Slice Number",
+      "description": "keep"
+    },
+    "0x36": {"element": "0x36", "eIndex": 54, "action": "Stack Type", "description": "keep"},
+    "0x58": {
+      "element": "0x58",
+      "eIndex": 88,
+      "action": "Constrast Transfer Taste",
+      "description": "keep"
+    },
+    "0x5F": {"element": "0x5F", "eIndex": 95, "action": "Stack Sequence", "description": "keep"},
+    "0x60": {"element": "0x60", "eIndex": 96, "action": "Number of Stacks", "description": "keep"},
+    "0x61": {
+      "element": "0x61",
+      "eIndex": 97,
+      "action": "Series Transmitted",
+      "description": "keep"
+    },
+    "0x7b": {
+      "element": "0x7b",
+      "eIndex": 123,
+      "action": "Acquisition Number",
+      "description": "keep"
+    },
+    "0x81": {
+      "element": "0x81",
+      "eIndex": 129,
+      "action": "Number of Dynamic Scans",
+      "description": "keep"
+    },
+    "0xa1": {"element": "0xa1", "eIndex": 161, "action": "Israwimage", "description": "keep"},
+    "0xf1": {
+      "element": "0xf1",
+      "eIndex": 241,
+      "action": "Prospective Motion Correction",
+      "description": "keep"
+    },
+    "0xf2": {
+      "element": "0xf2",
+      "eIndex": 242,
+      "action": "Retrospective Motion Correction",
+      "description": "keep"
+    }
+  },
+  "Philips MR Imaging DD 001": {
+    "creator": "Philips MR Imaging DD 001",
+    "groupNo": "0x2005",
+    "gIndex": 8197,
+    "0x20": {
+      "element": "0x20",
+      "eIndex": 32,
+      "action": "Number of Chemical Shift",
+      "description": "keep"
+    },
+    "0xa1": {"element": "0xa1", "eIndex": 161, "action": "Syncra Scan Type", "description": "keep"},
+    "0xb0": {
+      "element": "0xb0",
+      "eIndex": 176,
+      "action": "Diffusion Direction RL",
+      "description": "keep"
+    },
+    "0xb1": {
+      "element": "0xb1",
+      "eIndex": 177,
+      "action": "Diffusion Direction AP",
+      "description": "keep"
+    },
+    "0xb2": {
+      "element": "0xb2",
+      "eIndex": 178,
+      "action": "Diffusion Direction FH",
+      "description": "keep"
+    }
+  },
+  "Philips PET Private Group": {
+    "creator": "Philips PET Private Group",
+    "groupNo": "0x7053",
+    "gIndex": 28755,
+    "0x00": {"element": "0x00", "eIndex": 0, "action": "SUV Scale Factor", "description": "keep"},
+    "0x09": {
+      "element": "0x09",
+      "eIndex": 9,
+      "action": "Activity Concentration Scale Factor",
+      "description": "keep"
+    }
+  },
+  "SIEMENS CT VA0  COAD": {
+    "creator": "SIEMENS CT VA0  COAD",
+    "groupNo": "0x0019",
+    "gIndex": 25,
+    "0x90": {"element": "0x90", "eIndex": 144, "action": "Osteo offset", "description": "keep"},
+    "0x92": {
+      "element": "0x92",
+      "eIndex": 146,
+      "action": "Osteo Regression Line Slope",
+      "description": "keep"
+    },
+    "0x93": {
+      "element": "0x93",
+      "eIndex": 147,
+      "action": "Osteo Regression Line Intercept",
+      "description": "keep"
+    },
+    "0x96": {
+      "element": "0x96",
+      "eIndex": 150,
+      "action": "Osteo Phantom Number",
+      "description": "keep"
+    },
+    "0xb0": {
+      "element": "0xb0",
+      "eIndex": 176,
+      "action": "Feed per Rotation",
+      "description": "keep"
+    },
+    "0xbd": {
+      "element": "0xbd",
+      "eIndex": 189,
+      "action": "Pulmo Trigger Level",
+      "description": "keep"
+    },
+    "0xbe": {
+      "element": "0xbe",
+      "eIndex": 190,
+      "action": "Expiratoric Reserve Volume",
+      "description": "keep"
+    },
+    "0xbf": {"element": "0xbf", "eIndex": 191, "action": "Vital Capacity", "description": "keep"},
+    "0xc0": {"element": "0xc0", "eIndex": 192, "action": "Pulmo Water", "description": "keep"},
+    "0xc1": {"element": "0xc1", "eIndex": 193, "action": "Pulmo Air", "description": "keep"},
+    "0xc2": {
+      "element": "0xc2",
+      "eIndex": 194,
+      "action": "Pulmo Date",
+      "description": "incrementdate"
+    },
+    "0xc3": {"element": "0xc3", "eIndex": 195, "action": "Pulmo Time", "description": "keep"}
+  },
+  "SIEMENS MED": {
+    "creator": "SIEMENS MED",
+    "groupNo": "0x0021",
+    "gIndex": 33,
+    "0x11": {
+      "element": "0x11",
+      "eIndex": 17,
+      "action": "Target: Center x/y as entered for reconstruction",
+      "description": "keep"
+    }
+  },
+  "SIEMENS MEDCOM HEADER": {
+    "creator": "SIEMENS MEDCOM HEADER",
+    "groupNo": "0x0029",
+    "gIndex": 41,
+    "0x08": {"element": "0x08", "eIndex": 8, "action": "MedCom Header Type", "description": "keep"},
+    "0x09": {
+      "element": "0x09",
+      "eIndex": 9,
+      "action": "MedCom Header Version",
+      "description": "keep"
+    },
+    "0x31": {
+      "element": "0x31",
+      "eIndex": 49,
+      "action": "PMTF Information 1",
+      "description": "keep"
+    },
+    "0x32": {
+      "element": "0x32",
+      "eIndex": 50,
+      "action": "PMTF Information 2",
+      "description": "keep"
+    },
+    "0x33": {
+      "element": "0x33",
+      "eIndex": 51,
+      "action": "PMTF Information 3",
+      "description": "keep"
+    },
+    "0x34": {
+      "element": "0x34",
+      "eIndex": 52,
+      "action": "PMTF Information 4",
+      "description": "keep"
+    },
+    "0x35": {"element": "0x35", "eIndex": 53, "action": "PMTF Information 5", "description": "keep"}
+  },
+  "SIEMENS MED PT": {
+    "creator": "SIEMENS MED PT",
+    "groupNo": "0x0071",
+    "gIndex": 113,
+    "0x21": {
+      "element": "0x21",
+      "eIndex": 33,
+      "action": "Registration Matrix UID",
+      "description": "keep"
+    },
+    "0x22": {
+      "element": "0x22",
+      "eIndex": 34,
+      "action": "Decay Correction DateTime",
+      "description": "incrementdate"
+    }
+  },
+  "SIEMENS MED PT WAVEFORM": {
+    "creator": "SIEMENS MED PT WAVEFORM",
+    "groupNo": "0x0071",
+    "gIndex": 113,
+    "0x46": {
+      "element": "0x46",
+      "eIndex": 70,
+      "action": "Starting Respiratory Amplitude",
+      "description": "keep"
+    },
+    "0x47": {
+      "element": "0x47",
+      "eIndex": 71,
+      "action": "Starting Respiratory Phase",
+      "description": "keep"
+    },
+    "0x48": {
+      "element": "0x48",
+      "eIndex": 72,
+      "action": "Ending Respiratory Amplitude",
+      "description": "keep"
+    },
+    "0x49": {
+      "element": "0x49",
+      "eIndex": 73,
+      "action": "Ending Respiratory Phase",
+      "description": "keep"
+    },
+    "0x50": {
+      "element": "0x50",
+      "eIndex": 80,
+      "action": "Respiratory Trigger Type",
+      "description": "keep"
+    }
+  },
+  "SIEMENS MR HEADER": {
+    "creator": "SIEMENS MR HEADER",
+    "groupNo": "0x0019",
+    "gIndex": 25,
+    "0x0C": {
+      "element": "0x0C",
+      "eIndex": 12,
+      "action": "Diffusion b-value of this particular image",
+      "description": "keep"
+    },
+    "0x0D": {
+      "element": "0x0D",
+      "eIndex": 13,
+      "action": "Diffusion directionality of this particular image",
+      "description": "keep"
+    },
+    "0x0E": {
+      "element": "0x0E",
+      "eIndex": 14,
+      "action": "Diffusion gradient vector of this particular image",
+      "description": "keep"
+    },
+    "0x27": {
+      "element": "0x27",
+      "eIndex": 39,
+      "action": "Diffusion b-matrix encoding of this particular image",
+      "description": "keep"
+    }
+  },
+  "Siemens MED NM": {
+    "creator": "Siemens MED NM",
+    "groupNo": "0x0019",
+    "gIndex": 25,
+    "0x0F": {
+      "element": "0x0F",
+      "eIndex": 15,
+      "action": "Siemens ICON Data Type",
+      "description": "keep"
+    },
+    "0xA5": {
+      "element": "0xA5",
+      "eIndex": 165,
+      "action": "Number of repeats per phase",
+      "description": "keep"
+    },
+    "0xA6": {
+      "element": "0xA6",
+      "eIndex": 166,
+      "action": "Cycles per repeat",
+      "description": "keep"
+    },
+    "0xA7": {
+      "element": "0xA7",
+      "eIndex": 167,
+      "action": "Repeat start time",
+      "description": "keep"
+    },
+    "0xA8": {"element": "0xA8", "eIndex": 168, "action": "Repeat stop time", "description": "keep"},
+    "0xA9": {
+      "element": "0xA9",
+      "eIndex": 169,
+      "action": "Effective repeat time",
+      "description": "keep"
+    },
+    "0xAA": {
+      "element": "0xAA",
+      "eIndex": 170,
+      "action": "Acquired cycles per repeat",
+      "description": "keep"
+    }
+  },
+  "SIEMENS MED NM": {
+    "creator": "SIEMENS MED NM",
+    "groupNo": "0x0033",
+    "gIndex": 51,
+    "0x00": {
+      "element": "0x00",
+      "eIndex": 0,
+      "action": "Toshiba CBF activity results ",
+      "description": "keep"
+    },
+    "0x01": {
+      "element": "0x01",
+      "eIndex": 1,
+      "action": "X Principal Ray Offset ",
+      "description": "keep"
+    },
+    "0x10": {"element": "0x10", "eIndex": 16, "action": "Y Focal Scaling", "description": "keep"},
+    "0x11": {
+      "element": "0x11",
+      "eIndex": 17,
+      "action": "X Motion Correction Shift ",
+      "description": "keep"
+    },
+    "0x14": {
+      "element": "0x14",
+      "eIndex": 20,
+      "action": "Minimum pixel in frame",
+      "description": "keep"
+    },
+    "0x15": {
+      "element": "0x15",
+      "eIndex": 21,
+      "action": "Maximum pixel in frame",
+      "description": "keep"
+    },
+    "0x18": {
+      "element": "0x18",
+      "eIndex": 24,
+      "action": "NCO Data for detector 1 (n = number of view s)",
+      "description": "keep"
+    },
+    "0x19": {"element": "0x19", "eIndex": 25, "action": "X Heart Center", "description": "keep"},
+    "0x20": {
+      "element": "0x20",
+      "eIndex": 32,
+      "action": "Bed correction angle",
+      "description": "keep"
+    },
+    "0x21": {"element": "0x21", "eIndex": 33, "action": "Recon Range", "description": "keep"},
+    "0x22": {"element": "0x22", "eIndex": 34, "action": "Recon Orientation", "description": "keep"},
+    "0x23": {
+      "element": "0x23",
+      "eIndex": 35,
+      "action": "Recon Selected Angular Range",
+      "description": "keep"
+    },
+    "0x24": {
+      "element": "0x24",
+      "eIndex": 36,
+      "action": "Recon Transverse Angle",
+      "description": "keep"
+    },
+    "0x25": {
+      "element": "0x25",
+      "eIndex": 37,
+      "action": "Recon Sagittal Angle",
+      "description": "keep"
+    },
+    "0x28": {
+      "element": "0x28",
+      "eIndex": 40,
+      "action": "Recon X Image Center",
+      "description": "keep"
+    },
+    "0x29": {
+      "element": "0x29",
+      "eIndex": 41,
+      "action": "Number of R-Waves in frame ",
+      "description": "keep"
+    },
+    "0x30": {
+      "element": "0x30",
+      "eIndex": 48,
+      "action": "Scatter Estimation Method Mode ",
+      "description": "keep"
+    },
+    "0x31": {
+      "element": "0x31",
+      "eIndex": 49,
+      "action": "Scatter Estimation Lower Window Weights ",
+      "description": "keep"
+    },
+    "0x32": {
+      "element": "0x32",
+      "eIndex": 50,
+      "action": "Scatter Estimation Upper Window Weights",
+      "description": "keep"
+    },
+    "0x33": {
+      "element": "0x33",
+      "eIndex": 51,
+      "action": "Scatter Estimation Window Mode",
+      "description": "keep"
+    },
+    "0x34": {
+      "element": "0x34",
+      "eIndex": 52,
+      "action": "Scatter Estimation Filter",
+      "description": "keep"
+    },
+    "0x35": {
+      "element": "0x35",
+      "eIndex": 53,
+      "action": "Recon RawTomo Input Uid ",
+      "description": "hashuid"
+    },
+    "0x36": {
+      "element": "0x36",
+      "eIndex": 54,
+      "action": "Recon CT Input Uid ",
+      "description": "hashuid"
+    },
+    "0x37": {"element": "0x37", "eIndex": 55, "action": "Recon Z Mask Size", "description": "keep"},
+    "0x38": {
+      "element": "0x38",
+      "eIndex": 56,
+      "action": "Recon X Mask Center",
+      "description": "keep"
+    },
+    "0x02": {
+      "element": "0x02",
+      "eIndex": 2,
+      "action": "Dose calibration factor",
+      "description": "keep"
+    },
+    "0x03": {"element": "0x03", "eIndex": 3, "action": "Units", "description": "keep"},
+    "0x04": {"element": "0x04", "eIndex": 4, "action": "Decay correction", "description": "keep"},
+    "0x05": {
+      "element": "0x05",
+      "eIndex": 5,
+      "action": "Y Principal Ray Offset",
+      "description": "keep"
+    },
+    "0x06": {"element": "0x06", "eIndex": 6, "action": "Rescale intercept ", "description": "keep"},
+    "0x07": {"element": "0x07", "eIndex": 7, "action": "Rescale Slope", "description": "keep"},
+    "0x08": {
+      "element": "0x08",
+      "eIndex": 8,
+      "action": "Frame reference time",
+      "description": "keep"
+    },
+    "0x09": {
+      "element": "0x09",
+      "eIndex": 9,
+      "action": "X Principal Ray Angle",
+      "description": "keep"
+    },
+    "0x0a": {
+      "element": "0x0a",
+      "eIndex": 10,
+      "action": "Original Wholebody Position ",
+      "description": "keep"
+    },
+    "0x0b": {
+      "element": "0x0b",
+      "eIndex": 11,
+      "action": "Wholebody Scan Range",
+      "description": "keep"
+    },
+    "0x7E": {
+      "element": "0x7E",
+      "eIndex": 126,
+      "action": "Collimator thickness",
+      "description": "keep"
+    },
+    "0x7F": {
+      "element": "0x7F",
+      "eIndex": 127,
+      "action": "Collimator angular resolution ",
+      "description": "keep"
+    },
+    "0xC0": {
+      "element": "0xC0",
+      "eIndex": 192,
+      "action": "Useful Field of View",
+      "description": "keep"
+    },
+    "0x0A": {
+      "element": "0x0A",
+      "eIndex": 10,
+      "action": "Y Principal Ray Angle",
+      "description": "keep"
+    },
+    "0x0B": {
+      "element": "0x0B",
+      "eIndex": 11,
+      "action": "X Short Focal Length ",
+      "description": "keep"
+    },
+    "0x0C": {
+      "element": "0x0C",
+      "eIndex": 12,
+      "action": "Y Short Focal Length",
+      "description": "keep"
+    },
+    "0x0E": {
+      "element": "0x0E",
+      "eIndex": 14,
+      "action": "Y Long Focal Length",
+      "description": "keep"
+    },
+    "0x0D": {
+      "element": "0x0D",
+      "eIndex": 13,
+      "action": "X Long Focal Length ",
+      "description": "keep"
+    },
+    "0x0F": {"element": "0x0F", "eIndex": 15, "action": "X Focal Scaling ", "description": "keep"},
+    "0x1A": {"element": "0x1A", "eIndex": 26, "action": "Y Heart Center", "description": "keep"},
+    "0x1B": {"element": "0x1B", "eIndex": 27, "action": "Z Heart Center", "description": "keep"},
+    "0x1C": {
+      "element": "0x1C",
+      "eIndex": 28,
+      "action": "Image Pixel Content Type",
+      "description": "keep"
+    },
+    "0x1D": {
+      "element": "0x1D",
+      "eIndex": 29,
+      "action": "Auto Save Corrected Series ",
+      "description": "keep"
+    },
+    "0x1E": {
+      "element": "0x1E",
+      "eIndex": 30,
+      "action": "Distorted Series Instance UID ",
+      "description": "hashuid"
+    },
+    "0x26": {"element": "0x26", "eIndex": 38, "action": "Recon X Mask Size", "description": "keep"},
+    "0x27": {"element": "0x27", "eIndex": 39, "action": "Recon Y Mask Size", "description": "keep"},
+    "0x2A": {
+      "element": "0x2A",
+      "eIndex": 42,
+      "action": "Recon Z Image Center",
+      "description": "keep"
+    },
+    "0x2B": {"element": "0x2B", "eIndex": 43, "action": "Recon X Zoom", "description": "keep"},
+    "0x2C": {"element": "0x2C", "eIndex": 44, "action": "Recon Y Zoom ", "description": "keep"},
+    "0x2D": {"element": "0x2D", "eIndex": 45, "action": "Recon Threshold", "description": "keep"},
+    "0x2E": {
+      "element": "0x2E",
+      "eIndex": 46,
+      "action": "Recon Output Pixel Size",
+      "description": "keep"
+    },
+    "0x2F": {
+      "element": "0x2F",
+      "eIndex": 47,
+      "action": "Scatter Estimation Method",
+      "description": "keep"
+    },
+    "0x39": {
+      "element": "0x39",
+      "eIndex": 57,
+      "action": "Recon Y Mask Center",
+      "description": "keep"
+    },
+    "0x3A": {
+      "element": "0x3A",
+      "eIndex": 58,
+      "action": "Recon Z Mask Center",
+      "description": "keep"
+    },
+    "0x51": {
+      "element": "0x51",
+      "eIndex": 81,
+      "action": "Raw Tomo Series UID ",
+      "description": "hashuid"
+    },
+    "0x52": {
+      "element": "0x52",
+      "eIndex": 82,
+      "action": "LowRes CT Series UID",
+      "description": "hashuid"
+    },
+    "0x53": {
+      "element": "0x53",
+      "eIndex": 83,
+      "action": "HighRes CT Series UID",
+      "description": "hashuid"
+    }
+  },
+  "TOSHIBA_MEC_CT3": {
+    "creator": "TOSHIBA_MEC_CT3",
+    "groupNo": "0x7005",
+    "gIndex": 28677,
+    "0x03": {
+      "element": "0x03",
+      "eIndex": 3,
+      "action": "Cardiac R-R Mean Time",
+      "description": "keep"
+    },
+    "0x04": {
+      "element": "0x04",
+      "eIndex": 4,
+      "action": "Cardiac Reconstruction Gating Phase in Percent",
+      "description": "keep"
+    },
+    "0x05": {
+      "element": "0x05",
+      "eIndex": 5,
+      "action": "Cardiac Reconstruction Gating Phase in ms",
+      "description": "keep"
+    },
+    "0x06": {
+      "element": "0x06",
+      "eIndex": 6,
+      "action": "Cardiac Reconstruction Mode",
+      "description": "keep"
+    },
+    "0x07": {
+      "element": "0x07",
+      "eIndex": 7,
+      "action": "Reconstruction Center",
+      "description": "keep"
+    },
+    "0x08": {
+      "element": "0x08",
+      "eIndex": 8,
+      "action": "Detector Slice Thickness in mm",
+      "description": "keep"
+    },
+    "0x09": {
+      "element": "0x09",
+      "eIndex": 9,
+      "action": "Number of Detector rows to Reconstruct",
+      "description": "keep"
+    },
+    "0x0a": {
+      "element": "0x0a",
+      "eIndex": 10,
+      "action": "Table Speed in mm/rot",
+      "description": "keep"
+    },
+    "0x0b": {"element": "0x0b", "eIndex": 11, "action": "Filter", "description": "keep"},
+    "0x0c": {
+      "element": "0x0c",
+      "eIndex": 12,
+      "action": "Reconstruction Correction Type",
+      "description": "keep"
+    },
+    "0x0d": {"element": "0x0d", "eIndex": 13, "action": "Organ", "description": "keep"},
+    "0x0e": {"element": "0x0e", "eIndex": 14, "action": "File Type Remarks", "description": "keep"},
+    "0x0f": {"element": "0x0f", "eIndex": 15, "action": "Direction", "description": "keep"},
+    "0x11": {"element": "0x11", "eIndex": 17, "action": "Series Comment", "description": "keep"},
+    "0x12": {"element": "0x12", "eIndex": 18, "action": "Position", "description": "keep"},
+    "0x13": {"element": "0x13", "eIndex": 19, "action": "Expert Plan No.", "description": "keep"},
+    "0x14": {
+      "element": "0x14",
+      "eIndex": 20,
+      "action": "Reconstruction ROI No.",
+      "description": "keep"
+    },
+    "0x15": {
+      "element": "0x15",
+      "eIndex": 21,
+      "action": "Special Helical ACQ No.",
+      "description": "keep"
+    },
+    "0x16": {"element": "0x16", "eIndex": 22, "action": "Volume UID", "description": "hashuid"},
+    "0x17": {
+      "element": "0x17",
+      "eIndex": 23,
+      "action": "Total Frame Count in the Volume",
+      "description": "keep"
+    },
+    "0x18": {"element": "0x18", "eIndex": 24, "action": "Frame No.", "description": "keep"},
+    "0x19": {"element": "0x19", "eIndex": 25, "action": "Frame Sort Key", "description": "keep"},
+    "0x1a": {"element": "0x1a", "eIndex": 26, "action": "Frame Sort Order", "description": "keep"},
+    "0x1b": {
+      "element": "0x1b",
+      "eIndex": 27,
+      "action": "(L1) Convolution Kernel, (L2) Convolution Kernel for Series Record",
+      "description": "keep"
+    },
+    "0x1c": {
+      "element": "0x1c",
+      "eIndex": 28,
+      "action": "(L1) Contrast/Bolus Agent, (L2) Contrast/Bolus Agent for Series Record",
+      "description": "keep"
+    },
+    "0x1d": {
+      "element": "0x1d",
+      "eIndex": 29,
+      "action": "Reconstruction Number",
+      "description": "keep"
+    },
+    "0x1e": {"element": "0x1e", "eIndex": 30, "action": "Raw Data Number", "description": "keep"},
+    "0x20": {
+      "element": "0x20",
+      "eIndex": 32,
+      "action": "Local Series Number",
+      "description": "keep"
+    },
+    "0x21": {
+      "element": "0x21",
+      "eIndex": 33,
+      "action": "Decrease in Artifact Filter",
+      "description": "keep"
+    },
+    "0x22": {
+      "element": "0x22",
+      "eIndex": 34,
+      "action": "Reconstruction Interval",
+      "description": "keep"
+    },
+    "0x23": {"element": "0x23", "eIndex": 35, "action": "Pitch Factor", "description": "keep"},
+    "0x24": {
+      "element": "0x24",
+      "eIndex": 36,
+      "action": "The Acquisition Date of NRA",
+      "description": "incrementdate"
+    },
+    "0x25": {
+      "element": "0x25",
+      "eIndex": 37,
+      "action": "Large Data File Attribute",
+      "description": "keep"
+    },
+    "0x26": {
+      "element": "0x26",
+      "eIndex": 38,
+      "action": "Large Data File Name",
+      "description": "keep"
+    },
+    "0x30": {
+      "element": "0x30",
+      "eIndex": 48,
+      "action": "Main Modality in Study",
+      "description": "keep"
+    },
+    "0x35": {"element": "0x35", "eIndex": 53, "action": "Scan Range", "description": "keep"},
+    "0x37": {"element": "0x37", "eIndex": 55, "action": "Total Frames", "description": "keep"},
+    "0x38": {"element": "0x38", "eIndex": 56, "action": "Start Frame", "description": "keep"},
+    "0x39": {"element": "0x39", "eIndex": 57, "action": "End Frame", "description": "keep"},
+    "0x40": {
+      "element": "0x40",
+      "eIndex": 64,
+      "action": "DLP (Dose Length Product)",
+      "description": "keep"
+    },
+    "0x41": {
+      "element": "0x41",
+      "eIndex": 65,
+      "action": "Raw Slice Information",
+      "description": "keep"
+    },
+    "0x42": {"element": "0x42", "eIndex": 66, "action": "Local Frame No", "description": "keep"},
+    "0x43": {"element": "0x43", "eIndex": 67, "action": "Volume Vector", "description": "keep"},
+    "0x44": {"element": "0x44", "eIndex": 68, "action": "Volume Type", "description": "keep"},
+    "0x45": {
+      "element": "0x45",
+      "eIndex": 69,
+      "action": "Relative Table Position of 4D Volume",
+      "description": "keep"
+    },
+    "0x46": {
+      "element": "0x46",
+      "eIndex": 70,
+      "action": "Absolute Table Position of 4D Volume",
+      "description": "keep"
+    },
+    "0x47": {
+      "element": "0x47",
+      "eIndex": 71,
+      "action": "Slice Pitch of 4D Volume",
+      "description": "keep"
+    },
+    "0x48": {
+      "element": "0x48",
+      "eIndex": 72,
+      "action": "Respiratory Gating Inf.",
+      "description": "keep"
+    },
+    "0x49": {"element": "0x49", "eIndex": 73, "action": "Respiration Phase", "description": "keep"},
+    "0xf1": {
+      "element": "0xf1",
+      "eIndex": 241,
+      "action": "Protect Mark for Image, Curve or Private Record",
+      "description": "keep"
+    },
+    "0xf2": {
+      "element": "0xf2",
+      "eIndex": 242,
+      "action": "Protect Mark for Series Record",
+      "description": "keep"
+    },
+    "0xf3": {
+      "element": "0xf3",
+      "eIndex": 243,
+      "action": "Protect Mark for Study Record",
+      "description": "keep"
+    }
+  },
+  "TOSHIBA_MEC_MR3": {
+    "creator": "TOSHIBA_MEC_MR3",
+    "groupNo": "0x700d",
+    "gIndex": 28685,
+    "0x00": {"element": "0x00", "eIndex": 0, "action": "Scale Factor", "description": "keep"},
+    "0x02": {"element": "0x02", "eIndex": 2, "action": "Orientation Vector", "description": "keep"},
+    "0x03": {"element": "0x03", "eIndex": 3, "action": "Flip Flag", "description": "keep"},
+    "0x05": {"element": "0x05", "eIndex": 5, "action": "FOV", "description": "keep"},
+    "0x06": {"element": "0x06", "eIndex": 6, "action": "Image Matrix", "description": "keep"},
+    "0x09": {"element": "0x09", "eIndex": 9, "action": "Original Data Flag", "description": "keep"},
+    "0x80": {
+      "element": "0x80",
+      "eIndex": 128,
+      "action": "Number of PAC channel",
+      "description": "keep"
+    },
+    "0x81": {"element": "0x81", "eIndex": 129, "action": "Reference mode", "description": "keep"},
+    "0x82": {
+      "element": "0x82",
+      "eIndex": 130,
+      "action": "Gain value group for MRS",
+      "description": "keep"
+    },
+    "0x88": {
+      "element": "0x88",
+      "eIndex": 136,
+      "action": "Flag of water Sat pulse",
+      "description": "keep"
+    },
+    "0x89": {
+      "element": "0x89",
+      "eIndex": 137,
+      "action": "Selected contrast TE",
+      "description": "keep"
+    },
+    "0x8a": {
+      "element": "0x8a",
+      "eIndex": 138,
+      "action": "Raw Data Set Sequence",
+      "description": "keep"
+    },
+    "0x91": {
+      "element": "0x91",
+      "eIndex": 145,
+      "action": "Receiver gain of prescan",
+      "description": "keep"
+    }
+  },
+  "PVT Block Name": {
+    "creator": "PVT Block Name",
+    "groupNo": "0x3253",
+    "gIndex": 12883,
+    "0x00": {
+      "element": "0x00",
+      "eIndex": 0,
+      "action": "Total Number of Fractions",
+      "description": "keep"
+    },
+    "0x01": {
+      "element": "0x01",
+      "eIndex": 1,
+      "action": "Last Treated Fraction",
+      "description": "keep"
+    },
+    "0x02": {
+      "element": "0x02",
+      "eIndex": 2,
+      "action": "Actual Session Dose",
+      "description": "keep"
+    },
+    "0x09": {
+      "element": "0x09",
+      "eIndex": 9,
+      "action": "Beam Secondary Name",
+      "description": "keep"
+    },
+    "0x2A": {
+      "element": "0x2A",
+      "eIndex": 42,
+      "action": "Treatment Session Beam Data",
+      "description": "keep"
+    },
+    "0x28": {
+      "element": "0x28",
+      "eIndex": 40,
+      "action": "Related Referenced Beam Number",
+      "description": "keep"
+    },
+    "0x04": {"element": "0x04", "eIndex": 4, "action": "Daily Dose", "description": "keep"},
+    "0x06": {"element": "0x06", "eIndex": 6, "action": "Lifetime Total Dose", "description": "keep"}
+  }
+}
