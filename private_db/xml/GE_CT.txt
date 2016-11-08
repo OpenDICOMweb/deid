@@ -14,6 +14,7 @@
  <e en="T" t="0009[GEMS_IDEN_01]e6" n="Genesis Version - now"> @keep() </e>
 
  <!-- Group 0x0011 has patient status; omit the entire group -->
+ <e en="T" t="0011[Patient_Status]00" n="Patient Info omit entire group"> remove </e>
 
  <e en="T" t="0019[GEMS_ACQU_01]02" n="Number of cells I in Detector"> @keep() </e>
  <e en="T" t="0019[GEMS_ACQU_01]03" n="Cell number at Theta"> @keep() </e>
@@ -43,7 +44,6 @@
  <e en="T" t="0019[GEMS_ACQU_01]39" n="Scan FOV type">           @keep() </e>
  <e en="T" t="0019[GEMS_ACQU_01]40" n="Stat reconf flag">        @keep() </e>
  <e en="T" t="0019[GEMS_ACQU_01]41" n="Compute type">            @keep() </e>
-
  <e en="T" t="0019[GEMS_ACQU_01]42" n="Segment number">          @keep() </e>
  <e en="T" t="0019[GEMS_ACQU_01]43" n="Total segments requested"> @keep() </e>
  <e en="T" t="0019[GEMS_ACQU_01]44" n="Interscan delay">         @keep() </e>
@@ -60,7 +60,6 @@
  <e en="T" t="0019[GEMS_ACQU_01]62" n="Increment between views"> @keep() </e>
  <e en="T" t="0019[GEMS_ACQU_01]6a" n="Dependent on #views processed"> @keep() </e>
  <e en="T" t="0019[GEMS_ACQU_01]6b" n="Field of view in detector cells"> @keep() </e>
-
  <e en="T" t="0019[GEMS_ACQU_01]70" n="value of back projection button">   @keep() </e>
  <e en="T" t="0019[GEMS_ACQU_01]71" n="Set if fatq estimates were used">   @keep() </e>
  <e en="T" t="0019[GEMS_ACQU_01]72" n="Z can avg over views">              @keep() </e>

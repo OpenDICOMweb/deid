@@ -1,0 +1,2669 @@
+#Tag|VR|VM|Code|Description|Private Creator
+#||||FCR Go � Flash IIP|897N100471
+#||||Flash IIP � CR/DR Console|897N0547D (010-113-90)
+#|||||
+#|||||
+#|||||
+#|||||
+@|Fuji CR||||
+0x00090010|LO|1|K|Fuji Film Private Creator ID|FDMS 1.0
+0x00091004|SH||X|Image Control Unit|FDMS 1.0
+0x00091005|OW||X|Image UID|FDMS 1.0
+0x00091006|OW||X|Route Image UID|FDMS 1.0
+0x00091008|UL||KB|Image Display Information Version No.|FDMS 1.0
+0x00091009|UL||X|Patient Information Version No.|FDMS 1.0
+0x0009100C|OW||X|Film UID|FDMS 1.0
+0x00091010|CS||K|Exposure Unit Type Code|FDMS 1.0
+0x00091080|LO||X|Kanji Hospital Name|FDMS 1.0
+0x00091090|ST||X|Distribution Code|FDMS 1.0
+0x00091092|SH||X|Kanji Department Name|FDMS 1.0
+0x000910F0|CS||K|Blackening Process Flag|FDMS 1.0
+0x000910F1|ST||K|Processing Information Flag|FDMS 1.0
+#|||||
+0x00190010|LO|1|K|Fuji Private Creator ID|FDMS 1.0
+0x00191015|LO||X|Kanji Body Part for Exposure|FDMS 1.0
+0x00191032|LO||X|Kanji Menu Name|FDMS 1.0
+0x00191040|CS||KB|Image Processing Type|FDMS 1.0
+0x00191050|CS||K|EDR Mode|FDMS 1.0
+0x00191060|SH||X|Radiographers Code|FDMS 1.0
+0x00191070|IS||K|Split Exposure Format|FDMS 1.0
+0x00191071|IS||K|No. of Split Exposure Frames|FDMS 1.0
+0x00191080|IS||K|Reading Position Specification|FDMS 1.0
+0x00191081|IS||K|Reading Sensitivity Center|FDMS 1.0
+#|||||
+0x00210010|LO|1|K|Fuji Private Creator ID|FDMS 1.0
+0x00211010|CS||X|FCR Image ID|FDMS 1.0
+0x00211030|CS||X|Set No.|FDMS 1.0
+0x00211040|IS||X|Image No. In the Set|FDMS 1.0
+0x00211050|CS||K|Pair Processing Information|FDMS 1.0
+0x00211080|OB||X|Equipment Type-Specific Information|FDMS 1.0
+#|||||
+0x00250010|LO|1|K|Fuji Private Creator ID|FDMS 1.0
+0x00251010|US||K|Relative Light Emission Amount Sk|FDMS 1.0
+0x00251011|US||K|Term of Correction for Each IP Type St|FDMS 1.0
+0x00251012|US||K|Reading Gain Gp|FDMS 1.0
+#|||||
+0x00290010|LO|1|K|Fuji Private Creator ID|FDMS 1.0
+0x00291050|CS||K|Data Compression Code|FDMS 1.0
+#|||||
+0x50F10010|LO|1|K|Fuji Private Creator ID|FDMS 1.0
+0x50F11006|CS||K|Energy Subtraction Param|FDMS 1.0
+0x50F11007|CS||K|Subtraction Registration Result|FDMS 1.0
+0x50F11008|CS||K|Energy Subtraction Param. 2|FDMS 1.0
+0x50F11009|SL||K|Afin Conversion Coefficient|FDMS 1.0
+0x50F1100A|SH||K|FNC Parameters|FDMS 1.0
+0x50F11020|CS||K|Image Processing Modification Flag|FDMS 1.0
+# GEMS/GE_CT.txt
+#Tag|VR|VM|Code|Description|Private Creator|
+#||||||
+#||||||
+#||||||
+#||||HiSpeed QX/i 1.0  2342450-100 Rev. 0|2012.12.27|
+#||||||
+#||||"HiSpeed LX/i, FX/i, DX/i, DX/iB - 2.00/2.01/2.02  2227206 Rev. 0"||
+#||||||
+#||||"HiSpeed ZX/i, LX/i,FX/i,DX/i,DX/iB - 10.x, 11.x, 5144074 Rev 2"||
+#||||"HiSpeed NX/i, NX/i Pro - 9.x, 11.x  2371419 Rev 3"||
+#||||"HiSpeed NX/i, NX/i Pro -8.x, 7.x  2371419 Rev 1"||
+#||||"HiSpeed NX/i -5.5x, NXi PRO -5.5x    2274762 Rev 2.1"||
+#||||HiSpeed NX/i -5.0x    2274762 Rev 1.2||
+#||||"HiSpeed ZX/i, LX/i,FX/i,DX/i,DX/iB - 6.xx  2227206 Rev 4.1"||
+#||||"HiSpeed ZX/i, LX/i,FX/i,DX/i,DX/iB - 4.xx 2227206 Rev 3.3"||
+#||||"HiSpeed LX/i, FX/i, DX/i, DX/iB - 2.5x/3.0x 2227206 Rev. 2.0"||
+#||||||
+#||||Discovery CT750_HD � Software Release 08MW39.4 DOC0500644r3_CS||
+#||||Discovery CT750 HD - Software Release 11MW44.7 DOC1053442 Rev 1|2012.12.26|
+#||||"Discovery CT750 HD - Software Release 10MW25.6   DOC0793025, REV 5"|2012.12.26|
+#||||Discovery CT590 RT - Software Release 10BW06.5    DOC0636565r7_CS|2012.12.26|
+#||||Discovery CT750 HD - Software Release 09MW29.14   DOC0636565r7_CS|2012.12.26|
+#||||Discovery CT590 RT - Software Release 11BW04.8    DOC0860282 Rev 3|2012.12.26|
+#||||Discovery CT590 RT - Software Release 09BW35.11    DOC0636565r4_CS|2012.12.26|
+#||||||
+#||||# LightSpeed 07x|2012.05.31|
+#||||# LightSpeed 08x|2012.05.31|
+#||||# LightSpeed VCT ME2PLUS|2012.07.06|
+@|GE CT|||||
+0x00090010|LO|1|K|GEHC Private Creator ID|GEMS_IDEN_01|
+0x00091001|LO|1|X|Full fidelity|GEMS_IDEN_01|
+0x00091002|SH|1|K|Suite id|GEMS_IDEN_01|
+0x00091004|SH|1|K|Product ID|GEMS_IDEN_01|
+0x00091017|UN|1|X|GEMS_IDEN_01 Undefined XX17|GEMS_IDEN_01|
+0x0009101a|UN|1|X|GEMS_IDEN_01 Undefined XX1a|GEMS_IDEN_01|
+0x00091020|UN|1|X|GEMS_IDEN_01 Undefined XX20|GEMS_IDEN_01|
+0x00091027|SL|1|X|Image Actual Date|GEMS_IDEN_01|
+0x0009102f|UN|1|X|GEMS_IDEN_01 Undefined XX2f|GEMS_IDEN_01|
+0x00091030|SH|1|R|Service id|GEMS_IDEN_01|
+0x00091031|SH|1|X|Mobile location number|GEMS_IDEN_01|
+0x000910e2|UN|1|X|GEMS_IDEN_01 Undefined XXe2|GEMS_IDEN_01|
+0x000910e3|UI|1|X|Equipment UID|GEMS_IDEN_01|
+0x000910e6|SH|1|R|Genesis Version - now|GEMS_IDEN_01|
+0x000910e7|UL|1|X|Exam Record checksum|GEMS_IDEN_01|
+0x000910e9|SL|1|X|Actual series data time stamp|GEMS_IDEN_01|
+#||||||
+0x00110010|LO|1|X|GEHC Private Creator ID|GEMS_PATI_01|
+0x00111010|SS|1|X|Patient Status|GEMS_PATI_01|
+#||||||
+0x00190010|LO|1|K|GEHC Private Creator ID|GEMS_ACQU_01|
+0x00191002|SL|1|KB|Number of cells I in Detector|GEMS_ACQU_01|
+0x00191003|DS|1|KB|Cell number at Theta|GEMS_ACQU_01|
+0x00191004|DS|1|KB|Cell spacing|GEMS_ACQU_01|
+0x0019100f|DS|1|KB|Horiz. Frame of ref.|GEMS_ACQU_01|
+0x00191011|SS|1|KB|Series Contrast|GEMS_ACQU_01|
+0x00191013|SS|1|KB|Start number for baseline|GEMS_ACQU_01|
+0x00191014|SS|1|KB|End number for baseline|GEMS_ACQU_01|
+0x00191015|SS|1|KB|Start number for enhanced scans|GEMS_ACQU_01|
+0x00191016|SS|1|KB|End number for enhanced scans|GEMS_ACQU_01|
+0x00191017|SS|1|KB|Series plane|GEMS_ACQU_01|
+0x00191018|LO|1|R|First scan ras|GEMS_ACQU_01|
+0x00191019|DS|1|KB|First scan location|GEMS_ACQU_01|
+0x0019101a|LO|1|R|Last scan ras|GEMS_ACQU_01|
+0x0019101b|DS|1|KB|Last scan loc|GEMS_ACQU_01|
+0x0019101e|DS|3|KB|Display field of view|GEMS_ACQU_01|
+0x00191023|DS|1|KB|Table speed [mm/rotation]|GEMS_ACQU_01|
+0x00191024|DS|1|R|Mid scan time|GEMS_ACQU_01|
+0x00191025|SS|1|KB|Mid scan flag|GEMS_ACQU_01|
+0x00191026|SL|1|KB|Degrees of azimuth / Tube Azimuth [degree]|GEMS_ACQU_01|
+0x00191027|DS|1|KB|Gantry period / Rotation Speed [msec]|GEMS_ACQU_01|
+0x0019102a|DS|1|KB|x-ray On position|GEMS_ACQU_01|
+0x0019102b|DS|1|KB|x-ray Off position|GEMS_ACQU_01|
+0x0019102c|SL|1|KB|Number of triggers|GEMS_ACQU_01|
+0x0019102e|DS|1|KB|Angle of first view|GEMS_ACQU_01|
+0x0019102f|DS|1|KB|Trigger frequency|GEMS_ACQU_01|
+0x00191039|SS|1|KB|Scan FOV type|GEMS_ACQU_01|
+0x00191040|SS|1|KB|Stat recon flag|GEMS_ACQU_01|
+0x00191041|SS|1|KB|Compute type|GEMS_ACQU_01|
+0x00191042|SS|1|KB|Segment number|GEMS_ACQU_01|
+0x00191043|SS|1|KB|Total segments requested|GEMS_ACQU_01|
+0x00191044|DS|1|KB|Interscan delay|GEMS_ACQU_01|
+0x00191047|SS|1|KB|View compression factor|GEMS_ACQU_01|
+0x0019104a|SS|1|KB|Total no. of ref channels|GEMS_ACQU_01|
+0x0019104b|SL|1|KB|Data size for scan data|GEMS_ACQU_01|
+0x00191052|SS|1|KB|Recon post proc. Flag|GEMS_ACQU_01|
+0x00191057|SS|1|KB|CT water number|GEMS_ACQU_01|
+0x00191058|SS|1|KB|CT bone number|GEMS_ACQU_01|
+0x0019105e|SL|1|KB|Number of channels (1�512)|GEMS_ACQU_01|
+0x0019105f|SL|1|KB|Increment between channels|GEMS_ACQU_01|
+0x00191060|SL|1|KB|Starting view|GEMS_ACQU_01|
+0x00191061|SL|1|KB|Number of views|GEMS_ACQU_01|
+0x00191062|SL|1|KB|Increment between views|GEMS_ACQU_01|
+0x0019106a|SS|1|KB|Dependent on #views processed|GEMS_ACQU_01|
+0x0019106b|SS|1|KB|Field of view in detector cells|GEMS_ACQU_01|
+0x00191070|SS|1|KB|Value of back projection button|GEMS_ACQU_01|
+0x00191071|SS|1|KB|Set if fatq estimates were used|GEMS_ACQU_01|
+0x00191072|DS|1|KB|Z chan avg over views|GEMS_ACQU_01|
+0x00191073|DS|1|KB|Avg of left ref chans over views|GEMS_ACQU_01|
+0x00191074|DS|1|KB|Max left chan over views|GEMS_ACQU_01|
+0x00191075|DS|1|KB|Avg of right ref chans over views|GEMS_ACQU_01|
+0x00191076|DS|1|KB|Max right chan over views|GEMS_ACQU_01|
+0x001910da|SS|1|KB|Reference channel used|GEMS_ACQU_01|
+0x001910db|DS|1|KB|Back projector coefficient|GEMS_ACQU_01|
+0x001910dc|SS|1|KB|Primary speed correction used|GEMS_ACQU_01|
+0x001910dd|SS|1|KB|Overrange correction used|GEMS_ACQU_01|
+0x001910de|DS|1|KB|Dynamic Z alpha value|GEMS_ACQU_01|
+#||||||
+0x00210010|LO|1|K|GEHC Private Creator ID|GEMS_RELA_01|
+0x00211003|SS|1|R|Series from which Prescribed|GEMS_RELA_01|
+0x00211005|SH|1|R|Genesis Version - now|GEMS_RELA_01|
+0x00211007|UL|1|X|Series Record checksum|GEMS_RELA_01|
+0x00211018|SH|1|R|Genesis version - Now|GEMS_RELA_01|
+0x00211019|UL|1|X|Acqrecon record checksum|GEMS_RELA_01|
+0x00211035|SS|1|R|Series Prescribed From|GEMS_RELA_01|
+0x00211036|SS|1|R|Image Prescribed From|GEMS_RELA_01|
+0x00211037|SS|1|KB|Screen Format|GEMS_RELA_01|
+0x0021014a|LO|1|R|Anatomical reference for scout|GEMS_RELA_01|
+0x00211090|SS|1|KB|Tube focal spot position|GEMS_RELA_01|
+0x00211091|SS|1|KB|Biopsy position|GEMS_RELA_01|
+0x00211092|FL|1|KB|Biopsy T location|GEMS_RELA_01|
+0x00211093|FL|1|KB|Biopsy ref location|GEMS_RELA_01|
+#||||||
+0x00230010|LO|1|X|GEHC Private Creator ID|GEMS_STDY_01|
+0x00231070|FD|1|X|Start time(secs) in first axial|GEMS_STDY_01|
+0x00231074|SL|1|X|No. of updates to header|GEMS_STDY_01|
+0x0023107d|SS|1|X|Indicates if the study has complete info (DICOM/genesis)|GEMS_STDY_01|
+#||||||
+0x00250010|LO|1|K|GEHC Private Creator ID|GEMS_SERS_01|
+0x00251006|SS|1|KB|Last pulse sequence used|GEMS_SERS_01|
+0x00251007|SL|1|KB|Images in Series|GEMS_SERS_01|
+0x00251010|SL|1|KB|Landmark Counter|GEMS_SERS_01|
+0x00251011|SS|1|KB|Number of Acquisitions|GEMS_SERS_01|
+0x00251017|SL|1|X|Series Complete Flag|GEMS_SERS_01|
+0x00251018|SL|1|X|Number of images archived|GEMS_SERS_01|
+0x00251019|SL|1|X|Last image number used|GEMS_SERS_01|
+0x0025101a|SH|1|X|Primary Receiver Suite and Host|GEMS_SERS_01|
+#||||||
+0x00270010|LO|1|K|GEHC Private Creator ID|GEMS_IMAG_01|
+0x00271006|SL|1|X|Image archive flag|GEMS_IMAG_01|
+0x00271010|SS|1|KB|Scout Type|GEMS_IMAG_01|
+0x0027101c|SL|1|KB|Vma mamp|GEMS_IMAG_01|
+0x0027101d|SS|1|KB|Vma phase|GEMS_IMAG_01|
+0x0027101e|SL|1|KB|Vma mod|GEMS_IMAG_01|
+# Start||||Duplicate to support aliases||
+0x0027101f|SL|1|KB|GE Noise Index * 10|GEMS_IMAG_01|
+0x0027101f|SL|1|KB|Vma clip|GEMS_IMAG_01|
+# End||||||
+0x00271020|SS|1|KB|Smart scan  ON/OFF flag|GEMS_IMAG_01|
+0x00271030|SH|1|R|Foreign Image Revision|GEMS_IMAG_01|
+0x00271035|SS|1|KB|Plane Type|GEMS_IMAG_01|
+0x00271040|SH|1|R|RAS letter of image location|GEMS_IMAG_01|
+0x00271041|FL|1|KB|Image Location|GEMS_IMAG_01|
+0x00271042|FL|1|KB|Center R coord of plane image|GEMS_IMAG_01|
+0x00271043|FL|1|KB|Center A coord of plane image|GEMS_IMAG_01|
+0x00271044|FL|1|KB|Center S coord of plane image|GEMS_IMAG_01|
+0x00271045|FL|1|KB|Normal R coord|GEMS_IMAG_01|
+0x00271046|FL|1|KB|Normal A coord|GEMS_IMAG_01|
+0x00271047|FL|1|KB|Normal S coord|GEMS_IMAG_01|
+0x00271048|FL|1|KB|R Coord of Top Right Corner|GEMS_IMAG_01|
+0x00271049|FL|1|KB|A Coord of Top Right Corner|GEMS_IMAG_01|
+0x0027104a|FL|1|KB|S Coord of Top Right Corner|GEMS_IMAG_01|
+0x0027104b|FL|1|KB|R Coord of Bottom Right Corner|GEMS_IMAG_01|
+0x0027104c|FL|1|KB|A Coord of Bottom Right Corner|GEMS_IMAG_01|
+0x0027104d|FL|1|KB|S Coord of Bottom Right Corner|GEMS_IMAG_01|
+0x00271050|FL|1|KB|Table start location|GEMS_IMAG_01|
+0x00271051|FL|1|KB|Table end location|GEMS_IMAG_01|
+0x00271052|SH|1|R|RAS letter for side of image|GEMS_IMAG_01|
+0x00271053|SH|1|R|RAS letter for anterior/posterior|GEMS_IMAG_01|
+0x00271054|SH|1|R|RAS letter for scout start loc|GEMS_IMAG_01|
+0x00271055|SH|1|R|RAS letter for scout end loc|GEMS_IMAG_01|
+#||||||
+0x00290010|LO|1|K|GEHC Private Creator ID|GEMS_CT_FLRO_01|
+0x00291101|SS|1|K|CT Int Fluoro|GEMS_CT_FLRO_01|
+0x00291102|DS|1|K|Image Precise Location|GEMS_CT_FLRO_01|
+#||||||
+0x00290010|LO|1|K|GEHC Private Creator ID|GEMS_IMPS_01|
+0x00291004|SL|1|KB|Lower range of Pixels1|GEMS_IMPS_01|
+0x00291005|DS|1|KB|Lower range of Pixels1|GEMS_IMPS_01|
+0x00291006|DS|1|KB|Lower range of Pixels1|GEMS_IMPS_01|
+0x00291007|SL|1|KB|Lower range of Pixels1|GEMS_IMPS_01|
+0x00291008|SH|1|R|Lower range of Pixels1|GEMS_IMPS_01|
+0x00291009|SH|1|R|Lower range of Pixels1|GEMS_IMPS_01|
+0x0029100a|SS|1|KB|Lower range of Pixels1|GEMS_IMPS_01|
+0x00291026|SS|1|KB|Version of the hdr struct|GEMS_IMPS_01|
+0x00291034|SL|1|KB|Advantage comp. Overflow|GEMS_IMPS_01|
+#||||||
+0x00390010|LO|1|K|GEHC Private Creator ID|GEMS_0039|
+0x00391095|LO|1|R|SR Application Name|GEMS_0039|
+#||||||
+0x00430010|LO|1|K|GEHC Private Creator ID|GEMS_PARM_01|
+0x00431010|US|1|KB|Window value|GEMS_PARM_01|
+0x00431011|US|1|KB|Total input views|GEMS_PARM_01|
+0x00431012|SS|3|KB|X-ray chain|GEMS_PARM_01|
+0x00431013|SS|5|KB|Decon kernel parameters|GEMS_PARM_01|
+0x00431014|SS|3|KB|Calibration parameters|GEMS_PARM_01|
+0x00431015|SS|3|KB|Total output views|GEMS_PARM_01|
+0x00431016|SS|5|KB|Number of overranges|GEMS_PARM_01|
+0x00431017|DS|1|KB|IBH image scale factors|GEMS_PARM_01|
+0x00431018|DS|3|KB|BBH coefficients|GEMS_PARM_01|
+0x00431019|SS|1|KB|Number of BBH chains to blend|GEMS_PARM_01|
+0x0043101a|SL|1|KB|Starting channel number|GEMS_PARM_01|
+0x0043101b|SS|1|KB|Ppscan parameters|GEMS_PARM_01|
+0x0043101c|SS|1|KB|GE image integrity|GEMS_PARM_01|
+0x0043101d|SS|1|KB|Level value|GEMS_PARM_01|
+0x0043101e|DS|1|R|Delta start time|GEMS_PARM_01|
+0x0043101f|SL|1|KB|Max overranges in a view|GEMS_PARM_01|
+0x00431020|DS|1|KB|Avg overranges all views|GEMS_PARM_01|
+0x00431021|SS|1|KB|Corrected after glow terms|GEMS_PARM_01|
+0x00431025|SS|6|KB|Reference channels|GEMS_PARM_01|
+0x00431026|US|6|KB|No views ref chans blocked|GEMS_PARM_01|
+0x00431027|SH|1|KB|Scan pitch ratio|GEMS_PARM_01|
+0x00431028|OB|1|X|Unique image iden|GEMS_PARM_01|
+0x00431029|OB|1|X|Histogram tables|GEMS_PARM_01|
+0x0043102a|OB|1|X|User defined data|GEMS_PARM_01|
+0x0043102b|SS|4|R|Private Scan Options|GEMS_PARM_01|
+0x00431031|DS|"2,3"|KB|RA cord of target recon center|GEMS_PARM_01|
+0x00431040|FL|4|KB|Trigger on position|GEMS_PARM_01|
+0x00431041|FL|4|KB|Degree of rotation|GEMS_PARM_01|
+0x00431042|SL|4|KB|DAS trigger source|GEMS_PARM_01|
+0x00431043|SL|4|KB|DAS fpa gain|GEMS_PARM_01|
+0x00431044|SL|4|KB|DAS output source|GEMS_PARM_01|
+0x00431045|SL|4|KB|DAS ad input|GEMS_PARM_01|
+0x00431046|SL|4|KB|DAS cal mode|GEMS_PARM_01|
+0x00431047|SL|4|KB|DAS cal frequency|GEMS_PARM_01|
+0x00431048|SL|4|KB|DAS reg xm|GEMS_PARM_01|
+0x00431049|SL|4|KB|DAS auto zero|GEMS_PARM_01|
+0x0043104a|SS|4|KB|Starting channel of view|GEMS_PARM_01|
+0x0043104b|SL|4|KB|DAS xm pattern|GEMS_PARM_01|
+0x0043104c|SS|4|KB|TGGC trigger mode|GEMS_PARM_01|
+0x0043104d|FL|4|R|Start scan to X-ray on delay|GEMS_PARM_01|
+0x0043104e|FL|4|KB|Duration of X-ray on|GEMS_PARM_01|
+0x00431063|SH|1|R|Raw Data ID|GEMS_PARM_01|
+0x00431064|LO|1|R|Recon filter|GEMS_PARM_01|
+0x00431065|US|1|KB|Motion Correction Indicator|GEMS_PARM_01|
+0x00431066|US|1|KB|Helical Correction Indicator|GEMS_PARM_01|
+0x00431067|US|1|KB|IBO Correction Indicator|GEMS_PARM_01|
+#||||Duplicate entry to support aliases||
+0x00431068|US|1|KB|XT Correction Indicator|GEMS_PARM_01|
+0x00431068|US|1|KB|Cross-Talk Correction Indicator|GEMS_PARM_01|
+# End||||||
+0x00431069|US|1|KB|Q-cal Correction Indicator|GEMS_PARM_01|
+#||||Duplicate to support an alias for name||
+0x0043106a|US|1|KB|AV Correction Indicator|GEMS_PARM_01|
+0x0043106a|US|1|KB|Afterglow Correction Indicator|GEMS_PARM_01|
+#||||Duplicate to support an alias for name||
+0x0043106b|US|1|KB|L-MDK Correction Indicator|GEMS_PARM_01|
+0x0043106b|US|1|KB|Local Decon Correction Indicator|GEMS_PARM_01|
+0x0043106c|IS|1|KB|Detector Row|GEMS_PARM_01|
+#||||Duplicate to support an alias for name||
+0x0043106d|US|1|KB|Area Size|GEMS_PARM_01|
+0x0043106d|US|1|KB|Z-smoothing Size|GEMS_PARM_01|
+0x0043106e|SH|1|KB|Auto mA Mode|GEMS_PARM_01|
+#||||||
+0x00450010|LO|1|K|GEHC Private Creator ID|GEMS_HELIOS_01|
+0x00451001|SS|1|KB|Number of Macro Rows in Detector|GEMS_HELIOS_01|
+0x00451002|FL|1|KB|Macro width at ISO Center|GEMS_HELIOS_01|
+0x00451003|SS|1|KB|DAS type|GEMS_HELIOS_01|
+0x00451004|SS|1|KB|DAS gain|GEMS_HELIOS_01|
+0x00451005|SS|1|KB|DAS Temprature|GEMS_HELIOS_01|
+0x00451006|CS|1|R|Table Direction|GEMS_HELIOS_01|
+0x00451007|FL|1|KB|Z smoothing Factor|GEMS_HELIOS_01|
+0x00451008|SS|1|KB|View Weighting Mode|GEMS_HELIOS_01|
+0x00451009|SS|1|KB|Sigma Row number|GEMS_HELIOS_01|
+0x0045100a|FL|1|KB|Minimum DAS value|GEMS_HELIOS_01|
+0x0045100b|FL|1|KB|Maximum Offset Value|GEMS_HELIOS_01|
+0x0045100c|SS|1|KB|Number of Views shifted|GEMS_HELIOS_01|
+0x0045100d|SS|1|KB|Z tracking Flag|GEMS_HELIOS_01|
+0x0045100e|FL|1|KB|Mean Z error|GEMS_HELIOS_01|
+0x0045100f|FL|1|KB|Z tracking Error|GEMS_HELIOS_01|
+0x00451010|SS|1|KB|Start View 2A|GEMS_HELIOS_01|
+0x00451011|SS|1|KB|Number of Views 2A|GEMS_HELIOS_01|
+0x00451012|SS|1|KB|Start View 1A|GEMS_HELIOS_01|
+0x00451013|SS|1|KB|Sigma Mode|GEMS_HELIOS_01|
+0x00451014|SS|1|KB|Number of Views 1A|GEMS_HELIOS_01|
+0x00451015|SS|1|KB|Start View 2B|GEMS_HELIOS_01|
+0x00451016|SS|1|KB|Number Views 2B|GEMS_HELIOS_01|
+0x00451017|SS|1|KB|Start View 1B|GEMS_HELIOS_01|
+0x00451018|SS|1|KB|Number of Views 1B|GEMS_HELIOS_01|
+0x00401019|SS|1|X|Air Calibration Date|GEMS_HELIOS_01|
+0x0045101a|SS|1|X|Air Calibration Time|GEMS_HELIOS_01|
+0x0045101b|SS|1|X|Phantom Calibration Date|GEMS_HELIOS_01|
+0x0045101c|SS|1|X|Phantom Calibration Time|GEMS_HELIOS_01|
+0x0045101d|SS|1|X|Z Slope Calibration Date|GEMS_HELIOS_01|
+0x0045101e|SS|1|X|Z Slope Calibration Time|GEMS_HELIOS_01|
+0x0045101f|SS|1|X|Cross Talk Calibration Date|GEMS_HELIOS_01|
+0x00451020|SS|1|X|Cross Talk Calibration Time|GEMS_HELIOS_01|
+0x00451021|SS|1|KB|Iterbone Flag|GEMS_HELIOS_01|
+0x00451022|SS|1|KB|Perisstaltic Flag|GEMS_HELIOS_01|
+0x00451030|CS|1|R|CardiacReconAlgorithm|GEMS_HELIOS_01|
+0x00451031|CS|1|R|AvgHeartRateForImage|GEMS_HELIOS_01|
+0x00451032|FL|1|KB|TemporalResolution|GEMS_HELIOS_01|
+0x00451033|CS|1|R|PctRpeakDelay|GEMS_HELIOS_01|
+0x00451034|CS|1|R|ActualPctRpeakDelay|GEMS_HELIOS_01|
+0x00451036|CS|1|R|EkgFullMaStartPhase|GEMS_HELIOS_01|
+0x00451037|CS|1|R|EkgFullMaEndPhase|GEMS_HELIOS_01|
+0x00451038|CS|1|R|EkgModulationMaxMa|GEMS_HELIOS_01|
+0x00451039|CS|1|R|EkgModulationMinMa|GEMS_HELIOS_01|
+0x0045103b|LO|1|R|Noise ReductionImageFilterDesc|GEMS_HELIOS_01|
+0x0045103f|IS|1|R|RPeakTimeDelay|GEMS_HELIOS_01|
+0x00451044|IS|1|R|ActualRPeakTimeDelay|GEMS_HELIOS_01|
+0x00451045|ST|1|R|CardiacScanOption|GEMS_HELIOS_01|
+#||||||
+0x00490010|LO|1|K|GEHC Private Creator ID|GEMS_CT_CARDIAC_001|
+0x00491001|SQ|1|R|CT Cardiac Sequence|GEMS_CT_CARDIAC_001|
+0x00491002|CS|1|R|HeartRateAtConfirm|GEMS_CT_CARDIAC_001|
+0x00491003|FL|1|KB|AvgHeartRatePriorToConfirm|GEMS_CT_CARDIAC_001|
+0x00491004|CS|1|R|MinHeartRatePriorToConfirm|GEMS_CT_CARDIAC_001|
+0x00491005|CS|1|R|MaxHeartRatePriorToConfirm|GEMS_CT_CARDIAC_001|
+0x00491006|FL|1|KB|StdDevHeartRate PriorToConfirm|GEMS_CT_CARDIAC_001|
+0x00491007|US|1|KB|NumHeartRateSamples PriorToConfirm|GEMS_CT_CARDIAC_001|
+0x00491008|CS|1|R|AutoHeartRateDetectPredict|GEMS_CT_CARDIAC_001|
+0x00491009|CS|1|R|SystemOptimizedHeartRate|GEMS_CT_CARDIAC_001|
+0x0049100a|ST|1|R|EkgMonitorType|GEMS_CT_CARDIAC_001|
+0x0049100b|CS|1|R|NumReconSectors|GEMS_CT_CARDIAC_001|
+0x0049100c|FL|1-256|KB|RpeakTimeStamps|GEMS_CT_CARDIAC_001|
+0x00491016|SH|1|R|EkgGatingType|GEMS_CT_CARDIAC_001|
+0x0049101b|FL|1|KB|Ekg Wave Time Off First Data Point|GEMS_CT_CARDIAC_001|
+0x00491022|CS|1|R|TemporalAlg|GEMS_CT_CARDIAC_001|
+0x00491023|CS|1|R|PhaseLocation|GEMS_CT_CARDIAC_001|
+0x00491024|OW|1|X|PreBlendedCycle1|GEMS_CT_CARDIAC_001|
+0x00491025|OW|1|X|PreBlendedCycle2|GEMS_CT_CARDIAC_001|
+0x00491026|CS|1|R|CompressionAlg|GEMS_CT_CARDIAC_001|
+#||||||
+0x004b0010|LO|1|K|GEHC Private Creator ID|GEMS_HINO_CT_01|
+0x004b1001|DS|1-n|KB|Beam Thickness|GEMS_HINO_CT_01|
+0x004b1002|DS|1-n|R|R Time|GEMS_HINO_CT_01|
+0x004b1003|IS|1|R|HBC number|GEMS_HINO_CT_01|
+#||||||
+0x00510010|LO|1|X|GEHC Private Creator ID|GEHC_CT_ADVAPP_001|
+0x00511001|SQ|1|X|CTVESSequence|GEHC_CT_ADVAPP_001|
+#||||||
+0x00530010|LO|1|K|GEHC Private Creator ID|GEHC_CT_ADVAPP_001|
+0x00531001|FL |1-n|KB|MultiEnergyNoiseRedBlendingFact|GEHC_CT_ADVAPP_001|
+0x00531002|FL |1-n|KB|MultiEnergyNoiseRedScaleFact|GEHC_CT_ADVAPP_001|
+0x00531003|IS |2|KB|MultiEnergyMDTransformEnergies|GEHC_CT_ADVAPP_001|
+0x00531020|IS |1|KB|ShuttleFlag|GEHC_CT_ADVAPP_001|
+0x00531021|IS |1|K|TableSpeedNotReachesTargetFlag|GEHC_CT_ADVAPP_001|
+0x00531040|SH |1|R|IterativeReconAnnotation|GEHC_CT_ADVAPP_001|
+0x00531041|SH |1|R|IterativeReconMode|GEHC_CT_ADVAPP_001|
+0x00531042|LO |1|R|IterativeReconConfiguration|GEHC_CT_ADVAPP_001|
+0x00531043|SH |1|R|IterativeReconLevel|GEHC_CT_ADVAPP_001|
+0x00531060|SH |1|R|ReconFlipRotateAnno|GEHC_CT_ADVAPP_001|
+#||||Duplicate to support aliases||
+0x00531061|SH |1|R|HiResMod|GEHC_CT_ADVAPP_001|
+0x00531061|SH |1|R|hiResolutionFlag|GEHC_CT_ADVAPP_001|
+#||||End duplicate||
+0x00531062|SH |1|R|RespiratoryFlag|GEHC_CT_ADVAPP_001|
+0x00531063|CS |1|R|Image Position Patient Setting|GEHC_CT_ADVAPP_001|
+0x00531064|IS |1|K|Shutter Mode|GEHC_CT_ADVAPP_001|
+0x00531065|IS |1|KB|Shutter Mode Percent|GEHC_CT_ADVAPP_001|
+0x00531066|LO |1|R|Image Browser Annotation|GEHC_CT_ADVAPP_001|
+0x00531067|IS |1|KB|Overlapped Recon Flag|GEHC_CT_ADVAPP_001|
+0x00531068|IS |1|K|Row Number Anotation Flag|GEHC_CT_ADVAPP_001|
+0x00531070|IS |1|KB|MultiEnergySourceCount|GEHC_CT_ADVAPP_001|
+0x00531071|LO |1|R|MultiEnergyScanType|GEHC_CT_ADVAPP_001|
+0x00531072|LO |1|R|MultiEnergyReconType|GEHC_CT_ADVAPP_001|
+0x00531073|LO |1|R|MultiEnergyImageType|GEHC_CT_ADVAPP_001|
+0x00531074|LO |1|R|MultiEnergyMaterialType|GEHC_CT_ADVAPP_001|
+0x00531075|DS |1|KB|MonchromaticEnergy|GEHC_CT_ADVAPP_001|
+0x00531076|DS |1|KB|multiEnergyWeightedSubractionWidth1|GEHC_CT_ADVAPP_001|
+0x00531077|DS |1|KB|MultiEnergyWeightedSubractionWidth2|GEHC_CT_ADVAPP_001|
+0x00531078|LO |1|R|MultiEnergyWeightedSubtractionType|GEHC_CT_ADVAPP_001|
+0x00531079|LO |1|R|MultiEnergyAcqMethod|GEHC_CT_ADVAPP_001|
+0x0053107A|SH |1|R|MultiEnergyFeatAnnotName|GEHC_CT_ADVAPP_001|
+0x0053107B|SH |1|R|MultiEnergyNoiseReduced|GEHC_CT_ADVAPP_001|
+0x0053107C|LO |1|R|MultiEnergyNoiseReducdeMethod|GEHC_CT_ADVAPP_001|
+0x0053107D|LO |1|R|SubOptimalIQString|GEHC_CT_ADVAPP_001|
+0x0053107E|DS |1|KB|MultiEnergyHighLowRatio|GEHC_CT_ADVAPP_001|
+0x00531083|DS |1|KB|AnnotationmA|GEHC_CT_ADVAPP_001|
+0x00531084|DS |1|KB|CommandedFirstkVp|GEHC_CT_ADVAPP_001|
+0x00531085|DS |1|KB|CommandedFirstmA|GEHC_CT_ADVAPP_001|
+0x00531086|DS|1|KB|CommandedSecondkVp|GEHC_CT_ADVAPP_001|
+0x00531087|DS|1|KB|CommandedSecondmA|GEHC_CT_ADVAPP_001|
+0x00531088|SH|1|R|MultiEnergyKVAnnotName|GEHC_CT_ADVAPP_001|
+0x00531089|SH|1|R|MultiEnergyKVUnitLabel|GEHC_CT_ADVAPP_001|
+0x0053108A|LO|1|R|MaterialType#1|GEHC_CT_ADVAPP_001|
+0x0053108B|LO|1|R|MaterialType#2|GEHC_CT_ADVAPP_001|
+0x0053108C|LO|1|R|GSIScanModePreset|GEHC_CT_ADVAPP_001|
+0x0053108D|IS|1|KB|MonoWindowLow|GEHC_CT_ADVAPP_001|
+0x0053108E|IS|1|KB|MonoWindoHigh|GEHC_CT_ADVAPP_001|
+0x0053108F|FL|1-143|KB|MD1AttenuationCurve|GEHC_CT_ADVAPP_001|
+0x00531092|DS|1|KB|MD1intercept|GEHC_CT_ADVAPP_001|
+0x00531093|DS|1|KB|MD1slope|GEHC_CT_ADVAPP_001|
+0x00531095|OW|1|X|MD1supportData|GEHC_CT_ADVAPP_001|
+0x00531096|OW|1|X|MD2supportData|GEHC_CT_ADVAPP_001|
+0x00531097|OW|1|X|NM1data|GEHC_CT_ADVAPP_001|
+0x00531098|DS|1|KB|MD2intercept|GEHC_CT_ADVAPP_001|
+0x00531099|DS|1|KB|MD2slope|GEHC_CT_ADVAPP_001|
+0x0053109A|OW|1|X|NM2data|GEHC_CT_ADVAPP_001|
+0x0053109B|FL|1-143|KB|MD2attenuationCurve|GEHC_CT_ADVAPP_001|
+0x0053109C|SH|1|R|GSIdataVersion|GEHC_CT_ADVAPP_001|
+0x0053109D|LO|1|R|MARsAnnotation|GEHC_CT_ADVAPP_001|
+0x0053109E|IS|1|KB|MultiEnergyNumNoiseRedPair|GEHC_CT_ADVAPP_001|
+0x0053109F|LO|1-n|R|MultiEnergyNoiseRedPairString|GEHC_CT_ADVAPP_001|
+#||||||
+#|0x00470010|LO|1|X|GEHC Private Creator ID|GEHC_IQTB_IDEN_47
+#|0x00471001|SH|1|X|Image Path|GEHC_IQTB_IDEN_47
+#|0x00470002|UL|1|X|Image Date/Time|GEHC_IQTB_IDEN_47
+#|0x00471003|UL|1|X|Queue Sequence Number|GEHC_IQTB_IDEN_47
+#|0x00471004|UL|1|X|Recon Sequence ID|GEHC_IQTB_IDEN_47
+#|#|||||
+#|0x00510010|LO|1|X|GEHC Private Creator ID|GEMS_CT_VES_01
+#|0x00511001|SQ|1|X|CTVESSequence|GEMS_CT_VES_01
+#|#|||||
+#|0x00530010|LO|1|K|GEHC Private Creator ID|GEHC_CT_ADVAPP_001
+#|0x00531020|IS|1|KB|ShuttleFlag|GEHC_CT_ADVAPP_001
+#|0x00531021|IS|1|KB|TableSpeedNot ReachesTargetFlag|GEHC_CT_ADVAPP_001
+#|0x00531040|SH|1|R|IterativeReconAnnotation|GEHC_CT_ADVAPP_001
+#|0x00531041|SH|1|R|IterativeReconMode|GEHC_CT_ADVAPP_001
+#|0x00531042|LO|1|KB|IterativeReconConfiguration|GEHC_CT_ADVAPP_001
+#|0x00531043|SH|1|R|IterativeReconLevel|GEHC_CT_ADVAPP_001
+#|0x00531060|SH|1|R|reconFlipRotateAnno|GEHC_CT_ADVAPP_001
+#|0x00531061|SH|1|R|highResolutionFlag|GEHC_CT_ADVAPP_001
+#|0x00531062|SH|1|R|RespiratoryFlag|GEHC_CT_ADVAPP_001
+#|#|||||
+#|0x00090011|LO|1|X|Siemens Private Creator ID|SPI RELEASE 1
+#|0x00091115|LO|1|X|Siemens Undefined|SPI RELEASE 1
+#|#|||||
+#|0x00090012|LO|1|X|Emageon Private Creator ID|EMAGEON STUDY HOME
+#|0x00091201|LO|1|X|Emageon Undefined|EMAGEON STUDY HOME
+#|#|||||
+#|0x00190013|LO|1|X|Siemens Private Creator ID|SIEMENS SIENET
+#|0x00191301|LO|1|X|Siemens Undefined|SIEMENS SIENET
+#||||||
+#||||"HiSpeed LX/i, FX/i, DX/i, DX/iB - 2.00/2.01/2.02  2227206 Rev. 0"||
+#||||These entries are different based on Private Creator values||
+0x00090010|LO|1|X|GEHC Private Creator ID|GE_YMS_NJ001|
+0x00091031|SH|1|X|Mobile Location Code|GE_YMS_NJ001|
+#||||||
+0x00190010|LO|1|K|GEHC Private Creator ID|GE_YMS_NJ001|
+0x00191002|SL|1|KB|Detector Channel|GE_YMS_NJ001|
+0x00191023|DS|1|KB|Table speed|GE_YMS_NJ001|
+0x00191024|DS|1|R|Mid scan time|GE_YMS_NJ001|
+0x00191026|SL|1|KB|Tube Azimuth|GE_YMS_NJ001|
+0x00191027|DS|1|KB|Gantry Velocity|GE_YMS_NJ001|
+0x00191039|SS|1|KB|SFOV type|GE_YMS_NJ001|
+0x00191042|SS|1|KB|Segment number|GE_YMS_NJ001|
+0x00191043|SS|1|KB|Total segments required|GE_YMS_NJ001|
+#||||||
+0x00270010|LO|1|K|GEHC Private Creator ID|GE_YMS_NJ001|
+0x00271010|SS|1|KB|Scout Type|GE_YMS_NJ001|
+0x00271050|FL|1|KB|Scan start location|GE_YMS_NJ001|
+0x00271051|FL|1|KB|Scan end location|GE_YMS_NJ001|
+#||||||
+0x00430010|LO|1|K|GEHC Private Creator ID|GE_YMS_NJ001|
+0x00431012|SS|3|KB|X-Ray Chain|GE_YMS_NJ001|
+0x0043101e|DS|1|KB|Delta start time [msec]|GE_YMS_NJ001|
+0x00431035|US|1|X|Infant Indicator|GE_YMS_NJ001|
+0x00431037|CS|1|R|Gantry Type|GE_YMS_NJ001|
+0x00431038|SH|1|X|Raw data ID|GE_YMS_NJ001|
+0x00431039|IS|1|KB|Reconstruction Matrix|GE_YMS_NJ001|
+0x00431040|CS|1-n|R|Image Filter|GE_YMS_NJ001|
+0x00431041|US|1|KB|Prospective Addition Indicator|GE_YMS_NJ001|
+0x00431043|US|1|KB|Motion Correction Indicator|GE_YMS_NJ001|
+0x00431044|US|1|KB|Helical Correction Indicator|GE_YMS_NJ001|
+0x00431045|US|1|KB|Cine Correction Indicator|GE_YMS_NJ001|
+0x00431046|US|1|KB|IBO Correction Indicator|GE_YMS_NJ001|
+0x00431047|US|1|KB|BBH Correction Indicator|GE_YMS_NJ001|
+0x00431048|US|1|KB|Advanced Noise Reduction Indicator|GE_YMS_NJ001|
+0x00431049|US|1|KB|Scatter Correction Indicator|GE_YMS_NJ001|
+0x0043104a|DS|3|KB|Recon Center Coordinates|GE_YMS_NJ001|
+0x00431050|US|1|KB|Cross-Talk Correction Indicator|GE_YMS_NJ001|
+0x00431051|US|1|KB|Q-Cal Correction Indicator|GE_YMS_NJ001|
+0x00431052|US|1|KB|Afterglow Correction Indicator|GE_YMS_NJ001|
+0x00431053|US|1|KB|Local Decon Correction Indicator|GE_YMS_NJ001|
+0x00431054|DS|1|KB|Scan Start location|GE_YMS_NJ001|
+0x00431055|DS|1|KB|Scan End location|GE_YMS_NJ001|
+0x00431056|IS|1|KB|Detector Row|GE_YMS_NJ001|
+0x00431057|CS|1|R|Tube Focus|GE_YMS_NJ001|
+#||||||
+0x004b0010|LO|1|K|GEHC Private Creator ID|GE_YMS_NJ001|
+0x004b1001|DS|1-n|KB|Beam Thickness|GE_YMS_NJ001|
+0x004b1002|DS|1-n|R|R Time|GE_YMS_NJ001|
+0x004b1003|IS|1|R|HBC number|GE_YMS_NJ001|
+# GEMS/GE_MR.txt
+#Tag|VR|VM|Code|Description|Private Creator
+#||||Discovery MR750 3.0T (20.0) DOC0464555 Rev. 3|
+#||||Discovery MR750 3.0T (22.0) DOC0700139 Rev. 1|
+#||||Discovery MR450 1.5T (22.0) DOC0700139 Rev. 1|
+#||||Discovery MR450 1.5T (20.1) DOC0506131 Rev. 3|
+#||||Discovery MR750 3.0T (23.0) DOC0802496 Rev. 1|
+#||||Signa modality profile|
+@|GE MR||||
+0x00090010|LO|1|K|GEHC Private Creator ID|GEMS_IDEN_01
+0x00091001|LO|1|X|Full fidelity|GEMS_IDEN_01
+0x00091002|SH|1|K|Suite id|GEMS_IDEN_01
+0x00091004|SH|1|K|Product ID|GEMS_IDEN_01
+0x00091027|SL|1|X|Image Actual Date|GEMS_IDEN_01
+0x00091030|SH|1|R|Service id|GEMS_IDEN_01
+0x00091031|SH|1|X|Mobile location number|GEMS_IDEN_01
+0x000910e3|UI|1|X|Equipment UID|GEMS_IDEN_01
+0x000910e6|SH|1|R|Genesis Version - now|GEMS_IDEN_01
+0x000910e7|UL|1|X|Exam Record Checksum|GEMS_IDEN_01
+0x000910e9|SL|1|X|Actual series data time stamp|GEMS_IDEN_01
+#|||||
+0x00110010|LO|1|X|GEHC Private Creator ID|GEMS_PATI_01
+0x00111010|SS|1|X|Patient Status|GEMS_PATI_01
+#|||||
+0x00190010|LO|1|K|GEHC Private Creator ID|GEMS_ACQU_01
+0x0019100f|DS|1|KB|Horiz. Frame of ref.|GEMS_ACQU_01
+0x00191011|SS|1|KB|Series Contrast|GEMS_ACQU_01
+0x00191012|SS|1|KB|Last pseq|GEMS_ACQU_01
+0x00191017|SS|1|KB|Series plane|GEMS_ACQU_01
+0x00191018|LO|1|R|First scan ras|GEMS_ACQU_01
+0x00191019|DS|1|KB|First scan location|GEMS_ACQU_01
+0x0019101a|LO|1|R|Last scan ras|GEMS_ACQU_01
+0x0019101b|DS|1|KB|Last scan loc|GEMS_ACQU_01
+0x0019101e|DS|1|KB|Display field of view|GEMS_ACQU_01
+0x0019105a|FL|1|KB|Acquisition Duration|GEMS_ACQU_01
+0x0019107d|DS|1|KB|Second echo|GEMS_ACQU_01
+0x0019107e|SS|1|KB|Number of echoes|GEMS_ACQU_01
+0x0019107f|DS|1|KB|Table delta|GEMS_ACQU_01
+0x00191081|SS|1|KB|Contiguous|GEMS_ACQU_01
+0x00191084|DS|1|KB|Peak SAR|GEMS_ACQU_01
+0x00191085|DS|1|KB|Monitor SAR|GEMS_ACQU_01
+0x00191087|DS|1|KB|Cardiac repetition time|GEMS_ACQU_01
+0x00191088|SS|1|KB|Images per cardiac cycle|GEMS_ACQU_01
+0x0019108a|SS|1|KB|Actual receive gain analog|GEMS_ACQU_01
+0x0019108b|SS|1|KB|Actual receive gain digital|GEMS_ACQU_01
+0x0019108d|DS|1|KB|Delay after trigger|GEMS_ACQU_01
+0x0019108f|SS|1|KB|Swappf|GEMS_ACQU_01
+0x00191090|SS|1|KB|Pause Interval|GEMS_ACQU_01
+0x00191091|DS|1|KB|Pause Time|GEMS_ACQU_01
+0x00191092|SL|1|KB|Slice offset on freq axis|GEMS_ACQU_01
+# Start|Duplicate to enter an alias||||
+0x00191093|DS|1|K|Auto Prescan Center Frequency|GEMS_ACQU_01
+0x00191093|DS|1|K|Center Frequency|GEMS_ACQU_01
+# End|||||
+# Start|Duplicate to enter an alias||||
+0x00191094|SS|1|K|Auto Prescan Transmit Gain|GEMS_ACQU_01
+0x00191094|SS|1|K|Transmit Gain|GEMS_ACQU_01
+# End|||||
+# Start|Duplicate to enter an alias||||
+0x00191095|SS|1|K|Auto Prescan Analog receiver gain|GEMS_ACQU_01
+0x00191095|SS|1|K|Analog receiver gain|GEMS_ACQU_01
+# Start|Duplicate to enter an alias||||
+0x00191096|SS|1|K|Auto Prescan Digital receiver gain|GEMS_ACQU_01
+0x00191096|SS|1|K|Digital receiver gain|GEMS_ACQU_01
+# End|||||
+0x00191097|SL|1|K|Bitmap defining CVs|GEMS_ACQU_01
+0x00191098|SS|1|K|Center freq. Method|GEMS_ACQU_01
+0x0019109b|SS|1|K|Pulse Sequence Mode|GEMS_ACQU_01
+0x0019109c|LO|1|R|Pulse Sequence Name|GEMS_ACQU_01
+0x0019109d|DT|1|Z|Pulse Sequence Date|GEMS_ACQU_01
+0x0019109e|LO|1|R|Internal Pulse Sequence Name|GEMS_ACQU_01
+0x0019109f|SS|1|K|Transmitting Coil Type|GEMS_ACQU_01
+0x001910a0|SS|1|K|Surface Coil Type|GEMS_ACQU_01
+0x001910a1|SS|1|K|Extremity Coil flag|GEMS_ACQU_01
+0x001910a2|SL|1|K|Raw data run number|GEMS_ACQU_01
+0x001910a3|UL|1|K|Calibrated Field Strength|GEMS_ACQU_01
+0x001910a4|SS|1|K|SAT fat/water/bone|GEMS_ACQU_01
+0x001910a5|DS|1|K|Receive bandwith|GEMS_ACQU_01
+0x001910a7|DS|1|R|User data 0|GEMS_ACQU_01
+0x001910a8|DS|1|R|User data 1|GEMS_ACQU_01
+0x001910a9|DS|1|R|User data 2|GEMS_ACQU_01
+0x001910aa|DS|1|R|User data 3|GEMS_ACQU_01
+0x001910ab|DS|1|R|User data 4|GEMS_ACQU_01
+0x001910ac|DS|1|R|User data 5|GEMS_ACQU_01
+0x001910ad|DS|1|R|user data 6|GEMS_ACQU_01
+0x001910ae|DS|1|R|User data 7|GEMS_ACQU_01
+0x001910af|DS|1|R|User data 8|GEMS_ACQU_01
+0x001910b0|DS|1|R|User data 9|GEMS_ACQU_01
+0x001910b1|DS|1|R|User data 10|GEMS_ACQU_01
+0x001910b2|DS|1|R|User data 11|GEMS_ACQU_01
+0x001910b3|DS|1|R|User data 12|GEMS_ACQU_01
+0x001910b4|DS|1|R|User data 13|GEMS_ACQU_01
+0x001910b5|DS|1|R|User data 14|GEMS_ACQU_01
+0x001910b6|DS|1|R|User data 15|GEMS_ACQU_01
+0x001910b7|DS|1|R|User data 16|GEMS_ACQU_01
+0x001910b8|DS|1|R|User data 17|GEMS_ACQU_01
+0x001910b9|DS|1|R|User data 18|GEMS_ACQU_01
+0x001910ba|DS|1|R|User data 19|GEMS_ACQU_01
+0x001910bb|DS|1|R|User data 20|GEMS_ACQU_01
+0x001910bc|DS|1|R|User data 21|GEMS_ACQU_01
+0x001910bd|DS|1|R|User data 22|GEMS_ACQU_01
+0x001910be|DS|1|K|Projection angle|GEMS_ACQU_01
+0x001910c0|SS|1|K|Saturation planes|GEMS_ACQU_01
+0x001910c1|SS|1|K|Surface coil intensity|GEMS_ACQU_01
+0x001910c2|SS|1|K|SAT location R|GEMS_ACQU_01
+0x001910c3|SS|1|K|SAT location L|GEMS_ACQU_01
+0x001910c4|SS|1|K|SAT location A|GEMS_ACQU_01
+0x001910c5|SS|1|K|SAT location P|GEMS_ACQU_01
+0x001910c6|SS|1|K|SAT location H|GEMS_ACQU_01
+0x001910c7|SS|1|K|SAT location F|GEMS_ACQU_01
+0x001910c8|SS|1|K|SAT thickness R/L|GEMS_ACQU_01
+0x001910c9|SS|1|K|SAT thickness A/P|GEMS_ACQU_01
+0x001910ca|SS|1|K|SAT thickness H/F|GEMS_ACQU_01
+# Start|Duplicate to enter an alias||||
+0x001910cb|SS|1|K|Phase Contrast flow axis|GEMS_ACQU_01
+0x001910cb|SS|1|K|Prescribed flow axis|GEMS_ACQU_01
+# End|||||
+0x001910cc|SS|1|K|Velocity encoding|GEMS_ACQU_01
+0x001910cd|SS|1|K|Thickness disclaimer|GEMS_ACQU_01
+0x001910ce|SS|1|K|Prescan type|GEMS_ACQU_01
+0x001910cf|SS|1|K|Prescan status|GEMS_ACQU_01
+0x001910d0|SH|1|R|Raw data type|GEMS_ACQU_01
+0x001910d2|SS|1|K|Projection Algorithm|GEMS_ACQU_01
+# Start|Duplicate to enter an alias||||
+0x001910d3|SH|1|K|Projection Algorithm Name|GEMS_ACQU_01
+0x001910d3|SH|1|K|Projection Algorithm|GEMS_ACQU_01
+# End|||||
+0x001910d5|SS|1|K|Fractional echo|GEMS_ACQU_01
+0x001910d6|SS|1|K|Prep pulse|GEMS_ACQU_01
+0x001910d7|SS|1|K|Cardiac phase number|GEMS_ACQU_01
+0x001910d8|SS|1|K|Variable echoflag|GEMS_ACQU_01
+# Start|Duplicate to enter an alias||||
+0x001910d9|DS|1|R|"Concatenated SAT {# DTI Diffusion Dir., release 9.0 & below"|GEMS_ACQU_01
+0x001910d9|DS|1|R|Concatenated SAT|GEMS_ACQU_01
+# End|||||
+# Start|Duplicate to enter an alias||||
+0x001910df|DS|1|R|"User data 23 {# DTI Diffusion Dir., release 9.0 & below}"|GEMS_ACQU_01
+0x001910df|DS|1|R|User data 23|GEMS_ACQU_01
+# End|||||
+# Start|Duplicate to enter an alias||||
+0x001910e0|DS|1|R|"User data 24 {# DTI Diffusion Dir., release 10.0 & above}"|GEMS_ACQU_01
+0x001910e0|DS|1|R|User data 24|GEMS_ACQU_01
+# End|||||
+0x001910e2|DS|1|K|Velocity Encocde Scale|GEMS_ACQU_01
+0x001910f2|SS|1|K|Fast phases|GEMS_ACQU_01
+0x001910f9|DS|1|K|Transmit gain|GEMS_ACQU_01
+#|||||
+0x00210010|LO|1|K|GEHC Private Creator ID|GEMS_RELA_01
+0x00211003|SS|1|R|Series from which Prescribed|GEMS_RELA_01
+0x00211005|SH|1|R|Genesis Version - now|GEMS_RELA_01
+0x00211007|UL|1|X|Series Record checksum|GEMS_RELA_01
+0x00211018|SH|1|R|Genesis version - Now|GEMS_RELA_01
+0x00211019|UL|1|X|Acq recon record checksum|GEMS_RELA_01
+0x00211020|DS|1|K|Table start location|GEMS_RELA_01
+0x00211035|SS|1|R|Series from which prescribed|GEMS_RELA_01
+0x00211036|SS|1|R|Image from which prescribed|GEMS_RELA_01
+0x00211037|SS|1|KB|Screen Format|GEMS_RELA_01
+0x0021104f|SS|1|K|Locations in acquisition|GEMS_RELA_01
+0x00211050|SS|1|K|Graphically prescribed|GEMS_RELA_01
+0x00211051|DS|1|K|Rotation from source x rot|GEMS_RELA_01
+0x00211052|DS|1|K|Rotation from source y rot|GEMS_RELA_01
+0x00211053|DS|1|K|Rotation from source z rot|GEMS_RELA_01
+0x00211054|SH|3|R|Image position|GEMS_RELA_01
+0x00211055|SH|6|R|Image orientation|GEMS_RELA_01
+0x00211056|SL|1|K|Num 3D slabs|GEMS_RELA_01
+0x00211057|SL|1|K|Locs per 3D slab|GEMS_RELA_01
+0x00211058|SL|1|K|Overlaps|GEMS_RELA_01
+# Start|Duplicate to enter an alias||||
+0x00211059|SL|1|K|Image Filtering 0.5/0.2T|GEMS_RELA_01
+0x00211059|SL|1|K|Image Filtering|GEMS_RELA_01
+# End|||||
+0x0021105a|SL|1|K|Diffusion direction|GEMS_RELA_01
+# Start|Duplicate to enter an alias||||
+0x0021105b|DS|1|K|Tagging Flip Angle|GEMS_RELA_01
+0x0021105b|DS|1|K|Ihtagfa|GEMS_RELA_01
+# End|||||
+# Start|Duplicate to enter an alias||||
+0x0021105c|DS|1|K|Tagging Orientation|GEMS_RELA_01
+0x0021105c|DS|1|K|Ihtagor|GEMS_RELA_01
+# End|||||
+# Start|Duplicate to enter an alias||||
+0x0021105d|DS|1|K|Tag Spacing|GEMS_RELA_01
+0x0021105d|DS|1|K|Ihbspti|GEMS_RELA_01
+# End|||||
+0x0021105e|DS|1|K|RTIA_timer|GEMS_RELA_01
+0x0021105f|DS|1|K|Fps|GEMS_RELA_01
+0x00211081|DS|1|K|Auto window/level alpha|GEMS_RELA_01
+0x00211082|DS|1|K|Auto window/level beta|GEMS_RELA_01
+0x00211083|DS|1|K|Auto window/level window|GEMS_RELA_01
+0x00211084|DS|1|K|Auto window/level level|GEMS_RELA_01
+#|||||
+0x00230010|LO|1|X|GEHC Private Creator ID|GEMS_STDY_01
+0x00231001|SL|1|X|Number of series in Study|GEMS_STDY_01
+0x00231002|SL|1|X|Number of unarchived Series|GEMS_STDY_01
+0x00231010|SS|1|X|Reference image field|GEMS_STDY_01
+0x00231050|SS|1|X|Summary image|GEMS_STDY_01
+0x00231070|FD|1|X|Start time(secs) in first axial|GEMS_STDY_01
+0x00231074|SL|1|X|No. of updates to header|GEMS_STDY_01
+0x0023107d|SS|1|X|Indicates study has complete info (DICOM/genesis)|GEMS_STDY_01
+0x00231080|SQ|1|X|Has MPPS related tags|GEMS_STDY_01
+#|||||
+0x00250010|LO|1|K|GEHC Private Creator ID|GEMS_SERS_01
+0x00251006|SS|1|KB|Last pulse sequence used|GEMS_SERS_01
+0x00251007|SL|1|KB|Images in Series|GEMS_SERS_01
+0x00251010|SL|1|KB|Landmark Counter|GEMS_SERS_01
+0x00251011|SS|1|KB|Number of Acquisitions|GEMS_SERS_01
+0x00251014|SL|1|X|Indicates no. of updates to header|GEMS_SERS_01
+0x00251017|SL|1|X|Series Complete Flag|GEMS_SERS_01
+0x00251018|SL|1|X|Number of images archived|GEMS_SERS_01
+0x00251019|SL|1|X|Last image number used|GEMS_SERS_01
+0x0025101a|SH|1|X|Primary Receiver Suite and Host|GEMS_SERS_01
+0x0025101b|OB|1|X|Protocol Data Block (compressed)|GEMS_SERS_01
+#|||||
+0x00270010|LO|1|K|GEHC Private Creator ID|GEMS_IMAG_01
+0x00271006|SL|1|X|Image archive flag|GEMS_IMAG_01
+0x00271010|SS|1|KB|Scout Type|GEMS_IMAG_01
+0x00271030|SH|1|R|Foreign Image Revision|GEMS_IMAG_01
+0x00271031|SS|1|K|Imaging Mode|GEMS_IMAG_01
+0x00271032|SS|1|K|Pulse Sequence|GEMS_IMAG_01
+0x00271033|SL|1|K|Imaging Options|GEMS_IMAG_01
+0x00271035|SS|1|KB|Plane Type|GEMS_IMAG_01
+0x00271036|SL|1|K|Oblique Plane|GEMS_IMAG_01
+0x00271040|SH|1|R|RAS letter of image location|GEMS_IMAG_01
+0x00271041|FL|1|KB|Image location|GEMS_IMAG_01
+0x00271042|FL|1|KB|Center R coord of plane image|GEMS_IMAG_01
+0x00271043|FL|1|KB|Center A coord of plane image|GEMS_IMAG_01
+0x00271044|FL|1|KB|Center S coord of plane image|GEMS_IMAG_01
+0x00271045|FL|1|KB|Normal R coord|GEMS_IMAG_01
+0x00271046|FL|1|KB|Normal A coord|GEMS_IMAG_01
+0x00271047|FL|1|KB|Normal S coord|GEMS_IMAG_01
+0x00271048|FL|1|KB|R Coord of Top Right Corner|GEMS_IMAG_01
+0x00271049|FL|1|KB|A Coord of Top Right Corner|GEMS_IMAG_01
+0x0027104a|FL|1|KB|S Coord of Top Right Corner|GEMS_IMAG_01
+0x0027104b|FL|1|KB|R Coord of Bottom Right Corner|GEMS_IMAG_01
+0x0027104c|FL|1|KB|A Coord of Bottom Right Corner|GEMS_IMAG_01
+0x0027104d|FL|1|KB|S Coord of Bottom Right Corner|GEMS_IMAG_01
+0x00271060|FL|1|K|Image dimension - X|GEMS_IMAG_01
+0x00271061|FL|1|K|Image dimension - Y|GEMS_IMAG_01
+0x00271062|FL|1|K|Number of Excitations|GEMS_IMAG_01
+#|||||
+0x00290010|LO|1|K|GEHC Private Creator ID|GEMS_IMPS_01
+0x00291015|SL|1|K|Lower range of Pixels1|GEMS_IMPS_01
+0x00291016|SL|1|K|Upper range of Pixels1|GEMS_IMPS_01
+0x00291017|SL|1|K|Lower range of Pixels2|GEMS_IMPS_01
+0x00291018|SL|1|K|Upper range of Pixels2|GEMS_IMPS_01
+0x0029101a|SL|1|X|Len of tot hdr in bytes|GEMS_IMPS_01
+0x00291026|SS|1|KB|Version of the hdr struct|GEMS_IMPS_01
+0x00291034|SL|1|KB|Advantage comp. Overflow|GEMS_IMPS_01
+0x00291035|SL|1|KB|Advantage comp. Underflow|GEMS_IMPS_01
+#|||||
+0x00430010|LO|1|K|GEHC Private Creator ID|GEMS_PARM_01
+0x00431001|SS|1|K|Bitmap of prescan options|GEMS_PARM_01
+0x00431002|SS|1|K|Gradient offset in X|GEMS_PARM_01
+0x00431003|SS|1|K|Gradient offset in Y|GEMS_PARM_01
+0x00431004|SS|1|K|Gradient offset in Z|GEMS_PARM_01
+0x00431005|SS|1|K|Img is original or unoriginal|GEMS_PARM_01
+0x00431006|SS|1|K|Number of EPI shots|GEMS_PARM_01
+0x00431007|SS|1|K|Views per segment|GEMS_PARM_01
+0x00431008|SS|1|K|"Respiratory rate, bpm"|GEMS_PARM_01
+0x00431009|SS|1|K|Respiratory trigger point|GEMS_PARM_01
+0x0043100a|SS|1|K|Type of receiver used|GEMS_PARM_01
+# Start|Duplicate to enter an alias||||
+0x0043100b|DS|1|K|dB/dt Peak rate of change of gradient field|GEMS_PARM_01
+0x0043100b|DS|1|K|Peak rate of change of gradient field|GEMS_PARM_01
+# End|||||
+# Start|Duplicate to enter an alias||||
+0x0043100c|DS|1|KB|dB/dt Limits in units of percent|GEMS_PARM_01
+0x0043100c|DS|1|KB|Limits in units of percent|GEMS_PARM_01
+# End|||||
+0x0043100d|DS|1|KB|PSD estimated limit|GEMS_PARM_01
+0x0043100e|DS|1|KB|PSD estimated limit in tesla per second|GEMS_PARM_01
+0x0043100f|DS|1|KB|Saravghead|GEMS_PARM_01
+0x00431010|US|1|KB|Window value|GEMS_PARM_01
+0x0043101c|SS|1|KB|GE image integrity|GEMS_PARM_01
+0x0043101d|SS|1|KB|Level value|GEMS_PARM_01
+0x00431028|OB|1|X|Unique image iden|GEMS_PARM_01
+0x00431029|OB|1|X|Histogram tables|GEMS_PARM_01
+0x0043102a|OB|1|X|User defined data|GEMS_PARM_01
+0x0043102b|SS|4|R|Private Scan Options|GEMS_PARM_01
+0x0043102c|SS|1|K|Effective echo spacing|GEMS_PARM_01
+0x0043102d|SH|1|R|Filter Mode (String slop field 1 in legacy GE MR images)|GEMS_PARM_01
+0x0043102e|SH|1|R|String slop field 2|GEMS_PARM_01
+0x0043102f|SS|1|K|"Image Type (real, imaginary, phase, magnitude)"|GEMS_PARM_01
+0x00431030|SS|1|K|Vas collapse flag|GEMS_PARM_01
+0x00431031|DS|"2,3"|KB|RA cord of target recon center|GEMS_PARM_01
+0x00431032|SS|1|K|Vas flags|GEMS_PARM_01
+0x00431033|FL|1|K|Neg_scanspacing|GEMS_PARM_01
+0x00431034|IS|1|K|Offset frequency|GEMS_PARM_01
+0x00431035|UL|1|K|User_usage_tag|GEMS_PARM_01
+0x00431036|UL|1|K|User_fill_map_MSW|GEMS_PARM_01
+0x00431037|UL|1|K|User_fill_map_LSW|GEMS_PARM_01
+# Start|Duplicate to enter an alias||||
+0x00431038|FL|24|K|User data 25...User data 48 {User48=Effective Resolution for spiral)|GEMS_PARM_01
+0x00431038|FL|24|K|User data 25...User data 48|GEMS_PARM_01
+# End|||||
+0x00431039|IS|4|K|slop_int_6; slop_int_9; 6: b_value; 7: private imaging options 2; 8: ihtagging; 9: ihtagspc|GEMS_PARM_01
+# Start|Duplicate to enter an alias||||
+0x00431060|IS|8|K|Slop_int_10; slop_int_17; 10: ihfcineim; 11: ihfcinent; 12: Reserved; 13: oprtarr; 14: averages; 15: Current Station #; 16: Total # of Stations; 17: private imaging options 3|GEMS_PARM_01
+0x00431060|IS|8|K|Slop_int_10; slop_int_17; 10: ihfcineim; 11: ihfcinent; 12: Reserved; 13: oprtarr; 14: averages; 15: Current Station #; 16: Total # of Stations; 17: Reserved|GEMS_PARM_01
+# End|||||
+0x00431061|UI|1|R|Scanner Study Entity UID|GEMS_PARM_01
+0x00431062|SH|1|X|Scanner Study ID|GEMS_PARM_01
+# Start|Duplicate to enter an alias||||
+0x0043106f|DS|"3,4"|K|"Scanner Table Entry (single gradient coil systems only); Scanner table Entry + Gradient Coil Selected 1: table entry, 2: table swing angle, 3: table lateral offset, 4: gradient coil selected (multiple gradient systems only)"|GEMS_PARM_01
+0x0043106f|DS|"3,4"|K|Scanner Table Entry (single gradient coil systems only); Scanner table Entry + Gradient Coil Selectedonly)|GEMS_PARM_01
+# End|||||
+0x00431070|LO|1|R|Paradigm Name|GEMS_PARM_01
+0x00431071|ST|1|R|Paradigm Description|GEMS_PARM_01
+0x00431072|UI|1|R|Paradigm UID|GEMS_PARM_01
+0x00431073|US|1|K|Experiment Type|GEMS_PARM_01
+0x00431074|US|1|K|#rest volumes|GEMS_PARM_01
+0x00431075|US|1|K|#active volumes|GEMS_PARM_01
+0x00431076|US|1|K|#dummy scans|GEMS_PARM_01
+0x00431077|SH|1|R|Application Name|GEMS_PARM_01
+0x00431078|SH|1|R|Application Version|GEMS_PARM_01
+0x00431079|US|1|K|Slices Per Volume|GEMS_PARM_01
+0x0043107a|US|1|K|Expected Time Points|GEMS_PARM_01
+0x0043107b|FL|1-n|K|Regressor Values|GEMS_PARM_01
+0x0043107c|FL|1|K|Delay after slice group|GEMS_PARM_01
+0x0043107d|US|1|K|Recon mode flag word|GEMS_PARM_01
+0x0043107e|LO|1-n|R|PACC specific information|GEMS_PARM_01
+# Start|Duplicate to enter an alias||||
+0x0043107f|DS|1-n|R|Reserved|GEMS_PARM_01
+0x0043107f|DS|1-n|R|Grad Shim Values|GEMS_PARM_01
+# End|||||
+0x00431080|LO|1-n|R|Coil ID Name|GEMS_PARM_01
+0x00431081|LO|1|R|GE Coil Name|GEMS_PARM_01
+0x00431082|LO|1-n|R|System Configuration Information|GEMS_PARM_01
+0x00431083|DS|1-2|K|Asset R Factors|GEMS_PARM_01
+0x00431084|LO|5|R|Additional Asset Data|GEMS_PARM_01
+0x00431085|UT|1|X|Debug Data (text format)|GEMS_PARM_01
+0x00431086|OB|1|X|Debug Data (binary format)|GEMS_PARM_01
+# Start|Duplicate to enter an alias||||
+0x00431087|UT|1|R|Software Versions Long|GEMS_PARM_01
+0x00431087|UT|1|R|Reserved|GEMS_PARM_01
+# End|||||
+0x00431088|UI|1|R|PURE Acquisition Calibration Series UID|GEMS_PARM_01
+0x00431089|LO|3|R|"Governing Body, dB/dt, and SAR definition"|GEMS_PARM_01
+0x0043108a|CS|1|R|Private In-Plane Phase Encoding Direction|GEMS_PARM_01
+0x0043108b|OB|1|X|FMRI Binary Data Block|GEMS_PARM_01
+0x0043108c|DS|6|R|Voxel Location|GEMS_PARM_01
+0x0043108d|DS|7n|R|SAT Band Locations|GEMS_PARM_01
+0x0043108e|DS|3|R|Spectro Prescan Values|GEMS_PARM_01
+0x0043108f|DS|3|R|Spectro Parameters|GEMS_PARM_01
+0x00431090|LO|1-n|R|SAR Definition|GEMS_PARM_01
+0x00431091|DS|1-n|K|SAR value|GEMS_PARM_01
+0x00431092|LO|1|X|Image Error Text|GEMS_PARM_01
+0x00431093|DS|1-n|K|Spectro Quantitation Values|GEMS_PARM_01
+0x00431094|DS|1-n|K|Spectro Ratio Values|GEMS_PARM_01
+0x00431095|LO|1|R|Prescan Reuse String|GEMS_PARM_01
+0x00431096|CS|1|R|Content Qualification|GEMS_PARM_01
+0x00431097|LO|8|R|Image Filtering Parameters|GEMS_PARM_01
+0x00431098|UI|1|R|ASSET Acquisition Calibration Series UID|GEMS_PARM_01
+0x00431099|LO|1-n|R|Extended Options|GEMS_PARM_01
+0x0043109a|IS|1|K|Rx Stack Identification|GEMS_PARM_01
+0x0043109b|DS|1|K|NPW factor|GEMS_PARM_01
+0x0043109c|OB|1|X|Research Tag 1|GEMS_PARM_01
+0x0043109d|OB|1|X|Research Tag 2|GEMS_PARM_01
+0x0043109e|OB|1|X|Research Tag 3|GEMS_PARM_01
+0x0043109f|OB|1|X|Research Tag 4|GEMS_PARM_01
+0x004310a0|SQ|1|X|Spectroscopy Pixel Sequence|GEMS_PARM_01
+0x004310a1|SQ|1|X|Spectroscopy Default Display Sequence|GEMS_PARM_01
+# Start|Duplicate to enter an alias||||
+0x004310a2|DS|1-n|R|MEG Data|GEMS_PARM_01
+0x004310a2|DS|1-n|R|MEF Data|GEMS_PARM_01
+# End|||||
+0x004310a3|CS|1|R|ASL Contrast technique|GEMS_PARM_01
+0x004310a4|LO|1|R|Detailed text for ASL labeling technique|GEMS_PARM_01
+0x004310a5|IS|1|K|Duration of the label or control pulse|GEMS_PARM_01
+0x004310a6|DS|1|K|Offset frequency value for FastB1map|GEMS_PARM_01
+0x004310a7|DS|1|K|Motion Encoding Factor|GEMS_PARM_01
+0x004310a8|DS|3|K|"Dual Drive Mode, Amplitude Attentuation and Phase Offset"|GEMS_PARM_01
+#|||||
+0x20010010|LO|1|X|Private Creator ID|BrainWave: 1.2.840.113819.3
+0x20011010|UI|1|R|DICOM Implementation UID|BrainWave: 1.2.840.113819.3
+0x10011011|SH|1|R|DICOM Implementation Version|BrainWave: 1.2.840.113819.3
+0x20011012|UI|1|R|Within-DICOM-Implementation SOP Instance UID|BrainWave: 1.2.840.113819.3
+0x20011013|SH|1|R|Application Name|BrainWave: 1.2.840.113819.3
+0x20011014|SH|1|R|Application Version|BrainWave: 1.2.840.113819.3
+0x20011015|SH|1|R|Compatibility Version|BrainWave: 1.2.840.113819.3
+0x20011021|UI|1-n|R|Referenced Series UID|BrainWave: 1.2.840.113819.3
+0x20011031|US|1|K|Number of Objects Averaged|BrainWave: 1.2.840.113819.3
+0x20011041|US|1|K|Number of Expected Time Points|BrainWave: 1.2.840.113819.3
+0x20011051|US|1|K|Number of Slices Per Volume|BrainWave: 1.2.840.113819.3
+0x20011060|US|1|K|BW Image Type|BrainWave: 1.2.840.113819.3
+0x20011061|US|1|K|Experiment Type|BrainWave: 1.2.840.113819.3
+0x20011071|UI|1|R|Paradigm UID|BrainWave: 1.2.840.113819.3
+0x20011072|LO|1|R|Paradigm Name|BrainWave: 1.2.840.113819.3
+0x20011073|ST|1|R|Paradigm Description|BrainWave: 1.2.840.113819.3
+0x20011080|OB|1|X|Contrast|BrainWave: 1.2.840.113819.3
+0x20011081|FL|1-n|K|Regressor Values|BrainWave: 1.2.840.113819.3
+0x20011086|US|1|K|Number of Degrees of Freedom|BrainWave: 1.2.840.113819.3
+0x2001108a|FL|1|K|Z Threshold|BrainWave: 1.2.840.113819.3
+0x2001108b|FL|1|K|p Threshold|BrainWave: 1.2.840.113819.3
+0x20011090|OB|1|X|Processing Parameters|BrainWave: 1.2.840.113819.3
+0x20011091|OB|1|X|Motion Plot|BrainWave: 1.2.840.113819.3
+0x20011092|OB|1|X|ROIs|BrainWave: 1.2.840.113819.3
+0x20011093|OB|1|X|Tracts|BrainWave: 1.2.840.113819.3
+0x20011094|OB|1|X|Report|BrainWave: 1.2.840.113819.3
+0x20011095|OB|1|X|Response Data|BrainWave: 1.2.840.113819.3
+0x200110a0|FL|1-n|K|Motion Parameters|BrainWave: 1.2.840.113819.3
+0x200110a1|FL|1-n|K|Registration Parameters|BrainWave: 1.2.840.113819.3
+0x200110a2|FL|1-n|K|Subject Data|BrainWave: 1.2.840.113819.3
+0x200110b0|OB|1|X|DTI Parameters|BrainWave: 1.2.840.113819.3
+0x200110c0|OB|1|X|Paradigm Info|BrainWave: 1.2.840.113819.3
+#|||||
+0x70010010|LO|1|X|GEHC Private Creator ID|GEMS_MR_RAW_01
+0x70011001|OB|1|X|rdb_hdr_rec|GEMS_MR_RAW_01
+0x70011002|OB|1|X|rdb_hdr_per_pass_tab|GEMS_MR_RAW_01
+0x70011003|OB|1|X|rdr_hdr_unlock_raw|GEMS_MR_RAW_01
+0x70011004|OB|1|X|rdb_hdr_data_acq_tab|GEMS_MR_RAW_01
+0x70011005|OB|1|X|rdb_hdr_nex_tab|GEMS_MR_RAW_01
+0x70011006|OB|1|X|rdb_hdr_nex_abort_tab|GEMS_MR_RAW_01
+0x70011007|OB|1|X|rdb_hdr_tool|GEMS_MR_RAW_01
+0x70011008|OB|1|X|rdb_raw_data|GEMS_MR_RAW_01
+0x70011009|OB|1|X|SSP save|GEMS_MR_RAW_01
+0x7001100a|OB|1|X|UDA save|GEMS_MR_RAW_01
+0x7001100b|OB|1|X|rdb_chemsat_data|GEMS_MR_RAW_01
+#|||||
+0x00510010|LO|1|K|GEHC Private Creator ID|GEMS_FUNCTOOL_01
+0x00511001|LO|1|R|Functional Proc Group Name|GEMS_FUNCTOOL_01
+0x00511002|LO|1|R|Functional Processing Name|GEMS_FUNCTOOL_01
+0x00511003|SL|1|K|Bias of Functional Image|GEMS_FUNCTOOL_01
+0x00511004|FL|1|K|Scale of Functional Image|GEMS_FUNCTOOL_01
+0x00511005|SL|1|K|Length of Parameters String|GEMS_FUNCTOOL_01
+0x00511006|LT|1|R|"Store Parameters string, delimited by character ESC=0x1b (27)"|GEMS_FUNCTOOL_01
+0x00511007|LO|1|R|Functional Image Version|GEMS_FUNCTOOL_01
+0x00511008|SL|1|K|Store Color Ramp|GEMS_FUNCTOOL_01
+0x00511009|SL|1|K|Store Width of Functional Image|GEMS_FUNCTOOL_01
+0x0051100a|SL|1|K|Store level of Functional Image|GEMS_FUNCTOOL_01
+0x0051100b|FL|1|K|Store B-Value with Functional Image|GEMS_FUNCTOOL_01
+0x0051100c|LO|1|R|Analysis Package|GEMS_FUNCTOOL_01
+# GEMS/GE_PT.txt
+#Tag|VR|VM|Code|Description|Private Creator
+#|||||
+@|GE PT||||
+0x00090010|LO|1|K|GEHC Private Creator ID|GEMS_PETD_01
+0x00091001|LO|2|R|GE Discovery PET Implementation Version Name|GEMS_PETD_01
+0x00091002|LO|1|X|PET patient_id|GEMS_PETD_01
+0x00091003|SH|1|K|PET compatible_version|GEMS_PETD_01
+0x00091004|SH|1|K|PET Patient.software_version|GEMS_PETD_01
+0x00091005|DT|1|R|PET patient_datetime|GEMS_PETD_01
+0x00091006|SL|1|K|PET type|GEMS_PETD_01
+0x00091007|UI|1|R|PET exam_id|GEMS_PETD_01
+0x00091008|SH|1|R|PET compatible_version|GEMS_PETD_01
+0x00091009|SH|1|R|PET software_version|GEMS_PETD_01
+0x0009100a|UI|1|R|PET scan_id|GEMS_PETD_01
+0x0009100b|SH|1|R|PET compatible_version|GEMS_PETD_01
+0x0009100c|SH|1|R|PET software_version|GEMS_PETD_01
+0x0009100d|DT|1|R|PET scan_datetime|GEMS_PETD_01
+0x0009100e|DT|1|R|PET scan_ready|GEMS_PETD_01
+0x0009100f|ST|1|R|PET scan_description|GEMS_PETD_01
+0x00091010|LO|1|X|PET hospital_name|GEMS_PETD_01
+0x00091011|LO|1|R|PET scanner_desc|GEMS_PETD_01
+0x00091012|LO|1|R|PET manufacturer|GEMS_PETD_01
+0x00091013|UI|1|R|PET for_identifier|GEMS_PETD_01
+0x00091014|LO|1|R|PET landmark_name|GEMS_PETD_01
+0x00091015|SH|1|R|PET landmark_abbrev|GEMS_PETD_01
+0x00091016|SL|1|K|PET patient_position|GEMS_PETD_01
+0x00091017|SL|1|K|PET scan_perspective|GEMS_PETD_01
+0x00091018|SL|1|K|PET scan_type|GEMS_PETD_01
+0x00091019|SL|1|K|PET scan_mode|GEMS_PETD_01
+0x0009101a|SL|1|K|PET start_condition|GEMS_PETD_01
+0x0009101b|SL|1|K|PET start_cond_data|GEMS_PETD_01
+0x0009101c|SL|1|K|PET sel_stop_cond|GEMS_PETD_01
+0x0009101d|SL|1|K|PET sel_stop_cond_data|GEMS_PETD_01
+0x0009101e|SL|1|K|PET collect_deadtime|GEMS_PETD_01
+0x0009101f|SL|1|K|PET collect_singles|GEMS_PETD_01
+0x00091020|SL|1|K|PET collect_countrate|GEMS_PETD_01
+0x00091021|SL|1|K|PET countrate_period|GEMS_PETD_01
+0x00091022|SL|1|K|PET delayed_events|GEMS_PETD_01
+0x00091023|SL|1|K|PET delayed_bias|GEMS_PETD_01
+0x00091024|SL|1|K|PET word_size|GEMS_PETD_01
+0x00091025|SL|1|K|PET axial_acceptance|GEMS_PETD_01
+0x00091026|SL|1|K|PET axial_angle_3d|GEMS_PETD_01
+0x00091027|SL|1|K|PET theta_compression|GEMS_PETD_01
+0x00091028|SL|1|K|PET axial_compression|GEMS_PETD_01
+0x00091029|FL|1|K|PET gantry_tilt_angle|GEMS_PETD_01
+0x0009102a|SL|1|K|PET collimation|GEMS_PETD_01
+0x0009102b|SL|1|K|PET scan_fov|GEMS_PETD_01
+0x0009102c|SL|1|K|PET axial_fov|GEMS_PETD_01
+0x0009102d|SL|1|K|PET event_separation|GEMS_PETD_01
+0x0009102e|SL|1|K|PET mask_width|GEMS_PETD_01
+0x0009102f|SL|1|K|PET binning_mode|GEMS_PETD_01
+0x00091030|SL|1|K|PET trig_rej_method|GEMS_PETD_01
+0x00091031|SL|1|K|PET number_for_reject|GEMS_PETD_01
+0x00091032|SL|1|K|PET lower_reject_limit|GEMS_PETD_01
+0x00091033|SL|1|K|PET upper_reject_limit|GEMS_PETD_01
+0x00091034|SL|1|K|PET triggers_acquired|GEMS_PETD_01
+0x00091035|SL|1|K|PET triggers_rejected|GEMS_PETD_01
+0x00091036|LO|1|R|PET tracer_name|GEMS_PETD_01
+0x00091037|LO|1|R|PET batch_description|GEMS_PETD_01
+0x00091038|FL|1|K|PET tracer_activity|GEMS_PETD_01
+0x00091039|DT|1|R|PET meas_datetime|GEMS_PETD_01
+0x0009103a|FL|1|K|PET pre_inj_volume|GEMS_PETD_01
+0x0009103b|DT|1|R|PET admin_datetime|GEMS_PETD_01
+0x0009103c|FL|1|K|PET post_inj_activity|GEMS_PETD_01
+0x0009103d|DT|1|R|PET post_inj_datetime|GEMS_PETD_01
+0x0009103e|SH|1|R|PET radionuclide_name|GEMS_PETD_01
+0x0009103f|FL|1|K|PET half_life|GEMS_PETD_01
+0x00091040|FL|1|K|PET positron_fraction|GEMS_PETD_01
+0x00091041|SL|1|K|PET source1_holder|GEMS_PETD_01
+0x00091042|FL|1|K|PET source1_activity|GEMS_PETD_01
+0x00091043|DT|1|R|PET source1_meas_dt|GEMS_PETD_01
+0x00091044|SH|1|R|PET source1_radnuclide|GEMS_PETD_01
+0x00091045|FL|1|K|PET source1_half_life|GEMS_PETD_01
+0x00091046|SL|1|K|PET source2_holder|GEMS_PETD_01
+0x00091047|FL|1|K|PET source2_activity|GEMS_PETD_01
+0x00091048|DT|1|R|PET source2_meas_dt|GEMS_PETD_01
+0x00091049|SH|1|K|PET source2_radnuclide|GEMS_PETD_01
+0x0009104a|FL|1|K|PET source2_half_life|GEMS_PETD_01
+0x0009104b|SL|1|K|PET source_speed|GEMS_PETD_01
+0x0009104c|FL|1|K|PET source_location|GEMS_PETD_01
+0x0009104d|SL|1|K|PET emission_present|GEMS_PETD_01
+0x0009104e|SL|1|K|PET lower_axial_acc|GEMS_PETD_01
+0x0009104f|SL|1|K|PET upper_axial_acc|GEMS_PETD_01
+0x00091050|SL|1|K|PET lower_coinc_limit|GEMS_PETD_01
+0x00091051|SL|1|K|PET upper_coinc_limit|GEMS_PETD_01
+0x00091052|SL|1|K|PET coinc_delay_offset|GEMS_PETD_01
+0x00091053|SL|1|K|PET coinc_output_mode|GEMS_PETD_01
+0x00091054|SL|1|K|PET upper_energy_limit|GEMS_PETD_01
+0x00091055|SL|1|K|PET lower_energy_limit|GEMS_PETD_01
+0x00091056|UI|1|R|PET normal_cal_id|GEMS_PETD_01
+0x00091057|UI|1|R|PET normal_2d_cal_id|GEMS_PETD_01
+0x00091058|UI|1|R|PET blank_cal_id|GEMS_PETD_01
+0x00091059|UI|1|R|PET wc_cal_id|GEMS_PETD_01
+0x0009105a|SL|1|K|PET derived|GEMS_PETD_01
+0x0009105b|LO|1|R|PET contrast_agent|GEMS_PETD_01
+0x0009105c|UI|1|R|PET frame_id|GEMS_PETD_01
+0x0009105d|UI|1|R|PET scan_id|GEMS_PETD_01
+0x0009105e|UI|1|R|PET exam_id|GEMS_PETD_01
+0x0009105f|LO|1|X|PET patient_id|GEMS_PETD_01
+0x00091060|SH|1|R|PET compatible_version|GEMS_PETD_01
+0x00091061|SH|1|R|PET software_version|GEMS_PETD_01
+0x00091062|ST|1|R|PET where_is_frame|GEMS_PETD_01
+0x00091063|SL|1|K|PET frame_size|GEMS_PETD_01
+0x00091064|SL|1|K|PET file_exists|GEMS_PETD_01
+0x00091065|SL|1|K|PET patient_entry|GEMS_PETD_01
+0x00091066|FL|1|K|PET table_height|GEMS_PETD_01
+0x00091067|FL|1|K|PET table_z_position|GEMS_PETD_01
+0x00091068|DT|1|R|PET landmark_datetime|GEMS_PETD_01
+0x00091069|SL|1|K|PET slice_count|GEMS_PETD_01
+0x0009106a|FL|1|K|PET start_location|GEMS_PETD_01
+0x0009106b|SL|1|K|PET acq_delay|GEMS_PETD_01
+0x0009106c|DT|1|R|PET acq_start|GEMS_PETD_01
+0x0009106d|SL|1|K|PET acq_duration|GEMS_PETD_01
+0x0009106e|SL|1|K|PET acq_bin_dur|GEMS_PETD_01
+0x0009106f|SL|1|K|PET acq_bin_start|GEMS_PETD_01
+0x00091070|SL|1|K|PET actual_stop_cond|GEMS_PETD_01
+0x00091071|FD|1|K|PET total_prompts|GEMS_PETD_01
+0x00091072|FD|1|K|PET total_delays|GEMS_PETD_01
+0x00091073|SL|1|K|PET frame_valid|GEMS_PETD_01
+0x00091074|SL|1|K|PET validity_info|GEMS_PETD_01
+0x00091075|SL|1|K|PET archived|GEMS_PETD_01
+0x00091076|SL|1|K|PET compression|GEMS_PETD_01
+0x00091077|SL|1|K|PET uncompressed_size|GEMS_PETD_01
+0x00091078|SL|1|K|PET accum_bin_dur|GEMS_PETD_01
+0x00091079|SH|1|R|PET compatible_version|GEMS_PETD_01
+0x0009107a|SH|1|R|PET software_version|GEMS_PETD_01
+0x0009107b|DT|1|R|PET is_datetime|GEMS_PETD_01
+0x0009107c|SL|1|K|PET is_source|GEMS_PETD_01
+0x0009107d|SL|1|K|PET is_contents|GEMS_PETD_01
+0x0009107e|SL|1|K|PET is_type|GEMS_PETD_01
+0x0009107f|DS|1|K|PET is_reference|GEMS_PETD_01
+0x00091080|SL|1|K|PET multi_patient|GEMS_PETD_01
+0x00091081|SL|1|K|PET number_of_normals|GEMS_PETD_01
+0x00091082|UI|1|R|PET color_map_id|GEMS_PETD_01
+0x00091083|SL|1|K|PET window_level_type|GEMS_PETD_01
+0x00091084|FL|1|K|PET rotate|GEMS_PETD_01
+0x00091085|SL|1|K|PET flip|GEMS_PETD_01
+0x00091086|FL|1|K|PET zoom|GEMS_PETD_01
+0x00091087|SL|1|K|PET pan_x|GEMS_PETD_01
+0x00091088|SL|1|K|PET pan_y|GEMS_PETD_01
+0x00091089|FL|1|K|PET window_level_min|GEMS_PETD_01
+0x0009108a|FL|1|K|PET window_level_max|GEMS_PETD_01
+0x0009108b|SL|1|K|PET recon_method|GEMS_PETD_01
+0x0009108c|SL|1|K|PET attenuation|GEMS_PETD_01
+0x0009108d|FL|1|K|PET atten_coefficient|GEMS_PETD_01
+0x0009108e|SL|1|K|PET bp_filter|GEMS_PETD_01
+0x0009108f|FL|1|K|PET bp_filter_cutoff|GEMS_PETD_01
+0x00091090|SL|1|K|PET bp_filter_order|GEMS_PETD_01
+0x00091091|FL|1|K|PET bp_center_l|GEMS_PETD_01
+0x00091092|FL|1|K|PET bp_center_p|GEMS_PETD_01
+0x00091093|SL|1|K|PET atten_smooth|GEMS_PETD_01
+0x00091094|SL|1|K|PET atten_smooth_param|GEMS_PETD_01
+0x00091095|SL|1|K|PET angle_smooth_param|GEMS_PETD_01
+0x00091096|UI|1|R|PET wellcountercal_id|GEMS_PETD_01
+0x00091097|UI|1|R|PET trans_scan_id|GEMS_PETD_01
+0x00091098|UI|1|R|PET norm_cal_id|GEMS_PETD_01
+0x00091099|UI|1|R|PET blnk_cal_id|GEMS_PETD_01
+0x0009109a|FL|1|K|PET cac_edge_threshold|GEMS_PETD_01
+0x0009109b|FL|1|K|PET cac_skull_offset|GEMS_PETD_01
+0x0009109c|UI|1|R|PET emiss_sub_id|GEMS_PETD_01
+0x0009109d|SL|1|K|PET radial_filter_3d|GEMS_PETD_01
+0x0009109e|FL|1|K|PET radial_cutoff_3d|GEMS_PETD_01
+0x0009109f|SL|1|K|PET axial_filter_3d|GEMS_PETD_01
+0x000910a0|FL|1|K|PET axial_cutoff_3d|GEMS_PETD_01
+0x000910a1|FL|1|K|PET axial_start|GEMS_PETD_01
+0x000910a2|FL|1|K|PET axial_spacing|GEMS_PETD_01
+0x000910a3|SL|1|K|PET axial_angles_used|GEMS_PETD_01
+0x000910a4|SH|1|R|PET compatible_version|GEMS_PETD_01
+0x000910a5|SH|1|R|PET software_version|GEMS_PETD_01
+0x000910a6|SL|1|K|PET slice_number|GEMS_PETD_01
+0x000910a7|FL|1|K|PET total_counts|GEMS_PETD_01
+0x000910a8|OB|1|X|PET other_atts|GEMS_PETD_01
+0x000910a9|SL|1|K|PET other_atts_size|GEMS_PETD_01
+0x000910aa|SL|1|K|PET archived|GEMS_PETD_01
+0x000910ab|FL|1|K|PET bp_center_x|GEMS_PETD_01
+0x000910ac|FL|1|K|PET bp_center_y|GEMS_PETD_01
+0x000910ad|UI|1|R|PET trans_frame_id|GEMS_PETD_01
+0x000910ae|UI|1|R|PET tpluse_frame_id|GEMS_PETD_01
+0x000910b1|FL|1|K|PET profile_spacing|GEMS_PETD_01
+0x000910b2|SL|1|K|PET ir_num_iterations|GEMS_PETD_01
+0x000910b3|SL|1|K|PET ir_num_subsets|GEMS_PETD_01
+0x000910b4|FL|1|K|PET ir_recon_fov|GEMS_PETD_01
+0x000910b5|SL|1|K|PET ir_corr_model|GEMS_PETD_01
+0x000910b6|SL|1|K|PET ir_loop_filter|GEMS_PETD_01
+0x000910b7|FL|1|K|PET ir_pre_filt_parm|GEMS_PETD_01
+0x000910b8|SL|1|K|PET ir_loop_filt_parm|GEMS_PETD_01
+0x000910b9|FL|1|K|PET response_filt_parm|GEMS_PETD_01
+0x000910ba|SL|1|K|PET post_filter|GEMS_PETD_01
+0x000910bb|FL|1|K|PET post_filt_parm|GEMS_PETD_01
+0x000910bc|SL|1|K|PET ir_regularize|GEMS_PETD_01
+0x000910bd|FL|1|K|PET regularize_parm|GEMS_PETD_01
+0x000910be|SL|1|K|PET ac_bp_filter|GEMS_PETD_01
+0x000910bf|FL|1|K|PET ac_bp_filt_cut_off|GEMS_PETD_01
+0x000910c0|SL|1|K|PET ac_bp_filt_order|GEMS_PETD_01
+0x000910c1|SL|1|K|PET ac_img_smooth|GEMS_PETD_01
+0x000910c2|FL|1|K|PET ac_img_smooth_parm|GEMS_PETD_01
+0x000910c3|SL|1|K|PET scatter_method|GEMS_PETD_01
+0x000910c4|SL|1|K|PET scatter_num_iter|GEMS_PETD_01
+0x000910c5|FL|1|K|PET scatter_parm|GEMS_PETD_01
+0x000910c6|FL|1|K|PET seg_qc_parm|GEMS_PETD_01
+0x000910c7|SL|1|K|PET overlap|GEMS_PETD_01
+0x000910c8|UI|1|R|PET ovlp_frm_id|GEMS_PETD_01
+0x000910c9|UI|1|R|PET ovlp_trans_frm_id|GEMS_PETD_01
+0x000910ca|UI|1|R|PET ovlp_tpulse_frm_id|GEMS_PETD_01
+0x000910cb|FL|1|K|PET vqc_x_axis_trans|GEMS_PETD_01
+0x000910cc|FL|1|K|PET vqc_x_axis_tilt|GEMS_PETD_01
+0x000910cd|FL|1|K|PET vqc_y_axis_trans|GEMS_PETD_01
+0x000910ce|FL|1|K|PET vqc_y_axis_swivel|GEMS_PETD_01
+0x000910cf|FL|1|K|PET vqc_z_axis_trans|GEMS_PETD_01
+0x000910d0|FL|1|K|PET vqc_z_axis_roll|GEMS_PETD_01
+0x000910d1|LO|1|R|PET ctac_conv_scale|GEMS_PETD_01
+0x000910d2|UI|1|R|PET image_set_id|GEMS_PETD_01
+0x000910d3|SL|1|K|PET constrast_route|GEMS_PETD_01
+0x000910d4|LO|1|R|PET ctac_conv_scale|GEMS_PETD_01
+0x000910d5|FL|1|K|PET loop_filter_parm|GEMS_PETD_01
+0x000910d6|FL|1|K|PET image_one_loc|GEMS_PETD_01
+0x000910d7|FL|1|K|PET image_index_loc|GEMS_PETD_01
+0x000910d8|SL|1|K|PET frame_number|GEMS_PETD_01
+0x000910d9|SL|1|K|PET list_file_exists|GEMS_PETD_01
+0x000910da|ST|1|K|PET where_is_list_frame|GEMS_PETD_01
+0x000910db|SL|1|K|PET ir_z_filter_flag|GEMS_PETD_01
+0x000910dc|FL|1|K|PET ir_z_filter_ratio|GEMS_PETD_01
+0x000910dd|US|1|K|PET num_of_rr_interval|GEMS_PETD_01
+0x000910de|US|1|K|PET num_of_time_slots|GEMS_PETD_01
+0x000910df|US|1|K|PET num_of_slices|GEMS_PETD_01
+0x000910e0|US|1|K|PET num_of_time_slices|GEMS_PETD_01
+0x000910e1|SL|1|K|PET unlisted_scan|GEMS_PETD_01
+0x000910e2|SL|1|K|PET rest_stress|GEMS_PETD_01
+0x000910e3|FL|1|K|PET phase percentage|GEMS_PETD_01
+0x000910e4|ST|1|R|Recon Protocol|GEMS_PETD_01
+0x000910e5|FL|1|K|PET left shift|GEMS_PETD_01
+0x000910e6|FL|1|K|PET posterior shift|GEMS_PETD_01
+0x000910e7|FL|1|K|PET superior shift|GEMS_PETD_01
+0x000910e8|SL|1|K|PET acq_bin_num|GEMS_PETD_01
+0x000910e9|FL|1|K|PET acq_bin_dur_percent|GEMS_PETD_01
+0x000910ea|SL|1|K|3D Filter flag|GEMS_PETD_01
+0x000910eb|FL|1|K|3D Filter cutoff|GEMS_PETD_01
+0x000910ec|SL|1|K|3D Filter order|GEMS_PETD_01
+0x000910f0|UI|1|R|Reformat group|GEMS_PETD_01
+0x000910f1|SL|1|K|PET prompt gamma|GEMS_PETD_01
+0x000910f2|UI|1|R|PET tracerInjection_UID|GEMS_PETD_01
+#|||||
+0x00110010|LO|1|X|GEHC Private Creator ID|GEMS_PETD_01
+0x00111001|SQ|1|X|PET ROI Sequence|GEMS_PETD_01
+0x00111002|UI|1|X|PET ROI.roi_id|GEMS_PETD_01
+0x00111003|UI|1|X|PET ROI.image_id|GEMS_PETD_01
+0x00111004|UI|1|X|PET ROI.compatible_version|GEMS_PETD_01
+0x00111005|SH|1|X|PET ROI.software_version|GEMS_PETD_01
+0x00111006|LO|1|X|PET ROI.roi_name|GEMS_PETD_01
+0x00111007|DT|1|X|PET ROI.roi_datetime|GEMS_PETD_01
+0x00111008|SL|1|X|PET ROI.roi_type|GEMS_PETD_01
+0x00111009|FL|1|X|PET ROI.center_x|GEMS_PETD_01
+0x0011100A|FL|1|X|PET ROI.center_y|GEMS_PETD_01
+0x0011100B|FL|1|X|PET ROI.width|GEMS_PETD_01
+0x0011100C|FL|1|X|PET ROI.height|GEMS_PETD_01
+0x0011100D|FL|1|X|PET ROI.angle|GEMS_PETD_01
+0x0011100E|SL|1|X|PET ROI.number_of_points|GEMS_PETD_01
+0x0011100F|OB|1|X|PET ROI.roi_data|GEMS_PETD_01
+0x00111010|SL|1|X|PET ROI.roi_size|GEMS_PETD_01
+0x00111011|LO|1|X|PET ROI.color|GEMS_PETD_01
+0x00111012|SL|1|X|PET ROI.line_type|GEMS_PETD_01
+0x00111013|SL|1|X|PET ROI.line_width|GEMS_PETD_01
+0x00111014|SL|1|X|PET ROI.roi_number|GEMS_PETD_01
+0x00111015|SL|1|X|PET ROI.convex|GEMS_PETD_01
+0x00111016|SL|1|X|PET ROI.atten_cor_flag|GEMS_PETD_01
+#|||||
+0x00130010|LO|1|X|GEHC Private Creator ID|GEMS_PETD_01
+0x00131001|SQ|1|X|PET Annotation Sequence|GEMS_PETD_01
+0x00131002|UI|1|X|PET Annotation.annotation_id|GEMS_PETD_01
+0x00131003|UI|1|X|PET Annotation.image_id|GEMS_PETD_01
+0x00131004|SH|1|X|PET Annotation.compatible_version|GEMS_PETD_01
+0x00131005|SH|1|X|PET Annotation.software_version|GEMS_PETD_01
+0x00131006|SL|1|X|PET Annotation.type|GEMS_PETD_01
+0x00131007|LO|1|X|PET Annotation.font_name|GEMS_PETD_01
+0x00131008|SH|1|X|PET Annotation.font_size|GEMS_PETD_01
+0x00131009|LO|1|X|PET Annotation.foreground_color|GEMS_PETD_01
+0x0013100A|LO|1|X|PET Annotation.background_color|GEMS_PETD_01
+0x0013100B|SL|1|X|PET Annotation.coordinate_system|GEMS_PETD_01
+0x0013100C|FL|1|X|PET Annotation.start_x|GEMS_PETD_01
+0x0013100D|FL|1|X|PET Annotation.start_y|GEMS_PETD_01
+0x0013100E|FL|1|X|PET Annotation.end_x|GEMS_PETD_01
+0x0013100F|FL|1|X|PET Annotation.end_y|GEMS_PETD_01
+0x00131010|SL|1|X|PET Annotation.start_symbol|GEMS_PETD_01
+0x00131011|SL|1|X|PET Annotation.end_symbol|GEMS_PETD_01
+0x00131012|OB|1|X|PET Annotation.annotation_data|GEMS_PETD_01
+0x00131013|SL|1|X|PET Annotation.annotation.size|GEMS_PETD_01
+0x00131014|LO|1|X|PET Annotation.label_id|GEMS_PETD_01
+#|||||
+0x00150010|LO|1|K|GEHC Private Creator ID|GEMS_PETD_01
+0x0015101A|US|1|K|Physio Gating Type|GEMS_PETD_01
+0x0015101B|US|1|K|Total Number of Bins|GEMS_PETD_01
+0x0015101C|US|1|K|% Phase Value|GEMS_PETD_01
+0x0015101D|SL|1|K|Phase Matched Series|GEMS_PETD_01
+0x0015101E|SL|1|K|CTAC Percent Value|GEMS_PETD_01
+0x0015101F|UL|1|K|PET Recon Parameters Exists|GEMS_PETD_01
+0x00151020|SL|1|K|First Packet Number|GEMS_PETD_01
+0x00151021|FL|1|K|IR Loop Filter Ratio|GEMS_PETD_01
+0x00151022|FL|1|K|IR Loop Filter Correction|GEMS_PETD_01
+0x00151023|UL|1|K|BP3d Filter FlagU|GEMS_PETD_01
+0x00151024|FL|1|K|BP3d Filter CutoffU|GEMS_PETD_01
+0x00151025|SL|1|K|BP3d Filter OrderU|GEMS_PETD_01
+0x00151026|UL|1|K|BP3d Filter FlagV|GEMS_PETD_01
+0x00151027|FL|1|K|BP3d Filter OrderV|GEMS_PETD_01
+0x00151028|SL|1|K|BP3d Filter CutoffV|GEMS_PETD_01
+0x00151029|UL|1|K|Decay Flag|GEMS_PETD_01
+0x0015102E|UL|1|K|Image filter 3d flag|GEMS_PETD_01
+0x0015102F|UL|1|K|WCC Cal Flag|GEMS_PETD_01
+0x00151030|UL|1|K|Emission Scatter Flag|GEMS_PETD_01
+0x00151031|UL|1|K|Recon Algorithm|GEMS_PETD_01
+0x00151032|UL|1|K|Normalization Flag|GEMS_PETD_01
+0x00151033|UL|1|K|Emission Deadtime Flag|GEMS_PETD_01
+0x00151034|UL|1|K|Emission Random Flag|GEMS_PETD_01
+0x00151035|UL|1|K|Blank Scan Flag|GEMS_PETD_01
+0x00151039|SL|1|K|Event histogram Format|GEMS_PETD_01
+0x0015103A|SL|1|K|Number of Detector Rows|GEMS_PETD_01
+0x0015103B|SL|1|K|Number of Detector Columns|GEMS_PETD_01
+0x0015103C|US|1|K|Recon Matrix Size|GEMS_PETD_01
+0x0015103D|UL|1|K|PET Sharp IR Flag|GEMS_PETD_01
+0x0015103E|UL|1|K|PET Scatter Limit|GEMS_PETD_01
+#|||||
+0x00170010|LO|1|K|GEHC Private Creator ID|GEMS_PETD_01
+0x00171001|UI|1|R|PET correction_cal_id|GEMS_PETD_01
+0x00171002|SH|1|K|PET compatible_version|GEMS_PETD_01
+0x00171003|SH|1|K|PET software_version|GEMS_PETD_01
+0x00171004|DT|1|R|PET cal_datetime|GEMS_PETD_01
+0x00171005|LO|1|K|PET cal_description|GEMS_PETD_01
+0x00171006|SL|1|K|PET cal_type|GEMS_PETD_01
+0x00171007|ST|1|K|PET where_is_corr|GEMS_PETD_01
+0x00171008|SL|1|K|PET corr_file_size|GEMS_PETD_01
+0x00171009|LO|1|R|PET scan_id|GEMS_PETD_01
+0x0017100A|DT|1|R|PET scan_datetime|GEMS_PETD_01
+0x0017100B|LO|1|R|PET norm_2d_cal_id|GEMS_PETD_01
+0x0017100C|SH|1|R|PET hosp_identifier|GEMS_PETD_01
+0x0017100D|SL|1|K|PET archived|GEMS_PETD_01
+#|||||
+0x00190010|LO|1|K|GEHC Private Creator ID|GEMS_PETD_01
+0x00191001|UI|1|R|PET wc_cal_id|GEMS_PETD_01
+0x00191002|SH|1|K|PET compatible_version|GEMS_PETD_01
+0x00191003|SH|1|K|PET software_version|GEMS_PETD_01
+0x00191004|DT|1|R|PET cal_datetime |GEMS_PETD_01
+0x00191005|SL|1|K|PET cal_type|GEMS_PETD_01
+0x00191006|LO|1|R|PET cal_description|GEMS_PETD_01
+0x00191007|LO|1|K|PET cal_hardware|GEMS_PETD_01
+0x00191008|OB|1|K|PET coefficients|GEMS_PETD_01
+0x00191009|FL|1|K|PET activity_factor_hr|GEMS_PETD_01
+0x0019100A|FL|1|K|PET activity_factor_hs|GEMS_PETD_01
+0x0019100B|FL|1|K|PET activity_factor_3d|GEMS_PETD_01
+0x0019100C|LO|1|R|PET scan_id|GEMS_PETD_01
+0x0019100D|DT|1|R|PET scan_datetime|GEMS_PETD_01
+0x0019100E|SH|1|R|PET hosp_identifier|GEMS_PETD_01
+0x0019100F|FL|1|K|PET meas_activity|GEMS_PETD_01
+0x00191010|DT|1|R|PET meas_datetime|GEMS_PETD_01
+0x00191011|SL|1|K|PET axial_filter_3d|GEMS_PETD_01
+0x00191012|FL|1|K|PET axial_cutoff_3d|GEMS_PETD_01
+0x00191013|SL|1|K|PET default_flag|GEMS_PETD_01
+0x00191014|SL|1|K|PET archived|GEMS_PETD_01
+0x00191015|SL|1|K|PET wc_cal_rec_method|GEMS_PETD_01
+0x00191016|FL|1|K|PET activity_factor_2d|GEMS_PETD_01
+0x00191017|SL|1|K|PET isotope|GEMS_PETD_01
+0x00191018|UI|1|R|WCC Image Set ID|GEMS_PETD_01
+#|||||
+0x00210010|LO|1|K|GEHC Private Creator ID|GEMS_PETD_01
+0x00211001|US|1|K|PET raw_data_type|GEMS_PETD_01
+0x00211002|UL|1|K|PET raw_data_size|GEMS_PETD_01
+#|||||
+0x00230010|LO|1|K|GEHC Private Creator ID|GEMS_PETD_01
+0x00231002|0B|1|R|PET raw_data_blob|GEMS_PETD_01
+# Hitachi/Hitachi_MR.txt
+# Tag|VR|VM|Code|Description|Private Creator
+@ Hitachi MR
+#
+0x00090010 |LO  |1|K|Private Creator |MMCPrivate
+0x00091001 |LO  |1|X|Technologist |MMCPrivate
+0x00091002 |LO  |1|X|ScheduledStudyDateTime |MMCPrivate
+0x00091003 |OB  |1|X|StudyAppData |MMCPrivate
+0x00091004 |UI  |1|X|ProtocolObjectID |MMCPrivate
+0x00091005 |LO  |1|X|Name |MMCPrivate
+0x00091006 |IS  |1|K|Frequency |MMCPrivate
+0x00091007 |SH  |1|X|UpdateFlag |MMCPrivate
+0x00091008 |SH  |1|X|Directory |MMCPrivate
+0x00091009 |LO  |1|X|Comments |MMCPrivate
+0x0009100a |LO  |1|K|Region |MMCPrivate
+0x0009100b |SH  |1|K|Laterality |MMCPrivate
+0x0009100c |TM  |1|K|TotalScanTime |MMCPrivate
+0x0009100d |LO  |1|K|ContrastMedium |MMCPrivate
+0x0009100e |LO  |1|X|CreateDateTime |MMCPrivate
+0x0009100f |LO  |1|X|Creator |MMCPrivate
+0x00091010 |LO  |1|X|SiteName |MMCPrivate
+0x00091011 |LO  |1|X|ReferringPhysician |MMCPrivate
+0x00091012 |LO  |1|X|Radiologist |MMCPrivate
+0x00091013 |LO  |1|X|Technologist |MMCPrivate
+0x00091014 |UI  |1|X|ProtocolUid |MMCPrivate
+0x00091015 |SH  |1|X|IsInLibrary |MMCPrivate
+0x00091016 |LO  |1|K|Gating |MMCPrivate
+0x00091017 |ST  |1|X|Note |MMCPrivate
+0x00091018 |IS  |1|X|NumberOfTasks |MMCPrivate
+0x00091019 |SH  |1|X|IsFlagRaised |MMCPrivate
+0x0009101a |SH  |1|X|IsArchived |MMCPrivate
+0x0009101b |SH  |1|X|IsDefault |MMCPrivate
+0x0009101c |OB  |1|X|ProtocolAppData |MMCPrivate
+0x0009101d |SH  |1|X|IsAllowCascadeSave |MMCPrivate
+0x0009101e |SH  |1|X|IsAllowCascadeProtect |MMCPrivate
+0x0009101f |SQ  |1|X|TaskInfo |MMCPrivate
+0x00091020 |UI  |1|X|TaskInfoObjectID |MMCPrivate
+0x00091021 |LO  |1|X|Name |MMCPrivate
+0x00091022 |SH  |1|X|TaskStatus |MMCPrivate
+0x00091023 |SH  |1|X|TaskPriority |MMCPrivate
+0x00091024 |SH  |1|X|Leaf |MMCPrivate
+0x00091025 |LO  |1|X|TaskID |MMCPrivate
+0x00091026 |IS  |1|K|Frequency |MMCPrivate
+0x00091027 |SH  |1|X|UpdateFlag |MMCPrivate
+0x00091028 |SH  |1|X|Directory |MMCPrivate
+0x00091029 |LO  |1|X|Comments |MMCPrivate
+0x0009102a |SH  |1|X|Category |MMCPrivate
+0x0009102b |LO  |1|K|Region |MMCPrivate
+0x0009102c |SH  |1|K|Laterality |MMCPrivate
+0x0009102d |TM  |1|K|ScanTime|MMCPrivate
+0x0009102e |LO  |1|K|ContrastMedium |MMCPrivate
+0x0009102f |LO  |1|X|CreateDateTime |MMCPrivate
+0x00091030 |LO  |1|X|Creator |MMCPrivate
+0x00091031 |LO  |1|X|SiteName |MMCPrivate
+0x00091032 |LO  |1|X|ReferringPhysician |MMCPrivate
+0x00091033 |LO  |1|X|Radiologist |MMCPrivate
+0x00091034 |LO  |1|X|Technologist |MMCPrivate
+0x00091035 |UI  |1|X|TaskUid |MMCPrivate
+0x00091036 |UI  |1|X|TaskInfoUid |MMCPrivate
+0x00091037 |SH  |1|X|IsInLibrary |MMCPrivate
+0x00091038 |IS  |1|X|TaskOrder |MMCPrivate
+0x00091039 |LO  |1|K|Gating |MMCPrivate
+0x0009103a |SH  |1|K|Plane |MMCPrivate
+0x0009103b |LO  |1|K|SequenceType |MMCPrivate
+0x0009103c |SH  |1|X|IsExecutive |MMCPrivate
+0x0009103d |ST  |1|X|Note |MMCPrivate
+0x0009103e |SH  |1|X|AutoStart |MMCPrivate
+0x0009103f |SH  |1|X|AutoSave |MMCPrivate
+0x00091040 |SH  |1|X|AutoArchive |MMCPrivate
+0x00091041 |IS  |1|X|QueueGroupID |MMCPrivate
+0x00091042 |SH  |1|X|IsFlagRaised |MMCPrivate
+0x00091043 |SH  |1|X|IsArchived |MMCPrivate
+0x00091044 |SH  |1|X|IsDefault |MMCPrivate
+0x00091045 |OB  |1|X|TaskInfoAppData |MMCPrivate
+0x00091046 |SH  |1|X|IsAllowCascadeSave |MMCPrivate
+0x00091047 |SH  |1|X|IsAllowCascadeProtect |MMCPrivate
+0x00091048 |LO  |1|K|ProtocolName |MMCPrivate
+0x0009104e |LO  |1|K|Cms_BodyPartExamined |MMCPrivate
+0x0009104f |LO  |1|X|IsProtected |MMCPrivate
+0x0009105f |UI  |1|X|ProtocolObjectID |MMCPrivate
+0x00091060 |OB  |1|X|TaskInfoAppData |MMCPrivate
+0x00091072 |UI  |1|X|ProtocolTaskInfoObjectID |MMCPrivate
+0x00091073 |IS  |1|X|ProtocolTaskOrder |MMCPrivate
+0x00091074 |UI  |1|X|ProtocolTaskUid |MMCPrivate
+0x00091075 |OB  |1|X|ProtocolTaskAppData |MMCPrivate
+0x00091076 |SH  |1|X|ProtocolTaskIsAllowCascadeSave |MMCPrivate
+0x00091077 |SH  |1|X|ProtocolTaskIsAllowCascadeProtect |MMCPrivate
+#
+0x00110010 |LO  |1|K|Private Creator |MMCPrivate
+0x00111001 |LO  |1|X|IsRapidRegistration |MMCPrivate
+0x00111002 |LO  |1|X|IsProtected |MMCPrivate
+#
+0x00190010 |LO  |1|K|Private Creator |MMCPrivate
+0x00191001 |LO  |1|K|ProcType |MMCPrivate
+0x00191002 |LO  |1|K|Plane |MMCPrivate
+0x00191003 |SH  |1|K|IsSnapShotSeries |MMCPrivate
+0x00191004 |DS  |1|K|MaxFsColor |MMCPrivate
+0x00191005 |LO  |1|K|SeriesCategoryType |MMCPrivate
+0x00191007 |LO  |1|K|ImageContrastBolusAgent |MMCPrivate
+0x00191008 |LO  |1|K|ImageSliceThickness |MMCPrivate
+0x00191009 |LO  |1|K|ImageReconstructionDiameter |MMCPrivate
+0x0019100a |LO  |1|K|ImageEchoTime |MMCPrivate
+0x0019100b |LO  |1|K|ImageRepetitionTime |MMCPrivate
+0x0019100c |LO  |1|K|SequenceType |MMCPrivate
+0x0019100d |LO  |1|X|TaskUid |MMCPrivate
+0x0019100e |OB  |1|X|SeriesAppData |MMCPrivate
+0x0019100f |IS  |1|K|MultiSliceNumber |MMCPrivate
+0x00191010 |LO  |1|K|ImageScanTime |MMCPrivate
+0x00191011 |LO  |1|K|IsProtected|MMCPrivate
+0x00191020 |UI  |1|R|MultiFrameSopInstanceUid |MMCPrivate
+#
+0x00290010 |LO  |1|K|Private Creator |MMCPrivate
+0x00291001 |IS  |1|K|SliceNumber |MMCPrivate
+0x00291002 |IS  |1|K|PhaseNumber |MMCPrivate
+0x00291003 |LO  |1|K|ProcType |MMCPrivate
+0x00291004 |LO  |1|K|StopwatchTime |MMCPrivate
+0x00291005 |LO  |1|K|Plane |MMCPrivate
+0x00291006 |LO  |1|K|ScanTime |MMCPrivate
+0x00291008 |LO  |1|K|DualSliceFlag |MMCPrivate
+0x00291009 |LO  |1|K|SspRatio |MMCPrivate
+0x0029100a |LO  |1|K|GatingSignalSource |MMCPrivate
+0x0029100b |LO  |1|K|Rephase |MMCPrivate
+0x0029100c |LO  |1|K|HalfEcho |MMCPrivate
+0x0029100d |LO  |1|K|RectFOVRatio |MMCPrivate
+0x0029100e |LO  |1|K|HalfScan |MMCPrivate
+0x0029100f |LO  |1|K|NumShots |MMCPrivate
+0x00291010 |LO  |1|K|ContrastAgent |MMCPrivate
+0x00291011 |LO  |1|K|EchoAllocation |MMCPrivate
+0x00291012 |LO  |1|K|NumEchoShift |MMCPrivate
+0x00291013 |LO  |1|K|FatSat |MMCPrivate
+0x00291014 |LO  |1|K|MTC |MMCPrivate
+0x00291015 |LO  |1|K|NumPreSat |MMCPrivate
+0x00291016 |LO  |1|K|TargetVelocity |MMCPrivate
+0x00291017 |LO  |1|K|VENCAxis |MMCPrivate
+0x00291018 |LO  |1|K|NumVENCDirection |MMCPrivate
+0x0029101c |LO  |1|K|IsScalableWindowLevel |MMCPrivate
+0x0029101d |LO  |1|K|ThreeDSettingLineAngle |MMCPrivate
+0x0029101e |LO  |1|K|MPGTotalAxis |MMCPrivate
+0x0029101f |LO  |1|K|MPGAxisNumber |MMCPrivate
+0x00291020 |IS  |1|K|MultiEchoNumber |MMCPrivate
+0x00291021 |DS  |1|K|NaviAverageGateWidth |MMCPrivate
+0x00291022 |ST  |1|K|ShimCompensateValue |MMCPrivate
+0x00291023 |LO  |1|K|GCOffset |MMCPrivate
+0x00291024 |DS  |1|K|NaviMaxGateWidth |MMCPrivate
+0x00291025 |DS  |1|K|NaviMinGateWidth |MMCPrivate
+0x00291026 |DS  |1|K|NaviMaxGatePosition |MMCPrivate
+0x00291027 |DS  |1|K|NaviMinGatePosition |MMCPrivate
+0x00291028 |DS  |1|K|TimeDuration |MMCPrivate
+0x00291029 |DS  |1|K|TablePosition |MMCPrivate
+0x0029102a |DS  |1|K|NaviInitialGateWidth |MMCPrivate
+0x0029102b |DS  |1|K|NaviFinalGateWidth |MMCPrivate
+0x0029102c |DS  |1|K|NaviInitialGatePosition |MMCPrivate
+0x0029102d |DS  |1|K|NaviFinalGatePosition |MMCPrivate
+0x0029102e |DS  |1|K|NaviAverageGatePosition |MMCPrivate
+0x0029102f |OB  |1|X|ImageAppData |MMCPrivate
+0x00291030 |FD |1|K|DiffusionBValue |MMCPrivate
+0x00291031 |SQ |1|K|SharedFunctionalGroupsSequence |MMCPrivate
+0x00291032|SQ|1|K|PerFrameFunctionalGroupsSequence|MMCPrivate
+0x00291033|DS|1|K|LossyImageCompressionRatio|MMCPrivate
+0x00291034|UI |1|R|InstanceCreatorUID|MMCPrivate
+0x00291035|UI |1|K|RelatedGeneralSOPClassUID|MMCPrivate
+0x00291036|UI |1|K|OriginalSpecializedSOPClassUID|MMCPrivate
+0x00291037|SH|1|X|TimezoneOffsetFromUTC|MMCPrivate
+0x00291038|CS|1|X|SOPInstanceStatus|MMCPrivate
+0x00291039|DT|1|X|SOPAuthorizationDateandTime|MMCPrivate
+0x0029103a|LT|1|X|SOPAuthorizationComment|MMCPrivate
+0x0029103b|LO|1|X|AuthorizationEquipmentCertificationNumber|MMCPrivate
+0x0029103c|UL|1|K|ConcatenationFrameOffsetNumber|MMCPrivate
+0x0029103d|CS|1|K|RepresentativeFrameNumber|MMCPrivate
+0x0029103e|UI|1|R|ConcatenationUID|MMCPrivate
+0x0029103f|US |1|K|InConcatenationNumber|MMCPrivate
+0x00291040 |CS|1|K|CardiacSynchronizationTechnique|MMCPrivate
+0x00291041 |CS|1|K|CardiacSignalSource|MMCPrivate
+0x00291042|FD |1|K|CardiacRRIntervalSpecified|MMCPrivate
+0x00291043|CS|1|K|CardiacBeatRejectionTechnique|MMCPrivate
+0x00291044|IS|1|K|LowRRValue|MMCPrivate
+0x00291045|IS|1|K|HighRRValue|MMCPrivate
+0x00291046|IS|1|K|IntervalsAcquired|MMCPrivate
+0x00291047 |IS|1|K|IntervalsRejected |MMCPrivate
+0x00291048 |CS |1|K|RespiratoryMotionCompensationTechnique |MMCPrivate
+0x00291049 |CS |1|K|RespiratorySignalSource |MMCPrivate
+0x0029104a |CS |1|K|BulkMotionCompensationTechnique |MMCPrivate
+0x0029104b |CS |1|K|BulkMotionSignalSource |MMCPrivate
+0x0029104c |CS |1|K|PixelPresentation |MMCPrivate
+0x0029104d |CS |1|K|VolumetricProperties |MMCPrivate
+0x0029104e |CS |1|K|VolumeBasedCalculationTechnique |MMCPrivate
+0x0029104f |ST |1|X|AcquisitionContextDescription |MMCPrivate
+0x00291050 |SQ |1|K|ModalityLUTSequence |MMCPrivate
+0x00291051 |LO |1|K|LUTDescriptor |MMCPrivate
+0x00291052 |LO |1|K|LUTExplanation |MMCPrivate
+0x00291053 |LO |1|K|LUTData |MMCPrivate
+0x00291054 |CS |1|K|PresentationLUTShape |MMCPrivate
+0x00291055 |SQ |1|K|FrameAnatomySequence |MMCPrivate
+0x00291056 |CS |1|K|FrameLaterality |MMCPrivate
+0x00291057 |SQ |1|K|AnatomicRegionSequence |MMCPrivate
+0x00291058 |SH |1|K|AnatomicRegionCodeValue |MMCPrivate
+0x00291059 |SH |1|K|AnatomicRegionCodingSchemeDesignator |MMCPrivate
+0x0029105a |SH |1|K|AnatomicRegionCodingSchemeVersion |MMCPrivate
+0x0029105b |LO|1|K|AnatomicRegionCodeMeaning |MMCPrivate
+0x0029105c |SQ |1|K|PixelValueTransformationSequence |MMCPrivate
+0x0029105d |LO |1|K|RescaleType |MMCPrivate
+0x0029105e |SQ|1|K|CardiacTriggerSequence|MMCPrivate
+0x0029105f|FD|1|K|TriggerDelayTime|MMCPrivate
+0x00291060|SQ|1|K|FrameVOILUTSequence|MMCPrivate
+0x00291061 |LO|1|K|WindowCenterAndWidthExplanation|MMCPrivate
+0x00291062 |CS|1|K|AcquisitionContrast|MMCPrivate
+0x00291063 |SQ|1|K|MRModifierSequence|MMCPrivate
+0x00291064 |CS|1|K|ParallelAcquisitionTechnic|MMCPrivate
+0x00291065 |FD|1|K|ParallelReductionFactorSecIn|MMCPrivate
+0x00291066|CS|1|K|InversionRecovery|MMCPrivate
+0x00291067 |CS|1|K|FlowCompensation|MMCPrivate
+0x00291068 |CS|1|K|FlowCompensationDirection|MMCPrivate
+0x00291069 |CS|1|K|SpatialPreSaturation|MMCPrivate
+0x0029106a |CS|1|K|PartialFourier|MMCPrivate
+0x0029106b |CS|1|K|PartialFourierDirection|MMCPrivate
+0x0029106c |CS|1|K|ResonantNucleus|MMCPrivate
+0x0029106d |CS|1|K|KSpaceFiltering|MMCPrivate
+0x0029106e |CS|1|K|ApplicableSafetyStandardAgency|MMCPrivate
+0x0029106f|LO|1|K|ApplicableSafetyStandardDescription|MMCPrivate
+0x00291070|SQ|1|K|MRReceiveCoilSequence|MMCPrivate
+0x00291071 |LO|1|K|ReceiveCoilManufacturerName|MMCPrivate
+0x00291072 |CS|1|K|ReceiveCoilType|MMCPrivate
+0x00291073 |CS|1|K|QuadratureReceiveCoil|MMCPrivate
+0x00291074 |LO|1|K|MultiCoilConfiguration|MMCPrivate
+0x00291075 |CS|1|K|ComplexImageComponent|MMCPrivate
+0x00291076|SH|1|K|PulseSequenceName|MMCPrivate
+0x00291077 |CS|1|K|EchoPulseSequence|MMCPrivate
+0x00291078 |CS|1|K|MultipleSpinEcho|MMCPrivate
+0x00291079 |CS|1|K|MultiPlanarExcitation|MMCPrivate
+0x0029107a |CS|1|K|PhaseContrast|MMCPrivate
+0x0029107b |CS|1|K|TimeOfFlightContrast|MMCPrivate
+0x0029107c |CS|1|K|SteadyStatePulseSequence|MMCPrivate
+0x0029107d |CS|1|K|EchoPlanarPulseSequence|MMCPrivate
+0x0029107e |CS|1|K|SpectrallySelectedSuppression|MMCPrivate
+0x0029107f|CS|1|K|OversamplingPhase|MMCPrivate
+0x00291080|CS|1|K|SegmentedKSpaceTraversal|MMCPrivate
+0x00291081 |CS|1|K|CoverageOfKSpace|MMCPrivate
+0x00291082 |SQ|1|K|MRTimingAndRelatedParametersSequence|MMCPrivate
+0x00291083 |US |1|K|RFEchoTrainLength|MMCPrivate
+0x00291084 |US |1|K|GradientEchoTrainLength|MMCPrivate
+0x00291085 |CS|1|K|GradientOutputType|MMCPrivate
+0x00291086|FD|1|K|GradientOutput|MMCPrivate
+0x00291087 |SQ|1|K|MRFOVGeometrySequence|MMCPrivate
+0x00291088 |US |1|K|MRAcquisitionFrequencyEncodingSteps|MMCPrivate
+0x00291089|US |1|K|MRAcquisitionPhaseEncodingStepsInPlane |MMCPrivate
+0x0029108a |US |1|K|MRAcquisitionPhaseEncodingStepsOutOfPlane |MMCPrivate
+0x0029108b |SQ|1|K|MRTransmitCoilSequence |MMCPrivate
+0x0029108c |SH |1|K|TransmitCoilName |MMCPrivate
+0x0029108d |LO |1|K|TransmitCoilManufacturerName |MMCPrivate
+0x0029108e |CS|1|K|TransmitCoilType |MMCPrivate
+0x0029108f |SQ |1|K|MREchoSequence |MMCPrivate
+0x00291090 |FD|1|K|EffectiveEchoTime |MMCPrivate
+0x00291091 |SQ |1|K|MRMetaboliteMapSequence |MMCPrivate
+0x00291092 |ST |1|K|MetaboliteMapDescription |MMCPrivate
+0x00291093 |SQ |1|K|MetaboliteMapCodeSequence |MMCPrivate
+0x00291094 |SH|1|K|MetaboliteMapCodeValue |MMCPrivate
+0x00291095 |SH|1|K|MetaboliteMapCodingSchemeDesignator |MMCPrivate
+0x00291096 |SH|1|K|MetaboliteMapCodingSchemeVersion |MMCPrivate
+0x00291097 |LO|1|K|MetaboliteMapCodeMeaning |MMCPrivate
+0x00291098 |SQ|1|K|MRImagingModifierSequence |MMCPrivate
+0x00291099 |CS|1|K|MagnetizationTransfer |MMCPrivate
+0x0029109a |CS|1|K|BloodSignalNulling |MMCPrivate
+0x0029109b |CS|1|K|Tagging |MMCPrivate
+0x0029109c |FD |1|K|TagSpacingFirstDimension |MMCPrivate
+0x0029109d |FD|1|K|TagSpacingSecondDimension |MMCPrivate
+0x0029109e |FD|1|K|TagAngleFirstAxis |MMCPrivate
+0x0029109f |SS|1|K|TagAngleSecondAxis |MMCPrivate
+0x002910a0 |FD |1|K|TagThickness |MMCPrivate
+0x002910a1 |FD |1|K|TaggingDelay |MMCPrivate
+0x002910a2 |FD|1|K|TransmitterFrequency |MMCPrivate
+0x002910a3 |DS |1|K|PixelBandwidth |MMCPrivate
+0x002910a4 |SQ |1|K|MRVelocityEncodingSequence |MMCPrivate
+0x002910a5 |FD|1|K|VelocityEncodingDirection |MMCPrivate
+0x002910a6 |FD|1|K|VelocityEncodingMinimumValue |MMCPrivate
+0x002910a7 |FD|1|K|VelocityEncodingMaximumValue |MMCPrivate
+0x002910a8 |SQ|1|K|MRImageFrameTypeSequence |MMCPrivate
+0x002910a9 |CS|1|K|FrameType |MMCPrivate
+0x002910aa |CS |1|K|PixelPresentation |MMCPrivate
+0x002910ab |CS|1|K|VolumetricProperties |MMCPrivate
+0x002910ac |CS |1|K|VolumeBasedCalculationTechnique |MMCPrivate
+0x002910bd |UI  |1|K|BackgroundImageInstanceUID |MMCPrivate
+0x002910be |LO  |1|X|IsStoredToPortableMedia |MMCPrivate
+0x002910bf |DS  |1|K|Voi1 |MMCPrivate
+0x002910c1 |DS  |1|K|Voi2 |MMCPrivate
+0x002910c2 |DS  |1|K|MixingTime |MMCPrivate
+0x002910c3 |DS  |1|K|SelectiveIRPosition |MMCPrivate
+0x002910c4 |DS  |1|K|SelectiveIRRow |MMCPrivate
+0x002910c5 |DS  |1|K|SelectiveIRColumn |MMCPrivate
+0x002910c6 |DS  |1|K|SelectiveIROrientation |MMCPrivate
+0x002910c7 |LO  |1|K|SelectiveIRThickness |MMCPrivate
+0x002910c8 |SH  |1|K|RephaseOrderSlice |MMCPrivate
+0x002910c9 |SH  |1|K|RephaseOrderPhase |MMCPrivate
+0x002910ca |SH  |1|K|RephaseOrderFreq |MMCPrivate
+0x002910cb |ST  |1|K|MetaboliteMapDescription |MMCPrivate
+0x002910cc |SQ  |1|K|volumeLocalizationSeq |MMCPrivate
+0x002910cd |FD  |1|K|SlabThickness |MMCPrivate
+0x002910ce |FD  |1|K|SlabOrientation |MMCPrivate
+0x002910cf |FD  |1|K|MidSlabPosition |MMCPrivate
+0x002910d0 |LO  |1|K|AcqModeSliceDir |MMCPrivate
+0x002910d1 |LO  |1|K|IRThicknessRatio |MMCPrivate
+0x002910d2 |LO  |1|K|BBIRThicknessRatio |MMCPrivate
+0x002910d3 |LO  |1|K|DeltaAngle |MMCPrivate
+0x002910d4 |IS  |1|K|MultiFrameFrameNumber |MMCPrivate
+0x002910d5 |UI  |1|K|EnhancedSopInstanceUid |MMCPrivate
+0x002910d6 |LO  |1|K|PolarityOfPhaseEncoding |MMCPrivate
+0x002910d7 |OB  |1|X|PresentationStates |MMCPrivate
+#
+0x00410010 |LO  |1|K|Private Creator |MMCPrivate
+0x00411001 |OB  |1|K|RawDataAppData |MMCPrivate
+0x00411002 |SQ  |1|K|RawDataIndex |MMCPrivate
+0x00411003 |LO  |1|K|ChannelNumber |MMCPrivate
+0x00411004 |LO  |1|K|AxisDirection |MMCPrivate
+0x00411005 |LO  |1|K|SlabNumbe |MMCPrivate
+0x00411006 |LO  |1|K|CardiacPhaseNumbe |MMCPrivate
+0x00411007 |LO  |1|K|EchoNumber |MMCPrivate
+0x00411008 |LO  |1|K|SliceEncodeNumber |MMCPrivate
+0x00411009 |LO  |1|K|NsaNumber |MMCPrivate
+0x0041100a |OB  |1|K|RawData |MMCPrivate
+0x0041100b |SS  |1|K|RawDataMRInfo |MMCPrivate
+0x0041100c |IS  |1|K|NumberOfVoxels |MMCPrivate
+0x0041100d |DS  |1|K|MixingTime |MMCPrivate
+0x0041100e |DS  |1|K|ADDiff |MMCPrivate
+0x0041100f |LO  |1|K|ScanTime |MMCPrivate
+0x00411010 |LO  |1|K|NumPreSat |MMCPrivate
+0x00411011|LO  |1|X|IsStoredToPortableMedia |MMCPrivate
+0x00411012 |DS  |1|K|Voi1 |MMCPrivate
+0x00411013 |DS  |1|K|Voi2 |MMCPrivate
+0x00411014 |DS  |1|K|VoxelSize |MMCPrivate
+0x00411015 |IS  |1|K|FreqPoint |MMCPrivate
+0x00411016 |SH  |1|K|LowOrderShim |MMCPrivate
+0x00411017 |SH  |1|K|EccLevel |MMCPrivate
+0x00411018 |FL  |1|K|FwhmHz |MMCPrivate
+0x00411019 |FL  |1|K|FwhmPpm |MMCPrivate
+0x0041101a |FL  |1|K|WaterSupRate |MMCPrivate
+#
+0x00710010 |LO  |1|K|Private Creator |MMCPrivate
+0x00711001 |FL  |1|K|ForegroundTransparency |MMCPrivate
+0x00711002 |LO  |1|K|IsDisplayBackgroundImage |MMCPrivate
+0x00711003 |FL  |1|K|ForegroundHorizontalShift |MMCPrivate
+0x00711004 |FL  |1|K|ForegroundVerticalShift |MMCPrivate
+0x00711005 |FL  |1|K|ForegroundRotationAngle |MMCPrivate
+0x00711006 |FL  |1|K|ForegroundMagnification |MMCPrivate
+0x00711007 |OB  |1|K|ApplicationData |MMCPrivate
+# Hologic/Hologic_MG.txt
+#Tag|VR|VM|Code|Description|Private Creator
+#||||Hologic Selenium Acquisition Workstation |2013.08.13
+@|Hologic MG||||
+0x00110010|LO|1|X|Private Creator ID|HIPPA Private Creator
+# contains encrypted patient attributes|||||
+#|||||
+0x00190010|LO|1|X|Private Creator ID|LORAD Selenium
+# contains unspecifiedimage characteristics|||||
+# Other/CTP.txt
+#Tag|VR|VM|Code|Description|Private Creator
+#|||||
+#|||||
+@|CTP||||
+0x00130010|LO|1|K|CTP Private Creator ID|CTP
+0x00131010|UN|1|K|Project Name|CTP
+0x00131011|UN|1|K|Trial Name|CTP
+0x00131012|UN|1|K|Site Name|CTP
+0x00131013|UN|1|K|Site ID|CTP
+0x00131014|UN|1|K|Visibility|CTP
+# Philips/ADAC_NM.txt
+#Tag|VR|VM|Code|Description|Private Creator
+#||||Pegasys|7/25/2013
+@|ADAC NM||||
+0x00190010|LO|1|K|Private Creator Group 0019|ADAC_IMG
+0x00191002|IS|1|X|ADAC Pegasys File Size|ADAC_IMG
+0x00191021|US|1|X|Number of ADAC Headers|ADAC_IMG
+0x00191041|IS|1-n|X|ADAC Header/Image Size|ADAC_IMG
+0x00191061|OB|1|X|ADAC Pegasys Headers|ADAC_IMG
+# Philips/Philips_CT.txt
+#Tag|VR|VM|Code|Description|Private Creator
+#|||||
+# This is the profile for Philips CT. |||||
+#|||||
+0x00E10010|LO|1|K|Philips Private Creator ID|ELSCINT1
+0x00E11021|DS|1|K|Dose Length Product (in mGy-cm)|ELSCINT1
+# Philips/Philips_MR.txt
+#Tag|VR|VM|Code|Description|Private Creator
+#||||Achieva R 2.5|
+#||||Achieva R 2.6|
+#||||Achieva 3.2|
+#||||Achieva 3.0T TX R3.1|12/30/2012
+@|Philips MR||||
+0x20010010|LO|1|K|Private Creator Group 2001|Philips Imaging DD 001
+0x20011001|FL|1|KB|Chemical Shift|Philips Imaging DD 001
+0x20011002|IS|1|KB|Chemical Shift Number MR|Philips Imaging DD 001
+#||||Duplicate to allow aliases|
+0x20011003|FL|1|KB|Diffusion B-Factor|Philips Imaging DD 001
+0x20011003|FL|1|KB|Diffusion b-value|Philips Imaging DD 001
+0x20011004|CS|1|R|Diffusion Direction|Philips Imaging DD 001
+0x20011006|CS|1|R|Image Enhanced|Philips Imaging DD 001
+0x20011007|CS|1|R|Image Type ED ES|Philips Imaging DD 001
+0x20011008|IS|1|KB|Phase Number|Philips Imaging DD 001
+0x20011009|FL|1|KB|Image Prepulse Delay|Philips Imaging DD 001
+0x2001100a|IS|1|K3|Slice Number MR|Philips Imaging DD 001
+0x2001100b|CS|1|R|Slice Orientation|Philips Imaging DD 001
+0x2001100c|CS|1|R|Arrhythmia Rejection|Philips Imaging DD 001
+0x2001100e|CS|1|R|Cardiac Cycled|Philips Imaging DD 001
+0x2001100f|SS|1|K|Cardiac Gate Width|Philips Imaging DD 001
+0x20011010|CS|1|R|Cardiac Sync|Philips Imaging DD 001
+0x20011011|FL|1|KB|Diffusion Echo Time|Philips Imaging DD 001
+0x20011012|CS|1|R|Dynamic Series|Philips Imaging DD 001
+0x20011013|SL|1|KB|EPI Factor|Philips Imaging DD 001
+0x20011014|SL|1|KB|Number of Echoes|Philips Imaging DD 001
+0x20011015|SS|1|KB|Number of Locations|Philips Imaging DD 001
+0x20011016|SS|1|KB|Number of PC Directions|Philips Imaging DD 001
+0x20011017|SL|1|KB|Number of Phases MR|Philips Imaging DD 001
+0x20011018|SL|1|KB|Number of Slices MR|Philips Imaging DD 001
+0x20011019|CS|1|R|Partial Matrix Scanned|Philips Imaging DD 001
+0x2001101a|FL|1|KB|PC Velocity|Philips Imaging DD 001
+0x2001101b|FL|1|KB|Prepulse Delay|Philips Imaging DD 001
+0x2001101c|CS|1|R|Prepulse Type|Philips Imaging DD 001
+0x2001101d|IS|1|K3|Reconstruction Number MR|Philips Imaging DD 001
+0x2001101f|CS|1|R|Respiration Sync|Philips Imaging DD 001
+0x20011020|LO|1|R|Scanning Technique|Philips Imaging DD 001
+0x20011021|CS|1|R|SPIR|Philips Imaging DD 001
+0x20011022|FL|1|KB|Water Fat Shift|Philips Imaging DD 001
+0x20011023|DS|1|KB|Flip Angle Philips|Philips Imaging DD 001
+0x20011024|CS|1|R|Series is Interactive|Philips Imaging DD 001
+0x20011025|SH|1|K|Echo Time Display|Philips Imaging DD 001
+0x2001102D|SS|1|K|Stack Number of Slices|Philips Imaging DD 001
+0x20011032|FL|1|K|Stack Radial Angle|Philips Imaging DD 001
+0x20011033|CS|1|K|Stack Radial Axis|Philips Imaging DD 001
+0x20011035|SS|1|K|Stack Slice Number|Philips Imaging DD 001
+0x20011036|CS|1|K|Stack Type|Philips Imaging DD 001
+0x20011058|UL|1|KB|Constrast Transfer Taste|Philips Imaging DD 001
+0x2001105f|SQ|1|K|Stack Sequence|Philips Imaging DD 001
+0x20011060|SL|1|KB|Number of Stacks|Philips Imaging DD 001
+0x20011061|CS|1|KB|Series Transmitted|Philips Imaging DD 001
+0x20011063|CS|1|X|Examination Source|Philips Imaging DD 001
+#||||Duplicate to allow aliases|
+0x2001107b|IS|1|K3|Acquisition Number|Philips Imaging DD 001
+0x2001107b|IS|1|K3|Acquisition no|Philips Imaging DD 001
+#||||Duplicate to allow aliases|
+0x20011081|IS|1|KB|Number of Dynamic Scans|Philips Imaging DD 001
+0x20011081|IS|1|KB|no_dynamic_scans|Philips Imaging DD 001
+0x200110a1|CS|1|R|Israwimage|Philips Imaging DD 001
+0x200110c8|LO|1|X|ExamCard Name|Philips Imaging DD 001
+0x200110f1|FL|1|KB|Prospective Motion Correction|Philips Imaging DD 001
+0x200110f2|FL|1|KB|Retrospective Motion Correction|Philips Imaging DD 001
+#|||||
+0x20050010|LO|1|K|Private Creator Group 2005|Philips MR Imaging DD 001
+0x20051020|SL|1|KB|Number of Chemical Shift|Philips MR Imaging DD 001
+0x200510a1|CS|1|R|Syncra Scan Type|Philips MR Imaging DD 001
+0x200510b0|FL|1|KB|Diffusion Direction RL|Philips MR Imaging DD 001
+0x200510b1|FL|1|KB|Diffusion Direction AP|Philips MR Imaging DD 001
+0x200510b2|FL|1|KB|Diffusion Direction FH|Philips MR Imaging DD 001
+# Philips/Philips_PTCT.txt
+#Tag|VR|VM|Code|Description|Private Creator
+#||||Gemini TF Version R3.1|4535 679 94381 Rev. B 2006.08.18
+#||||Gemini PET/CT Systems R3.5/R3.6|453567517551   Rev. C 2010.03.31
+#|||||
+@|Philips PTCT||||
+0x00E10010|LO|1|K|Private Creator Group|ELSCINT1
+0x00E11021|DS|1|K|ELSCINT1_DLP_TOTAL|ELSCINT1
+0x00E110C2|UI|1|R|PET-CT Multi Modality Name|ELSCINT1
+#|||||
+0x01E10010|LO|1|K|Private Creator Group|ELSCINT1
+0x01E110C2|UI|1|R|GT Gating UID|ELSCINT1
+#|||||
+0x01F10010|LO|1|X|Private Creator Group|ELSCINT1
+#|||||
+0x70530010|LO|1|K|Private Creator Group 7053|Philips PET Private Group
+0x70531000|DS|1|K|SUV Scale Factor|Philips PET Private Group
+0x70531001|OB|1|X|Philips Private 7053 1001|Philips PET Private Group
+0x70531002|OB|1|X|Philips Private 7053 1002|Philips PET Private Group
+0x70531003|ST|1|X|Original Image file name|Philips PET Private Group
+0x70531005|LO|1|X|File Name|Philips PET Private Group
+0x70531006|OB|1|X|Private|Philips PET Private Group
+0x70531007|SQ|1|X|Acquisition File Sequence|Philips PET Private Group
+0x70531009|DS|1|K|Activity Concentration Scale Factor|Philips PET Private Group
+0x70531013|SS|1|X|Philips Private 7053 1013|Philips PET Private Group
+0x70531014|SS|1|X|Philips Private 7053 1014|Philips PET Private Group
+0x70531015|SS|1|X|Philips Private 7053 1015|Philips PET Private Group
+0x70531016|SS|1|X|Philips Private 7053 1016|Philips PET Private Group
+0x70531017|SS|1|X|Philips Private 7053 1017|Philips PET Private Group
+0x70531018|SS|1|X|Philips Private 7053 1018|Philips PET Private Group
+0x705310C2|UI|1|X|PET-CT Multi Modality Name|Philips PET Private Group
+# Philips/Philips_PR.txt
+Tag|VR|VM|Code|Description|Private Creator
+#
+# This is an empty profile. We don't know anything about the 
+# private elements used in Philips PR objects.
+#
+# Siemens/Siemens_MR.txt
+#Tag|VR|VM|Code|Description|Private Creator
+#||||"Syngo MR B15, V 8.0"|
+#||||"Syngo MR B13, V 5.0"|7/16/2012
+#||||"syngo_MR_B17, V9.0"|12/30/2012
+#||||syngo MR V 4.9|12/30/2012
+#||||syngo MR A35|12/30/2012
+#||||"syngo MR A30A, V5.3"|12/30/2012
+#||||"syngo MR 2004A, V4.5"|12/30/2012
+#||||"syngo MR 2002B, V4.0"|12/30/2012
+#||||"syngo MR 2004V, V4.6"|12/30/2012
+#||||syngo MR C15|12/30/2012
+#||||"syngo MR C13, V9.0"|12/30/2012
+#||||"syngo MR C11, V8.0"|12/30/2012
+#|||||
+@|Siemens MR||||
+0x00290010|LO|1|X|Siemens Private Creator ID|SIEMENS CSA NON-IMAGE
+0x00291008|CS|1|X|CSA Data Type|SIEMENS CSA NON-IMAGE
+0x00291009|LO|1|X|CSA Data Version|SIEMENS CSA NON-IMAGE
+0x00291010|OB|1|X|CSA Data Info|SIEMENS CSA NON-IMAGE
+#|||||
+0x00290011|LO|1|X|SIemens Private Creator ID|SIEMENS CSA HEADER
+0x00291108|CS|1|X|CSA Image Header Type|SIEMENS CSA HEADER
+0x00291109|LO|1|X|CSA Image Header Version|SIEMENS CSA HEADER
+0x00291110|OB|1|X|CSA Image Header Info|SIEMENS CSA HEADER
+0x00291118|CS|1|X|CSA Series Header Type|SIEMENS CSA HEADER
+0x00291119|LO|1|X|CSA Series Header Version|SIEMENS CSA HEADER
+0x00291120|OB|1|X|CSA Series Header Info|SIEMENS CSA HEADER
+#|||||
+0x00290014|LO|1|X|Siemens Private Creator ID|SIEMENS CSA REPORT
+0x00291408|CS|1|X|Syngo Report Type|SIEMENS CSA REPORT
+0x00291409|LO|1|X|Syngo Report|SIEMENS CSA REPORT
+0x00291415|US|1|X|SR Variant|SIEMENS CSA REPORT
+0x00291417|UI|1|X|SC SOP Instance UID|SIEMENS CSA REPORT
+#|||||
+0x00290015|LO|1|X|Siemens Private Creator ID|SIEMENS CSA ENVELOPE
+0x00291510|OB|1|X|Syngo Report Data|SIEMENS CSA ENVELOPE
+0x00291511|OB|1|X|Syngo Report Presentation|SIEMENS CSA ENVELOPE
+#|||||
+0x00290012|LO|1|K|Siemens Private Creator ID|SIEMENS MEDCOM HEADER
+0x00291208|CS|1|R|MedCom Header Type|SIEMENS MEDCOM HEADER
+0x00291209|LO|1|R|MedCom Header Version|SIEMENS MEDCOM HEADER
+0x00291210|OB|1|X|MedCom Header Info|SIEMENS MEDCOM HEADER
+0x00291220|OB|1|X|MedCom History Information|SIEMENS MEDCOM HEADER
+0x00291231|LO|1|R|PMTF Information 1|SIEMENS MEDCOM HEADER
+0x00291232|UL|1|KB|PMTF Information 2|SIEMENS MEDCOM HEADER
+0x00291233|UL|1|KB|PMTF Information 3|SIEMENS MEDCOM HEADER
+0x00291234|CS|1|R|PMTF Information 4|SIEMENS MEDCOM HEADER
+0x00291235|UL|1|KB|PMTF Information 5|SIEMENS MEDCOM HEADER
+0x00291240|SQ|1|X|Application Header Sequence|SIEMENS MEDCOM HEADER
+0x00291241|CS|1|X|Application Header Type|SIEMENS MEDCOM HEADER
+0x00291242|LO|1|X|Application Header ID|SIEMENS MEDCOM HEADER
+0x00291243|LO|1|X|Application Header Version|SIEMENS MEDCOM HEADER
+0x00291244|OB|1|X|Application Header Info|SIEMENS MEDCOM HEADER
+0x00291250|LO|8|X|Workflow Control Flags|SIEMENS MEDCOM HEADER
+0x00291251|CS|1|X|Archive Management Flag Keep Online|SIEMENS MEDCOM HEADER
+0x00291252|CS|1|X|Archive Management Flag Do Not Archive|SIEMENS MEDCOM HEADER
+0x00291253|CS|1|X|Image Location Status|SIEMENS MEDCOM HEADER
+0x00291254|DS|1|X|Estimated Retrieve Time|SIEMENS MEDCOM HEADER
+0x00291255|DS|1|X|Data Size of Retrieved Images|SIEMENS MEDCOM HEADER
+0x00291270|SQ|1|X|Siemens Link Sequence|SIEMENS MEDCOM HEADER
+0x00291271|AT|1|X|Referenced Tag|SIEMENS MEDCOM HEADER
+0x00291272|CS|1|X|Referenced Tag Type|SIEMENS MEDCOM HEADER
+0x00291273|UL|1|X|Referenced Value Length|SIEMENS MEDCOM HEADER
+0x00291274|CS|1|X|Referenced Object Device Type|SIEMENS MEDCOM HEADER
+0x00291275|OB|1|X|Referenced Object Device Location|SIEMENS MEDCOM HEADER
+0x00291276|OB|1|X|Referenced Object ID|SIEMENS MEDCOM HEADER
+#|||||
+0x00290016|LO|1|X|Siemens Private Creator ID|SIEMENS MEDCOM HEADER2
+0x00291660|LO|1|X|Series Work Flow Status|SIEMENS MEDCOM HEADER2
+#|||||
+0x00290013|LO|1|X|Siemens Private Creator ID|SIEMENS MEDCOM OOG
+0x00291308|CS|1|X|MEDCOM OOG Type|SIEMENS MEDCOM OOG
+0x00291309|LO|1|X|MEDCOM OOG Version|SIEMENS MEDCOM OOG
+0x00291310|OB|1|X|MEDCOM OOG Info|SIEMENS MEDCOM OOG
+#|||||
+0x7fe10010|LO|1|R|Siemens Private Creator ID|SIEMENS CSA NON-IMAGE
+0x7fe11010|OB|1|X|CSA Data|SIEMENS CSA NON-IMAGE
+#|||||
+#||||Not tied to a conformance statement|
+#|||||
+#0x00190010|LO|1|K|Private Creator Data Element|SIEMENS MR HEADER
+#0x00191008|CS|1|R|?|SIEMENS MR HEADER
+#0x00191009|LO|1|R|?|SIEMENS MR HEADER
+#0x0019100b|DS|1|R|?|SIEMENS MR HEADER
+#0x0019100c|IS|1|K|B Value|SIEMENS MR HEADER
+#0x0019100d|CS|1|K|Diffusion Directionality|SIEMENS MR HEADER
+#0x0019100e|FD|3|K|Diffusion Gradient Direction|SIEMENS MR HEADER
+#0x0019100f|SH|1|R|?|SIEMENS MR HEADER
+#0x00191011|SH|1|R|?|SIEMENS MR HEADER
+#0x00191012|SL|1|R|?|SIEMENS MR HEADER
+#0x00191013|SL|1|R|?|SIEMENS MR HEADER
+#0x00191014|IS|1|R|?|SIEMENS MR HEADER
+#0x00191015|FD|1|R|?|SIEMENS MR HEADER
+#0x00191016|DS|1|R|?|SIEMENS MR HEADER
+#0x00191017|DS|1|R|?|SIEMENS MR HEADER
+#0x00191018|IS|1|R|?|SIEMENS MR HEADER
+#0x00191027|FD|6|K|Diffusion b-matrix encoding|SIEMENS MR HEADER
+#0x00191028|FD|1|R|?|SIEMENS MR HEADER
+#|||||
+#0x00290010|LO||X|Private Creator Data Element|SIEMENS CSA HEADER
+#0x00291008|CS||X|CSA Data Type|SIEMENS CSA HEADER
+#0x00291009|LO||X|CSA Data Version|SIEMENS CSA HEADER
+#0x00291010|OB||X|CSA Data Info|SIEMENS CSA HEADER
+#0x00291018|CS||X|CSA Series Header Type|SIEMENS CSA HEADER
+#0x00291019|LO||X|CSA Series Header Version|SIEMENS CSA HEADER
+#0x00291020|OB||X|CSA Series Header Info|SIEMENS CSA HEADER
+#|||||
+#0x00290010|LO||X|Private Creator Data Element|SIEMENS MEDCOM HEADER
+#0x00291008|CS||X|MedCom Header Type|SIEMENS MEDCOM HEADER
+#0x00291009|LO||X|MedCom Header Version|SIEMENS MEDCOM HEADER
+#0x00291010|OB||X|MedCom Header Info|SIEMENS MEDCOM HEADER
+#0x00291020|OB||X|MedCom History Info|SIEMENS MEDCOM HEADER
+#0x00291031|LO||X|?|SIEMENS MEDCOM HEADER
+#0x00291032|UN||X|?|SIEMENS MEDCOM HEADER
+#0x00291033|UN||X|?|SIEMENS MEDCOM HEADER
+#0x00291034|UN||X|?|SIEMENS MEDCOM HEADER
+#0x00291040|OB||X|Application Header Sequence|SIEMENS MEDCOM HEADER
+#0x00291041|SQ||X|Application Header Type|SIEMENS MEDCOM HEADER
+#0x00291042|CS||X|Application Header ID|SIEMENS MEDCOM HEADER
+#0x00291043|LO||X|Application Header Version|SIEMENS MEDCOM HEADER
+#0x00291044|OB||X|Application Header Info|SIEMENS MEDCOM HEADER
+#0x00291050|LO|8|X|Workflow Control Flags|SIEMENS MEDCOM HEADER
+#0x00291051|CS|1|X|Arch. Management Flag Keep Online|SIEMENS MEDCOM HEADER
+#0x00291052|CS|1|X|Arch. Mgmnt Flag Do Not Archive|SIEMENS MEDCOM HEADER
+#0x00291053|CS|1|X|Image Location Status|SIEMENS MEDCOM HEADER
+#0x00291054|DS|1|X|Estimated Retrieve Time|SIEMENS MEDCOM HEADER
+#0x00291055|DS|1|X|Data Size of Retrieved Images|SIEMENS MEDCOM HEADER
+#0x00291070|SQ|1|X|Siemens Link Sequence|SIEMENS MEDCOM HEADER
+#0x00291071|AT|1|X|Referenced Tag|SIEMENS MEDCOM HEADER
+#0x00291072|CS|1|X|Referenced Tag Type|SIEMENS MEDCOM HEADER
+#0x00291073|UL|1|X|Referenced Value Length|SIEMENS MEDCOM HEADER
+#0x00291074|CS|1|X|Referenced Object Device Type|SIEMENS MEDCOM HEADER
+#0x00291075|OB|1|X|Referenced Object Device Location|SIEMENS MEDCOM HEADER
+#0x00291076|OB|1|X|Referenced Object ID|SIEMENS MEDCOM HEADER
+#|||||
+#0x00290010|LO||X|Private Creator Data Element|SIEMENS MEDCOM HEADER2
+#0x00291060|LO||X|Series Workflow Status|SIEMENS MEDCOM HEADER2
+#|||||
+#0x00290010|LO||X|Private Creator Data Element|SIEMENS MEDCOM OOG
+#0x00291008|UN||X|MedCom OOG Type|SIEMENS MEDCOM OOG
+#0x00291009|UN||X|MedCom OOG Version|SIEMENS MEDCOM OOG
+#0x00291010|UN||X|MedCom OOG Info|SIEMENS MEDCOM OOG
+#|||||
+#0x00410010|LO||X|Private Creator Data Element|SIEMENS MED
+#0x00411070|UN||X|?|SIEMENS MED
+#|||||
+#0x00510010|LO||X|Private Creator Data Element|SIEMENS MR HEADER
+#0x00511008|CS||X|?|SIEMENS MR HEADER
+#0x00511009|LO||X|?|SIEMENS MR HEADER
+#0x0051100a|SH||X|?|SIEMENS MR HEADER
+#0x0051100b|SH||X|?|SIEMENS MR HEADER
+#0x0051100c|SH||X|?|SIEMENS MR HEADER
+#0x0051100d|SH||X|?|SIEMENS MR HEADER
+#0x0051100e|SH||X|?|SIEMENS MR HEADER
+#0x0051100f|LO||X|?|SIEMENS MR HEADER
+#0x00511011|LO||X|?|SIEMENS MR HEADER
+#0x00511012|SH||X|?|SIEMENS MR HEADER
+#0x00511013|SH||X|?|SIEMENS MR HEADER
+#0x00511015|SH||X|?|SIEMENS MR HEADER
+#0x00511016|LO||X|?|SIEMENS MR HEADER
+#0x00511017|SH||X|?|SIEMENS MR HEADER
+#0x00511019|LO||X|?|SIEMENS MR HEADER
+# Siemens/Siemens_CTPT.txt
+#Tag|VR|VM|Code|Description|Private Creator
+#||||syngo SOMATOM Emotion 16 / syngo 2006G0 (VB28A)|
+#||||Syngo SOMATOM Sensation / syngo 2006G0 (VB28A)|
+#||||Syngo SOMATOM Sensation 16 / VA70C|
+#||||Syngo SOMATOM Sensation 16 / VB10A_VB10B|
+#||||syngo SOMATOM Sensation 40 / CT 2007S|
+#||||syngo SOMATOM Sensation 64 / syngo CT 2006A0|
+#||||syngo SOMATOM Sensation 64 / syngo CT 2007S|
+#||||syngo SOMATOM Volume Zoom / VA47c|
+#||||SOMATOM Definition / SOMATOM Definition / Definition Flash / syngo CT 2010A|2012.07.06
+@|Siemens CTPT||||
+0x00190010|LO|1|K|Siemens Private Creator ID|SIEMENS CT VA0  COAD
+0x00191090|DS|1|R|Osteo offset|SIEMENS CT VA0  COAD
+0x00191092|DS|1|K|Osteo Regression Line Slope|SIEMENS CT VA0  COAD
+0x00191093|DS|1|K|Osteo Regression Line Intercept|SIEMENS CT VA0  COAD
+0x00191096|IS|1|R|Osteo Phantom Number|SIEMENS CT VA0  COAD
+0x001910B0|DS|1|K|Feed per Rotation|SIEMENS CT VA0  COAD
+0x001910BD|IS|1|R|Pulmo Trigger Level|SIEMENS CT VA0  COAD
+0x001910BE|DS|1|K|Expiratoric Reserve Volume|SIEMENS CT VA0  COAD
+0x001910BF|DS|1|K|Vital Capacity|SIEMENS CT VA0  COAD
+0x001910C0|DS|1|K|Pulmo Water|SIEMENS CT VA0  COAD
+0x001910C1|DS|1|K|Pulmo Air|SIEMENS CT VA0  COAD
+0x001910C2|DA|1|R|Pulmo Date|SIEMENS CT VA0  COAD
+0x001910C3|TM|1|R|Pulmo Time|SIEMENS CT VA0  COAD
+#|||||
+0x00210010|LO|1|X|Siemens Private Creator ID|SIEMENS MED
+0x00211011|DS|2|K|Target: Center x/y as entered for reconstruction|SIEMENS MED
+0x00290010|LO|1|X|SIemens Private Creator ID|SIEMENS CSA HEADER
+0x00291008|CS|1|X|CSA Image Header Type|SIEMENS CSA HEADER
+0x00291009|LO|1|X|CSA Image Header Version|SIEMENS CSA HEADER
+0x00291010|OB|1|X|CSA Image Header Info|SIEMENS CSA HEADER
+0x00291018|CS|1|X|CSA Series Header Type|SIEMENS CSA HEADER
+0x00291019|LO|1|X|CSA Series Header Version|SIEMENS CSA HEADER
+0x00291020|OB|1|X|CSA Series Header Info|SIEMENS CSA HEADER
+#|||||
+0x00290011|LO|1|X|Siemens Private Creator ID|SIEMENS CSA NON-IMAGE
+0x00291108|CS|1|X|CSA Data Type|SIEMENS CSA NON-IMAGE
+0x00291109|LO|1|X|CSA Data Version|SIEMENS CSA NON-IMAGE
+0x00291110|OB|1|X|CSA Data Info|SIEMENS CSA NON-IMAGE
+#|||||
+0x00290012|LO|1|K|Siemens Private Creator ID|SIEMENS MEDCOM HEADER
+0x00291208|CS|1|R|MedCom Header Type|SIEMENS MEDCOM HEADER
+0x00291209|LO|1|R|MedCom Header Version|SIEMENS MEDCOM HEADER
+0x00291210|OB|1|X|MedCom Header Info|SIEMENS MEDCOM HEADER
+0x00291220|OB|1|X|MedCom History Information|SIEMENS MEDCOM HEADER
+0x00291231|LO|1|R|PMTF Information 1|SIEMENS MEDCOM HEADER
+0x00291232|UL|1|R|PMTF Information 2|SIEMENS MEDCOM HEADER
+0x00291233|UL|1|R|PMTF Information 3|SIEMENS MEDCOM HEADER
+0x00291234|CS|1|R|PMTF Information 4|SIEMENS MEDCOM HEADER
+0x00291235|UL|1|R|PMTF Information 5|SIEMENS MEDCOM HEADER
+0x00291240|SQ|1|X|Application Header Sequence|SIEMENS MEDCOM HEADER
+0x00291241|CS|1|X|Application Header Type|SIEMENS MEDCOM HEADER
+0x00291242|LO|1|X|Application Header ID|SIEMENS MEDCOM HEADER
+0x00291243|LO|1|X|Application Header Version|SIEMENS MEDCOM HEADER
+0x00291244|OB|1|X|Application Header Info|SIEMENS MEDCOM HEADER
+0x00291250|LO|8|X|Workflow Control Flags|SIEMENS MEDCOM HEADER
+0x00291251|CS|1|X|Archive Management Flag Keep Online|SIEMENS MEDCOM HEADER
+0x00291252|CS|1|X|Archive Management Flag Do Not Archive|SIEMENS MEDCOM HEADER
+0x00291253|CS|1|X|Image Location Status|SIEMENS MEDCOM HEADER
+0x00291254|DS|1|X|Estimated Retrieve Time|SIEMENS MEDCOM HEADER
+0x00291255|DS|1|X|Data Size of Retrieved Images|SIEMENS MEDCOM HEADER
+0x00291270|SQ|1|X|Siemens Link Sequence|SIEMENS MEDCOM HEADER
+0x00291271|AT|1|X|Referenced Tag|SIEMENS MEDCOM HEADER
+0x00291272|CS|1|X|Referenced Tag Type|SIEMENS MEDCOM HEADER
+0x00291273|UL|1|X|Referenced Value Length|SIEMENS MEDCOM HEADER
+0x00291274|CS|1|X|Referenced Object Device Type|SIEMENS MEDCOM HEADER
+0x00291275|OB|1|X|Referenced Object Device Location|SIEMENS MEDCOM HEADER
+0x00291276|OB|1|X|Referenced Object ID|SIEMENS MEDCOM HEADER
+#|||||
+0x00290016|LO|1|X|Siemens Private Creator ID|SIEMENS MEDCOM HEADER2
+0x00291660|LO|1|X|Series Work Flow Status|SIEMENS MEDCOM HEADER2
+#|||||
+0x00290013|LO|1|X|Siemens Private Creator ID|SIEMENS MEDCOM OOG
+0x00291308|CS|1|X|MEDCOM OOG Type|SIEMENS MEDCOM OOG
+0x00291309|LO|1|X|MEDCOM OOG Version|SIEMENS MEDCOM OOG
+0x00291310|OB|1|X|MEDCOM OOG Info|SIEMENS MEDCOM OOG
+#|||||
+0x00290014|LO|1|X|Siemens Private Creator ID|SIEMENS CSA REPORT
+0x00291408|CS|1|X|Syngo Report Type|SIEMENS CSA REPORT
+0x00291409|LO|1|X|Syngo Report|SIEMENS CSA REPORT
+0x00291415|US|1|X|SR Variant|SIEMENS CSA REPORT
+0x00291417|UI|1|X|SC SOP Instance UID|SIEMENS CSA REPORT
+#|||||
+0x00710015|LO|1|K|Siemens Private Creator ID|SIEMENS MED PT
+0x00711521|UI|1|K|Registration Matrix UID Registration matrix between PET and CT |SIEMENS MED PT
+0x00711522|DT|1|R|Decay Correction DateTime The date and time to which the image was decay  corrected|SIEMENS MED PT
+#|||||
+0x00710017|LO|1|K|Siemens Private Creator ID|SIEMENS MED PT WAVEFORM
+0x00711746|UK|1|K|Starting Respiratory Amplitude|SIEMENS MED PT WAVEFORM
+0x00711747|UK|1|K|Starting Respiratory Phase|SIEMENS MED PT WAVEFORM
+0x00711748|UK|1|K|Ending Respiratory Amplitude|SIEMENS MED PT WAVEFORM
+0x00711749|UK|1|K|Ending Respiratory Phase|SIEMENS MED PT WAVEFORM
+0x00711750|UK|1|K|Respiratory Trigger Type. Currently always AMPLITUDE|SIEMENS MED PT WAVEFORM
+# Siemens/Siemens_NM.txt
+#Tag|VR|VM|Code|Description|Private Creator|
+#||||Siemens e.soft PT and NM systems||
+@|Siemens NM|||||
+0x00190010|LO|1|K|Siemens Private Creator ID|Siemens MED NM|1
+0x0019100F|SL|1-n|K|Siemens ICON Data Type|Siemens MED NM|2
+0x001910A5|SS|1-n|K|Number of repeats per phase|Siemens MED NM|3
+0x001910A6|SS|1-n|K|Cycles per repeat|Siemens MED NM|4
+0x001910A7|SL|1-n|K|Repeat start time|Siemens MED NM|5
+0x001910A8|SL|1-n|K|Repeat stop time|Siemens MED NM|6
+0x001910A9|SL|1-n|K|Effective repeat time|Siemens MED NM|7
+0x001910AA|SS|1-n|K|Acquired cycles per repeat|Siemens MED NM|8
+#||||||9
+0x00210010|LO|1|X|Siemens Private Creator ID|Siemens MED NM|10
+0x00211000|OB|1|X|ECAT File Menu Header|Siemens MED NM|11
+0x00211001|OB|1|X|ECAT File Subheader|Siemens MED NM|12
+#||||||13
+0x00230010|LO|1|X|Siemens Private Creator ID|Siemens MED NM|14
+0x00231001|US|1|X|DICOM Reader Flag|Siemens MED NM|15
+#||||||16
+0x00290010|LO|1|X|Siemens Private Creator ID|SIEMENS CSA HEADER|17
+0x00291008|CS|1|X|CSA Image Header Type|SIEMENS CSA HEADER|18
+0x00291009|LO|1|X|CSA Image Header Version|SIEMENS CSA HEADER|19
+0x00291010|OB|1|X|CSA Image Header Info|SIEMENS CSA HEADER|20
+0x00291018|CS|1|X|CSA Series Header Type|SIEMENS CSA HEADER|21
+0x00291019|LO|1|X|CSA Series Header Version|SIEMENS CSA HEADER|22
+0x00291020|OB|1|X|CSA Series Header Info|SIEMENS CSA HEADER|23
+#||||||24
+0x00290011|LO|1|X|Siemens Private Creator ID|SIEMENS CSA NON-IMAGE|25
+0x00291108|CS|1|X|CSA Data Type|SIEMENS CSA NON-IMAGE|26
+0x00291109|LO|1|X|CSA Data Version|SIEMENS CSA NON-IMAGE|27
+0x00291110|OB|1|X|CSA Data Info|SIEMENS CSA NON-IMAGE|28
+#||||||29
+0x00290012|LO|1|K|Siemens Private Creator ID|SIEMENS MEDCOM HEADER|30
+0x00291208|CS|1|R|MedCom Header Type|SIEMENS MEDCOM HEADER|31
+0x00291209|LO|1|R|MedCom Header Version|SIEMENS MEDCOM HEADER|32
+0x00291210|OB|1|X|MedCom Header Info|SIEMENS MEDCOM HEADER|33
+0x00291220|OB|1|X|MedCom History Information|SIEMENS MEDCOM HEADER|34
+0x00291231|LO|1|R|PMTF Information 1|SIEMENS MEDCOM HEADER|35
+0x00291232|UL|1|R|PMTF Information 2|SIEMENS MEDCOM HEADER|36
+0x00291233|UL|1|R|PMTF Information 3|SIEMENS MEDCOM HEADER|37
+0x00291234|CS|1|R|PMTF Information 4|SIEMENS MEDCOM HEADER|38
+0x00291235|UL|1|R|PMTF Information 5|SIEMENS MEDCOM HEADER|39
+0x00291240|SQ|1|X|Application Header Sequence|SIEMENS MEDCOM HEADER|40
+0x00291241|CS|1|X|Application Header Type|SIEMENS MEDCOM HEADER|41
+0x00291242|LO|1|X|Application Header ID|SIEMENS MEDCOM HEADER|42
+0x00291243|LO|1|X|Application Header Version|SIEMENS MEDCOM HEADER|43
+0x00291244|OB|1|X|Application Header Info|SIEMENS MEDCOM HEADER|44
+0x00291250|LO|8|X|Workflow Control Flags|SIEMENS MEDCOM HEADER|45
+0x00291251|CS|1|X|Archive Management Flag Keep Online|SIEMENS MEDCOM HEADER|46
+0x00291252|CS|1|X|Archive Management Flag Do Not Archive|SIEMENS MEDCOM HEADER|47
+0x00291253|CS|1|X|Image Location Status|SIEMENS MEDCOM HEADER|48
+0x00291254|DS|1|X|Estimated Retrieve Time|SIEMENS MEDCOM HEADER|49
+0x00291255|DS|1|X|Data Size of Retrieved Images|SIEMENS MEDCOM HEADER|50
+0x00291270|SQ|1|X|Siemens Link Sequence|SIEMENS MEDCOM HEADER|51
+0x00291271|AT|1|X|Referenced Tag|SIEMENS MEDCOM HEADER|52
+0x00291272|CS|1|X|Referenced Tag Type|SIEMENS MEDCOM HEADER|53
+0x00291273|UL|1|X|Referenced Value Length|SIEMENS MEDCOM HEADER|54
+0x00291274|CS|1|X|Referenced Object Device Type|SIEMENS MEDCOM HEADER|55
+0x00291275|OB|1|X|Referenced Object Device Location|SIEMENS MEDCOM HEADER|56
+0x00291276|OB|1|X|Referenced Object ID|SIEMENS MEDCOM HEADER|57
+#||||||58
+0x00290016|LO|1|X|Siemens Private Creator ID|SIEMENS MEDCOM HEADER2|59
+0x00291660|LO|1|X|Series Work Flow Status|SIEMENS MEDCOM HEADER2|60
+#||||||61
+0x00290013|LO|1|X|Siemens Private Creator ID|SIEMENS MEDCOM OOG|62
+0x00291308|CS|1|X|MEDCOM OOG Type|SIEMENS MEDCOM OOG|63
+0x00291309|LO|1|X|MEDCOM OOG Version|SIEMENS MEDCOM OOG|64
+0x00291310|OB|1|X|MEDCOM OOG Info|SIEMENS MEDCOM OOG|65
+#||||||66
+0x00290014|LO|1|X|Siemens Private Creator ID|SIEMENS CSA REPORT|67
+0x00291408|CS|1|X|Syngo Report Type|SIEMENS CSA REPORT|68
+0x00291409|LO|1|X|Syngo Report|SIEMENS CSA REPORT|69
+0x00291415|US|1|X|SR Variant|SIEMENS CSA REPORT|70
+0x00291417|UI|1|X|SC SOP Instance UID|SIEMENS CSA REPORT|71
+#||||||72
+0x00330010|LO|1|K|Siemens Private Creator ID|SIEMENS MED NM|73
+0x00331000|FL|n|K|Flood correction matrix Detector 1 ( n=row s x cols) E.Soft vers upto SR2.0|SIEMENS MED NM|74
+0x00331001|FL|n|K|Flood correction Matrix Det 2 upto SR 2.0|SIEMENS MED NM|75
+0x00331010|FL|n|K|COR Data for detector 1 ( n = 128)|SIEMENS MED NM|76
+0x00331011|FL|n|K|COR Data for detector 2 ( n = 128)|SIEMENS MED NM|77
+0x00331014|FL|n|K|MHR ( Y-Shift) data for detector 1 |SIEMENS MED NM|78
+0x00331015|FL|n|K|MHR ( Y-Shift) data for detector 2|SIEMENS MED NM|79
+0x00331018|FL|n|K|NCO Data for detector 1 (n = number of view s)|SIEMENS MED NM|80
+0x00331019|FL|n|K|NCO Data 2 |SIEMENS MED NM|81
+0x00331020|FL|1|K|Bed correction angle|SIEMENS MED NM|82
+0x00331021|FL|1|K|Gantry correction angle|SIEMENS MED NM|83
+0x00331022|SS|n|K|Bed U/D correction data (n=number of view s)|SIEMENS MED NM|84
+0x00331023|SS|n|K|Gantry L/R Correction Data|SIEMENS MED NM|85
+0x00331024|FL|1|K|BackProjection Correction angle head 1|SIEMENS MED NM|86
+0x00331025|FL|1|K|BackProjection Correction angle head 2|SIEMENS MED NM|87
+0x00331028|SL|1|K|Number of point sources used for NCO and MHR|SIEMENS MED NM|88
+0x00331029|FL|1|K|Crystal thickness|SIEMENS MED NM|89
+0x00331030|LO|1|K|Preset name used for acquisiton|SIEMENS MED NM|90
+0x00331031|FL|1|K|Camera Config Angle|SIEMENS MED NM|91
+0x00331032|LO|1|K|Crystal type Startburst or not|SIEMENS MED NM|92
+0x00331033|SL|1|K|Gantry step for COIN acquisitions |SIEMENS MED NM|93
+0x00331034|FL|1|K|Bed step for wholebody or Coin acquisitions|SIEMENS MED NM|94
+0x00331035|FL|1|K|Weight factor table for coincidence acquisitions|SIEMENS MED NM|95
+0x00331036|FL|1|K|Transaxial acceptance width for coincidence|SIEMENS MED NM|96
+0x00331037|SL|1|K|Starburst flags at image acq time|SIEMENS MED NM|97
+0x00331038|FL|1|K|Pixel Scale factor|SIEMENS MED NM|98
+#||||||99
+0x00350010|LO|1|K|Siemens Private Creator ID|SIEMENS MED NM|100
+0x00351000|LO|1|K|Specialized tomo type|SIEMENS MED NM|101
+0x00351001|LO|1|K|Energy window type|SIEMENS MED NM|102
+0x00351002|SS|1|K|Start and end row illuminated by wind position|SIEMENS MED NM|103
+0x00351003|LO|1|K|Blank scan image for profile |SIEMENS MED NM|104
+0x00351004|SS|1|K|Repeat number of the original dynamic SPECT |SIEMENS MED NM|105
+0x00351005|SS|1|K|Phase number of the original dynamic SPECT |SIEMENS MED NM|106
+0x00351006|LO|1|K|Siemens Profile 2 Image Sub type|SIEMENS MED NM|107
+#||||||108
+0x00390010|LO|1|K|Siemens Private Creator ID|SIEMENS MED NM|109
+0x00391000|LT|1|K|Toshiba CBF activity results |SIEMENS MED NM|110
+0x00391001|LT|1|R|Related CT Series Instance UID |SIEMENS MED NM|111
+#||||||112
+0x00410010|LO|1|K|Siemens Private Creator ID|SIEMENS MED NM|113
+0x00411001|SL|1|K|Whole Body Tomo Position Index|SIEMENS MED NM|114
+0x00411002|SL|1|K|Whole Body Tomo Number of Positions|SIEMENS MED NM|115
+0x00411003|FL|1|K|Horizontal Table Position of CT scan|SIEMENS MED NM|116
+0x00411004|FL|1|K|Effective Energy fo CT Scan|SIEMENS MED NM|117
+0x00411005|FD|1-n|K|Long Linear Drive Information for Detector 1 |SIEMENS MED NM|118
+0x00411006|FD|1-n|K|Long Linear Drive Information for Detector 2|SIEMENS MED NM|119
+0x00411007|FD|1-n|K|Trunnion Information for Detector 1|SIEMENS MED NM|120
+0x00411008|FD|1-n|K|Trunnion Information for Detector 2|SIEMENS MED NM|121
+0x00411009|FL|1|K|Broad Beam Factor|SIEMENS MED NM|122
+0x0041100a|FD|1|K|Original Wholebody Position |SIEMENS MED NM|123
+0x0041100b|FD|1|K|Wholebody Scan Range|SIEMENS MED NM|124
+0x00411010|FL|1-3|K|Effective Emission Energy |SIEMENS MED NM|125
+0x00411011|FL|1-n|K|Gated Frame Duration|SIEMENS MED NM|126
+#||||||127
+0x00430010|LO|1|K|Siemens Private Creator ID|SIEMENS MED NM|128
+0x00431001|FL|1-n|K|Detector View Angle|SIEMENS MED NM|129
+0x00431002|FD|1-16|K|Transformation Matrix|SIEMENS MED NM|130
+0x00431003|FL|1-n|K|View Dependent Y shift MHR for Detector 1|SIEMENS MED NM|131
+0x00431004|FL|1-n|K|View Dependent Y shift MHR for Detector 2 |SIEMENS MED NM|132
+#||||||133
+0x00450010|LO|1|K|Siemens Private Creator ID|SIEMENS MED NM|134
+0x00451001|LO|1-n|K|Planar Processing String|SIEMENS MED NM|135
+#||||||136
+0x00550010|LO|1|K|Siemens Private Creator ID|SIEMENS MED NM|137
+0x00551004|SS|1|K|Prompt window width|SIEMENS MED NM|138
+0x00551005|SS|1|K|Random window width|SIEMENS MED NM|139
+0x0055107E|FL|1-n|K|Collimator thickness|SIEMENS MED NM|140
+0x0055107F|FL|1-n|K|Collimator angular resolution |SIEMENS MED NM|141
+0x005510C0|SS|1-n|K|Useful Field of View|SIEMENS MED NM|142
+#||||||143
+0x00570010|LO|1|K|Siemens Private Creator ID|SIEMENS MED NM|144
+0x00571001|LO|1|K|syngo MI DICOM original image type|SIEMENS MED NM|145
+0x00571002|FL|1|K|Dose calibration factor|SIEMENS MED NM|146
+0x00571003|LO|1|K|Units|SIEMENS MED NM|147
+0x00571004|LO|1|K|Decay correction|SIEMENS MED NM|148
+0x00571005|SL|n|K|Radio nuclide half life|SIEMENS MED NM|149
+0x00571006|FL|1|K|Rescale intercept |SIEMENS MED NM|150
+0x00571007|FL|1|K|Rescale Slope|SIEMENS MED NM|151
+0x00571008|FL|1|K|Frame reference time|SIEMENS MED NM|152
+0x00571009|SL|1|K|Number of Radiopharmaceutical information seq|SIEMENS MED NM|153
+0x0057100A|FL|1|K|Decay factor|SIEMENS MED NM|154
+0x0057100B|LO|1|K|Counts source|SIEMENS MED NM|155
+0x0057100C|SL|n|K|Radio Nuclide positron fraction|SIEMENS MED NM|156
+0x0057100E|US|1-n|K|Trigger Time of CT Slice|SIEMENS MED NM|157
+#||||||158
+0x00610010|LO|1|K|Siemens Private Creator ID|SIEMENS MED NM|159
+0x00611001|FL|1-n|K|X Principal Ray Offset |SIEMENS MED NM|160
+0x00611005|FL|1-n|K|Y Principal Ray Offset|SIEMENS MED NM|161
+0x00611009|FL|1-n|K|X Principal Ray Angle|SIEMENS MED NM|162
+0x0061100A|FL|1-n|K|Y Principal Ray Angle|SIEMENS MED NM|163
+0x0061100B|FL|1-n|K|X Short Focal Length |SIEMENS MED NM|164
+0x0061100C|FL|1-n|K|Y Short Focal Length|SIEMENS MED NM|165
+0x0061100D|FL|1-n|K|X Long Focal Length |SIEMENS MED NM|166
+0x0061100E|FL|1-n|K|Y Long Focal Length|SIEMENS MED NM|167
+0x0061100F|FL|1-n|K|X Focal Scaling |SIEMENS MED NM|168
+0x00611010|FL|1-n|K|Y Focal Scaling|SIEMENS MED NM|169
+0x00611011|FL|1-n|K|X Motion Correction Shift |SIEMENS MED NM|170
+0x00611015|FL|1-n|K|Y Motion Correction Shift |SIEMENS MED NM|171
+0x00611019|FL|1|K|X Heart Center|SIEMENS MED NM|172
+0x0061101A|FL|1|K|Y Heart Center|SIEMENS MED NM|173
+0x0061101B|FL|1|K|Z Heart Center|SIEMENS MED NM|174
+0x0061101C|LO|1|K|Image Pixel Content Type|SIEMENS MED NM|175
+0x0061101D|SS|1|K|Auto Save Corrected Series |SIEMENS MED NM|176
+0x0061101E|LT|1|R|Distorted Series Instance UID |SIEMENS MED NM|177
+0x00611021|SS|1-n|K|Recon Range|SIEMENS MED NM|178
+0x00611022|LO|1|K|Recon Orientation|SIEMENS MED NM|179
+0x00611023|FL|1-n|K|Recon Selected Angular Range|SIEMENS MED NM|180
+0x00611024|FL|1|K|Recon Transverse Angle|SIEMENS MED NM|181
+0x00611025|FL|1|K|Recon Sagittal Angle|SIEMENS MED NM|182
+0x00611026|FL|1|K|Recon X Mask Size|SIEMENS MED NM|183
+0x00611027|FL|1|K|Recon Y Mask Size|SIEMENS MED NM|184
+0x00611028|FL|1|K|Recon X Image Center|SIEMENS MED NM|185
+0x00611029|FL|1|K|Recon Y Image Center|SIEMENS MED NM|186
+0x0061102A|FL|1|K|Recon Z Image Center|SIEMENS MED NM|187
+0x0061102B|FL|1|K|Recon X Zoom|SIEMENS MED NM|188
+0x0061102C|FL|1|K|Recon Y Zoom |SIEMENS MED NM|189
+0x0061102D|FL|1|K|Recon Threshold|SIEMENS MED NM|190
+0x0061102E|FL|1|K|Recon Output Pixel Size|SIEMENS MED NM|191
+0x0061102F|LO|1-n|K|Scatter Estimation Method|SIEMENS MED NM|192
+0x00611030|LO|1-n|K|Scatter Estimation Method Mode |SIEMENS MED NM|193
+0x00611031|FL|1-n|K|Scatter Estimation Lower Window Weights |SIEMENS MED NM|194
+0x00611032|FL|1-n|K|Scatter Estimation Upper Window Weights|SIEMENS MED NM|195
+0x00611033|LO|1-n|K|Scatter Estimation Window Mode|SIEMENS MED NM|196
+0x00611034|LO|1-n|K|Scatter Estimation Filter|SIEMENS MED NM|197
+0x00611035|LO|1|R|Recon RawTomo Input Uid |SIEMENS MED NM|198
+0x00611036|LO|1|R|Recon CT Input Uid |SIEMENS MED NM|199
+0x00611037|FL|1|K|Recon Z Mask Size|SIEMENS MED NM|200
+0x00611038|FL|1|K|Recon X Mask Center|SIEMENS MED NM|201
+0x00611039|FL|1|K|Recon Y Mask Center|SIEMENS MED NM|202
+0x0061103A|FL|1|K|Recon Z Mask Center|SIEMENS MED NM|203
+0x00611051|LT|1|R|Raw Tomo Series UID |SIEMENS MED NM|204
+0x00611052|LT|1|R|LowRes CT Series UID|SIEMENS MED NM|205
+0x00611053|LT|1|R|HighRes CT Series UID|SIEMENS MED NM|206
+#||||||207
+0x7FE30010|LO|1|K|Siemens Private Creator ID|SIEMENS MED NM|208
+0x7FE31014|OW|1|K|Minimum pixel in frame|SIEMENS MED NM|209
+0x7FE31015|OW|1|K|Maximum pixel in frame|SIEMENS MED NM|210
+0x7FE31029|OW|1|K|Number of R-Waves in frame |SIEMENS MED NM|211
+# Toshiba/Aquilion_CT.txt
+#Tag|VR|VM|Code|Description|Private Creator
+#|"# Aquilion, Activion 16 / V3.30"|||2012.07.06|
+# |Aquilion�/Asteion� / V 1.62|||2012.07.06|
+# |"Aquilion� ONE / V 4.10, V 4.20"|||2012.07.06|
+@|Toshiba CT||||
+0x70050010|LO|1|K|Toshiba Private Creator ID|TOSHIBA_MEC_CT3
+0x70051000|OB|1-n|X|CT Private Data 1|TOSHIBA_MEC_CT3
+0x70051003|SH|1|K|Cardiac R-R Mean Time|TOSHIBA_MEC_CT3
+0x70051004|SH|1|K|Cardiac Reconstruction Gating Phase in Percent|TOSHIBA_MEC_CT3
+0x70051005|SH|1|K|Cardiac Reconstruction Gating Phase in ms|TOSHIBA_MEC_CT3
+0x70051006|SH|1|K|Cardiac Reconstruction Mode|TOSHIBA_MEC_CT3
+0x70051007|DS|2|KB|Reconstruction Center|TOSHIBA_MEC_CT3
+0x70051008|DS|1|KB|Detector Slice Thickness in mm|TOSHIBA_MEC_CT3
+0x70051009|LO|1|KB|Number of Detector rows to Reconstruct|TOSHIBA_MEC_CT3
+0x7005100a|DS|1|KB|Table Speed in mm/rot|TOSHIBA_MEC_CT3
+0x7005100b|SH|1|R|Filter|TOSHIBA_MEC_CT3
+0x7005100c|SH|1|R|Reconstruction Correction Type|TOSHIBA_MEC_CT3
+0x7005100d|CS|1|R|Organ|TOSHIBA_MEC_CT3
+0x7005100e|SH|1|R|File Type Remarks|TOSHIBA_MEC_CT3
+0x7005100f|SH|1|R|Direction|TOSHIBA_MEC_CT3
+0x70051010|OB|1-n|X|CT Private Data 2|TOSHIBA_MEC_CT3
+0x70051011|LT|1|R|Series Comment|TOSHIBA_MEC_CT3
+0x70051012|SH|1|R|Position|TOSHIBA_MEC_CT3
+0x70051013|US|1|KB|Expert Plan No.|TOSHIBA_MEC_CT3
+0x70051014|US|1|KB|Reconstruction ROI No.|TOSHIBA_MEC_CT3
+0x70051015|US|1|KB|Special Helical ACQ No.|TOSHIBA_MEC_CT3
+0x70051016|US|1|X|Volume UID|TOSHIBA_MEC_CT3
+0x70051017|US|1|KB|Total Frame Count in the Volume|TOSHIBA_MEC_CT3
+0x70051018|US|1|KB|Frame No.|TOSHIBA_MEC_CT3
+0x70051019|UL|1|KB|Frame Sort Key|TOSHIBA_MEC_CT3
+0x7005101a|US|1|KB|Frame Sort Order|TOSHIBA_MEC_CT3
+0x7005101b|SH|1|R|"(L1) Convolution Kernel, (L2) Convolution Kernel for Series Record"|TOSHIBA_MEC_CT3
+0x7005101c|LO|1|R|"(L1) Contrast/Bolus Agent, (L2) Contrast/Bolus Agent for Series Record"|TOSHIBA_MEC_CT3
+0x7005101d|UL|1|KB|Reconstruction Number|TOSHIBA_MEC_CT3
+0x7005101e|UL|1|KB|Raw Data Number|TOSHIBA_MEC_CT3
+0x7005101f|LO|1|R|Volume Number|TOSHIBA_MEC_CT3
+0x70051020|UL|1|KB|Local Series Number|TOSHIBA_MEC_CT3
+0x70051021|LO|1|R|Decrease in Artifact Filter|TOSHIBA_MEC_CT3
+0x70051022|DS|1|KB|Reconstruction Interval|TOSHIBA_MEC_CT3
+0x70051023|DS|1|KB|Pitch Factor|TOSHIBA_MEC_CT3
+0x70051024|DA|1|R|The Acquisition Date of NRA|TOSHIBA_MEC_CT3
+0x70051025|UL|1|KB|Large Data File Attribute|TOSHIBA_MEC_CT3
+0x70051026|CS|1-8|R|Large Data File Name|TOSHIBA_MEC_CT3
+0x70051028|SQ|1|X|Enhanced CT Private Sequence|TOSHIBA_MEC_CT3
+0x70051029|UI|1|R|Frame UID|TOSHIBA_MEC_CT3
+0x70051030|CS|1|R|Main Modality in Study|TOSHIBA_MEC_CT3
+0x70051035|DS|2|KB|Scan Range|TOSHIBA_MEC_CT3
+0x70051036|OB|1-n|X|CT Private Data 3|TOSHIBA_MEC_CT3
+0x70051037|IS|1|KB|Total Frames|TOSHIBA_MEC_CT3
+0x70051038|IS|1|KB|Start Frame|TOSHIBA_MEC_CT3
+0x70051039|IS|1|KB|End Frame|TOSHIBA_MEC_CT3
+0x70051040|FD|1|KB|DLP (Dose Length Product)|TOSHIBA_MEC_CT3
+0x70051041|SH|1|R|Raw Slice Information|TOSHIBA_MEC_CT3
+0x70051042|US|1|KB|Local Frame No|TOSHIBA_MEC_CT3
+0x70051043|DS|3|KB|Volume Vector|TOSHIBA_MEC_CT3
+0x70051044|US|1|KB|Volume Type|TOSHIBA_MEC_CT3
+0x70051045|DS|1|KB|Relative Table Position of 4D Volume|TOSHIBA_MEC_CT3
+0x70051046|DS|1|KB|Absolute Table Position of 4D Volume|TOSHIBA_MEC_CT3
+0x70051047|DS|1|KB|Slice Pitch of 4D Volume|TOSHIBA_MEC_CT3
+0x70051048|LO|1|R|Respiratory Gating Inf.|TOSHIBA_MEC_CT3
+0x70051049|SH|1|R|Respiration Phase|TOSHIBA_MEC_CT3
+0x700510f1|CS|1|R|"Protect Mark for Image, Curve or Private Record"|TOSHIBA_MEC_CT3
+0x700510f2|CS|1|R|Protect Mark for Series Record|TOSHIBA_MEC_CT3
+0x700510f3|CS|1|R|Protect Mark for Study Record|TOSHIBA_MEC_CT3
+# Toshiba/Toshiba_MR.txt
+#Tag|VR|VM|Code|Description|Private Creator
+#|"Excelart, Excelart Vantage, Vantage Titan/Second Console, V8.00 or later"||MIIMR0005EA|7/18/2012|
+#|"Vantage Titan, V2.00 or later"||MIIMR0006EAB|7/18/2012|
+#|"Vantage Titan, V1.20 or later"||MIIMR0006EAA|7/18/2012|
+#|||||
+@|Toshiba MR||||
+0x700d0010|LO|1|K|Toshiba Private Creator ID|TOSHIBA_MEC_MR3
+0x700d1000|DS|N|KB|Scale Factor|TOSHIBA_MEC_MR3
+0x700d1001|OB|N|X|Acquisition Order|TOSHIBA_MEC_MR3
+0x700d1002|DS|N|KB|Orientation Vector|TOSHIBA_MEC_MR3
+0x700d1003|SS|N|KB|Flip Flag|TOSHIBA_MEC_MR3
+0x700d1004|OB|N|X|Rotate Information|TOSHIBA_MEC_MR3
+0x700d1005|DS|N|KB|FOV|TOSHIBA_MEC_MR3
+0x700d1006|US|N|KB|Image Matrix|TOSHIBA_MEC_MR3
+0x700d1007|OB|N|X|Image Information|TOSHIBA_MEC_MR3
+0x700d1008|OB|N|X|Original Data|TOSHIBA_MEC_MR3
+0x700d1009|SS|N|KB|Original Data Flag|TOSHIBA_MEC_MR3
+#|Spectroscopy images||||
+0x700d1080|US|N|KB|Number of PAC channel|TOSHIBA_MEC_MR3
+0x700d1081|US|N|KB|Reference mode|TOSHIBA_MEC_MR3
+0x700d1082|SQ|N|KB|Gain value group for MRS|TOSHIBA_MEC_MR3
+0x700d1088|UL|N|KB|Flag of water Sat pulse|TOSHIBA_MEC_MR3
+0x700d1089|FL|N|KB|Selected contrast TE|TOSHIBA_MEC_MR3
+0x700d108a|SQ|N|KB|Raw Data Set Sequence|TOSHIBA_MEC_MR3
+0x700d1091|FL|N|KB|Receiver gain of prescan|TOSHIBA_MEC_MR3
+#|||||
+# UCSF/ucsf_birp_private-1-tcia.txt
+#Tag|VR|VM|Code|Description|Private Creator
+#
+#|July 9, 2014
+#|Private element dictionary for UCSF shared breast MRI data
+#|David Newitt
+#
+#
+# DICOM Dictionary listing
+# Generated by mrsc_image (dcmdict_convert program) from mrsc_image library
+#   on JUL 02, 2014   at 12:04:51   by newitt
+#   Included groups:
+#     0117
+#     0119
+#
+@|UCSF MRI
+0x01170010|LO|1|K|UCSFBIRPGroupIDString|MRSC
+0x01171010|SQ|1|K|PESERParameterSequence|MRSC
+0x01171012|CS|1|K|PESERParameterType|MRSC
+0x01171014|LO|1|K|PESERParameterName|MRSC
+0x01171016|LO|1|K|PESERParameterDescription|MRSC
+0x01171018|DS|1-n|K|PESERParameterFloatingValue|MRSC
+0x01171019|IS|1-n|K|PESERParameterIntegerValue|MRSC
+0x0117101A|LO|1-n|K|PESERParameterStringValue|MRSC
+0x01171020|SQ|1|K|VOISequence|MRSC
+0x01171022|SQ|1|K|OmitVOISequence|MRSC
+0x01171024|SQ|1|K|ImageQualitySequence|MRSC
+0x01171030|IS|1|K|NumberAcquiredTimePoints|MRSC
+0x01171031|DS|1|K|AcquisitionDuration|MRSC
+0x01171032|DS|1-n|K|AcquisitionStartTimes|MRSC
+0x01171033|TM|1|K|InjectionTime|MRSC
+0x01171034|DS|1-n|K|EffectiveAcquisitionDelay|MRSC
+0x01171035|IS|3|K|SERTimingIndices|MRSC
+0x0117103A|LO|1|K|AcquisitionTimingMethod|MRSC
+0x0117103B|LT|1|K|AcquisitionTimingComments|MRSC
+0x01171041|IS|1|K|ROIVOILPSFlag|MRSC
+0x01171042|DS|3|K|VOILPSCenter|MRSC
+0x01171043|DS|3|K|VOILPSWidthHalfLength|MRSC
+0x01171044|DS|3|K|VOILPSHeightHalfLength|MRSC
+0x01171045|DS|3|K|VOILPSDepthHalfLength|MRSC
+0x01171046|CS|1|K|VOILPSType|MRSC
+0x01171050|US|3|K|ProjectedROINPixels|MRSC
+0x01171051|IS|1|K|ProjectedROIProjectionAxis|MRSC
+0x01171052|IS|1|K|ProjectedROITransposeFlag|MRSC
+0x01171053|US|1-n|K|ProjectedROIXVerts|MRSC
+0x01171054|US|1-n|K|ProjectedROIYVerts|MRSC
+0x01171055|US|2|K|ProjectedROIZRange|MRSC
+0x01171056|CS|1|K|ProjectedROIType|MRSC
+0x0117105A|LO|1|K|ProjectedROILabel|MRSC
+0x011710A1|US|3|K|FTVPixelLimitsStart|MRSC
+0x011710A2|US|3|K|FTVPixelLimitsEnd|MRSC
+0x011710A3|CS|1|K|FTVBackgroundMethod|MRSC
+0x011710A4|DS|1|K|FTVBackgroundThreshold|MRSC
+0x011710B0|SQ|1|K|FTVSequence|MRSC
+0x011710B1|DS|1|K|FTVSERMinimum|MRSC
+0x011710B2|DS|1|K|FTVSERMaximum|MRSC
+0x011710B3|IS|1|K|FTVPixelCount|MRSC
+0x011710B4|DS|1|K|FTVcc|MRSC
+0x011710B5|LO|1|K|FTVLabel|MRSC
+0x011710C0|CS|1|K|QualityControlType|MRSC
+0x011710C1|LO|1|K|QualityControlFactor|MRSC
+0x011710C2|DS|1|K|QualityControlValue|MRSC
+0x011710C3|CS|1|K|QualityControlMeaning|MRSC
+0x011710C4|LT|1|K|QualityControlComment|MRSC
+0x011710C5|CS|1|K|ProtocolCompliantFlag|MRSC
+0x011710C6|LO|1-n|K|ProtocolNotCompliantReasons|MRSC
+0x011710C7|CS|1|K|ImagesAnalyzable|MRSC
+0x011710C8|LO|1-n|K|ProtocolNotCAnalyzableReasons|MRSC
+#
+0x01190010|LO|1|K|MIACQID|MRSC
+0x01190011|LO|1|K|MIFITMAPID|MRSC
+0x01190012|LO|1|K|MI-IPID|MRSC
+0x01190014|LO|1|K|MIPsIDString|MRSC
+0x01190015|LO|1|K|SERIDString|MRSC
+0x01191000|DS|1|K|Version|MRSC
+0x01191006|DS|1|K|MinimumPixelValue|MRSC
+0x01191007|DS|1|K|MaximumPixelValue|MRSC
+0x01191010|IS|1|K|PixelDataType|MRSC
+0x01191011|IS|1-n|K|ImageIDNumbers|MRSC
+0x01191012|IS|1-n|K|ParameterDims|MRSC
+0x01191013|CS|1-n|K|VariableParameter|MRSC
+0x01191018|IS|3|K|GAINS|MRSC
+0x01191020|LO|1-n|K|SourceFileNames|MRSC
+0x01191021|IS|1|K|SourceCropFlag|MRSC
+0x01191022|IS|6|K|SourceCropLimits|MRSC
+0x01191023|UI|1-n|K|SourceFileUIDs|MRSC
+0x01191024|IS|1-n|K|SourceVolumeIndices|MRSC
+0x01191025|LO|1-n|K|SourceVolumeLabels|MRSC
+0x01191030|DS|9|K|DirectionCosines|MRSC
+0x01191031|CS|3|K|PatientOrientation3|MRSC
+0x01191038|DS|3|K|PixelGap|MRSC
+0x01191041|DS|1-n|K|SlicePosition|MRSC
+0x01191050|LO|1-n|K|VolumeLabels|MRSC
+0x01191051|DA|1-n|K|AcquisitionDate|MRSC
+0x01191052|TM|1-n|K|AcquisitionTime|MRSC
+0x01191060|LO|1|K|SecCptrUser|MRSC
+0x01191061|LO|1|K|SecCptrApplication|MRSC
+0x01191070|AT|1-n|K|VariableParamTags|MRSC
+0x01191071|CS|1-n|K|VariableParamNames|MRSC
+0x01191080|DS|1-n|K|TR|MRSC
+0x01191081|DS|1-n|K|TE|MRSC
+0x01191082|DS|1-n|K|TI|MRSC
+0x01191083|DS|1-n|K|TSL|MRSC
+0x01191088|DS|1-n|K|FlipAngle|MRSC
+0x01191090|DS|1-n|K|TemporalIndex|MRSC
+0x01191091|DS|1-n|K|TemporalValue|MRSC
+0x011910A0|DS|1-n|K|DIFF_GRAD_X|MRSC
+0x011910A1|DS|1-n|K|DIFF_GRAD_Y|MRSC
+0x011910A2|DS|1-n|K|DIFF_GRAD_Z|MRSC
+0x011910A3|DS|1-n|K|DIFF_PW_X|MRSC
+0x011910A4|DS|1-n|K|DIFF_PW_Y|MRSC
+0x011910A5|DS|1-n|K|DIFF_PW_Z|MRSC
+0x011910A6|DS|1-n|K|DIFF_TIME_X|MRSC
+0x011910A7|DS|1-n|K|DIFF_TIME_Y|MRSC
+0x011910A8|DS|1-n|K|DIFF_TIME_Z|MRSC
+0x011910A9|DS|1-n|K|DiffBValues|MRSC
+0x011910B0|LO|1|K|CoilCorrectionMethod|MRSC
+0x011910B1|IS|1|K|PolyFitOrder|MRSC
+0x011910B2|DS|1-n|K|PolyFitCoeff|MRSC
+0x011910C0|SQ|1|K|QCMinimumLimits|MRSC
+0x011910C1|SQ|1|K|QCMaximumLimits|MRSC
+0x011910D0|ST|1|K|CheckString|MRSC
+0x011910D1|LO|1-n|K|Source|MRSC
+0x011910F0|OB|1-n|K|SampleHeader|MRSC
+0x011910FF|DS|1-n|K|UserInfo|MRSC
+0x01191100|DS|1|K|FitMapModuleVersion|MRSC
+0x01191101|LO|1-n|K|SourceFileNames|MRSC
+0x01191102|IS|1-n|K|SourceVolumeIndices|MRSC
+0x01191103|DS|1-n|K|ParameterValues|MRSC
+0x01191104|AT|1|K|ParameterTag|MRSC
+0x01191105|UI|1-n|K|SourceFileUIDs|MRSC
+0x01191106|LO|1-n|K|SourceFileDirectory|MRSC
+0x01191107|IS|1|K|SourceDataInPlaceFlag|MRSC
+0x01191108|IS|1-n|K|ResultVolumeindices|MRSC
+0x01191109|IS|1|K|SMOOTHBoxcarAverageKernel|MRSC
+0x0119110C|LO|1|K|FitICFunction|MRSC
+0x0119110D|LO|1|K|FitFormulaProcedure|MRSC
+0x0119110E|LO|1|K|FittingProgram|MRSC
+0x0119110F|IS|1|K|FittingProgramVersion|MRSC
+0x01191110|CS|1|K|FitType|MRSC
+0x01191111|IS|1|K|SetICFlag|MRSC
+0x01191112|DS|1-n|K|InitialConditions|MRSC
+0x01191113|DS|1-n|K|FitMapScaleFactors|MRSC
+0x01191120|IS|1|K|ThresholdingFlag|MRSC
+0x01191121|DS|1|K|Threshold|MRSC
+0x01191122|IS|1|K|MaskCompression|MRSC
+0x01191123|OB|1-n|K|FitMapMask|MRSC
+0x01191124|OB|1-n|K|FitMapPntThreshMap|MRSC
+0x01191125|ST|1|K|PixelMaskCheckString|MRSC
+0x01191126|ST|1|K|PixelMaskSource|MRSC
+0x01191130|DS|1-n|K|UpperFitLimit|MRSC
+0x01191131|DS|1-n|K|LowerFitLimit|MRSC
+0x01191140|LO|1|K|GradientMatrixMethod|MRSC
+0x01191141|DS|1-n|K|GradientMatrix|MRSC
+0x01191180|SQ|1|K|FitMapSQ|MRSC
+0x01191181|IS|1|K|fmSQFitNumber|MRSC
+0x011911A0|CS|1|K|PhantCalibType|MRSC
+0x011911A1|IS|1|K|PhantCalibNParms|MRSC
+0x011911A2|DS|1-n|K|PhantCalibParam|MRSC
+0x011911A3|IS|1-n|K|PhantGoodFlags|MRSC
+0x011911A4|DS|1-n|K|PhantValues|MRSC
+0x011911A5|DS|1-n|K|PhantRefValues|MRSC
+0x01191200|IS|1-n|K|ImageProcessStatus|MRSC
+0x01191201|LO|1|K|SourceID|MRSC
+0x01191202|IS|1|K|Group Version|MRSC
+0x01191203|IS|1|K|ExecuteOnRead|MRSC
+0x01191204|IS|1|K|NumberPasses|MRSC
+0x01191206|IS|1-n|K|NumProcesses|MRSC
+0x01191208|IS|1-n|K|GroupExecuteOrder|MRSC
+0x0119120A|IS|1|K|NumberTransforms|MRSC
+0x0119120B|IS|1-n|K|NumberProcesses|MRSC
+0x01191211|IS|1-n|K|InvertImage|MRSC
+0x01191212|IS|1-n|K|SkeletonizeImage|MRSC
+0x01191213|IS|1-n|K|IsotropicResolution|MRSC
+0x01191220|IS|1-n|K|MedianFilterKernel|MRSC
+0x01191221|DS|1-n|K|BackgroundCorrection|MRSC
+0x01191222|DS|1-n|K|UnSharpMasking|MRSC
+0x01191223|IS|1-n|K|LocalThresholdKernel|MRSC
+0x01191224|IS|1-n|K|AbsoluteLimits|MRSC
+0x01191225|DS|1-n|K|PercentileLimits|MRSC
+0x01191226|DS|1-n|K|InPlaneRotation|MRSC
+0x01191227|IS|1-n|K|ByteScaleMinMaxTop|MRSC
+0x01191228|IS|1-n|K|GlobalThreshold|MRSC
+0x01191229|DS|1-n|K|IntensityScale|MRSC
+0x01191230|IS|1-n|K|ReSample|MRSC
+0x01191231|IS|1-n|K|OrthogonalReFormat|MRSC
+0x01191232|IS|1-n|K|REBIN|MRSC
+0x01191233|DS|1-n|K|WhiteTopHat|MRSC
+0x01191234|IS|1-n|K|HistEqual|MRSC
+0x01191235|IS|1-n|K|Crop|MRSC
+0x01191236|DS|1-n|K|LPCoil|MRSC
+0x01191240|IS|1|K|LPCCVersion|MRSC
+0x01191241|LO|1|K|LPCCFilename|MRSC
+0x01191242|DS|1-n|K|LPCCBandwidth|MRSC
+0x01191243|DS|1|K|LPCCNoise_factor|MRSC
+0x01191244|DS|1|K|LPCCNoise_level|MRSC
+0x01191245|IS|1|K|LPCCNoise_mode|MRSC
+0x01191246|IS|1|K|LPCCDirection|MRSC
+0x01191247|IS|1|K|LPCCEdge_fill|MRSC
+0x01191248|IS|1|K|LPCCMean_fill|MRSC
+0x01191249|IS|1|K|LPCCPixelsearch|MRSC
+0x0119124A|DS|1|K|LPCCIntensity_scale|MRSC
+0x0119124B|IS|1|K|LPCCThreed|MRSC
+0x0119124C|LO|1|K|LPCCRoi_mask|MRSC
+0x0119124D|IS|2|K|LPCCMask_slices|MRSC
+0x0119124E|IS|1|K|LPCCSlice_pad|MRSC
+0x0119124F|IS|1|K|LPCCSave_type|MRSC
+0x01191250|IS|1|K|LPCCFilter_type|MRSC
+0x01191251|DS|1|K|LPCCMean_Multiplier|MRSC
+0x01191260|DS|1|K|SACoilCorrectionIncrement|MRSC
+0x01191261|IS|1|K|SACoilCorrectionVersion|MRSC
+0x01191262|DA|1|K|SACoilCorrectionCorr_date|MRSC
+0x01191263|TM|1|K|SACoilCorrectionCorr_time|MRSC
+0x01191264|LO|1|K|SACoilCorrectionMethod|MRSC
+0x01191265|DS|1-n|K|SACoilCorrectionOrigin|MRSC
+0x01191266|DS|1-n|K|SACoilCorrectionAxis_cos|MRSC
+0x01191267|IS|1|K|SACoilCorrectionNumber|MRSC
+0x01191268|LO|1|K|SACoilCorrectionSid|MRSC
+0x01191269|DS|1-n|K|SACoilCorrectionRange|MRSC
+0x0119126A|FD|1-n|K|SACoilCorrectionSa_value|MRSC
+0x0119126B|IS|1|K|SACoilCorrectionAxis_flag|MRSC
+0x0119126C|IS|1-n|K|SACoilCorrectionSample_number|MRSC
+0x0119126D|LO|1|K|SACoilCorrectionParams_SID|MRSC
+0x0119126E|IS|1|K|SACoilCorrectionParams_Version|MRSC
+0x0119126F|DS|1|K|SACoilCorrectionParams_Rot_axis_off|MRSC
+0x01191270|DS|1|K|SACoilCorrectionParams_Angle_deg|MRSC
+0x01191271|DS|1|K|SACoilCorrectionParams_Offset_in|MRSC
+0x01191272|DS|1-n|K|SACoilCorrectionParams_Plane_cos_ref|MRSC
+0x01191273|DS|1-n|K|SACoilCorrectionParams_Lps_ref|MRSC
+0x01191274|IS|1|K|SACoilCorrectionParams_Order|MRSC
+0x01191275|DS|1-n|K|SACoilCorrectionParams_Coeff|MRSC
+0x01191276|DA|1|K|SACoilCorrectionParams_Coeff_date|MRSC
+0x01191277|LO|1|K|SACoilCorrectionParams_Coeff_src|MRSC
+0x011912A0|LO|1|K|MinVarFiltSid|MRSC
+0x011912A1|LO|1|K|MinVarFiltPath|MRSC
+0x011912A2|IS|1|K|MinVarFiltMax_images|MRSC
+0x011912A3|IS|2|K|MinVarFiltId_locs|MRSC
+0x011912A4|LO|1|K|MinVarFiltScript_name|MRSC
+0x011912A5|IS|1|K|MinVarFiltSave_masks|MRSC
+0x011912A6|IS|1|K|MinVarFiltSave_idf|MRSC
+0x011912A7|LO|1|K|MinVarFiltMask|MRSC
+0x011912A8|LO|1|K|MinVarFiltIdfmask|MRSC
+0x011912A9|LO|1|K|MinVarFiltImage|MRSC
+0x011912AA|LO|1-n|K|MinVarFiltIdfimages|MRSC
+0x011912AB|LO|1|K|MinVarFiltOutput_file|MRSC
+0x011912AC|IS|1|K|MinVarFiltNum_loops|MRSC
+0x011912AD|IS|3|K|MinVarFiltKernel|MRSC
+0x011912AE|IS|1|K|MinVarFiltLimit_sliceFlag|MRSC
+0x011912AF|SS|2|K|MinVarFiltSlice_limits|MRSC
+0x011912B0|IS|1|K|MinVarFiltOutput_type|MRSC
+0x011912B1|IS|1|K|MinVarFiltOutput_ftype|MRSC
+0x011912B2|LO|1|K|MinVarFiltScaling|MRSC
+0x011912B3|LO|1|K|MinVarFiltScript|MRSC
+0x011912B4|LO|1|K|MinVarFiltLog|MRSC
+0x01191400|LO|1|K|MIPsSid|MRSC
+0x01191401|UI|1|K|MIPsUID|MRSC
+0x01191402|TM|1|K|MIPsTime|MRSC
+0x01191403|DA|1|K|MIPsDate|MRSC
+0x01191404|IS|1|K|MIPsVersion|MRSC
+0x01191405|IS|1|K|MIPsVolume|MRSC
+0x01191406|IS|1|K|MIPsOrtho|MRSC
+0x01191407|IS|1|K|MIPsMaskedFlag|MRSC
+0x01191408|IS|1|K|MIPsSubtractVolume|MRSC
+0x01191410|UL|1-n|K|MIPsProtectPixels|MRSC
+0x01191411|UL|1-n|K|MIPsIgnorePixels|MRSC
+0x01191412|IS|1|K|MIPsProjectFlag|MRSC
+0x01191413|IS|1-n|K|MIPsProjectPlaneIndices|MRSC
+0x01191500|LO|1|K|SERSid|MRSC
+0x01191501|UI|1|K|SERUID|MRSC
+0x01191502|TM|1|K|SERTime|MRSC
+0x01191503|DA|1|K|SERDate|MRSC
+0x01191504|IS|1|K|SERVersion|MRSC
+0x01191505|IS|3|K|SERTimePoints|MRSC
+0x01191506|IS|1|K|SERByteScaled|MRSC
+0x01191507|DS|1|K|SERBackground|MRSC
+0x01191508|DS|1|K|SERThreshold|MRSC
+0x01191509|DS|1|K|SERMaximum|MRSC
+0x0119150A|IS|1|K|SERMinConPixels|MRSC
+0x0119150B|IS|1|K|SERCorrectFlag|MRSC
+0x0119150C|DS|2|K|SERAcqTimes|MRSC
+0x0119150D|DS|2|K|SERTargetTimes|MRSC
+0x0119150E|DS|1|K|SERTimeTolerance|MRSC
+0x0119150F|DS|4|K|SERCorrectionParams|MRSC
+0x01191510|LO|1|K|SERImageType|MRSC
+0x01191511|IS|1-n|K|SEROffsets|MRSC
+0x01191512|LO|1|K|SERMaskFileName|MRSC
+0x01191513|DS|1|K|SERMaskChecksum|MRSC
+0x01191514|UI|1|K|SERMaskFileUID|MRSC

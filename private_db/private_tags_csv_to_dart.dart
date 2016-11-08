@@ -1,14 +1,14 @@
 // Copyright (c) 2016, Open DICOMweb Project. All rights reserved.
 // Use of this source code is governed by the open source license
 // that can be found in the LICENSE file.
-// Author: Jim Philbin <jfphilbin@gmail.edu> - 
+// Author: Jim Philbin <jfphilbin@gmail.edu> -
 // See the AUTHORS file for other contributors.
 
 import 'dart:io';
 
 class CsvToDart {
 
-    CsvToDart();
+  CsvToDart();
 }
 
 void printLine(int i, var s) {
@@ -17,7 +17,7 @@ void printLine(int i, var s) {
 }
 
 void main(List<String> args) {
-  var csvFile = "C:/odw/sdk/deid/private_db/db.csv";
+  var csvFile = "C:/odw/sdk/deid/private_db/cvs/combined.csv";
 
   var inFile = new File(csvFile);
   var lines = inFile.readAsLinesSync();
@@ -26,24 +26,35 @@ void main(List<String> args) {
   //  var headers = headLine.sublist(1);
   //  for(String s in headers) s.trim();
 
+  String out = "";
   List<List<String>> rows = [];
   for (int i = 0; i < lines.length; i++) {
     var line = lines[i];
-    printLine(i, line);
+    if (line[0] == "#") continue;
+  //  printLine(i, line);
     var row = lines[i].split('|');
-    row = row.sublist(1);
     for (int j = 0; j < row.length; j++) {
+
       row[j] = row[j].trim();
     }
-    printLine(i, row);
-    rows.add(row);
-  }
-  for (int i = 0; i < rows.length; i++) {
-    printLine(i, rows[i]);
+    var tag = '${row[0]}';
+    var vr = '"${row[1]}"';
+    var vm = '"${row[2]}"';
+    var code = '"${row[3]}"';
+    var desc = '"${row[4]}"';
+    var creator = '"${row[5]}"';
+  //  printLine(i, row);
+    out += '[$tag, $vr, $vm, $code, $desc, $creator],\n';
   }
 
-  var generate = new PrivateGroupGenerator(rows);
-  print(generate.code);
+  for (int i = 0; i < rows.length; i++) {
+   // printLine(i, rows[i]);
+  }
+
+  print(out);
+
+  //var generate = new PrivateGroupGenerator(rows);
+  //print(generate.code);
 }
 
 

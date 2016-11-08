@@ -1,0 +1,2027 @@
+{
+  "name": "k0010",
+  "manufacturerId": "k0010",
+  "modality": Modality
+  .
+  CT,
+  "name": "k0010",
+  "creator": {
+    "tag": 0
+    x0x00090010,
+    "vr": VR
+    .
+    LO,
+    "vm": VM
+    .
+    k1,
+    "action": "Keep",
+    "description": "GEHC Private Creator ID",
+    "creator": "GEMS_IDEN_01"
+  },
+  "elements": {
+    4097: {
+      "tag": 0
+      x0x00531001,
+      "vr": VR
+      .
+      FL,
+      "vm": null,
+      "action": "Keep????",
+      "description": "MultiEnergyNoiseRedBlendingFact",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4098: {
+      "tag": 0
+      x0x00191002,
+      "vr": VR
+      .
+      SL,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Detector Channel",
+      "creator": "GE_YMS_NJ001"
+    },
+    4100: {
+      "tag": 0
+      x0x00491004,
+      "vr": VR
+      .
+      CS,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "MinHeartRatePriorToConfirm",
+      "creator": "GEMS_CT_CARDIAC_001"
+    },
+    4119: {
+      "tag": 0
+      x0x00451017,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Start View 1B",
+      "creator": "GEMS_HELIOS_01"
+    },
+    4122: {
+      "tag": 0
+      x0x0045101a,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Remove",
+      "description": "Air Calibration Time",
+      "creator": "GEMS_HELIOS_01"
+    },
+    4128: {
+      "tag": 0
+      x0x00531020,
+      "vr": VR
+      .
+      IS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "ShuttleFlag",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4135: {
+      "tag": 0
+      x0x00191027,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Gantry Velocity",
+      "creator": "GE_YMS_NJ001"
+    },
+    4143: {
+      "tag": 0
+      x0x0019102f,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Trigger frequency",
+      "creator": "GEMS_ACQU_01"
+    },
+    4144: {
+      "tag": 0
+      x0x00451030,
+      "vr": VR
+      .
+      CS,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "CardiacReconAlgorithm",
+      "creator": "GEMS_HELIOS_01"
+    },
+    4145: {
+      "tag": 0
+      x0x00091031,
+      "vr": VR
+      .
+      SH,
+      "vm": VM
+      .
+      k1,
+      "action": "Remove",
+      "description": "Mobile Location Code",
+      "creator": "GE_YMS_NJ001"
+    },
+    4322: {
+      "tag": 0
+      x0x000910e2,
+      "vr": VR
+      .
+      UN,
+      "vm": VM
+      .
+      k1,
+      "action": "Remove",
+      "description": "GEMS_IDEN_01 Undefined XXe2",
+      "creator": "GEMS_IDEN_01"
+    },
+    4323: {
+      "tag": 0
+      x0x000910e3,
+      "vr": VR
+      .
+      UI,
+      "vm": VM
+      .
+      k1,
+      "action": "Remove",
+      "description": "Equipment UID",
+      "creator": "GEMS_IDEN_01"
+    },
+    4326: {
+      "tag": 0
+      x0x000910e6,
+      "vr": VR
+      .
+      SH,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "Genesis Version - now",
+      "creator": "GEMS_IDEN_01"
+    },
+    4327: {
+      "tag": 0
+      x0x000910e7,
+      "vr": VR
+      .
+      UL,
+      "vm": VM
+      .
+      k1,
+      "action": "Remove",
+      "description": "Exam Record checksum",
+      "creator": "GEMS_IDEN_01"
+    },
+    4329: {
+      "tag": 0
+      x0x000910e9,
+      "vr": VR
+      .
+      SL,
+      "vm": VM
+      .
+      k1,
+      "action": "Remove",
+      "description": "Actual series data time stamp",
+      "creator": "GEMS_IDEN_01"
+    },
+    16: {
+      "tag": 0
+      x0x00430010,
+      "vr": VR
+      .
+      LO,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep",
+      "description": "GEHC Private Creator ID",
+      "creator": "GE_YMS_NJ001"
+    },
+    4112: {
+      "tag": 0
+      x0x00271010,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Scout Type",
+      "creator": "GE_YMS_NJ001"
+    },
+    4099: {
+      "tag": 0
+      x0x00531003,
+      "vr": VR
+      .
+      IS,
+      "vm": VM
+      .
+      k2,
+      "action": "Keep????",
+      "description": "MultiEnergyMDTransformEnergies",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4111: {
+      "tag": 0
+      x0x0045100f,
+      "vr": VR
+      .
+      FL,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Z tracking Error",
+      "creator": "GEMS_HELIOS_01"
+    },
+    4113: {
+      "tag": 0
+      x0x00451011,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Number of Views 2A",
+      "creator": "GEMS_HELIOS_01"
+    },
+    4115: {
+      "tag": 0
+      x0x00451013,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Sigma Mode",
+      "creator": "GEMS_HELIOS_01"
+    },
+    4116: {
+      "tag": 0
+      x0x00451014,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Number of Views 1A",
+      "creator": "GEMS_HELIOS_01"
+    },
+    4117: {
+      "tag": 0
+      x0x00451015,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Start View 2B",
+      "creator": "GEMS_HELIOS_01"
+    },
+    4118: {
+      "tag": 0
+      x0x00491016,
+      "vr": VR
+      .
+      SH,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "EkgGatingType",
+      "creator": "GEMS_CT_CARDIAC_001"
+    },
+    4120: {
+      "tag": 0
+      x0x00451018,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Number of Views 1B",
+      "creator": "GEMS_HELIOS_01"
+    },
+    4121: {
+      "tag": 0
+      x0x00401019,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Remove",
+      "description": "Air Calibration Date",
+      "creator": "GEMS_HELIOS_01"
+    },
+    4123: {
+      "tag": 0
+      x0x0049101b,
+      "vr": VR
+      .
+      FL,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Ekg Wave Time Off First Data Point",
+      "creator": "GEMS_CT_CARDIAC_001"
+    },
+    4126: {
+      "tag": 0
+      x0x0043101e,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Delta start time [msec]",
+      "creator": "GE_YMS_NJ001"
+    },
+    4131: {
+      "tag": 0
+      x0x00191023,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Table speed",
+      "creator": "GE_YMS_NJ001"
+    },
+    4132: {
+      "tag": 0
+      x0x00191024,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "Mid scan time",
+      "creator": "GE_YMS_NJ001"
+    },
+    4133: {
+      "tag": 0
+      x0x00491025,
+      "vr": VR
+      .
+      OW,
+      "vm": VM
+      .
+      k1,
+      "action": "Remove",
+      "description": "PreBlendedCycle2",
+      "creator": "GEMS_CT_CARDIAC_001"
+    },
+    4134: {
+      "tag": 0
+      x0x00191026,
+      "vr": VR
+      .
+      SL,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Tube Azimuth",
+      "creator": "GE_YMS_NJ001"
+    },
+    4138: {
+      "tag": 0
+      x0x0043102a,
+      "vr": VR
+      .
+      OB,
+      "vm": VM
+      .
+      k1,
+      "action": "Remove",
+      "description": "User defined data",
+      "creator": "GEMS_PARM_01"
+    },
+    4139: {
+      "tag": 0
+      x0x0043102b,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k4,
+      "action": "Replace",
+      "description": "Private Scan Options",
+      "creator": "GEMS_PARM_01"
+    },
+    4140: {
+      "tag": 0
+      x0x0019102c,
+      "vr": VR
+      .
+      SL,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Number of triggers",
+      "creator": "GEMS_ACQU_01"
+    },
+    4142: {
+      "tag": 0
+      x0x0019102e,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Angle of first view",
+      "creator": "GEMS_ACQU_01"
+    },
+    4153: {
+      "tag": 0
+      x0x00431039,
+      "vr": VR
+      .
+      IS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Reconstruction Matrix",
+      "creator": "GE_YMS_NJ001"
+    },
+    4160: {
+      "tag": 0
+      x0x00431040,
+      "vr": VR
+      .
+      CS,
+      "vm": null,
+      "action": "Replace",
+      "description": "Image Filter",
+      "creator": "GE_YMS_NJ001"
+    },
+    4161: {
+      "tag": 0
+      x0x00431041,
+      "vr": VR
+      .
+      US,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Prospective Addition Indicator",
+      "creator": "GE_YMS_NJ001"
+    },
+    4162: {
+      "tag": 0
+      x0x00191042,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Segment number",
+      "creator": "GE_YMS_NJ001"
+    },
+    4163: {
+      "tag": 0
+      x0x00431043,
+      "vr": VR
+      .
+      US,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Motion Correction Indicator",
+      "creator": "GE_YMS_NJ001"
+    },
+    4164: {
+      "tag": 0
+      x0x00431044,
+      "vr": VR
+      .
+      US,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Helical Correction Indicator",
+      "creator": "GE_YMS_NJ001"
+    },
+    4167: {
+      "tag": 0
+      x0x00431047,
+      "vr": VR
+      .
+      US,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "BBH Correction Indicator",
+      "creator": "GE_YMS_NJ001"
+    },
+    4170: {
+      "tag": 0
+      x0x0043104a,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k4,
+      "action": "Keep????",
+      "description": "Starting channel of view",
+      "creator": "GEMS_PARM_01"
+    },
+    4171: {
+      "tag": 0
+      x0x0043104b,
+      "vr": VR
+      .
+      SL,
+      "vm": VM
+      .
+      k4,
+      "action": "Keep????",
+      "description": "DAS xm pattern",
+      "creator": "GEMS_PARM_01"
+    },
+    4178: {
+      "tag": 0
+      x0x00271052,
+      "vr": VR
+      .
+      SH,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "RAS letter for side of image",
+      "creator": "GEMS_IMAG_01"
+    },
+    4183: {
+      "tag": 0
+      x0x00191057,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "CT water number",
+      "creator": "GEMS_ACQU_01"
+    },
+    4184: {
+      "tag": 0
+      x0x00191058,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "CT bone number",
+      "creator": "GEMS_ACQU_01"
+    },
+    4190: {
+      "tag": 0
+      x0x0019105e,
+      "vr": VR
+      .
+      SL,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Number of channels (1…512)",
+      "creator": "GEMS_ACQU_01"
+    },
+    4191: {
+      "tag": 0
+      x0x0019105f,
+      "vr": VR
+      .
+      SL,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Increment between channels",
+      "creator": "GEMS_ACQU_01"
+    },
+    4192: {
+      "tag": 0
+      x0x00531060,
+      "vr": VR
+      .
+      SH,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "ReconFlipRotateAnno",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4193: {
+      "tag": 0
+      x0x00531061,
+      "vr": VR
+      .
+      SH,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "hiResolutionFlag",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4194: {
+      "tag": 0
+      x0x00531062,
+      "vr": VR
+      .
+      SH,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "RespiratoryFlag",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4202: {
+      "tag": 0
+      x0x0043106a,
+      "vr": VR
+      .
+      US,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Afterglow Correction Indicator",
+      "creator": "GEMS_PARM_01"
+    },
+    4203: {
+      "tag": 0
+      x0x0043106b,
+      "vr": VR
+      .
+      US,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Local Decon Correction Indicator",
+      "creator": "GEMS_PARM_01"
+    },
+    4208: {
+      "tag": 0
+      x0x00531070,
+      "vr": VR
+      .
+      IS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "MultiEnergySourceCount",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4209: {
+      "tag": 0
+      x0x00531071,
+      "vr": VR
+      .
+      LO,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "MultiEnergyScanType",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4210: {
+      "tag": 0
+      x0x00531072,
+      "vr": VR
+      .
+      LO,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "MultiEnergyReconType",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4211: {
+      "tag": 0
+      x0x00531073,
+      "vr": VR
+      .
+      LO,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "MultiEnergyImageType",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4212: {
+      "tag": 0
+      x0x00531074,
+      "vr": VR
+      .
+      LO,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "MultiEnergyMaterialType",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4213: {
+      "tag": 0
+      x0x00531075,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "MonchromaticEnergy",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4214: {
+      "tag": 0
+      x0x00531076,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "multiEnergyWeightedSubractionWidth1",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4314: {
+      "tag": 0
+      x0x001910da,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Reference channel used",
+      "creator": "GEMS_ACQU_01"
+    },
+    4315: {
+      "tag": 0
+      x0x001910db,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Back projector coefficient",
+      "creator": "GEMS_ACQU_01"
+    },
+    4316: {
+      "tag": 0
+      x0x001910dc,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Primary speed correction used",
+      "creator": "GEMS_ACQU_01"
+    },
+    4317: {
+      "tag": 0
+      x0x001910dd,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Overrange correction used",
+      "creator": "GEMS_ACQU_01"
+    },
+    4318: {
+      "tag": 0
+      x0x001910de,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Dynamic Z alpha value",
+      "creator": "GEMS_ACQU_01"
+    },
+    4101: {
+      "tag": 0
+      x0x00491005,
+      "vr": VR
+      .
+      CS,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "MaxHeartRatePriorToConfirm",
+      "creator": "GEMS_CT_CARDIAC_001"
+    },
+    4103: {
+      "tag": 0
+      x0x00491007,
+      "vr": VR
+      .
+      US,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "NumHeartRateSamples PriorToConfirm",
+      "creator": "GEMS_CT_CARDIAC_001"
+    },
+    4149: {
+      "tag": 0
+      x0x00431035,
+      "vr": VR
+      .
+      US,
+      "vm": VM
+      .
+      k1,
+      "action": "Remove",
+      "description": "Infant Indicator",
+      "creator": "GE_YMS_NJ001"
+    },
+    4150: {
+      "tag": 0
+      x0x00451036,
+      "vr": VR
+      .
+      CS,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "EkgFullMaStartPhase",
+      "creator": "GEMS_HELIOS_01"
+    },
+    4151: {
+      "tag": 0
+      x0x00431037,
+      "vr": VR
+      .
+      CS,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "Gantry Type",
+      "creator": "GE_YMS_NJ001"
+    },
+    330: {
+      "tag": 0
+      x0x0021014a,
+      "vr": VR
+      .
+      LO,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "Anatomical reference for scout",
+      "creator": "GEMS_RELA_01"
+    },
+    4240: {
+      "tag": 0
+      x0x00211090,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Tube focal spot position",
+      "creator": "GEMS_RELA_01"
+    },
+    4241: {
+      "tag": 0
+      x0x00211091,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Biopsy position",
+      "creator": "GEMS_RELA_01"
+    },
+    4242: {
+      "tag": 0
+      x0x00531092,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "MD1intercept",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4243: {
+      "tag": 0
+      x0x00531093,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "MD1slope",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4221: {
+      "tag": 0
+      x0x0053107d,
+      "vr": VR
+      .
+      LO,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "SubOptimalIQString",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4102: {
+      "tag": 0
+      x0x00491006,
+      "vr": VR
+      .
+      FL,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "StdDevHeartRate PriorToConfirm",
+      "creator": "GEMS_CT_CARDIAC_001"
+    },
+    4124: {
+      "tag": 0
+      x0x0045101c,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Remove",
+      "description": "Phantom Calibration Time",
+      "creator": "GEMS_HELIOS_01"
+    },
+    4125: {
+      "tag": 0
+      x0x0045101d,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Remove",
+      "description": "Z Slope Calibration Date",
+      "creator": "GEMS_HELIOS_01"
+    },
+    4127: {
+      "tag": 0
+      x0x0045101f,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Remove",
+      "description": "Cross Talk Calibration Date",
+      "creator": "GEMS_HELIOS_01"
+    },
+    4165: {
+      "tag": 0
+      x0x00431045,
+      "vr": VR
+      .
+      US,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Cine Correction Indicator",
+      "creator": "GE_YMS_NJ001"
+    },
+    4166: {
+      "tag": 0
+      x0x00431046,
+      "vr": VR
+      .
+      US,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "IBO Correction Indicator",
+      "creator": "GE_YMS_NJ001"
+    },
+    4168: {
+      "tag": 0
+      x0x00431048,
+      "vr": VR
+      .
+      US,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Advanced Noise Reduction Indicator",
+      "creator": "GE_YMS_NJ001"
+    },
+    4169: {
+      "tag": 0
+      x0x00431049,
+      "vr": VR
+      .
+      SL,
+      "vm": VM
+      .
+      k4,
+      "action": "Keep????",
+      "description": "DAS auto zero",
+      "creator": "GEMS_PARM_01"
+    },
+    4172: {
+      "tag": 0
+      x0x0043104c,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k4,
+      "action": "Keep????",
+      "description": "TGGC trigger mode",
+      "creator": "GEMS_PARM_01"
+    },
+    4173: {
+      "tag": 0
+      x0x0043104d,
+      "vr": VR
+      .
+      FL,
+      "vm": VM
+      .
+      k4,
+      "action": "Replace",
+      "description": "Start scan to X-ray on delay",
+      "creator": "GEMS_PARM_01"
+    },
+    4176: {
+      "tag": 0
+      x0x00271050,
+      "vr": VR
+      .
+      FL,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Scan start location",
+      "creator": "GE_YMS_NJ001"
+    },
+    4177: {
+      "tag": 0
+      x0x00271051,
+      "vr": VR
+      .
+      FL,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Scan end location",
+      "creator": "GE_YMS_NJ001"
+    },
+    4179: {
+      "tag": 0
+      x0x00271053,
+      "vr": VR
+      .
+      SH,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "RAS letter for anterior/posterior",
+      "creator": "GEMS_IMAG_01"
+    },
+    4180: {
+      "tag": 0
+      x0x00271054,
+      "vr": VR
+      .
+      SH,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "RAS letter for scout start loc",
+      "creator": "GEMS_IMAG_01"
+    },
+    4181: {
+      "tag": 0
+      x0x00271055,
+      "vr": VR
+      .
+      SH,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "RAS letter for scout end loc",
+      "creator": "GEMS_IMAG_01"
+    },
+    4353: {
+      "tag": 0
+      x0x00291101,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep",
+      "description": "CT Int Fluoro",
+      "creator": "GEMS_CT_FLRO_01"
+    },
+    4354: {
+      "tag": 0
+      x0x00291102,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep",
+      "description": "Image Precise Location",
+      "creator": "GEMS_CT_FLRO_01"
+    },
+    4104: {
+      "tag": 0
+      x0x00491008,
+      "vr": VR
+      .
+      CS,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "AutoHeartRateDetectPredict",
+      "creator": "GEMS_CT_CARDIAC_001"
+    },
+    4105: {
+      "tag": 0
+      x0x00491009,
+      "vr": VR
+      .
+      CS,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "SystemOptimizedHeartRate",
+      "creator": "GEMS_CT_CARDIAC_001"
+    },
+    4106: {
+      "tag": 0
+      x0x0049100a,
+      "vr": VR
+      .
+      ST,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "EkgMonitorType",
+      "creator": "GEMS_CT_CARDIAC_001"
+    },
+    4148: {
+      "tag": 0
+      x0x00451034,
+      "vr": VR
+      .
+      CS,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "ActualPctRpeakDelay",
+      "creator": "GEMS_HELIOS_01"
+    },
+    4245: {
+      "tag": 0
+      x0x00531095,
+      "vr": VR
+      .
+      OW,
+      "vm": VM
+      .
+      k1,
+      "action": "Remove",
+      "description": "MD1supportData",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4114: {
+      "tag": 0
+      x0x00431012,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k3,
+      "action": "Keep????",
+      "description": "X-Ray Chain",
+      "creator": "GE_YMS_NJ001"
+    },
+    4129: {
+      "tag": 0
+      x0x00531021,
+      "vr": VR
+      .
+      IS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep",
+      "description": "TableSpeedNotReachesTargetFlag",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4136: {
+      "tag": 0
+      x0x00431028,
+      "vr": VR
+      .
+      OB,
+      "vm": VM
+      .
+      k1,
+      "action": "Remove",
+      "description": "Unique image iden",
+      "creator": "GEMS_PARM_01"
+    },
+    4137: {
+      "tag": 0
+      x0x00431029,
+      "vr": VR
+      .
+      OB,
+      "vm": VM
+      .
+      k1,
+      "action": "Remove",
+      "description": "Histogram tables",
+      "creator": "GEMS_PARM_01"
+    },
+    4174: {
+      "tag": 0
+      x0x0043104e,
+      "vr": VR
+      .
+      FL,
+      "vm": VM
+      .
+      k4,
+      "action": "Keep????",
+      "description": "Duration of X-ray on",
+      "creator": "GEMS_PARM_01"
+    },
+    4195: {
+      "tag": 0
+      x0x00531063,
+      "vr": VR
+      .
+      CS,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "Image Position Patient Setting",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4196: {
+      "tag": 0
+      x0x00531064,
+      "vr": VR
+      .
+      IS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep",
+      "description": "Shutter Mode",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4197: {
+      "tag": 0
+      x0x00531065,
+      "vr": VR
+      .
+      IS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Shutter Mode Percent",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4198: {
+      "tag": 0
+      x0x00531066,
+      "vr": VR
+      .
+      LO,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "Image Browser Annotation",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4199: {
+      "tag": 0
+      x0x00531067,
+      "vr": VR
+      .
+      IS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Overlapped Recon Flag",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4200: {
+      "tag": 0
+      x0x00531068,
+      "vr": VR
+      .
+      IS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep",
+      "description": "Row Number Anotation Flag",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4201: {
+      "tag": 0
+      x0x00431069,
+      "vr": VR
+      .
+      US,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Q-cal Correction Indicator",
+      "creator": "GEMS_PARM_01"
+    },
+    4204: {
+      "tag": 0
+      x0x0043106c,
+      "vr": VR
+      .
+      IS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Detector Row",
+      "creator": "GEMS_PARM_01"
+    },
+    4205: {
+      "tag": 0
+      x0x0043106d,
+      "vr": VR
+      .
+      US,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Z-smoothing Size",
+      "creator": "GEMS_PARM_01"
+    },
+    4206: {
+      "tag": 0
+      x0x0043106e,
+      "vr": VR
+      .
+      SH,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Auto mA Mode",
+      "creator": "GEMS_PARM_01"
+    },
+    4107: {
+      "tag": 0
+      x0x0049100b,
+      "vr": VR
+      .
+      CS,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "NumReconSectors",
+      "creator": "GEMS_CT_CARDIAC_001"
+    },
+    4108: {
+      "tag": 0
+      x0x0049100c,
+      "vr": VR
+      .
+      FL,
+      "vm": null,
+      "action": "Keep????",
+      "description": "RpeakTimeStamps",
+      "creator": "GEMS_CT_CARDIAC_001"
+    },
+    4109: {
+      "tag": 0
+      x0x0045100d,
+      "vr": VR
+      .
+      SS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Z tracking Flag",
+      "creator": "GEMS_HELIOS_01"
+    },
+    4110: {
+      "tag": 0
+      x0x0045100e,
+      "vr": VR
+      .
+      FL,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "Mean Z error",
+      "creator": "GEMS_HELIOS_01"
+    },
+    4130: {
+      "tag": 0
+      x0x00491022,
+      "vr": VR
+      .
+      CS,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "TemporalAlg",
+      "creator": "GEMS_CT_CARDIAC_001"
+    },
+    4146: {
+      "tag": 0
+      x0x00451032,
+      "vr": VR
+      .
+      FL,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "TemporalResolution",
+      "creator": "GEMS_HELIOS_01"
+    },
+    4147: {
+      "tag": 0
+      x0x00451033,
+      "vr": VR
+      .
+      CS,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "PctRpeakDelay",
+      "creator": "GEMS_HELIOS_01"
+    },
+    4152: {
+      "tag": 0
+      x0x00431038,
+      "vr": VR
+      .
+      SH,
+      "vm": VM
+      .
+      k1,
+      "action": "Remove",
+      "description": "Raw data ID",
+      "creator": "GE_YMS_NJ001"
+    },
+    4155: {
+      "tag": 0
+      x0x0045103b,
+      "vr": VR
+      .
+      LO,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "Noise ReductionImageFilterDesc",
+      "creator": "GEMS_HELIOS_01"
+    },
+    4159: {
+      "tag": 0
+      x0x0045103f,
+      "vr": VR
+      .
+      IS,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "RPeakTimeDelay",
+      "creator": "GEMS_HELIOS_01"
+    },
+    4215: {
+      "tag": 0
+      x0x00531077,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "MultiEnergyWeightedSubractionWidth2",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4216: {
+      "tag": 0
+      x0x00531078,
+      "vr": VR
+      .
+      LO,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "MultiEnergyWeightedSubtractionType",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4217: {
+      "tag": 0
+      x0x00531079,
+      "vr": VR
+      .
+      LO,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "MultiEnergyAcqMethod",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4218: {
+      "tag": 0
+      x0x0053107a,
+      "vr": VR
+      .
+      SH,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "MultiEnergyFeatAnnotName",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4219: {
+      "tag": 0
+      x0x0053107b,
+      "vr": VR
+      .
+      SH,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "MultiEnergyNoiseReduced",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4220: {
+      "tag": 0
+      x0x0053107c,
+      "vr": VR
+      .
+      LO,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "MultiEnergyNoiseReducdeMethod",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4222: {
+      "tag": 0
+      x0x0053107e,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "MultiEnergyHighLowRatio",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4227: {
+      "tag": 0
+      x0x00531083,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "AnnotationmA",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4228: {
+      "tag": 0
+      x0x00531084,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "CommandedFirstkVp",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4229: {
+      "tag": 0
+      x0x00531085,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "CommandedFirstmA",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4230: {
+      "tag": 0
+      x0x00531086,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "CommandedSecondkVp",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4231: {
+      "tag": 0
+      x0x00531087,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "CommandedSecondmA",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4232: {
+      "tag": 0
+      x0x00531088,
+      "vr": VR
+      .
+      SH,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "MultiEnergyKVAnnotName",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4233: {
+      "tag": 0
+      x0x00531089,
+      "vr": VR
+      .
+      SH,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "MultiEnergyKVUnitLabel",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4234: {
+      "tag": 0
+      x0x0053108a,
+      "vr": VR
+      .
+      LO,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "MaterialType#1",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4235: {
+      "tag": 0
+      x0x0053108b,
+      "vr": VR
+      .
+      LO,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "MaterialType#2",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4236: {
+      "tag": 0
+      x0x0053108c,
+      "vr": VR
+      .
+      LO,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "GSIScanModePreset",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4237: {
+      "tag": 0
+      x0x0053108d,
+      "vr": VR
+      .
+      IS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "MonoWindowLow",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4238: {
+      "tag": 0
+      x0x0053108e,
+      "vr": VR
+      .
+      IS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "MonoWindoHigh",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4239: {
+      "tag": 0
+      x0x0053108f,
+      "vr": VR
+      .
+      FL,
+      "vm": null,
+      "action": "Keep????",
+      "description": "MD1AttenuationCurve",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4246: {
+      "tag": 0
+      x0x00531096,
+      "vr": VR
+      .
+      OW,
+      "vm": VM
+      .
+      k1,
+      "action": "Remove",
+      "description": "MD2supportData",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4247: {
+      "tag": 0
+      x0x00531097,
+      "vr": VR
+      .
+      OW,
+      "vm": VM
+      .
+      k1,
+      "action": "Remove",
+      "description": "NM1data",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4248: {
+      "tag": 0
+      x0x00531098,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "MD2intercept",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4249: {
+      "tag": 0
+      x0x00531099,
+      "vr": VR
+      .
+      DS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "MD2slope",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4250: {
+      "tag": 0
+      x0x0053109a,
+      "vr": VR
+      .
+      OW,
+      "vm": VM
+      .
+      k1,
+      "action": "Remove",
+      "description": "NM2data",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4251: {
+      "tag": 0
+      x0x0053109b,
+      "vr": VR
+      .
+      FL,
+      "vm": null,
+      "action": "Keep????",
+      "description": "MD2attenuationCurve",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4252: {
+      "tag": 0
+      x0x0053109c,
+      "vr": VR
+      .
+      SH,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "GSIdataVersion",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4253: {
+      "tag": 0
+      x0x0053109d,
+      "vr": VR
+      .
+      LO,
+      "vm": VM
+      .
+      k1,
+      "action": "Replace",
+      "description": "MARsAnnotation",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4254: {
+      "tag": 0
+      x0x0053109e,
+      "vr": VR
+      .
+      IS,
+      "vm": VM
+      .
+      k1,
+      "action": "Keep????",
+      "description": "MultiEnergyNumNoiseRedPair",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+    4255: {
+      "tag": 0
+      x0x0053109f,
+      "vr": VR
+      .
+      LO,
+      "vm": null,
+      "action": "Replace",
+      "description": "MultiEnergyNoiseRedPairString",
+      "creator": "GEHC_CT_ADVAPP_001"
+    },
+  }
+}
+
