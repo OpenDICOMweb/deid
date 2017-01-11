@@ -6,13 +6,14 @@ description: DICOM De-Identification library
 homepage: https://github.com/OpenDICOMweb/deid
 
 dependencies:
-  encode:
-    path: C:/odw/sdk/convert
   core:
     path: C:/odw/sdk/core
-    version: 0.4.1
+    version: 0.4.4
+  encode:
+    path: C:/odw/sdk/convert
   io:
     path: C:/odw/sdk/io
+    version: ^
     version: 0.1.1
   path: '>= 1.3.9'
 
