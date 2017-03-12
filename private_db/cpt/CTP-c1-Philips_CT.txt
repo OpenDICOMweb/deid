@@ -1,0 +1,8 @@
+ <!-- CTP processing instructions for private elements found in Philips CT devices       -->
+ <!-- Mallinckrodt Institute of Radiology                                             -->
+ <!-- Revision History:                                                               -->
+ <!--   5/6/2013  Steve Moore       Original                                          --> 
+ <!--   7/12/2013  Dave Maffitt		Added Dose Length Product from Brilliance Workspace V2 DCS                                          -->
+
+
+<e en="T" t="00E1[ELSCINT1]21" n="Dose Length Product">                   @keep()</e>

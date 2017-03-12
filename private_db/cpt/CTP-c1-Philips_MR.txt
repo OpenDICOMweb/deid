@@ -1,0 +1,59 @@
+ <!-- CTP processing instructions for private elements found in Philips MR devices       -->
+ <!-- Mallinckrodt Institute of Radiology                                             -->
+ <!-- Revision History:                                                               -->
+ <!--   5/8/2013  Steve Moore       Original                                          -->
+
+ <e en="T" t="2001[Philips Imaging DD 001]01" n="Chemical Shift"> @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]02" n="Chemical Shift Number MR">         @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]03" n="Diffusion B-Factor">               @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]04" n="Diffusion Direction">              @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]06" n="Image Enhanced">                   @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]07" n="Image Type ED ES">                 @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]08" n="Phase Number">                     @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]09" n="Image Prepulse Delay">             @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]0a" n="Slice Number MR">                  @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]0b" n="Slice Orientation">                @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]0c" n="Arrhythmia Rejection">             @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]0e" n="Cardiac Cycled">                   @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]0f" n="Cardiac Gate Width">               @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]10" n="Cardiac Sync">                     @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]11" n="Diffusion Echo Time">              @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]12" n="Dynamic Series">                   @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]13" n="EPI Factor">                       @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]14" n="Number of Echoes">                 @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]15" n="Number of Locations">              @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]16" n="Number of PC Directions">          @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]17" n="Number of Phases MR">              @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]18" n="Number of Slices MR">              @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]19" n="Partial Matrix Scanned">           @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]1a" n="PC Velocity">                      @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]1b" n="Prepulse Delay">                   @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]1c" n="Prepulse Type">                    @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]1d" n="Reconstruction Number MR">         @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]1f" n="Respiration Sync">                 @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]20" n="Scanning Technique">               @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]21" n="SPIR">                             @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]22" n="Water Fat Shift">                  @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]23" n="Flip Angle Philips">               @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]24" n="Series is Interactive">            @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]25" n="Echo Time Display">                @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]2D" n="Stack Number of Slices">                @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]32" n="Stack Radial Angle">                @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]33" n="Stack Radial Axis">                @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]35" n="Stack Slice Number">                @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]36" n="Stack Type">                @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]58" n="Constrast Transfer Taste">         @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]5F" n="Stack Sequence">         @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]60" n="Number of Stacks">                 @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]61" n="Series Transmitted">               @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]7b" n="Acquisition Number">               @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]81" n="Number of Dynamic Scans">          @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]a1" n="Israwimage">                       @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]f1" n="Prospective Motion Correction">    @keep() </e>
+ <e en="T" t="2001[Philips Imaging DD 001]f2" n="Retrospective Motion Correction">  @keep() </e>
+
+ <e en="T" t="2005[Philips MR Imaging DD 001]20" n="Number of Chemical Shift">      @keep() </e>
+ <e en="T" t="2005[Philips MR Imaging DD 001]a1" n="Syncra Scan Type">              @keep() </e>
+ <e en="T" t="2005[Philips MR Imaging DD 001]b0" n="Diffusion Direction RL">        @keep() </e>
+ <e en="T" t="2005[Philips MR Imaging DD 001]b1" n="Diffusion Direction AP">        @keep() </e>
+ <e en="T" t="2005[Philips MR Imaging DD 001]b2" n="Diffusion Direction FH">        @keep() </e>

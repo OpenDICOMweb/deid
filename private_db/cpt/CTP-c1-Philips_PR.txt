@@ -1,0 +1,8 @@
+ <!-- CTP processing instructions for removal of private elements from -->
+ <!-- Philips PR objects.                                              -->
+ <!-- Mallinckrodt Institute of Radiology  -->
+ <!-- Revision History:                                                -->
+ <!--   11/20/2014  Dave Maffitt       Original                        -->
+
+ <!-- 2014.11.20 There are no documented private elements for PR objects,  -->
+ <!--            so remove all.  Therefore, this file is empty on purpose. --> 

@@ -1,0 +1,150 @@
+<!-- CTP processing instructions for private elements found in Siemens NM devices  -->
+<!-- Mallinckrodt Institute of Radiology                                             -->
+<!-- Revision History:                                                               -->
+<!--   4/2/2014  Dave Maffitt       Original                                          -->
+ 
+<e en="T" t="0019[Siemens MED NM]0F" n= "Siemens ICON Data Type" >@keep()</e>
+<e en="T" t="0019[Siemens MED NM]A5" n= "Number of repeats per phase" >@keep()</e>
+<e en="T" t="0019[Siemens MED NM]A6" n= "Cycles per repeat" >@keep()</e>
+<e en="T" t="0019[Siemens MED NM]A7" n= "Repeat start time" >@keep()</e>
+<e en="T" t="0019[Siemens MED NM]A8" n= "Repeat stop time" >@keep()</e>
+<e en="T" t="0019[Siemens MED NM]A9" n= "Effective repeat time" >@keep()</e>
+<e en="T" t="0019[Siemens MED NM]AA" n= "Acquired cycles per repeat" >@keep()</e>
+
+<e en="T" t="0029[SIEMENS MEDCOM HEADER]08" n= "MedCom Header Type" >@keep()</e>
+<e en="T" t="0029[SIEMENS MEDCOM HEADER]09" n= "MedCom Header Version" >@keep()</e>
+<e en="T" t="0029[SIEMENS MEDCOM HEADER]31" n= "PMTF Information 1" >@keep()</e>
+<e en="T" t="0029[SIEMENS MEDCOM HEADER]32" n= "PMTF Information 2" >@keep()</e>
+<e en="T" t="0029[SIEMENS MEDCOM HEADER]33" n= "PMTF Information 3" >@keep()</e>
+<e en="T" t="0029[SIEMENS MEDCOM HEADER]34" n= "PMTF Information 4" >@keep()</e>
+<e en="T" t="0029[SIEMENS MEDCOM HEADER]35" n= "PMTF Information 5" >@keep()</e>
+
+<e en="T" t="0033[SIEMENS MED NM]00" n= "Flood correction matrix Detector 1 ( n=row s x cols) E.Soft vers upto SR2.0" >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]01" n= "Flood correction Matrix Det 2 upto SR 2.0" >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]10" n= "COR Data for detector 1 ( n = 128)" >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]11" n= "COR Data for detector 2 ( n = 128)" >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]14" n= "MHR ( Y-Shift) data for detector 1 " >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]15" n= "MHR ( Y-Shift) data for detector 2" >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]18" n= "NCO Data for detector 1 (n = number of view s)" >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]19" n= "NCO Data 2 " >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]20" n= "Bed correction angle" >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]21" n= "Gantry correction angle" >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]22" n= "Bed U/D correction data (n=number of view s)" >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]23" n= "Gantry L/R Correction Data" >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]24" n= "BackProjection Correction angle head 1" >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]25" n= "BackProjection Correction angle head 2" >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]28" n= "Number of point sources used for NCO and MHR" >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]29" n= "Crystal thickness" >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]30" n= "Preset name used for acquisiton" >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]31" n= "Camera Config Angle" >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]32" n= "Crystal type Startburst or not" >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]33" n= "Gantry step for COIN acquisitions " >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]34" n= "Bed step for wholebody or Coin acquisitions" >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]35" n= "Weight factor table for coincidence acquisitions" >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]36" n= "Transaxial acceptance width for coincidence" >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]37" n= "Starburst flags at image acq time" >@keep()</e>
+<e en="T" t="0033[SIEMENS MED NM]38" n= "Pixel Scale factor" >@keep()</e>
+
+<e en="T" t="0035[SIEMENS MED NM]00" n= "Specialized tomo type" >@keep()</e>
+<e en="T" t="0035[SIEMENS MED NM]01" n= "Energy window type" >@keep()</e>
+<e en="T" t="0035[SIEMENS MED NM]02" n= "Start and end row illuminated by wind position" >@keep()</e>
+<e en="T" t="0035[SIEMENS MED NM]03" n= "Blank scan image for profile " >@keep()</e>
+<e en="T" t="0035[SIEMENS MED NM]04" n= "Repeat number of the original dynamic SPECT " >@keep()</e>
+<e en="T" t="0035[SIEMENS MED NM]05" n= "Phase number of the original dynamic SPECT " >@keep()</e>
+<e en="T" t="0035[SIEMENS MED NM]06" n= "Siemens Profile 2 Image Sub type" >@keep()</e>
+
+<e en="T" t="0039[SIEMENS MED NM]00" n= "Toshiba CBF activity results " >@keep()</e>
+<e en="T" t="0039[SIEMENS MED NM]01" n= "Related CT Series Instance UID " >@hashuid(@UIDROOT,this)</e>
+
+<e en="T" t="0041[SIEMENS MED NM]01" n= "Whole Body Tomo Position Index" >@keep()</e>
+<e en="T" t="0041[SIEMENS MED NM]02" n= "Whole Body Tomo Number of Positions" >@keep()</e>
+<e en="T" t="0041[SIEMENS MED NM]03" n= "Horizontal Table Position of CT scan" >@keep()</e>
+<e en="T" t="0041[SIEMENS MED NM]04" n= "Effective Energy fo CT Scan" >@keep()</e>
+<e en="T" t="0041[SIEMENS MED NM]05" n= "Long Linear Drive Information for Detector 1 " >@keep()</e>
+<e en="T" t="0041[SIEMENS MED NM]06" n= "Long Linear Drive Information for Detector 2" >@keep()</e>
+<e en="T" t="0041[SIEMENS MED NM]07" n= "Trunnion Information for Detector 1" >@keep()</e>
+<e en="T" t="0041[SIEMENS MED NM]08" n= "Trunnion Information for Detector 2" >@keep()</e>
+<e en="T" t="0041[SIEMENS MED NM]09" n= "Broad Beam Factor" >@keep()</e>
+<e en="T" t="0041[SIEMENS MED NM]0a" n= "Original Wholebody Position " >@keep()</e>
+<e en="T" t="0041[SIEMENS MED NM]0b" n= "Wholebody Scan Range" >@keep()</e>
+<e en="T" t="0041[SIEMENS MED NM]10" n= "Effective Emission Energy " >@keep()</e>
+<e en="T" t="0041[SIEMENS MED NM]11" n= "Gated Frame Duration" >@keep()</e>
+
+<e en="T" t="0043[SIEMENS MED NM]01" n= "Detector View Angle" >@keep()</e>
+<e en="T" t="0043[SIEMENS MED NM]02" n= "Transformation Matrix" >@keep()</e>
+<e en="T" t="0043[SIEMENS MED NM]03" n= "View Dependent Y shift MHR for Detector 1" >@keep()</e>
+<e en="T" t="0043[SIEMENS MED NM]04" n= "View Dependent Y shift MHR for Detector 2 " >@keep()</e>
+<e en="T" t="0043[SIEMENS MED NM]10" n= "Siemens Private Creator ID" >@keep()</e>
+<e en="T" t="0043[SIEMENS MED NM]01" n= "Planar Processing String" >@keep()</e>
+<e en="T" t="0043[SIEMENS MED NM]10" n= "Siemens Private Creator ID" >@keep()</e>
+<e en="T" t="0043[SIEMENS MED NM]04" n= "Prompt window width" >@keep()</e>
+<e en="T" t="0055[SIEMENS MED NM]05" n= "Random window width" >@keep()</e>
+<e en="T" t="0055[SIEMENS MED NM]7E" n= "Collimator thickness" >@keep()</e>
+<e en="T" t="0055[SIEMENS MED NM]7F" n= "Collimator angular resolution " >@keep()</e>
+<e en="T" t="0055[SIEMENS MED NM]C0" n= "Useful Field of View" >@keep()</e>
+
+<e en="T" t="0057[SIEMENS MED NM]01" n= "syngo MI DICOM original image type" >@keep()</e>
+<e en="T" t="0057[SIEMENS MED NM]02" n= "Dose calibration factor" >@keep()</e>
+<e en="T" t="0057[SIEMENS MED NM]03" n= "Units" >@keep()</e>
+<e en="T" t="0057[SIEMENS MED NM]04" n= "Decay correction" >@keep()</e>
+<e en="T" t="0057[SIEMENS MED NM]05" n= "Radio nuclide half life" >@keep()</e>
+<e en="T" t="0057[SIEMENS MED NM]06" n= "Rescale intercept " >@keep()</e>
+<e en="T" t="0057[SIEMENS MED NM]07" n= "Rescale Slope" >@keep()</e>
+<e en="T" t="0057[SIEMENS MED NM]08" n= "Frame reference time" >@keep()</e>
+<e en="T" t="0057[SIEMENS MED NM]09" n= "Number of Radiopharmaceutical information seq" >@keep()</e>
+<e en="T" t="0057[SIEMENS MED NM]0A" n= "Decay factor" >@keep()</e>
+<e en="T" t="0057[SIEMENS MED NM]0B" n= "Counts source" >@keep()</e>
+<e en="T" t="0057[SIEMENS MED NM]0C" n= "Radio Nuclide positron fraction" >@keep()</e>
+<e en="T" t="0057[SIEMENS MED NM]0E" n= "Trigger Time of CT Slice" >@keep()</e>
+
+<e en="T" t="0061[SIEMENS MED NM]01" n= "X Principal Ray Offset " >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]05" n= "Y Principal Ray Offset" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]09" n= "X Principal Ray Angle" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]0A" n= "Y Principal Ray Angle" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]0B" n= "X Short Focal Length " >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]0C" n= "Y Short Focal Length" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]0D" n= "X Long Focal Length " >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]0E" n= "Y Long Focal Length" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]0F" n= "X Focal Scaling " >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]10" n= "Y Focal Scaling" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]11" n= "X Motion Correction Shift " >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]15" n= "Y Motion Correction Shift " >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]19" n= "X Heart Center" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]1A" n= "Y Heart Center" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]1B" n= "Z Heart Center" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]1C" n= "Image Pixel Content Type" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]1D" n= "Auto Save Corrected Series " >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]1E" n= "Distorted Series Instance UID " >@hashuid(@UIDROOT,this)</e>
+<e en="T" t="0061[SIEMENS MED NM]21" n= "Recon Range" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]22" n= "Recon Orientation" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]23" n= "Recon Selected Angular Range" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]24" n= "Recon Transverse Angle" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]25" n= "Recon Sagittal Angle" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]26" n= "Recon X Mask Size" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]27" n= "Recon Y Mask Size" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]28" n= "Recon X Image Center" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]29" n= "Recon Y Image Center" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]2A" n= "Recon Z Image Center" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]2B" n= "Recon X Zoom" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]2C" n= "Recon Y Zoom " >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]2D" n= "Recon Threshold" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]2E" n= "Recon Output Pixel Size" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]2F" n= "Scatter Estimation Method" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]30" n= "Scatter Estimation Method Mode " >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]31" n= "Scatter Estimation Lower Window Weights " >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]32" n= "Scatter Estimation Upper Window Weights" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]33" n= "Scatter Estimation Window Mode" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]34" n= "Scatter Estimation Filter" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]35" n= "Recon RawTomo Input Uid " >@hashuid(@UIDROOT,this)</e>
+<e en="T" t="0061[SIEMENS MED NM]36" n= "Recon CT Input Uid " >@hashuid(@UIDROOT,this)</e>
+<e en="T" t="0061[SIEMENS MED NM]37" n= "Recon Z Mask Size" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]38" n= "Recon X Mask Center" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]39" n= "Recon Y Mask Center" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]3A" n= "Recon Z Mask Center" >@keep()</e>
+<e en="T" t="0061[SIEMENS MED NM]51" n= "Raw Tomo Series UID " >@hashuid(@UIDROOT,this)</e>
+<e en="T" t="0061[SIEMENS MED NM]52" n= "LowRes CT Series UID" >@hashuid(@UIDROOT,this)</e>
+<e en="T" t="0061[SIEMENS MED NM]53" n= "HighRes CT Series UID" >@hashuid(@UIDROOT,this)</e>
+
+<e en="T" t="7FE3[SIEMENS MED NM]14" n= "Minimum pixel in frame" >@keep()</e>
+<e en="T" t="7FE3[SIEMENS MED NM]15" n= "Maximum pixel in frame" >@keep()</e>
+<e en="T" t="7FE3[SIEMENS MED NM]29" n= "Number of R-Waves in frame " >@keep()</e>

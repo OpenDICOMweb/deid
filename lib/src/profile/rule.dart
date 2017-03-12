@@ -6,8 +6,6 @@
 
 import 'dart:convert';
 
-import 'package:core/base.dart';
-
 const List<String> ruleNames = const [
   "@add",
   "@always",
@@ -64,7 +62,7 @@ class Rule {
   Rule(this.index, int target, this.keyword)
       : targetTag = Tag.lookup(target) {
     if ((targetTag == null) ||
-        ((keyword != null) && (keyword != targetTag.keyword)))
+        ((keyword != null) && (keyword != targetTag.id)))
       throw 'Invalid targetTag($target) or keyword($keyword)';
   }
 

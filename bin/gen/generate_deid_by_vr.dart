@@ -58,7 +58,7 @@ String toJson(List vrs, List<List<DED>> vrElements) {
     List<String> elts = [];
     vrElements[i].forEach((DED e) {
       if (e != null)
-        elts.add('"${hex(e.code)}": "${e.keyword}"');
+        elts.add('"${hex(e.code)}": "${e.id}"');
     });
     String map = '{\n${elts.join(',\n')}\n}';
     vrList.add('"${vrs[i].name}": $map');

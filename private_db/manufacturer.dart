@@ -4,6 +4,7 @@
 // Original author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
+
 /// The names of [Manufacturer]s of DICOM equipment. Used to identify [PrivateGroup]s.
 class Manufacturer {
   /// An integer identifier for the manufacturer.
@@ -15,9 +16,9 @@ class Manufacturer {
   /// The full name of the Manufacturer.
   final String name;
 
-  final List<Creator> creators;
+  final List<String> creatorIDs;
 
-  const Manufacturer(this.index, this.id, this.name, this.creators);
+  const Manufacturer(this.index, this.id, this.name, [this.creatorIDs]);
 
   Manufacturer operator [](int index) => _list[index];
 

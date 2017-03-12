@@ -1,0 +1,30 @@
+ <!-- CTP processing instructions for private elements found in Varain RT ojects  -->
+ <!-- Mallinckrodt Institute of Radiology                                             -->
+ <!-- Revision History:                                                               -->
+ <!--   6/25/2015  Dave Maffitt       Original                                        -->
+
+ <!-- The DCS does not document what the Pvt Block names are and just assumes the blocks -->
+ <!-- are at 10xx.  This will have to be edited before this is useful. -->
+ 
+ <e en="T" t="3253[PVT Block Name]00" n="Extended Interface Data">           @keep()</e>
+ <e en="T" t="3253[PVT Block Name]01" n="Extended Interface Length">         @keep()</e>
+ <e en="T" t="3253[PVT Block Name]02" n="Extended Interface Format">         @keep()</e>
+
+ <e en="T" t="3243[PVT Block Name]09" n="Beam Secondary Name">               @keep()</e>
+
+ <e en="T" t="3249[PVT Block Name]00" n="Maximum Treatment Time">            @keep()</e>
+
+ <e en="T" t="3251[PVT Block Name]00" n="Treanment Machine Note">            @remove()</e>
+
+ <e en="T" t="3261[PVT Block Name]2A" n="Treatment Session Beam Data">       @keep()</e>
+
+ <e en="T" t="3243[PVT Block Name]28" n="Related Referenced Beam Number">    @keep()</e>
+
+ <e en="T" t="3259[PVT Block Name]00" n="Additional Dose Value Sequence">    @keep()</e>
+ <e en="T" t="3259[PVT Block Name]02" n="Actual Session Dose">               @keep()</e>
+ <e en="T" t="3259[PVT Block Name]04" n="Daily Dose">                        @keep()</e>
+ <e en="T" t="3259[PVT Block Name]06" n="Lifetime Total Dose">               @keep()</e>
+
+ <e en="T" t="3265[PVT Block Name]00" n="Total Number of Fractions">         @keep()</e>
+ <e en="T" t="3265[PVT Block Name]01" n="Last Treated Fraction">             @keep()</e>
+ <e en="T" t="3259[PVT Block Name]04" n="Daily Dose">                        @keep()</e>

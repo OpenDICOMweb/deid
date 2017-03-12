@@ -1,0 +1,19 @@
+ <!-- CTP processing instructions for private elements found in Siemens MR devices  -->
+ <!-- Mallinckrodt Institute of Radiology                                             -->
+ <!-- Revision History:                                                               -->
+ <!--   5/6/2013  Steve Moore       Original                                          -->
+
+ <e en="T" t="0019[SIEMENS MR HEADER]0C" n="Diffusion b-value of this particular image">           @keep()</e>
+ <e en="T" t="0019[SIEMENS MR HEADER]0D" n="Diffusion directionality of this particular image">    @keep()</e>
+ <e en="T" t="0019[SIEMENS MR HEADER]0E" n="Diffusion gradient vector of this particular image">   @keep()</e>
+ <e en="T" t="0019[SIEMENS MR HEADER]27" n="Diffusion b-matrix encoding of this particular image"> @keep()</e>
+
+ <!-- These are common across the Syngo platform. You will also find these in Siemens CT -->
+ 
+ <e en="T" t="0029[SIEMENS MEDCOM HEADER]08" n="MedCom Header Type">           @keep()</e>
+ <e en="T" t="0029[SIEMENS MEDCOM HEADER]09" n="MedCom Header Version">        @keep()</e>
+ <e en="T" t="0029[SIEMENS MEDCOM HEADER]31" n="PMTF Information 1">           @keep()</e>
+ <e en="T" t="0029[SIEMENS MEDCOM HEADER]32" n="PMTF Information 2">           @keep()</e>
+ <e en="T" t="0029[SIEMENS MEDCOM HEADER]33" n="PMTF Information 3">           @keep()</e>
+ <e en="T" t="0029[SIEMENS MEDCOM HEADER]34" n="PMTF Information 4">           @keep()</e>
+ <e en="T" t="0029[SIEMENS MEDCOM HEADER]35" n="PMTF Information 5">           @keep()</e>

@@ -1,0 +1,9 @@
+ <!-- CTP processing instructions for Hologic MG  -->
+ <!-- Mallinckrodt Institute of Radiology  -->
+ <!-- Revision History:                                                -->
+ <!--   8/13/2013  Dave Maffitt       Original                          -->
+
+ <!-- 2013.08.13 Introduced for Hologic Selenium MG devices.            -->
+ <!--            0011 contains encrypted patient attributes             --> 
+ <!--            0019 contains unspecified imaging characteristics      --> 
+ <!--            empty on purpose because no attributes can be retained --> 

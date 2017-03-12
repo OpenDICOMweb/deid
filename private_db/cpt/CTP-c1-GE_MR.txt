@@ -1,0 +1,291 @@
+ <!-- CTP processing instructions for private elements found in GE MR devices  -->
+ <!-- Mallinckrodt Institute of Radiology                                             -->
+ <!-- Revision History:                                                               -->
+ <!--   5/6/2013  Steve Moore       Original                                          -->
+
+ <e en="T" t="0009[GEMS_IDEN_01]02" n="Suite Id"> @keep() </e>
+ <e en="T" t="0009[GEMS_IDEN_01]04" n="Product Id"> @keep() </e>
+ <e en="T" t="0009[GEMS_IDEN_01]30" n="Sevice Id"> @keep() </e>
+
+ <e en="T" t="0019[GEMS_ACQU_01]0f" n="Horizontal Frame of Ref"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]11" n="Series Contrast">       @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]12" n="Last pseq">             @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]17" n="Series plane">          @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]18" n="First Scan ras">        @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]19" n="First Scan location">   @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]1a" n="Last Scan ras">         @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]1b" n="Last Scan location">    @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]1e" n="Display Field of View"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]5a" n="Acquisition Duration">  @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]7d" n="Second Echo">           @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]7e" n="Number of Echos">       @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]7f" n="Table delta">           @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]81" n="Contiguous">            @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]84" n="Peak SAR">              @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]85" n="Monitor SAR">           @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]87" n="Cardiac Repetition Time"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]88" n="Images per cardiac cycle"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]8a" n="Actual receive gain analog"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]8b" n="Actual receive gain digital"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]8d" n="Delay after trigger">   @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]8f" n="Swappf">                @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]90" n="Pause interval">        @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]91" n="Pause time">            @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]92" n="Slice offset on freq axis"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]93" n="Auto prescan center freq"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]94" n="Auto prescan transmit gain"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]95" n="Auto prescan analog receiver gain"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]96" n="Auto prescan digital receiver gain"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]97" n="Bitmap defining CVs">   @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]98" n="Center freq method">    @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]9b" n="Pulse sequence mode">   @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]9c" n="Pulse sequence name">   @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]9d" n="Pulse sequence date">   @empty()</e>
+ <e en="T" t="0019[GEMS_ACQU_01]9e" n="Internal Pulse sequence name"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]9f" n="Transmitting Coil Type"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]a0" n="Surface Coil Type">     @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]a1" n="Extremity coil flag">   @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]a2" n="Raw data run number">   @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]a3" n="Calibrated field strength"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]a4" n="SAT fat/water/bone">    @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]a5" n="Receive bandwidth">     @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]a7" n="User data 0">           @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]a8" n="User data 1">           @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]a9" n="User data 2">           @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]aa" n="User data 3">           @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]ab" n="User data 4">           @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]ac" n="User data 5">           @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]ad" n="User data 6">           @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]ae" n="User data 7">           @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]af" n="User data 8">           @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]b0" n="User data 9">           @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]b1" n="User data 10">          @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]b2" n="User data 11">          @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]b3" n="User data 12">          @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]b4" n="User data 13">          @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]b5" n="User data 14">          @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]b6" n="User data 15">          @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]b7" n="User data 16">          @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]b8" n="User data 17">          @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]b9" n="User data 18">          @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]ba" n="User data 19">          @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]bb" n="User data 20">          @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]bc" n="User data 21">          @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]bd" n="User data 22">          @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]be" n="Projection angle">      @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]c0" n="Saturation planes">     @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]c1" n="Surface coil intensity"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]c2" n="SAT location R">        @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]c3" n="SAT location L">        @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]c4" n="SAT location A">        @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]c5" n="SAT location P">        @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]c6" n="SAT location H">        @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]c7" n="SAT location F">        @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]c8" n="SAT thickness R/L">     @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]c9" n="SAT thickness A/P">     @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]ca" n="SAT thickness H/F">     @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]cb" n="Phase Contrast flow axis"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]cc" n="Velocity encoding">     @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]cd" n="Thickness disclaimer">  @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]ce" n="Prescan type">          @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]cf" n="Prescan status">        @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]d0" n="Raw data type">         @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]d2" n="Projection Algorithm">  @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]d3" n="Projection Algorithm Name"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]d5" n="Fractional echo">       @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]d6" n="Prep pulse">            @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]d7" n="Cardiac phase number">  @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]d8" n="Variable echoflag">     @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]d9" n="Concatenated SAT">      @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]df" n="User data 23">          @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]e0" n="User data 24">          @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]e2" n="Velocity Encode Scale"> @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]f2" n="Fast phases">           @keep() </e>
+ <e en="T" t="0019[GEMS_ACQU_01]f9" n="Transmit gain">         @keep() </e>
+
+ <e en="T" t="0021[GEMS_RELA_01]03" n="Series from which prescribed"> @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]20" n="Table start location">  @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]35" n="Series from which prescribed"> @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]36" n="Image from which prescribed">  @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]37" n="Screen format">                @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]4f" n="Locations in acquisition">     @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]50" n="Graphically prescribed">       @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]51" n="Rotation from source x rot">   @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]52" n="Rotation from source y rot">   @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]53" n="Rotation from source z rot">   @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]54" n="Image position">               @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]55" n="Image orientation">            @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]56" n="Num 3D slabs">                 @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]57" n="Locs per 3D slabs">            @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]58" n="Overlaps">                     @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]59" n="Image Filtering 0.5/0.2T">     @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]5a" n="Diffusion direction">          @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]5b" n="lhtagfa / Tagging Flip Angle"> @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]5c" n="lhtagor / Tagging Orientation"> @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]5d" n="lhbspti / Tag Spacing">        @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]5e" n="RTIA_timer">                   @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]5f" n="fps">                          @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]81" n="Auto window/level alpha">      @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]82" n="Auto window/level beta">       @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]83" n="Auto window/level window">     @keep() </e>
+ <e en="T" t="0021[GEMS_RELA_01]84" n="Auto window/level level">      @keep() </e>
+
+ <!-- Group 0x0023 information is related to the study; all elements are omitted -->
+
+ <e en="T" t="0025[GEMS_SERS_01]06" n="Last Pulse sequence used">   @keep() </e>
+ <e en="T" t="0025[GEMS_SERS_01]07" n="Images in series">           @keep() </e>
+ <e en="T" t="0025[GEMS_SERS_01]10" n="Landmark counter">           @keep() </e>
+ <e en="T" t="0025[GEMS_SERS_01]11" n="Number of acquisitions">     @keep() </e>
+ <!-- Many elements at the end of this group 0x0025 are omitted -->
+ <!-- 0x0025: 14, 17, 18, 19, 1a, 1b                            -->
+
+ <e en="T" t="0027[GEMS_IMAG_01]10" n="Scout type">                @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]30" n="Foreign Image Revision">    @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]31" n="Imaging Mode">              @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]32" n="Pulse Sequence">            @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]33" n="Imaging Options">           @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]35" n="Plane Type">                @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]36" n="Oblique Plane">             @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]40" n="RAS Letter of Image Location"> @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]41" n="Image Location">            @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]42" n="Center R cood of plane image"> @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]43" n="Center A cood of plane image"> @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]44" n="Center S cood of plane image"> @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]45" n="Normal R coord">               @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]46" n="Normal A coord">               @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]47" n="Normal S coord">               @keep() </e>
+ <e en="T" t="0027[GEMS_IMAG_01]48" n="R coord of top right corner">  @keep()</e>
+ <e en="T" t="0027[GEMS_IMAG_01]49" n="A coord of top right corner">  @keep()</e>
+ <e en="T" t="0027[GEMS_IMAG_01]4a" n="S coord of top right corner">  @keep()</e>
+ <e en="T" t="0027[GEMS_IMAG_01]4b" n="R coord of bottom right corner"> @keep()</e>
+ <e en="T" t="0027[GEMS_IMAG_01]4c" n="A coord of bottom right corner"> @keep()</e>
+ <e en="T" t="0027[GEMS_IMAG_01]4d" n="S coord of bottom right corner"> @keep()</e>
+ <e en="T" t="0027[GEMS_IMAG_01]60" n="Image dimension - X">            @keep()</e>
+ <e en="T" t="0027[GEMS_IMAG_01]61" n="Image dimension - Y">            @keep()</e>
+ <e en="T" t="0027[GEMS_IMAG_01]62" n="Number of Excitations">          @keep()</e>
+
+ <e en="T" t="0029[GEMS_IMPS_01]15" n="Lower Range of Pixels1"> @keep() </e>
+ <e en="T" t="0029[GEMS_IMPS_01]16" n="Upper Range of Pixels1"> @keep() </e>
+ <e en="T" t="0029[GEMS_IMPS_01]17" n="Lower Range of Pixels2"> @keep() </e>
+ <e en="T" t="0029[GEMS_IMPS_01]18" n="Upper Range of Pixels2"> @keep() </e>
+ <e en="T" t="0029[GEMS_IMPS_01]26" n="Version of Header Structure"> @keep() </e>
+ <e en="T" t="0029[GEMS_IMPS_01]34" n="Advantage Comp Overflow"> @keep() </e>
+ <e en="T" t="0029[GEMS_IMPS_01]35" n="Advantage Comp Underflow"> @keep() </e>
+
+ <e en="T" t="0043[GEMS_PARM_01]01" n="Bitmap of Prescan Options"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]02" n="Gradient offset in X">      @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]03" n="Gradient offset in Y">      @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]04" n="Gradient offset in Z">      @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]05" n="Img is original or unoriginal"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]06" n="Number of EPI shots">       @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]07" n="Views per segment">         @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]08" n="Respiratory rate, bpm">     @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]09" n="Respiratory trigger point"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]0a" n="Type of receiver used">     @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]0b" n="dB/dt Peak rate of change of gradient field"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]0c" n="dB/dt Limits in units of percent"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]0d" n="PSD estimated limit">       @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]0e" n="PSD estimated limit in tesla per second"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]0f" n="Saravghead">                @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]10" n="Window value">              @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]1c" n="GE Image Integrity">        @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]1d" n="Level value">               @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]2b" n="Private Scan Options">      @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]2c" n="Effective Echo spacing">    @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]2d" n="Filter Mode (string slop field"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]2e" n="string slop field 2">       @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]2f" n="Image Type (real, imag, phase, mag)"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]30" n="Vas collapse flag">         @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]31" n="RA cord of target recon center">  @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]32" n="Vas flags">                 @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]33" n="Neg scan spacing">          @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]34" n="Offset frequency">          @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]35" n="User usage tag">            @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]36" n="User fill map MSW">         @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]37" n="User fill map LSW">         @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]38" n="User data 25...User data 48 {User48=Effective Resolution for spiral)"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]39" n="slop_int_6; slop_int_9; 6: b_value; 7: private imaging options 2; 8: ihtagging; 9: ihtagspc"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]60" n="Slop_int_10; slop_int_17; 10: ihfcineim; 11: ihfcinent; 12: Reserved; 13: oprtarr; 14: averages; 15: Current Station #; 16: Total # of Stations; 17: private imaging options 3"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]61" n="Scanner Study Entity UID"> @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0043[GEMS_PARM_01]6f" n="Scanner Table Entry (single gradient coil systems only); Scanner table Entry + Gradient Coil Selected 1: table entry, 2: table swing angle, 3: table lateral offset, 4: gradient ">       @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]70" n="Paradigm Name">             @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]71" n="Paradigm Description">      @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]73" n="Experiment Type">           @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]74" n="#rest volumes">             @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]75" n="#active volumes">           @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]76" n="#dummy scans">              @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]77" n="Application Name">          @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]78" n="Application Version">       @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]79" n="Slices Per Volume">         @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]7a" n="Expected Time Points">      @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]7b" n="Regressor Values">          @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]7c" n="Delay after slice group">   @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]7d" n="Recon mode flag word">      @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]7e" n="PACC specific information"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]7f" n="Grad Shim Values">          @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]80" n="Coil ID Name">              @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]81" n="GE Coil Name">              @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]82" n="System Configuration Info"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]83" n="Asset R Factors">           @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]84" n="Additional Asset data">     @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]87" n="Software Versions Long">    @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]88" n="PURE Acquistion Calibration Series UID"> @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0043[GEMS_PARM_01]89" n="Governing body, dB/dt, and SAR defintion"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]8a" n="Private In-plane Phase Encoding Direction"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]8c" n="Voxel Location">            @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]8d" n="SAT Band Locations">        @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]8e" n="Spectro Prescan Values">    @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]8f" n="Spectro Parameters">        @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]90" n="SAR Definition">            @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]91" n="SAR Value">                 @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]93" n="Spectro Quantitation Values"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]94" n="Spectro Ratio Values">      @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]95" n="Prescan Reuse String">      @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]96" n="Content Qualification">     @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]97" n="Image Filtering Params">    @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]98" n="ASSET Acquisition Calibration Series UID"> @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0043[GEMS_PARM_01]99" n="Extended Options">          @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]9a" n="Rx Stack Indication">       @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]9b" n="NPW factor">                @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]a2" n="MEG Data">                  @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]a3" n="ASL Contrast technique">    @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]a4" n="Detailed text for ASL labeling technique"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]a5" n="Duration of the label or control pulse"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]a6" n="Offset frequency value for FastB1map"> @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]a7" n="Motion Encoding Factor">   @keep() </e>
+ <e en="T" t="0043[GEMS_PARM_01]a8" n="Dual Drive Mode, Amplitude Attentuation and Phase Offset"> @keep() </e>
+
+ <e en="T" t="2001[BrainWave: 1.2.840.113819.3]10" n="DICOM Implementation UID"> @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="2001[BrainWave: 1.2.840.113819.3]11" n="DICOM Implementation Version">        @keep() </e>
+ <e en="T" t="2001[BrainWave: 1.2.840.113819.3]12" n="Within-DICOM-Implementation SOP Instance UID"> @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="2001[BrainWave: 1.2.840.113819.3]13" n="Application Name">        @keep() </e>
+ <e en="T" t="2001[BrainWave: 1.2.840.113819.3]14" n="Application Version">     @keep() </e>
+ <e en="T" t="2001[BrainWave: 1.2.840.113819.3]15" n="Compatibility Version">   @keep() </e>
+ <e en="T" t="2001[BrainWave: 1.2.840.113819.3]31" n="Number of Objects Averaged">     @keep() </e>
+ <e en="T" t="2001[BrainWave: 1.2.840.113819.3]41" n="Number of Expected Time Points"> @keep() </e>
+ <e en="T" t="2001[BrainWave: 1.2.840.113819.3]51" n="Number of Slices Per Volume">    @keep() </e>
+ <e en="T" t="2001[BrainWave: 1.2.840.113819.3]60" n="BW Image Type">          @keep() </e>
+ <e en="T" t="2001[BrainWave: 1.2.840.113819.3]61" n="Experiment Type">        @keep() </e>
+ <e en="T" t="2001[BrainWave: 1.2.840.113819.3]71" n="Paradigm UID"> @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="2001[BrainWave: 1.2.840.113819.3]72" n="Paradigm Name">          @keep() </e>
+ <e en="T" t="2001[BrainWave: 1.2.840.113819.3]73" n="Paradigm Description">   @keep() </e>
+ <e en="T" t="2001[BrainWave: 1.2.840.113819.3]81" n="Regressor Values">       @keep() </e>
+ <e en="T" t="2001[BrainWave: 1.2.840.113819.3]86" n="Number of Degrees of Freedom">   @keep() </e>
+ <e en="T" t="2001[BrainWave: 1.2.840.113819.3]8a" n="Z Threshold">            @keep() </e>
+ <e en="T" t="2001[BrainWave: 1.2.840.113819.3]8b" n="p Threshold">            @keep() </e>
+ <e en="T" t="2001[BrainWave: 1.2.840.113819.3]a0" n="Motion Parameters">      @keep() </e>
+ <e en="T" t="2001[BrainWave: 1.2.840.113819.3]a1" n="Registration Parameters"> @keep() </e>
+ <e en="T" t="2001[BrainWave: 1.2.840.113819.3]a2" n="Subject Data">           @keep() </e>
+
+ <e en="T" t="0051[GEMS_FUNCTOOL_01]01" n="Functional Proc group name">        @keep() </e>
+ <e en="T" t="0051[GEMS_FUNCTOOL_01]02" n="Functional Processing name">        @keep() </e>
+ <e en="T" t="0051[GEMS_FUNCTOOL_01]03" n="Bias of Functional image">          @keep() </e>
+ <e en="T" t="0051[GEMS_FUNCTOOL_01]04" n="Scale of Functional image">         @keep() </e>
+ <e en="T" t="0051[GEMS_FUNCTOOL_01]05" n="Length of Parameters String">       @keep() </e>
+ <e en="T" t="0051[GEMS_FUNCTOOL_01]06" n="Store Parameters String">           @keep() </e>
+ <e en="T" t="0051[GEMS_FUNCTOOL_01]07" n="Functional Image version">          @keep() </e>
+ <e en="T" t="0051[GEMS_FUNCTOOL_01]08" n="Store Color ramp">                  @keep() </e>
+ <e en="T" t="0051[GEMS_FUNCTOOL_01]09" n="Store width of functional image">   @keep() </e>
+ <e en="T" t="0051[GEMS_FUNCTOOL_01]0a" n="Store level of functional image">   @keep() </e>
+ <e en="T" t="0051[GEMS_FUNCTOOL_01]0b" n="Store B-Value with functional image"> @keep() </e>
+ <e en="T" t="0051[GEMS_FUNCTOOL_01]0c" n="Analysis Package">                  @keep() </e>

@@ -1,0 +1,36 @@
+ <!-- CTP processing instructions for private elements found in                       -->
+ <!-- Siemens CT and PT devices                                                       -->
+ <!-- Mallinckrodt Institute of Radiology                                             -->
+ <!-- Revision History:                                                               -->
+ <!--   5/6/2013  Steve Moore       Original                                          --> 
+
+ <e en="T" t="0019[SIEMENS CT VA0  COAD]90" n="Osteo offset">                   @keep()</e>
+ <e en="T" t="0019[SIEMENS CT VA0  COAD]92" n="Osteo Regression Line Slope">    @keep()</e>
+ <e en="T" t="0019[SIEMENS CT VA0  COAD]93" n="Osteo Regression Line Intercept">@keep()</e>
+ <e en="T" t="0019[SIEMENS CT VA0  COAD]96" n="Osteo Phantom Number">           @keep()</e>
+ <e en="T" t="0019[SIEMENS CT VA0  COAD]b0" n="Feed per Rotation">              @keep()</e>
+ <e en="T" t="0019[SIEMENS CT VA0  COAD]bd" n="Pulmo Trigger Level">            @keep()</e>
+ <e en="T" t="0019[SIEMENS CT VA0  COAD]be" n="Expiratoric Reserve Volume">     @keep()</e>
+ <e en="T" t="0019[SIEMENS CT VA0  COAD]bf" n="Vital Capacity">                 @keep()</e>
+ <e en="T" t="0019[SIEMENS CT VA0  COAD]c0" n="Pulmo Water">                    @keep()</e>
+ <e en="T" t="0019[SIEMENS CT VA0  COAD]c1" n="Pulmo Air">                      @keep()</e>
+ <e en="T" t="0019[SIEMENS CT VA0  COAD]c2" n="Pulmo Date">                     @incrementdate(this,@DATEINC)</e>
+ <e en="T" t="0019[SIEMENS CT VA0  COAD]c3" n="Pulmo Time">                     @keep()</e>
+
+ <e en="T" t="0021[SIEMENS MED]11" n="Target: Center x/y as entered for reconstruction"> @keep()</e>
+
+ <e en="T" t="0029[SIEMENS MEDCOM HEADER]08" n="MedCom Header Type">           @keep()</e>
+ <e en="T" t="0029[SIEMENS MEDCOM HEADER]09" n="MedCom Header Version">        @keep()</e>
+ <e en="T" t="0029[SIEMENS MEDCOM HEADER]31" n="PMTF Information 1">           @keep()</e>
+ <e en="T" t="0029[SIEMENS MEDCOM HEADER]32" n="PMTF Information 2">           @keep()</e>
+ <e en="T" t="0029[SIEMENS MEDCOM HEADER]33" n="PMTF Information 3">           @keep()</e>
+ <e en="T" t="0029[SIEMENS MEDCOM HEADER]34" n="PMTF Information 4">           @keep()</e>
+ <e en="T" t="0029[SIEMENS MEDCOM HEADER]35" n="PMTF Information 5">           @keep()</e>
+
+ <e en="T" t="0071[SIEMENS MED PT]21" n="Registration Matrix UID">           @keep()</e>
+ <e en="T" t="0071[SIEMENS MED PT]22" n="Decay Correction DateTime">           @incrementdate(this,@DATEINC)</e>
+ <e en="T" t="0071[SIEMENS MED PT WAVEFORM]46" n="Starting Respiratory Amplitude">           @keep()</e>
+ <e en="T" t="0071[SIEMENS MED PT WAVEFORM]47" n="Starting Respiratory Phase">           @keep()</e>
+ <e en="T" t="0071[SIEMENS MED PT WAVEFORM]48" n="Ending Respiratory Amplitude">           @keep()</e>
+ <e en="T" t="0071[SIEMENS MED PT WAVEFORM]49" n="Ending Respiratory Phase">           @keep()</e>
+ <e en="T" t="0071[SIEMENS MED PT WAVEFORM]50" n="Respiratory Trigger Type">           @keep()</e>

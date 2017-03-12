@@ -1,0 +1,318 @@
+ <!-- CTP processing instructions for private elements found in GE PT devices         -->
+ <!-- Mallinckrodt Institute of Radiology                                             -->
+ <!-- Revision History:                                                               -->
+ <!--   5/6/2013  Steve Moore       Original                                          -->
+
+ <e en="T" t="0009[GEMS_PETD_01]01" n="GE Discovery PET Implementation Version Name"> @keep() </e>
+
+ <e en="T" t="0009[GEMS_PETD_01]03" n="PET compatible_version">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]04" n="PET Patient.software_version">  @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]05" n="PET Patient datetime">          @incrementdate(this,@DATEINC) </e>
+ <e en="T" t="0009[GEMS_PETD_01]06" n="PET type">                      @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]07" n="PET exam_id">                   @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]08" n="PET compatible_version">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]09" n="PET software_version">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]0a" n="PET scan_id">                   @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]0b" n="PET compatible_version">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]0c" n="PET software_version">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]0d" n="PET scan datetime">             @incrementdate(this,@DATEINC) </e>
+ <e en="T" t="0009[GEMS_PETD_01]0e" n="PET scan ready">                @incrementdate(this,@DATEINC) </e>
+ <e en="T" t="0009[GEMS_PETD_01]0f" n="PET scan_description">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]11" n="PET scanner_desc">              @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]12" n="PET manufacturer">              @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]13" n="PET for_identifier">            @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]14" n="PET landmark_name">             @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]15" n="PET landmark_apprev">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]16" n="PET patient_position">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]17" n="PET scan_perspective">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]18" n="PET scan_type">                 @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]19" n="PET scan_mode">                 @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]1a" n="PET start_condition">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]1b" n="PET start_cond_data">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]1c" n="PET sel_stop_cond">             @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]1d" n="PET sel_stop_cond_data">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]1e" n="PET collect_deadtime">          @keep() </e>
+
+ <e en="T" t="0009[GEMS_PETD_01]1f" n="PET collect_singles">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]20" n="PET collect_countrate">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]21" n="PET countrate_period">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]22" n="PET delayed_events">            @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]23" n="PET delayed_bias">              @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]24" n="PET word_size">                 @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]25" n="PET axial_acceptance">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]26" n="PET axial_angle_3d">            @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]27" n="PET theta_compression">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]28" n="PET axial_compression">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]29" n="PET gantry_tilt_angle">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]2a" n="PET collimation">               @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]2b" n="PET scan_fov">                  @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]2c" n="PET axial_fov">                 @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]2d" n="PET event_separation">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]2e" n="PET mask_width">                @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]2f" n="PET binning_mode">              @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]30" n="PET trig_rej_method">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]31" n="PET number_for_reject">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]32" n="PET lower_reject_limit">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]33" n="PET upper_reject_limit">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]34" n="PET triggers_acquired">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]35" n="PET triggers_rejected">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]36" n="PET tracer_name">               @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]37" n="PET batch_description">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]38" n="PET tracer_activity">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]39" n="PET meas_datetime">             @incrementdate(this,@DATEINC) </e>
+ <e en="T" t="0009[GEMS_PETD_01]3a" n="PET pre_inj_volume">            @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]3b" n="PET admin_datetime">            @incrementdate(this,@DATEINC) </e>
+ <e en="T" t="0009[GEMS_PETD_01]3c" n="PET post_inj_activity">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]3d" n="PET post_inj_datetime">         @incrementdate(this,@DATEINC) </e>
+ <e en="T" t="0009[GEMS_PETD_01]3e" n="PET radionuclide_name">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]3f" n="PET half_life">                 @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]40" n="PET positron_fraction">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]41" n="PET source1_holder">            @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]42" n="PET source1_activity">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]43" n="PET source1_meas_dt">           @incrementdate(this,@DATEINC) </e>
+ <e en="T" t="0009[GEMS_PETD_01]44" n="PET source1_radnuclide">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]45" n="PET source1_half_life">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]46" n="PET source2_holder">            @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]47" n="PET source2_activity">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]48" n="PET source2_meas_dt">           @incrementdate(this,@DATEINC) </e>
+ <e en="T" t="0009[GEMS_PETD_01]49" n="PET source2_radnuclide">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]4a" n="PET source2_half_life">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]4b" n="PET source_speed">              @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]4c" n="PET source_location">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]4d" n="PET emission_present">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]4e" n="PET lower_axial_acc">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]4f" n="PET upper_axial_acc">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]50" n="PET lower_coinc_limit">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]51" n="PET upper_coinc_limit">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]52" n="PET coinc_delay_offset">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]53" n="PET coinc_output_mode">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]54" n="PET upper_energy_limit">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]55" n="PET lower_energy_limit">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]56" n="PET normal_cal_id">             @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]57" n="PET normal_2d_cal_id">          @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]58" n="PET blank_cal_id">              @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]59" n="PET wc_cal_id">                 @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]5a" n="PET derived">                   @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]5b" n="PET contrast_agent">            @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]5c" n="PET frame_id">                  @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]5d" n="PET scan_id">                   @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]5e" n="PET exam_id">                   @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]60" n="PET compatible_version">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]61" n="PET software_version">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]62" n="PET where_is_frame">            @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]63" n="PET frame_size">                @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]64" n="PET file_exists">               @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]65" n="PET patient_entry">             @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]66" n="PET table_height">              @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]67" n="PET table_z_position">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]68" n="PET landmark_datetime">         @incrementdate(this,@DATEINC) </e>
+ <e en="T" t="0009[GEMS_PETD_01]69" n="PET slice_count">               @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]6a" n="PET start_location">            @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]6b" n="PET acq_delay">                 @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]6c" n="PET acq_start">                 @incrementdate(this,@DATEINC) </e>
+ <e en="T" t="0009[GEMS_PETD_01]6d" n="PET acq_duration">              @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]6e" n="PET acq_bin_dur">               @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]6f" n="PET acq_bin_start">             @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]70" n="PET actual_stop_cond">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]71" n="PET total_prompts">             @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]72" n="PET total_delays">              @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]73" n="PET frame_valid">               @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]74" n="PET validity_info">             @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]75" n="PET archived">                  @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]76" n="PET compression">               @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]77" n="PET uncompressed_size">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]78" n="PET accum_bin_dur">             @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]79" n="PET compatible_version">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]7a" n="PET software_version">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]7b" n="PET is_datetime">               @incrementdate(this,@DATEINC) </e>
+ <e en="T" t="0009[GEMS_PETD_01]7c" n="PET is_source">                 @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]7d" n="PET is_contents">               @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]7e" n="PET is_type">                   @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]7f" n="PET is_reference">              @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]80" n="PET multi_patient">             @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]81" n="PET number_of_normals">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]82" n="PET color_map_id">              @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]83" n="PET window_level_type">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]84" n="PET rotate">                    @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]85" n="PET flip">                      @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]86" n="PET zoom">                      @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]87" n="PET pan_x">                     @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]88" n="PET pan_y">                     @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]89" n="PET window_level_min">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]8a" n="PET window_level_max">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]8b" n="PET recon_method">              @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]8c" n="PET attenuation">               @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]8d" n="PET atten_coefficient">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]8e" n="PET bp_filter">                 @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]8f" n="PET bp_filter_cutoff">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]90" n="PET bp_filter_order">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]91" n="PET bp_center_l">               @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]92" n="PET bp_center_p">               @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]93" n="PET atten_smooth">              @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]94" n="PET atten_smooth_param">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]95" n="PET angle_smooth_param">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]96" n="PET wellcountercal_id">         @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]97" n="PET trans_scan_id">             @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]98" n="PET norm_cal_id">               @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]99" n="PET blnk_cal_id">               @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]9a" n="PET cac_edge_threshold">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]9b" n="PET cac_skull_offset">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]9c" n="PET emiss_sub_id">              @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]9d" n="PET radial_filter_3d">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]9e" n="PET radial_cutoff_3d">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]9f" n="PET axial_filter_3d">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]a0" n="PET axial_cutoff_3d">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]a1" n="PET axial_start">               @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]a2" n="PET axial_spacing">             @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]a3" n="PET axial_angles_used">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]a4" n="PET compatible_version">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]a5" n="PET software_version">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]a6" n="PET slice_number">              @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]a7" n="PET total_counts">              @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]a9" n="PET other_atts_size">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]aa" n="PET archived">                  @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]ab" n="PET bp_center_x">               @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]ac" n="PET bp_center_y">               @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]ad" n="PET trans_frame_id">            @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]ae" n="PET tpulse_frame_id">           @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]b1" n="PET profile_spacing">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]b2" n="PET ir_num_iterations">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]b3" n="PET ir_num_subsets">            @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]b4" n="PET ir_recon_fov">              @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]b5" n="PET ir_corr_model">             @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]b6" n="PET ir_loop_filter">            @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]b7" n="PET ir_pre_filt_parm">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]b8" n="PET ir_loop_filt_parm">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]b9" n="PET response_filt_parm">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]ba" n="PET post_filter">               @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]bb" n="PET post_filt_parm">            @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]bc" n="PET ir_regularize">             @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]bd" n="PET regularize_parm">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]be" n="PET ac_bp_filter">              @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]bf" n="PET ac_bp_filt_cut_off">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]c0" n="PET ac_bp_filt_order">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]c1" n="PET ac_img_smooth">             @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]c2" n="PET ac_img_smooth_parm">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]c3" n="PET scatter_method">            @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]c4" n="PET scatter_num_iter">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]c5" n="PET scatter_parm">              @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]c6" n="PET seg_qc_parm">               @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]c7" n="PET overlap">                   @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]c8" n="PET ovlp_frm_id">               @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]c9" n="PET ovlp_trans_frm_id">         @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]ca" n="PET ovlp_tpulse_frm_id">        @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]cb" n="PET vqc_x_axis_trans">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]cc" n="PET vqc_x_axis_tilt">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]cd" n="PET vqc_y_axis_trans">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]ce" n="PET vqc_y_axis_swivel">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]cf" n="PET vqc_z_axis_trans">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]d0" n="PET vqc_z_axis_roll">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]d1" n="PET ctac_conv_scale">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]d2" n="PET image_set_id">              @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]d3" n="PET constrast_route">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]d4" n="PET ctac_conv_scale">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]d5" n="PET loop_filter_parm">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]d6" n="PET image_one_loc">             @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]d7" n="PET image_index_loc">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]d8" n="PET frame_number">              @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]d9" n="PET list_file_exists">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]da" n="PET where_is_list_frame">       @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]db" n="PET ir_z_filter_flag">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]dc" n="PET ir_z_filter_ratio">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]dd" n="PET num_of_rr_interval">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]de" n="PET num_of_time_slots">         @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]df" n="PET num_of_slices">             @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]e0" n="PET num_of_time_slices">        @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]e1" n="PET unlisted_scan">             @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]e2" n="PET rest_stress">               @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]e3" n="PET phase percentage">          @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]e4" n="Recon Protocol">                @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]e5" n="PET left shift">                @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]e6" n="PET posterior shift">           @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]e7" n="PET superior shift">            @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]e8" n="PET acq_bin_num">               @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]e9" n="PET acq_bin_dur_percent">       @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]ea" n="3D Filter flag">                @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]eb" n="3D Filter cutoff">              @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]ec" n="3D Filter order">               @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]f0" n="Reformat group">                @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0009[GEMS_PETD_01]f1" n="PET prompt gamma">              @keep() </e>
+ <e en="T" t="0009[GEMS_PETD_01]f2" n="PET tracerInjection_UID">       @hashuid(@UIDROOT,this) </e>
+
+ <e en="T" t="0015[GEMS_PETD_01]1a" n="Physio Gating Type">            @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]1b" n="Total Number of Bins">          @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]1c" n="% Phase Value">                 @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]1d" n="Phase Matched Series">          @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]1e" n="CTAC Percent Value">            @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]1f" n="PET Recon Parameters Exists">   @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]20" n="First Packet Number">           @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]21" n="IR Loop Filter Ratio">          @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]22" n="IR Loop Filter Correction">     @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]23" n="BP3d Filter FlagU">             @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]24" n="BP3d Filter CutoffU">           @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]25" n="BP3d Filter OrderU">            @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]26" n="BP3d Filter FlagV">             @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]27" n="BP3d Filter OrderV">            @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]28" n="BP3d Filter CutoffV">           @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]29" n="Decay Flag">                    @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]2e" n="Image filter 3d flag">          @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]2f" n="WCC Cal Flag">                  @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]30" n="Emission Scatter Flag">         @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]31" n="Recon Algorithm">               @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]32" n="Normalization Flag">            @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]33" n="Emission Deadtime Flag">        @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]34" n="Emission Random Flag">          @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]35" n="Blank Scan Flag">               @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]39" n="Event histogram Format">        @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]3a" n="Number of Detector Rows">       @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]3b" n="Number of Detector Columns">    @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]3c" n="Recon Matrix Size">             @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]3d" n="PET Sharp IR Flag">             @keep() </e>
+ <e en="T" t="0015[GEMS_PETD_01]3e" n="PET Scatter Limit">             @keep() </e>
+
+ <e en="T" t="0017[GEMS_PETD_01]01" n="PET correction_cal_id">         @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0017[GEMS_PETD_01]02" n="PET compatible_version">        @keep() </e>
+ <e en="T" t="0017[GEMS_PETD_01]03" n="PET software_version">          @keep() </e>
+ <e en="T" t="0017[GEMS_PETD_01]04" n="PET cal_datetime">              @incrementdate(this,@DATEINC) </e>
+ <e en="T" t="0017[GEMS_PETD_01]05" n="PET cal_description">           @keep() </e>
+ <e en="T" t="0017[GEMS_PETD_01]06" n="PET cal_type">                  @keep() </e>
+ <e en="T" t="0017[GEMS_PETD_01]07" n="PET where_is_corr">             @keep() </e>
+ <e en="T" t="0017[GEMS_PETD_01]08" n="PET corr_file_size">            @keep() </e>
+ <e en="T" t="0017[GEMS_PETD_01]09" n="PET scan_id">                   @keep() </e>
+ <e en="T" t="0017[GEMS_PETD_01]0a" n="PET scan_datetime">             @incrementdate(this,@DATEINC) </e>
+ <e en="T" t="0017[GEMS_PETD_01]0b" n="PET norm_2d_cal_id">            @keep() </e>
+ <e en="T" t="0017[GEMS_PETD_01]0c" n="PET hosp_identifier">           @keep() </e>
+ <e en="T" t="0017[GEMS_PETD_01]0d" n="PET archived">                  @keep() </e>
+
+ <e en="T" t="0019[GEMS_PETD_01]01" n="PET wc_cal_id">                 @hashuid(@UIDROOT,this) </e>
+ <e en="T" t="0019[GEMS_PETD_01]02" n="PET compatible_version">        @keep() </e>
+ <e en="T" t="0019[GEMS_PETD_01]03" n="PET software_version">          @keep() </e>
+ <e en="T" t="0019[GEMS_PETD_01]04" n="PET cal_datetime ">             @incrementdate(this,@DATEINC) </e>
+ <e en="T" t="0019[GEMS_PETD_01]05" n="PET cal_type">                  @keep() </e>
+ <e en="T" t="0019[GEMS_PETD_01]06" n="PET cal_description">           @keep() </e>
+ <e en="T" t="0019[GEMS_PETD_01]07" n="PET cal_hardware">              @keep() </e>
+ <e en="T" t="0019[GEMS_PETD_01]08" n="PET coefficients">              @keep() </e>
+ <e en="T" t="0019[GEMS_PETD_01]09" n="PET activity_factor_hr">        @keep() </e>
+ <e en="T" t="0019[GEMS_PETD_01]0a" n="PET activity_factor_hs">        @keep() </e>
+ <e en="T" t="0019[GEMS_PETD_01]0b" n="PET activity_factor_3d">        @keep() </e>
+ <e en="T" t="0019[GEMS_PETD_01]0c" n="PET scan_id">                   @keep() </e>
+ <e en="T" t="0019[GEMS_PETD_01]0d" n="PET scan_datetime">             @incrementdate(this,@DATEINC) </e>
+ <e en="T" t="0019[GEMS_PETD_01]0e" n="PET hosp_identifier">           @keep() </e>
+ <e en="T" t="0019[GEMS_PETD_01]0f" n="PET meas_activity">             @keep() </e>
+ <e en="T" t="0019[GEMS_PETD_01]10" n="PET meas_datetime">             @incrementdate(this,@DATEINC) </e>
+ <e en="T" t="0019[GEMS_PETD_01]11" n="PET axial_filter_3d">           @keep() </e>
+ <e en="T" t="0019[GEMS_PETD_01]12" n="PET axial_cutoff_3d">           @keep() </e>
+ <e en="T" t="0019[GEMS_PETD_01]13" n="PET default_flag">              @keep() </e>
+ <e en="T" t="0019[GEMS_PETD_01]14" n="PET archived">                  @keep() </e>
+ <e en="T" t="0019[GEMS_PETD_01]15" n="PET wc_cal_rec_method">         @keep() </e>
+ <e en="T" t="0019[GEMS_PETD_01]16" n="PET activity_factor_2d">        @keep() </e>
+ <e en="T" t="0019[GEMS_PETD_01]17" n="PET isotope">                   @keep() </e>
+ <e en="T" t="0019[GEMS_PETD_01]18" n="WCC Image Set ID">              @hashuid(@UIDROOT,this) </e>
+
+ <e en="T" t="0021[GEMS_PETD_01]01" n="PET raw_data_type">             @keep() </e>
+ <e en="T" t="0021[GEMS_PETD_01]02" n="PET raw_data_size">             @keep() </e>
+
+ <e en="T" t="0023[GEMS_PETD_01]02" n="PET raw_data_blob">             @keep() </e>
+
+
+ 

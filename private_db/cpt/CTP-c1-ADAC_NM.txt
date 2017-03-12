@@ -1,0 +1,7 @@
+ <!-- CTP processing instructions for private elements found in ADAC NM devices       -->
+ <!-- Mallinckrodt Institute of Radiology                                             -->
+ <!-- Revision History:                                                               -->
+ <!--   7/25/2013  Dave Maffitt       Original                                          -->
+
+ <!-- 2013.07.25 There are no elements to be retained -->
+ <!--            Therefore, this file is empty on purpose                                --> 
