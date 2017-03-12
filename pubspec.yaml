@@ -5,6 +5,8 @@ author: Jim Philbin <jfphilbin@gmail.com>
 description: DICOM De-Identification library
 homepage: https://github.com/OpenDICOMweb/deid
 
+sdk: ^1.21.0
+
 dependencies:
   core:
     path: C:/odw/sdk/core
