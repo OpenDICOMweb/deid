@@ -10,8 +10,6 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu> -
 // See the AUTHORS file for other contributors.
 
-import 'package:dictionary/dictionary.dart';
-
 import 'gen_utils.dart';
 
 class DeIdTable {
@@ -35,7 +33,7 @@ class DeIdTable {
         print('bad Tag: ${tagToHex(tag)}');
       } else {
         var tag = toHex(e.code);
-        var keyword = e.keyword;
+        var keyword = e.id;
         var vr = 'VR.k${e.vr.name}';
         var vm = e.vm;
         var single = vm.isSingleton;
@@ -59,7 +57,7 @@ class DeIdTable {
         print('bad Tag: ${tagToHex(tag)}');
       } else {
         var tag = toHex(e.code);
-        var keyword = e.keyword;
+        var keyword = e.id;
         kvPairs.add('    $tag: k$keyword');
         keyList.add('    $tag');
         valueList.add('    k$keyword');

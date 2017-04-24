@@ -1,0 +1,10 @@
+ <!-- CTP processing instructions for private elements found in Philips PT or CT devices  -->
+ <!-- Mallinckrodt Institute of Radiology                                             -->
+ <!-- Revision History:                                                               -->
+ <!--   2014/02/19  Dave Maffitt	original                                      -->
+
+
+<e en="T" t="00E1[ELSCINT1]21" n="Dose Length Product">                   @keep()</e>
+
+<e en="T" t="7053[Philips PET Private Group]00" n="SUV Scale Factor">     @keep()</e>
+<e en="T" t="7053[Philips PET Private Group]09" n="Activity Concentration Scale Factor">     @keep()</e>

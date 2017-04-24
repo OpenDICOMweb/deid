@@ -4,8 +4,6 @@
 // Original author: Jim Philbin <jfphilbin@gmail.edu> -
 // See the AUTHORS file for other contributors.
 
-import 'package:core/core.dart';
-
 import 'src/deId_tags.dart';
 import 'src/gen_utils.dart';
 
@@ -25,7 +23,7 @@ void main() {
       print('bad Tag: ${hex(tag)}');
     } else {
       var hexTag = tagToHex(tag);
-      var keyword = e.keyword;
+      var keyword = e.id;
       var vr = e.vr;
       var vm = e.vm;
       var vmVal = getVMValue(vm);

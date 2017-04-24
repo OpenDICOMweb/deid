@@ -1,0 +1,7 @@
+ <!-- CTP processing instructions for removal of all private elements  -->
+ <!-- Mallinckrodt Institute of Radiology  -->
+ <!-- Revision History:                                                -->
+ <!--   8/9/2013  Dave Maffitt       Original                          -->
+
+ <!-- 2013.08.09 Introduced for devices that need signatures but default to -->
+ <!--            remove all.  Therefore, this file is empty on purpose      --> 

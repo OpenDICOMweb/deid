@@ -1,0 +1,58 @@
+ <!-- CTP processing instructions for private elements found in Toshiba CT devices       -->
+ <!-- Mallinckrodt Institute of Radiology                                             -->
+ <!-- Revision History:                                                               -->
+ <!--   7/12/2013  Dave Maffitt		Original                                          -->
+
+
+<e en="T" t="7005[TOSHIBA_MEC_CT3]03" n="Cardiac R-R Mean Time">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]04" n="Cardiac Reconstruction Gating Phase in Percent">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]05" n="Cardiac Reconstruction Gating Phase in ms">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]06" n="Cardiac Reconstruction Mode">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]07" n="Reconstruction Center">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]08" n="Detector Slice Thickness in mm">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]09" n="Number of Detector rows to Reconstruct">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]0a" n="Table Speed in mm/rot">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]0b" n="Filter">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]0c" n="Reconstruction Correction Type">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]0d" n="Organ">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]0e" n="File Type Remarks">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]0f" n="Direction">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]11" n="Series Comment">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]12" n="Position">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]13" n="Expert Plan No.">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]14" n="Reconstruction ROI No.">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]15" n="Special Helical ACQ No.">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]16" n="Volume UID">@hashuid(@UIDROOT,this)</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]17" n="Total Frame Count in the Volume">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]18" n="Frame No.">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]19" n="Frame Sort Key">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]1a" n="Frame Sort Order">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]1b" n="(L1) Convolution Kernel, (L2) Convolution Kernel for Series Record">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]1c" n="(L1) Contrast/Bolus Agent, (L2) Contrast/Bolus Agent for Series Record">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]1d" n="Reconstruction Number">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]1e" n="Raw Data Number">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]20" n="Local Series Number">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]21" n="Decrease in Artifact Filter">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]22" n="Reconstruction Interval">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]23" n="Pitch Factor">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]24" n="The Acquisition Date of NRA">@incrementdate(this,@DATEINC)</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]25" n="Large Data File Attribute">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]26" n="Large Data File Name">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]30" n="Main Modality in Study">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]35" n="Scan Range">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]37" n="Total Frames">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]38" n="Start Frame">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]39" n="End Frame">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]40" n="DLP (Dose Length Product)">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]41" n="Raw Slice Information">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]42" n="Local Frame No">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]43" n="Volume Vector">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]44" n="Volume Type">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]45" n="Relative Table Position of 4D Volume">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]46" n="Absolute Table Position of 4D Volume">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]47" n="Slice Pitch of 4D Volume">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]48" n="Respiratory Gating Inf.">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]49" n="Respiration Phase">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]f1" n="Protect Mark for Image, Curve or Private Record">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]f2" n="Protect Mark for Series Record">@keep()</e>
+<e en="T" t="7005[TOSHIBA_MEC_CT3]f3" n="Protect Mark for Study Record">@keep()</e>

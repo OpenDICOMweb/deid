@@ -82,7 +82,7 @@ String vrMapToJson(Map<VR, Map<VM, List<DED>>> vrMap) {
 
         } else {
           // print('tag: ${e.code.hex}');
-          eList.add('"${e.keyword}": ["${e.hex}", "${bp.keyword}"]');
+          eList.add('"${e.id}": ["${e.hex}", "${bp.keyword}"]');
         }
       });
 

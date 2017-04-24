@@ -17,21 +17,21 @@ class Protocol {
 
     Protocol();
 
-    ElementDef checkTag(int tag) {
+    Tag checkTag(int tag) {
       if (retain(tag)) {
-        log.warning(tag, 'Attempt to change tag ${Tag.dcm(tag)} on Keep List');
+        log.warning(tag, 'Attempt to change tag ${tag.dcm} on Keep List');
         return null;
       }
-      ElementDef deDef = ElementDef.lookup(tag);
+      Tag deDef = Tag.lookup(tag);
       if (deDef == null) {
-        log.warning(tag, "Undefined tag ${Tag.dcm(tag)}");
+        log.warning(tag, "Undefined tag ${tag.dcm}");
         return null;
       }
       return deDef;
     }
 
     Element checkChangeRequest(int tag, List values) {
-      ElementDef e0 = checkTag(tag);
+      Tag e0 = checkTag(tag);
       if (e0 == null) return null;
       Element e1 = lookup(tag);
       print('check: $e1, values: $values');
@@ -125,7 +125,7 @@ class Protocol {
         warning(e0, 'Tag $tag requires a Dummy (D) value, but no values supplied');
         return false;
       }
-      print('tag: ${Tag.dcm(tag)}, e: $e0');
+      print('tag: ${tag.dcm}, e: $e0');
       var e1 = e0.replace(values);
       mods.replace(e0, e1);
       return true;
@@ -133,7 +133,7 @@ class Protocol {
 
     bool zeroOrDummy(int tag, [List values = const []]) {
       var e0 = checkChangeRequest(tag, values);
-      print('zeroOrDummy: ${Tag.dcm(tag)}, e: $e0');
+      print('zeroOrDummy: ${tag.dcm}, e: $e0');
       var e1 = e0.replace(values);
       mods.replace(e0, e1);
       return true;
@@ -143,7 +143,7 @@ class Protocol {
     /// Removes the [Element] with [Tag] from the [Dataset] and returns [true] if the
     /// [Element] was preset; otherwise,  returns [false].
     bool remove(int tag) {
-      ElementDef eDef = checkTag(tag);
+      Tag eDef = checkTag(tag);
       if (eDef == null) return false;
       Element e = lookup(tag);
       if (e == null) {
@@ -164,7 +164,7 @@ class Protocol {
     bool keep(int tag) {
       Element a = lookup(tag);
       if (a is SQ) {
-        throw "Sequence Tag ${Tag.dcm(tag)} are not valid for Dataset.keep";
+        throw "Sequence Tag ${tag.dcm} are not valid for Dataset.keep";
       } else if (!map.containsKey(tag)) {
         keepTags.add(tag);
         return true;
@@ -179,7 +179,7 @@ class Protocol {
       mElement e0 = checkChangeRequest(tag, values);
       if (e0 == null) return false;
       if (e0 is! UI) {
-        log.warning(e0, "Tag ${Tag.dcm(tag)} is not a UID Tag.");
+        log.warning(e0, "Tag ${tag.dcm} is not a UID Tag.");
         return false;
       }
       //TODO: make sure Values is UidString

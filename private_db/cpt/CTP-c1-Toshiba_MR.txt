@@ -1,0 +1,19 @@
+ <!-- CTP processing instructions for private elements found in Toshiba MR devices       -->
+ <!-- Mallinckrodt Institute of Radiology                                             -->
+ <!-- Revision History:                                                               -->
+ <!--   9/25/2013  Dave Maffitt		Original                                          -->
+
+
+<e en="T" t="700d[TOSHIBA_MEC_MR3]00" n="Scale Factor">@keep()</e>
+<e en="T" t="700d[TOSHIBA_MEC_MR3]02" n="Orientation Vector">@keep()</e>
+<e en="T" t="700d[TOSHIBA_MEC_MR3]03" n="Flip Flag">@keep()</e>
+<e en="T" t="700d[TOSHIBA_MEC_MR3]05" n="FOV">@keep()</e>
+<e en="T" t="700d[TOSHIBA_MEC_MR3]06" n="Image Matrix">@keep()</e>
+<e en="T" t="700d[TOSHIBA_MEC_MR3]09" n="Original Data Flag">@keep()</e>
+<e en="T" t="700d[TOSHIBA_MEC_MR3]80" n="Number of PAC channel">@keep()</e>
+<e en="T" t="700d[TOSHIBA_MEC_MR3]81" n="Reference mode">@keep()</e>
+<e en="T" t="700d[TOSHIBA_MEC_MR3]82" n="Gain value group for MRS">@keep()</e>
+<e en="T" t="700d[TOSHIBA_MEC_MR3]88" n="Flag of water Sat pulse">@keep()</e>
+<e en="T" t="700d[TOSHIBA_MEC_MR3]89" n="Selected contrast TE">@keep()</e>
+<e en="T" t="700d[TOSHIBA_MEC_MR3]8a" n="Raw Data Set Sequence">@keep()</e>
+<e en="T" t="700d[TOSHIBA_MEC_MR3]91" n="Receiver gain of prescan">@keep()</e>
