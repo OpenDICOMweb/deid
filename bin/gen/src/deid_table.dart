@@ -28,7 +28,7 @@ class DeIdTable {
 
     for (int i = 0; i < deIdTags.length; i++) {
       int tag = deIdTags[i];
-      DED e = DED.lookup(tag);
+      Tag e = Tag.lookup(tag);
       if (e == null) {
         print('bad Tag: ${tagToHex(tag)}');
       } else {
@@ -52,7 +52,7 @@ class DeIdTable {
 
     for (int i = 0; i < deIdTags.length; i++) {
       int tag = deIdTags[i];
-      DED e = DED.lookup(tag);
+      Tag e = Tag.lookup(tag);
       if (e == null) {
         print('bad Tag: ${tagToHex(tag)}');
       } else {

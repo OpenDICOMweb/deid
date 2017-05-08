@@ -4,6 +4,7 @@
 // Original author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
+import 'package:dictionary/dictionary.dart';
 import 'package:core/core.dart';
 
 enum Action {K, KB, R, X}
@@ -22,7 +23,7 @@ class PrivateGroup {
                      this.description, this.elements);
 
   static const GEMS_ACQU_01 =
-      const PrivateGroup("GEMS_ACQU_01", "GEMS", Modality.MR,
+      const PrivateGroup("GEMS_ACQU_01", "GEMS", Modality.kMR,
                              "GEHC Private Creator ID", PrivateData.k1002);
 
   int nextGroup(int group) => group + 2;

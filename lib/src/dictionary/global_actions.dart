@@ -5,13 +5,14 @@
 // See the AUTHORS file for other contributors.
 
 import 'package:core/core.dart';
+
 import 'basic_profile.dart';
 import 'tag_group.dart';
 
 //TODO: document the priorities
 /// This [class] manages the keeping and removing of Global and private tags.
 class GlobalActions {
-  static const defaultKeepGroups = const [];
+  static const List<int> defaultKeepGroups = const <int>[];
 
   /// A list of Tags that should be kept (i.e. not removed) in the [Dataset].
   /// If a tag is in this list it will not be modified or removed, even if other rules
@@ -23,11 +24,11 @@ class GlobalActions {
   /// specify that it should not be removed.
   List<int> remove;
 
-  /// A [List] of [TagGroup]s that should be retained in the Dataset.  A [tag] in the
+  /// A [List] of [TagGroup]s that should be retained in the Dataset.  A Tag Code in the
   /// [remove] [List] can override these rules.
   List<TagGroup> keepGroups;
 
-  /// A [List] of [TagGroup]s that should be removed from the Dataset.  A [tag] in the
+  /// A [List] of [TagGroup]s that should be removed from the Dataset.  A Tag Code in the
   /// [keep] [List] can override these rules.
   List<TagGroup> removeGroups;
 
@@ -41,7 +42,7 @@ class GlobalActions {
   /// A [List] of [String]s that identify Private Group Creators.
   ///
   /// A list of Private Groups, identified by their Private Group Creator token,
-  /// to be retained in the [Dataset]. If this [List] is [null] or [empty] the
+  /// to be retained in the [Dataset]. If this [List] is [null] or empty [] the
   /// Private Data Element Characteristics Sequence (0008,0300) will determine
   /// which Data Elements are retained.
   ///
@@ -49,7 +50,7 @@ class GlobalActions {
   /// token matching a [String] in this [List] will be retained using the
   /// Private Data Element Characteristics Sequence (0008,0300).  The Private
   /// Groups associated with any Private Group Creators that don't match this
-  /// [list] will be removed.
+  /// [List] will be removed.
   List<String> keepPrivateCreators;
 
   /// Creates a set of [GlobalActions] for de-identification.
@@ -64,14 +65,14 @@ class GlobalActions {
       throw "Inconsistent keep/remove groups";
   }
 
-  /// If [true] the [Attribute] with this [tag] should be retained.
-  bool isKeeper(int tag) {
-    if (keep.contains(tag)) return true;
-    for (TagGroup group in keepGroups) if (group.contains(tag)) return true;
+  /// If [true] the Element with this Tag Code should be retained.
+  bool isKeeper(int tagCode) {
+    if (keep.contains(tagCode)) return true;
+    for (TagGroup group in keepGroups) if (group.contains(tagCode)) return true;
     return false;
   }
 
-  /// [True] if this tag is in one of the [removeGroups].
+  /// [true] if this tag is in one of the [removeGroups].
   bool inRemoveGroup(int tag) {
     for (TagGroup group in removeGroups) if (group.contains(tag)) return true;
     return false;
@@ -80,7 +81,7 @@ class GlobalActions {
   /// Process the Global Rules for de-identifying the [Dataset].
   void process(Dataset ds) {
     processPrivateTags(ds);
-    List<int> tags = ds.eMap.keys;
+    List<int> tags = ds.tagCodes;
     for (int tag in tags) {
       if (isKeeper(tag)) continue;
       if (remove.contains(tag) || inRemoveGroup(tag)) ds.remove(tag);
@@ -91,9 +92,10 @@ class GlobalActions {
   /// Data Groups in the [Dataset].
   void processPrivateTags(Dataset ds) {
     if (keepSafePrivate == false) {
-      ds.removePrivateTags();
+      ds.removeAllPrivate();
     } else {
-      ds.keepSafePrivate(keepPrivateCreators);
+      //ds.keepSafePrivate(ds.keepPrivateCreators);
+      ds.keepSafePrivate();
     }
   }
 
@@ -104,10 +106,10 @@ class GlobalActions {
     return true;
   }
 
-  /// Verifies that the [keep] [tag] and [remove] [tag] [List]s
+  /// Verifies that the [keep] Tag Code and [remove] [tag] [List]s
   /// are mutually exclusive.
   bool get areKeepTagsInconsistent {
-    for (int tag in keep) if (removeGroups.contains(tag)) return false;
+    for (int code in keep) if (removeGroups.contains(code)) return false;
     return true;
   }
 }

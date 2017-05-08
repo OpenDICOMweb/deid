@@ -4,7 +4,8 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
-import 'package:core/dicom.dart';
+import 'package:dictionary/dictionary.dart';
+import 'package:core/core.dart';
 import 'package:deid/profile.dart';
 import 'package:deid/deid.dart';
 
@@ -65,7 +66,7 @@ class $cName {
 ''';
  
   String genRemove(String keyword, int tag, VR vr, [AType aType, List values]) {
-    DEDict e = DEDict.lookup(tag);
+    Tagict e = Tagict.lookup(tag);
     String code = "";
     if (e is SQ)
       code += '(Dataset ds) {}';

@@ -5,6 +5,8 @@
 // See the AUTHORS file for other contributors.
 
 import 'package:core/core.dart';
+import 'package:dictionary/dictionary.dart';
+
 import 'package:deid/src/deid/other/deidentifier.dart';
 import 'deid_method_code.dart';
 
@@ -14,14 +16,14 @@ class DeIdMethod {
   final List<int> codes;
 
   DeIdMethod(this.codes) {
-    if (DeIdMethodCode.isNotValidList(codes))
+    if (! DeIdMethodCode.isValidList(codes))
       throw "Invalid code in List";
   }
 
   Map<int, Element> get elements => {
     //TODO: make e1 a constant
-    kPatientIdentityRemoved: new CS(kPatientIdentityRemoved, ["Yes"]),
-    kDeidentificationMethod: new LO(kDeidentificationMethod, [codes]),
+    kPatientIdentityRemoved: new CS(PTag.kPatientIdentityRemoved, ["Yes"]),
+    kDeidentificationMethod: new LO(PTag.kDeidentificationMethod, [codes]),
     //TODO: figure out whether deidentificationMethod or deidMethodCodeSeq is preferrable.
    // kDeidentificationMethodCodeSequence: new DeIdentificationMethodCodeSequence(codes)
   };

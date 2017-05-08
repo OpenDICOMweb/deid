@@ -50,7 +50,7 @@ List privateTags = [
   [0x50F11009, "SL", "", "K", "Afin Conversion Coefficient", "FDMS 1.0"],
   [0x50F1100A, "SH", "", "K", "FNC Parameters", "FDMS 1.0"],
   [0x50F11020, "CS", "", "K", "Image Processing Modification Flag", "FDMS 1.0"],
-  ["@", "GE", "CT", "", "", ""],
+  ["@", "GEMS", "CT", "", "", ""],
   [0x00090010, "LO", "1", "K", "GEHC Private Creator ID", "GEMS_IDEN_01"],
   [0x00091001, "LO", "1", "X", "Full fidelity", "GEMS_IDEN_01"],
   [0x00091002, "SH", "1", "K", "Suite id", "GEMS_IDEN_01"],

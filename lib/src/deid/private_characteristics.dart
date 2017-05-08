@@ -7,7 +7,7 @@
 import 'dart:typed_data';
 
 import 'package:core/core.dart';
-
+import 'package:dictionary/dictionary.dart';
 
 class PrivateDataCharacteristics {
   final String keyword;
@@ -15,30 +15,25 @@ class PrivateDataCharacteristics {
   final String name;
   final VR vr;
   final VM vm;
-  final DEType at;
+  final EType at;
   final bool isRetired;
 
-  const PrivateDataCharacteristics(this.keyword, this.code, this.name,
-                                   this.vr, this.vm, this.at, this.isRetired);
+  const PrivateDataCharacteristics(
+      this.keyword, this.code, this.name, this.vr, this.vm, this.at, this.isRetired);
 
   /// Characteristics of Private Data Elements within the current SOP Instance
-  static const kPrivateDataElementCharacteristicsSequence = const PrivateDataCharacteristics(
-      "PrivateDataElementCharacteristicsSequence",
-      0x0080300,
-      "Private​Data​Element​Characteristics​Sequence",
-      VR.kSQ,
-      VM.k1,
-      DEType.k3,
-      false);
+  static const PrivateDataCharacteristics kPrivateDataElementCharacteristicsSequence =
+      const PrivateDataCharacteristics("PrivateDataElementCharacteristicsSequence", 0x0080300,
+          "Private​Data​Element​Characteristics​Sequence", VR.kSQ, VM.k1, EType.k3, false);
 
   /// Odd group number within which the Private Data Element block is reserved.
-  static const kPrivateGroupReference = const PrivateDataCharacteristics(
+  static const PrivateDataCharacteristics kPrivateGroupReference = const PrivateDataCharacteristics(
       "PrivateGroupReference",
       0x00080301,
       "Private Group Reference",
       VR.kUS,
       VM.k1,
-      DEType.k1,
+      EType.k1,
       false);
 
   ///The value of the Private Creator Data Element value used to reserve the block of
@@ -48,14 +43,9 @@ class PrivateDataCharacteristics {
   /// than their numeric block number, since instances may be modified and numeric block
   /// numbers reassigned but the Private Creator Data Element value, which is required
   /// to be unique within a Group of Private Data Elements, will be preserved.
-  static const kPrivateCreatorReference = const PrivateDataCharacteristics(
-      "PrivateCreatorReference",
-      0x00080302,
-      "Private Creator Reference",
-      VR.kLO,
-      VM.k1,
-      DEType.k1,
-      false);
+  static const PrivateDataCharacteristics kPrivateCreatorReference =
+      const PrivateDataCharacteristics("PrivateCreatorReference", 0x00080302,
+          "Private Creator Reference", VR.kLO, VM.k1, EType.k1, false);
 
   /// Specifies whether some or all of the Private Data Elements in the block are safe from
   /// identity leakage as defined by PS3.15 Section E.3.10 Retain Safe Private Option.
@@ -64,14 +54,9 @@ class PrivateDataCharacteristics {
   ///       SAFE: no data elements within the block contain identifying information
   ///       UNSAFE: all data elements within the block may contain identifying information
   ///       MIXED: some data elements within the block may contain identifying information
-  static const kBlockIdentifyingInformationStatus = const PrivateDataCharacteristics(
-      "BlockIdentifyingInformationStatus",
-      0x00080303,
-      "Block Identifying Information Status",
-      VR.kCS,
-      VM.k1,
-      DEType.k1,
-      false);
+  static const PrivateDataCharacteristics kBlockIdentifyingInformationStatus =
+      const PrivateDataCharacteristics("BlockIdentifyingInformationStatus", 0x00080303,
+          "Block Identifying Information Status", VR.kCS, VM.k1, EType.k1, false);
 
   ///  List of Private Data Elements in block that do not contain identifying
   ///  information (are safe from identity leakage).
@@ -82,25 +67,15 @@ class PrivateDataCharacteristics {
   /// order and a given value shall be listed at most once.
   ///
   /// Required if Block Identifying Information Status (0008,0303) equals MIXED.
-  static const kNonidentifyingPrivateElements = const PrivateDataCharacteristics(
-      "NonidentifyingPrivateElements",
-      0x00080304,
-      "Nonidentifying Private Elements",
-      VR.kUS,
-      VM.k1_n,
-      DEType.k1c,
-      false);
+  static const PrivateDataCharacteristics kNonidentifyingPrivateElements =
+      const PrivateDataCharacteristics("NonidentifyingPrivateElements", 0x00080304,
+          "Nonidentifying Private Elements", VR.kUS, VM.k1_n, EType.k1c, false);
 
   /// Actions to be performed on element within the block that are not
   /// safe from identify leakage.
-  static const kDeidentificationActionSequence = const PrivateDataCharacteristics(
-      "DeidentificationActionSequence",
-      0x00080305,
-      "Deidentification Action Sequence",
-      VR.kSQ,
-      VM.k1,
-      DEType.k3,
-      false);
+  static const PrivateDataCharacteristics kDeidentificationActionSequence =
+      const PrivateDataCharacteristics("DeidentificationActionSequence", 0x00080305,
+          "Deidentification Action Sequence", VR.kSQ, VM.k1, EType.k3, false);
 
   /// List of Private Data Elements in block that may contain identifying
   /// information (are unsafe from identity leakage).
@@ -109,14 +84,9 @@ class PrivateDataCharacteristics {
   /// a value from 0000H to 00FFH) within the block, stored as an unsigned short
   /// integer. Multiple values shall be in increasing order and a given value
   /// shall be listed at most once.
-  static const kIdentifyingPrivateElements = const PrivateDataCharacteristics(
-      "IdentifyingPrivateElements",
-      0x00080306,
-      "Identifying Private Elements",
-      VR.kUS,
-      VM.k1_n,
-      DEType.k1,
-      false);
+  static const PrivateDataCharacteristics kIdentifyingPrivateElements =
+      const PrivateDataCharacteristics("IdentifyingPrivateElements", 0x00080306,
+          "Identifying Private Elements", VR.kUS, VM.k1_n, EType.k1, false);
 
   /// Recommended action to be performed during de-identification on elements
   /// listed in Identifying Private Elements (0008,0306) within this Item.
@@ -146,22 +116,16 @@ class PrivateDataCharacteristics {
   ///
   ///    3. Further explanation of these actions can be found in PS3.15,
   ///    Section E.3.1 Clean Pixel Data Option.
-  static const kDeidentificationAction = const PrivateDataCharacteristics(
-      "DeidentificationAction",
-      0x00080307,
-      "Deidentification Action",
-      VR.kCS,
-      VM.k1,
-      DEType.k1,
-      false);
+  static const PrivateDataCharacteristics kDeidentificationAction =
+      const PrivateDataCharacteristics("DeidentificationAction", 0x00080307,
+          "Deidentification Action", VR.kCS, VM.k1, EType.k1, false);
 
-  static SQ get(Dataset ds) =>
-      ds.lookup(kPrivateDataElementCharacteristicsSequence.code);
+  static SQ get(Dataset ds) => ds[kPrivateDataElementCharacteristicsSequence];
 
 //TODO: finish, Test
   //TODO: should the Private Data Charistic Sequence be removed?
   static void process(Dataset ds, bool keepSafe) {
-    SQ sq = ds.lookup(kPrivateDataElementCharacteristicsSequence.code);
+    SQ sq = ds[kPrivateDataElementCharacteristicsSequence];
     for (Item item in sq.items) {
       int pGroup = item[kPrivateGroupReference].value;
       int pSetBase = (pGroup << 16);
@@ -205,17 +169,7 @@ class PrivateDataCharacteristics {
   static int findCreator(Dataset ds, int pSetBase, String token) {
     int min = pSetBase + 0x0010;
     int max = pSetBase + 0x00FF;
-    for (int i = min; i <= max; i++)
-      if ((ds[i] != null) && (ds[i].value == token))
-        return i;
+    for (int i = min; i <= max; i++) if ((ds[i] != null) && (ds[i].value == token)) return i;
     return null;
   }
-
 }
-
-
-
-
-
-
-

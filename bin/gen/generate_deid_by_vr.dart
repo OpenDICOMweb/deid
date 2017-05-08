@@ -4,7 +4,7 @@
 // Original author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
-import 'package:core/core.dart';
+import 'package:dictionary/dictionary.dart';
 
 import 'src/deid_tags.dart';
 import 'src/gen_utils.dart';
@@ -12,14 +12,14 @@ import 'src/gen_utils.dart';
 /// Create a JSON object of [DeId] [Elements] by [VR] and [VM]
 
 List vrs = new List(32);
-List<List<DED>> vrElements = new List(32);
+List<List<Tag>> vrElements = new List(32);
 String hex(int i) => '0x' + i.toRadixString(16).padLeft(8, '0');
 
 void main() {
 
   for (int i = 0; i < deIdTags.length; i++) {
     int tag = deIdTags[i];
-    DED e = DED.lookup(tag);
+    Tag e = Tag.lookup(tag);
     if (e == null) {
       print('bad Tag: ${hex(tag)}');
     } else {
@@ -50,13 +50,13 @@ void checkCount(vrElements) {
   }
 }
 
-String toJson(List vrs, List<List<DED>> vrElements) {
+String toJson(List vrs, List<List<Tag>> vrElements) {
   var s = '{\n';
   var vrList = [];
   for (int i = 0; i < vrElements.length; i++) {
     if ((vrs[i] == null) || (vrElements[i] == null)) continue;
     List<String> elts = [];
-    vrElements[i].forEach((DED e) {
+    vrElements[i].forEach((Tag e) {
       if (e != null)
         elts.add('"${hex(e.code)}": "${e.id}"');
     });

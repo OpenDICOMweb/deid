@@ -7,7 +7,7 @@
 /// generate_class
 
 import 'profile_table.dart';
-import '.gen_deid_map.dart';
+import 'generate_deid_map.dart';
 
 /// This program generates the DeID class using the 'deid.json'
 /// file that was created from the DICOM table in PS3.15 Appendix E.

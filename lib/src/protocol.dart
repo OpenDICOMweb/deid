@@ -4,6 +4,7 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
+import 'package:dictionary/dictionary.dart';
 import 'package:core/core.dart';
 
 //TODO: algorithm
@@ -161,7 +162,7 @@ class Protocol {
     }
 
     ///TODO: doc
-    bool keep(int tag) {
+    bool retain(int tag) {
       Element a = lookup(tag);
       if (a is SQ) {
         throw "Sequence Tag ${tag.dcm} are not valid for Dataset.keep";

@@ -7,13 +7,14 @@
 import 'dart:io';
 import 'dart:typed_data';
 
+import 'package:common/common.dart';
 import 'package:core/core.dart';
 import 'package:deid/deid.dart';
 import 'package:deid/src/deid/deidentifier.dart';
-import 'package:encode/encoder.dart';
+import 'package:convertX/encoder.dart';
 
 String inputDir = "C:/odw/test_data/sfd/CR/PID_MINT10/1_DICOM_Original/";
-String test_output = "C:/odw/sdk/deid/example/output";
+String testOutput = "C:/odw/sdk/deid/example/output";
 
 String file1 = inputDir + "CR.2.16.840.1.114255.393386351.1568457295.17895.5.dcm";
 String file2 = inputDir + "CR.2.16.840.1.114255.393386351.1568457295.48879.7.dcm";
@@ -21,7 +22,7 @@ String file2 = inputDir + "CR.2.16.840.1.114255.393386351.1568457295.48879.7.dcm
 List<String> filesList = [file1];
 
 void main() {
-  Logger log = Logger.init();
+  Logger log = new Logger('example/basic_profile.dart');
   //var deidentifier = new DeIdentifier();
   for (String path in filesList) {
     File file = new File(path);
@@ -29,13 +30,12 @@ void main() {
     log.config('Reading file: $file');
 
     DeIdentifier deIdentify = new DeIdentifier(null);
-    Instance instance0 = readEntity(file1);
-    var dataset0 = instance0.dataset;
-    print('***Identified:\n${instance0.format(new Formatter(maxDepth: 5))}');
-    Instance instance1 = readEntity(file1);
-    var dataset1 = deIdentify(instance1.dataset);
+    RootDataset ds0 = readDataset(file1);
+    print('***Identified:\n${ds0.format(new Formatter(maxDepth: 5))}');
+    RootDataset ds1 = readDataset(file1);
+    ds1 = deIdentify(ds0);
 
-    DSComparison compare = new DSComparison(dataset0, dataset1);
+    DSComparison compare = new DSComparison(ds0, ds1);
 
     print('same: ${compare.same}');
     print('diff: ${compare.diff}');
@@ -64,8 +64,8 @@ void main() {
 }
 
 
-Instance readEntity(String path) {
+Dataset readDataset(String path) {
   File file = new File(path);
   Uint8List bytes = file.readAsBytesSync();
-  return DcmDecoder.decode(bytes);
+  return DcmReader.rootDataset(bytes);
 }

@@ -5,8 +5,9 @@
 // See the AUTHORS file for other contributors.
 
 import 'creator.dart';
-/// The names of [ManufacturerBase]s of DICOM equipment. Used to identify [PrivateGroup]s.
-class ManufacturerBase {
+
+/// The names of [Manufacturer]s of DICOM equipment. Used to identify [PrivateGroup]s.
+class Manufacturer {
   /// An integer identifier for the manufacturer.
   final int index;
 
@@ -16,9 +17,9 @@ class ManufacturerBase {
   /// The full name of the Manufacturer.
   final String name;
 
-  final List<String> creatorIDs;
+ // final List<String> creatorIDs;
 
-  const Manufacturer(this.index, this.id, this.name, this.creators);
+  const Manufacturer(this.index, this.id, this.name);
 
   Manufacturer operator [](int index) => _list[index];
 
@@ -46,9 +47,9 @@ class ManufacturerBase {
     "UCSF": kUCSF
   };
 
-  static ManufacturerBase lookup(String id) => _map[id];
+  static Manufacturer lookup(String id) => _map[id];
 
-  static const _list = const <ManufacturerBase>[
+  static const _list = const <Manufacturer>[
     kGEMS, kPhilips, kSiemens, kToshiba, kHitachi, kRSNA, kMIR_ERL, kFuji, kHologic, kUCSF];
 
 }

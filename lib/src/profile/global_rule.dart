@@ -146,7 +146,7 @@ class GlobalRuleType {
     return false;
   }
 
-  static const Map<String, GlobalRuleType> globalRuleTypeMap = const {
+  static const Map<String, GlobalRuleType> globalRuleTypeMap = const <String, GlobalRuleType>{
     "@deIdentificationMethodCodeSeq": deIdentificationMethodCodeSeq,
     //TODO: Should be keep or remove other groupNumbers
     "@keepGroup": keepGroup,

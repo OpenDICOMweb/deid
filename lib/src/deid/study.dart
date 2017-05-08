@@ -5,6 +5,7 @@
 // See the AUTHORS file for other contributors.
 
 import 'package:core/core.dart';
+import 'package:dictionary/dictionary.dart';
 
 class DeIdentifiedStudy {
   Study study;

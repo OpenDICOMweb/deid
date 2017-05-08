@@ -6,6 +6,8 @@
 
 import 'dart:convert';
 
+import 'package:dictionary/dictionary.dart';
+
 const List<String> ruleNames = const [
   "@add",
   "@always",
@@ -59,18 +61,18 @@ class Rule {
   List suffix;
   bool isParsed;
 
-  Rule(this.index, int target, this.keyword)
-      : targetTag = Tag.lookup(target) {
+  Rule(this.index, int code, this.keyword)
+      : targetTag = PTag.lookupCode(code) {
     if ((targetTag == null) ||
-        ((keyword != null) && (keyword != targetTag.id)))
-      throw 'Invalid targetTag($target) or keyword($keyword)';
+        ((keyword != null) && (keyword != targetTag.keyword)))
+      throw new ArgumentError('Invalid targetTag($code) or keyword($keyword)');
   }
 
   int get argLength => args.length;
 
   Tag get sourceTag {
     int val = int.parse(args[0], onError: (s) => null);
-    return (val != null) ? Tag.lookup(val) : null;
+    return (val != null) ? PTag.lookupCode(val) : null;
   }
 
 
@@ -94,5 +96,6 @@ class Rule {
   String get json => JSON.encode(map);
 
 
-  toString() => 'Rule: $function($args) $scripts';
+  @override
+  String toString() => 'Rule: $function($args) $scripts';
 }

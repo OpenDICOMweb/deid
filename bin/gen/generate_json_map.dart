@@ -4,6 +4,8 @@
 // Original author: Jim Philbin <jfphilbin@gmail.edu> -
 // See the AUTHORS file for other contributors.
 
+import 'package:dictionary/dictionary.dart';
+
 import 'src/deId_tags.dart';
 import 'src/gen_utils.dart';
 
@@ -17,15 +19,15 @@ void main() {
   String types = '"types": ["keyword", "VR", "VM", "VM.min", "VM.max", "VM.width"]';
   List<String> sList1 = [types];
   for (int i = 0; i < deIdTags.length; i++) {
-    int tag = deIdTags[i];
-    DED e = DED.lookup(tag);
-    if (e == null) {
-      print('bad Tag: ${hex(tag)}');
+    int code = deIdTags[i];
+    PTag tag = PTag.lookupCode(code);
+    if (tag == null) {
+      print('bad PTag: ${hex(code)}');
     } else {
-      var hexTag = tagToHex(tag);
-      var keyword = e.id;
-      var vr = e.vr;
-      var vm = e.vm;
+      var hexTag = tag.hex;
+      var keyword = tag.keyword;
+      var vr = tag.vr;
+      var vm = tag.vm;
       var vmVal = getVMValue(vm);
       if (vmVal.length > 2)
         print('**** $hexTag, $keyword, $vr, $vm');

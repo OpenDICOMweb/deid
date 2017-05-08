@@ -9,8 +9,8 @@ import 'dart:io';
 
 import 'package:path/path.dart' as path;
 
-var path0 = 'C:/odw/sdk/deidentification/test_data/10-11.encrypt/10-11.encrypt.txt';
-var path1 = 'C:/odw/sdk/deidentification/test_data/7,17,18,19,24/7,17,18,19,24.txt';
+String path0 = 'C:/odw/sdk/deidentification/test_data/10-11.encrypt/10-11.encrypt.txt';
+String path1 = 'C:/odw/sdk/deidentification/test_data/7,17,18,19,24/7,17,18,19,24.txt';
 
 // Parameter Expressions look as follows:
 //    param.TRIAD=triad
@@ -70,7 +70,7 @@ String parse(List<String> lines) {
       if (index >= 0) argList[index] = target;
      // var newArgs = argList.join(', ');
 
-      Map rule = {
+      Map<String, dynamic> rule = {
         "tag": target,
         "keyword": keyword,
         "function": function,

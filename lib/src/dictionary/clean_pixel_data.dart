@@ -6,6 +6,7 @@
 
 
 import 'package:core/core.dart';
+import 'package:dictionary/dictionary.dart';
 import 'package:deid/src/deid/action.dart';
 
 //TODO: add the ability to do this.
@@ -17,16 +18,16 @@ class CleanPixelData {
 
   CleanPixelData(this.tag, this.keyword, this.action);
 
-  static final kAttributeBurnedInAnnotation =
+  static final CleanPixelData kAttributeBurnedInAnnotation =
     new CleanPixelData(0x00280301, "Attribute Burned In Annotation", Action.A);
 
-  call(Dataset ds, {
+  bool call(Dataset ds, {
       bool removePixelDataFlag: false,
       bool removeIconPixelDataFlag: false,
       bool removeFloatPixelDataFlag: false,
       bool removeDoubleFloatPixelDataFlag: false
       }) {
-    Element a = ds.lookup(kAttributeBurnedInAnnotation);
+    Element a = ds[kAttributeBurnedInAnnotation];
     if ((a != null) && (a.value == "NO")) return true;
     if (removeIconPixelDataFlag) removeIconPixelData(ds);
     if (removeFloatPixelDataFlag) ds.remove(kFloatPixelData);
@@ -34,7 +35,7 @@ class CleanPixelData {
     return false;
   }
 
-  bool removeIconPixelData(ds) {
+  bool removeIconPixelData(Dataset ds) {
     //TODO: implement
     return false;
   }
@@ -50,8 +51,8 @@ class CleanRecognizableVisualFeaturesOptions {
 
   const CleanRecognizableVisualFeaturesOptions(this.tag, this.keyword, this.action);
 
-  static final kAttributeBurnedInAnnotation =
-  new CleanPixelData(0x00280301, "Attribute Burned In Annotation", Action.A);
+  static final CleanRecognizableVisualFeaturesOptions kAttributeBurnedInAnnotation =
+  new CleanRecognizableVisualFeaturesOptions(0x00280301, "Attribute Burned In Annotation", Action.A);
 
 
 }

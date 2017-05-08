@@ -52,7 +52,7 @@ List<String> readLinesFromFile(String path) {
   return lines;
 }
 
-void writeFile(String path, List<String> lines, type) {
+void writeFile(String path, List<String> lines, String type) {
   var s = "# generated file of $type with ${lines.length} lines not counting this one.\n";
   for(String l in lines) s += '$l\n';
   File outFile = new File(path);

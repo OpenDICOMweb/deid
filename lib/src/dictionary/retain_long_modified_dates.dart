@@ -7,69 +7,67 @@
 // *** This is a generated class ***
 // ----------------------------------------------------------
 
-import 'package:core/core.dart';
+import 'package:dictionary/dictionary.dart';
 
 /// Retain Long Modified Dates Option to the Basic De-Identification Profile.
 class RetainLongModifiedDatesOption {
-  final String keyword;
-  final int tag;
-  final VR vr;
+  final Tag tag;
   final String action;
 
-  const RetainLongModifiedDatesOption(this.keyword, this.tag, this.vr, this.action);
+  const RetainLongModifiedDatesOption(this.tag, this.action);
 
   static RetainLongModifiedDatesOption lookup(int tag) => map[tag];
 
-  static const kStudyDate =
-    const RetainLongModifiedDatesOption("StudyDate", 0x00080020, VR.kDA, "C");
-  static const kSeriesDate =
-    const RetainLongModifiedDatesOption("SeriesDate", 0x00080021, VR.kDA, "C");
-  static const kAcquisitionDate =
-    const RetainLongModifiedDatesOption("AcquisitionDate", 0x00080022, VR.kDA, "C");
-  static const kContentDate =
-    const RetainLongModifiedDatesOption("ContentDate", 0x00080023, VR.kDA, "C");
-  static const kOverlayDate =
-    const RetainLongModifiedDatesOption("OverlayDate", 0x00080024, VR.kDA, "C");
-  static const kCurveDate =
-    const RetainLongModifiedDatesOption("CurveDate", 0x00080025, VR.kDA, "C");
-  static const kAcquisitionDateTime =
-    const RetainLongModifiedDatesOption("AcquisitionDateTime", 0x0008002a, VR.kDT, "C");
-  static const kStudyTime =
-    const RetainLongModifiedDatesOption("StudyTime", 0x00080030, VR.kTM, "C");
-  static const kSeriesTime =
-    const RetainLongModifiedDatesOption("SeriesTime", 0x00080031, VR.kTM, "C");
-  static const kAcquisitionTime =
-    const RetainLongModifiedDatesOption("AcquisitionTime", 0x00080032, VR.kTM, "C");
-  static const kContentTime =
-    const RetainLongModifiedDatesOption("ContentTime", 0x00080033, VR.kTM, "C");
-  static const kOverlayTime =
-    const RetainLongModifiedDatesOption("OverlayTime", 0x00080034, VR.kTM, "C");
-  static const kCurveTime =
-    const RetainLongModifiedDatesOption("CurveTime", 0x00080035, VR.kTM, "C");
-  static const kTimezoneOffsetFromUTC =
-    const RetainLongModifiedDatesOption("TimezoneOffsetFromUTC", 0x00080201, VR.kSH, "C");
-  static const kLastMenstrualDate =
-    const RetainLongModifiedDatesOption("LastMenstrualDate", 0x001021d0, VR.kDA, "C");
-  static const kAdmittingDate =
-    const RetainLongModifiedDatesOption("AdmittingDate", 0x00380020, VR.kDA, "C");
-  static const kAdmittingTime =
-    const RetainLongModifiedDatesOption("AdmittingTime", 0x00380021, VR.kTM, "C");
-  static const kScheduledProcedureStepStartDate =
-    const RetainLongModifiedDatesOption("ScheduledProcedureStepStartDate", 0x00400002, VR.kDA, "C");
-  static const kScheduledProcedureStepStartTime =
-    const RetainLongModifiedDatesOption("ScheduledProcedureStepStartTime", 0x00400003, VR.kTM, "C");
-  static const kScheduledProcedureStepEndDate =
-    const RetainLongModifiedDatesOption("ScheduledProcedureStepEndDate", 0x00400004, VR.kDA, "C");
-  static const kScheduledProcedureStepEndTime =
-    const RetainLongModifiedDatesOption("ScheduledProcedureStepEndTime", 0x00400005, VR.kTM, "C");
-  static const kPerformedProcedureStepStartDate =
-    const RetainLongModifiedDatesOption("PerformedProcedureStepStartDate", 0x00400244, VR.kDA, "C");
-  static const kPerformedProcedureStepStartTime =
-    const RetainLongModifiedDatesOption("PerformedProcedureStepStartTime", 0x00400245, VR.kTM, "C");
-  static const kPerformedProcedureStepEndDate =
-    const RetainLongModifiedDatesOption("PerformedProcedureStepEndDate", 0x00400250, VR.kDA, "C");
-  static const kPerformedProcedureStepEndTime =
-    const RetainLongModifiedDatesOption("PerformedProcedureStepEndTime", 0x00400251, VR.kTM, "C");
+  static const RetainLongModifiedDatesOption kStudyDate =
+    const RetainLongModifiedDatesOption(PTag.kStudyDate,  "C");
+  static const RetainLongModifiedDatesOption kSeriesDate =
+    const RetainLongModifiedDatesOption(PTag.kSeriesDate,  "C");
+  static const RetainLongModifiedDatesOption kAcquisitionDate =
+    const RetainLongModifiedDatesOption(PTag.kAcquisitionDate,  "C");
+  static const RetainLongModifiedDatesOption kContentDate =
+    const RetainLongModifiedDatesOption(PTag.kContentDate,  "C");
+  static const RetainLongModifiedDatesOption kOverlayDate =
+    const RetainLongModifiedDatesOption(PTag.kOverlayDate,  "C");
+  static const RetainLongModifiedDatesOption kCurveDate =
+    const RetainLongModifiedDatesOption(PTag.kCurveDate,  "C");
+  static const RetainLongModifiedDatesOption kAcquisitionDateTime =
+    const RetainLongModifiedDatesOption(PTag.kAcquisitionDateTime,  "C");
+  static const RetainLongModifiedDatesOption kStudyTime =
+    const RetainLongModifiedDatesOption(PTag.kStudyTime,  "C");
+  static const RetainLongModifiedDatesOption kSeriesTime =
+    const RetainLongModifiedDatesOption(PTag.kSeriesTime,  "C");
+  static const RetainLongModifiedDatesOption kAcquisitionTime =
+    const RetainLongModifiedDatesOption(PTag.kAcquisitionTime,  "C");
+  static const RetainLongModifiedDatesOption kContentTime =
+    const RetainLongModifiedDatesOption(PTag.kContentTime,  "C");
+  static const RetainLongModifiedDatesOption kOverlayTime =
+    const RetainLongModifiedDatesOption(PTag.kOverlayTime,  "C");
+  static const RetainLongModifiedDatesOption kCurveTime =
+    const RetainLongModifiedDatesOption(PTag.kCurveTime,  "C");
+  static const RetainLongModifiedDatesOption kTimezoneOffsetFromUTC =
+    const RetainLongModifiedDatesOption(PTag.kTimezoneOffsetFromUTC,  "C");
+  static const RetainLongModifiedDatesOption kLastMenstrualDate =
+    const RetainLongModifiedDatesOption(PTag.kLastMenstrualDate,  "C");
+  static const RetainLongModifiedDatesOption kAdmittingDate =
+    const RetainLongModifiedDatesOption(PTag.kAdmittingDate,  "C");
+  static const RetainLongModifiedDatesOption kAdmittingTime =
+    const RetainLongModifiedDatesOption(PTag.kAdmittingTime,  "C");
+  static const RetainLongModifiedDatesOption kScheduledProcedureStepStartDate =
+    const RetainLongModifiedDatesOption(PTag.kScheduledProcedureStepStartDate,  "C");
+  static const RetainLongModifiedDatesOption kScheduledProcedureStepStartTime =
+    const RetainLongModifiedDatesOption(PTag.kScheduledProcedureStepStartTime,  "C");
+  static const RetainLongModifiedDatesOption kScheduledProcedureStepEndDate =
+    const RetainLongModifiedDatesOption(PTag.kScheduledProcedureStepEndDate,  "C");
+  static const RetainLongModifiedDatesOption kScheduledProcedureStepEndTime =
+    const RetainLongModifiedDatesOption(PTag.kScheduledProcedureStepEndTime,  "C");
+  static const RetainLongModifiedDatesOption kPerformedProcedureStepStartDate =
+    const RetainLongModifiedDatesOption(PTag.kPerformedProcedureStepStartDate,  "C");
+  static const RetainLongModifiedDatesOption kPerformedProcedureStepStartTime =
+    const RetainLongModifiedDatesOption(PTag.kPerformedProcedureStepStartTime,  "C");
+  static const RetainLongModifiedDatesOption kPerformedProcedureStepEndDate =
+    const RetainLongModifiedDatesOption(PTag.kPerformedProcedureStepEndDate,  "C");
+  static const RetainLongModifiedDatesOption kPerformedProcedureStepEndTime =
+    const RetainLongModifiedDatesOption(PTag.kPerformedProcedureStepEndTime,  "C");
 
 static const List<int> keep = const [
 

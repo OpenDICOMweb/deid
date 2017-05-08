@@ -4,7 +4,7 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu>
 // See the AUTHORS file for other contributors.
 
-import 'package:core/core.dart';
+import 'package:dictionary/dictionary.dart';
 import 'creator.dart';
 
 Map manufacturers = {
@@ -15,7 +15,7 @@ Map manufacturers = {
       0x0009: {
         "name": "k0010",
         "manufacturerId": "Fuji",
-        "modality": Modality.CR,
+        "modality": Modality.kCR,
         "creator": {
           "tag": 0x00090010,
           "vr": VR.kLO,
@@ -250,7 +250,7 @@ Map manufacturers = {
       0x0009: {
         "name": "k0010",
         "manufacturerId": "GE",
-        "modality": Modality.PT,
+        "modality": Modality.kPT,
         "creator": {
           "tag": 0x00090010,
           "vr": VR.kLO,
@@ -2173,7 +2173,7 @@ Map manufacturers = {
       0x0009: {
         "name": "k0010",
         "manufacturerId": "Hitachi",
-        "modality": Modality.MR,
+        "modality": Modality.kMR,
         "creator": {
           "tag": 0x00090010,
           "vr": VR.kLO,
@@ -3784,7 +3784,7 @@ Map manufacturers = {
       0x0011: {
         "name": "k0010",
         "manufacturerId": "Hologic",
-        "modality": Modality.MG,
+        "modality": Modality.kMG,
         "creator": {
           "tag": 0x00110010,
           "vr": VR.kLO,
@@ -3870,7 +3870,7 @@ Map manufacturers = {
       0x0019: {
         "name": "k0010",
         "manufacturerId": "ADAC",
-        "modality": Modality.NM,
+        "modality": Modality.kNM,
         "creator": {
           "tag": 0x00190010,
           "vr": VR.kLO,
@@ -3929,7 +3929,7 @@ Map manufacturers = {
       0x2001: {
         "name": "k0010",
         "manufacturerId": "Philips",
-        "modality": Modality.MR,
+        "modality": Modality.kMR,
         "creator": {
           "tag": 0x20010010,
           "vr": VR.kLO,
@@ -4531,7 +4531,7 @@ Map manufacturers = {
       0x0029: {
         "name": "k0010",
         "manufacturerId": "Siemens",
-        "modality": Modality.MR,
+        "modality": Modality.kMR,
         "creator": {
           "tag": 0x00290010,
           "vr": VR.kLO,
@@ -4970,7 +4970,7 @@ Map manufacturers = {
       0x0019: {
         "name": "k0010",
         "manufacturerId": "Siemens",
-        "modality": Modality.NM,
+        "modality": Modality.kNM,
         "creator": {
           "tag": 0x00190010,
           "vr": VR.kLO,
@@ -5869,7 +5869,7 @@ Map manufacturers = {
       0x7005: {
         "name": "k0010",
         "manufacturerId": "Toshiba",
-        "modality": Modality.CT,
+        "modality": Modality.kCT,
         "creator": {
           "tag": 0x70050010,
           "vr": VR.kLO,
@@ -6348,7 +6348,7 @@ Map manufacturers = {
       0x700d: {
         "name": "k0010",
         "manufacturerId": "Toshiba",
-        "modality": Modality.MR,
+        "modality": Modality.kMR,
         "creator": {
           "tag": 0x700d0010,
           "vr": VR.kLO,
@@ -6503,7 +6503,7 @@ Map manufacturers = {
       0x0117: {
         "name": "k0010",
         "manufacturerId": "UCSF",
-        "modality": Modality.MR,
+        "modality": Modality.kMR,
         "creator": {
           "tag": 0x01170010,
           "vr": VR.kLO,

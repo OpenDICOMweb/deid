@@ -5,6 +5,7 @@
 // See the AUTHORS file for other contributors.
 
 import 'package:dictionary/dictionary.dart';
+import 'package:core/core.dart';
 
 class ContextGroup {
   final dcmType = "ContextGroup";
@@ -40,8 +41,8 @@ class DeIdentificationMethod extends ContextGroup {
 
   Item get item {
     Map<int, Element> map = {
-      kCodeValue: new SH(kCodeValue, [code]),
-      kCodingSchemeDesignator: new SH(kCodingSchemeDesignator, [designator]),
+      kCodeValue: new SH(PTag.kCodeValue, [code]),
+      kCodingSchemeDesignator: new SH(PTag.kCodingSchemeDesignator, [designator]),
       kCodeMeaning: new LO(kCodeMeaning, [meaning])
     };
 

@@ -12,8 +12,10 @@
 // See the AUTHORS file for other contributors.
 
 import 'package:core/core.dart';
-import 'package:deid/dictionary.dart';
+import 'package:dictionary/dictionary.dart';
+
 import 'package:deid/profile.dart';
+import 'package:deid/src/dictionary/basic_profile.dart';
 
 
 /*
@@ -58,9 +60,9 @@ List<DeIdentifer> get actionsList => [
   addIfMissing
 ];
 */
-final   defaultStringValue =  ["Open DICOMweb DeIdentifier: Dummy Value"];
+final List<String> defaultStringValue =  ["Open DICOMweb DeIdentifier: Dummy Value"];
 
-const basicProfileRemoveTags = const [
+const List<int> basicProfileRemoveTags = const [
   0x00001000, 0x00080024, 0x00080025, 0x00080034, 0x00080035, 0x00080081, 0x00080092,
   0x00080094, 0x00080096, 0x00080201, 0x00081030, 0x0008103e, 0x00081040, 0x00081048,
   0x00081049, 0x00081050, 0x00081052, 0x00081060, 0x00081062, 0x00081080, 0x00081084,
@@ -85,7 +87,7 @@ const basicProfileRemoveTags = const [
   0x00880910, 0x00880912, 0x04000100, 0x04000402, 0x04000403, 0x04000404, 0x04000550,
   0x04000561, 0x20300020, 0x40000010, 0x40004000, 0x40080042, 0x40080102, 0x4008010a,
   0x4008010b, 0x4008010c, 0x40080111, 0x40080114, 0x40080115, 0x40080118, 0x40080119,
-  0x4008011a, 0x40080202, 0x40080300, 0x40084000, 0xfffafffa, 0xfffcfffc
+  0x4008011a, 0x40080202, 0x40080300, 0x40084000, 0xfffafffa, 0xfffcfffc // don't reformat
 ];
 
 typedef bool DeIdentifer(Dataset ds, int tag, Trial trial, List<String> values) ;
@@ -133,48 +135,48 @@ class DeIdentifier {
     List<BasicProfile> bpList = BasicProfile.map.values.toList(growable: false);
 
     for (BasicProfile bp in bpList) {
-      int tag = bp.tag;
-      Element a = ds.lookup(bp.tag);
+      Tag tag = bp.tag;
+      Element a = ds[bp.tag];
       if (a == null) continue;
     //  print('begin: $a');
       //DeIdentifier f = actions[bp.action];
       switch (bp.action) {
         case "X":
-          remove(ds, tag, trial);
+          remove(ds, tag.code, trial);
           break;
         case "U":
-          print('U: tag=${tagToDcm(tag)}');
-          replaceUid(ds, tag, trial);
+          print('U: tag=${tag.dcm}');
+          replaceUid(ds, tag.code, trial);
           break;
         case "Z":
-          zeroOrDummy(ds, tag, trial);
+          zeroOrDummy(ds, tag.code, trial);
           break;
         case "XD":
-          XorD(ds, tag, trial);
+          XorD(ds, tag.code, trial);
           break;
         case "XZ":
-          XorZ(ds, tag, trial);
+          XorZ(ds, tag.code, trial);
           break;
         case "XZD":
-          XorZorD(ds, tag, trial);
+          XorZorD(ds, tag.code, trial);
           break;
         case "D":
-          dummy(ds, tag, trial);
+          dummy(ds, tag.code, trial);
           break;
         case "ZD":
-          ZorD(ds, tag, trial);
+          ZorD(ds, tag.code, trial);
           break;
         case "XZU":
-          XorZorU(ds, tag, trial);
+          XorZorU(ds, tag.code, trial);
           break;
         case "K":
-          keep(ds, tag, trial);
+          keep(ds, tag.code, trial);
           break;
         case "C":
-          clean(ds, tag, trial);
+          clean(ds, tag.code, trial);
           break;
       // case "A":
-      //   addIfMissing(ds, tag, trial);
+      //   addIfMissing(ds, tag.code, trial);
       //   break;
         default:
           throw "Invalid Action ${bp.action}";
@@ -185,7 +187,7 @@ class DeIdentifier {
   }
 
   bool remove(Dataset ds, int tag, Trial trial, [List values]) {
-    Element a = ds.lookup(tag);
+    Element a = ds[tag];
   //  print('remove: $a');
     if (a is SQ)
       return removeSequence(a, tag, trial);
@@ -202,8 +204,8 @@ class DeIdentifier {
   }
 
   bool replaceUid(Dataset ds, int tag, Trial trial, [List values]) {
-    print('DS: $ds, tag: ${tagToDcm(tag)}, values=$values');
-    DED e = DED.lookup(tag);
+    print('DS: $ds, tag: ${Tag.toDcm(tag)}, values=$values');
+    Tag e = PTag.lookupCode(tag);
     if (e.vr != VR.kUI) return false;
     switch (tag) {
       case kStudyInstanceUID:
@@ -222,7 +224,7 @@ class DeIdentifier {
       //TODO: what other Uids have to be replace
         ds.replaceUid(tag, values);
     }
-    print('replaceUid: tag${tagToDcm(tag)} values=$values');
+    print('replaceUid: tag${Tag.toDcm(tag)} values=$values');
     return ds.replaceUid(tag, values);
   }
 

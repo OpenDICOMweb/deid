@@ -32,7 +32,7 @@ void main() {
   for (int i = 0; i < deIdTags.length; i++) {
     int code = deIdTags[i];
 
-    DED e = DED.lookup(code);
+    Tag e = Tag.lookup(code);
     //   print('i: $i, element: $e');
     if (e == null) {
       print('bad Tag: ${tagToHex(code)}');

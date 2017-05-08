@@ -37,8 +37,11 @@ void main() {
 
   for (String filePath in fileList) {
     Profile profile = parseFile(filePath);
-    if (profile.errors.length > 0)
+    if (profile.errors.length > 0) {
       filesWithErrors.add([filePath, profile.errors]);
+      filesWithErrors.add(profile.errors);
+    }
+
 
     var fname = path.basenameWithoutExtension(filePath);
     print('fname: $fname');

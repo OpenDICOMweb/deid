@@ -6,8 +6,9 @@
 
 import 'dart:io';
 
+import 'package:common/common.dart';
 import 'package:core/core.dart';
-import 'package:encode/dicom.dart';
+import 'package:convertX/dicom.dart';
 
 String testData = "C:/odw/sdk/convert/test_data/";
 String testOutput = "C:/odw/sdk/convert/test_output/";
@@ -30,16 +31,16 @@ void main() {
   File file = new File(inPath);
   log.config('Reading file: $file');
   var bytes = file.readAsBytesSync();
-  Instance instance = DcmDecoder.decode(bytes);
-  var study = instance.study;
+  Dataset ds = DcmReader.rootDataset(bytes);
+  var study = ds.study;
   print(study.summary);
-  print(instance.format(new Formatter()));
+  print(ds.format(new Formatter()));
 
 
   //De-Identify
   //DeIdentifier deid = new DeIdentifier();
   //deid(instance);
-  study = instance.study;
+  study = ds.study;
   print('main:study: $study');
   print(study.summary);
   print(study.format(new Formatter()));

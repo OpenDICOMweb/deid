@@ -48,7 +48,7 @@ String getMembers(String cName, List<String> fieldTypes, List<List<String>> memb
       continue;
     var keyword = row[0];
     var tag = row[1];
-    DED e = DED.lookup(int.parse(tag));
+    Tag e = Tag.lookup(int.parse(tag));
     VR vr = e.vr;
     members.add('  static const k$keyword =\n'
                     '    const $cName("$keyword", $tag, VR.k${vr.name}, "$action");');

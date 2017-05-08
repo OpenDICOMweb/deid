@@ -87,7 +87,7 @@ class Contents extends Function {
   Contents(int tag, Pattern regex, Replacement replacement);
 
   List<String> call(Dataset ds, int tag, Pattern pattern, Replacement replacement) {
-    List<String> values = ds.lookup(tag).values;
+    List<String> values = ds[tag].values;
     List<String> results = [];
     for(String s in values)
         results.add(s.replaceAll(pattern, replacement.pattern));

@@ -7,8 +7,9 @@
 import 'dart:io';
 import 'dart:typed_data';
 
+import 'package:common/common.dart';
 import 'package:core/core.dart';
-import 'package:encode/dicom.dart';
+import 'package:convertX/dicom.dart';
 
 String inputDir = "C:/odw/test_data/sfd/CR/PID_MINT10/1_DICOM_Original/";
 String test_output = "C:/odw/sdk/deid/example/output";
@@ -19,7 +20,7 @@ String file2 = inputDir + "CR.2.16.840.1.114255.393386351.1568457295.48879.7.dcm
 List<String> filesList = [file1];
 
 void main() {
-  Logger log = Logger.init();
+  final Logger log = new Logger('example/deid_remove_group.dart');
   for (String path in filesList) {
     File file = new File(path);
     print('Reading file: $file');

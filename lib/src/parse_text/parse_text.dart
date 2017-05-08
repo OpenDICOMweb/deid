@@ -16,7 +16,7 @@ const String paramDef = '\\s*$id\\s*=\\s*$pValue\\s*';
 const String paramLine = '\\s*param\.$paramDef';
 
 // Parameter RegExp
-final paramLineRE = new RegExp('^$paramLine');
+final RegExp paramLineRE = new RegExp('^$paramLine');
 
 bool parseLine(Profile profile, int index, String line) {
   if ((parseParameterLine(profile, index, line)) ||
@@ -46,8 +46,8 @@ const String setName = r'(@\w+)';
 const String setArgs = r'([\w\*\&\,\@\-\"\^\[\]\s]*)';
 const String setFunction = '$setName\\($setArgs\\)';
 
-final setPrefixRE = new RegExp('$setPrefix');
-final setFunctionRE = new RegExp('$setFunction');
+final RegExp setPrefixRE = new RegExp('$setPrefix');
+final RegExp setFunctionRE = new RegExp('$setFunction');
 //final setLineRE = new RegExp('${setPrefix}$setFunction');
 
 
@@ -76,19 +76,19 @@ bool parseFunction(Profile profile, Rule rule, String line) {
   if (m == null) return false;
   rule.function = m[1];
   rule.args = (m[2] == "") ? [] : m[2].split(",");
-  line = line.substring(m.end);
-  // print('function: ${rule.function}, args: ${rule.args}, rest: $line');
+  String text = line.substring(m.end);
+  // print('function: ${rule.function}, args: ${rule.args}, rest: $text');
   switch (rule.function) {
     case "@append":
-      return parseAppend(profile, rule, line);
+      return parseAppend(profile, rule, text);
     case "@if":
-      return parseIf(profile, rule, line);
+      return parseIf(profile, rule, text);
     case "@param":
-      return parseParam(profile, rule, line);
+      return parseParam(profile, rule, text);
     default:
-      var s = line.trim();
+      var s = text.trim();
       if (s != "") {
-        profile.error(rule.index, line);
+        profile.error(rule.index, text);
       } else {
         profile.addRule(rule);
         return true;
@@ -196,21 +196,22 @@ final RegExp ifScriptRE = new RegExp(script);
 
 /// Scripts - Parse: '{<id>} | <id>...'
 bool parseIf(Profile profile, Rule rule, String line) {
-  print('Script: $line');
-  var sList = [];
+  String text = line;
+  print('Script: $text');
+  var sList = <String>[];
   for (int i = 0; i < 2; i++) {
-    Match m = ifScriptRE.firstMatch(line);
+    Match m = ifScriptRE.firstMatch(text);
     if (m == null)
-        return profile.error(rule.index, line);
+        return profile.error(rule.index, text);
    // printMatch(m);
-    print('len=${line.length}, script: "$line"');
+    print('len=${text.length}, script: "$text"');
     sList.add(m[0]);
-    line = line.substring(m.end);
+    text = text.substring(m.end);
   }
   rule.scripts = sList;
   print('scripts: $sList');
-  if (line.length > 0)
-    return profile.error(rule.index, line);
+  if (text.length > 0)
+    return profile.error(rule.index, text);
   profile.addRule(rule);
   return true;
 }

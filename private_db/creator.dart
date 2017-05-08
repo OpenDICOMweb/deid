@@ -4,6 +4,7 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu> -
 // See the AUTHORS file for other contributors.
 
+import 'package:common/common.dart';
 import 'package:dictionary/dictionary.dart';
 
 
@@ -42,7 +43,7 @@ class Manufacturer {
   String get groupsToJson {
     var out = "{\n";
     for(PCreator creator in creators)
-      out += '${intToHex(creator.group, 4)}: ${creator.json}\n';
+      out += '${Uint16.hex(creator.group)}: ${creator.json}\n';
     return out += '}\n';
   }
 
