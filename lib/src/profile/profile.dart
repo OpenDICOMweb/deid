@@ -6,44 +6,56 @@
 
 import 'dart:convert';
 
+import 'package:core/core.dart';
+
+import '../trial/trial.dart';
 import 'global_rule.dart';
 import 'rule.dart';
 import 'test_data.dart';
-import '../trial/trial.dart';
+
+typedef Element Updater(Element element);
 
 enum ProfileFormat { text, json, xml }
 
 class Profile {
+  /// The name of this profile.
   final String name;
+  /// A [String] containing the URL where the Profile is stored.
   final String path;
-  //TODO: integrate this
-  //final String quarantinePath;
-  final List<String> lines;
+  /// A [String] containing the URL of the Trial Server.
+  final String trialServer;
+  /// A [String] containing the URL of the Quarantine Server.
+  final String quarantinePath;
+//  final List<String> lines;
   final GlobalRule globals;
   final Map<String, dynamic> trialMap;
   final Map<String, String> parameters;
-  final List<int> keepTags;
+  final List<int> retainGroups;
+  final List<int> removeGroups;
+  final List<int> retainTags;
   final List<int> removeTags;
-  final List<Rule> rules;
+  final Map<int, Updater> updateMap;
   final Map<String, String> comments;
   final Map<String, String> errors;
 
-  Profile(this.name, this.path, this.lines)
+  Profile(this.name, this.path, this.trialServer, this.quarantinePath)
       : globals = new GlobalRule(),
         trialMap = testTrial,
         parameters = {},
-        keepTags = [],
+        retainGroups = [],
+        removeGroups = [],
+        retainTags = [],
         removeTags = [],
-        rules = [],
+        updateMap = {},
         comments = {},
         errors = {} {
     for(int code in removeTags)
-      if (keepTags.contains(code)) throw new ArgumentError('removeTags cannot contain and tags in'
+      if (retainTags.contains(code)) throw new ArgumentError('removeTags cannot contain and tags in'
           ' the keepTags list.');
   }
 
-  Profile._(this.name, this.path, this.lines, this.globals, this.trialMap, this.parameters,
-      this.keepTags, this.removeTags, this.rules, this.comments, this.errors);
+  Profile._(this.name, this.path, this.globals, this.trialMap, this.parameters,
+      this.retainTags, this.removeTags, this.comments, this.errors);
 
   //String get extension => '.dvp';
 
@@ -61,7 +73,7 @@ class Profile {
     rules.add(rule);
   }
 
-  bool keep(int tag) => keepTags.contains(tag);
+  bool keep(int tag) => retainTags.contains(tag);
 
   String lookup(String key) => parameters[key];
 

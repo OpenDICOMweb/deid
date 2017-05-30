@@ -19,7 +19,7 @@ class Trial {
   Map<String, String> parameters;
 
   Trial(this.id, this.name,  this.profile, this.parameters) {
-    keepTags.addAll(profile.keepTags);
+    keepTags.addAll(profile.retainTags);
     profile.evaluateTrial(this);
   }
 
