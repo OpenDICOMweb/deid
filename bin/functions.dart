@@ -15,12 +15,13 @@ class Replacement {
 
   }
 }
-abstract class Function {
+
+abstract class Func {
   static const String name = "";
   final List args;
   final List scripts;
 
-  Function([this.args, this.scripts]);
+  Func([this.args, this.scripts]);
 
   Type get type => runtimeType;
 
@@ -31,7 +32,7 @@ abstract class Function {
 }
 
 /// @always()
-class Always extends Function {
+class Always extends Func {
 
   Always();
 
@@ -42,7 +43,7 @@ class Always extends Function {
 }
 
 /// @append(){script}
-class Append extends Function {
+class Append extends Func {
 
   Append();
 
@@ -53,7 +54,7 @@ class Append extends Function {
 }
 
 /// @call(id, args)
-class Call extends Function {
+class Call extends Func {
   // the name of a callable plugin
   String id;
   Call(this.id, [args]);
@@ -65,7 +66,7 @@ class Call extends Function {
 }
 
 /// @blank(int n)
-class Blank extends Function {
+class Blank extends Func {
   // The number of blanks - n must be non-negative
 
   Blank();
@@ -82,7 +83,7 @@ class Blank extends Function {
 }
 
 /// @blank(int n)
-class Contents extends Function {
+class Contents extends Func {
 
   Contents(int tag, Pattern regex, Replacement replacement);
 
@@ -99,7 +100,7 @@ class Contents extends Function {
 }
 
 /// @date(String sep)
-class Date extends Function {
+class Date extends Func {
 
   Date(int tag, Pattern regex, Replacement replacement);
 
@@ -114,9 +115,9 @@ class Date extends Function {
 }
 
 /// @encrypt(int tag, key)
-/// key may be a [tag] or [String]
-/// If key is [tag] the value of the [tag] is used as the key.
-class Encrypt extends Function {
+/// key may be a [code] or [String]
+/// If key is [code] the value of the [code] is used as the key.
+class Encrypt extends Func {
 
   Encrypt(int tag, [key]);
 

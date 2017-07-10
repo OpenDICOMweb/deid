@@ -9,7 +9,7 @@ import 'package:dictionary/dictionary.dart';
 import 'src/deid_tags.dart';
 import 'src/gen_utils.dart';
 
-/// Create a JSON object of [DeId] [Elements] by [VR] and [VM]
+/// Create a JSON object of [DeId] [Tag]s by [VR] and [VM]
 
 List vrs = new List(32);
 List<List<Tag>> vrElements = new List(32);
@@ -37,7 +37,7 @@ void main() {
   writeFile('json','deid_by_vr', json);
 }
 
-void checkCount(vrElements) {
+void checkCount(List<List<Tag>> vrElements) {
   var tagCount = deIdTags.length;
   var total = 0;
   for (int i = 0; i < vrElements.length; i++) {
@@ -58,7 +58,7 @@ String toJson(List vrs, List<List<Tag>> vrElements) {
     List<String> elts = [];
     vrElements[i].forEach((Tag e) {
       if (e != null)
-        elts.add('"${hex(e.code)}": "${e.id}"');
+        elts.add('"${hex(e.code)}": "${e.keyword}"');
     });
     String map = '{\n${elts.join(',\n')}\n}';
     vrList.add('"${vrs[i].name}": $map');

@@ -9,7 +9,7 @@ import 'dart:typed_data';
 
 import 'package:common/common.dart';
 import 'package:core/core.dart';
-import 'package:convertX/dicom.dart';
+import 'package:dsc_convert/dicom.dart';
 
 String inputDir = "C:/odw/test_data/sfd/CR/PID_MINT10/1_DICOM_Original/";
 String test_output = "C:/odw/sdk/deid/example/output";

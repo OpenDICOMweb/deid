@@ -8,7 +8,7 @@ import 'dart:io';
 
 import 'package:common/common.dart';
 import 'package:core/core.dart';
-import 'package:convertX/dicom.dart';
+import 'package:dsc_convert/dcm.dart';
 
 String testData = "C:/odw/sdk/convert/test_data/";
 String testOutput = "C:/odw/sdk/convert/test_output/";
@@ -26,22 +26,18 @@ String output = "output.dcm";
 
 void main() {
   Logger log = new Logger("deid_test");
-  String inPath = testData + crf1;
+  String path = testData + crf1;
 
-  File file = new File(inPath);
-  log.config('Reading file: $file');
-  var bytes = file.readAsBytesSync();
-  Dataset ds = DcmReader.rootDataset(bytes);
-  var study = ds.study;
-  print(study.summary);
-  print(ds.format(new Formatter()));
+  log.config('Reading file: $path');
+  RootTagDataset rds = TagReader.readPath(path);
+  print(rds.format(new Formatter()));
 
 
-  //De-Identify
+/*  //De-Identify
   //DeIdentifier deid = new DeIdentifier();
   //deid(instance);
-  study = ds.study;
+
   print('main:study: $study');
   print(study.summary);
-  print(study.format(new Formatter()));
+  print(study.format(new Formatter()));*/
 }

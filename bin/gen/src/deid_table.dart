@@ -10,11 +10,12 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu> -
 // See the AUTHORS file for other contributors.
 
-import 'gen_utils.dart';
+import 'package:dictionary/dictionary.dart';
+
 
 class DeIdTable {
-  static const keywordOffset = 0;
-  static const tagOffset = 1;
+  static const int keywordOffset = 0;
+  static const int tagOffset = 1;
   List<int> deIdTags;
 
   DeIdTable(this.deIdTags);
@@ -27,15 +28,14 @@ class DeIdTable {
     List<String> members = new List(count);
 
     for (int i = 0; i < deIdTags.length; i++) {
-      int tag = deIdTags[i];
-      Tag e = Tag.lookup(tag);
-      if (e == null) {
-        print('bad Tag: ${tagToHex(tag)}');
+      int code = deIdTags[i];
+      Tag tag = Tag.lookup(code);
+      if (tag == null) {
+        print('bad Tag: ${tag.hex}');
       } else {
-        var tag = toHex(e.code);
-        var keyword = e.id;
-        var vr = 'VR.k${e.vr.name}';
-        var vm = e.vm;
+        var keyword = tag.keyword;
+        var vr = tag.vr;
+        var vm = tag.vm;
         var single = vm.isSingleton;
         members[i] =
         '  static const k$keyword =\n'
@@ -51,15 +51,15 @@ class DeIdTable {
     List<String> valueList = [];
 
     for (int i = 0; i < deIdTags.length; i++) {
-      int tag = deIdTags[i];
-      Tag e = Tag.lookup(tag);
-      if (e == null) {
-        print('bad Tag: ${tagToHex(tag)}');
+      int code = deIdTags[i];
+      Tag tag = Tag.lookup(code);
+      if (tag == null) {
+        print('bad Tag: ${tag.hex}');
       } else {
-        var tag = toHex(e.code);
-        var keyword = e.id;
-        kvPairs.add('    $tag: k$keyword');
-        keyList.add('    $tag');
+        var code = "${tag.hex}";
+        var keyword = tag.keyword;
+        kvPairs.add('    $keyword}');
+        keyList.add('    $code');
         valueList.add('    k$keyword');
       }
     }

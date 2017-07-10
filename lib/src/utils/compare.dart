@@ -11,8 +11,8 @@ class DSComparison {
   List diff = [];
 
   DSComparison(Dataset ds0, Dataset ds1) {
-    List<Element> elements0 = ds0.eMap.values.toList(growable: false);
-    List<Element> elements1 = ds1.eMap.values.toList(growable: false);
+    List<Element> elements0 = ds0.map.values.toList(growable: false);
+    List<Element> elements1 = ds1.map.values.toList(growable: false);
     int length0 = elements0.length;
     int length1 = elements1.length;
     int index0 = 0;
@@ -89,10 +89,10 @@ class DSComparison {
     }
   }
 
-  void compareItems(Item item0, Item item1) {
+  void compareItems(TagItem item0, TagItem item1) {
     print('item0: $item0\nitem1: $item1');
-    var map0 = item0.eMap.values.toList(growable: false);
-    var map1 = item1.eMap.values.toList(growable: false);
+    var map0 = item0.map.values.toList(growable: false);
+    var map1 = item1.map.values.toList(growable: false);
     print('map0: $map0\nmap1: $map1');
 
     if (map0.length == map1.length) {

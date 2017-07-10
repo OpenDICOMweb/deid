@@ -10,7 +10,7 @@ import 'dart:typed_data';
 import 'package:common/common.dart';
 import 'package:core/core.dart';
 import 'package:deid/deid.dart';
-import 'package:convertX/dicom.dart';
+import 'package:dsc_convert/dicom.dart';
 
 String inputDir = "C:/odw/test_data/sfd/CR/PID_MINT10/1_DICOM_Original/";
 String testOutput = "C:/odw/sdk/deid/example/output";
@@ -30,7 +30,7 @@ void main() {
 
     Instance instance = readEntity(file1);
     print('Initial Total Elements: ${instance.dataset.elements.length}');
-    print('***Identified:\n${instance.patient.format(new Formatter(maxDepth: 5))}');
+    print('***Identified:\n${instance.subject.format(new Formatter(maxDepth: 5))}');
 
     List<Element> removed = [];
     Dataset ds = instance.dataset;
@@ -54,7 +54,7 @@ void main() {
     print('Removed Elements: ${removed.length}');
     for (Element a in removed)
     print('  $a');
-   print('***DeIdentified:\n${instance.patient.format(new Formatter(maxDepth: 5))}');
+   print('***DeIdentified:\n${instance.subject.format(new Formatter(maxDepth: 5))}');
   }
 
 
@@ -65,5 +65,5 @@ void main() {
 Instance readEntity(String path) {
   File file = new File(path);
   Uint8List bytes = file.readAsBytesSync();
-  return DcmReader.rootDataset(bytes);
+  return TagReader.readBytes(bytes);
 }

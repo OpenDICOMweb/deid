@@ -103,22 +103,22 @@ class PCreator {
 }
 
 class PElement {
-  final int tag;
+  final int code;
   final VR vr;
   final VM vm;
   final Action action;
   final String description;
   final String creator;
 
-  const PElement(this.tag, this.vr, this.vm, this.action, this.description, this.creator);
+  const PElement(this.code, this.vr, this.vm, this.action, this.description, this.creator);
 
-  int get group => tagGroup(tag);
-  int get element => tagElement(tag);
-  String get name => 'k${tagElementHex(element)}';
+  int get group => Group.fromTag(code);
+  int get element => Elt.fromTag(code);
+  String get name => 'k${code.hex(element)}';
 
   String get json => '''
   {
-    "tag": ${tagToHex(tag)},
+    "tag": ${Tag.toDcm(code)},
     "vr": $vr,
     "vm": $vm,
     "action": $action,

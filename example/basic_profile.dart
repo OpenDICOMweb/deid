@@ -11,7 +11,7 @@ import 'package:common/common.dart';
 import 'package:core/core.dart';
 import 'package:deid/deid.dart';
 import 'package:deid/src/deid/deidentifier.dart';
-import 'package:convertX/encoder.dart';
+import 'package:dsc_convert/encoder.dart';
 
 String inputDir = "C:/odw/test_data/sfd/CR/PID_MINT10/1_DICOM_Original/";
 String testOutput = "C:/odw/sdk/deid/example/output";

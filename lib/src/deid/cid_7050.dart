@@ -43,10 +43,10 @@ class DeIdentificationMethod extends ContextGroup {
     Map<int, Element> map = {
       kCodeValue: new SH(PTag.kCodeValue, [code]),
       kCodingSchemeDesignator: new SH(PTag.kCodingSchemeDesignator, [designator]),
-      kCodeMeaning: new LO(kCodeMeaning, [meaning])
+      kCodeMeaning: new LO(PTag.kCodeMeaning, [meaning])
     };
 
-    return new Item(kDeidentificationMethodCodeSequence, map, kUndefinedLength, true);
+    return new TagItem(kDeidentificationMethodCodeSequence, map, kUndefinedLength, true);
   }
 
   String toString() => "CID$number($designator) $name";

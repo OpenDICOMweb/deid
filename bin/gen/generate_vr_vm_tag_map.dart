@@ -27,7 +27,7 @@ void main() {
     Tag e = Tag.lookup(code);
     //   print('i: $i, element: $e');
     if (e == null) {
-      print('bad Tag 1: ${tagToHex(code)}');
+      print('bad Tag 1: ${Tag.toDcm(code)}');
     } else {
     //  print('1: $e');
       VR vr = e.vr;
@@ -69,20 +69,20 @@ String vrMapToJson(Map<VR, Map<VM, List<Tag>>> vrMap) {
     var vmList = <String>[];
     vmMap.forEach((VM vm, List<Tag> elements) {
       var eList = <String>[];
-      elements.forEach((Tag e) {
-        Tag de = Tag.lookup(e.code);
-        BasicProfile bp = BasicProfile.lookup(e.code);
+      elements.forEach((Tag tag) {
+        Tag de = Tag.lookup(tag.code);
+        BasicProfile bp = BasicProfile.lookup(tag.code);
         //print('de: $de');
         if (de == null) {
-          print('bad Tag 2: ${tagToHex(e.code)}');
+          print('bad Tag 2: ${Tag.toDcm(tag.code)}');
           print('vmMap: $vmMap');
         } else if (bp == null) {
-          print('bad Tag 3: ${tagToHex(e.code)}');
+          print('bad Tag 3: ${Tag.toDcm(tag.code)}');
           print('vmMap: $vmMap');
 
         } else {
           // print('tag: ${e.code.hex}');
-          eList.add('"${e.id}": ["${e.hex}", "${bp.keyword}"]');
+          eList.add('"${tag.keyword}": ["${tag.hex}", "${bp.tag}"]');
         }
       });
 

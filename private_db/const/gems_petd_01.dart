@@ -5,16 +5,17 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu>
 // See the AUTHORS file for other contributors.
 
+import 'package:dictionary/dictionary.dart';
 import 'package:core/core.dart';
-import 'private_element.dart';
+//import 'private_element.dart';
 import 'action.dart';
 
-class GEMSPrivateElement extends PrivateElement {
+class GEMSPrivateTag extends PrivateTag {
   static const String manufacturerId = "GEMS";
   static const Modality modality = Modality.kPT;
   final String creatorId = "GEMS_PETD_01";
 
-  const GEMSPrivateElement(int tag, VR vr, VM vm, Action action, String description)
+  const GEMSPrivateTag(int tag, VR vr, VM vm, Action action, String description)
       : super(tag, vr, vm, action, description);
 
   String get json => super.toJson(creatorId);

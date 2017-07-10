@@ -16,9 +16,9 @@ const String fileExt = '.txt';
 
 ///TODO: doc
 void main() {
-  List<List<String>> filesWithErrors = [];
+  List filesWithErrors = [];
   List<FileSystemEntity> dirList;
-  List<String> fileList = [];
+  List<String> fileList = <String>[];
 
   Directory testDir = new Directory(testDirPath);
   dirList = testDir.listSync(recursive: true);
@@ -77,7 +77,7 @@ List<String> readLinesFromFile(String path) {
   return lines;
 }
 
-void writeProfileFile(outPath, Profile profile) {
+void writeProfileFile(String outPath, Profile profile) {
   File outFile = new File(outPath);
   print('outFile: ${outFile.path}');
   outFile.writeAsStringSync(profile.json);

@@ -120,44 +120,45 @@ class PrivateDataCharacteristics {
       const PrivateDataCharacteristics("DeidentificationAction", 0x00080307,
           "Deidentification Action", VR.kCS, VM.k1, EType.k1, false);
 
-  static SQ get(Dataset ds) => ds[kPrivateDataElementCharacteristicsSequence];
+  static SQ get(TagDataset ds) => ds[PTag.kPrivateDataElementCharacteristicsSequence.code];
 
 //TODO: finish, Test
   //TODO: should the Private Data Charistic Sequence be removed?
-  static void process(Dataset ds, bool keepSafe) {
-    SQ sq = ds[kPrivateDataElementCharacteristicsSequence];
-    for (Item item in sq.items) {
-      int pGroup = item[kPrivateGroupReference].value;
+  static void process(TagDataset ds, bool keepSafe) {
+    SQ sq = ds[PTag.kPrivateDataElementCharacteristicsSequence.code];
+    for (TagItem item in sq.items) {
+      int pGroup = item[PTag.kPrivateGroupReference.code].value;
       int pSetBase = (pGroup << 16);
-      String creatorToken = item[kPrivateCreatorReference].value;
+      String creatorToken = item[PTag.kPrivateCreatorReference.code].value;
       int creator = findCreator(ds, pSetBase, creatorToken);
-      int pdBase = privateGroupBase(creator);
-      String status = item[kBlockIdentifyingInformationStatus].value;
+      int pdBase = Tag.privateCreatorBase(creator);
+      String status = item[PTag.kBlockIdentifyingInformationStatus.code].value;
       if ((keepSafe == false) || (status == "UNSAFE")) {
         ds.removePrivateGroup(creatorToken);
       } else if ((status == "SAFE") && (keepSafe == true)) {
         continue;
       } else if (status == "MIXED") {
-        //List<int> nonIdentifying = item[kNonidentifyingPrivateElements].value;
-        SQ actionSeq = item[kDeidentificationActionSequence];
+        //List<int> nonIdentifying = item[PTag.kNonidentifyingPrivateElements].value;
+        SQ actionSeq = item[PTag.kDeidentificationActionSequence.code];
         if (actionSeq == null) continue;
-        for (Item item in sq.items) {
-          Uint8List pdOffsets = item[kIdentifyingPrivateElements].values;
-          List<String> actions = item[kDeidentificationActionSequence].values;
+        for (TagItem item in sq.items) {
+          Uint8List pdOffsets = item[PTag.kIdentifyingPrivateElements.code].values;
+          List<String> actions = item[PTag.kDeidentificationActionSequence.code].values;
           for (int i = 0; i < pdOffsets.length; i++) {
-            int tag = pdBase + pdOffsets[i];
+            int code = pdBase + pdOffsets[i];
+            Tag tag = Tag.lookup(code);
             switch (actions[i]) {
               case "D":
-                ds[tag].replace([]);
+                ds[code].update();
                 continue;
               case "Z":
-                ds[tag].noValues();
+                ds[code].noValues;
                 continue;
               case "X":
                 ds.remove(tag);
                 continue;
               case "U":
-                ds.replaceUid(tag);
+                ds.replaceUids(tag);
                 continue;
             }
           }
@@ -166,7 +167,7 @@ class PrivateDataCharacteristics {
     }
   }
 
-  static int findCreator(Dataset ds, int pSetBase, String token) {
+  static int findCreator(TagDataset ds, int pSetBase, String token) {
     int min = pSetBase + 0x0010;
     int max = pSetBase + 0x00FF;
     for (int i = min; i <= max; i++) if ((ds[i] != null) && (ds[i].value == token)) return i;

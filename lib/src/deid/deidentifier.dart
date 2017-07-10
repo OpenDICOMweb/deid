@@ -90,7 +90,7 @@ const List<int> basicProfileRemoveTags = const [
   0x4008011a, 0x40080202, 0x40080300, 0x40084000, 0xfffafffa, 0xfffcfffc // don't reformat
 ];
 
-typedef bool DeIdentifer(Dataset ds, int tag, Trial trial, List<String> values) ;
+typedef bool DeIdentifer(TagDataset ds, int tag, Trial trial, List<String> values) ;
 
 //TODO: add global rules
 class DeIdentifier {
@@ -113,13 +113,13 @@ class DeIdentifier {
 
   //List<String> getValues(Trial trial, List<String> values) {}
 
-  Dataset fmi(Dataset fmi) {
+  TagDataset fmi(TagDataset fmi) {
     print('FMI: $fmi');
     replaceUid(fmi, kMediaStorageSOPInstanceUID, trial, deIdInstanceUid);
     return fmi;
   }
 
-  Dataset call(Dataset ds) {
+  TagDataset call(TagDataset ds) {
 
     // ** ds.keepTags.addAll(trial.keepTags);
 
@@ -136,47 +136,48 @@ class DeIdentifier {
 
     for (BasicProfile bp in bpList) {
       Tag tag = bp.tag;
-      Element a = ds[bp.tag];
-      if (a == null) continue;
+
+      if (tag == null) continue;
+      int code = tag.code;
     //  print('begin: $a');
       //DeIdentifier f = actions[bp.action];
       switch (bp.action) {
         case "X":
-          remove(ds, tag.code, trial);
+          remove(ds, code, trial);
           break;
         case "U":
           print('U: tag=${tag.dcm}');
-          replaceUid(ds, tag.code, trial);
+          replaceUid(ds, code, trial);
           break;
         case "Z":
-          zeroOrDummy(ds, tag.code, trial);
+          zeroOrDummy(ds, code, trial);
           break;
         case "XD":
-          XorD(ds, tag.code, trial);
+          XorD(ds, code, trial);
           break;
         case "XZ":
-          XorZ(ds, tag.code, trial);
+          XorZ(ds, code, trial);
           break;
         case "XZD":
-          XorZorD(ds, tag.code, trial);
+          XorZorD(ds, code, trial);
           break;
         case "D":
-          dummy(ds, tag.code, trial);
+          dummy(ds, code, trial);
           break;
         case "ZD":
-          ZorD(ds, tag.code, trial);
+          ZorD(ds, code, trial);
           break;
         case "XZU":
-          XorZorU(ds, tag.code, trial);
+          XorZorU(ds, code, trial);
           break;
         case "K":
-          keep(ds, tag.code, trial);
+          keep(ds, code, trial);
           break;
         case "C":
-          clean(ds, tag.code, trial);
+          clean(ds, code, trial);
           break;
       // case "A":
-      //   addIfMissing(ds, tag.code, trial);
+      //   addIfMissing(ds, code, trial);
       //   break;
         default:
           throw "Invalid Action ${bp.action}";
@@ -186,89 +187,89 @@ class DeIdentifier {
     return ds;
   }
 
-  bool remove(Dataset ds, int tag, Trial trial, [List values]) {
+  bool remove(TagDataset ds, int tag, Trial trial, [List values]) {
     Element a = ds[tag];
-  //  print('remove: $a');
-    if (a is SQ)
-      return removeSequence(a, tag, trial);
-    return ds.remove(tag);
+    if (a == null) return false;
+    if (a is SQ) return removeSequence(a, tag, trial);
+    ds.remove(tag);
+    return true;
   }
 
   bool removeSequence(SQ sq, int tag, Trial trial) {
     if ((sq.items != null) || (sq.items.length != 0)) {
-      for (Item item in sq.items) {
+      for (TagItem item in sq.items) {
         call(item);
       }
     }
     return true;
   }
 
-  bool replaceUid(Dataset ds, int tag, Trial trial, [List values]) {
-    print('DS: $ds, tag: ${Tag.toDcm(tag)}, values=$values');
-    Tag e = PTag.lookupCode(tag);
-    if (e.vr != VR.kUI) return false;
+  TagElement replaceUid(TagDataset ds, int code, Trial trial, [List values]) {
+    print('DS: $ds, tag: ${Tag.toDcm(code)}, values=$values');
+    Tag tag = PTag.lookupCode(code);
+    if (tag.vr != VR.kUI) return null;
     switch (tag) {
       case kStudyInstanceUID:
         print('seriesUid: $deIdStudyUid');
-        return ds.replaceUid(tag, deIdStudyUid);
+        return ds. replaceUids(tag, deIdStudyUid);
       case kSeriesInstanceUID:
         print('seriesUid: $deIdSeriesUid');
-        return ds.replaceUid(tag, deIdSeriesUid);
+        return ds. replaceUids(tag, deIdSeriesUid);
       case kSOPInstanceUID:
         print('instanceUid: $deIdInstanceUid');
-        return ds.replaceUid(tag, deIdInstanceUid);
+        return ds. replaceUids(tag, deIdInstanceUid);
       case kMediaStorageSOPInstanceUID:
         print('MediaStorageUid: $deIdInstanceUid');
-        return ds.replaceUid(tag, deIdInstanceUid);
+        return ds. replaceUids(tag, deIdInstanceUid);
       default:
       //TODO: what other Uids have to be replace
-        ds.replaceUid(tag, values);
+        ds. replaceUids(tag, values);
     }
-    print('replaceUid: tag${Tag.toDcm(tag)} values=$values');
-    return ds.replaceUid(tag, values);
+    print(' replaceUids: tag${Tag.toDcm(tag)} values=$values');
+    return ds. replaceUids(tag, values);
   }
 
-  bool keep(Dataset ds, int tag, Trial trial, [List values ]) =>
+  void keep(TagDataset ds, int tag, Trial trial, [List values ]) =>
       ds.keep(tag);
 
-  bool dummy(Dataset ds, int tag, Trial trial, [List values ]) =>
+  bool dummy(TagDataset ds, int tag, Trial trial, [List values ]) =>
       ds.replace(tag, values);
 
-  bool zeroOrDummy(Dataset ds, int tag, Trial trial, [List values ]) {
+  bool zeroOrDummy(TagDataset ds, int tag, Trial trial, [List values ]) {
     //TODO: fix when we know ATypes
     return ds.replace(tag, values);
   }
 
-  bool clean(Dataset ds, int tag, Trial trial, [List values ]) {
+  bool clean(TagDataset ds, int tag, Trial trial, [List values ]) {
     return ds.replace(tag, values);
   }
 
-  bool ZorD(Dataset ds, int tag, Trial trial, [List values ]) {
+  bool ZorD(TagDataset ds, int tag, Trial trial, [List values ]) {
     //TODO: fix when we know ATypes
     return dummy(ds, tag, trial, values);
   }
 
-  bool XorZ(Dataset ds, int tag, Trial trial, [List values ]) {
+  bool XorZ(TagDataset ds, int tag, Trial trial, [List values ]) {
     //TODO: fix when we know ATypes
     return zeroOrDummy(ds, tag, trial, values);
   }
 
-  bool XorD(Dataset ds, int tag, Trial trial, [List values ]) {
+  bool XorD(TagDataset ds, int tag, Trial trial, [List values ]) {
     //TODO: fix when we know ATypes
     return dummy(ds, tag, trial, values);
   }
 
-  bool XorZorD(Dataset ds, int tag, Trial trial, [List values ]) {
+  bool XorZorD(TagDataset ds, int tag, Trial trial, [List values ]) {
     //TODO: fix when we know ATypes
     return dummy(ds, tag, trial, values);
   }
 
-  bool XorZorU(Dataset ds, int tag, Trial trial, [List values ]) {
+  bool XorZorU(TagDataset ds, int code, Trial trial, [List values ]) {
     //TODO: fix when we know ATypes
-    return replaceUid(ds, tag, trial, values);
+    return  ds.replaceUids(code, trial, values);
   }
 
-  bool addIfMissing(Dataset ds, List<String> values) {
+  bool addIfMissing(TagDataset ds, List<String> values) {
     //TODO: finish
     return false;
   }

@@ -11,19 +11,19 @@ import 'package:deid/src/deid/other/deidentifier.dart';
 import 'deid_method_code.dart';
 
 class DeIdMethod {
-  final tag = kDeidentificationMethodCodeSequence;
-  final method = DeIdentifier.method;
-  final List<int> codes;
+  final Tag tag = PTag.kDeidentificationMethodCodeSequence;
+  final DeIdmethod = DeIdentifier.method;
+  final List<String> codes;
 
   DeIdMethod(this.codes) {
-    if (! DeIdMethodCode.isValidList(codes))
+    if (! tag.hasValidValues(codes))
       throw "Invalid code in List";
   }
 
   Map<int, Element> get elements => {
     //TODO: make e1 a constant
     kPatientIdentityRemoved: new CS(PTag.kPatientIdentityRemoved, ["Yes"]),
-    kDeidentificationMethod: new LO(PTag.kDeidentificationMethod, [codes]),
+    kDeidentificationMethod: new LO(PTag.kDeidentificationMethod, codes),
     //TODO: figure out whether deidentificationMethod or deidMethodCodeSeq is preferrable.
    // kDeidentificationMethodCodeSequence: new DeIdentificationMethodCodeSequence(codes)
   };

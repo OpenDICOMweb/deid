@@ -1,9 +1,8 @@
 // Copyright (c) 2016, Open DICOMweb Project. All rights reserved.
 // Use of this source code is governed by the open source license
 // that can be found in the LICENSE file.
-// Original author: Jim Philbin <jfphilbin@gmail.edu> - 
+// Original author: Jim Philbin <jfphilbin@gmail.edu> -
 // See the AUTHORS file for other contributors.
-
 
 import 'package:core/core.dart';
 import 'package:dictionary/dictionary.dart';
@@ -18,15 +17,14 @@ class CleanPixelData {
 
   CleanPixelData(this.tag, this.keyword, this.action);
 
-  static final CleanPixelData kAttributeBurnedInAnnotation =
-    new CleanPixelData(0x00280301, "Attribute Burned In Annotation", Action.A);
+  static final CleanPixelData kAttributeBurnedInAnnotation = new CleanPixelData(
+      0x00280301, "Attribute Burned In Annotation", Action.kA);
 
-  bool call(Dataset ds, {
-      bool removePixelDataFlag: false,
+  bool call(Dataset ds,
+      {bool removePixelDataFlag: false,
       bool removeIconPixelDataFlag: false,
       bool removeFloatPixelDataFlag: false,
-      bool removeDoubleFloatPixelDataFlag: false
-      }) {
+      bool removeDoubleFloatPixelDataFlag: false}) {
     Element a = ds[kAttributeBurnedInAnnotation];
     if ((a != null) && (a.value == "NO")) return true;
     if (removeIconPixelDataFlag) removeIconPixelData(ds);
@@ -39,7 +37,6 @@ class CleanPixelData {
     //TODO: implement
     return false;
   }
-
 }
 
 //TODO: doc
@@ -49,10 +46,10 @@ class CleanRecognizableVisualFeaturesOptions {
   final String keyword;
   final Action action;
 
-  const CleanRecognizableVisualFeaturesOptions(this.tag, this.keyword, this.action);
+  const CleanRecognizableVisualFeaturesOptions(
+      this.tag, this.keyword, this.action);
 
-  static final CleanRecognizableVisualFeaturesOptions kAttributeBurnedInAnnotation =
-  new CleanRecognizableVisualFeaturesOptions(0x00280301, "Attribute Burned In Annotation", Action.A);
-
-
+  static final CleanRecognizableVisualFeaturesOptions
+      kAttributeBurnedInAnnotation = new CleanRecognizableVisualFeaturesOptions(
+          0x00280301, "Attribute Burned In Annotation", Action.kA);
 }

@@ -6,7 +6,7 @@
 
 import 'dart:io';
 
-import 'package:core/core.dart';
+import 'package:dictionary/dictionary.dart';
 
 import 'src/deid_tags.dart';
 
@@ -35,7 +35,7 @@ void main() {
     Tag e = Tag.lookup(code);
     //   print('i: $i, element: $e');
     if (e == null) {
-      print('bad Tag: ${tagToHex(code)}');
+      print('bad Tag: ${Tag.toDcm(code)}');
     } else {
       if (e.vm == VM.k1) continue;
       mvTags.add(code);
@@ -94,8 +94,8 @@ String vrMapToJson(Map<VR, Map<VM, List<Tag>>> vrMap) {
 
 String mvTagsToJson(List<int> mvTags) {
   List<String> sList = [];
-  mvTags.forEach((int tag) {
-    sList.add(''"${tagToHex(tag)}"'');
+  mvTags.forEach((int code) {
+    sList.add(''"${Tag.toDcm(code)}"'');
   });
   var s = '[ ${sList.join(',\n')}]';
   print('mvtags = $s');

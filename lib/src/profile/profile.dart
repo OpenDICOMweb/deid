@@ -116,11 +116,14 @@ class Profile {
     }
   }
 
-  Profile evaluateTrial(Trial trial) {}
+  Profile evaluateTrial(Trial trial) {
 
+  }
+
+  @override
   String toString() => 'Profile: $name';
 
-  static parse(String s) {
+  static Profile parse(String s) {
     Map map = JSON.decode(s);
     return new Profile._(map["name"], map["path"], map["lines"], map["globals"], map["trialMap"],
         map["pMap"], map["keepTags"], map["removeTags"], map["rules"], map["comments"],

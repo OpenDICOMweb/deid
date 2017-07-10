@@ -1,12 +1,11 @@
 // Copyright (c) 2016, Open DICOMweb Project. All rights reserved.
-
 // Use of this source code is governed by the open source license
 // that can be found in the LICENSE file.
 // Author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
-import 'package:core/core.dart';
 import 'package:deid/dictionary.dart';
+import 'package:dictionary/dictionary.dart';
 
 List basicProfileAndOptions = [
   "BasicProfile",
@@ -21,7 +20,7 @@ List basicProfileAndOptions = [
   "CleanGraphics"
 ];
 
-void main(args) {
+void main() {
   Map<String, Map<String, List<int>>> keepRemoveTags = {};
 
   keepRemoveTags["BasicProfile"] =
@@ -60,7 +59,7 @@ void main(args) {
     map.forEach((key, values){
       List<String> tags = [];
       values.forEach((value){
-        tags.add('${tagToHex(value)}');
+        tags.add('${Tag.toHex(value)}');
       });
       innerList.add('\n$indent3"$key": const [${tags.join(", ")}]');
     });
