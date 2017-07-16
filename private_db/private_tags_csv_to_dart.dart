@@ -137,10 +137,10 @@ class PrivateGroup {
   String get tail => "\n}\n";
 
   String get code {
-    print('head: $privateGroupHead()');
+    print('head: $headers');
     print('definition: $privateGroupDefinitions');
     print('head: $tail');
-    return '${privateGroupHead()}$privateGroupDefinitions$tail';
+    return '$headers$privateGroupDefinitions$tail';
   }
 
 }

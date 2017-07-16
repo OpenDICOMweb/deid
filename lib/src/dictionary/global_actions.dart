@@ -10,14 +10,14 @@ import 'basic_profile.dart';
 import 'tag_group.dart';
 
 //TODO: document the priorities
-/// This [class] manages the keeping and removing of Global and private tags.
+/// This [class] manages the retaining and removing of Global and private tags.
 class GlobalActions {
   static const List<int> defaultKeepGroups = const <int>[];
 
   /// A list of Tags that should be kept (i.e. not removed) in the [TagDataset].
   /// If a tag is in this list it will not be modified or removed, even if other rules
   /// specify that it should be modified or removed.
-  List<int> keep;
+  List<int> retain;
 
   /// A list of Tags that should be removed from the [TagDataset].
   /// If a tag is in this list it will be removed, even if other rules
@@ -26,10 +26,10 @@ class GlobalActions {
 
   /// A [List] of [TagGroup]s that should be retained in the TagDataset.  A Tag Code in the
   /// [remove] [List] can override these rules.
-  List<TagGroup> keepGroups;
+  List<TagGroup> retainGroups;
 
   /// A [List] of [TagGroup]s that should be removed from the TagDataset.  A Tag Code in the
-  /// [keep] [List] can override these rules.
+  /// [retain] [List] can override these rules.
   List<TagGroup> removeGroups;
 
   /// If [false], all private tags will be removed.  If [true], the Private Data
@@ -37,7 +37,7 @@ class GlobalActions {
   /// if any, private tags to retain.  If the TagDataset does not contain a
   /// Private Data Element Characteristics Sequence, all private tags will be
   /// removed.
-  bool keepSafePrivate;
+  bool retainSafePrivate;
 
   /// A [List] of [String]s that identify Private Group Creators.
   ///
@@ -51,24 +51,28 @@ class GlobalActions {
   /// Private Data Element Characteristics Sequence (0008,0300).  The Private
   /// Groups associated with any Private Group Creators that don't match this
   /// [List] will be removed.
-  List<String> keepPrivateCreators;
+  List<String> retainPrivateCreators;
 
   /// Creates a set of [GlobalActions] for de-identification.
   GlobalActions({
-      this.keep: BasicProfile.keep,
-      this.remove: BasicProfile.remove,
-      this.keepGroups: TagGroup.defaultKeepGroups,
+      this.retain: BasicProfile.retainList,
+      this.remove: BasicProfile.removeList,
+      this.retainGroups: TagGroup.defaultKeepGroups,
       this.removeGroups: TagGroup.defaultRemoveGroups,
-      this.keepSafePrivate: false,
-      this.keepPrivateCreators}) {
-    if (areKeepGroupsInconsistent || areKeepTagsInconsistent)
-      throw "Inconsistent keep/remove groups";
+      this.retainSafePrivate: false,
+      this.retainPrivateCreators}) {
+    if (areRetainedGroupsInconsistent || areRemoveTagsInconsistent) {
+      var groups = new List.from(retainGroups);
+      groups.addAll(retainGroups);
+      throw new InconsistentRetainOrRemoveGroupsError(groups);
+    }
+
   }
 
   /// If [true] the Element with this Tag Code should be retained.
   bool isKeeper(int tagCode) {
-    if (keep.contains(tagCode)) return true;
-    for (TagGroup group in keepGroups) if (group.contains(tagCode)) return true;
+    if (retain.contains(tagCode)) return true;
+    for (TagGroup group in retainGroups) if (group.contains(tagCode)) return true;
     return false;
   }
 
@@ -91,25 +95,34 @@ class GlobalActions {
   /// Process the Global Rules for de-identifying the Private
   /// Data Groups in the [TagDataset].
   void processPrivateTags(TagDataset ds) {
-    if (keepSafePrivate == false) {
-      ds.removeAllPrivate();
+    if (retainSafePrivate == false) {
+      ds.removePrivate();
     } else {
-      //ds.keepSafePrivate(ds.keepPrivateCreators);
-      ds.keepSafePrivate();
+      //ds.retainSafePrivate(ds.retainPrivateCreators);
+      ds.retainSafePrivate();
     }
   }
 
-  /// Verifies that the [keepGroups] and [removeGroups] [List]s
+  /// Verifies that the [retainGroups] and [removeGroups] [List]s
   /// are mutually exclusive.
-  bool get areKeepGroupsInconsistent {
-    for (TagGroup group in keepGroups) if (removeGroups.contains(group)) return false;
+  bool get areRetainedGroupsInconsistent {
+    for (TagGroup group in retainGroups) if (removeGroups.contains(group)) return false;
     return true;
   }
 
-  /// Verifies that the [keep] Tag Code and [remove] [tag] [List]s
+  /// Verifies that the [retain] Tag Code and [remove] [tag] [List]s
   /// are mutually exclusive.
-  bool get areKeepTagsInconsistent {
-    for (int code in keep) if (removeGroups.contains(code)) return false;
+  bool get areRemoveTagsInconsistent {
+    for (int code in retain) if (removeGroups.contains(code)) return false;
     return true;
   }
+}
+
+class InconsistentRetainOrRemoveGroupsError extends Error {
+  List<int> groups;
+
+  InconsistentRetainOrRemoveGroupsError(this.groups);
+
+  @override
+  String toString() => 'Inconsistent Retain or Remove Groups: $groups';
 }

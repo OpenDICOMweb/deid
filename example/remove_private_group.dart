@@ -9,7 +9,7 @@ import 'dart:typed_data';
 
 import 'package:common/common.dart';
 import 'package:core/core.dart';
-import 'package:dsc_convert/dicom.dart';
+import 'package:dsc_convert/dcm.dart';
 
 String inputDir = "C:/odw/test_data/sfd/CR/PID_MINT10/1_DICOM_Original/";
 String testOutput = "C:/odw/sdk/deid/example/output";
@@ -27,18 +27,18 @@ void main() {
     print('Reading file: $file');
     log.config('Reading file: $file');
 
-    Instance instance = readEntity(file1);
-    print('Initial Total Elements: ${instance.dataset.elements.length}');
-    print('***Identified:\n${instance.patient.format(new Formatter(maxDepth: 5))}');
+    var rds = readRootDataset(file1);
+    print('Initial Total Elements: ${rds.elements.length}');
+  //  print('***Identified:\n${rds.subject.format(new Formatter(maxDepth: 5))}');
 
     List<Element> removed = [];
-    instance.dataset.removePrivateGroup("EMAGEON STUDY HOME");
+    rds.removePrivateGroupByName("EMAGEON STUDY HOME");
 
-    print('Final Total Elements: ${instance.dataset.elements.length}');
+    print('Final Total Elements: ${rds.elements.length}');
     print('Removed Elements: ${removed.length}');
     for (Element a in removed)
       print('  $a');
-    print('***With Private Tags removed:\n${instance.patient.format(new Formatter(maxDepth: 5))}');
+  //  print('***With Private Tags removed:\n${instance.subject.format(new Formatter(maxDepth: 5))}');
   }
 
 
@@ -46,8 +46,8 @@ void main() {
 }
 
 
-Instance readEntity(String path) {
+RootTagDataset readRootDataset(String path) {
   File file = new File(path);
   Uint8List bytes = file.readAsBytesSync();
-  return DcmReader.rootDataset(bytes);
+  return TagReader.readBytes(bytes);
 }

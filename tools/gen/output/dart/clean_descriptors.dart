@@ -7,7 +7,7 @@
 // *** This is a generated class ***
 // ----------------------------------------------------------
 
-import 'package:core/core.dart';
+import 'package:dictionary/dictionary.dart';
 
 // DICOM attributes in De-Identification Profile (and Options)
 class CleanDescriptorsOption {

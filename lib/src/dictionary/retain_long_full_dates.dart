@@ -71,7 +71,7 @@ class RetainLongFullDatesOption {
   static const kPerformedProcedureStepEndTime =
     const RetainLongFullDatesOption("PerformedProcedureStepEndTime", 0x00400251, VR.kTM, "K");
 
-static const List<int> keep = const [
+static const List<int> retain = const [
   0x00080020,
   0x00080021,
   0x00080022,

@@ -69,7 +69,7 @@ class RetainLongModifiedDatesOption {
   static const RetainLongModifiedDatesOption kPerformedProcedureStepEndTime =
     const RetainLongModifiedDatesOption(PTag.kPerformedProcedureStepEndTime,  "C");
 
-static const List<int> keep = const [
+static const List<int> retain = const [
 
   ];
 

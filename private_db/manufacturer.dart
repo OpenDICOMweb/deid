@@ -1,10 +1,10 @@
 // Copyright (c) 2016, Open DICOMweb Project. All rights reserved.
 // Use of this source code is governed by the open source license
 // that can be found in the LICENSE file.
-// Original author: Jim Philbin <jfphilbin@gmail.edu> - 
+// Original author: Jim Philbin <jfphilbin@gmail.edu> -
 // See the AUTHORS file for other contributors.
 
-import 'creator.dart';
+import 'private_group_definition.dart';
 
 /// The names of [Manufacturer]s of DICOM equipment. Used to identify [PrivateGroup]s.
 class Manufacturer {
@@ -17,16 +17,20 @@ class Manufacturer {
   /// The full name of the Manufacturer.
   final String name;
 
- // final List<String> creatorIDs;
+  // final List<String> creatorIDs;
 
   const Manufacturer(this.index, this.id, this.name);
 
   Manufacturer operator [](int index) => _list[index];
 
-  static const kGEMS = const Manufacturer(1, "GEMS", "General Electric Medical Systems");
-  static const kPhilips = const Manufacturer(2, "Philips", "Philips Medical Systems");
-  static const kSiemens = const Manufacturer(3, "Siemens", "Siemens Medical Solutions");
-  static const kToshiba = const Manufacturer(4, "Toshiba", "	Toshiba Medical Systems");
+  static const kGEMS =
+      const Manufacturer(1, "GEMS", "General Electric Medical Systems");
+  static const kPhilips =
+      const Manufacturer(2, "Philips", "Philips Medical Systems");
+  static const kSiemens =
+      const Manufacturer(3, "Siemens", "Siemens Medical Solutions");
+  static const kToshiba =
+      const Manufacturer(4, "Toshiba", "	Toshiba Medical Systems");
   static const kHitachi = const Manufacturer(5, "Hitachi", "	Hitachi");
   static const kRSNA = const Manufacturer(6, "RSNA", "	RSNA");
   static const kMIR_ERL = const Manufacturer(7, "MIR/ERL", "	MIR/ERL");
@@ -50,11 +54,20 @@ class Manufacturer {
   static Manufacturer lookup(String id) => _map[id];
 
   static const _list = const <Manufacturer>[
-    kGEMS, kPhilips, kSiemens, kToshiba, kHitachi, kRSNA, kMIR_ERL, kFuji, kHologic, kUCSF];
-
+    kGEMS,
+    kPhilips,
+    kSiemens,
+    kToshiba,
+    kHitachi,
+    kRSNA,
+    kMIR_ERL,
+    kFuji,
+    kHologic,
+    kUCSF
+  ];
 }
 
-class Manufacturer {
+/*class Manufacturer {
   ManufacturerBase manufacturer;
   List<PCreator> creators;
 
@@ -67,4 +80,4 @@ class Manufacturer {
   String get name => manufacturer.name;
 
   void add(PCreator creator) { creators.add(creator); }
-}
+}*/

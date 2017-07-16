@@ -134,7 +134,7 @@ class PrivateDataCharacteristics {
       int pdBase = Tag.privateCreatorBase(creator);
       String status = item[PTag.kBlockIdentifyingInformationStatus.code].value;
       if ((keepSafe == false) || (status == "UNSAFE")) {
-        ds.removePrivateGroup(creatorToken);
+        ds.removePrivateGroupByName(creatorToken);
       } else if ((status == "SAFE") && (keepSafe == true)) {
         continue;
       } else if (status == "MIXED") {
@@ -146,7 +146,6 @@ class PrivateDataCharacteristics {
           List<String> actions = item[PTag.kDeidentificationActionSequence.code].values;
           for (int i = 0; i < pdOffsets.length; i++) {
             int code = pdBase + pdOffsets[i];
-            Tag tag = Tag.lookup(code);
             switch (actions[i]) {
               case "D":
                 ds[code].update();
@@ -155,10 +154,10 @@ class PrivateDataCharacteristics {
                 ds[code].noValues;
                 continue;
               case "X":
-                ds.remove(tag);
+                ds.remove(code);
                 continue;
               case "U":
-                ds.replaceUids(tag);
+                ds.replaceUids(code);
                 continue;
             }
           }

@@ -8,7 +8,7 @@ import 'package:dictionary/dictionary.dart';
 import 'package:core/core.dart';
 
 class ContextGroup {
-  final dcmType = "ContextGroup";
+  final String dcmType = "ContextGroup";
   final Map<String, String> designators = const {
     "DCM": "DICOM",
     "SRT": "SNOMED-RT"
@@ -17,10 +17,11 @@ class ContextGroup {
   const ContextGroup();
 }
 
-const CID7050 = DeIdentificationMethod;
+const Type CID7050 = DeIdentificationMethod;
 
 class DeIdentificationMethod extends ContextGroup {
-  final CodingScheme designator = CodingScheme.DCM;
+ // final CodingScheme designator = CodingScheme.DCM;
+  final String designator = "DCM";
   final String number = "7050";
   final String name = "De-Identification Method";
   final String code;
@@ -28,7 +29,11 @@ class DeIdentificationMethod extends ContextGroup {
 
   const DeIdentificationMethod(this.code, this.meaning);
 
-  /// Returns a list of validf [int] codes.
+  //TODO: change next 2 lines when CodingScheme is available.
+  // CodingScheme get codingScheme => CodingScheme.DCM;
+  String get codingScheme => designator;
+
+  /// Returns a list of valid [int] codes.
   List<int> get codes => map.keys;
 
   /// Returns [true] if [code] is a valid [CID7050] code.
@@ -39,16 +44,17 @@ class DeIdentificationMethod extends ContextGroup {
     return true;
   }
 
-  Item get item {
+  TagItem get item {
     Map<int, Element> map = {
       kCodeValue: new SH(PTag.kCodeValue, [code]),
       kCodingSchemeDesignator: new SH(PTag.kCodingSchemeDesignator, [designator]),
       kCodeMeaning: new LO(PTag.kCodeMeaning, [meaning])
     };
 
-    return new TagItem(kDeidentificationMethodCodeSequence, map, kUndefinedLength, true);
+    return new TagItem.fromMap(null, map, kUndefinedLength, true);
   }
 
+  @override
   String toString() => "CID$number($designator) $name";
 
   static const kBasicApplicationConfidentialityProfile =

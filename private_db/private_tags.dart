@@ -4,8 +4,8 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu>
 // See the AUTHORS file for other contributors.
 
-import 'package:core/core.dart';
-import 'creator.dart';
+import 'package:dictionary/dictionary.dart';
+import 'p_creator_tag.dart';
 
 Map<String, dynamic> privateTags = {
   "name": "k0010",

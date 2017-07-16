@@ -25,7 +25,7 @@ class TagGroup {
 
   void keep(TagDataset ds) {
     for (int i = min; i <= max; i++)
-      ds.keep(i);
+      ds.retainCode(i);
   }
   void remove(Dataset ds) {
     for (int i = min; i <= max; i++)

@@ -9,93 +9,102 @@
 
 import 'package:dictionary/dictionary.dart';
 
+import 'action.dart';
 import 'basic_profile.dart';
 
 // DICOM attributes in De-Identification Profile (and Options)
 class CleanDescriptorsOption extends BasicProfile {
-  const CleanDescriptorsOption(Tag tag, String action) : super(tag, action);
+  const CleanDescriptorsOption(Tag tag, String name, 
+      [Function action = Action.clean])
+      : super(tag, name, action);
 
   static CleanDescriptorsOption lookup(int tag) => map[tag];
 
   static const CleanDescriptorsOption kStudyDescription =
-      const CleanDescriptorsOption(PTag.kStudyDescription, "C");
+      const CleanDescriptorsOption(PTag.kStudyDescription, "C", Action.clean);
   static const CleanDescriptorsOption kSeriesDescription =
-      const CleanDescriptorsOption(PTag.kSeriesDescription, "C");
+      const CleanDescriptorsOption(PTag.kSeriesDescription, "C", Action.clean);
   static const CleanDescriptorsOption kAdmittingDiagnosesDescription =
-      const CleanDescriptorsOption(PTag.kAdmittingDiagnosesDescription, "C");
+      const CleanDescriptorsOption(PTag.kAdmittingDiagnosesDescription, "C", Action.clean);
   static const CleanDescriptorsOption kAdmittingDiagnosesCodeSequence =
-      const CleanDescriptorsOption(PTag.kAdmittingDiagnosesCodeSequence, "C");
+      const CleanDescriptorsOption(PTag.kAdmittingDiagnosesCodeSequence, "C", Action.clean);
   static const CleanDescriptorsOption kDerivationDescription =
-      const CleanDescriptorsOption(PTag.kDerivationDescription, "C");
+      const CleanDescriptorsOption(PTag.kDerivationDescription, "C", Action.clean);
   static const CleanDescriptorsOption kIdentifyingComments =
-      const CleanDescriptorsOption(PTag.kIdentifyingComments, "C");
+      const CleanDescriptorsOption(PTag.kIdentifyingComments, "C", Action.clean);
   static const CleanDescriptorsOption kMedicalAlerts =
-      const CleanDescriptorsOption(PTag.kMedicalAlerts, "C");
+      const CleanDescriptorsOption(PTag.kMedicalAlerts, "C", Action.clean);
   static const CleanDescriptorsOption kAllergies =
-      const CleanDescriptorsOption(PTag.kAllergies, "C");
+      const CleanDescriptorsOption(PTag.kAllergies, "C", Action.clean);
   static const CleanDescriptorsOption kOccupation =
-      const CleanDescriptorsOption(PTag.kOccupation, "C");
+      const CleanDescriptorsOption(PTag.kOccupation, "C", Action.clean);
   static const CleanDescriptorsOption kAdditionalPatientsHistory =
-      const CleanDescriptorsOption(PTag.kAdditionalPatientHistory, "C");
+      const CleanDescriptorsOption(PTag.kAdditionalPatientHistory, "C", Action.clean);
   static const CleanDescriptorsOption kPatientComments =
-      const CleanDescriptorsOption(PTag.kPatientComments, "C");
+      const CleanDescriptorsOption(PTag.kPatientComments, "C", Action.clean);
   static const CleanDescriptorsOption kContrastBolusAgent =
-      const CleanDescriptorsOption(PTag.kContrastBolusAgent, "C");
+      const CleanDescriptorsOption(PTag.kContrastBolusAgent, "C", Action.clean);
   static const CleanDescriptorsOption kProtocolName =
-      const CleanDescriptorsOption(PTag.kProtocolName, "C");
+      const CleanDescriptorsOption(PTag.kProtocolName, "C", Action.clean);
   static const CleanDescriptorsOption kAcquisitionDeviceProcessingDescription =
-      const CleanDescriptorsOption(PTag.kAcquisitionDeviceProcessingDescription, "C");
+      const CleanDescriptorsOption(
+          PTag.kAcquisitionDeviceProcessingDescription, "C", Action.clean);
   static const CleanDescriptorsOption kAcquisitionComments =
-      const CleanDescriptorsOption(PTag.kAcquisitionComments, "C");
+      const CleanDescriptorsOption(PTag.kAcquisitionComments, "C", Action.clean);
   static const CleanDescriptorsOption kAcquisitionProtocolDescription =
-      const CleanDescriptorsOption(PTag.kAcquisitionProtocolDescription, "C");
+      const CleanDescriptorsOption(PTag.kAcquisitionProtocolDescription, "C", Action.clean);
   static const CleanDescriptorsOption kContributionDescription =
-      const CleanDescriptorsOption(PTag.kContributionDescription, "C");
+      const CleanDescriptorsOption(PTag.kContributionDescription, "C", Action.clean);
   static const CleanDescriptorsOption kImageComments =
-      const CleanDescriptorsOption(PTag.kImageComments, "C");
+      const CleanDescriptorsOption(PTag.kImageComments, "C", Action.clean);
   static const CleanDescriptorsOption kFrameComments =
-      const CleanDescriptorsOption(PTag.kFrameComments, "C");
+      const CleanDescriptorsOption(PTag.kFrameComments, "C", Action.clean);
   static const CleanDescriptorsOption kReasonforStudy =
-      const CleanDescriptorsOption(PTag.kReasonForStudy, "C");
+      const CleanDescriptorsOption(PTag.kReasonForStudy, "C", Action.clean);
   static const CleanDescriptorsOption kRequestedProcedureDescription =
-      const CleanDescriptorsOption(PTag.kRequestedProcedureDescription, "C");
+      const CleanDescriptorsOption(PTag.kRequestedProcedureDescription, "C", Action.clean);
   static const CleanDescriptorsOption kRequestedContrastAgent =
-      const CleanDescriptorsOption(PTag.kRequestedContrastAgent, "C");
+      const CleanDescriptorsOption(PTag.kRequestedContrastAgent, "C", Action.clean);
   static const CleanDescriptorsOption kStudyComments =
-      const CleanDescriptorsOption(PTag.kStudyComments, "C");
+      const CleanDescriptorsOption(PTag.kStudyComments, "C", Action.clean);
   static const CleanDescriptorsOption kDischargeDiagnosisDescription =
-      const CleanDescriptorsOption(PTag.kDischargeDiagnosisDescription, "C");
+      const CleanDescriptorsOption(PTag.kDischargeDiagnosisDescription, "C", Action.clean);
   static const CleanDescriptorsOption kServiceEpisodeDescription =
-      const CleanDescriptorsOption(PTag.kServiceEpisodeDescription, "C");
+      const CleanDescriptorsOption(PTag.kServiceEpisodeDescription, "C", Action.clean);
   static const CleanDescriptorsOption kPatientState =
-      const CleanDescriptorsOption(PTag.kPatientState, "C");
+      const CleanDescriptorsOption(PTag.kPatientState, "C", Action.clean);
   static const CleanDescriptorsOption kVisitComments =
-      const CleanDescriptorsOption(PTag.kVisitComments, "C");
+      const CleanDescriptorsOption(PTag.kVisitComments, "C", Action.clean);
   static const CleanDescriptorsOption kScheduledProcedureStepDescription =
-      const CleanDescriptorsOption(PTag.kScheduledProcedureStepDescription, "C");
+      const CleanDescriptorsOption(
+          PTag.kScheduledProcedureStepDescription, "C", Action.clean);
   static const CleanDescriptorsOption kPerformedProcedureStepDescription =
-      const CleanDescriptorsOption(PTag.kPerformedProcedureStepDescription, "C");
+      const CleanDescriptorsOption(
+          PTag.kPerformedProcedureStepDescription, "C", Action.clean);
   static const CleanDescriptorsOption kRequestAttributesSequence =
-      const CleanDescriptorsOption(PTag.kRequestAttributesSequence, "C");
+      const CleanDescriptorsOption(PTag.kRequestAttributesSequence, "C", Action.clean);
   static const CleanDescriptorsOption kCommentsonthePerformedProcedureStep =
-      const CleanDescriptorsOption(PTag.kCommentsOnThePerformedProcedureStep, "C");
+      const CleanDescriptorsOption(
+          PTag.kCommentsOnThePerformedProcedureStep, "C", Action.clean);
   static const CleanDescriptorsOption kRequestedProcedureComments =
-      const CleanDescriptorsOption(PTag.kRequestedProcedureComments, "C");
+      const CleanDescriptorsOption(PTag.kRequestedProcedureComments, "C", Action.clean);
   static const CleanDescriptorsOption kReasonfortheImagingServiceRequest =
-      const CleanDescriptorsOption(PTag.kReasonForTheImagingServiceRequest, "C");
+      const CleanDescriptorsOption(
+          PTag.kReasonForTheImagingServiceRequest, "C", Action.clean);
   static const CleanDescriptorsOption kImagingServiceRequestComments =
-      const CleanDescriptorsOption(PTag.kImagingServiceRequestComments, "C");
+      const CleanDescriptorsOption(PTag.kImagingServiceRequestComments, "C", Action.clean);
   static const CleanDescriptorsOption kInterpretationText =
-      const CleanDescriptorsOption(PTag.kInterpretationText, "C");
+      const CleanDescriptorsOption(PTag.kInterpretationText, "C", Action.clean);
   static const CleanDescriptorsOption kInterpretationDiagnosisDescription =
-      const CleanDescriptorsOption(PTag.kInterpretationDiagnosisDescription, "C");
+      const CleanDescriptorsOption(
+          PTag.kInterpretationDiagnosisDescription, "C", Action.clean);
   static const CleanDescriptorsOption kImpressions =
-      const CleanDescriptorsOption(PTag.kImpressions, "C");
+      const CleanDescriptorsOption(PTag.kImpressions, "C", Action.clean);
   static const CleanDescriptorsOption kResultsComments =
-      const CleanDescriptorsOption(PTag.kResultsComments, "C");
+      const CleanDescriptorsOption(PTag.kResultsComments, "C", Action.clean);
 
   //TODO: this needs to be merged with BasicProfile.remove
-  static const List<int> keep = const [];
+  static const List<int> retain = const [];
 
   //TODO: this needs to be merged with BasicProfile.remove
   static const List<int> remove = const [

@@ -4,33 +4,34 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu>
 // See the AUTHORS file for other contributors.
 
-import 'package:core/core.dart';
+import 'package:dictionary/dictionary.dart';
 import 'action.dart';
 
 
-class PrivateElement {
-  final int tag;
+class PrivateDataTag {
+  final int code;
   final VR vr;
   final VM vm;
   final Action action;
   final String description;
 
-  const PrivateElement(this.tag, this.vr, this.vm, this.action, this.description);
+  const PrivateDataTag(this.code, this.vr, this.vm, this.action, this.description);
 
-  int get group => tagGroup(tag);
-  int get element => tagElement(tag);
-  String get id => 'k${tagElementHex(element)}';
+  int get group => Group.fromTag(code);
+  int get elt => Elt.fromTag(code);
+  String get id => 'k${Tag.toHex(elt)}';
 
   String toJson(String creatorId) => '''
   {
     "creator": "$creatorId"
-    "tag": ${tagToHex(tag)},
+    "tag": ${Tag.toHex(code)},
     "vr": $vr,
     "vm": $vm,
     "action": $action,
     "description": "$description",
   }''';
 
+  @override
   String toString() => 'PrivateElementBase($id, $vr, $vm, $action, $description, )';
 
 }

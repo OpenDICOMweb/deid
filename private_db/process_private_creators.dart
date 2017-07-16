@@ -5,7 +5,7 @@
 // See the AUTHORS file for other contributors.
 
 import 'dart:convert';
-import 'package:core/core.dart';
+import 'package:dictionary/dictionary.dart';
 
 import 'dart_arrays/private_tag_array.dart';
 
@@ -58,8 +58,8 @@ Map getElement(int index) {
     throw "Bad Element row at ${index + 1}";
   int tag = row[0];
   elements["tag"] = tag;
-  elements["group"] = tagGroup(tag);
-  elements["element"] = tagElement(tag);
+  elements["group"] = Group.fromTag(tag);
+  elements["element"] = Elt.fromTag(tag);
   elements["vr"] = row[1];
   elements["vm"] = row[2];
   elements["action"] = row[3];
@@ -80,9 +80,10 @@ String toDartString(Map creators) {
 
 String toCreator(Map values, String out) {
   values.forEach((String key, value) {
-    out += '"$key": '
+    out += '"$key": "$value"';
   });
   out += JSON.encode(values);
+  return out;
 }
 
 

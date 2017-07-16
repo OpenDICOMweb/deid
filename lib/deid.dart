@@ -7,6 +7,7 @@
 //TODO: replace when compare is integrated into core/dicom
 export 'src/utils/compare.dart';
 
+export 'src/dictionary/action.dart';
 export 'src/dictionary/basic_profile.dart';
 export 'src/dictionary/clean_descriptors.dart';
 export 'src/dictionary/clean_graphics.dart';

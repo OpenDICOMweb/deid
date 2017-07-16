@@ -4,21 +4,21 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu>
 // See the AUTHORS file for other contributors.
 
-import 'package:core/core.dart';
+import 'package:dictionary/dictionary.dart';
 
-import 'private_element.dart';
+import 'private_data_tag.dart';
 
-class PrivateCreator {
+class PrivateCreatorTag {
   final String id;
   // Default private group
   final int group;
   final String manufacturerId;
   final Modality modality;
   final String description;
-  final Map<int, PrivateElement> elements;
+  final Map<int, PrivateDataTag> pDataTags;
 
-  const PrivateCreator(this.id, this.manufacturerId, this.modality,
-      this.description, this.group, this.elements);
+  const PrivateCreatorTag(this.id, this.manufacturerId, this.modality,
+      this.description, this.group, this.pDataTags);
 
   String get json => '''
 {
@@ -31,11 +31,12 @@ class PrivateCreator {
 
   String get elementsJson {
     var out = "{\n";
-    for(PrivateElement e in elements.values)
-      out += '"k${e.element}": ${e.toJson(id)},\n';
+    for(PrivateDataTag e in pDataTags.values)
+      out += '"k${e.elt}": "${e.id}",\n';
     return out += "}\n";
   }
 
+  @override
   String toString() => "PCreator($id, $group, $manufacturerId, $modality, $description)";
 }
 

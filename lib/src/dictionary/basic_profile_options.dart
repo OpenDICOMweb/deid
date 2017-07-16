@@ -12,20 +12,23 @@ class BasicProfileOptions {
 
   const BasicProfileOptions(this.keyword, this.index, this.type, this.name);
 
-  static const BasicProfileOptions kNone =
-      const BasicProfileOptions("none", -1, "NoOptions", "No Options Specified");
+  static const BasicProfileOptions kNone = const BasicProfileOptions(
+      "none", -1, "NoOptions", "No Options Specified");
 
   static const BasicProfileOptions kRetainSafePrivate =
-      const BasicProfileOptions("RetainSafePrivate", 0, "Retain", "Retail Safe Private Option");
+      const BasicProfileOptions(
+          "RetainSafePrivate", 0, "Retain", "Retail Safe Private Option");
 
-  static const BasicProfileOptions kRetainUids =
-      const BasicProfileOptions("RetainUids", 1, "Retain", "Retail UIDs Option");
+  static const BasicProfileOptions kRetainUids = const BasicProfileOptions(
+      "RetainUids", 1, "Retain", "Retail UIDs Option");
 
-  static const BasicProfileOptions kRetainDeviceIdentity = const BasicProfileOptions(
-      "RetainDeviceIdentity", 2, "Retain", "Retail Device Identity Option");
+  static const BasicProfileOptions kRetainDeviceIdentity =
+      const BasicProfileOptions(
+          "RetainDeviceIdentity", 2, "Retain", "Retail Device Identity Option");
 
-  static const BasicProfileOptions kRetainPatientCharacteristics = const BasicProfileOptions(
-      "patientCharacteristics", 3, "Retain", "Retail Patient Characteristics Option");
+  static const BasicProfileOptions kRetainPatientCharacteristics =
+      const BasicProfileOptions("patientCharacteristics", 3, "Retain",
+          "Retail Patient Characteristics Option");
 
   static const BasicProfileOptions kRetainFullDates = const BasicProfileOptions(
       "RetainFullDates",
@@ -34,24 +37,24 @@ class BasicProfileOptions {
       "Retail Longitudinal Temporal Information with Full Dates "
       "Option");
 
-  static const BasicProfileOptions kRetainModifiedDates = const BasicProfileOptions(
-      "RetainModifiedDates",
-      5,
-      "Retain",
-      "Retain Longitudinal Temporal Information with Modified Dates Option");
+  static const BasicProfileOptions kRetainModifiedDates =
+      const BasicProfileOptions("RetainModifiedDates", 5, "Retain",
+          "Retain Longitudinal Temporal Information with Modified Dates Option");
 
-  static const BasicProfileOptions kCleanDescriptors = const BasicProfileOptions(
-      "CleanDescriptors",
-      6,
-      "Clean",
-      "Clean Descriptors "
-      "Option");
+  static const BasicProfileOptions kCleanDescriptors =
+      const BasicProfileOptions(
+          "CleanDescriptors",
+          6,
+          "Clean",
+          "Clean Descriptors "
+          "Option");
 
-  static const BasicProfileOptions kCleanStructuredContent = const BasicProfileOptions(
-      "CleanStructuredContent", 7, "Clean", "Clean Structured Content Option");
+  static const BasicProfileOptions kCleanStructuredContent =
+      const BasicProfileOptions("CleanStructuredContent", 7, "Clean",
+          "Clean Structured Content Option");
 
-  static const BasicProfileOptions kCleanGraphics =
-      const BasicProfileOptions("CleanGraphics", 8, "Clean", "Clean Graphics Option");
+  static const BasicProfileOptions kCleanGraphics = const BasicProfileOptions(
+      "CleanGraphics", 8, "Clean", "Clean Graphics Option");
 
   static const BasicProfileOptions kCleanPixelData = const BasicProfileOptions(
       "CleanPixelData",
@@ -60,8 +63,9 @@ class BasicProfileOptions {
       "Clean Pixel Data "
       "Option");
 
-  static const BasicProfileOptions kCleanVisualFeatures = const BasicProfileOptions(
-      "CleanVisualFeatures", 7, "Clean", "Clean Recognizable Visual Features Option");
+  static const BasicProfileOptions kCleanVisualFeatures =
+      const BasicProfileOptions("CleanVisualFeatures", 7, "Clean",
+          "Clean Recognizable Visual Features Option");
 
 //TODO:
 // 1. Reidentifier - see PS3.15, E.1.2

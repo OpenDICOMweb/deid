@@ -46,7 +46,7 @@ class RetainPatientCharacteristicsOption {
   static const kPre_Medication =
     const RetainPatientCharacteristicsOption("Pre_Medication", 0x00400012, VR.kLO, "C");
 
-static const List<int> keep = const [
+static const List<int> retain = const [
   0x00100040,
   0x00101010,
   0x00101020,

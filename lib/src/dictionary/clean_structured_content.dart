@@ -9,39 +9,38 @@
 
 import 'package:dictionary/dictionary.dart';
 
+import 'basic_profile.dart';
 
 /// Clean Structured Content Option to the Basic De-Identification Profile.
-class CleanStructuredContentOption {
+class CleanStructuredContentOption extends BasicProfile {
   final String keyword;
-  final int tag;
+//  final int tag;
   final VR vr;
-  final String action;
+//  final String action;
 
-  const CleanStructuredContentOption(this.keyword, this.tag, this.vr, this.action);
+  const CleanStructuredContentOption(
+      this.keyword, Tag tag, this.vr, String name,
+      [Function action])
+      : super(tag, name, action);
 
   static CleanStructuredContentOption lookup(int tag) => map[tag];
 
-  static const kAcquisitionContextSequence =
-    const CleanStructuredContentOption("AcquisitionContextSequence", 0x00400555, VR.kSQ, "C");
-  static const kContentSequence =
-    const CleanStructuredContentOption("ContentSequence", 0x0040a730, VR.kSQ, "C");
+  static const kAcquisitionContextSequence = const CleanStructuredContentOption(
+      "AcquisitionContextSequence",
+      PTag.kAcquisitionContextSequence,
+      VR.kSQ,
+      "C");
+  static const kContentSequence = const CleanStructuredContentOption(
+      "ContentSequence", PTag.kContentSequence, VR.kSQ, "C");
 
-static const List<int> keep = const [
+  static const List<int> retain = const [];
 
-  ];
+  static const List<int> remove = const [0x00400555, 0x0040a730];
 
-static const List<int> remove = const [
-  0x00400555,
-  0x0040a730
-  ];
-
-static const Map<int, CleanStructuredContentOption> map = const {
-  0x00400555: kAcquisitionContextSequence,
-  0x0040a730: kContentSequence
+  static const Map<int, CleanStructuredContentOption> map = const {
+    0x00400555: kAcquisitionContextSequence,
+    0x0040a730: kContentSequence
   };
 
-static const List<int> tags = const [
-  0x00400555,
-  0x0040a730
-  ];
+  static const List<int> tags = const [0x00400555, 0x0040a730];
 }

@@ -5,13 +5,11 @@
 // See the AUTHORS file for other contributors.
 
 import 'dart:io';
-import 'dart:typed_data';
 
 import 'package:common/common.dart';
-import 'package:core/core.dart';
 import 'package:deid/deid.dart';
 import 'package:deid/src/deid/deidentifier.dart';
-import 'package:dsc_convert/encoder.dart';
+import 'package:dsc_convert/dcm.dart';
 
 String inputDir = "C:/odw/test_data/sfd/CR/PID_MINT10/1_DICOM_Original/";
 String testOutput = "C:/odw/sdk/deid/example/output";
@@ -30,12 +28,12 @@ void main() {
     log.config('Reading file: $file');
 
     DeIdentifier deIdentify = new DeIdentifier(null);
-    RootDataset ds0 = readDataset(file1);
-    print('***Identified:\n${ds0.format(new Formatter(maxDepth: 5))}');
-    RootDataset ds1 = readDataset(file1);
-    ds1 = deIdentify(ds0);
+    var rds0 = TagReader.readFile(file);
+    print('***Identified:\n${rds0.format(new Formatter(maxDepth: 5))}');
 
-    DSComparison compare = new DSComparison(ds0, ds1);
+    var rds1 = deIdentify(rds0);
+
+    DSComparison compare = new DSComparison(rds0, rds1);
 
     print('same: ${compare.same}');
     print('diff: ${compare.diff}');
@@ -58,14 +56,5 @@ void main() {
     print('***DeIdentified:\n${instance1.patient.format(new Formatter(maxDepth: 5))}');
     */
   }
-
-
-  //print('Active Patients: ${activePatients.stats}');
 }
 
-
-Dataset readDataset(String path) {
-  File file = new File(path);
-  Uint8List bytes = file.readAsBytesSync();
-  return DcmReader.rootDataset(bytes);
-}

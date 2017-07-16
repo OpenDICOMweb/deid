@@ -4,14 +4,14 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu>
 // See the AUTHORS file for other contributors.
 
+import 'package:dictionary/dictionary.dart';
 
-import 'package:core/core.dart';
-import 'private_element.dart';
+import 'private_data_tag.dart';
 import 'action.dart';
 
-class MRSC extends PrivateElement {
+class MRSC extends PrivateDataTag {
   static const String manufacturerId = "GEMS";
-  static const Modality modality = Modality.PT;
+  static const Modality modality = Modality.kPT;
   final String creatorId = "GEMS_PETD_01";
 
   const MRSC(int tag, VR vr, VM vm, Action action, String description)
@@ -22,546 +22,546 @@ class MRSC extends PrivateElement {
   //Creator: "MRSC", group: 0117, Manufacturer: "UCSF", 
   // Modality: "MR", "UCSFBIRPGroupIDString"
   static const k0x01170010 =
-  const MRSC(0x01170010, VR.kLO, VM.k1, Action.K, "UCSFBIRPGroupIDString");
+  const MRSC(0x01170010, VR.kLO, VM.k1, Action.kKeep, "UCSFBIRPGroupIDString");
   static const k0x01171010 =
-  const MRSC(0x01171010, VR.kSQ, VM.k1, Action.K, "PESERParameterSequence");
+  const MRSC(0x01171010, VR.kSQ, VM.k1, Action.kKeep, "PESERParameterSequence");
   static const k0x01171012 =
-  const MRSC(0x01171012, VR.kCS, VM.k1, Action.K, "PESERParameterType");
+  const MRSC(0x01171012, VR.kCS, VM.k1, Action.kKeep, "PESERParameterType");
   static const k0x01171014 =
-  const MRSC(0x01171014, VR.kLO, VM.k1, Action.K, "PESERParameterName");
+  const MRSC(0x01171014, VR.kLO, VM.k1, Action.kKeep, "PESERParameterName");
   static const k0x01171016 =
-  const MRSC(0x01171016, VR.kLO, VM.k1, Action.K, "PESERParameterDescription");
+  const MRSC(0x01171016, VR.kLO, VM.k1, Action.kKeep, "PESERParameterDescription");
   static const k0x01171018 =
-  const MRSC(0x01171018, VR.kDS, VM.k1_n, Action.K, "PESERParameterFloatingValue");
+  const MRSC(0x01171018, VR.kDS, VM.k1_n, Action.kKeep, "PESERParameterFloatingValue");
   static const k0x01171019 =
-  const MRSC(0x01171019, VR.kIS, VM.k1_n, Action.K, "PESERParameterIntegerValue");
+  const MRSC(0x01171019, VR.kIS, VM.k1_n, Action.kKeep, "PESERParameterIntegerValue");
   static const k0x0117101a =
-  const MRSC(0x0117101a, VR.kLO, VM.k1_n, Action.K, "PESERParameterStringValue");
+  const MRSC(0x0117101a, VR.kLO, VM.k1_n, Action.kKeep, "PESERParameterStringValue");
   static const k0x01171020 =
-  const MRSC(0x01171020, VR.kSQ, VM.k1, Action.K, "VOISequence");
+  const MRSC(0x01171020, VR.kSQ, VM.k1, Action.kKeep, "VOISequence");
   static const k0x01171022 =
-  const MRSC(0x01171022, VR.kSQ, VM.k1, Action.K, "OmitVOISequence");
+  const MRSC(0x01171022, VR.kSQ, VM.k1, Action.kKeep, "OmitVOISequence");
   static const k0x01171024 =
-  const MRSC(0x01171024, VR.kSQ, VM.k1, Action.K, "ImageQualitySequence");
+  const MRSC(0x01171024, VR.kSQ, VM.k1, Action.kKeep, "ImageQualitySequence");
   static const k0x01171030 =
-  const MRSC(0x01171030, VR.kIS, VM.k1, Action.K, "NumberAcquiredTimePoints");
+  const MRSC(0x01171030, VR.kIS, VM.k1, Action.kKeep, "NumberAcquiredTimePoints");
   static const k0x01171031 =
-  const MRSC(0x01171031, VR.kDS, VM.k1, Action.K, "AcquisitionDuration");
+  const MRSC(0x01171031, VR.kDS, VM.k1, Action.kKeep, "AcquisitionDuration");
   static const k0x01171032 =
-  const MRSC(0x01171032, VR.kDS, VM.k1_n, Action.K, "AcquisitionStartTimes");
+  const MRSC(0x01171032, VR.kDS, VM.k1_n, Action.kKeep, "AcquisitionStartTimes");
   static const k0x01171033 =
-  const MRSC(0x01171033, VR.kTM, VM.k1, Action.K, "InjectionTime");
+  const MRSC(0x01171033, VR.kTM, VM.k1, Action.kKeep, "InjectionTime");
   static const k0x01171034 =
-  const MRSC(0x01171034, VR.kDS, VM.k1_n, Action.K, "EffectiveAcquisitionDelay");
+  const MRSC(0x01171034, VR.kDS, VM.k1_n, Action.kKeep, "EffectiveAcquisitionDelay");
   static const k0x01171035 =
-  const MRSC(0x01171035, VR.kIS, VM.k3, Action.K, "SERTimingIndices");
+  const MRSC(0x01171035, VR.kIS, VM.k3, Action.kKeep, "SERTimingIndices");
   static const k0x0117103a =
-  const MRSC(0x0117103a, VR.kLO, VM.k1, Action.K, "AcquisitionTimingMethod");
+  const MRSC(0x0117103a, VR.kLO, VM.k1, Action.kKeep, "AcquisitionTimingMethod");
   static const k0x0117103b =
-  const MRSC(0x0117103b, VR.kLT, VM.k1, Action.K, "AcquisitionTimingComments");
+  const MRSC(0x0117103b, VR.kLT, VM.k1, Action.kKeep, "AcquisitionTimingComments");
   static const k0x01171041 =
-  const MRSC(0x01171041, VR.kIS, VM.k1, Action.K, "ROIVOILPSFlag");
+  const MRSC(0x01171041, VR.kIS, VM.k1, Action.kKeep, "ROIVOILPSFlag");
   static const k0x01171042 =
-  const MRSC(0x01171042, VR.kDS, VM.k3, Action.K, "VOILPSCenter");
+  const MRSC(0x01171042, VR.kDS, VM.k3, Action.kKeep, "VOILPSCenter");
   static const k0x01171043 =
-  const MRSC(0x01171043, VR.kDS, VM.k3, Action.K, "VOILPSWidthHalfLength");
+  const MRSC(0x01171043, VR.kDS, VM.k3, Action.kKeep, "VOILPSWidthHalfLength");
   static const k0x01171044 =
-  const MRSC(0x01171044, VR.kDS, VM.k3, Action.K, "VOILPSHeightHalfLength");
+  const MRSC(0x01171044, VR.kDS, VM.k3, Action.kKeep, "VOILPSHeightHalfLength");
   static const k0x01171045 =
-  const MRSC(0x01171045, VR.kDS, VM.k3, Action.K, "VOILPSDepthHalfLength");
+  const MRSC(0x01171045, VR.kDS, VM.k3, Action.kKeep, "VOILPSDepthHalfLength");
   static const k0x01171046 =
-  const MRSC(0x01171046, VR.kCS, VM.k1, Action.K, "VOILPSType");
+  const MRSC(0x01171046, VR.kCS, VM.k1, Action.kKeep, "VOILPSType");
   static const k0x01171050 =
-  const MRSC(0x01171050, VR.kUS, VM.k3, Action.K, "ProjectedROINPixels");
+  const MRSC(0x01171050, VR.kUS, VM.k3, Action.kKeep, "ProjectedROINPixels");
   static const k0x01171051 =
-  const MRSC(0x01171051, VR.kIS, VM.k1, Action.K, "ProjectedROIProjectionAxis");
+  const MRSC(0x01171051, VR.kIS, VM.k1, Action.kKeep, "ProjectedROIProjectionAxis");
   static const k0x01171052 =
-  const MRSC(0x01171052, VR.kIS, VM.k1, Action.K, "ProjectedROITransposeFlag");
+  const MRSC(0x01171052, VR.kIS, VM.k1, Action.kKeep, "ProjectedROITransposeFlag");
   static const k0x01171053 =
-  const MRSC(0x01171053, VR.kUS, VM.k1_n, Action.K, "ProjectedROIXVerts");
+  const MRSC(0x01171053, VR.kUS, VM.k1_n, Action.kKeep, "ProjectedROIXVerts");
   static const k0x01171054 =
-  const MRSC(0x01171054, VR.kUS, VM.k1_n, Action.K, "ProjectedROIYVerts");
+  const MRSC(0x01171054, VR.kUS, VM.k1_n, Action.kKeep, "ProjectedROIYVerts");
   static const k0x01171055 =
-  const MRSC(0x01171055, VR.kUS, VM.k2, Action.K, "ProjectedROIZRange");
+  const MRSC(0x01171055, VR.kUS, VM.k2, Action.kKeep, "ProjectedROIZRange");
   static const k0x01171056 =
-  const MRSC(0x01171056, VR.kCS, VM.k1, Action.K, "ProjectedROIType");
+  const MRSC(0x01171056, VR.kCS, VM.k1, Action.kKeep, "ProjectedROIType");
   static const k0x0117105a =
-  const MRSC(0x0117105a, VR.kLO, VM.k1, Action.K, "ProjectedROILabel");
+  const MRSC(0x0117105a, VR.kLO, VM.k1, Action.kKeep, "ProjectedROILabel");
   static const k0x011710a1 =
-  const MRSC(0x011710a1, VR.kUS, VM.k3, Action.K, "FTVPixelLimitsStart");
+  const MRSC(0x011710a1, VR.kUS, VM.k3, Action.kKeep, "FTVPixelLimitsStart");
   static const k0x011710a2 =
-  const MRSC(0x011710a2, VR.kUS, VM.k3, Action.K, "FTVPixelLimitsEnd");
+  const MRSC(0x011710a2, VR.kUS, VM.k3, Action.kKeep, "FTVPixelLimitsEnd");
   static const k0x011710a3 =
-  const MRSC(0x011710a3, VR.kCS, VM.k1, Action.K, "FTVBackgroundMethod");
+  const MRSC(0x011710a3, VR.kCS, VM.k1, Action.kKeep, "FTVBackgroundMethod");
   static const k0x011710a4 =
-  const MRSC(0x011710a4, VR.kDS, VM.k1, Action.K, "FTVBackgroundThreshold");
+  const MRSC(0x011710a4, VR.kDS, VM.k1, Action.kKeep, "FTVBackgroundThreshold");
   static const k0x011710b0 =
-  const MRSC(0x011710b0, VR.kSQ, VM.k1, Action.K, "FTVSequence");
+  const MRSC(0x011710b0, VR.kSQ, VM.k1, Action.kKeep, "FTVSequence");
   static const k0x011710b1 =
-  const MRSC(0x011710b1, VR.kDS, VM.k1, Action.K, "FTVSERMinimum");
+  const MRSC(0x011710b1, VR.kDS, VM.k1, Action.kKeep, "FTVSERMinimum");
   static const k0x011710b2 =
-  const MRSC(0x011710b2, VR.kDS, VM.k1, Action.K, "FTVSERMaximum");
+  const MRSC(0x011710b2, VR.kDS, VM.k1, Action.kKeep, "FTVSERMaximum");
   static const k0x011710b3 =
-  const MRSC(0x011710b3, VR.kIS, VM.k1, Action.K, "FTVPixelCount");
+  const MRSC(0x011710b3, VR.kIS, VM.k1, Action.kKeep, "FTVPixelCount");
   static const k0x011710b4 =
-  const MRSC(0x011710b4, VR.kDS, VM.k1, Action.K, "FTVcc");
+  const MRSC(0x011710b4, VR.kDS, VM.k1, Action.kKeep, "FTVcc");
   static const k0x011710b5 =
-  const MRSC(0x011710b5, VR.kLO, VM.k1, Action.K, "FTVLabel");
+  const MRSC(0x011710b5, VR.kLO, VM.k1, Action.kKeep, "FTVLabel");
   static const k0x011710c0 =
-  const MRSC(0x011710c0, VR.kCS, VM.k1, Action.K, "QualityControlType");
+  const MRSC(0x011710c0, VR.kCS, VM.k1, Action.kKeep, "QualityControlType");
   static const k0x011710c1 =
-  const MRSC(0x011710c1, VR.kLO, VM.k1, Action.K, "QualityControlFactor");
+  const MRSC(0x011710c1, VR.kLO, VM.k1, Action.kKeep, "QualityControlFactor");
   static const k0x011710c2 =
-  const MRSC(0x011710c2, VR.kDS, VM.k1, Action.K, "QualityControlValue");
+  const MRSC(0x011710c2, VR.kDS, VM.k1, Action.kKeep, "QualityControlValue");
   static const k0x011710c3 =
-  const MRSC(0x011710c3, VR.kCS, VM.k1, Action.K, "QualityControlMeaning");
+  const MRSC(0x011710c3, VR.kCS, VM.k1, Action.kKeep, "QualityControlMeaning");
   static const k0x011710c4 =
-  const MRSC(0x011710c4, VR.kLT, VM.k1, Action.K, "QualityControlComment");
+  const MRSC(0x011710c4, VR.kLT, VM.k1, Action.kKeep, "QualityControlComment");
   static const k0x011710c5 =
-  const MRSC(0x011710c5, VR.kCS, VM.k1, Action.K, "ProtocolCompliantFlag");
+  const MRSC(0x011710c5, VR.kCS, VM.k1, Action.kKeep, "ProtocolCompliantFlag");
   static const k0x011710c6 =
-  const MRSC(0x011710c6, VR.kLO, VM.k1_n, Action.K, "ProtocolNotCompliantReasons");
+  const MRSC(0x011710c6, VR.kLO, VM.k1_n, Action.kKeep, "ProtocolNotCompliantReasons");
   static const k0x011710c7 =
-  const MRSC(0x011710c7, VR.kCS, VM.k1, Action.K, "ImagesAnalyzable");
+  const MRSC(0x011710c7, VR.kCS, VM.k1, Action.kKeep, "ImagesAnalyzable");
   static const k0x011710c8 =
-  const MRSC(0x011710c8, VR.kLO, VM.k1_n, Action.K, "ProtocolNotCAnalyzableReasons");
+  const MRSC(0x011710c8, VR.kLO, VM.k1_n, Action.kKeep, "ProtocolNotCAnalyzableReasons");
   static const k0x01190010 =
-  const MRSC(0x01190010, VR.kLO, VM.k1, Action.K, "MIACQID");
+  const MRSC(0x01190010, VR.kLO, VM.k1, Action.kKeep, "MIACQID");
   static const k0x01190011 =
-  const MRSC(0x01190011, VR.kLO, VM.k1, Action.K, "MIFITMAPID");
+  const MRSC(0x01190011, VR.kLO, VM.k1, Action.kKeep, "MIFITMAPID");
   static const k0x01190012 =
-  const MRSC(0x01190012, VR.kLO, VM.k1, Action.K, "MI-IPID");
+  const MRSC(0x01190012, VR.kLO, VM.k1, Action.kKeep, "MI-IPID");
   static const k0x01190014 =
-  const MRSC(0x01190014, VR.kLO, VM.k1, Action.K, "MIPsIDString");
+  const MRSC(0x01190014, VR.kLO, VM.k1, Action.kKeep, "MIPsIDString");
   static const k0x01190015 =
-  const MRSC(0x01190015, VR.kLO, VM.k1, Action.K, "SERIDString");
+  const MRSC(0x01190015, VR.kLO, VM.k1, Action.kKeep, "SERIDString");
   static const k0x01191000 =
-  const MRSC(0x01191000, VR.kDS, VM.k1, Action.K, "Version");
+  const MRSC(0x01191000, VR.kDS, VM.k1, Action.kKeep, "Version");
   static const k0x01191006 =
-  const MRSC(0x01191006, VR.kDS, VM.k1, Action.K, "MinimumPixelValue");
+  const MRSC(0x01191006, VR.kDS, VM.k1, Action.kKeep, "MinimumPixelValue");
   static const k0x01191007 =
-  const MRSC(0x01191007, VR.kDS, VM.k1, Action.K, "MaximumPixelValue");
+  const MRSC(0x01191007, VR.kDS, VM.k1, Action.kKeep, "MaximumPixelValue");
   static const k0x01191010 =
-  const MRSC(0x01191010, VR.kIS, VM.k1, Action.K, "PixelDataType");
+  const MRSC(0x01191010, VR.kIS, VM.k1, Action.kKeep, "PixelDataType");
   static const k0x01191011 =
-  const MRSC(0x01191011, VR.kIS, VM.k1_n, Action.K, "ImageIDNumbers");
+  const MRSC(0x01191011, VR.kIS, VM.k1_n, Action.kKeep, "ImageIDNumbers");
   static const k0x01191012 =
-  const MRSC(0x01191012, VR.kIS, VM.k1_n, Action.K, "ParameterDims");
+  const MRSC(0x01191012, VR.kIS, VM.k1_n, Action.kKeep, "ParameterDims");
   static const k0x01191013 =
-  const MRSC(0x01191013, VR.kCS, VM.k1_n, Action.K, "VariableParameter");
+  const MRSC(0x01191013, VR.kCS, VM.k1_n, Action.kKeep, "VariableParameter");
   static const k0x01191018 =
-  const MRSC(0x01191018, VR.kIS, VM.k3, Action.K, "GAINS");
+  const MRSC(0x01191018, VR.kIS, VM.k3, Action.kKeep, "GAINS");
   static const k0x01191020 =
-  const MRSC(0x01191020, VR.kLO, VM.k1_n, Action.K, "SourceFileNames");
+  const MRSC(0x01191020, VR.kLO, VM.k1_n, Action.kKeep, "SourceFileNames");
   static const k0x01191021 =
-  const MRSC(0x01191021, VR.kIS, VM.k1, Action.K, "SourceCropFlag");
+  const MRSC(0x01191021, VR.kIS, VM.k1, Action.kKeep, "SourceCropFlag");
   static const k0x01191022 =
-  const MRSC(0x01191022, VR.kIS, VM.k6, Action.K, "SourceCropLimits");
+  const MRSC(0x01191022, VR.kIS, VM.k6, Action.kKeep, "SourceCropLimits");
   static const k0x01191023 =
-  const MRSC(0x01191023, VR.kUI, VM.k1_n, Action.K, "SourceFileUIDs");
+  const MRSC(0x01191023, VR.kUI, VM.k1_n, Action.kKeep, "SourceFileUIDs");
   static const k0x01191024 =
-  const MRSC(0x01191024, VR.kIS, VM.k1_n, Action.K, "SourceVolumeIndices");
+  const MRSC(0x01191024, VR.kIS, VM.k1_n, Action.kKeep, "SourceVolumeIndices");
   static const k0x01191025 =
-  const MRSC(0x01191025, VR.kLO, VM.k1_n, Action.K, "SourceVolumeLabels");
+  const MRSC(0x01191025, VR.kLO, VM.k1_n, Action.kKeep, "SourceVolumeLabels");
   static const k0x01191030 =
-  const MRSC(0x01191030, VR.kDS, VM.k9, Action.K, "DirectionCosines");
+  const MRSC(0x01191030, VR.kDS, VM.k9, Action.kKeep, "DirectionCosines");
   static const k0x01191031 =
-  const MRSC(0x01191031, VR.kCS, VM.k3, Action.K, "PatientOrientation3");
+  const MRSC(0x01191031, VR.kCS, VM.k3, Action.kKeep, "PatientOrientation3");
   static const k0x01191038 =
-  const MRSC(0x01191038, VR.kDS, VM.k3, Action.K, "PixelGap");
+  const MRSC(0x01191038, VR.kDS, VM.k3, Action.kKeep, "PixelGap");
   static const k0x01191041 =
-  const MRSC(0x01191041, VR.kDS, VM.k1_n, Action.K, "SlicePosition");
+  const MRSC(0x01191041, VR.kDS, VM.k1_n, Action.kKeep, "SlicePosition");
   static const k0x01191050 =
-  const MRSC(0x01191050, VR.kLO, VM.k1_n, Action.K, "VolumeLabels");
+  const MRSC(0x01191050, VR.kLO, VM.k1_n, Action.kKeep, "VolumeLabels");
   static const k0x01191051 =
-  const MRSC(0x01191051, VR.kDA, VM.k1_n, Action.K, "AcquisitionDate");
+  const MRSC(0x01191051, VR.kDA, VM.k1_n, Action.kKeep, "AcquisitionDate");
   static const k0x01191052 =
-  const MRSC(0x01191052, VR.kTM, VM.k1_n, Action.K, "AcquisitionTime");
+  const MRSC(0x01191052, VR.kTM, VM.k1_n, Action.kKeep, "AcquisitionTime");
   static const k0x01191060 =
-  const MRSC(0x01191060, VR.kLO, VM.k1, Action.K, "SecCptrUser");
+  const MRSC(0x01191060, VR.kLO, VM.k1, Action.kKeep, "SecCptrUser");
   static const k0x01191061 =
-  const MRSC(0x01191061, VR.kLO, VM.k1, Action.K, "SecCptrApplication");
+  const MRSC(0x01191061, VR.kLO, VM.k1, Action.kKeep, "SecCptrApplication");
   static const k0x01191070 =
-  const MRSC(0x01191070, VR.kAT, VM.k1_n, Action.K, "VariableParamTags");
+  const MRSC(0x01191070, VR.kAT, VM.k1_n, Action.kKeep, "VariableParamTags");
   static const k0x01191071 =
-  const MRSC(0x01191071, VR.kCS, VM.k1_n, Action.K, "VariableParamNames");
+  const MRSC(0x01191071, VR.kCS, VM.k1_n, Action.kKeep, "VariableParamNames");
   static const k0x01191080 =
-  const MRSC(0x01191080, VR.kDS, VM.k1_n, Action.K, "TR");
+  const MRSC(0x01191080, VR.kDS, VM.k1_n, Action.kKeep, "TR");
   static const k0x01191081 =
-  const MRSC(0x01191081, VR.kDS, VM.k1_n, Action.K, "TE");
+  const MRSC(0x01191081, VR.kDS, VM.k1_n, Action.kKeep, "TE");
   static const k0x01191082 =
-  const MRSC(0x01191082, VR.kDS, VM.k1_n, Action.K, "TI");
+  const MRSC(0x01191082, VR.kDS, VM.k1_n, Action.kKeep, "TI");
   static const k0x01191083 =
-  const MRSC(0x01191083, VR.kDS, VM.k1_n, Action.K, "TSL");
+  const MRSC(0x01191083, VR.kDS, VM.k1_n, Action.kKeep, "TSL");
   static const k0x01191088 =
-  const MRSC(0x01191088, VR.kDS, VM.k1_n, Action.K, "FlipAngle");
+  const MRSC(0x01191088, VR.kDS, VM.k1_n, Action.kKeep, "FlipAngle");
   static const k0x01191090 =
-  const MRSC(0x01191090, VR.kDS, VM.k1_n, Action.K, "TemporalIndex");
+  const MRSC(0x01191090, VR.kDS, VM.k1_n, Action.kKeep, "TemporalIndex");
   static const k0x01191091 =
-  const MRSC(0x01191091, VR.kDS, VM.k1_n, Action.K, "TemporalValue");
+  const MRSC(0x01191091, VR.kDS, VM.k1_n, Action.kKeep, "TemporalValue");
   static const k0x011910a0 =
-  const MRSC(0x011910a0, VR.kDS, VM.k1_n, Action.K, "DIFF_GRAD_X");
+  const MRSC(0x011910a0, VR.kDS, VM.k1_n, Action.kKeep, "DIFF_GRAD_X");
   static const k0x011910a1 =
-  const MRSC(0x011910a1, VR.kDS, VM.k1_n, Action.K, "DIFF_GRAD_Y");
+  const MRSC(0x011910a1, VR.kDS, VM.k1_n, Action.kKeep, "DIFF_GRAD_Y");
   static const k0x011910a2 =
-  const MRSC(0x011910a2, VR.kDS, VM.k1_n, Action.K, "DIFF_GRAD_Z");
+  const MRSC(0x011910a2, VR.kDS, VM.k1_n, Action.kKeep, "DIFF_GRAD_Z");
   static const k0x011910a3 =
-  const MRSC(0x011910a3, VR.kDS, VM.k1_n, Action.K, "DIFF_PW_X");
+  const MRSC(0x011910a3, VR.kDS, VM.k1_n, Action.kKeep, "DIFF_PW_X");
   static const k0x011910a4 =
-  const MRSC(0x011910a4, VR.kDS, VM.k1_n, Action.K, "DIFF_PW_Y");
+  const MRSC(0x011910a4, VR.kDS, VM.k1_n, Action.kKeep, "DIFF_PW_Y");
   static const k0x011910a5 =
-  const MRSC(0x011910a5, VR.kDS, VM.k1_n, Action.K, "DIFF_PW_Z");
+  const MRSC(0x011910a5, VR.kDS, VM.k1_n, Action.kKeep, "DIFF_PW_Z");
   static const k0x011910a6 =
-  const MRSC(0x011910a6, VR.kDS, VM.k1_n, Action.K, "DIFF_TIME_X");
+  const MRSC(0x011910a6, VR.kDS, VM.k1_n, Action.kKeep, "DIFF_TIME_X");
   static const k0x011910a7 =
-  const MRSC(0x011910a7, VR.kDS, VM.k1_n, Action.K, "DIFF_TIME_Y");
+  const MRSC(0x011910a7, VR.kDS, VM.k1_n, Action.kKeep, "DIFF_TIME_Y");
   static const k0x011910a8 =
-  const MRSC(0x011910a8, VR.kDS, VM.k1_n, Action.K, "DIFF_TIME_Z");
+  const MRSC(0x011910a8, VR.kDS, VM.k1_n, Action.kKeep, "DIFF_TIME_Z");
   static const k0x011910a9 =
-  const MRSC(0x011910a9, VR.kDS, VM.k1_n, Action.K, "DiffBValues");
+  const MRSC(0x011910a9, VR.kDS, VM.k1_n, Action.kKeep, "DiffBValues");
   static const k0x011910b0 =
-  const MRSC(0x011910b0, VR.kLO, VM.k1, Action.K, "CoilCorrectionMethod");
+  const MRSC(0x011910b0, VR.kLO, VM.k1, Action.kKeep, "CoilCorrectionMethod");
   static const k0x011910b1 =
-  const MRSC(0x011910b1, VR.kIS, VM.k1, Action.K, "PolyFitOrder");
+  const MRSC(0x011910b1, VR.kIS, VM.k1, Action.kKeep, "PolyFitOrder");
   static const k0x011910b2 =
-  const MRSC(0x011910b2, VR.kDS, VM.k1_n, Action.K, "PolyFitCoeff");
+  const MRSC(0x011910b2, VR.kDS, VM.k1_n, Action.kKeep, "PolyFitCoeff");
   static const k0x011910c0 =
-  const MRSC(0x011910c0, VR.kSQ, VM.k1, Action.K, "QCMinimumLimits");
+  const MRSC(0x011910c0, VR.kSQ, VM.k1, Action.kKeep, "QCMinimumLimits");
   static const k0x011910c1 =
-  const MRSC(0x011910c1, VR.kSQ, VM.k1, Action.K, "QCMaximumLimits");
+  const MRSC(0x011910c1, VR.kSQ, VM.k1, Action.kKeep, "QCMaximumLimits");
   static const k0x011910d0 =
-  const MRSC(0x011910d0, VR.kST, VM.k1, Action.K, "CheckString");
+  const MRSC(0x011910d0, VR.kST, VM.k1, Action.kKeep, "CheckString");
   static const k0x011910d1 =
-  const MRSC(0x011910d1, VR.kLO, VM.k1_n, Action.K, "Source");
+  const MRSC(0x011910d1, VR.kLO, VM.k1_n, Action.kKeep, "Source");
   static const k0x011910f0 =
-  const MRSC(0x011910f0, VR.kOB, VM.k1_n, Action.K, "SampleHeader");
+  const MRSC(0x011910f0, VR.kOB, VM.k1_n, Action.kKeep, "SampleHeader");
   static const k0x011910ff =
-  const MRSC(0x011910ff, VR.kDS, VM.k1_n, Action.K, "UserInfo");
+  const MRSC(0x011910ff, VR.kDS, VM.k1_n, Action.kKeep, "UserInfo");
   static const k0x01191100 =
-  const MRSC(0x01191100, VR.kDS, VM.k1, Action.K, "FitMapModuleVersion");
+  const MRSC(0x01191100, VR.kDS, VM.k1, Action.kKeep, "FitMapModuleVersion");
   static const k0x01191101 =
-  const MRSC(0x01191101, VR.kLO, VM.k1_n, Action.K, "SourceFileNames");
+  const MRSC(0x01191101, VR.kLO, VM.k1_n, Action.kKeep, "SourceFileNames");
   static const k0x01191102 =
-  const MRSC(0x01191102, VR.kIS, VM.k1_n, Action.K, "SourceVolumeIndices");
+  const MRSC(0x01191102, VR.kIS, VM.k1_n, Action.kKeep, "SourceVolumeIndices");
   static const k0x01191103 =
-  const MRSC(0x01191103, VR.kDS, VM.k1_n, Action.K, "ParameterValues");
+  const MRSC(0x01191103, VR.kDS, VM.k1_n, Action.kKeep, "ParameterValues");
   static const k0x01191104 =
-  const MRSC(0x01191104, VR.kAT, VM.k1, Action.K, "ParameterTag");
+  const MRSC(0x01191104, VR.kAT, VM.k1, Action.kKeep, "ParameterTag");
   static const k0x01191105 =
-  const MRSC(0x01191105, VR.kUI, VM.k1_n, Action.K, "SourceFileUIDs");
+  const MRSC(0x01191105, VR.kUI, VM.k1_n, Action.kKeep, "SourceFileUIDs");
   static const k0x01191106 =
-  const MRSC(0x01191106, VR.kLO, VM.k1_n, Action.K, "SourceFileDirectory");
+  const MRSC(0x01191106, VR.kLO, VM.k1_n, Action.kKeep, "SourceFileDirectory");
   static const k0x01191107 =
-  const MRSC(0x01191107, VR.kIS, VM.k1, Action.K, "SourceDataInPlaceFlag");
+  const MRSC(0x01191107, VR.kIS, VM.k1, Action.kKeep, "SourceDataInPlaceFlag");
   static const k0x01191108 =
-  const MRSC(0x01191108, VR.kIS, VM.k1_n, Action.K, "ResultVolumeindices");
+  const MRSC(0x01191108, VR.kIS, VM.k1_n, Action.kKeep, "ResultVolumeindices");
   static const k0x01191109 =
-  const MRSC(0x01191109, VR.kIS, VM.k1, Action.K, "SMOOTHBoxcarAverageKernel");
+  const MRSC(0x01191109, VR.kIS, VM.k1, Action.kKeep, "SMOOTHBoxcarAverageKernel");
   static const k0x0119110c =
-  const MRSC(0x0119110c, VR.kLO, VM.k1, Action.K, "FitICFunction");
+  const MRSC(0x0119110c, VR.kLO, VM.k1, Action.kKeep, "FitICFunction");
   static const k0x0119110d =
-  const MRSC(0x0119110d, VR.kLO, VM.k1, Action.K, "FitFormulaProcedure");
+  const MRSC(0x0119110d, VR.kLO, VM.k1, Action.kKeep, "FitFormulaProcedure");
   static const k0x0119110e =
-  const MRSC(0x0119110e, VR.kLO, VM.k1, Action.K, "FittingProgram");
+  const MRSC(0x0119110e, VR.kLO, VM.k1, Action.kKeep, "FittingProgram");
   static const k0x0119110f =
-  const MRSC(0x0119110f, VR.kIS, VM.k1, Action.K, "FittingProgramVersion");
+  const MRSC(0x0119110f, VR.kIS, VM.k1, Action.kKeep, "FittingProgramVersion");
   static const k0x01191110 =
-  const MRSC(0x01191110, VR.kCS, VM.k1, Action.K, "FitType");
+  const MRSC(0x01191110, VR.kCS, VM.k1, Action.kKeep, "FitType");
   static const k0x01191111 =
-  const MRSC(0x01191111, VR.kIS, VM.k1, Action.K, "SetICFlag");
+  const MRSC(0x01191111, VR.kIS, VM.k1, Action.kKeep, "SetICFlag");
   static const k0x01191112 =
-  const MRSC(0x01191112, VR.kDS, VM.k1_n, Action.K, "InitialConditions");
+  const MRSC(0x01191112, VR.kDS, VM.k1_n, Action.kKeep, "InitialConditions");
   static const k0x01191113 =
-  const MRSC(0x01191113, VR.kDS, VM.k1_n, Action.K, "FitMapScaleFactors");
+  const MRSC(0x01191113, VR.kDS, VM.k1_n, Action.kKeep, "FitMapScaleFactors");
   static const k0x01191120 =
-  const MRSC(0x01191120, VR.kIS, VM.k1, Action.K, "ThresholdingFlag");
+  const MRSC(0x01191120, VR.kIS, VM.k1, Action.kKeep, "ThresholdingFlag");
   static const k0x01191121 =
-  const MRSC(0x01191121, VR.kDS, VM.k1, Action.K, "Threshold");
+  const MRSC(0x01191121, VR.kDS, VM.k1, Action.kKeep, "Threshold");
   static const k0x01191122 =
-  const MRSC(0x01191122, VR.kIS, VM.k1, Action.K, "MaskCompression");
+  const MRSC(0x01191122, VR.kIS, VM.k1, Action.kKeep, "MaskCompression");
   static const k0x01191123 =
-  const MRSC(0x01191123, VR.kOB, VM.k1_n, Action.K, "FitMapMask");
+  const MRSC(0x01191123, VR.kOB, VM.k1_n, Action.kKeep, "FitMapMask");
   static const k0x01191124 =
-  const MRSC(0x01191124, VR.kOB, VM.k1_n, Action.K, "FitMapPntThreshMap");
+  const MRSC(0x01191124, VR.kOB, VM.k1_n, Action.kKeep, "FitMapPntThreshMap");
   static const k0x01191125 =
-  const MRSC(0x01191125, VR.kST, VM.k1, Action.K, "PixelMaskCheckString");
+  const MRSC(0x01191125, VR.kST, VM.k1, Action.kKeep, "PixelMaskCheckString");
   static const k0x01191126 =
-  const MRSC(0x01191126, VR.kST, VM.k1, Action.K, "PixelMaskSource");
+  const MRSC(0x01191126, VR.kST, VM.k1, Action.kKeep, "PixelMaskSource");
   static const k0x01191130 =
-  const MRSC(0x01191130, VR.kDS, VM.k1_n, Action.K, "UpperFitLimit");
+  const MRSC(0x01191130, VR.kDS, VM.k1_n, Action.kKeep, "UpperFitLimit");
   static const k0x01191131 =
-  const MRSC(0x01191131, VR.kDS, VM.k1_n, Action.K, "LowerFitLimit");
+  const MRSC(0x01191131, VR.kDS, VM.k1_n, Action.kKeep, "LowerFitLimit");
   static const k0x01191140 =
-  const MRSC(0x01191140, VR.kLO, VM.k1, Action.K, "GradientMatrixMethod");
+  const MRSC(0x01191140, VR.kLO, VM.k1, Action.kKeep, "GradientMatrixMethod");
   static const k0x01191141 =
-  const MRSC(0x01191141, VR.kDS, VM.k1_n, Action.K, "GradientMatrix");
+  const MRSC(0x01191141, VR.kDS, VM.k1_n, Action.kKeep, "GradientMatrix");
   static const k0x01191180 =
-  const MRSC(0x01191180, VR.kSQ, VM.k1, Action.K, "FitMapSQ");
+  const MRSC(0x01191180, VR.kSQ, VM.k1, Action.kKeep, "FitMapSQ");
   static const k0x01191181 =
-  const MRSC(0x01191181, VR.kIS, VM.k1, Action.K, "fmSQFitNumber");
+  const MRSC(0x01191181, VR.kIS, VM.k1, Action.kKeep, "fmSQFitNumber");
   static const k0x011911a0 =
-  const MRSC(0x011911a0, VR.kCS, VM.k1, Action.K, "PhantCalibType");
+  const MRSC(0x011911a0, VR.kCS, VM.k1, Action.kKeep, "PhantCalibType");
   static const k0x011911a1 =
-  const MRSC(0x011911a1, VR.kIS, VM.k1, Action.K, "PhantCalibNParms");
+  const MRSC(0x011911a1, VR.kIS, VM.k1, Action.kKeep, "PhantCalibNParms");
   static const k0x011911a2 =
-  const MRSC(0x011911a2, VR.kDS, VM.k1_n, Action.K, "PhantCalibParam");
+  const MRSC(0x011911a2, VR.kDS, VM.k1_n, Action.kKeep, "PhantCalibParam");
   static const k0x011911a3 =
-  const MRSC(0x011911a3, VR.kIS, VM.k1_n, Action.K, "PhantGoodFlags");
+  const MRSC(0x011911a3, VR.kIS, VM.k1_n, Action.kKeep, "PhantGoodFlags");
   static const k0x011911a4 =
-  const MRSC(0x011911a4, VR.kDS, VM.k1_n, Action.K, "PhantValues");
+  const MRSC(0x011911a4, VR.kDS, VM.k1_n, Action.kKeep, "PhantValues");
   static const k0x011911a5 =
-  const MRSC(0x011911a5, VR.kDS, VM.k1_n, Action.K, "PhantRefValues");
+  const MRSC(0x011911a5, VR.kDS, VM.k1_n, Action.kKeep, "PhantRefValues");
   static const k0x01191200 =
-  const MRSC(0x01191200, VR.kIS, VM.k1_n, Action.K, "ImageProcessStatus");
+  const MRSC(0x01191200, VR.kIS, VM.k1_n, Action.kKeep, "ImageProcessStatus");
   static const k0x01191201 =
-  const MRSC(0x01191201, VR.kLO, VM.k1, Action.K, "SourceID");
+  const MRSC(0x01191201, VR.kLO, VM.k1, Action.kKeep, "SourceID");
   static const k0x01191202 =
-  const MRSC(0x01191202, VR.kIS, VM.k1, Action.K, "Group Version");
+  const MRSC(0x01191202, VR.kIS, VM.k1, Action.kKeep, "Group Version");
   static const k0x01191203 =
-  const MRSC(0x01191203, VR.kIS, VM.k1, Action.K, "ExecuteOnRead");
+  const MRSC(0x01191203, VR.kIS, VM.k1, Action.kKeep, "ExecuteOnRead");
   static const k0x01191204 =
-  const MRSC(0x01191204, VR.kIS, VM.k1, Action.K, "NumberPasses");
+  const MRSC(0x01191204, VR.kIS, VM.k1, Action.kKeep, "NumberPasses");
   static const k0x01191206 =
-  const MRSC(0x01191206, VR.kIS, VM.k1_n, Action.K, "NumProcesses");
+  const MRSC(0x01191206, VR.kIS, VM.k1_n, Action.kKeep, "NumProcesses");
   static const k0x01191208 =
-  const MRSC(0x01191208, VR.kIS, VM.k1_n, Action.K, "GroupExecuteOrder");
+  const MRSC(0x01191208, VR.kIS, VM.k1_n, Action.kKeep, "GroupExecuteOrder");
   static const k0x0119120a =
-  const MRSC(0x0119120a, VR.kIS, VM.k1, Action.K, "NumberTransforms");
+  const MRSC(0x0119120a, VR.kIS, VM.k1, Action.kKeep, "NumberTransforms");
   static const k0x0119120b =
-  const MRSC(0x0119120b, VR.kIS, VM.k1_n, Action.K, "NumberProcesses");
+  const MRSC(0x0119120b, VR.kIS, VM.k1_n, Action.kKeep, "NumberProcesses");
   static const k0x01191211 =
-  const MRSC(0x01191211, VR.kIS, VM.k1_n, Action.K, "InvertImage");
+  const MRSC(0x01191211, VR.kIS, VM.k1_n, Action.kKeep, "InvertImage");
   static const k0x01191212 =
-  const MRSC(0x01191212, VR.kIS, VM.k1_n, Action.K, "SkeletonizeImage");
+  const MRSC(0x01191212, VR.kIS, VM.k1_n, Action.kKeep, "SkeletonizeImage");
   static const k0x01191213 =
-  const MRSC(0x01191213, VR.kIS, VM.k1_n, Action.K, "IsotropicResolution");
+  const MRSC(0x01191213, VR.kIS, VM.k1_n, Action.kKeep, "IsotropicResolution");
   static const k0x01191220 =
-  const MRSC(0x01191220, VR.kIS, VM.k1_n, Action.K, "MedianFilterKernel");
+  const MRSC(0x01191220, VR.kIS, VM.k1_n, Action.kKeep, "MedianFilterKernel");
   static const k0x01191221 =
-  const MRSC(0x01191221, VR.kDS, VM.k1_n, Action.K, "BackgroundCorrection");
+  const MRSC(0x01191221, VR.kDS, VM.k1_n, Action.kKeep, "BackgroundCorrection");
   static const k0x01191222 =
-  const MRSC(0x01191222, VR.kDS, VM.k1_n, Action.K, "UnSharpMasking");
+  const MRSC(0x01191222, VR.kDS, VM.k1_n, Action.kKeep, "UnSharpMasking");
   static const k0x01191223 =
-  const MRSC(0x01191223, VR.kIS, VM.k1_n, Action.K, "LocalThresholdKernel");
+  const MRSC(0x01191223, VR.kIS, VM.k1_n, Action.kKeep, "LocalThresholdKernel");
   static const k0x01191224 =
-  const MRSC(0x01191224, VR.kIS, VM.k1_n, Action.K, "AbsoluteLimits");
+  const MRSC(0x01191224, VR.kIS, VM.k1_n, Action.kKeep, "AbsoluteLimits");
   static const k0x01191225 =
-  const MRSC(0x01191225, VR.kDS, VM.k1_n, Action.K, "PercentileLimits");
+  const MRSC(0x01191225, VR.kDS, VM.k1_n, Action.kKeep, "PercentileLimits");
   static const k0x01191226 =
-  const MRSC(0x01191226, VR.kDS, VM.k1_n, Action.K, "InPlaneRotation");
+  const MRSC(0x01191226, VR.kDS, VM.k1_n, Action.kKeep, "InPlaneRotation");
   static const k0x01191227 =
-  const MRSC(0x01191227, VR.kIS, VM.k1_n, Action.K, "ByteScaleMinMaxTop");
+  const MRSC(0x01191227, VR.kIS, VM.k1_n, Action.kKeep, "ByteScaleMinMaxTop");
   static const k0x01191228 =
-  const MRSC(0x01191228, VR.kIS, VM.k1_n, Action.K, "GlobalThreshold");
+  const MRSC(0x01191228, VR.kIS, VM.k1_n, Action.kKeep, "GlobalThreshold");
   static const k0x01191229 =
-  const MRSC(0x01191229, VR.kDS, VM.k1_n, Action.K, "IntensityScale");
+  const MRSC(0x01191229, VR.kDS, VM.k1_n, Action.kKeep, "IntensityScale");
   static const k0x01191230 =
-  const MRSC(0x01191230, VR.kIS, VM.k1_n, Action.K, "ReSample");
+  const MRSC(0x01191230, VR.kIS, VM.k1_n, Action.kKeep, "ReSample");
   static const k0x01191231 =
-  const MRSC(0x01191231, VR.kIS, VM.k1_n, Action.K, "OrthogonalReFormat");
+  const MRSC(0x01191231, VR.kIS, VM.k1_n, Action.kKeep, "OrthogonalReFormat");
   static const k0x01191232 =
-  const MRSC(0x01191232, VR.kIS, VM.k1_n, Action.K, "REBIN");
+  const MRSC(0x01191232, VR.kIS, VM.k1_n, Action.kKeep, "REBIN");
   static const k0x01191233 =
-  const MRSC(0x01191233, VR.kDS, VM.k1_n, Action.K, "WhiteTopHat");
+  const MRSC(0x01191233, VR.kDS, VM.k1_n, Action.kKeep, "WhiteTopHat");
   static const k0x01191234 =
-  const MRSC(0x01191234, VR.kIS, VM.k1_n, Action.K, "HistEqual");
+  const MRSC(0x01191234, VR.kIS, VM.k1_n, Action.kKeep, "HistEqual");
   static const k0x01191235 =
-  const MRSC(0x01191235, VR.kIS, VM.k1_n, Action.K, "Crop");
+  const MRSC(0x01191235, VR.kIS, VM.k1_n, Action.kKeep, "Crop");
   static const k0x01191236 =
-  const MRSC(0x01191236, VR.kDS, VM.k1_n, Action.K, "LPCoil");
+  const MRSC(0x01191236, VR.kDS, VM.k1_n, Action.kKeep, "LPCoil");
   static const k0x01191240 =
-  const MRSC(0x01191240, VR.kIS, VM.k1, Action.K, "LPCCVersion");
+  const MRSC(0x01191240, VR.kIS, VM.k1, Action.kKeep, "LPCCVersion");
   static const k0x01191241 =
-  const MRSC(0x01191241, VR.kLO, VM.k1, Action.K, "LPCCFilename");
+  const MRSC(0x01191241, VR.kLO, VM.k1, Action.kKeep, "LPCCFilename");
   static const k0x01191242 =
-  const MRSC(0x01191242, VR.kDS, VM.k1_n, Action.K, "LPCCBandwidth");
+  const MRSC(0x01191242, VR.kDS, VM.k1_n, Action.kKeep, "LPCCBandwidth");
   static const k0x01191243 =
-  const MRSC(0x01191243, VR.kDS, VM.k1, Action.K, "LPCCNoise_factor");
+  const MRSC(0x01191243, VR.kDS, VM.k1, Action.kKeep, "LPCCNoise_factor");
   static const k0x01191244 =
-  const MRSC(0x01191244, VR.kDS, VM.k1, Action.K, "LPCCNoise_level");
+  const MRSC(0x01191244, VR.kDS, VM.k1, Action.kKeep, "LPCCNoise_level");
   static const k0x01191245 =
-  const MRSC(0x01191245, VR.kIS, VM.k1, Action.K, "LPCCNoise_mode");
+  const MRSC(0x01191245, VR.kIS, VM.k1, Action.kKeep, "LPCCNoise_mode");
   static const k0x01191246 =
-  const MRSC(0x01191246, VR.kIS, VM.k1, Action.K, "LPCCDirection");
+  const MRSC(0x01191246, VR.kIS, VM.k1, Action.kKeep, "LPCCDirection");
   static const k0x01191247 =
-  const MRSC(0x01191247, VR.kIS, VM.k1, Action.K, "LPCCEdge_fill");
+  const MRSC(0x01191247, VR.kIS, VM.k1, Action.kKeep, "LPCCEdge_fill");
   static const k0x01191248 =
-  const MRSC(0x01191248, VR.kIS, VM.k1, Action.K, "LPCCMean_fill");
+  const MRSC(0x01191248, VR.kIS, VM.k1, Action.kKeep, "LPCCMean_fill");
   static const k0x01191249 =
-  const MRSC(0x01191249, VR.kIS, VM.k1, Action.K, "LPCCPixelsearch");
+  const MRSC(0x01191249, VR.kIS, VM.k1, Action.kKeep, "LPCCPixelsearch");
   static const k0x0119124a =
-  const MRSC(0x0119124a, VR.kDS, VM.k1, Action.K, "LPCCIntensity_scale");
+  const MRSC(0x0119124a, VR.kDS, VM.k1, Action.kKeep, "LPCCIntensity_scale");
   static const k0x0119124b =
-  const MRSC(0x0119124b, VR.kIS, VM.k1, Action.K, "LPCCThreed");
+  const MRSC(0x0119124b, VR.kIS, VM.k1, Action.kKeep, "LPCCThreed");
   static const k0x0119124c =
-  const MRSC(0x0119124c, VR.kLO, VM.k1, Action.K, "LPCCRoi_mask");
+  const MRSC(0x0119124c, VR.kLO, VM.k1, Action.kKeep, "LPCCRoi_mask");
   static const k0x0119124d =
-  const MRSC(0x0119124d, VR.kIS, VM.k2, Action.K, "LPCCMask_slices");
+  const MRSC(0x0119124d, VR.kIS, VM.k2, Action.kKeep, "LPCCMask_slices");
   static const k0x0119124e =
-  const MRSC(0x0119124e, VR.kIS, VM.k1, Action.K, "LPCCSlice_pad");
+  const MRSC(0x0119124e, VR.kIS, VM.k1, Action.kKeep, "LPCCSlice_pad");
   static const k0x0119124f =
-  const MRSC(0x0119124f, VR.kIS, VM.k1, Action.K, "LPCCSave_type");
+  const MRSC(0x0119124f, VR.kIS, VM.k1, Action.kKeep, "LPCCSave_type");
   static const k0x01191250 =
-  const MRSC(0x01191250, VR.kIS, VM.k1, Action.K, "LPCCFilter_type");
+  const MRSC(0x01191250, VR.kIS, VM.k1, Action.kKeep, "LPCCFilter_type");
   static const k0x01191251 =
-  const MRSC(0x01191251, VR.kDS, VM.k1, Action.K, "LPCCMean_Multiplier");
+  const MRSC(0x01191251, VR.kDS, VM.k1, Action.kKeep, "LPCCMean_Multiplier");
   static const k0x01191260 =
-  const MRSC(0x01191260, VR.kDS, VM.k1, Action.K, "SACoilCorrectionIncrement");
+  const MRSC(0x01191260, VR.kDS, VM.k1, Action.kKeep, "SACoilCorrectionIncrement");
   static const k0x01191261 =
-  const MRSC(0x01191261, VR.kIS, VM.k1, Action.K, "SACoilCorrectionVersion");
+  const MRSC(0x01191261, VR.kIS, VM.k1, Action.kKeep, "SACoilCorrectionVersion");
   static const k0x01191262 =
-  const MRSC(0x01191262, VR.kDA, VM.k1, Action.K, "SACoilCorrectionCorr_date");
+  const MRSC(0x01191262, VR.kDA, VM.k1, Action.kKeep, "SACoilCorrectionCorr_date");
   static const k0x01191263 =
-  const MRSC(0x01191263, VR.kTM, VM.k1, Action.K, "SACoilCorrectionCorr_time");
+  const MRSC(0x01191263, VR.kTM, VM.k1, Action.kKeep, "SACoilCorrectionCorr_time");
   static const k0x01191264 =
-  const MRSC(0x01191264, VR.kLO, VM.k1, Action.K, "SACoilCorrectionMethod");
+  const MRSC(0x01191264, VR.kLO, VM.k1, Action.kKeep, "SACoilCorrectionMethod");
   static const k0x01191265 =
-  const MRSC(0x01191265, VR.kDS, VM.k1_n, Action.K, "SACoilCorrectionOrigin");
+  const MRSC(0x01191265, VR.kDS, VM.k1_n, Action.kKeep, "SACoilCorrectionOrigin");
   static const k0x01191266 =
-  const MRSC(0x01191266, VR.kDS, VM.k1_n, Action.K, "SACoilCorrectionAxis_cos");
+  const MRSC(0x01191266, VR.kDS, VM.k1_n, Action.kKeep, "SACoilCorrectionAxis_cos");
   static const k0x01191267 =
-  const MRSC(0x01191267, VR.kIS, VM.k1, Action.K, "SACoilCorrectionNumber");
+  const MRSC(0x01191267, VR.kIS, VM.k1, Action.kKeep, "SACoilCorrectionNumber");
   static const k0x01191268 =
-  const MRSC(0x01191268, VR.kLO, VM.k1, Action.K, "SACoilCorrectionSid");
+  const MRSC(0x01191268, VR.kLO, VM.k1, Action.kKeep, "SACoilCorrectionSid");
   static const k0x01191269 =
-  const MRSC(0x01191269, VR.kDS, VM.k1_n, Action.K, "SACoilCorrectionRange");
+  const MRSC(0x01191269, VR.kDS, VM.k1_n, Action.kKeep, "SACoilCorrectionRange");
   static const k0x0119126a =
-  const MRSC(0x0119126a, VR.kFD, VM.k1_n, Action.K, "SACoilCorrectionSa_value");
+  const MRSC(0x0119126a, VR.kFD, VM.k1_n, Action.kKeep, "SACoilCorrectionSa_value");
   static const k0x0119126b =
-  const MRSC(0x0119126b, VR.kIS, VM.k1, Action.K, "SACoilCorrectionAxis_flag");
+  const MRSC(0x0119126b, VR.kIS, VM.k1, Action.kKeep, "SACoilCorrectionAxis_flag");
   static const k0x0119126c =
-  const MRSC(0x0119126c, VR.kIS, VM.k1_n, Action.K, "SACoilCorrectionSample_number");
+  const MRSC(0x0119126c, VR.kIS, VM.k1_n, Action.kKeep, "SACoilCorrectionSample_number");
   static const k0x0119126d =
-  const MRSC(0x0119126d, VR.kLO, VM.k1, Action.K, "SACoilCorrectionParams_SID");
+  const MRSC(0x0119126d, VR.kLO, VM.k1, Action.kKeep, "SACoilCorrectionParams_SID");
   static const k0x0119126e =
-  const MRSC(0x0119126e, VR.kIS, VM.k1, Action.K, "SACoilCorrectionParams_Version");
+  const MRSC(0x0119126e, VR.kIS, VM.k1, Action.kKeep, "SACoilCorrectionParams_Version");
   static const k0x0119126f =
-  const MRSC(0x0119126f, VR.kDS, VM.k1, Action.K, "SACoilCorrectionParams_Rot_axis_off");
+  const MRSC(0x0119126f, VR.kDS, VM.k1, Action.kKeep, "SACoilCorrectionParams_Rot_axis_off");
   static const k0x01191270 =
-  const MRSC(0x01191270, VR.kDS, VM.k1, Action.K, "SACoilCorrectionParams_Angle_deg");
+  const MRSC(0x01191270, VR.kDS, VM.k1, Action.kKeep, "SACoilCorrectionParams_Angle_deg");
   static const k0x01191271 =
-  const MRSC(0x01191271, VR.kDS, VM.k1, Action.K, "SACoilCorrectionParams_Offset_in");
+  const MRSC(0x01191271, VR.kDS, VM.k1, Action.kKeep, "SACoilCorrectionParams_Offset_in");
   static const k0x01191272 =
-  const MRSC(0x01191272, VR.kDS, VM.k1_n, Action.K, "SACoilCorrectionParams_Plane_cos_ref");
+  const MRSC(0x01191272, VR.kDS, VM.k1_n, Action.kKeep, "SACoilCorrectionParams_Plane_cos_ref");
   static const k0x01191273 =
-  const MRSC(0x01191273, VR.kDS, VM.k1_n, Action.K, "SACoilCorrectionParams_Lps_ref");
+  const MRSC(0x01191273, VR.kDS, VM.k1_n, Action.kKeep, "SACoilCorrectionParams_Lps_ref");
   static const k0x01191274 =
-  const MRSC(0x01191274, VR.kIS, VM.k1, Action.K, "SACoilCorrectionParams_Order");
+  const MRSC(0x01191274, VR.kIS, VM.k1, Action.kKeep, "SACoilCorrectionParams_Order");
   static const k0x01191275 =
-  const MRSC(0x01191275, VR.kDS, VM.k1_n, Action.K, "SACoilCorrectionParams_Coeff");
+  const MRSC(0x01191275, VR.kDS, VM.k1_n, Action.kKeep, "SACoilCorrectionParams_Coeff");
   static const k0x01191276 =
-  const MRSC(0x01191276, VR.kDA, VM.k1, Action.K, "SACoilCorrectionParams_Coeff_date");
+  const MRSC(0x01191276, VR.kDA, VM.k1, Action.kKeep, "SACoilCorrectionParams_Coeff_date");
   static const k0x01191277 =
-  const MRSC(0x01191277, VR.kLO, VM.k1, Action.K, "SACoilCorrectionParams_Coeff_src");
+  const MRSC(0x01191277, VR.kLO, VM.k1, Action.kKeep, "SACoilCorrectionParams_Coeff_src");
   static const k0x011912a0 =
-  const MRSC(0x011912a0, VR.kLO, VM.k1, Action.K, "MinVarFiltSid");
+  const MRSC(0x011912a0, VR.kLO, VM.k1, Action.kKeep, "MinVarFiltSid");
   static const k0x011912a1 =
-  const MRSC(0x011912a1, VR.kLO, VM.k1, Action.K, "MinVarFiltPath");
+  const MRSC(0x011912a1, VR.kLO, VM.k1, Action.kKeep, "MinVarFiltPath");
   static const k0x011912a2 =
-  const MRSC(0x011912a2, VR.kIS, VM.k1, Action.K, "MinVarFiltMax_images");
+  const MRSC(0x011912a2, VR.kIS, VM.k1, Action.kKeep, "MinVarFiltMax_images");
   static const k0x011912a3 =
-  const MRSC(0x011912a3, VR.kIS, VM.k2, Action.K, "MinVarFiltId_locs");
+  const MRSC(0x011912a3, VR.kIS, VM.k2, Action.kKeep, "MinVarFiltId_locs");
   static const k0x011912a4 =
-  const MRSC(0x011912a4, VR.kLO, VM.k1, Action.K, "MinVarFiltScript_name");
+  const MRSC(0x011912a4, VR.kLO, VM.k1, Action.kKeep, "MinVarFiltScript_name");
   static const k0x011912a5 =
-  const MRSC(0x011912a5, VR.kIS, VM.k1, Action.K, "MinVarFiltSave_masks");
+  const MRSC(0x011912a5, VR.kIS, VM.k1, Action.kKeep, "MinVarFiltSave_masks");
   static const k0x011912a6 =
-  const MRSC(0x011912a6, VR.kIS, VM.k1, Action.K, "MinVarFiltSave_idf");
+  const MRSC(0x011912a6, VR.kIS, VM.k1, Action.kKeep, "MinVarFiltSave_idf");
   static const k0x011912a7 =
-  const MRSC(0x011912a7, VR.kLO, VM.k1, Action.K, "MinVarFiltMask");
+  const MRSC(0x011912a7, VR.kLO, VM.k1, Action.kKeep, "MinVarFiltMask");
   static const k0x011912a8 =
-  const MRSC(0x011912a8, VR.kLO, VM.k1, Action.K, "MinVarFiltIdfmask");
+  const MRSC(0x011912a8, VR.kLO, VM.k1, Action.kKeep, "MinVarFiltIdfmask");
   static const k0x011912a9 =
-  const MRSC(0x011912a9, VR.kLO, VM.k1, Action.K, "MinVarFiltImage");
+  const MRSC(0x011912a9, VR.kLO, VM.k1, Action.kKeep, "MinVarFiltImage");
   static const k0x011912aa =
-  const MRSC(0x011912aa, VR.kLO, VM.k1_n, Action.K, "MinVarFiltIdfimages");
+  const MRSC(0x011912aa, VR.kLO, VM.k1_n, Action.kKeep, "MinVarFiltIdfimages");
   static const k0x011912ab =
-  const MRSC(0x011912ab, VR.kLO, VM.k1, Action.K, "MinVarFiltOutput_file");
+  const MRSC(0x011912ab, VR.kLO, VM.k1, Action.kKeep, "MinVarFiltOutput_file");
   static const k0x011912ac =
-  const MRSC(0x011912ac, VR.kIS, VM.k1, Action.K, "MinVarFiltNum_loops");
+  const MRSC(0x011912ac, VR.kIS, VM.k1, Action.kKeep, "MinVarFiltNum_loops");
   static const k0x011912ad =
-  const MRSC(0x011912ad, VR.kIS, VM.k3, Action.K, "MinVarFiltKernel");
+  const MRSC(0x011912ad, VR.kIS, VM.k3, Action.kKeep, "MinVarFiltKernel");
   static const k0x011912ae =
-  const MRSC(0x011912ae, VR.kIS, VM.k1, Action.K, "MinVarFiltLimit_sliceFlag");
+  const MRSC(0x011912ae, VR.kIS, VM.k1, Action.kKeep, "MinVarFiltLimit_sliceFlag");
   static const k0x011912af =
-  const MRSC(0x011912af, VR.kSS, VM.k2, Action.K, "MinVarFiltSlice_limits");
+  const MRSC(0x011912af, VR.kSS, VM.k2, Action.kKeep, "MinVarFiltSlice_limits");
   static const k0x011912b0 =
-  const MRSC(0x011912b0, VR.kIS, VM.k1, Action.K, "MinVarFiltOutput_type");
+  const MRSC(0x011912b0, VR.kIS, VM.k1, Action.kKeep, "MinVarFiltOutput_type");
   static const k0x011912b1 =
-  const MRSC(0x011912b1, VR.kIS, VM.k1, Action.K, "MinVarFiltOutput_ftype");
+  const MRSC(0x011912b1, VR.kIS, VM.k1, Action.kKeep, "MinVarFiltOutput_ftype");
   static const k0x011912b2 =
-  const MRSC(0x011912b2, VR.kLO, VM.k1, Action.K, "MinVarFiltScaling");
+  const MRSC(0x011912b2, VR.kLO, VM.k1, Action.kKeep, "MinVarFiltScaling");
   static const k0x011912b3 =
-  const MRSC(0x011912b3, VR.kLO, VM.k1, Action.K, "MinVarFiltScript");
+  const MRSC(0x011912b3, VR.kLO, VM.k1, Action.kKeep, "MinVarFiltScript");
   static const k0x011912b4 =
-  const MRSC(0x011912b4, VR.kLO, VM.k1, Action.K, "MinVarFiltLog");
+  const MRSC(0x011912b4, VR.kLO, VM.k1, Action.kKeep, "MinVarFiltLog");
   static const k0x01191400 =
-  const MRSC(0x01191400, VR.kLO, VM.k1, Action.K, "MIPsSid");
+  const MRSC(0x01191400, VR.kLO, VM.k1, Action.kKeep, "MIPsSid");
   static const k0x01191401 =
-  const MRSC(0x01191401, VR.kUI, VM.k1, Action.K, "MIPsUID");
+  const MRSC(0x01191401, VR.kUI, VM.k1, Action.kKeep, "MIPsUID");
   static const k0x01191402 =
-  const MRSC(0x01191402, VR.kTM, VM.k1, Action.K, "MIPsTime");
+  const MRSC(0x01191402, VR.kTM, VM.k1, Action.kKeep, "MIPsTime");
   static const k0x01191403 =
-  const MRSC(0x01191403, VR.kDA, VM.k1, Action.K, "MIPsDate");
+  const MRSC(0x01191403, VR.kDA, VM.k1, Action.kKeep, "MIPsDate");
   static const k0x01191404 =
-  const MRSC(0x01191404, VR.kIS, VM.k1, Action.K, "MIPsVersion");
+  const MRSC(0x01191404, VR.kIS, VM.k1, Action.kKeep, "MIPsVersion");
   static const k0x01191405 =
-  const MRSC(0x01191405, VR.kIS, VM.k1, Action.K, "MIPsVolume");
+  const MRSC(0x01191405, VR.kIS, VM.k1, Action.kKeep, "MIPsVolume");
   static const k0x01191406 =
-  const MRSC(0x01191406, VR.kIS, VM.k1, Action.K, "MIPsOrtho");
+  const MRSC(0x01191406, VR.kIS, VM.k1, Action.kKeep, "MIPsOrtho");
   static const k0x01191407 =
-  const MRSC(0x01191407, VR.kIS, VM.k1, Action.K, "MIPsMaskedFlag");
+  const MRSC(0x01191407, VR.kIS, VM.k1, Action.kKeep, "MIPsMaskedFlag");
   static const k0x01191408 =
-  const MRSC(0x01191408, VR.kIS, VM.k1, Action.K, "MIPsSubtractVolume");
+  const MRSC(0x01191408, VR.kIS, VM.k1, Action.kKeep, "MIPsSubtractVolume");
   static const k0x01191410 =
-  const MRSC(0x01191410, VR.kUL, VM.k1_n, Action.K, "MIPsProtectPixels");
+  const MRSC(0x01191410, VR.kUL, VM.k1_n, Action.kKeep, "MIPsProtectPixels");
   static const k0x01191411 =
-  const MRSC(0x01191411, VR.kUL, VM.k1_n, Action.K, "MIPsIgnorePixels");
+  const MRSC(0x01191411, VR.kUL, VM.k1_n, Action.kKeep, "MIPsIgnorePixels");
   static const k0x01191412 =
-  const MRSC(0x01191412, VR.kIS, VM.k1, Action.K, "MIPsProjectFlag");
+  const MRSC(0x01191412, VR.kIS, VM.k1, Action.kKeep, "MIPsProjectFlag");
   static const k0x01191413 =
-  const MRSC(0x01191413, VR.kIS, VM.k1_n, Action.K, "MIPsProjectPlaneIndices");
+  const MRSC(0x01191413, VR.kIS, VM.k1_n, Action.kKeep, "MIPsProjectPlaneIndices");
   static const k0x01191500 =
-  const MRSC(0x01191500, VR.kLO, VM.k1, Action.K, "SERSid");
+  const MRSC(0x01191500, VR.kLO, VM.k1, Action.kKeep, "SERSid");
   static const k0x01191501 =
-  const MRSC(0x01191501, VR.kUI, VM.k1, Action.K, "SERUID");
+  const MRSC(0x01191501, VR.kUI, VM.k1, Action.kKeep, "SERUID");
   static const k0x01191502 =
-  const MRSC(0x01191502, VR.kTM, VM.k1, Action.K, "SERTime");
+  const MRSC(0x01191502, VR.kTM, VM.k1, Action.kKeep, "SERTime");
   static const k0x01191503 =
-  const MRSC(0x01191503, VR.kDA, VM.k1, Action.K, "SERDate");
+  const MRSC(0x01191503, VR.kDA, VM.k1, Action.kKeep, "SERDate");
   static const k0x01191504 =
-  const MRSC(0x01191504, VR.kIS, VM.k1, Action.K, "SERVersion");
+  const MRSC(0x01191504, VR.kIS, VM.k1, Action.kKeep, "SERVersion");
   static const k0x01191505 =
-  const MRSC(0x01191505, VR.kIS, VM.k3, Action.K, "SERTimePoints");
+  const MRSC(0x01191505, VR.kIS, VM.k3, Action.kKeep, "SERTimePoints");
   static const k0x01191506 =
-  const MRSC(0x01191506, VR.kIS, VM.k1, Action.K, "SERByteScaled");
+  const MRSC(0x01191506, VR.kIS, VM.k1, Action.kKeep, "SERByteScaled");
   static const k0x01191507 =
-  const MRSC(0x01191507, VR.kDS, VM.k1, Action.K, "SERBackground");
+  const MRSC(0x01191507, VR.kDS, VM.k1, Action.kKeep, "SERBackground");
   static const k0x01191508 =
-  const MRSC(0x01191508, VR.kDS, VM.k1, Action.K, "SERThreshold");
+  const MRSC(0x01191508, VR.kDS, VM.k1, Action.kKeep, "SERThreshold");
   static const k0x01191509 =
-  const MRSC(0x01191509, VR.kDS, VM.k1, Action.K, "SERMaximum");
+  const MRSC(0x01191509, VR.kDS, VM.k1, Action.kKeep, "SERMaximum");
   static const k0x0119150a =
-  const MRSC(0x0119150a, VR.kIS, VM.k1, Action.K, "SERMinConPixels");
+  const MRSC(0x0119150a, VR.kIS, VM.k1, Action.kKeep, "SERMinConPixels");
   static const k0x0119150b =
-  const MRSC(0x0119150b, VR.kIS, VM.k1, Action.K, "SERCorrectFlag");
+  const MRSC(0x0119150b, VR.kIS, VM.k1, Action.kKeep, "SERCorrectFlag");
   static const k0x0119150c =
-  const MRSC(0x0119150c, VR.kDS, VM.k2, Action.K, "SERAcqTimes");
+  const MRSC(0x0119150c, VR.kDS, VM.k2, Action.kKeep, "SERAcqTimes");
   static const k0x0119150d =
-  const MRSC(0x0119150d, VR.kDS, VM.k2, Action.K, "SERTargetTimes");
+  const MRSC(0x0119150d, VR.kDS, VM.k2, Action.kKeep, "SERTargetTimes");
   static const k0x0119150e =
-  const MRSC(0x0119150e, VR.kDS, VM.k1, Action.K, "SERTimeTolerance");
+  const MRSC(0x0119150e, VR.kDS, VM.k1, Action.kKeep, "SERTimeTolerance");
   static const k0x0119150f =
-  const MRSC(0x0119150f, VR.kDS, VM.k4, Action.K, "SERCorrectionParams");
+  const MRSC(0x0119150f, VR.kDS, VM.k4, Action.kKeep, "SERCorrectionParams");
   static const k0x01191510 =
-  const MRSC(0x01191510, VR.kLO, VM.k1, Action.K, "SERImageType");
+  const MRSC(0x01191510, VR.kLO, VM.k1, Action.kKeep, "SERImageType");
   static const k0x01191511 =
-  const MRSC(0x01191511, VR.kIS, VM.k1_n, Action.K, "SEROffsets");
+  const MRSC(0x01191511, VR.kIS, VM.k1_n, Action.kKeep, "SEROffsets");
   static const k0x01191512 =
-  const MRSC(0x01191512, VR.kLO, VM.k1, Action.K, "SERMaskFileName");
+  const MRSC(0x01191512, VR.kLO, VM.k1, Action.kKeep, "SERMaskFileName");
   static const k0x01191513 =
-  const MRSC(0x01191513, VR.kDS, VM.k1, Action.K, "SERMaskChecksum");
+  const MRSC(0x01191513, VR.kDS, VM.k1, Action.kKeep, "SERMaskChecksum");
   static const k0x01191514 =
-  const MRSC(0x01191514, VR.kUI, VM.k1, Action.K, "SERMaskFileUID");
+  const MRSC(0x01191514, VR.kUI, VM.k1, Action.kKeep, "SERMaskFileUID");
 
 }

@@ -90,7 +90,7 @@ class RetainUidsOption {
   static const kDoseReferenceUID =
     const RetainUidsOption("DoseReferenceUID", 0x300a0013, VR.kUI, "K");
 
-static const List<int> keep = const [
+static const List<int> retain = const [
   0x00001000,
   0x00001001,
   0x00020003,

@@ -4,10 +4,10 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
-import 'package:dictionary/dictionary.dart';
 import 'package:core/core.dart';
 import 'package:deid/profile.dart';
 import 'package:deid/deid.dart';
+import 'package:dictionary/dictionary.dart';
 
 class AType {
   String name;
@@ -66,7 +66,7 @@ class $cName {
 ''';
  
   String genRemove(String keyword, int tag, VR vr, [AType aType, List values]) {
-    Tagict e = Tagict.lookup(tag);
+    Tag e = Tag.lookup(tag);
     String code = "";
     if (e is SQ)
       code += '(Dataset ds) {}';
@@ -110,7 +110,7 @@ class $cName {
   }
     
 
-  static  Map<String, Function> actionMap = const {
+  static  Map<String, Function> actionMap =  {
       "X": genRemove,
       "U": genReplaceUid,
       "Z": genZeroOrDummy,

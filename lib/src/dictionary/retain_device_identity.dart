@@ -59,7 +59,7 @@ class RetainDeviceIdentityOption {
   static const kPerformedStationGeographicLocationCodeSequence =
     const RetainDeviceIdentityOption("PerformedStationGeographicLocationCodeSequence", 0x00404030, VR.kSQ, "K");
 
-static const List<int> keep = const [
+static const List<int> retain = const [
   0x00081010,
   0x00181000,
   0x00181002,

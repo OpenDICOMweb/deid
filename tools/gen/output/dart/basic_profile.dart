@@ -513,7 +513,7 @@ class BasicProfile {
   static const kDataSetTrailingPadding =
     const BasicProfile("DataSetTrailingPadding", 0xfffcfffc, VR.kOB, "X");
 
-static const List<int> keep = const [
+static const List<int> retain = const [
 
   ];
 

@@ -12,19 +12,20 @@ class Action {
 
   String get id => '$code';
 
+  @override
   String toString() => 'Action.$id';
 
-  static const K = const Action("Keep", "K");
+  static const Action kKeep = const Action("Keep", "K");
   //TODO: what does Action.kKeepXXXXXX
-  static const KB = const Action("KeepXXXXXX", "KB");
-  static const X = const Action("Remove", "X");
-  static const R = const Action("Replace", "R");
+  static const Action kKeepBlank = const Action("KeepXXXXXX", "KB");
+  static const Action kRemove = const Action("Remove", "X");
+  static const Action kReplace = const Action("Replace", "R");
 
   static const Map<String, Action> codes = const {
-    "Keep": K,
-    "KeepXX": KB,
-    "Remove": X,
-    "Replace": R
+    "Keep": kKeep,
+    "KeepXX": kKeepBlank,
+    "Remove": kRemove,
+    "Replace": kReplace
   };
 
   static Action lookup(String code) => codes[code];

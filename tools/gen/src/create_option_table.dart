@@ -1,7 +1,7 @@
 // Copyright (c) 2016, Open DICOMweb Project. All rights reserved.
 // Use of this source code is governed by the open source license
 // that can be found in the LICENSE file.
-// Original author: Jim Philbin <jfphilbin@gmail.edu> - 
+// Original author: Jim Philbin <jfphilbin@gmail.edu> -
 // See the AUTHORS file for other contributors.
 
 import 'dart:convert';
@@ -12,10 +12,10 @@ import 'dart:io';
 int lookupOptionOffset(String optionName) => optionOffset[optionName];
 
 Map<String, int> optionOffset = {
- // "keyword": 0,
- // "tag": 1,
- // "isRetired": 2,
- // "InStdCompIOD": 3,
+  // "keyword": 0,
+  // "tag": 1,
+  // "isRetired": 2,
+  // "InStdCompIOD": 3,
   "basicProfile": 4,
   "RetainSafePrivate": 5,
   "RetainUids": 6,
@@ -29,21 +29,23 @@ Map<String, int> optionOffset = {
 };
 
 class ProfileOptionTable {
-  static const int   kKeywordOffset = 0;
-  static const int   kTagOffset = 1;
-  static const int   kActionOffset = 4;
-  String             className;
-  int                fieldCount;
-  List<String>       fieldTypes;
-  List<String>       fieldNames;
+  static const int kKeywordOffset = 0;
+  static const int kTagOffset = 1;
+  static const int kActionOffset = 4;
+  String className;
+  int fieldCount;
+  List<String> fieldTypes;
+  List<String> fieldNames;
   List<List<String>> values;
 
-  ProfileOptionTable(this.className, this.fieldCount, this.fieldTypes, this.fieldNames, this.values);
+  ProfileOptionTable(this.className, this.fieldCount, this.fieldTypes,
+      this.fieldNames, this.values);
 
-  String commaSeparatedString(String prefix, List args, String suffix, {last: false}) {
+  String commaSeparatedString(String prefix, List args, String suffix,
+      {bool last: false}) {
     String s = "";
     int end = args.length - 1;
-    for(int i = 0; i < end; i++) {
+    for (int i = 0; i < end; i++) {
       s += '$prefix${args[i]}$suffix';
     }
     s += '$prefix${args[end]}';
@@ -53,7 +55,7 @@ class ProfileOptionTable {
 
   String get fieldsString {
     String s = "";
-    for(int i = 0; i < fieldCount; i++) {
+    for (int i = 0; i < fieldCount; i++) {
       s += "  final ${fieldTypes[i]} ${fieldNames[i]};\n";
     }
     return s;
@@ -67,14 +69,14 @@ class ProfileOptionTable {
   }
 
   String tagToDcmFmt(String tag) {
-    String s = '(' + tag.substring(2,6) + ',' + tag.substring(6, 10) + ')';
+    String s = '(' + tag.substring(2, 6) + ',' + tag.substring(6, 10) + ')';
     return s;
   }
 
   // Converts any tags of the form 0x60xx1234 to 0x60001234
   String fixTag(String tag) {
     String tmp = "0x";
-    for(int i = 2; i < tag.length; i++) {
+    for (int i = 2; i < tag.length; i++) {
       if (tag[i] == 'x') {
         tmp += '0';
       } else {
@@ -87,7 +89,7 @@ class ProfileOptionTable {
   // Create a [String] that corresponds to all the [const] members of the class
   String get valuesString {
     String valuesString = "";
-    for(int i = 0; i < values.length; i++) {
+    for (int i = 0; i < values.length; i++) {
       List v = values[i];
       String keyword = '${v[kKeywordOffset]}';
       keyword = keyword.replaceAll('/', '_');
@@ -104,8 +106,9 @@ class ProfileOptionTable {
   }
 
   String lookupTable(String optionName) {
-    var s = "static const Map<int, ${optionName}Option> tagToOption = const {\n";
-    for(int i = 0; i < values.length; i++) {
+    var s =
+        "static const Map<int, ${optionName}Option> tagToOption = const {\n";
+    for (int i = 0; i < values.length; i++) {
       List v = values[i];
       String keyword = '${v[kKeywordOffset]}';
       String tag = v[kTagOffset];
@@ -118,26 +121,26 @@ class ProfileOptionTable {
   String profileOptionValues(String optionName) {
     int optionOffset = lookupOptionOffset(optionName);
     String valuesString = "";
-    for(int i = 0; i < values.length; i++) {
+    for (int i = 0; i < values.length; i++) {
       List v = values[i];
       String keyword = '${v[kKeywordOffset]}';
       String tag = fixTag(v[kTagOffset]);
       String action = v[optionOffset];
       if (action != "null") {
         valuesString +=
-        '  static const k$keyword = const ${optionName}Option($tag, "$keyword", $action);\n';
+            '  static const k$keyword = const ${optionName}Option($tag, "$keyword", $action);\n';
       }
     }
     return valuesString;
   }
 
-  String  profileOptionTables(String optionName) {
+  String profileOptionTables(String optionName) {
     int optionOffset = lookupOptionOffset(optionName);
     List<String> map = [];
     List<String> mapKeys = [];
     List<String> mapValues = [];
 
-    for(int i = 0; i < values.length; i++) {
+    for (int i = 0; i < values.length; i++) {
       List v = values[i];
       String keyword = '${v[kKeywordOffset]}';
       String tag = v[kTagOffset];
@@ -151,7 +154,8 @@ class ProfileOptionTable {
     }
     var indent = "".padRight(4);
     var lines = map.join(',\n$indent');
-    var s = '  static const Map<int, String> map = const {\n$indent$lines};\n\n';
+    var s =
+        '  static const Map<int, String> map = const {\n$indent$lines};\n\n';
     lines = mapKeys.join(",\n$indent");
     s += '  static const List<int> keys = const [\n$indent$lines];\n\n';
     lines = mapValues.join(",\n$indent");
@@ -191,17 +195,12 @@ ${profileOptionTables(optionName)}
     File file = new File(filename);
     String s = file.readAsStringSync();
     Map m = JSON.decode(s);
-    return new ProfileOptionTable(m["className"],
-                                  m["fieldCount"],
-                                  m["fieldTypes"],
-                                  m["fieldNames"],
-                                  m["values"]);
-
+    return new ProfileOptionTable(m["className"], m["fieldCount"],
+        m["fieldTypes"], m["fieldNames"], m["values"]);
   }
 
   static void write(File file, ProfileOptionTable table) {
     String s = JSON.encode(table);
     file.writeAsStringSync(s);
   }
-
 }

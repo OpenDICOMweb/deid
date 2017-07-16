@@ -4,20 +4,21 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu>
 // See the AUTHORS file for other contributors.
 
-import 'package:core/core.dart';
-import 'private_creator.dart';
+import 'package:common/common.dart';
+
+import 'private_creator_tag.dart';
 
 class Manufacturer {
   static Map<String, Manufacturer> map = {};
   final String id;
-  final Map<int, PrivateCreator> groups;
+  final Map<int, PrivateCreatorTag> groups;
 
-  Manufacturer(this.id, PrivateCreator creator)
-      : groups = {creator.group:creator} {
+  Manufacturer(this.id, PrivateCreatorTag creator)
+      : groups = {creator.group: creator} {
     map[id] = this;
   }
 
-  Iterable<PrivateCreator> get creators => groups.values;
+  Iterable<PrivateCreatorTag> get creators => groups.values;
 
   String get json => '''
   "$id": {
@@ -27,33 +28,34 @@ class Manufacturer {
 
   String get groupsJson {
     var out = "{\n";
-    for(PrivateCreator creator in groups.values)
+    for(PrivateCreatorTag creator in groups.values)
       out += creator.json;
     return out += '}\n';
   }
 
   String get creatorsToJson {
     var out = "";
-    for(PrivateCreator creator in creators)
+    for(PrivateCreatorTag creator in creators)
       out += creator.json;
     return out;
   }
 
   String get groupsToJson {
     var out = "{\n";
-    for(PrivateCreator creator in creators)
-      out += '${intToHex(creator.group, 4)}: ${creator.json}\n';
+    for(PrivateCreatorTag creator in creators)
+      out += '${Uint16.hex(creator.group)}: ${creator.json}\n';
     return out += '}\n';
   }
 
 
-  void add(PrivateCreator creator) {
+  void add(PrivateCreatorTag creator) {
     groups[creator.group] = creator;
   }
 
+  @override
   String toString() => "$runtimeType $id: $groups";
 
-  static lookup(String id) => map[id];
+  static Manufacturer lookup(String id) => map[id];
 
-  static get values => map.values;
+  static Iterable get values => map.values;
 }

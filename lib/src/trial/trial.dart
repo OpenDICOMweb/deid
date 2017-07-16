@@ -1,7 +1,7 @@
 // Copyright (c) 2016, Open DICOMweb Project. All rights reserved.
 // Use of this source code is governed by the open source license
 // that can be found in the LICENSE file.
-// Author: Jim Philbin <jfphilbin@gmail.edu> - 
+// Author: Jim Philbin <jfphilbin@gmail.edu> -
 // See the AUTHORS file for other contributors.
 
 import '../profile/profile.dart';
@@ -18,7 +18,7 @@ class Trial {
   List<int> keepTags = [];
   Map<String, String> parameters;
 
-  Trial(this.id, this.name,  this.profile, this.parameters) {
+  Trial(this.id, this.name, this.profile, this.parameters) {
     keepTags.addAll(profile.keepTags);
     profile.evaluateTrial(this);
   }
@@ -31,7 +31,8 @@ class Trial {
   String get siteName => parameters["SITENAME"];
   String get subjectID => parameters["SUBJECTID"];
   String get subjectReadingID => parameters["SUBJECTREADINGID"];
-  String get protocolEthicsCommitteeName => parameters["ProtocolEthicsCommitteeName"];
+  String get protocolEthicsCommitteeName =>
+      parameters["ProtocolEthicsCommitteeName"];
   String get protocolEthicsCommitteeApprovalNumber =>
       parameters["ProtocolEthicsCommitteeApprovalNumber"];
 
@@ -39,12 +40,13 @@ class Trial {
   String get timePointId => parameters["TimePointID"];
   String get timePointDescription => parameters["TimePointDescription"];
   String get distributionType => parameters["DistributionType"];
-  String get consentForDistributionFlag => parameters["ConsentForDistributionFlag"];
+  String get consentForDistributionFlag =>
+      parameters["ConsentForDistributionFlag"];
 
   // Series Level
   String get coordinatingCenterName => parameters["CoordinatingCenterName"];
   String get seriesID => parameters["SeriesID"];
-  String get seriesDescription  => parameters["SeriesDescription"];
+  String get seriesDescription => parameters["SeriesDescription"];
 
   // ACR specific - what are these used for;
   String get prefix => parameters["PREFIX"];
@@ -64,7 +66,7 @@ class Trial {
 
   String lookup(String name) {
     String value = parameters[name];
-    if (value != null ) return value;
+    if (value != null) return value;
     return profile.parameters[name];
   }
 
@@ -95,7 +97,7 @@ class Project {
 }
 
 //TODO: what are submission types
-enum SubmissionType {one, two, three}
+enum SubmissionType { one, two, three }
 
 class Submission {
   final SubmissionType type;

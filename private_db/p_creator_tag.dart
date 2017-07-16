@@ -4,71 +4,21 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu> -
 // See the AUTHORS file for other contributors.
 
-import 'package:common/common.dart';
+
 import 'package:dictionary/dictionary.dart';
 
+import 'p_data_tag.dart';
 
-class Manufacturer {
-  static Map<String, Manufacturer> map = {};
-  final String id;
-  final Map<int, PCreator> groups;
-
-  Manufacturer(this.id, PCreator creator)
-      : groups = {creator.group:creator} {
-    map[id] = this;
-  }
-
-  Iterable<PCreator> get creators => groups.values;
-
-  String get json => '''
-  "$id": {
-    "groups": ${groupsToJson}
-    },
- ''';
-
-  String get groupsJson {
-    var out = "{\n";
-    for(PCreator creator in groups.values)
-        out += creator.json;
-    return out += '}\n';
-  }
-
-  String get creatorsToJson {
-    var out = "";
-    for(PCreator creator in creators)
-        out += creator.json;
-    return out;
-  }
-
-  String get groupsToJson {
-    var out = "{\n";
-    for(PCreator creator in creators)
-      out += '${Uint16.hex(creator.group)}: ${creator.json}\n';
-    return out += '}\n';
-  }
-
-
-  void add(PCreator creator) {
-    groups[creator.group] = creator;
-  }
-
-  String toString() => "$runtimeType $id: $groups";
-
-  static lookup(String id) => map[id];
-
-  static get values => map.values;
-}
-
-class PCreator {
+class PCreatorTag {
   final String name;
   final String manufacturerId;
   final Modality modality;
   final String description;
-  final PElement creator;
+  final PCreatorTag creator;
   final int group;
-  final Map<int, PElement> elements;
+  final Map<int, PDataTag> elements;
 
-  const PCreator(this.name, this.manufacturerId, this.modality,
+  const PCreatorTag(this.name, this.manufacturerId, this.modality,
       this.description, this.creator, this.group, this.elements);
 
   /*
@@ -94,27 +44,29 @@ class PCreator {
 
   String get elementsJson {
     var out = "{\n";
-    for(PElement e in elements.values)
-      out += '"k${e.element}": ${e.json},\n';
+    for(PDataTag e in elements.values)
+      out += '"k${e.name}": ${e.json},\n';
     return out += "}\n";
   }
 
+  @override
   String toString() => "PCreator($name, $manufacturerId, $modality,\n  $creator";
 }
 
-class PElement {
+class PDTag {
   final int code;
-  final VR vr;
-  final VM vm;
+  final VR  vr;
+  final VM  vm;
   final Action action;
   final String description;
   final String creator;
 
-  const PElement(this.code, this.vr, this.vm, this.action, this.description, this.creator);
+  const PDTag(this.code, this.vr, this.vm, this.action, this.description, this.creator);
+
 
   int get group => Group.fromTag(code);
   int get element => Elt.fromTag(code);
-  String get name => 'k${code.hex(element)}';
+  String get name => 'k${Tag.toHex(code)}';
 
   String get json => '''
   {
@@ -126,6 +78,7 @@ class PElement {
     "creator": "$creator"
   }''';
 
+  @override
   String toString() => 'PElement($name, $vr, $vm, $action, $description, $creator)';
 }
 
@@ -137,13 +90,14 @@ class Action {
 
   String get id => 'k$name';
 
+  @override
   String toString() => 'Action.$id';
 
-  static const kKeep = const Action("Keep", "K");
+  static const Action kKeep = const Action("Keep", "K");
   //TODO: what does Action.kKeepXXXXXX
-  static const kKeepXX = const Action("KeepXXXXXX", "KB");
-  static const kRemove = const Action("Remove", "X");
-  static const kReplace = const Action("Replace", "R");
+  static const Action kKeepXX = const Action("KeepXXXXXX", "KB");
+  static const Action kRemove = const Action("Remove", "X");
+  static const Action kReplace = const Action("Replace", "R");
 
   static const Map<String, Action> codes = const {
     "K": kKeep,

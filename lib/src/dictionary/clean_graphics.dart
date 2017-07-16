@@ -24,7 +24,7 @@ class CleanGraphicsOption {
   static const kGraphicAnnotationSequence =
     const CleanGraphicsOption("GraphicAnnotationSequence", 0x00700001, VR.kSQ, "C");
 
-static const List<int> keep = const [
+static const List<int> retain = const [
 
   ];
 

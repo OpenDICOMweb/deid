@@ -4,8 +4,11 @@
 // Original author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
+import 'package:dictionary/dictionary.dart';
+import 'package:core/core.dart';
+
 Map generatePrivateGroup(String creator, String manufacturer, String modality,
-                          String description, groupNumber, String elements) {
+                          String description, int groupNumber, String elements) {
   Map privateGroup = {
     "creator": creator,
     "manufacturer": manufacturer,
@@ -18,12 +21,11 @@ Map generatePrivateGroup(String creator, String manufacturer, String modality,
   return privateGroup;
 }
 
-Map generatePrivateElements(Element ) {
-  Map elements = {[
-    {"type": "PrivateElement",
+Map generatePrivateElements(Element element, VR vr) {
+  Map elements = {
+    element.code: {"type": "PrivateElement",
       "number": element,
-      "vr": vr}]
-  };
+      "vr": vr}};
+  return elements;
 }
 
-class Pr

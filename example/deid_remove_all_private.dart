@@ -5,11 +5,10 @@
 // See the AUTHORS file for other contributors.
 
 import 'dart:io';
-import 'dart:typed_data';
 
 import 'package:common/common.dart';
 import 'package:core/core.dart';
-import 'package:dsc_convert/dicom.dart';
+import 'package:dsc_convert/dcm.dart';
 
 String inputDir = "C:/odw/test_data/sfd/CR/PID_MINT10/1_DICOM_Original/";
 String testOutput = "C:/odw/sdk/deid/example/output";
@@ -27,29 +26,17 @@ void main() {
     print('Reading file: $file');
     log.config('Reading file: $file');
 
-    Instance instance = readEntity(file1);
-    print('Initial Total Elements: ${instance.dataset.elements.length}');
-    print('***Identified:\n${instance.patient.format(new Formatter(maxDepth: 5))}');
+    var rds = TagReader.readFile(file);
+    print('Initial Total Elements: ${rds.length}');
+    print('***Identified:\n${rds.format(new Formatter(maxDepth: 5))}');
 
     List<Element> removed = [];
-    Dataset ds = instance.dataset;
-    removed = ds.removePrivateTags(returnList: true);
+    rds.removePrivate();
 
-    print('Final Total Elements: ${instance.dataset.elements.length}');
+    print('Final Total Elements: ${rds.length}');
     print('Removed Elements: ${removed.length}');
     for (Element a in removed)
       print('  $a');
-    print('***With Private Tags removed:\n${instance.patient.format(new Formatter(maxDepth: 5))}');
+    print('***With Private Tags removed:\n${rds.format(new Formatter(maxDepth: 5))}');
   }
-
-
-  //print('Active Patients: ${activePatients.stats}');
-}
-
-
-
-Instance readEntity(String path) {
-  File file = new File(path);
-  Uint8List bytes = file.readAsBytesSync();
-  return DcmReader.rootDataset(bytes);
 }

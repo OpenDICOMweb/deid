@@ -17,7 +17,7 @@ void printLine(int i, var s) {
 }
 
 void main(List<String> args) {
-  var csvFile = "C:/odw/sdk/deid/private_db/db.csv";
+  var csvFile = "C:/odw/sdk/deid/private_db/csv/db.csv";
 
   var inFile = new File(csvFile);
   var lines = inFile.readAsLinesSync();
@@ -28,13 +28,11 @@ void main(List<String> args) {
 
   List<List<String>> rows = [];
   for (int i = 0; i < lines.length; i++) {
-    var line = lines[i];
+    String line = lines[i];
     printLine(i, line);
-    var row = lines[i].split('|');
+    List<String> row = lines[i].split('|');
     row = row.sublist(1);
-    for (int j = 0; j < row.length; j++) {
-      row[j] = row[j].trim();
-    }
+    for (int j = 0; j < row.length; j++) row[j] = row[j].trim();
     printLine(i, row);
     rows.add(row);
   }
@@ -42,8 +40,9 @@ void main(List<String> args) {
     printLine(i, rows[i]);
   }
 
-  var generate = new PrivateGroupGenerator(rows);
-  print(generate.code);
+  // FIX:
+ // var generate = new PrivateGroupGenerator(rows[6], rows[5], rows[] );
+ // print(generate.code);
 }
 
 
@@ -52,13 +51,13 @@ class PrivateGroupGenerator {
   String manufacturer;
   List<List<String>> table;
 
-  PrivateGroupGenerator(this.table, this.creator, manufacturer);
+  PrivateGroupGenerator(this.creator, manufacturer, this.table);
 
   List<String> get headers => table[0];
 
   List<List<String>> get rows => table.sublist(1);
 
-  String get privateGroupHead {
+  String get privateGroupHeader {
     var out = '''
 // Copyright (c) 2016, Open DICOMweb Project. All rights reserved.
 // Use of this source code is governed by the open source license
@@ -126,10 +125,10 @@ class PrivateGroup {
   String get tail => "\n}\n";
 
   String get code {
-    print('head: $privateGroupHead()');
+    print('head: $privateGroupHeader');
     print('definition: $privateGroupDefinitions');
     print('head: $tail');
-    return '${privateGroupHead()}$privateGroupDefinitions$tail';
+    return '$privateGroupHeader$privateGroupDefinitions$tail';
   }
 
 }

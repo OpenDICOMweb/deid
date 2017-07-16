@@ -5,11 +5,11 @@
 // See the AUTHORS file for other contributors.
 
 import 'dart:io';
-import 'dart:typed_data';
 
 import 'package:common/common.dart';
+import 'package:dictionary/dictionary.dart';
 import 'package:core/core.dart';
-import 'package:dsc_convert/dicom.dart';
+import 'package:dsc_convert/dcm.dart';
 
 String inputDir = "C:/odw/test_data/sfd/CR/PID_MINT10/1_DICOM_Original/";
 String testOutput = "C:/odw/sdk/deid/example/output";
@@ -26,51 +26,44 @@ void main() {
     print('Reading file: $file');
     log.config('Reading file: $file');
 
-    Instance instance = readEntity(file1);
+    RootTagDataset rds = TagReader.readFile(file);
     //print('***Identified:\n${instance.patient.format(new Formatter(maxDepth: 5))}');
-    print('Initial Total Elements: ${instance.dataset.eMap.values.length}');
+    print('Initial Total Elements: ${rds.length}');
 
-    Dataset ds = instance.dataset;
-    ds.keepGroup18();
-    ds.keepGroup20();
-    ds.keepGroup28();
+    rds.retainGroup18();
+    rds.retainGroup20();
+    rds.retainGroup28();
 
     // Group 18
-    ds.remove(kBodyPartExamined);
-    print('${ds.lookup(kBodyPartExamined)}');
-    ds.remove(kPlateID);
-    print('${ds.lookup(kPlateID)}');
-    ds.remove(kGridFocalDistance);
-    print('${ds.lookup(kGridFocalDistance)}');
+    rds.remove(kBodyPartExamined);
+    print('${rds.lookup(kBodyPartExamined)}');
+    rds.remove(kPlateID);
+    print('${rds.lookup(kPlateID)}');
+    rds.remove(kGridFocalDistance);
+    print('${rds.lookup(kGridFocalDistance)}');
 
     // Group 20
-    ds.remove(kStudyInstanceUID);
-    print('${ds.lookup(kStudyInstanceUID)}');
-    ds.remove(kSeriesInstanceUID);
-    print('${ds.lookup(kSeriesInstanceUID)}');
-    ds.remove(kImageComments);
-    print('${ds.lookup(kImageComments)}');
+    rds.remove(kStudyInstanceUID);
+    print('${rds.lookup(kStudyInstanceUID)}');
+    rds.remove(kSeriesInstanceUID);
+    print('${rds.lookup(kSeriesInstanceUID)}');
+    rds.remove(kImageComments);
+    print('${rds.lookup(kImageComments)}');
 
     // Group 28
-    ds.remove(kSamplesPerPixel);
-    print('${ds.lookup(kSamplesPerPixel)}');
-    ds.remove(kColumns);
-    print('${ds.lookup(kColumns)}');
-    ds.remove(kLossyImageCompression);
-    print('${ds.lookup(kLossyImageCompression)}');
+    rds.remove(kSamplesPerPixel);
+    print('${rds.lookup(kSamplesPerPixel)}');
+    rds.remove(kColumns);
+    print('${rds.lookup(kColumns)}');
+    rds.remove(kLossyImageCompression);
+    print('${rds.lookup(kLossyImageCompression)}');
 
-    print('Final Total Elements: ${instance.dataset.eMap.values.length}');
+    print('Final Total Elements: ${rds.length}');
 
     // print('***With Group Removed:\n${instance.patient.format(new Formatter(maxDepth: 5))}');
   }
-
-
   //print('Active Patients: ${activePatients.stats}');
 }
 
-Instance readEntity(String path) {
-  File file = new File(path);
-  Uint8List bytes = file.readAsBytesSync();
-  return DcmDecoder.decode(bytes);
-}
+
 

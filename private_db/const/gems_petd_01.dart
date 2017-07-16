@@ -6,16 +6,16 @@
 // See the AUTHORS file for other contributors.
 
 import 'package:dictionary/dictionary.dart';
-import 'package:core/core.dart';
-//import 'private_element.dart';
+
+import 'private_data_tag.dart';
 import 'action.dart';
 
-class GEMSPrivateTag extends PrivateTag {
+class GEMSPrivateTag extends PrivateCreatorTag {
   static const String manufacturerId = "GEMS";
   static const Modality modality = Modality.kPT;
   final String creatorId = "GEMS_PETD_01";
 
-  const GEMSPrivateTag(int tag, VR vr, VM vm, Action action, String description)
+  const GEMSPrivateElement(int tag, VR vr, VM vm, Action action, String description)
       : super(tag, vr, vm, action, description);
 
   String get json => super.toJson(creatorId);

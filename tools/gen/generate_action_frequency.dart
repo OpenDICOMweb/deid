@@ -11,13 +11,13 @@ void main() {
   Map<String, int> frequency = {};
   print('length: ${BasicProfile.map.values.length}');
   for (BasicProfile bp in BasicProfile.map.values) {
-    int count = frequency[bp.action];
+    int count = frequency[bp.name];
     print(count);
-    print('Action: ${bp.action}');
+    print('Action: ${bp.name}');
     if (count == null) {
-      frequency[bp.action] = 1;
+      frequency[bp.name] = 1;
     } else {
-      frequency[bp.action] = ++count;
+      frequency[bp.name] = ++count;
       print("count: $count");
     }
   }
