@@ -8,7 +8,7 @@
 // ----------------------------------------------------------
 
 import 'package:core/core.dart';
-import 'package:dictionary/dictionary.dart';
+import 'package:tag/tag.dart';
 
 import 'basic_profile_options.dart';
 
@@ -42,76 +42,82 @@ class BasicProfile {
       (values == null) || (emptyAllowed && (values.length >= 0));
 
 
+/* FLush or Fix
   //TODO: deidentifySequence has to be at a higher level
   /// Keep (unchanged for non-sequence attributes, cleaned for sequences)';
-  static void retain(TagDataset ds, Tag tag) => ds.retain(tag);
+  static void retain(Dataset ds, Tag tag) => ds.retain(tag);
+*/
 
+/* FLush or Fix
   //TODO: deidentifySequence has to be at a higher level
   /// retain (unchanged for non-sequence attributes, cleaned for sequences)';
-  static void retainBlank(TagDataset ds, Tag tag) => ds.retain(tag);
+  static void retainBlank(Dataset ds, Tag tag) => ds.retain(tag);
+*/
 
   // D, Z, X, K, C
 
   /// D: Replace with Dummy values, i.e. values that contain no PHI, but
   /// are consistent with VR.
-  static TagElement replaceWithDummy(TagDataset ds, Tag tag,
-          [List values, bool mustBePresent = false]) =>
-      ds.update(tag, values);
+  static Element replaceWithDummy(Dataset ds, Tag tag,
+          [List values, bool required = false]) =>
+      ds.update(tag.code, values);
 
   /// D: Replace with Dummy values, i.e. values that contain no PHI, but
   /// are consistent with VR.
-  static TagElement replaceWithZero(TagDataset ds, Tag tag,
-          [bool mustBePresent = false]) =>
+  static Element replaceWithZero(Dataset ds, Tag tag,
+          [bool required = false]) =>
       ds.noValues(tag);
 
-  /// X: Remove the [TagElement] with [tag].h
-  static TagElement remove(TagDataset ds, Tag tag,
-      [bool mustBePresent = false]) =>
+  /// X: Remove the [Element] with [tag].h
+  static List<Element> remove(Dataset ds, Tag tag,
+      [bool required = false]) =>
       ds.remove(tag);
 
-  /// K: Retain the [TagElement] with this Tag.
-  static void keep(TagDataset ds, Tag tag, [bool mustBePresent = false]) =>
+/* FLush or Fix
+  /// K: Retain the [Element] with this Tag.
+  static void keep(Dataset ds, Tag tag, [bool required = false]) =>
       ds.retain(tag);
+*/
 
   /// C: Clean, that is replace with values of similar meaning known
   /// not to contain identifying information and consistent with the VR.
-  static bool clean(TagDataset ds, Tag tag, List values,
-          [bool mustBePresent = false]) =>
+  static bool clean(Dataset ds, Tag tag, List values,
+          [bool required = false]) =>
       ds.replace(tag, values) != null;
 
   /// U: Replace with a non-zero length UID that is internally consistent
   /// within a set of Instances in the Study or Series;
-  static TagElement replaceUids(TagDataset ds, Tag tag,
-          [List<String> values, bool mustBePresent = false]) =>
-      ds.replaceUidsByTag(tag, values);
+  static Element replaceUids(Dataset ds, Tag tag,
+          [List<String> values, bool required = false]) =>
+      ds.replaceUidsByCode(tag.code, values);
 
   /// ZD: Z unless D is required to maintain
   /// IOD conformance (Type 2 versus Type 1)';
-  static TagElement zeroUnlessDummy(TagDataset ds, Tag tag,
-      [List values, bool mustBePresent = false]) {
-    if (_isEmpty(values, true)) return ds.noValues(tag);
-    return ds.update(tag, values);
+  static Element zeroUnlessDummy(Dataset ds, Tag tag,
+      [List values, bool required = false]) {
+    if (_isEmpty(values, true)) return ds.noValues(tag, required: required);
+    return ds.update(tag.code, values);
   }
 
   /// XZ: X unless Z is required to maintain IOD conformance
   /// (Type 3 versus Type 2)';
-  static TagElement removeUnlessZero(TagDataset ds, Tag tag,
-      [List values, bool mustBePresent = false]) {
+  static Element removeUnlessZero(Dataset ds, Tag tag,
+      [List values, bool required = false]) {
     if (_isEmpty(values, true)) return ds.noValues(tag);
-    return ds.update(tag, values);
+    return ds.update(tag.code, values);
   }
 
   /// XD: X unless D is required to maintain IOD conformance
   /// (Type 3 versus Type 1)';
-  static TagElement removeUnlessDummy(TagDataset ds, Tag tag,
-      [List values, bool mustBePresent = false]) {
-    if (_isEmpty(values, true)) return ds.remove(tag);
-    return ds.update(tag, values);
+  static Element removeUnlessDummy(Dataset ds, Tag tag,
+      [List values, bool required = false]) {
+    if (_isEmpty(values, true)) return ds.remove(tag, required: required);
+    return ds.update(tag.code, values);
   }
 
   /// X unless Z or D is required to maintain IOD conformance
   /// (Type 3 versus Type 2 versus Type 1)';
-  static TagElement removeUnlessZeroOrDummy(TagDataset ds, Tag tag,
+  static Element removeUnlessZeroOrDummy(Dataset ds, Tag tag,
       [List values]) {
     if (_isEmpty(values, true)) return ds.noValues(tag);
     return ds.lookup(tag.code).update(values);
@@ -120,8 +126,8 @@ class BasicProfile {
   /// XZU: X unless Z or replacement of contained instance UIDs (U) is
   /// required to maintain IOD conformance
   /// (Type 3 versus Type 2 versus Type 1 sequences containing UID references)';
-  static TagElement removeUidUnlessZeroOrDummy(TagDataset ds, Tag tag,
-      [List values, bool mustBePresent = false]) {
+  static Element removeUidUnlessZeroOrDummy(Dataset ds, Tag tag,
+      [List values, bool required = false]) {
     if (ds.lookup(tag.code) is! SQ)
       throw new InvalidTagError(
           "Invalid Tag(${ds.lookup(tag.code)}) for this action");
@@ -129,16 +135,16 @@ class BasicProfile {
     return ds.replace(tag, values);
   }
 
-  static TagElement addIfMissing(TagDataset ds, Tag tag,
-      [List values, bool mustBePresent = false]) {
+  static Element addIfMissing(Dataset ds, Tag tag,
+      [List values, bool required = false]) {
     var e = ds.lookup(tag.code);
     if (e is! SQ) throw new InvalidTagError("Invalid Tag ($e) for this action");
-    if (_isEmpty(values, true)) return ds.noValues(tag);
-    return ds.update(tag, values);
+    if (_isEmpty(values, true)) return ds.noValues(tag, required: required);
+    return ds.update(tag.code, values);
   }
 
-  static TagElement invalid(TagDataset ds, Tag tag,
-          [List values, bool mustBePresent = false]) =>
+  static Element invalid(Dataset ds, Tag tag,
+          [List values, bool required = false]) =>
       throw new UnsupportedError("Invalid Action");
 
   static BasicProfile lookup(int tag) => map[tag];
@@ -666,181 +672,37 @@ class BasicProfile {
 
   static const List<int> retainList = const <int>[];
 
-  static const List<int> removeList = const [
-    0x00001000,
-    0x00080024,
-    0x00080025,
-    0x00080034,
-    0x00080035,
-    0x00080081,
-    0x00080092,
-    0x00080094,
-    0x00080096,
-    0x00080201,
-    0x00081030,
-    0x0008103e,
-    0x00081040,
-    0x00081048,
-    0x00081049,
-    0x00081050,
-    0x00081052,
-    0x00081060,
-    0x00081062,
-    0x00081080,
-    0x00081084,
-    0x00081120,
-    0x00082111,
-    0x00084000,
-    0x00100021,
-    0x00100032,
-    0x00100050,
-    0x00100101,
-    0x00100102,
-    0x00101000,
-    0x00101001,
-    0x00101002,
-    0x00101005,
-    0x00101010,
-    0x00101020,
-    0x00101030,
-    0x00101040,
-    0x00101050,
-    0x00101060,
-    0x00101080,
-    0x00101081,
-    0x00101090,
-    0x00102000,
-    0x00102110,
-    0x00102150,
-    0x00102152,
-    0x00102154,
-    0x00102160,
-    0x00102180,
-    0x001021a0,
-    0x001021b0,
-    0x001021c0,
-    0x001021d0,
-    0x001021f0,
-    0x00102297,
-    0x00102299,
-    0x00104000,
-    0x00181004,
-    0x00181005,
-    0x00181007,
-    0x00181008,
-    0x00184000,
-    0x00189424,
-    0x0018a003,
-    0x00203401,
-    0x00203404,
-    0x00203406,
-    0x00204000,
-    0x00209158,
-    0x00284000,
-    0x00320012,
-    0x00321020,
-    0x00321021,
-    0x00321030,
-    0x00321032,
-    0x00321033,
-    0x00321070,
-    0x00324000,
-    0x00380004,
-    0x00380010,
-    0x00380011,
-    0x0038001e,
-    0x00380020,
-    0x00380021,
-    0x00380040,
-    0x00380050,
-    0x00380060,
-    0x00380061,
-    0x00380062,
-    0x00380300,
-    0x00380400,
-    0x00380500,
-    0x00384000,
-    0x00400001,
-    0x00400002,
-    0x00400003,
-    0x00400004,
-    0x00400005,
-    0x00400006,
-    0x00400007,
-    0x0040000b,
-    0x00400010,
-    0x00400011,
-    0x00400012,
-    0x00400241,
-    0x00400242,
-    0x00400243,
-    0x00400244,
-    0x00400245,
-    0x00400250,
-    0x00400251,
-    0x00400253,
-    0x00400254,
-    0x00400275,
-    0x00400280,
-    0x00400555,
-    0x00401001,
-    0x00401004,
-    0x00401005,
-    0x00401010,
-    0x00401011,
-    0x00401102,
-    0x00401103,
-    0x00401400,
-    0x00402001,
-    0x00402008,
-    0x00402009,
-    0x00402010,
-    0x00402400,
-    0x00403001,
-    0x00404025,
-    0x00404027,
-    0x00404028,
-    0x00404030,
-    0x00404034,
-    0x00404035,
-    0x00404036,
-    0x00404037,
-    0x0040a027,
-    0x0040a078,
-    0x0040a07a,
-    0x0040a07c,
-    0x0040a730,
-    0x00700086,
-    0x00880200,
-    0x00880904,
-    0x00880906,
-    0x00880910,
-    0x00880912,
-    0x04000100,
-    0x04000402,
-    0x04000403,
-    0x04000404,
-    0x04000550,
-    0x04000561,
-    0x20300020,
-    0x40000010,
-    0x40004000,
-    0x40080042,
-    0x40080102,
-    0x4008010a,
-    0x4008010b,
-    0x4008010c,
-    0x40080111,
-    0x40080114,
-    0x40080115,
-    0x40080118,
-    0x40080119,
-    0x4008011a,
-    0x40080202,
-    0x40080300,
-    0x40084000,
-    0xfffafffa,
-    0xfffcfffc
+  static const List<int> removeCodes = const [
+    0x00001000, 0x00080024, 0x00080025, 0x00080034, 0x00080035, 0x00080081,
+    0x00080092, 0x00080094, 0x00080096, 0x00080201, 0x00081030, 0x0008103e,
+    0x00081040, 0x00081048, 0x00081049, 0x00081050, 0x00081052, 0x00081060,
+    0x00081062, 0x00081080, 0x00081084, 0x00081120, 0x00082111, 0x00084000,
+    0x00100021, 0x00100032, 0x00100050, 0x00100101, 0x00100102, 0x00101000,
+    0x00101001, 0x00101002, 0x00101005, 0x00101010, 0x00101020, 0x00101030,
+    0x00101040, 0x00101050, 0x00101060, 0x00101080, 0x00101081, 0x00101090,
+    0x00102000, 0x00102110, 0x00102150, 0x00102152, 0x00102154, 0x00102160,
+    0x00102180, 0x001021a0, 0x001021b0, 0x001021c0, 0x001021d0, 0x001021f0,
+    0x00102297, 0x00102299, 0x00104000, 0x00181004, 0x00181005, 0x00181007,
+    0x00181008, 0x00184000, 0x00189424, 0x0018a003, 0x00203401, 0x00203404,
+    0x00203406, 0x00204000, 0x00209158, 0x00284000, 0x00320012, 0x00321020,
+    0x00321021, 0x00321030, 0x00321032, 0x00321033, 0x00321070, 0x00324000,
+    0x00380004, 0x00380010, 0x00380011, 0x0038001e, 0x00380020, 0x00380021,
+    0x00380040, 0x00380050, 0x00380060, 0x00380061, 0x00380062, 0x00380300,
+    0x00380400, 0x00380500, 0x00384000, 0x00400001, 0x00400002, 0x00400003,
+    0x00400004, 0x00400005, 0x00400006, 0x00400007, 0x0040000b, 0x00400010,
+    0x00400011, 0x00400012, 0x00400241, 0x00400242, 0x00400243, 0x00400244,
+    0x00400245, 0x00400250, 0x00400251, 0x00400253, 0x00400254, 0x00400275,
+    0x00400280, 0x00400555, 0x00401001, 0x00401004, 0x00401005, 0x00401010,
+    0x00401011, 0x00401102, 0x00401103, 0x00401400, 0x00402001, 0x00402008,
+    0x00402009, 0x00402010, 0x00402400, 0x00403001, 0x00404025, 0x00404027,
+    0x00404028, 0x00404030, 0x00404034, 0x00404035, 0x00404036, 0x00404037,
+    0x0040a027, 0x0040a078, 0x0040a07a, 0x0040a07c, 0x0040a730, 0x00700086,
+    0x00880200, 0x00880904, 0x00880906, 0x00880910, 0x00880912, 0x04000100,
+    0x04000402, 0x04000403, 0x04000404, 0x04000550, 0x04000561, 0x20300020,
+    0x40000010, 0x40004000, 0x40080042, 0x40080102, 0x4008010a, 0x4008010b,
+    0x4008010c, 0x40080111, 0x40080114, 0x40080115, 0x40080118, 0x40080119,
+    0x4008011a, 0x40080202, 0x40080300, 0x40084000,
+    0xfffafffa, 0xfffcfffc // don't reformat
   ];
 
   static const Map<int, BasicProfile> map = const <int, BasicProfile>{
@@ -1091,19 +953,10 @@ class BasicProfile {
     0xfffcfffc: kDataSetTrailingPadding
   };
 
-  static const List<int> tags = const [
-    0x00001000,
-    0x00001001,
-    0x00020003,
-    0x00041511,
-    0x00080014,
-    0x00080018,
-    0x00080020,
-    0x00080021,
-    0x00080022,
-    0x00080023,
-    0x00080024,
-    0x00080025,
+  /// Urgent: format in condensed form
+  static const List<int> codes = const [
+    0x00001000, 0x00001001, 0x00020003, 0x00041511, 0x00080014, 0x00080018,
+    0x00080020, 0x00080021, 0x00080022, 0x00080023, 0x00080024, 0x00080025,
     0x0008002a,
     0x00080030,
     0x00080031,

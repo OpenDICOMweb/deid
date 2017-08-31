@@ -5,7 +5,8 @@
 // See the AUTHORS file for other contributors.
 
 import 'dart:convert';
-import 'package:dictionary/dictionary.dart';
+
+import 'package:tag/tag.dart';
 
 import 'dart_arrays/private_tag_array.dart';
 

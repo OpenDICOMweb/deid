@@ -4,7 +4,7 @@
 // Original author: Jim Philbin <jfphilbin@gmail.edu> -
 // See the AUTHORS file for other contributors.
 
-import 'package:dictionary/dictionary.dart';
+import 'package:tag/tag.dart';
 
 import 'src/deId_tags.dart';
 import 'src/gen_utils.dart';

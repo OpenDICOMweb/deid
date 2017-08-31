@@ -5,10 +5,8 @@
 // See the AUTHORS file for other contributors.
 
 import 'package:core/core.dart';
-import 'package:dictionary/dictionary.dart';
-
 import 'package:deid/src/deid/other/deidentifier.dart';
-import 'deid_method_code.dart';
+import 'package:tag/tag.dart';
 
 class DeIdMethod {
   final Tag tag = PTag.kDeidentificationMethodCodeSequence;

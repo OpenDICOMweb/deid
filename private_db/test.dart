@@ -1,4 +1,5 @@
-import 'package:dictionary/dictionary.dart';
+import 'package:tag/tag.dart';
+
 import 'p_creator_tag.dart';
 
 Map manufacturers = {

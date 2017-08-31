@@ -77,3 +77,4 @@ $RECYCLE.BIN/
 
 
 /pubspec.lock
+!/lib/src/profile/rule.dart

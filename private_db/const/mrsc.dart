@@ -4,10 +4,10 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu>
 // See the AUTHORS file for other contributors.
 
-import 'package:dictionary/dictionary.dart';
+import 'package:tag/tag.dart';
 
-import 'private_data_tag.dart';
 import 'action.dart';
+import 'private_data_tag.dart';
 
 class MRSC extends PrivateDataTag {
   static const String manufacturerId = "GEMS";

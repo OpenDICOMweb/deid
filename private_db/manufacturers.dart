@@ -4,7 +4,8 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu>
 // See the AUTHORS file for other contributors.
 
-import 'package:dictionary/dictionary.dart';
+import 'package:tag/tag.dart';
+
 import 'p_creator_tag.dart';
 
 Map manufacturers = {

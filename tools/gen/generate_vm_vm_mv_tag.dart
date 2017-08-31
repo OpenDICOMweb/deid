@@ -6,7 +6,7 @@
 
 import 'dart:io';
 
-import 'package:dictionary/dictionary.dart';
+import 'package:tag/tag.dart';
 
 import 'src/deid_tags.dart';
 

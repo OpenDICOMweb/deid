@@ -5,7 +5,7 @@
 // See the AUTHORS file for other contributors.
 
 import 'package:core/core.dart';
-import 'package:dictionary/dictionary.dart';
+import 'package:tag/tag.dart';
 
 /// This library implements DICOM study de-identification.  It conforms to
 /// DICOM PS3.15 Appendix E.

@@ -56,7 +56,7 @@ class GlobalActions {
   /// Creates a set of [GlobalActions] for de-identification.
   GlobalActions({
       this.retain: BasicProfile.retainList,
-      this.remove: BasicProfile.removeList,
+      this.remove: BasicProfile.removeCodes,
       this.retainGroups: TagGroup.defaultKeepGroups,
       this.removeGroups: TagGroup.defaultRemoveGroups,
       this.retainSafePrivate: false,

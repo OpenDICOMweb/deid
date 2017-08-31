@@ -20,48 +20,69 @@ enum ProfileFormat { text, json, xml }
 class Profile {
   /// The name of this profile.
   final String name;
+
   /// A [String] containing the URL where the Profile is stored.
-  final String path;
+  final Uri url;
+
   /// A [String] containing the URL of the Trial Server.
   final String trialServer;
+
   /// A [String] containing the URL of the Quarantine Server.
-  final String quarantinePath;
+  final String quarantineUrl;
 //  final List<String> lines;
   final GlobalRule globals;
   final Map<String, dynamic> trialMap;
   final Map<String, String> parameters;
-  final List<int> retainGroups;
-  final List<int> removeGroups;
-  final List<int> retainTags;
-  final List<int> removeTags;
+  final List<int> groupsToRetail;
+  final List<int> groupsToRemove;
+  final List<int> keysToRetain;
+  final List<int> keysToRemove;
   final Map<int, Updater> updateMap;
   final Map<String, String> comments;
+  final List<Rule> rules;
   final Map<String, String> errors;
 
-  Profile(this.name, this.path, this.trialServer, this.quarantinePath)
+  Profile(this.name, this.url, this.trialServer, this.quarantineUrl)
       : globals = new GlobalRule(),
         trialMap = testTrial,
         parameters = {},
-        retainGroups = [],
-        removeGroups = [],
-        retainTags = [],
-        removeTags = [],
+        groupsToRetail = [],
+        groupsToRemove = [],
+        keysToRetain = [],
+        keysToRemove = [],
         updateMap = {},
         comments = {},
+        rules = [],
         errors = {} {
-    for(int code in removeTags)
-      if (retainTags.contains(code)) throw new ArgumentError('removeTags cannot contain and tags in'
-          ' the keepTags list.');
+    for (int code in keysToRemove)
+      if (keysToRetain.contains(code))
+        throw new ArgumentError('removeTags cannot contain and tags in'
+            ' the keepTags list.');
   }
 
-  Profile._(this.name, this.path, this.globals, this.trialMap, this.parameters,
-      this.retainTags, this.removeTags, this.comments, this.errors);
+  //TODO: finish if needed for creating constant profile such as anonymization.
+  Profile._(
+      this.name,
+      this.url,
+      this.trialServer,
+      this.quarantineUrl,
+      this.globals,
+      this.trialMap,
+      this.parameters,
+      this.groupsToRetail,
+      this.groupsToRemove,
+      this.keysToRetain,
+      this.keysToRemove,
+      this.updateMap,
+      this.comments,
+      this.errors,
+      this.rules);
 
   //String get extension => '.dvp';
 
   Map<String, dynamic> get map => {
         "name": name,
-        "path": path,
+        "path": url,
         "parameters": parameters,
         //  "global": globalMap,
         "rules": rules,
@@ -73,7 +94,7 @@ class Profile {
     rules.add(rule);
   }
 
-  bool keep(int tag) => retainTags.contains(tag);
+  bool keep(int tag) => keysToRetain.contains(tag);
 
   String lookup(String key) => parameters[key];
 
@@ -107,7 +128,7 @@ class Profile {
   String get json => '''{
     "@type": "Clinical Study Profile",
     "name": "$name",
-    "path": "$path",
+    "path": "$url",
     "parameters": ${JSON.encode(parameters)},
     "rules": $rulesToJson,
     "comments": ${JSON.encode(comments)},
@@ -129,7 +150,7 @@ class Profile {
   }
 
   Profile evaluateTrial(Trial trial) {
-
+    //TODO:
   }
 
   @override
@@ -137,8 +158,21 @@ class Profile {
 
   static Profile parse(String s) {
     Map map = JSON.decode(s);
-    return new Profile._(map["name"], map["path"], map["lines"], map["globals"], map["trialMap"],
-        map["pMap"], map["keepTags"], map["removeTags"], map["rules"], map["comments"],
+    return new Profile._(
+        map["name"],
+        map["url"],
+        map["trialServer"],
+        map["quarantineUrl"],
+        map["globals"],
+        map["trialMap"],
+        map["parameters"],
+        map["retainGroups"],
+        map["removeGroups"],
+        map["retainTags"],
+        map["removeTags"],
+        map["updateMap"],
+        map["comments"],
+        map["rules"],
         map["errors"]);
   }
 }

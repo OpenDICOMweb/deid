@@ -15,11 +15,11 @@ class Trial {
   int id; // Like Trial Number
   String name;
   Profile profile;
-  List<int> keepTags = [];
+  List<int> retainTags = [];
   Map<String, String> parameters;
 
   Trial(this.id, this.name, this.profile, this.parameters) {
-    keepTags.addAll(profile.keepTags);
+    retainTags.addAll(profile.keysToRetain);
     profile.evaluateTrial(this);
   }
 

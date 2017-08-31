@@ -11,12 +11,14 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
-import 'package:core/core.dart';
-import 'package:dictionary/dictionary.dart';
-
+import 'package:core/tag_dataset.dart';
+import 'package:core/tag_element.dart';
 import 'package:deid/profile.dart';
 import 'package:deid/src/dictionary/basic_profile.dart';
 import 'package:deid/src/trial/trial.dart';
+import 'package:system/system.dart';
+import 'package:tag/tag.dart';
+import 'package:uid/uid.dart';
 
 import 'action.dart';
 
@@ -56,6 +58,30 @@ List<DeIdentifer> get actionsList => [
 */
 final List<String> defaultStringValue =  ["Open DICOMweb DeIdentifier: Dummy Value"];
 
+/// Dummy - replace with a non-zero length value that may be a dummy value and
+/// consistent with the VR.
+const List<int> basicProfileDummyTags = const [
+
+];
+
+/// Dummy - replace with a non-zero length value that may be a dummy value and
+/// consistent with the VR.
+const List<int> basicProfileNoValueTags = const [
+
+];
+
+const List<int> basicProfileKeepTags = const [
+
+];
+
+const List<int> basicProfileCleanTags = const [
+
+];
+
+const List<int> basicProfileReplaceUidTags = const [
+
+];
+
 const List<int> basicProfileRemoveTags = const [
   0x00001000, 0x00080024, 0x00080025, 0x00080034, 0x00080035, 0x00080081, 0x00080092,
   0x00080094, 0x00080096, 0x00080201, 0x00081030, 0x0008103e, 0x00081040, 0x00081048,
@@ -84,6 +110,13 @@ const List<int> basicProfileRemoveTags = const [
   0x4008011a, 0x40080202, 0x40080300, 0x40084000, 0xfffafffa, 0xfffcfffc // don't reformat
 ];
 
+const List<int> basicProfileNoValueTags = const [
+
+  ];
+
+
+
+
 typedef bool DeIdentifer(TagDataset ds, int tag, Trial trial, List<String> values) ;
 
 //TODO: add global rules
@@ -92,9 +125,9 @@ class DeIdentifier {
 
 
   //TODO: make this work on Study
-  List<String> deIdStudyUid = Uid.randomList(1);
-  List<String> deIdSeriesUid = Uid.randomList(1);
-  List<String> deIdInstanceUid = Uid.randomList(1);
+  List<String> deIdStudyUid = [Uid.generateSecureUidString()];
+  List<String> deIdSeriesUid = [Uid.generateSecureUidString()];
+  List<String> deIdInstanceUid = [Uid.generateSecureUidString()];
   Map<int, List> valueMap;
   Map<String, Function> globalActions;
   Map<String, Function> elementActions;
@@ -200,27 +233,27 @@ class DeIdentifier {
 
   TagElement replaceUid(TagDataset ds, int code, Trial trial, [List values]) {
     print('DS: $ds, tag: ${Tag.toDcm(code)}, values=$values');
-    Tag tag = PTag.lookupCode(code);
+    Tag tag = PTag.lookupByCode(code);
     if (tag.vr != VR.kUI) return null;
     switch (code) {
       case kStudyInstanceUID:
         print('seriesUid: $deIdStudyUid');
-        return ds. replaceUids(code, deIdStudyUid);
+        return ds.replaceUidsByCode(code, deIdStudyUid);
       case kSeriesInstanceUID:
         print('seriesUid: $deIdSeriesUid');
-        return ds. replaceUids(code, deIdSeriesUid);
+        return ds.replaceUidsByCode(code, deIdSeriesUid);
       case kSOPInstanceUID:
         print('instanceUid: $deIdInstanceUid');
-        return ds. replaceUids(code, deIdInstanceUid);
+        return ds.replaceUidsByCode(code, deIdInstanceUid);
       case kMediaStorageSOPInstanceUID:
         print('MediaStorageUid: $deIdInstanceUid');
-        return ds. replaceUids(code, deIdInstanceUid);
+        return ds.replaceUidsByCode(code, deIdInstanceUid);
       default:
       //TODO: what other Uids have to be replace
-        ds. replaceUids(code, values);
+        ds.replaceUidsByCode(code, values);
     }
-    print(' replaceUids: tag${Tag.toDcm(code)} values=$values');
-    return ds. replaceUids(code, values);
+    print(' replaceUidsByCode: tag${Tag.toDcm(code)} values=$values');
+    return ds.replaceUidsByCode(code, values);
   }
 
   void retain(TagDataset ds, Tag tag, Trial trial, [List values ]) =>
@@ -260,8 +293,8 @@ class DeIdentifier {
 
   TagElement kXorZorU(TagDataset ds, int code, Trial trial, [List values ]) {
     //TODO: fix when we know ATypes
-    // return  ds.replaceUids(code, values, trial);
-    return  ds.replaceUids(code, values);
+    // return  ds.replaceUidsByCode(code, values, trial);
+    return  ds.replaceUidsByCode(code, values);
   }
 
   bool addIfMissing(TagDataset ds, List<String> values) {

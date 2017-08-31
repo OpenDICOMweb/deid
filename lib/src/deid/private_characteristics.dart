@@ -7,7 +7,7 @@
 import 'dart:typed_data';
 
 import 'package:core/core.dart';
-import 'package:dictionary/dictionary.dart';
+import 'package:tag/tag.dart';
 
 class PrivateDataCharacteristics {
   final String keyword;

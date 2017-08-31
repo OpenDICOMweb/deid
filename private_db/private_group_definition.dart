@@ -4,8 +4,8 @@
 // Original author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
-import 'package:dictionary/dictionary.dart';
 import 'package:core/core.dart';
+import 'package:tag/tag.dart';
 
 Map generatePrivateGroup(String creator, String manufacturer, String modality,
                           String description, int groupNumber, String elements) {

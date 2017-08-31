@@ -5,7 +5,7 @@
 // See the AUTHORS file for other contributors.
 
 import 'package:deid/dictionary.dart';
-import 'package:dictionary/dictionary.dart';
+import 'package:tag/tag.dart';
 
 List basicProfileAndOptions = [
   "BasicProfile",
@@ -24,7 +24,7 @@ void main() {
   Map<String, Map<String, List<int>>> retainRemoveTags = {};
 
   retainRemoveTags["BasicProfile"] =
-      {"retain": BasicProfile.retainList, "remove": BasicProfile.removeList};
+      {"retain": BasicProfile.retainList, "remove": BasicProfile.removeCodes};
   retainRemoveTags["RetainSafePrivate"] =
       {"retain": RetainSafePrivateOption.retain, "remove": RetainSafePrivateOption.remove};
   retainRemoveTags["RetainUids"] =

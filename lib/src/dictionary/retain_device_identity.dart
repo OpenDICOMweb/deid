@@ -7,7 +7,7 @@
 // *** This is a generated class ***
 // ----------------------------------------------------------
 
-import 'package:dictionary/dictionary.dart';
+import 'package:tag/tag.dart';
 
 /// Retain Device Identity Option to the Basic De-Identification Profile.
 class RetainDeviceIdentityOption {

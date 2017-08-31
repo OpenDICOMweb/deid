@@ -5,7 +5,7 @@
 // See the AUTHORS file for other contributors.
 
 
-import 'package:dictionary/dictionary.dart';
+import 'package:tag/tag.dart';
 
 import 'p_data_tag.dart';
 

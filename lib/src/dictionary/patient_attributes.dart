@@ -4,7 +4,8 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
-import 'package:dictionary/dictionary.dart';
+import 'package:system/system.dart';
+import 'package:tag/tag.dart';
 
 //static const EnumeratedValue typeOfPatientID = const ["TEXT", "RFID", "BARCODE"];
 class PatientIdentificationModule {

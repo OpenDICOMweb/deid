@@ -5,8 +5,8 @@
 // See the AUTHORS file for other contributors.
 
 import 'package:core/core.dart';
-import 'package:dictionary/dictionary.dart';
 import 'package:deid/src/deid/action.dart';
+import 'package:system/system.dart';
 
 //TODO: add the ability to do this.
 /// Clean Pixel Data Option to the Basic De-Identification Profile.

@@ -7,7 +7,7 @@
 // *** This is a generated class ***
 // ----------------------------------------------------------
 
-import 'package:dictionary/dictionary.dart';
+import 'package:tag/tag.dart';
 
 
 // Retail UIDs Option (a DICOM de-identification option)

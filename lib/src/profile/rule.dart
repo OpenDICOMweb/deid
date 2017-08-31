@@ -6,7 +6,7 @@
 
 import 'dart:convert';
 
-import 'package:dictionary/dictionary.dart';
+import 'package:tag/tag.dart';
 
 const List<String> ruleNames = const [
   "@add",
@@ -62,7 +62,7 @@ class Rule {
   bool isParsed;
 
   Rule(this.index, int code, this.keyword)
-      : targetTag = PTag.lookupCode(code) {
+      : targetTag = PTag.lookupByCode(code) {
     if ((targetTag == null) ||
         ((keyword != null) && (keyword != targetTag.keyword)))
       throw new ArgumentError('Invalid targetTag($code) or keyword($keyword)');
@@ -72,7 +72,7 @@ class Rule {
 
   Tag get sourceTag {
     int val = int.parse(args[0], onError: (s) => null);
-    return (val != null) ? PTag.lookupCode(val) : null;
+    return (val != null) ? PTag.lookupByCode(val) : null;
   }
 
 

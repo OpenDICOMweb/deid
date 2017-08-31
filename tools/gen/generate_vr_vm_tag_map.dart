@@ -7,7 +7,7 @@
 import 'dart:io';
 
 import 'package:deid/deid.dart';
-import 'package:dictionary/dictionary.dart';
+import 'package:tag/tag.dart';
 
 import 'src/gen_utils.dart';
 

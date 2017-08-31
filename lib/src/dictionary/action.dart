@@ -5,7 +5,7 @@
 // See the AUTHORS file for other contributors.
 
 import 'package:core/core.dart';
-import 'package:dictionary/dictionary.dart';
+import 'package:tag/tag.dart';
 
 /// This library implements DICOM study de-identification.  It conforms to
 /// DICOM PS3.15 Appendix E.
@@ -98,7 +98,7 @@ class Action {
   static const Action kUN =
       const Action(14, "UN", "Unknown", "Action Unknown", unknownAction);
 
-  TagElement call(TagDataset ds, Tag tag, [List values]) =>
+  Element call(TagDataset ds, Tag tag, [List values]) =>
       action(ds, tag, values);
 
   static bool _isEmpty(List values, bool emptyAllowed) =>
@@ -107,16 +107,16 @@ class Action {
   static Action invalid(TagDataset ds, Tag tag, [List values]) =>
       throw new UnsupportedError("Invalid Action");
 
-  static TagElement updateWithDummy(TagDataset ds, Tag tag, [List values]) =>
-      ds.update(tag, values);
+  static Element updateWithDummy(TagDataset ds, Tag tag, [List values]) =>
+      ds.update(tag.code, values);
 
   /// Replace with a zero length value, or a non-zero length value
   /// that may be a dummy value and consistent with the VR'.
   //static zeroOrDummy(TagDatasetds, Tag tag, arg, AType aType) =>
-  static TagElement replaceNoValues(TagDataset ds, Tag tag) => ds.noValues(tag);
+  static List<Element> replaceNoValues(TagDataset ds, Tag tag) => ds.noValues(tag.code);
 
   /// Remove the attribute'.
-  static TagElement remove(TagDataset ds, Tag tag) => ds.remove(tag);
+  static List<Element> remove(TagDataset ds, Tag tag) => ds.remove(tag.code);
 
   /// Keep (unchanged for non-sequence attributes, cleaned for sequences)';
   //TODO: deidentifySequence has to be at a higher level
@@ -131,83 +131,83 @@ class Action {
   /// not to contain identifying information and consistent with the VR.
   //static clean(TagDatasetds, Tag tag, arg, AType aType) =>
   static bool clean(TagDataset ds, Tag tag, List values) =>
-      ds.update(tag, values) != null;
+      ds.update(tag.code, values) != null;
 
   /// Replace with a non-zero length UID that is internally consistent
   /// within a set of Instances';
-  static TagElement replaceUids(TagDataset ds, Tag tag,
+  static Element replaceUids(TagDataset ds, Tag tag,
           [List<String> values]) =>
       ds.replaceUidsByTag(tag, values);
 
   /// Z unless D is required to maintain
   /// IOD conformance (Type 2 versus Type 1)';
-  static TagElement zeroUnlessDummy(TagDataset ds, Tag tag, [List values]) {
+  static List<Element> zeroUnlessDummy(TagDataset ds, Tag tag, [List values]) {
     //TODO: create a version of this file that works with an IOD definition
     // AType aType = ds.IOD.lookup(a.tag).aType;
     // if ((aType == AType.k1) || (aType == AType.k1C)) {
     //   a.replace(values);
     // } else {
     //TODO: This should really have an IOD argument
-    if (_isEmpty(values, true)) return ds.noValues(tag);
-    return ds.update(tag, values);
+    if (_isEmpty(values, true)) return ds.noValues(tag.code);
+    return ds.update(tag.code, values);
   }
 
   /// X unless Z is required to maintain IOD conformance (Type 3 versus Type 2)';
-  static TagElement removeUnlessZero(TagDataset ds, Tag tag, [List values]) {
+  static List<Element> removeUnlessZero(TagDataset ds, Tag tag, [List values]) {
     //TODO: make this work with IODs
     // AType aType = ds.IOD.lookup(a.tag).aType;
     // if ((aType == AType.k2) || (aType == AType.k2C)) {
     //   a.Zero(values);
     // } else {
     // ds.a.remove()
-    if (_isEmpty(values, true)) return ds.noValues(tag);
-    return ds.update(tag, values);
+    if (_isEmpty(values, true)) return ds.noValues(tag.code);
+    return ds.update(tag.code, values);
   }
 
   /// X unless D is required to maintain IOD conformance (Type 3 versus Type 1)';
-  static TagElement removeUnlessDummy(TagDataset ds, Tag tag, List values) {
+  static List<Element> removeUnlessDummy(TagDataset ds, Tag tag, List values) {
     //TODO: make this work with IODs
     // AType aType = ds.IOD.lookup(a.tag).aType;
     // if ((aType == AType.k3)  {
     //   ds.remove.a;
     // } else {
     // a.replace(values);
-    if (_isEmpty(values, true)) return ds.remove(tag);
-    return ds.update(tag, values);
+    if (_isEmpty(values, true)) return ds.remove(tag.code);
+    return ds.update(tag.code, values);
   }
 
   /// X unless Z or D is required to maintain IOD conformance
   /// (Type 3 versus Type 2 versus Type 1)';
-  static TagElement removeUnlessZeroOrDummy(
+  static List<Element> removeUnlessZeroOrDummy(
       TagDataset ds, Tag tag, List values) {
     //TODO: fix when AType info available
-    if (_isEmpty(values, true)) return ds.noValues(tag);
+    if (_isEmpty(values, true)) return ds.noValues(tag.code);
     return ds.lookup(tag.code).update(values);
   }
 
   /// X unless Z or replacement of contained instance UIDs (U) is
   /// required to maintain IOD conformance
   /// (Type 3 versus Type 2 versus Type 1 sequences containing UID references)';
-  static TagElement removeUidUnlessNoValuesOrReplace(
+  static List<Element> removeUidUnlessNoValuesOrReplace(
       TagDataset ds, Tag tag, List values) {
     if (ds.lookup(tag.code) is! SQ)
       throw new InvalidTagError(
           "Invalid Tag(${ds.lookup(tag.code)}) for this action");
     //TODO: fix when AType info available
-    if (_isEmpty(values, true)) return ds.noValues(tag);
-    return ds.update(tag, values);
+    if (_isEmpty(values, true)) return ds.noValues(tag.code);
+    return ds.update(tag.code, values);
   }
 
-  static TagElement addIfMissing(TagDataset ds, Tag tag, List values) {
+  static Element addIfMissing(TagDataset ds, Tag tag, List values) {
     var e = ds.lookup(tag.code);
     if (e is! SQ)
       throw new InvalidTagError("Invalid Tag ($e) for this action");
     //TODO: fix when AType info available
-    if (_isEmpty(values, true)) return ds.noValues(tag);
-    return ds.update(tag, values);
+    if (_isEmpty(values, true)) return ds.noValues(tag.code, recursive: false);
+    return ds.update(tag.code, values);
   }
 
-  static TagElement unknownAction(TagDataset ds, Tag tag, List values) =>
+  static Element unknownAction(TagDataset ds, Tag tag, List values) =>
       throw new UnimplementedError();
 
   @override

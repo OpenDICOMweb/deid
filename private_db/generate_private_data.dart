@@ -4,7 +4,8 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu>
 // See the AUTHORS file for other contributors.
 
-import 'package:dictionary/dictionary.dart';
+import 'package:tag/tag.dart';
+
 import 'dart_arrays/private_tag_array.dart';
 
 void main(List<String> args) {

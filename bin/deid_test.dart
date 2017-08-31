@@ -4,11 +4,8 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
-import 'dart:io';
-
-import 'package:common/common.dart';
 import 'package:core/core.dart';
-import 'package:dsc_convert/dcm.dart';
+import 'package:system/system.dart';
 
 String testData = "C:/odw/sdk/convert/test_data/";
 String testOutput = "C:/odw/sdk/convert/test_output/";
