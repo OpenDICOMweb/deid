@@ -9,10 +9,10 @@ sdk: ^1.24.2
 dependencies:
   core:
     path: C:/odw/sdk/core
-    version: 0.6.1
+    version: 0.6.3
   dcm_convert:
     path: C:/odw/sdk/convert
-    version: 0.6.0
+    version: 0.6.3
   io:
     path: C:/odw/sdk/io
     version: ^0.6.0
