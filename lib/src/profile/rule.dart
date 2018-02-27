@@ -6,7 +6,7 @@
 
 import 'dart:convert';
 
-import 'package:tag/tag.dart';
+import 'package:core/core.dart';
 
 const List<String> ruleNames = const [
   "@add",

@@ -7,7 +7,7 @@
 // *** This is a generated class ***
 // ----------------------------------------------------------
 
-import 'package:tag/tag.dart';
+import 'package:core/core.dart';
 
 /// Clean Graphics Option
 ///

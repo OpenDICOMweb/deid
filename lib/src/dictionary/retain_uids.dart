@@ -7,8 +7,7 @@
 // *** This is a generated class ***
 // ----------------------------------------------------------
 
-import 'package:tag/tag.dart';
-
+import 'package:core/core.dart';
 
 // Retail UIDs Option (a DICOM de-identification option)
 class RetainUidsOption {
@@ -81,7 +80,7 @@ class RetainUidsOption {
     const RetainUidsOption("TemplateExtensionCreatorUID", 0x0040db0d, VR.kUI, "K");
   static const kFiducialUID =
     const RetainUidsOption("FiducialUID", 0x0070031a, VR.kUI, "K");
-  static const kStorageMediaFile_setUID =
+  static const kStorageMediaFileSetUID =
     const RetainUidsOption("StorageMediaFile_setUID", 0x00880140, VR.kUI, "K");
   static const kReferencedFrameofReferenceUID =
     const RetainUidsOption("ReferencedFrameofReferenceUID", 0x30060024, VR.kUI, "K");
@@ -139,30 +138,36 @@ static const Map<int, RetainUidsOption> map = const {
   0x00080018: kSOPInstanceUID,
   0x00080058: kFailedSOPInstanceUIDList,
   0x0008010d: kContextGroupExtensionCreatorUID,
+
   0x00081110: kReferencedStudySequence,
   0x00081111: kReferencedPerformedProcedureStepSequence,
   0x00081120: kReferencedPatientSequence,
   0x00081140: kReferencedImageSequence,
   0x00081155: kReferencedSOPInstanceUID,
+
   0x00081195: kTransactionUID,
   0x00082112: kSourceImageSequence,
   0x00083010: kIrradiationEventUID,
   0x00089123: kCreatorVersionUID,
   0x00181002: kDeviceUID,
+
   0x0020000d: kStudyInstanceUID,
   0x0020000e: kSeriesInstanceUID,
   0x00200052: kFrameofReferenceUID,
   0x00200200: kSynchronizationFrameofReferenceUID,
   0x00209161: kConcatenationUID,
+
   0x00209164: kDimensionOrganizationUID,
   0x00281199: kPaletteColorLookupTableUID,
   0x00281214: kLargePaletteColorLookupTableUID,
   0x00404023: kReferencedGeneralPurposeScheduledProcedureStepTransactionUID,
+
   0x0040db0c: kTemplateExtensionOrganizationUID,
   0x0040db0d: kTemplateExtensionCreatorUID,
   0x0070031a: kFiducialUID,
-  0x00880140: kStorageMediaFile_setUID,
+  0x00880140: kStorageMediaFileSetUID,
   0x30060024: kReferencedFrameofReferenceUID,
+
   0x300600c2: kRelatedFrameofReferenceUID,
   0x300a0013: kDoseReferenceUID
   };

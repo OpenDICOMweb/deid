@@ -4,7 +4,7 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu>
 // See the AUTHORS file for other contributors.
 
-import 'package:tag/tag.dart';
+import 'package:core/core.dart';
 
 import 'p_creator_tag.dart';
 

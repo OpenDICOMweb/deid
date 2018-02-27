@@ -5,7 +5,7 @@
 // See the AUTHORS file for other contributors.
 
 
-import 'package:tag/tag.dart';
+import 'package:core/core.dart';
 
 import 'p_data_tag.dart';
 
@@ -64,13 +64,13 @@ class PDTag {
   const PDTag(this.code, this.vr, this.vm, this.action, this.description, this.creator);
 
 
-  int get group => Group.fromTag(code);
+  int get group => Tag.group(code);
   int get element => Elt.fromTag(code);
   String get name => 'k${Tag.toHex(code)}';
 
   String get json => '''
   {
-    "tag": ${Tag.toDcm(code)},
+    "tag": ${dcm(code)},
     "vr": $vr,
     "vm": $vm,
     "action": $action,

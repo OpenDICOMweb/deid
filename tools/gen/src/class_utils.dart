@@ -4,7 +4,7 @@
 // Original author: Jim Philbin <jfphilbin@gmail.edu> -
 // See the AUTHORS file for other contributors.
 
-import 'package:tag/tag.dart';
+import 'package:core/core.dart';
 
 String commaSeparatedString(String prefix, List args, String suffix,
     {bool last: false}) {

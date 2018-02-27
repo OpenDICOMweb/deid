@@ -1,4 +1,4 @@
-import 'package:tag/tag.dart';
+import 'package:core/core.dart';
 
 import 'p_creator_tag.dart';
 

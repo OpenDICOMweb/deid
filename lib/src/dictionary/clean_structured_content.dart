@@ -7,9 +7,9 @@
 // *** This is a generated class ***
 // ----------------------------------------------------------
 
-import 'package:tag/tag.dart';
+import 'package:core/core.dart';
 
-import 'basic_profile.dart';
+//
 
 /// Clean Structured Content Option to the Basic De-Identification Profile.
 class CleanStructuredContentOption extends BasicProfile {

@@ -8,7 +8,6 @@
 // ----------------------------------------------------------
 
 import 'package:core/core.dart';
-import 'package:tag/tag.dart';
 
 import 'basic_profile_options.dart';
 
@@ -66,24 +65,24 @@ class BasicProfile {
   /// are consistent with VR.
   static Element replaceWithZero(Dataset ds, Tag tag,
           [bool required = false]) =>
-      ds.noValues(tag);
+      ds.noValues(tag.code);
 
   /// X: Remove the [Element] with [tag].h
-  static List<Element> remove(Dataset ds, Tag tag,
+  static Element remove(Dataset ds, Tag tag,
       [bool required = false]) =>
-      ds.remove(tag);
+      ds.delete(tag.code);
 
 /* FLush or Fix
   /// K: Retain the [Element] with this Tag.
   static void keep(Dataset ds, Tag tag, [bool required = false]) =>
-      ds.retain(tag);
+      ds.retain(tag.code);
 */
 
   /// C: Clean, that is replace with values of similar meaning known
   /// not to contain identifying information and consistent with the VR.
   static bool clean(Dataset ds, Tag tag, List values,
           [bool required = false]) =>
-      ds.replace(tag, values) != null;
+      ds.replace(tag.code, values) != null;
 
   /// U: Replace with a non-zero length UID that is internally consistent
   /// within a set of Instances in the Study or Series;
@@ -95,7 +94,7 @@ class BasicProfile {
   /// IOD conformance (Type 2 versus Type 1)';
   static Element zeroUnlessDummy(Dataset ds, Tag tag,
       [List values, bool required = false]) {
-    if (_isEmpty(values, true)) return ds.noValues(tag, required: required);
+    if (_isEmpty(values, true)) return ds.noValues(tag.code, required: required);
     return ds.update(tag.code, values);
   }
 
@@ -103,7 +102,7 @@ class BasicProfile {
   /// (Type 3 versus Type 2)';
   static Element removeUnlessZero(Dataset ds, Tag tag,
       [List values, bool required = false]) {
-    if (_isEmpty(values, true)) return ds.noValues(tag);
+    if (_isEmpty(values, true)) return ds.noValues(tag.code);
     return ds.update(tag.code, values);
   }
 
@@ -111,7 +110,7 @@ class BasicProfile {
   /// (Type 3 versus Type 1)';
   static Element removeUnlessDummy(Dataset ds, Tag tag,
       [List values, bool required = false]) {
-    if (_isEmpty(values, true)) return ds.remove(tag, required: required);
+    if (_isEmpty(values, true)) return ds.delete(tag.code, required: required);
     return ds.update(tag.code, values);
   }
 
@@ -119,7 +118,7 @@ class BasicProfile {
   /// (Type 3 versus Type 2 versus Type 1)';
   static Element removeUnlessZeroOrDummy(Dataset ds, Tag tag,
       [List values]) {
-    if (_isEmpty(values, true)) return ds.noValues(tag);
+    if (_isEmpty(values, true)) return ds.noValues(tag.code);
     return ds.lookup(tag.code).update(values);
   }
 
@@ -129,17 +128,16 @@ class BasicProfile {
   static Element removeUidUnlessZeroOrDummy(Dataset ds, Tag tag,
       [List values, bool required = false]) {
     if (ds.lookup(tag.code) is! SQ)
-      throw new InvalidTagError(
-          "Invalid Tag(${ds.lookup(tag.code)}) for this action");
-    if (_isEmpty(values, true)) return ds.noValues(tag);
-    return ds.replace(tag, values);
+      throw new InvalidTagError(tag);
+    if (_isEmpty(values, true)) return ds.noValues(tag.code);
+    return ds.replace(tag.code, values);
   }
 
   static Element addIfMissing(Dataset ds, Tag tag,
       [List values, bool required = false]) {
     var e = ds.lookup(tag.code);
-    if (e is! SQ) throw new InvalidTagError("Invalid Tag ($e) for this action");
-    if (_isEmpty(values, true)) return ds.noValues(tag, required: required);
+    if (e is! SQ) throw new InvalidTagError(tag);
+    if (_isEmpty(values, true)) return ds.noValues(tag.code, required: required);
     return ds.update(tag.code, values);
   }
 

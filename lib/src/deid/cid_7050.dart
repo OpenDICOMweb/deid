@@ -5,7 +5,6 @@
 // See the AUTHORS file for other contributors.
 
 import 'package:core/core.dart';
-import 'package:tag/tag.dart';
 
 class ContextGroup {
   final String dcmType = "ContextGroup";

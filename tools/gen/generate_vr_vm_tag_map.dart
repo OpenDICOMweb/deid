@@ -6,8 +6,8 @@
 
 import 'dart:io';
 
+import 'package:core/core.dart';
 import 'package:deid/deid.dart';
-import 'package:tag/tag.dart';
 
 import 'src/gen_utils.dart';
 
@@ -27,7 +27,7 @@ void main() {
     Tag e = Tag.lookup(code);
     //   print('i: $i, element: $e');
     if (e == null) {
-      print('bad Tag 1: ${Tag.toDcm(code)}');
+      print('bad Tag 1: ${dcm(code)}');
     } else {
     //  print('1: $e');
       VR vr = e.vr;
@@ -74,10 +74,10 @@ String vrMapToJson(Map<VR, Map<VM, List<Tag>>> vrMap) {
         BasicProfile bp = BasicProfile.lookup(tag.code);
         //print('de: $de');
         if (de == null) {
-          print('bad Tag 2: ${Tag.toDcm(tag.code)}');
+          print('bad Tag 2: ${dcm(tag.code)}');
           print('vmMap: $vmMap');
         } else if (bp == null) {
-          print('bad Tag 3: ${Tag.toDcm(tag.code)}');
+          print('bad Tag 3: ${dcm(tag.code)}');
           print('vmMap: $vmMap');
 
         } else {

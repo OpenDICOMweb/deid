@@ -7,7 +7,7 @@
 // *** This is a generated class ***
 // ----------------------------------------------------------
 
-import 'package:tag/tag.dart';
+import 'package:core/core.dart';
 
 /// Retail Long Modification Dates Option (see PS2.15, Annex E)
 class RetainLongModifDatesOption {

@@ -6,7 +6,6 @@
 
 
 import 'package:core/core.dart';
-import 'package:tag/tag.dart';
 
 import 'changes.dart';
 
@@ -21,27 +20,27 @@ class Protocol {
   List<int> removeGroups;
   Changes changes = new Changes();
 
-  RootTagDataset rds;
+  TagRootDataset rds;
 
   Protocol(this.rds);
 
   Tag checkCode(int code) {
     if (retainCode(code)) {
-      log.warn('Attempt to change tag ${Tag.toDcm(code)} on Keep List');
+      log.warn('Attempt to change tag ${dcm(code)} on Keep List');
       return null;
     }
     Tag def = Tag.lookup(code);
     if (def == null) {
-      log.warn("Undefined tag ${Tag.toDcm(code)}");
+      log.warn("Undefined tag ${dcm(code)}");
       return null;
     }
     return def;
   }
 
-  TagElement checkChangeRequest(int code, List values) {
+  Element checkChangeRequest(int code, List values) {
     Tag e0 = checkCode(code);
     if (e0 == null) return null;
-    TagElement e1 = rds.lookup(code);
+    Element e1 = rds.lookup(code);
     print('check: $e1, values: $values');
     if (e1 == null) {
       log.warn('Tag($code) not present');
@@ -67,7 +66,7 @@ class Protocol {
 
   /// Adds or replaces [Element] [e] in Dataset. Returns [true] if an
   /// [Element] with [e].code was present in the [Dataset]; false otherwise.
-  bool add(TagElement e) {
+  bool add(Element e) {
     if (addIfAbsent(e)) return false;
     rds.add(e);
   //  changes.add(e0);
@@ -119,7 +118,7 @@ class Protocol {
 
   //TODO: doc
   bool addIfNotPresent(int tag, Function creator) {
-    TagElement e = creator();
+    Element e = creator();
     rds.map[tag] = e;
     changes.create(e);
     return true;
@@ -127,7 +126,7 @@ class Protocol {
 
   ///TODO: doc
   bool replaceWithDummy(Tag tag, List values) {
-    TagElement e0 = checkChangeRequest(tag.code, values);
+    Element e0 = checkChangeRequest(tag.code, values);
     if ((values.length == 0) || (values == null)) {
       log.warn('Tag $tag requires a Dummy (D) value, but no values supplied');
       return false;
@@ -140,7 +139,7 @@ class Protocol {
 
   bool zeroOrDummy(int code, [List values = const []]) {
     var e0 = checkChangeRequest(code, values);
-    print('zeroOrDummy: ${Tag.toDcm(code)}, e: $e0');
+    print('zeroOrDummy: ${dcm(code)}, e: $e0');
     rds.replaceCode(code, values);
     return true;
   }
@@ -150,7 +149,7 @@ class Protocol {
   bool remove(int code) {
     Tag eDef = checkCode(code);
     if (eDef == null) return false;
-    TagElement e = rds.lookup(code);
+    Element e = rds.lookup(code);
     if (e == null) {
       log.warn('Tag($code) not present');
       return false;
@@ -159,9 +158,9 @@ class Protocol {
     return true;
   }
 
-  TagElement noValues(int code) {
+  Element noValues(int code) {
     checkCode(code);
-    TagElement e = checkChangeRequest(code, null);
+    Element e = checkChangeRequest(code, null);
     return e.noValues;
   }
 
@@ -172,7 +171,7 @@ class Protocol {
     Tag a = Tag.lookup(code);
     if (a is SQ) {
       //Urgent: why not?
-      throw "Sequence Code ${Tag.toDcm(code)} is not valid for Dataset.retain";
+      throw "Sequence Code ${dcm(code)} is not valid for Dataset.retain";
     } else if (!rds.map.containsKey(code)) {
       keepTags.add(code);
       return true;
@@ -183,8 +182,8 @@ class Protocol {
   ///TODO: doc
   /// TODO: Study, Series and Instance UIDs have to be replaced at the appropriate level
   /// If no [Element] with [e] is present, does nothing and returns [null].
-  TagElement modifyUid(TagElement e, [List values]) {
-    TagElement e0 = checkChangeRequest(e.code, values);
+  Element modifyUid(Element e, [List values]) {
+    Element e0 = checkChangeRequest(e.code, values);
     if (e0 == null) return null;
     if (e0 is! UI) {
       log.warn("Tag ${e.dcm} is not a UID Tag.");
@@ -215,7 +214,7 @@ class Protocol {
   List<Element> removePrivateTags(
       {bool recursive: true, bool returnList: false}) {
     List<Element> returnedList = [];
-    for (TagElement e in rds.elements) {
+    for (Element e in rds.elements) {
       if (Tag.isPrivateCode(e.code)) {
         if (returnList) {
           returnedList.add(e);
@@ -258,7 +257,7 @@ class Protocol {
   /// Removes all Private Groups.
   void removePrivateGroups(int group, {bool recursive: true}) {
     for (int code in rds.map.keys) {
-      TagElement e = rds.map[code];
+      Element e = rds.map[code];
       if (Tag.isPrivateCode(code)) {
         //   changes.remove(e);
         rds.remove(code);
@@ -280,24 +279,24 @@ class Protocol {
   /// Returns [true] if the [group] existed and was removed.
   bool removeGroup(int group, {bool recursive: true}) {
     if (!isRemovableGroup(group)) {
-      log.warn("Group ${Uint16.hex(group)} is NOT removable");
+      log.warn("Group ${hex16(group)} is NOT removable");
       return false;
     }
     int min = group << 16;
     int max = min + 0xFFFF;
     List<Element> removed = [];
-    for (int tag in rds.map.keys) {
-      TagElement e = rds.map[tag];
+    for (int tag in rds.keys) {
+      Element e = rds[tag];
       if ((min <= tag) && (tag <= max)) {
         removed.add(e);
-        rds.map.remove(tag);
+        rds.delete(tag);
       } else if ((e is SQ) && (recursive == true)) {
         for (TagItem item in e.items)
-          item.removePrivateGroup(group, recursive: recursive);
+          item.deletePrivateGroup(group, recursive: recursive);
       }
     }
     if (removed.length == 0) {
-      log.warn("Group ${Uint16.hex(group)} was NOT present");
+      log.warn("Group ${hex16(group)} was NOT present");
       return false;
     }
     return true;

@@ -4,7 +4,7 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu>
 // See the AUTHORS file for other contributors.
 
-import 'package:tag/tag.dart';
+import 'package:core/core.dart';
 
 import 'dart_arrays/private_tag_array.dart';
 
@@ -28,7 +28,7 @@ void main(List<String> args) {
       var description = creator[4].trim();
   //    print('creatorId($creatorId), modality($modality)');
 
-      var group = Group.fromTag(tag);
+      var group = Tag.toGroup(tag);
       creators += 'static const k${creatorId} = const PrivateCreator("$creatorId", '
           '$group, "$manufacturerId", "$modality, "$description");\n';
       data += 'Creator: "$creatorId", group: $group, Manufacturer: "$manufacturerId",'

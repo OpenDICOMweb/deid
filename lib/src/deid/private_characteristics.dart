@@ -7,7 +7,6 @@
 import 'dart:typed_data';
 
 import 'package:core/core.dart';
-import 'package:tag/tag.dart';
 
 class PrivateDataCharacteristics {
   final String keyword;
@@ -120,11 +119,11 @@ class PrivateDataCharacteristics {
       const PrivateDataCharacteristics("DeidentificationAction", 0x00080307,
           "Deidentification Action", VR.kCS, VM.k1, EType.k1, false);
 
-  static SQ get(TagDataset ds) => ds[PTag.kPrivateDataElementCharacteristicsSequence.code];
+  static SQ get(Dataset ds) => ds[PTag.kPrivateDataElementCharacteristicsSequence.code];
 
 //TODO: finish, Test
   //TODO: should the Private Data Charistic Sequence be removed?
-  static void process(TagDataset ds, bool keepSafe) {
+  static void process(Dataset ds, bool keepSafe) {
     SQ sq = ds[PTag.kPrivateDataElementCharacteristicsSequence.code];
     for (TagItem item in sq.items) {
       int pGroup = item[PTag.kPrivateGroupReference.code].value;
@@ -166,7 +165,7 @@ class PrivateDataCharacteristics {
     }
   }
 
-  static int findCreator(TagDataset ds, int pSetBase, String token) {
+  static int findCreator(Dataset ds, int pSetBase, String token) {
     int min = pSetBase + 0x0010;
     int max = pSetBase + 0x00FF;
     for (int i = min; i <= max; i++) if ((ds[i] != null) && (ds[i].value == token)) return i;

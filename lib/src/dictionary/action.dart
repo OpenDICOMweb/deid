@@ -5,7 +5,7 @@
 // See the AUTHORS file for other contributors.
 
 import 'package:core/core.dart';
-import 'package:tag/tag.dart';
+
 
 /// This library implements DICOM study de-identification.  It conforms to
 /// DICOM PS3.15 Appendix E.
@@ -48,7 +48,7 @@ class Action {
       const Action(1, "", "Invalid", "Invalid/Undefined Action", invalid);
 
   static const Action kX =
-      const Action(1, "X", "Remove", "Remove Element", remove);
+      const Action(1, "X", "Remove", "Remove Element", delete);
 
   static const Action kU =
       const Action(2, "U", "ReplaceUid", "Replace UID value(s)", replaceUids);
@@ -98,50 +98,50 @@ class Action {
   static const Action kUN =
       const Action(14, "UN", "Unknown", "Action Unknown", unknownAction);
 
-  Element call(TagDataset ds, Tag tag, [List values]) =>
+  Element call(Dataset ds, Tag tag, [List values]) =>
       action(ds, tag, values);
 
   static bool _isEmpty(List values, bool emptyAllowed) =>
       (values == null) || (emptyAllowed && (values.length >= 0));
 
-  static Action invalid(TagDataset ds, Tag tag, [List values]) =>
+  static Action invalid(Dataset ds, Tag tag, [List values]) =>
       throw new UnsupportedError("Invalid Action");
 
-  static Element updateWithDummy(TagDataset ds, Tag tag, [List values]) =>
+  static Element updateWithDummy(Dataset ds, Tag tag, [List values]) =>
       ds.update(tag.code, values);
 
   /// Replace with a zero length value, or a non-zero length value
   /// that may be a dummy value and consistent with the VR'.
-  //static zeroOrDummy(TagDatasetds, Tag tag, arg, AType aType) =>
-  static List<Element> replaceNoValues(TagDataset ds, Tag tag) => ds.noValues(tag.code);
+  //static zeroOrDummy(Datasetds, Tag tag, arg, AType aType) =>
+  static Element replaceNoValues(Dataset ds, Tag tag) => ds.noValues(tag.code);
 
   /// Remove the attribute'.
-  static List<Element> remove(TagDataset ds, Tag tag) => ds.remove(tag.code);
+  static Element delete(Dataset ds, Tag tag) => ds.remove(tag.code);
 
   /// Keep (unchanged for non-sequence attributes, cleaned for sequences)';
   //TODO: deidentifySequence has to be at a higher level
-  static void retain(TagDataset ds, Tag tag) => ds.retain(tag);
+  static void retain(Dataset ds, Tag tag) => ds.retain(tag);
 
   /// retain (unchanged for non-sequence attributes, cleaned for sequences)';
   //TODO: deidentifySequence has to be at a higher level
-  static void retainBlank(TagDataset ds, Tag tag) => ds.retain(tag);
+  static void retainBlank(Dataset ds, Tag tag) => ds.retain(tag);
 
   //TODO: what if not present
   /// Clean, that is replace with values of similar meaning known
   /// not to contain identifying information and consistent with the VR.
-  //static clean(TagDatasetds, Tag tag, arg, AType aType) =>
-  static bool clean(TagDataset ds, Tag tag, List values) =>
+  //static clean(Datasetds, Tag tag, arg, AType aType) =>
+  static bool clean(Dataset ds, Tag tag, List values) =>
       ds.update(tag.code, values) != null;
 
   /// Replace with a non-zero length UID that is internally consistent
   /// within a set of Instances';
-  static Element replaceUids(TagDataset ds, Tag tag,
+  static Element replaceUids(Dataset ds, Tag tag,
           [List<String> values]) =>
-      ds.replaceUidsByTag(tag, values);
+      ds.replaceUids(tag.code, values);
 
   /// Z unless D is required to maintain
   /// IOD conformance (Type 2 versus Type 1)';
-  static List<Element> zeroUnlessDummy(TagDataset ds, Tag tag, [List values]) {
+  static Element zeroUnlessDummy(Dataset ds, Tag tag, [List values]) {
     //TODO: create a version of this file that works with an IOD definition
     // AType aType = ds.IOD.lookup(a.tag).aType;
     // if ((aType == AType.k1) || (aType == AType.k1C)) {
@@ -153,7 +153,7 @@ class Action {
   }
 
   /// X unless Z is required to maintain IOD conformance (Type 3 versus Type 2)';
-  static List<Element> removeUnlessZero(TagDataset ds, Tag tag, [List values]) {
+  static Element removeUnlessZero(Dataset ds, Tag tag, [List values]) {
     //TODO: make this work with IODs
     // AType aType = ds.IOD.lookup(a.tag).aType;
     // if ((aType == AType.k2) || (aType == AType.k2C)) {
@@ -165,21 +165,21 @@ class Action {
   }
 
   /// X unless D is required to maintain IOD conformance (Type 3 versus Type 1)';
-  static List<Element> removeUnlessDummy(TagDataset ds, Tag tag, List values) {
+  static Element removeUnlessDummy(Dataset ds, Tag tag, List values) {
     //TODO: make this work with IODs
     // AType aType = ds.IOD.lookup(a.tag).aType;
     // if ((aType == AType.k3)  {
     //   ds.remove.a;
     // } else {
     // a.replace(values);
-    if (_isEmpty(values, true)) return ds.remove(tag.code);
+    if (_isEmpty(values, true)) return ds.delete(tag.code);
     return ds.update(tag.code, values);
   }
 
   /// X unless Z or D is required to maintain IOD conformance
   /// (Type 3 versus Type 2 versus Type 1)';
-  static List<Element> removeUnlessZeroOrDummy(
-      TagDataset ds, Tag tag, List values) {
+  static Element removeUnlessZeroOrDummy(
+      Dataset ds, Tag tag, List values) {
     //TODO: fix when AType info available
     if (_isEmpty(values, true)) return ds.noValues(tag.code);
     return ds.lookup(tag.code).update(values);
@@ -188,8 +188,8 @@ class Action {
   /// X unless Z or replacement of contained instance UIDs (U) is
   /// required to maintain IOD conformance
   /// (Type 3 versus Type 2 versus Type 1 sequences containing UID references)';
-  static List<Element> removeUidUnlessNoValuesOrReplace(
-      TagDataset ds, Tag tag, List values) {
+  static Element removeUidUnlessNoValuesOrReplace(
+      Dataset ds, Tag tag, List values) {
     if (ds.lookup(tag.code) is! SQ)
       throw new InvalidTagError(
           "Invalid Tag(${ds.lookup(tag.code)}) for this action");
@@ -198,7 +198,7 @@ class Action {
     return ds.update(tag.code, values);
   }
 
-  static Element addIfMissing(TagDataset ds, Tag tag, List values) {
+  static Element addIfMissing(Dataset ds, Tag tag, List values) {
     var e = ds.lookup(tag.code);
     if (e is! SQ)
       throw new InvalidTagError("Invalid Tag ($e) for this action");
@@ -207,7 +207,7 @@ class Action {
     return ds.update(tag.code, values);
   }
 
-  static Element unknownAction(TagDataset ds, Tag tag, List values) =>
+  static Element unknownAction(Dataset ds, Tag tag, List values) =>
       throw new UnimplementedError();
 
   @override

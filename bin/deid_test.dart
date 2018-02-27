@@ -4,8 +4,9 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
+import 'package:convert/convert.dart';
 import 'package:core/core.dart';
-import 'package:system/system.dart';
+
 
 String testData = "C:/odw/sdk/convert/test_data/";
 String testOutput = "C:/odw/sdk/convert/test_output/";
@@ -26,7 +27,7 @@ void main() {
   String path = testData + crf1;
 
   log.config('Reading file: $path');
-  RootTagDataset rds = TagReader.readPath(path);
+  TagRootDataset rds = TagReader.readPath(path);
   print(rds.format(new Formatter()));
 
 

@@ -23,7 +23,7 @@ void main() {
     print('Reading file: $file');
     log.config('Reading file: $file');
 
-    RootTagDataset rds = TagReader.readFile(file);
+    TagRootDataset rds = TagReader.readFile(file);
     //print('***Identified:\n${instance.patient.format(new Formatter(maxDepth: 5))}');
     print('Initial Total Elements: ${rds.length}');
 

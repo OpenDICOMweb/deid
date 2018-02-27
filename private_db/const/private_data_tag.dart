@@ -4,7 +4,7 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu>
 // See the AUTHORS file for other contributors.
 
-import 'package:tag/tag.dart';
+import 'package:core/core.dart';
 
 import 'action.dart';
 
@@ -18,7 +18,7 @@ class PrivateDataTag {
 
   const PrivateDataTag(this.code, this.vr, this.vm, this.action, this.description);
 
-  int get group => Group.fromTag(code);
+  int get group => Tag.group(code);
   int get elt => Elt.fromTag(code);
   String get id => 'k${Tag.toHex(elt)}';
 

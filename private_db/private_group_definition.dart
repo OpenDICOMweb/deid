@@ -5,7 +5,6 @@
 // See the AUTHORS file for other contributors.
 
 import 'package:core/core.dart';
-import 'package:tag/tag.dart';
 
 Map generatePrivateGroup(String creator, String manufacturer, String modality,
                           String description, int groupNumber, String elements) {

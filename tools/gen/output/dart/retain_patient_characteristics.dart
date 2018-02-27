@@ -7,7 +7,7 @@
 // *** This is a generated class ***
 // ----------------------------------------------------------
 
-import 'package:tag/tag.dart';
+import 'package:core/core.dart';
 
 // DICOM attributes in De-Identification Profile (and Options)
 class RetainPatientCharacteristicsOption {

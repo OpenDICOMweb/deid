@@ -44,7 +44,7 @@ void main() {
 }
 
 
-RootTagDataset readRootDataset(String path) {
+TagRootDataset readRootDataset(String path) {
   File file = new File(path);
   Uint8List bytes = file.readAsBytesSync();
   return TagReader.readBytes(bytes);

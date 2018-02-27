@@ -6,7 +6,7 @@
 
 import 'dart:io';
 
-import 'package:tag/tag.dart';
+import 'package:core/core.dart';
 
 import 'gen_deid_utils.dart';
 

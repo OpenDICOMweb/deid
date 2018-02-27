@@ -6,7 +6,7 @@
 
 import 'package:core/core.dart';
 import 'package:deid/src/deid/action.dart';
-import 'package:system/system.dart';
+
 
 //TODO: add the ability to do this.
 /// Clean Pixel Data Option to the Basic De-Identification Profile.
@@ -25,7 +25,7 @@ class CleanPixelData {
       bool removeIconPixelDataFlag: false,
       bool removeFloatPixelDataFlag: false,
       bool removeDoubleFloatPixelDataFlag: false}) {
-    Element a = ds[kAttributeBurnedInAnnotation];
+    Element a = ds[kAttributeBurnedInAnnotation.tag];
     if ((a != null) && (a.value == "NO")) return true;
     if (removeIconPixelDataFlag) removeIconPixelData(ds);
     if (removeFloatPixelDataFlag) ds.remove(kFloatPixelData);

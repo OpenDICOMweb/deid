@@ -23,7 +23,7 @@ class TagGroup {
   static const TagGroup  curves = group50;
   static const TagGroup  overLays = group60;
 
-  void keep(TagDataset ds) {
+  void keep(Dataset ds) {
     for (int i = min; i <= max; i++)
       ds.retainCode(i);
   }

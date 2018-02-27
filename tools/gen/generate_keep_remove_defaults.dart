@@ -4,8 +4,8 @@
 // Author: Jim Philbin <jfphilbin@gmail.edu> - 
 // See the AUTHORS file for other contributors.
 
+import 'package:core/core.dart';
 import 'package:deid/dictionary.dart';
-import 'package:tag/tag.dart';
 
 List basicProfileAndOptions = [
   "BasicProfile",

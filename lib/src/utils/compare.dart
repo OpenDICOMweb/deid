@@ -11,8 +11,8 @@ class DSComparison {
   List diff = [];
 
   DSComparison(Dataset ds0, Dataset ds1) {
-    List<Element> elements0 = ds0.map.values.toList(growable: false);
-    List<Element> elements1 = ds1.map.values.toList(growable: false);
+    List<Element> elements0 = ds0.elements;
+    List<Element> elements1 = ds1.elements;
     int length0 = elements0.length;
     int length1 = elements1.length;
     int index0 = 0;
@@ -20,8 +20,8 @@ class DSComparison {
     while ((index0 < length0) && (index1 < length1)) {
       Element e0 = elements0[index0];
       Element e1 = elements0[index1];
-      int tag0 = e0.tag;
-      int tag1 = e1.tag;
+      int tag0 = e0.code;
+      int tag1 = e1.code;
       if (tag0 == tag1) {
         compareElements(e0, e1);
         index0++;
@@ -49,8 +49,8 @@ class DSComparison {
     while ((index0 < length0) && (index1 < length1)) {
       Element e0 = elements0[index0];
       Element e1 = elements0[index1];
-      int tag0 = e0.tag;
-      int tag1 = e1.tag;
+      int tag0 = e0.code;
+      int tag1 = e1.code;
       if (tag0 == tag1) {
         compareElements(e0, e1);
         index0++;
@@ -78,32 +78,31 @@ class DSComparison {
   void compareSequences(SQ sq0, SQ sq1) {
     print('sq0: $sq0\nsq1: $sq1');
     List<Element> same = [];
-    List<List> diff = [];
     if (sq0.items.length == sq1.items.length) {
       if (sq0.length == 0) return same.add(sq0);
       for (int i = 0; i < sq0.items.length; i++) {
-        compareItems(sq0.items[i], sq1.items[i]);
+        compareItems(sq0.items.elementAt(i), sq1.items.elementAt(i));
       }
     } else if (sq0.items.length < sq1.items.length) {
 
     }
   }
 
-  void compareItems(TagItem item0, TagItem item1) {
+  void compareItems(Item item0, Item item1) {
     print('item0: $item0\nitem1: $item1');
-    var map0 = item0.map.values.toList(growable: false);
-    var map1 = item1.map.values.toList(growable: false);
-    print('map0: $map0\nmap1: $map1');
+    var ds0 = item0.elements;
+    var ds1 = item1.elements;
+    print('map0: $ds0\nmap1: $ds1');
 
-    if (map0.length == map1.length) {
-      print('map.length:\n\t${map0.length}\n\t${map1.length}');
-      if (map0.length <= 0) {
+    if (ds0.length == ds1.length) {
+      print('map.length:\n\t${ds0.length}\n\t${ds1.length}');
+      if (ds0.length <= 0) {
         print('zero length items: $item0, $item1');
       }
-      for (int i = 0; i < map0.length; i++) {
-        print('\tmap0[$i]: ${map0[i]}');
-        print('\tmap1[$i]: ${map1[i]}');
-        compareElements(map0[i], map1[i]);
+      for (int i = 0; i < ds0.length; i++) {
+        print('\tmap0[$i]: ${ds0.elementAt(i)}');
+        print('\tmap1[$i]: ${ds1.elementAt(i)}');
+        compareElements(ds0.elementAt(i), ds1.elementAt(i));
       }
     } else {
       print('Item: unequal lengths:\n\t$item0\n\t$item1');
