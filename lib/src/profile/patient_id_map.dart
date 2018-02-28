@@ -21,8 +21,8 @@ class PatientIdMap {
   int lookup(int ptId) => _map[ptId];
 
   static PatientIdMap load(String jsonTrial, String jsonPatientIdMap) {
-    Trial trial = JSON.decode(jsonTrial);
-    Map<int, int> map = JSON.decode(jsonPatientIdMap);
+    final Trial trial = JSON.decode(jsonTrial);
+    final Map<int, int> map = JSON.decode(jsonPatientIdMap);
     return new PatientIdMap(trial, map);
   }
 }

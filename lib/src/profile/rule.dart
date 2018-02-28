@@ -9,46 +9,46 @@ import 'dart:convert';
 import 'package:core/core.dart';
 
 const List<String> ruleNames = const [
-  "@add",
-  "@always",
-  "@append",
-  "@blank",
-  "@contents",
-  "@date",
-  "@empty",
-  "@encrypt",
-  "@hash",
-  "@hashuid",
-  "@hashname",
-  "@hashptid",
-  "@incrementDate",
-  "@initials",
-  "@integer",
-  "@keep",
-  "@lookup",
-  "@modifiyDate",
-  "@param",
-  "@privateattribute",
-  "@process",
-  "@remove",
-  "@require",
-  "@round",
-  "@time",
-  "@truncate"
+  '@add',
+  '@always',
+  '@append',
+  '@blank',
+  '@contents',
+  '@date',
+  '@empty',
+  '@encrypt',
+  '@hash',
+  '@hashuid',
+  '@hashname',
+  '@hashptid',
+  '@incrementDate',
+  '@initials',
+  '@integer',
+  '@keep',
+  '@lookup',
+  '@modifiyDate',
+  '@param',
+  '@privateattribute',
+  '@process',
+  '@remove',
+  '@require',
+  '@round',
+  '@time',
+  '@truncate'
 ];
 
-String action = r"remove|keep|empty|skip|default|ignore";
+String action = r'remove|keep|empty|skip|default|ignore';
 final RegExp actionRE = new RegExp(action);
 
 const String condition = r'exists|isblank|equals|contains|matches';
 final RegExp conditionRE = new RegExp(condition);
 
 const Map<String, int> conditionMap = const {
-  "exists": 2,
-  "isBlank": 2,
-  "equals": 3,
-  "contains": 3,
-  "matches": 3
+  'exists': 2,
+  'isBlank': 2,
+  'equals': 3,
+  'contains': 3,
+  'matches': 3
 };
 
 class Rule {
@@ -85,12 +85,12 @@ class Rule {
   }
 
   Map<String, dynamic> get map => {
-    "index": index,
-    "target": targetTag,
-    "keyword": keyword,
-    "function": function,
-    "args": args,
-    "scripts": scripts,
+    'index': index,
+    'target': targetTag,
+    'keyword': keyword,
+    'function': function,
+    'args': args,
+    'scripts': scripts,
   };
 
   String get json => JSON.encode(map);

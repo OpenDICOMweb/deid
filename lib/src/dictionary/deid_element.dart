@@ -6,6 +6,8 @@
 
 import 'package:core/core.dart';
 
+// ignore_for_file: type_annotate_public_apis
+
 class DeIdElement {
   final int tag;
   final String keyword;
@@ -18,539 +20,539 @@ class DeIdElement {
   static DeIdElement lookup(int tag) => map[tag];
 
   static const kAffectedSOPInstanceUID =
-    const DeIdElement(0x00001000, "AffectedSOPInstanceUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x00001000, 'AffectedSOPInstanceUID', VR.kUI, VM.k1, true);
   static const kRequestedSOPInstanceUID =
-    const DeIdElement(0x00001001, "RequestedSOPInstanceUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x00001001, 'RequestedSOPInstanceUID', VR.kUI, VM.k1, true);
   static const kMediaStorageSOPInstanceUID =
-    const DeIdElement(0x00020003, "MediaStorageSOPInstanceUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x00020003, 'MediaStorageSOPInstanceUID', VR.kUI, VM.k1, true);
   static const kReferencedSOPClassUIDInFile =
-    const DeIdElement(0x00041510, "ReferencedSOPClassUIDInFile", VR.kUI, VM.k1, true);
+    const DeIdElement(0x00041510, 'ReferencedSOPClassUIDInFile', VR.kUI, VM.k1, true);
   static const kInstanceCreatorUID =
-    const DeIdElement(0x00080014, "InstanceCreatorUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x00080014, 'InstanceCreatorUID', VR.kUI, VM.k1, true);
   static const kInstanceCoercionDateTime =
-    const DeIdElement(0x00080015, "InstanceCoercionDateTime", VR.kDT, VM.k1, true);
+    const DeIdElement(0x00080015, 'InstanceCoercionDateTime', VR.kDT, VM.k1, true);
   static const kSOPInstanceUID =
-    const DeIdElement(0x00080018, "SOPInstanceUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x00080018, 'SOPInstanceUID', VR.kUI, VM.k1, true);
   static const kStudyDate =
-    const DeIdElement(0x00080020, "StudyDate", VR.kDA, VM.k1, true);
+    const DeIdElement(0x00080020, 'StudyDate', VR.kDA, VM.k1, true);
   static const kSeriesDate =
-    const DeIdElement(0x00080021, "SeriesDate", VR.kDA, VM.k1, true);
+    const DeIdElement(0x00080021, 'SeriesDate', VR.kDA, VM.k1, true);
   static const kAcquisitionDate =
-    const DeIdElement(0x00080022, "AcquisitionDate", VR.kDA, VM.k1, true);
+    const DeIdElement(0x00080022, 'AcquisitionDate', VR.kDA, VM.k1, true);
   static const kContentDate =
-    const DeIdElement(0x00080023, "ContentDate", VR.kDA, VM.k1, true);
+    const DeIdElement(0x00080023, 'ContentDate', VR.kDA, VM.k1, true);
   static const kOverlayDate =
-    const DeIdElement(0x00080024, "OverlayDate", VR.kDA, VM.k1, true);
+    const DeIdElement(0x00080024, 'OverlayDate', VR.kDA, VM.k1, true);
   static const kCurveDate =
-    const DeIdElement(0x00080025, "CurveDate", VR.kDA, VM.k1, true);
+    const DeIdElement(0x00080025, 'CurveDate', VR.kDA, VM.k1, true);
   static const kAcquisitionDateTime =
-    const DeIdElement(0x0008002a, "AcquisitionDateTime", VR.kDT, VM.k1, true);
+    const DeIdElement(0x0008002a, 'AcquisitionDateTime', VR.kDT, VM.k1, true);
   static const kStudyTime =
-    const DeIdElement(0x00080030, "StudyTime", VR.kTM, VM.k1, true);
+    const DeIdElement(0x00080030, 'StudyTime', VR.kTM, VM.k1, true);
   static const kSeriesTime =
-    const DeIdElement(0x00080031, "SeriesTime", VR.kTM, VM.k1, true);
+    const DeIdElement(0x00080031, 'SeriesTime', VR.kTM, VM.k1, true);
   static const kAcquisitionTime =
-    const DeIdElement(0x00080032, "AcquisitionTime", VR.kTM, VM.k1, true);
+    const DeIdElement(0x00080032, 'AcquisitionTime', VR.kTM, VM.k1, true);
   static const kContentTime =
-    const DeIdElement(0x00080033, "ContentTime", VR.kTM, VM.k1, true);
+    const DeIdElement(0x00080033, 'ContentTime', VR.kTM, VM.k1, true);
   static const kOverlayTime =
-    const DeIdElement(0x00080034, "OverlayTime", VR.kTM, VM.k1, true);
+    const DeIdElement(0x00080034, 'OverlayTime', VR.kTM, VM.k1, true);
   static const kCurveTime =
-    const DeIdElement(0x00080035, "CurveTime", VR.kTM, VM.k1, true);
+    const DeIdElement(0x00080035, 'CurveTime', VR.kTM, VM.k1, true);
   static const kAccessionNumber =
-    const DeIdElement(0x00080050, "AccessionNumber", VR.kSH, VM.k1, true);
+    const DeIdElement(0x00080050, 'AccessionNumber', VR.kSH, VM.k1, true);
   static const kFailedSOPInstanceUIDList =
-    const DeIdElement(0x00080058, "FailedSOPInstanceUIDList", VR.kUI, VM.k1_n, false);
+    const DeIdElement(0x00080058, 'FailedSOPInstanceUIDList', VR.kUI, VM.k1_n, false);
   static const kInstitutionName =
-    const DeIdElement(0x00080080, "InstitutionName", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00080080, 'InstitutionName', VR.kLO, VM.k1, true);
   static const kInstitutionAddress =
-    const DeIdElement(0x00080081, "InstitutionAddress", VR.kST, VM.k1, true);
+    const DeIdElement(0x00080081, 'InstitutionAddress', VR.kST, VM.k1, true);
   static const kInstitutionCodeSequence =
-    const DeIdElement(0x00080082, "InstitutionCodeSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00080082, 'InstitutionCodeSequence', VR.kSQ, VM.k1, true);
   static const kReferringPhysicianName =
-    const DeIdElement(0x00080090, "ReferringPhysicianName", VR.kPN, VM.k1, true);
+    const DeIdElement(0x00080090, 'ReferringPhysicianName', VR.kPN, VM.k1, true);
   static const kReferringPhysicianAddress =
-    const DeIdElement(0x00080092, "ReferringPhysicianAddress", VR.kST, VM.k1, true);
+    const DeIdElement(0x00080092, 'ReferringPhysicianAddress', VR.kST, VM.k1, true);
   static const kReferringPhysicianTelephoneNumbers =
-    const DeIdElement(0x00080094, "ReferringPhysicianTelephoneNumbers", VR.kSH, VM.k1_n, false);
+    const DeIdElement(0x00080094, 'ReferringPhysicianTelephoneNumbers', VR.kSH, VM.k1_n, false);
   static const kReferringPhysicianIdentificationSequence =
-    const DeIdElement(0x00080096, "ReferringPhysicianIdentificationSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00080096, 'ReferringPhysicianIdentificationSequence', VR.kSQ, VM.k1, true);
   static const kContextGroupExtensionCreatorUID =
-    const DeIdElement(0x0008010d, "ContextGroupExtensionCreatorUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x0008010d, 'ContextGroupExtensionCreatorUID', VR.kUI, VM.k1, true);
   static const kTimezoneOffsetFromUTC =
-    const DeIdElement(0x00080201, "TimezoneOffsetFromUTC", VR.kSH, VM.k1, true);
+    const DeIdElement(0x00080201, 'TimezoneOffsetFromUTC', VR.kSH, VM.k1, true);
   static const kStationName =
-    const DeIdElement(0x00081010, "StationName", VR.kSH, VM.k1, true);
+    const DeIdElement(0x00081010, 'StationName', VR.kSH, VM.k1, true);
   static const kStudyDescription =
-    const DeIdElement(0x00081030, "StudyDescription", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00081030, 'StudyDescription', VR.kLO, VM.k1, true);
   static const kSeriesDescription =
-    const DeIdElement(0x0008103e, "SeriesDescription", VR.kLO, VM.k1, true);
+    const DeIdElement(0x0008103e, 'SeriesDescription', VR.kLO, VM.k1, true);
   static const kInstitutionalDepartmentName =
-    const DeIdElement(0x00081040, "InstitutionalDepartmentName", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00081040, 'InstitutionalDepartmentName', VR.kLO, VM.k1, true);
   static const kPhysiciansOfRecord =
-    const DeIdElement(0x00081048, "PhysiciansOfRecord", VR.kPN, VM.k1_n, false);
+    const DeIdElement(0x00081048, 'PhysiciansOfRecord', VR.kPN, VM.k1_n, false);
   static const kPhysiciansOfRecordIdentificationSequence =
-    const DeIdElement(0x00081049, "PhysiciansOfRecordIdentificationSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00081049, 'PhysiciansOfRecordIdentificationSequence', VR.kSQ, VM.k1, true);
   static const kPerformingPhysicianName =
-    const DeIdElement(0x00081050, "PerformingPhysicianName", VR.kPN, VM.k1_n, false);
+    const DeIdElement(0x00081050, 'PerformingPhysicianName', VR.kPN, VM.k1_n, false);
   static const kPerformingPhysicianIdentificationSequence =
-    const DeIdElement(0x00081052, "PerformingPhysicianIdentificationSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00081052, 'PerformingPhysicianIdentificationSequence', VR.kSQ, VM.k1, true);
   static const kNameOfPhysiciansReadingStudy =
-    const DeIdElement(0x00081060, "NameOfPhysiciansReadingStudy", VR.kPN, VM.k1_n, false);
+    const DeIdElement(0x00081060, 'NameOfPhysiciansReadingStudy', VR.kPN, VM.k1_n, false);
   static const kPhysiciansReadingStudyIdentificationSequence =
-    const DeIdElement(0x00081062, "PhysiciansReadingStudyIdentificationSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00081062, 'PhysiciansReadingStudyIdentificationSequence', VR.kSQ, VM.k1, true);
   static const kOperatorsName =
-    const DeIdElement(0x00081070, "OperatorsName", VR.kPN, VM.k1_n, false);
+    const DeIdElement(0x00081070, 'OperatorsName', VR.kPN, VM.k1_n, false);
   static const kOperatorIdentificationSequence =
-    const DeIdElement(0x00081072, "OperatorIdentificationSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00081072, 'OperatorIdentificationSequence', VR.kSQ, VM.k1, true);
   static const kAdmittingDiagnosesDescription =
-    const DeIdElement(0x00081080, "AdmittingDiagnosesDescription", VR.kLO, VM.k1_n, false);
+    const DeIdElement(0x00081080, 'AdmittingDiagnosesDescription', VR.kLO, VM.k1_n, false);
   static const kAdmittingDiagnosesCodeSequence =
-    const DeIdElement(0x00081084, "AdmittingDiagnosesCodeSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00081084, 'AdmittingDiagnosesCodeSequence', VR.kSQ, VM.k1, true);
   static const kReferencedStudySequence =
-    const DeIdElement(0x00081110, "ReferencedStudySequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00081110, 'ReferencedStudySequence', VR.kSQ, VM.k1, true);
   static const kReferencedPerformedProcedureStepSequence =
-    const DeIdElement(0x00081111, "ReferencedPerformedProcedureStepSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00081111, 'ReferencedPerformedProcedureStepSequence', VR.kSQ, VM.k1, true);
   static const kReferencedPatientSequence =
-    const DeIdElement(0x00081120, "ReferencedPatientSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00081120, 'ReferencedPatientSequence', VR.kSQ, VM.k1, true);
   static const kReferencedImageSequence =
-    const DeIdElement(0x00081140, "ReferencedImageSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00081140, 'ReferencedImageSequence', VR.kSQ, VM.k1, true);
   static const kReferencedSOPInstanceUID =
-    const DeIdElement(0x00081155, "ReferencedSOPInstanceUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x00081155, 'ReferencedSOPInstanceUID', VR.kUI, VM.k1, true);
   static const kTransactionUID =
-    const DeIdElement(0x00081195, "TransactionUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x00081195, 'TransactionUID', VR.kUI, VM.k1, true);
   static const kDerivationDescription =
-    const DeIdElement(0x00082111, "DerivationDescription", VR.kST, VM.k1, true);
+    const DeIdElement(0x00082111, 'DerivationDescription', VR.kST, VM.k1, true);
   static const kSourceImageSequence =
-    const DeIdElement(0x00082112, "SourceImageSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00082112, 'SourceImageSequence', VR.kSQ, VM.k1, true);
   static const kIrradiationEventUID =
-    const DeIdElement(0x00083010, "IrradiationEventUID", VR.kUI, VM.k1_n, false);
+    const DeIdElement(0x00083010, 'IrradiationEventUID', VR.kUI, VM.k1_n, false);
   static const kIdentifyingComments =
-    const DeIdElement(0x00084000, "IdentifyingComments", VR.kLT, VM.k1, true);
+    const DeIdElement(0x00084000, 'IdentifyingComments', VR.kLT, VM.k1, true);
   static const kCreatorVersionUID =
-    const DeIdElement(0x00089123, "CreatorVersionUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x00089123, 'CreatorVersionUID', VR.kUI, VM.k1, true);
   static const kPatientName =
-    const DeIdElement(0x00100010, "PatientName", VR.kPN, VM.k1, true);
+    const DeIdElement(0x00100010, 'PatientName', VR.kPN, VM.k1, true);
   static const kPatientID =
-    const DeIdElement(0x00100020, "PatientID", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00100020, 'PatientID', VR.kLO, VM.k1, true);
   static const kIssuerOfPatientID =
-    const DeIdElement(0x00100021, "IssuerOfPatientID", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00100021, 'IssuerOfPatientID', VR.kLO, VM.k1, true);
   static const kPatientBirthDate =
-    const DeIdElement(0x00100030, "PatientBirthDate", VR.kDA, VM.k1, true);
+    const DeIdElement(0x00100030, 'PatientBirthDate', VR.kDA, VM.k1, true);
   static const kPatientBirthTime =
-    const DeIdElement(0x00100032, "PatientBirthTime", VR.kTM, VM.k1, true);
+    const DeIdElement(0x00100032, 'PatientBirthTime', VR.kTM, VM.k1, true);
   static const kPatientSex =
-    const DeIdElement(0x00100040, "PatientSex", VR.kCS, VM.k1, true);
+    const DeIdElement(0x00100040, 'PatientSex', VR.kCS, VM.k1, true);
   static const kPatientInsurancePlanCodeSequence =
-    const DeIdElement(0x00100050, "PatientInsurancePlanCodeSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00100050, 'PatientInsurancePlanCodeSequence', VR.kSQ, VM.k1, true);
   static const kPatientPrimaryLanguageCodeSequence =
-    const DeIdElement(0x00100101, "PatientPrimaryLanguageCodeSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00100101, 'PatientPrimaryLanguageCodeSequence', VR.kSQ, VM.k1, true);
   static const kPatientPrimaryLanguageModifierCodeSequence =
-    const DeIdElement(0x00100102, "PatientPrimaryLanguageModifierCodeSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00100102, 'PatientPrimaryLanguageModifierCodeSequence', VR.kSQ, VM.k1, true);
   static const kOtherPatientIDs =
-    const DeIdElement(0x00101000, "OtherPatientIDs", VR.kLO, VM.k1_n, false);
+    const DeIdElement(0x00101000, 'OtherPatientIDs', VR.kLO, VM.k1_n, false);
   static const kOtherPatientNames =
-    const DeIdElement(0x00101001, "OtherPatientNames", VR.kPN, VM.k1_n, false);
+    const DeIdElement(0x00101001, 'OtherPatientNames', VR.kPN, VM.k1_n, false);
   static const kOtherPatientIDsSequence =
-    const DeIdElement(0x00101002, "OtherPatientIDsSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00101002, 'OtherPatientIDsSequence', VR.kSQ, VM.k1, true);
   static const kPatientBirthName =
-    const DeIdElement(0x00101005, "PatientBirthName", VR.kPN, VM.k1, true);
+    const DeIdElement(0x00101005, 'PatientBirthName', VR.kPN, VM.k1, true);
   static const kPatientAge =
-    const DeIdElement(0x00101010, "PatientAge", VR.kAS, VM.k1, true);
+    const DeIdElement(0x00101010, 'PatientAge', VR.kAS, VM.k1, true);
   static const kPatientSize =
-    const DeIdElement(0x00101020, "PatientSize", VR.kDS, VM.k1, true);
+    const DeIdElement(0x00101020, 'PatientSize', VR.kDS, VM.k1, true);
   static const kPatientWeight =
-    const DeIdElement(0x00101030, "PatientWeight", VR.kDS, VM.k1, true);
+    const DeIdElement(0x00101030, 'PatientWeight', VR.kDS, VM.k1, true);
   static const kPatientAddress =
-    const DeIdElement(0x00101040, "PatientAddress", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00101040, 'PatientAddress', VR.kLO, VM.k1, true);
   static const kInsurancePlanIdentification =
-    const DeIdElement(0x00101050, "InsurancePlanIdentification", VR.kLO, VM.k1_n, false);
+    const DeIdElement(0x00101050, 'InsurancePlanIdentification', VR.kLO, VM.k1_n, false);
   static const kPatientMotherBirthName =
-    const DeIdElement(0x00101060, "PatientMotherBirthName", VR.kPN, VM.k1, true);
+    const DeIdElement(0x00101060, 'PatientMotherBirthName', VR.kPN, VM.k1, true);
   static const kMilitaryRank =
-    const DeIdElement(0x00101080, "MilitaryRank", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00101080, 'MilitaryRank', VR.kLO, VM.k1, true);
   static const kBranchOfService =
-    const DeIdElement(0x00101081, "BranchOfService", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00101081, 'BranchOfService', VR.kLO, VM.k1, true);
   static const kMedicalRecordLocator =
-    const DeIdElement(0x00101090, "MedicalRecordLocator", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00101090, 'MedicalRecordLocator', VR.kLO, VM.k1, true);
   static const kReferencedPatientPhotoSequence =
-    const DeIdElement(0x00101100, "ReferencedPatientPhotoSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00101100, 'ReferencedPatientPhotoSequence', VR.kSQ, VM.k1, true);
   static const kMedicalAlerts =
-    const DeIdElement(0x00102000, "MedicalAlerts", VR.kLO, VM.k1_n, false);
+    const DeIdElement(0x00102000, 'MedicalAlerts', VR.kLO, VM.k1_n, false);
   static const kAllergies =
-    const DeIdElement(0x00102110, "Allergies", VR.kLO, VM.k1_n, false);
+    const DeIdElement(0x00102110, 'Allergies', VR.kLO, VM.k1_n, false);
   static const kCountryOfResidence =
-    const DeIdElement(0x00102150, "CountryOfResidence", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00102150, 'CountryOfResidence', VR.kLO, VM.k1, true);
   static const kRegionOfResidence =
-    const DeIdElement(0x00102152, "RegionOfResidence", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00102152, 'RegionOfResidence', VR.kLO, VM.k1, true);
   static const kPatientTelephoneNumbers =
-    const DeIdElement(0x00102154, "PatientTelephoneNumbers", VR.kSH, VM.k1_n, false);
+    const DeIdElement(0x00102154, 'PatientTelephoneNumbers', VR.kSH, VM.k1_n, false);
   static const kEthnicGroup =
-    const DeIdElement(0x00102160, "EthnicGroup", VR.kSH, VM.k1, true);
+    const DeIdElement(0x00102160, 'EthnicGroup', VR.kSH, VM.k1, true);
   static const kOccupation =
-    const DeIdElement(0x00102180, "Occupation", VR.kSH, VM.k1, true);
+    const DeIdElement(0x00102180, 'Occupation', VR.kSH, VM.k1, true);
   static const kSmokingStatus =
-    const DeIdElement(0x001021a0, "SmokingStatus", VR.kCS, VM.k1, true);
+    const DeIdElement(0x001021a0, 'SmokingStatus', VR.kCS, VM.k1, true);
   static const kAdditionalPatientHistory =
-    const DeIdElement(0x001021b0, "AdditionalPatientHistory", VR.kLT, VM.k1, true);
+    const DeIdElement(0x001021b0, 'AdditionalPatientHistory', VR.kLT, VM.k1, true);
   static const kPregnancyStatus =
-    const DeIdElement(0x001021c0, "PregnancyStatus", VR.kUS, VM.k1, true);
+    const DeIdElement(0x001021c0, 'PregnancyStatus', VR.kUS, VM.k1, true);
   static const kLastMenstrualDate =
-    const DeIdElement(0x001021d0, "LastMenstrualDate", VR.kDA, VM.k1, true);
+    const DeIdElement(0x001021d0, 'LastMenstrualDate', VR.kDA, VM.k1, true);
   static const kPatientReligiousPreference =
-    const DeIdElement(0x001021f0, "PatientReligiousPreference", VR.kLO, VM.k1, true);
+    const DeIdElement(0x001021f0, 'PatientReligiousPreference', VR.kLO, VM.k1, true);
   static const kPatientSexNeutered =
-    const DeIdElement(0x00102203, "PatientSexNeutered", VR.kCS, VM.k1, true);
+    const DeIdElement(0x00102203, 'PatientSexNeutered', VR.kCS, VM.k1, true);
   static const kResponsiblePerson =
-    const DeIdElement(0x00102297, "ResponsiblePerson", VR.kPN, VM.k1, true);
+    const DeIdElement(0x00102297, 'ResponsiblePerson', VR.kPN, VM.k1, true);
   static const kResponsibleOrganization =
-    const DeIdElement(0x00102299, "ResponsibleOrganization", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00102299, 'ResponsibleOrganization', VR.kLO, VM.k1, true);
   static const kPatientComments =
-    const DeIdElement(0x00104000, "PatientComments", VR.kLT, VM.k1, true);
+    const DeIdElement(0x00104000, 'PatientComments', VR.kLT, VM.k1, true);
   static const kContrastBolusAgent =
-    const DeIdElement(0x00180010, "ContrastBolusAgent", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00180010, 'ContrastBolusAgent', VR.kLO, VM.k1, true);
   static const kDeviceSerialNumber =
-    const DeIdElement(0x00181000, "DeviceSerialNumber", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00181000, 'DeviceSerialNumber', VR.kLO, VM.k1, true);
   static const kDeviceUID =
-    const DeIdElement(0x00181002, "DeviceUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x00181002, 'DeviceUID', VR.kUI, VM.k1, true);
   static const kPlateID =
-    const DeIdElement(0x00181004, "PlateID", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00181004, 'PlateID', VR.kLO, VM.k1, true);
   static const kGeneratorID =
-    const DeIdElement(0x00181005, "GeneratorID", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00181005, 'GeneratorID', VR.kLO, VM.k1, true);
   static const kCassetteID =
-    const DeIdElement(0x00181007, "CassetteID", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00181007, 'CassetteID', VR.kLO, VM.k1, true);
   static const kGantryID =
-    const DeIdElement(0x00181008, "GantryID", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00181008, 'GantryID', VR.kLO, VM.k1, true);
   static const kProtocolName =
-    const DeIdElement(0x00181030, "ProtocolName", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00181030, 'ProtocolName', VR.kLO, VM.k1, true);
   static const kAcquisitionDeviceProcessingDescription =
-    const DeIdElement(0x00181400, "AcquisitionDeviceProcessingDescription", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00181400, 'AcquisitionDeviceProcessingDescription', VR.kLO, VM.k1, true);
   static const kTargetUID =
-    const DeIdElement(0x00182042, "TargetUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x00182042, 'TargetUID', VR.kUI, VM.k1, true);
   static const kAcquisitionComments =
-    const DeIdElement(0x00184000, "AcquisitionComments", VR.kLT, VM.k1, true);
+    const DeIdElement(0x00184000, 'AcquisitionComments', VR.kLT, VM.k1, true);
   static const kDetectorID =
-    const DeIdElement(0x0018700a, "DetectorID", VR.kSH, VM.k1, true);
+    const DeIdElement(0x0018700a, 'DetectorID', VR.kSH, VM.k1, true);
   static const kAcquisitionProtocolDescription =
-    const DeIdElement(0x00189424, "AcquisitionProtocolDescription", VR.kLT, VM.k1, true);
+    const DeIdElement(0x00189424, 'AcquisitionProtocolDescription', VR.kLT, VM.k1, true);
   static const kStartAcquisitionDateTime =
-    const DeIdElement(0x00189516, "StartAcquisitionDateTime", VR.kDT, VM.k1, true);
+    const DeIdElement(0x00189516, 'StartAcquisitionDateTime', VR.kDT, VM.k1, true);
   static const kEndAcquisitionDateTime =
-    const DeIdElement(0x00189517, "EndAcquisitionDateTime", VR.kDT, VM.k1, true);
+    const DeIdElement(0x00189517, 'EndAcquisitionDateTime', VR.kDT, VM.k1, true);
   static const kContributionDescription =
-    const DeIdElement(0x0018a003, "ContributionDescription", VR.kST, VM.k1, true);
+    const DeIdElement(0x0018a003, 'ContributionDescription', VR.kST, VM.k1, true);
   static const kStudyInstanceUID =
-    const DeIdElement(0x0020000d, "StudyInstanceUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x0020000d, 'StudyInstanceUID', VR.kUI, VM.k1, true);
   static const kSeriesInstanceUID =
-    const DeIdElement(0x0020000e, "SeriesInstanceUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x0020000e, 'SeriesInstanceUID', VR.kUI, VM.k1, true);
   static const kStudyID =
-    const DeIdElement(0x00200010, "StudyID", VR.kSH, VM.k1, true);
+    const DeIdElement(0x00200010, 'StudyID', VR.kSH, VM.k1, true);
   static const kFrameOfReferenceUID =
-    const DeIdElement(0x00200052, "FrameOfReferenceUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x00200052, 'FrameOfReferenceUID', VR.kUI, VM.k1, true);
   static const kSynchronizationFrameOfReferenceUID =
-    const DeIdElement(0x00200200, "SynchronizationFrameOfReferenceUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x00200200, 'SynchronizationFrameOfReferenceUID', VR.kUI, VM.k1, true);
   static const kModifyingDeviceID =
-    const DeIdElement(0x00203401, "ModifyingDeviceID", VR.kCS, VM.k1, true);
+    const DeIdElement(0x00203401, 'ModifyingDeviceID', VR.kCS, VM.k1, true);
   static const kModifyingDeviceManufacturer =
-    const DeIdElement(0x00203404, "ModifyingDeviceManufacturer", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00203404, 'ModifyingDeviceManufacturer', VR.kLO, VM.k1, true);
   static const kModifiedImageDescription =
-    const DeIdElement(0x00203406, "ModifiedImageDescription", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00203406, 'ModifiedImageDescription', VR.kLO, VM.k1, true);
   static const kImageComments =
-    const DeIdElement(0x00204000, "ImageComments", VR.kLT, VM.k1, true);
+    const DeIdElement(0x00204000, 'ImageComments', VR.kLT, VM.k1, true);
   static const kFrameComments =
-    const DeIdElement(0x00209158, "FrameComments", VR.kLT, VM.k1, true);
+    const DeIdElement(0x00209158, 'FrameComments', VR.kLT, VM.k1, true);
   static const kConcatenationUID =
-    const DeIdElement(0x00209161, "ConcatenationUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x00209161, 'ConcatenationUID', VR.kUI, VM.k1, true);
   static const kDimensionOrganizationUID =
-    const DeIdElement(0x00209164, "DimensionOrganizationUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x00209164, 'DimensionOrganizationUID', VR.kUI, VM.k1, true);
   static const kPaletteColorLookupTableUID =
-    const DeIdElement(0x00281199, "PaletteColorLookupTableUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x00281199, 'PaletteColorLookupTableUID', VR.kUI, VM.k1, true);
   static const kLargePaletteColorLookupTableUID =
-    const DeIdElement(0x00281214, "LargePaletteColorLookupTableUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x00281214, 'LargePaletteColorLookupTableUID', VR.kUI, VM.k1, true);
   static const kImagePresentationComments =
-    const DeIdElement(0x00284000, "ImagePresentationComments", VR.kLT, VM.k1, true);
+    const DeIdElement(0x00284000, 'ImagePresentationComments', VR.kLT, VM.k1, true);
   static const kStudyIDIssuer =
-    const DeIdElement(0x00320012, "StudyIDIssuer", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00320012, 'StudyIDIssuer', VR.kLO, VM.k1, true);
   static const kScheduledStudyLocation =
-    const DeIdElement(0x00321020, "ScheduledStudyLocation", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00321020, 'ScheduledStudyLocation', VR.kLO, VM.k1, true);
   static const kScheduledStudyLocationAETitle =
-    const DeIdElement(0x00321021, "ScheduledStudyLocationAETitle", VR.kAE, VM.k1_n, false);
+    const DeIdElement(0x00321021, 'ScheduledStudyLocationAETitle', VR.kAE, VM.k1_n, false);
   static const kReasonForStudy =
-    const DeIdElement(0x00321030, "ReasonForStudy", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00321030, 'ReasonForStudy', VR.kLO, VM.k1, true);
   static const kRequestingPhysician =
-    const DeIdElement(0x00321032, "RequestingPhysician", VR.kPN, VM.k1, true);
+    const DeIdElement(0x00321032, 'RequestingPhysician', VR.kPN, VM.k1, true);
   static const kRequestingService =
-    const DeIdElement(0x00321033, "RequestingService", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00321033, 'RequestingService', VR.kLO, VM.k1, true);
   static const kRequestedProcedureDescription =
-    const DeIdElement(0x00321060, "RequestedProcedureDescription", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00321060, 'RequestedProcedureDescription', VR.kLO, VM.k1, true);
   static const kRequestedContrastAgent =
-    const DeIdElement(0x00321070, "RequestedContrastAgent", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00321070, 'RequestedContrastAgent', VR.kLO, VM.k1, true);
   static const kStudyComments =
-    const DeIdElement(0x00324000, "StudyComments", VR.kLT, VM.k1, true);
+    const DeIdElement(0x00324000, 'StudyComments', VR.kLT, VM.k1, true);
   static const kReferencedPatientAliasSequence =
-    const DeIdElement(0x00380004, "ReferencedPatientAliasSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00380004, 'ReferencedPatientAliasSequence', VR.kSQ, VM.k1, true);
   static const kAdmissionID =
-    const DeIdElement(0x00380010, "AdmissionID", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00380010, 'AdmissionID', VR.kLO, VM.k1, true);
   static const kIssuerOfAdmissionID =
-    const DeIdElement(0x00380011, "IssuerOfAdmissionID", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00380011, 'IssuerOfAdmissionID', VR.kLO, VM.k1, true);
   static const kScheduledPatientInstitutionResidence =
-    const DeIdElement(0x0038001e, "ScheduledPatientInstitutionResidence", VR.kLO, VM.k1, true);
+    const DeIdElement(0x0038001e, 'ScheduledPatientInstitutionResidence', VR.kLO, VM.k1, true);
   static const kAdmittingDate =
-    const DeIdElement(0x00380020, "AdmittingDate", VR.kDA, VM.k1, true);
+    const DeIdElement(0x00380020, 'AdmittingDate', VR.kDA, VM.k1, true);
   static const kAdmittingTime =
-    const DeIdElement(0x00380021, "AdmittingTime", VR.kTM, VM.k1, true);
+    const DeIdElement(0x00380021, 'AdmittingTime', VR.kTM, VM.k1, true);
   static const kDischargeDiagnosisDescription =
-    const DeIdElement(0x00380040, "DischargeDiagnosisDescription", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00380040, 'DischargeDiagnosisDescription', VR.kLO, VM.k1, true);
   static const kSpecialNeeds =
-    const DeIdElement(0x00380050, "SpecialNeeds", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00380050, 'SpecialNeeds', VR.kLO, VM.k1, true);
   static const kServiceEpisodeID =
-    const DeIdElement(0x00380060, "ServiceEpisodeID", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00380060, 'ServiceEpisodeID', VR.kLO, VM.k1, true);
   static const kIssuerOfServiceEpisodeID =
-    const DeIdElement(0x00380061, "IssuerOfServiceEpisodeID", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00380061, 'IssuerOfServiceEpisodeID', VR.kLO, VM.k1, true);
   static const kServiceEpisodeDescription =
-    const DeIdElement(0x00380062, "ServiceEpisodeDescription", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00380062, 'ServiceEpisodeDescription', VR.kLO, VM.k1, true);
   static const kCurrentPatientLocation =
-    const DeIdElement(0x00380300, "CurrentPatientLocation", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00380300, 'CurrentPatientLocation', VR.kLO, VM.k1, true);
   static const kPatientInstitutionResidence =
-    const DeIdElement(0x00380400, "PatientInstitutionResidence", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00380400, 'PatientInstitutionResidence', VR.kLO, VM.k1, true);
   static const kPatientState =
-    const DeIdElement(0x00380500, "PatientState", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00380500, 'PatientState', VR.kLO, VM.k1, true);
   static const kVisitComments =
-    const DeIdElement(0x00384000, "VisitComments", VR.kLT, VM.k1, true);
+    const DeIdElement(0x00384000, 'VisitComments', VR.kLT, VM.k1, true);
   static const kScheduledStationAETitle =
-    const DeIdElement(0x00400001, "ScheduledStationAETitle", VR.kAE, VM.k1_n, false);
+    const DeIdElement(0x00400001, 'ScheduledStationAETitle', VR.kAE, VM.k1_n, false);
   static const kScheduledProcedureStepStartDate =
-    const DeIdElement(0x00400002, "ScheduledProcedureStepStartDate", VR.kDA, VM.k1, true);
+    const DeIdElement(0x00400002, 'ScheduledProcedureStepStartDate', VR.kDA, VM.k1, true);
   static const kScheduledProcedureStepStartTime =
-    const DeIdElement(0x00400003, "ScheduledProcedureStepStartTime", VR.kTM, VM.k1, true);
+    const DeIdElement(0x00400003, 'ScheduledProcedureStepStartTime', VR.kTM, VM.k1, true);
   static const kScheduledProcedureStepEndDate =
-    const DeIdElement(0x00400004, "ScheduledProcedureStepEndDate", VR.kDA, VM.k1, true);
+    const DeIdElement(0x00400004, 'ScheduledProcedureStepEndDate', VR.kDA, VM.k1, true);
   static const kScheduledProcedureStepEndTime =
-    const DeIdElement(0x00400005, "ScheduledProcedureStepEndTime", VR.kTM, VM.k1, true);
+    const DeIdElement(0x00400005, 'ScheduledProcedureStepEndTime', VR.kTM, VM.k1, true);
   static const kScheduledPerformingPhysicianName =
-    const DeIdElement(0x00400006, "ScheduledPerformingPhysicianName", VR.kPN, VM.k1, true);
+    const DeIdElement(0x00400006, 'ScheduledPerformingPhysicianName', VR.kPN, VM.k1, true);
   static const kScheduledProcedureStepDescription =
-    const DeIdElement(0x00400007, "ScheduledProcedureStepDescription", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00400007, 'ScheduledProcedureStepDescription', VR.kLO, VM.k1, true);
   static const kScheduledPerformingPhysicianIdentificationSequence =
-    const DeIdElement(0x0040000b, "ScheduledPerformingPhysicianIdentificationSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x0040000b, 'ScheduledPerformingPhysicianIdentificationSequence', VR.kSQ, VM.k1, true);
   static const kScheduledStationName =
-    const DeIdElement(0x00400010, "ScheduledStationName", VR.kSH, VM.k1_n, false);
+    const DeIdElement(0x00400010, 'ScheduledStationName', VR.kSH, VM.k1_n, false);
   static const kScheduledProcedureStepLocation =
-    const DeIdElement(0x00400011, "ScheduledProcedureStepLocation", VR.kSH, VM.k1, true);
+    const DeIdElement(0x00400011, 'ScheduledProcedureStepLocation', VR.kSH, VM.k1, true);
   static const kPreMedication =
-    const DeIdElement(0x00400012, "PreMedication", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00400012, 'PreMedication', VR.kLO, VM.k1, true);
   static const kPerformedStationAETitle =
-    const DeIdElement(0x00400241, "PerformedStationAETitle", VR.kAE, VM.k1, true);
+    const DeIdElement(0x00400241, 'PerformedStationAETitle', VR.kAE, VM.k1, true);
   static const kPerformedStationName =
-    const DeIdElement(0x00400242, "PerformedStationName", VR.kSH, VM.k1, true);
+    const DeIdElement(0x00400242, 'PerformedStationName', VR.kSH, VM.k1, true);
   static const kPerformedLocation =
-    const DeIdElement(0x00400243, "PerformedLocation", VR.kSH, VM.k1, true);
+    const DeIdElement(0x00400243, 'PerformedLocation', VR.kSH, VM.k1, true);
   static const kPerformedProcedureStepStartDate =
-    const DeIdElement(0x00400244, "PerformedProcedureStepStartDate", VR.kDA, VM.k1, true);
+    const DeIdElement(0x00400244, 'PerformedProcedureStepStartDate', VR.kDA, VM.k1, true);
   static const kPerformedProcedureStepStartTime =
-    const DeIdElement(0x00400245, "PerformedProcedureStepStartTime", VR.kTM, VM.k1, true);
+    const DeIdElement(0x00400245, 'PerformedProcedureStepStartTime', VR.kTM, VM.k1, true);
   static const kPerformedProcedureStepEndDate =
-    const DeIdElement(0x00400250, "PerformedProcedureStepEndDate", VR.kDA, VM.k1, true);
+    const DeIdElement(0x00400250, 'PerformedProcedureStepEndDate', VR.kDA, VM.k1, true);
   static const kPerformedProcedureStepEndTime =
-    const DeIdElement(0x00400251, "PerformedProcedureStepEndTime", VR.kTM, VM.k1, true);
+    const DeIdElement(0x00400251, 'PerformedProcedureStepEndTime', VR.kTM, VM.k1, true);
   static const kPerformedProcedureStepID =
-    const DeIdElement(0x00400253, "PerformedProcedureStepID", VR.kSH, VM.k1, true);
+    const DeIdElement(0x00400253, 'PerformedProcedureStepID', VR.kSH, VM.k1, true);
   static const kPerformedProcedureStepDescription =
-    const DeIdElement(0x00400254, "PerformedProcedureStepDescription", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00400254, 'PerformedProcedureStepDescription', VR.kLO, VM.k1, true);
   static const kRequestAttributesSequence =
-    const DeIdElement(0x00400275, "RequestAttributesSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00400275, 'RequestAttributesSequence', VR.kSQ, VM.k1, true);
   static const kCommentsOnThePerformedProcedureStep =
-    const DeIdElement(0x00400280, "CommentsOnThePerformedProcedureStep", VR.kST, VM.k1, true);
+    const DeIdElement(0x00400280, 'CommentsOnThePerformedProcedureStep', VR.kST, VM.k1, true);
   static const kAcquisitionContextSequence =
-    const DeIdElement(0x00400555, "AcquisitionContextSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00400555, 'AcquisitionContextSequence', VR.kSQ, VM.k1, true);
   static const kRequestedProcedureID =
-    const DeIdElement(0x00401001, "RequestedProcedureID", VR.kSH, VM.k1, true);
+    const DeIdElement(0x00401001, 'RequestedProcedureID', VR.kSH, VM.k1, true);
   static const kPatientTransportArrangements =
-    const DeIdElement(0x00401004, "PatientTransportArrangements", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00401004, 'PatientTransportArrangements', VR.kLO, VM.k1, true);
   static const kRequestedProcedureLocation =
-    const DeIdElement(0x00401005, "RequestedProcedureLocation", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00401005, 'RequestedProcedureLocation', VR.kLO, VM.k1, true);
   static const kNamesOfIntendedRecipientsOfResults =
-    const DeIdElement(0x00401010, "NamesOfIntendedRecipientsOfResults", VR.kPN, VM.k1_n, false);
+    const DeIdElement(0x00401010, 'NamesOfIntendedRecipientsOfResults', VR.kPN, VM.k1_n, false);
   static const kIntendedRecipientsOfResultsIdentificationSequence =
-    const DeIdElement(0x00401011, "IntendedRecipientsOfResultsIdentificationSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00401011, 'IntendedRecipientsOfResultsIdentificationSequence', VR.kSQ, VM.k1, true);
   static const kPersonIdentificationCodeSequence =
-    const DeIdElement(0x00401101, "PersonIdentificationCodeSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00401101, 'PersonIdentificationCodeSequence', VR.kSQ, VM.k1, true);
   static const kPersonAddress =
-    const DeIdElement(0x00401102, "PersonAddress", VR.kST, VM.k1, true);
+    const DeIdElement(0x00401102, 'PersonAddress', VR.kST, VM.k1, true);
   static const kPersonTelephoneNumbers =
-    const DeIdElement(0x00401103, "PersonTelephoneNumbers", VR.kLO, VM.k1_n, false);
+    const DeIdElement(0x00401103, 'PersonTelephoneNumbers', VR.kLO, VM.k1_n, false);
   static const kRequestedProcedureComments =
-    const DeIdElement(0x00401400, "RequestedProcedureComments", VR.kLT, VM.k1, true);
+    const DeIdElement(0x00401400, 'RequestedProcedureComments', VR.kLT, VM.k1, true);
   static const kReasonForTheImagingServiceRequest =
-    const DeIdElement(0x00402001, "ReasonForTheImagingServiceRequest", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00402001, 'ReasonForTheImagingServiceRequest', VR.kLO, VM.k1, true);
   static const kOrderEnteredBy =
-    const DeIdElement(0x00402008, "OrderEnteredBy", VR.kPN, VM.k1, true);
+    const DeIdElement(0x00402008, 'OrderEnteredBy', VR.kPN, VM.k1, true);
   static const kOrderEntererLocation =
-    const DeIdElement(0x00402009, "OrderEntererLocation", VR.kSH, VM.k1, true);
+    const DeIdElement(0x00402009, 'OrderEntererLocation', VR.kSH, VM.k1, true);
   static const kOrderCallbackPhoneNumber =
-    const DeIdElement(0x00402010, "OrderCallbackPhoneNumber", VR.kSH, VM.k1, true);
+    const DeIdElement(0x00402010, 'OrderCallbackPhoneNumber', VR.kSH, VM.k1, true);
   static const kPlacerOrderNumberImagingServiceRequest =
-    const DeIdElement(0x00402016, "PlacerOrderNumberImagingServiceRequest", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00402016, 'PlacerOrderNumberImagingServiceRequest', VR.kLO, VM.k1, true);
   static const kFillerOrderNumberImagingServiceRequest =
-    const DeIdElement(0x00402017, "FillerOrderNumberImagingServiceRequest", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00402017, 'FillerOrderNumberImagingServiceRequest', VR.kLO, VM.k1, true);
   static const kImagingServiceRequestComments =
-    const DeIdElement(0x00402400, "ImagingServiceRequestComments", VR.kLT, VM.k1, true);
+    const DeIdElement(0x00402400, 'ImagingServiceRequestComments', VR.kLT, VM.k1, true);
   static const kConfidentialityConstraintOnPatientDataDescription =
-    const DeIdElement(0x00403001, "ConfidentialityConstraintOnPatientDataDescription", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00403001, 'ConfidentialityConstraintOnPatientDataDescription', VR.kLO, VM.k1, true);
   static const kScheduledProcedureStepStartDateTime =
-    const DeIdElement(0x00404005, "ScheduledProcedureStepStartDateTime", VR.kDT, VM.k1, true);
+    const DeIdElement(0x00404005, 'ScheduledProcedureStepStartDateTime', VR.kDT, VM.k1, true);
   static const kScheduledProcedureStepModificationDateTime =
-    const DeIdElement(0x00404010, "ScheduledProcedureStepModificationDateTime", VR.kDT, VM.k1, true);
+    const DeIdElement(0x00404010, 'ScheduledProcedureStepModificationDateTime', VR.kDT, VM.k1, true);
   static const kExpectedCompletionDateTime =
-    const DeIdElement(0x00404011, "ExpectedCompletionDateTime", VR.kDT, VM.k1, true);
+    const DeIdElement(0x00404011, 'ExpectedCompletionDateTime', VR.kDT, VM.k1, true);
   static const kReferencedGeneralPurposeScheduledProcedureStepTransactionUID =
-    const DeIdElement(0x00404023, "ReferencedGeneralPurposeScheduledProcedureStepTransactionUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x00404023, 'ReferencedGeneralPurposeScheduledProcedureStepTransactionUID', VR.kUI, VM.k1, true);
   static const kScheduledStationNameCodeSequence =
-    const DeIdElement(0x00404025, "ScheduledStationNameCodeSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00404025, 'ScheduledStationNameCodeSequence', VR.kSQ, VM.k1, true);
   static const kScheduledStationGeographicLocationCodeSequence =
-    const DeIdElement(0x00404027, "ScheduledStationGeographicLocationCodeSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00404027, 'ScheduledStationGeographicLocationCodeSequence', VR.kSQ, VM.k1, true);
   static const kPerformedStationNameCodeSequence =
-    const DeIdElement(0x00404028, "PerformedStationNameCodeSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00404028, 'PerformedStationNameCodeSequence', VR.kSQ, VM.k1, true);
   static const kPerformedStationGeographicLocationCodeSequence =
-    const DeIdElement(0x00404030, "PerformedStationGeographicLocationCodeSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00404030, 'PerformedStationGeographicLocationCodeSequence', VR.kSQ, VM.k1, true);
   static const kScheduledHumanPerformersSequence =
-    const DeIdElement(0x00404034, "ScheduledHumanPerformersSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00404034, 'ScheduledHumanPerformersSequence', VR.kSQ, VM.k1, true);
   static const kActualHumanPerformersSequence =
-    const DeIdElement(0x00404035, "ActualHumanPerformersSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00404035, 'ActualHumanPerformersSequence', VR.kSQ, VM.k1, true);
   static const kHumanPerformerOrganization =
-    const DeIdElement(0x00404036, "HumanPerformerOrganization", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00404036, 'HumanPerformerOrganization', VR.kLO, VM.k1, true);
   static const kHumanPerformerName =
-    const DeIdElement(0x00404037, "HumanPerformerName", VR.kPN, VM.k1, true);
+    const DeIdElement(0x00404037, 'HumanPerformerName', VR.kPN, VM.k1, true);
   static const kPerformedProcedureStepStartDateTime =
-    const DeIdElement(0x00404050, "PerformedProcedureStepStartDateTime", VR.kDT, VM.k1, true);
+    const DeIdElement(0x00404050, 'PerformedProcedureStepStartDateTime', VR.kDT, VM.k1, true);
   static const kPerformedProcedureStepEndDateTime =
-    const DeIdElement(0x00404051, "PerformedProcedureStepEndDateTime", VR.kDT, VM.k1, true);
+    const DeIdElement(0x00404051, 'PerformedProcedureStepEndDateTime', VR.kDT, VM.k1, true);
   static const kProcedureStepCancellationDateTime =
-    const DeIdElement(0x00404052, "ProcedureStepCancellationDateTime", VR.kDT, VM.k1, true);
+    const DeIdElement(0x00404052, 'ProcedureStepCancellationDateTime', VR.kDT, VM.k1, true);
   static const kVerifyingOrganization =
-    const DeIdElement(0x0040a027, "VerifyingOrganization", VR.kLO, VM.k1, true);
+    const DeIdElement(0x0040a027, 'VerifyingOrganization', VR.kLO, VM.k1, true);
   static const kVerifyingObserverSequence =
-    const DeIdElement(0x0040a073, "VerifyingObserverSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x0040a073, 'VerifyingObserverSequence', VR.kSQ, VM.k1, true);
   static const kVerifyingObserverName =
-    const DeIdElement(0x0040a075, "VerifyingObserverName", VR.kPN, VM.k1, true);
+    const DeIdElement(0x0040a075, 'VerifyingObserverName', VR.kPN, VM.k1, true);
   static const kAuthorObserverSequence =
-    const DeIdElement(0x0040a078, "AuthorObserverSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x0040a078, 'AuthorObserverSequence', VR.kSQ, VM.k1, true);
   static const kParticipantSequence =
-    const DeIdElement(0x0040a07a, "ParticipantSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x0040a07a, 'ParticipantSequence', VR.kSQ, VM.k1, true);
   static const kCustodialOrganizationSequence =
-    const DeIdElement(0x0040a07c, "CustodialOrganizationSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x0040a07c, 'CustodialOrganizationSequence', VR.kSQ, VM.k1, true);
   static const kVerifyingObserverIdentificationCodeSequence =
-    const DeIdElement(0x0040a088, "VerifyingObserverIdentificationCodeSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x0040a088, 'VerifyingObserverIdentificationCodeSequence', VR.kSQ, VM.k1, true);
   static const kPersonName =
-    const DeIdElement(0x0040a123, "PersonName", VR.kPN, VM.k1, true);
+    const DeIdElement(0x0040a123, 'PersonName', VR.kPN, VM.k1, true);
   static const kUID =
-    const DeIdElement(0x0040a124, "UID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x0040a124, 'UID', VR.kUI, VM.k1, true);
   static const kObservationUID =
-    const DeIdElement(0x0040a171, "ObservationUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x0040a171, 'ObservationUID', VR.kUI, VM.k1, true);
   static const kReferencedObservationUIDTrial =
-    const DeIdElement(0x0040a172, "ReferencedObservationUIDTrial", VR.kUI, VM.k1, true);
+    const DeIdElement(0x0040a172, 'ReferencedObservationUIDTrial', VR.kUI, VM.k1, true);
   static const kObservationDateTrial =
-    const DeIdElement(0x0040a192, "ObservationDateTrial", VR.kDA, VM.k1, true);
+    const DeIdElement(0x0040a192, 'ObservationDateTrial', VR.kDA, VM.k1, true);
   static const kObservationTimeTrial =
-    const DeIdElement(0x0040a193, "ObservationTimeTrial", VR.kTM, VM.k1, true);
+    const DeIdElement(0x0040a193, 'ObservationTimeTrial', VR.kTM, VM.k1, true);
   static const kCurrentObserverTrial =
-    const DeIdElement(0x0040a307, "CurrentObserverTrial", VR.kPN, VM.k1, true);
+    const DeIdElement(0x0040a307, 'CurrentObserverTrial', VR.kPN, VM.k1, true);
   static const kVerbalSourceTrial =
-    const DeIdElement(0x0040a352, "VerbalSourceTrial", VR.kPN, VM.k1, true);
+    const DeIdElement(0x0040a352, 'VerbalSourceTrial', VR.kPN, VM.k1, true);
   static const kAddressTrial =
-    const DeIdElement(0x0040a353, "AddressTrial", VR.kST, VM.k1, true);
+    const DeIdElement(0x0040a353, 'AddressTrial', VR.kST, VM.k1, true);
   static const kTelephoneNumberTrial =
-    const DeIdElement(0x0040a354, "TelephoneNumberTrial", VR.kLO, VM.k1, true);
+    const DeIdElement(0x0040a354, 'TelephoneNumberTrial', VR.kLO, VM.k1, true);
   static const kVerbalSourceIdentifierCodeSequenceTrial =
-    const DeIdElement(0x0040a358, "VerbalSourceIdentifierCodeSequenceTrial", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x0040a358, 'VerbalSourceIdentifierCodeSequenceTrial', VR.kSQ, VM.k1, true);
   static const kObservationSubjectUIDTrial =
-    const DeIdElement(0x0040a402, "ObservationSubjectUIDTrial", VR.kUI, VM.k1, true);
+    const DeIdElement(0x0040a402, 'ObservationSubjectUIDTrial', VR.kUI, VM.k1, true);
   static const kContentSequence =
-    const DeIdElement(0x0040a730, "ContentSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x0040a730, 'ContentSequence', VR.kSQ, VM.k1, true);
   static const kTemplateExtensionOrganizationUID =
-    const DeIdElement(0x0040db0c, "TemplateExtensionOrganizationUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x0040db0c, 'TemplateExtensionOrganizationUID', VR.kUI, VM.k1, true);
   static const kTemplateExtensionCreatorUID =
-    const DeIdElement(0x0040db0d, "TemplateExtensionCreatorUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x0040db0d, 'TemplateExtensionCreatorUID', VR.kUI, VM.k1, true);
   static const kGraphicAnnotationSequence =
-    const DeIdElement(0x00700001, "GraphicAnnotationSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00700001, 'GraphicAnnotationSequence', VR.kSQ, VM.k1, true);
   static const kContentCreatorName =
-    const DeIdElement(0x00700084, "ContentCreatorName", VR.kPN, VM.k1, true);
+    const DeIdElement(0x00700084, 'ContentCreatorName', VR.kPN, VM.k1, true);
   static const kContentCreatorIdentificationCodeSequence =
-    const DeIdElement(0x00700086, "ContentCreatorIdentificationCodeSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00700086, 'ContentCreatorIdentificationCodeSequence', VR.kSQ, VM.k1, true);
   static const kFiducialUID =
-    const DeIdElement(0x0070031a, "FiducialUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x0070031a, 'FiducialUID', VR.kUI, VM.k1, true);
   static const kStorageMediaFileSetUID =
-    const DeIdElement(0x00880140, "StorageMediaFileSetUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x00880140, 'StorageMediaFileSetUID', VR.kUI, VM.k1, true);
   static const kIconImageSequence =
-    const DeIdElement(0x00880200, "IconImageSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x00880200, 'IconImageSequence', VR.kSQ, VM.k1, true);
   static const kTopicTitle =
-    const DeIdElement(0x00880904, "TopicTitle", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00880904, 'TopicTitle', VR.kLO, VM.k1, true);
   static const kTopicSubject =
-    const DeIdElement(0x00880906, "TopicSubject", VR.kST, VM.k1, true);
+    const DeIdElement(0x00880906, 'TopicSubject', VR.kST, VM.k1, true);
   static const kTopicAuthor =
-    const DeIdElement(0x00880910, "TopicAuthor", VR.kLO, VM.k1, true);
+    const DeIdElement(0x00880910, 'TopicAuthor', VR.kLO, VM.k1, true);
   static const kTopicKeywords =
-    const DeIdElement(0x00880912, "TopicKeywords", VR.kLO, VM.k1_32, false);
+    const DeIdElement(0x00880912, 'TopicKeywords', VR.kLO, VM.k1_32, false);
   static const kDigitalSignatureUID =
-    const DeIdElement(0x04000100, "DigitalSignatureUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x04000100, 'DigitalSignatureUID', VR.kUI, VM.k1, true);
   static const kReferencedDigitalSignatureSequence =
-    const DeIdElement(0x04000402, "ReferencedDigitalSignatureSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x04000402, 'ReferencedDigitalSignatureSequence', VR.kSQ, VM.k1, true);
   static const kReferencedSOPInstanceMACSequence =
-    const DeIdElement(0x04000403, "ReferencedSOPInstanceMACSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x04000403, 'ReferencedSOPInstanceMACSequence', VR.kSQ, VM.k1, true);
   static const kMAC =
-    const DeIdElement(0x04000404, "MAC", VR.kOB, VM.k1, true);
+    const DeIdElement(0x04000404, 'MAC', VR.kOB, VM.k1, true);
   static const kModifiedAttributesSequence =
-    const DeIdElement(0x04000550, "ModifiedAttributesSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x04000550, 'ModifiedAttributesSequence', VR.kSQ, VM.k1, true);
   static const kOriginalAttributesSequence =
-    const DeIdElement(0x04000561, "OriginalAttributesSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x04000561, 'OriginalAttributesSequence', VR.kSQ, VM.k1, true);
   static const kTextString =
-    const DeIdElement(0x20300020, "TextString", VR.kLO, VM.k1, true);
+    const DeIdElement(0x20300020, 'TextString', VR.kLO, VM.k1, true);
   static const kReferencedFrameOfReferenceUID =
-    const DeIdElement(0x30060024, "ReferencedFrameOfReferenceUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x30060024, 'ReferencedFrameOfReferenceUID', VR.kUI, VM.k1, true);
   static const kRelatedFrameOfReferenceUID =
-    const DeIdElement(0x300600c2, "RelatedFrameOfReferenceUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x300600c2, 'RelatedFrameOfReferenceUID', VR.kUI, VM.k1, true);
   static const kSourceSerialNumber =
-    const DeIdElement(0x30080105, "SourceSerialNumber", VR.kLO, VM.k1, true);
+    const DeIdElement(0x30080105, 'SourceSerialNumber', VR.kLO, VM.k1, true);
   static const kDoseReferenceUID =
-    const DeIdElement(0x300a0013, "DoseReferenceUID", VR.kUI, VM.k1, true);
+    const DeIdElement(0x300a0013, 'DoseReferenceUID', VR.kUI, VM.k1, true);
   static const kReviewerName =
-    const DeIdElement(0x300e0008, "ReviewerName", VR.kPN, VM.k1, true);
+    const DeIdElement(0x300e0008, 'ReviewerName', VR.kPN, VM.k1, true);
   static const kArbitrary =
-    const DeIdElement(0x40000010, "Arbitrary", VR.kLT, VM.k1, true);
+    const DeIdElement(0x40000010, 'Arbitrary', VR.kLT, VM.k1, true);
   static const kTextComments =
-    const DeIdElement(0x40004000, "TextComments", VR.kLT, VM.k1, true);
+    const DeIdElement(0x40004000, 'TextComments', VR.kLT, VM.k1, true);
   static const kResultsIDIssuer =
-    const DeIdElement(0x40080042, "ResultsIDIssuer", VR.kLO, VM.k1, true);
+    const DeIdElement(0x40080042, 'ResultsIDIssuer', VR.kLO, VM.k1, true);
   static const kInterpretationRecorder =
-    const DeIdElement(0x40080102, "InterpretationRecorder", VR.kPN, VM.k1, true);
+    const DeIdElement(0x40080102, 'InterpretationRecorder', VR.kPN, VM.k1, true);
   static const kInterpretationTranscriber =
-    const DeIdElement(0x4008010a, "InterpretationTranscriber", VR.kPN, VM.k1, true);
+    const DeIdElement(0x4008010a, 'InterpretationTranscriber', VR.kPN, VM.k1, true);
   static const kInterpretationText =
-    const DeIdElement(0x4008010b, "InterpretationText", VR.kST, VM.k1, true);
+    const DeIdElement(0x4008010b, 'InterpretationText', VR.kST, VM.k1, true);
   static const kInterpretationAuthor =
-    const DeIdElement(0x4008010c, "InterpretationAuthor", VR.kPN, VM.k1, true);
+    const DeIdElement(0x4008010c, 'InterpretationAuthor', VR.kPN, VM.k1, true);
   static const kInterpretationApproverSequence =
-    const DeIdElement(0x40080111, "InterpretationApproverSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x40080111, 'InterpretationApproverSequence', VR.kSQ, VM.k1, true);
   static const kPhysicianApprovingInterpretation =
-    const DeIdElement(0x40080114, "PhysicianApprovingInterpretation", VR.kPN, VM.k1, true);
+    const DeIdElement(0x40080114, 'PhysicianApprovingInterpretation', VR.kPN, VM.k1, true);
   static const kInterpretationDiagnosisDescription =
-    const DeIdElement(0x40080115, "InterpretationDiagnosisDescription", VR.kLT, VM.k1, true);
+    const DeIdElement(0x40080115, 'InterpretationDiagnosisDescription', VR.kLT, VM.k1, true);
   static const kResultsDistributionListSequence =
-    const DeIdElement(0x40080118, "ResultsDistributionListSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0x40080118, 'ResultsDistributionListSequence', VR.kSQ, VM.k1, true);
   static const kDistributionName =
-    const DeIdElement(0x40080119, "DistributionName", VR.kPN, VM.k1, true);
+    const DeIdElement(0x40080119, 'DistributionName', VR.kPN, VM.k1, true);
   static const kDistributionAddress =
-    const DeIdElement(0x4008011a, "DistributionAddress", VR.kLO, VM.k1, true);
+    const DeIdElement(0x4008011a, 'DistributionAddress', VR.kLO, VM.k1, true);
   static const kInterpretationIDIssuer =
-    const DeIdElement(0x40080202, "InterpretationIDIssuer", VR.kLO, VM.k1, true);
+    const DeIdElement(0x40080202, 'InterpretationIDIssuer', VR.kLO, VM.k1, true);
   static const kImpressions =
-    const DeIdElement(0x40080300, "Impressions", VR.kST, VM.k1, true);
+    const DeIdElement(0x40080300, 'Impressions', VR.kST, VM.k1, true);
   static const kResultsComments =
-    const DeIdElement(0x40084000, "ResultsComments", VR.kST, VM.k1, true);
+    const DeIdElement(0x40084000, 'ResultsComments', VR.kST, VM.k1, true);
   static const kDigitalSignaturesSequence =
-    const DeIdElement(0xfffafffa, "DigitalSignaturesSequence", VR.kSQ, VM.k1, true);
+    const DeIdElement(0xfffafffa, 'DigitalSignaturesSequence', VR.kSQ, VM.k1, true);
   static const kDataSetTrailingPadding =
-    const DeIdElement(0xfffcfffc, "DataSetTrailingPadding", VR.kOB, VM.k1, true);
+    const DeIdElement(0xfffcfffc, 'DataSetTrailingPadding', VR.kOB, VM.k1, true);
 
   static const map = const {
     0x00001000: kAffectedSOPInstanceUID,
@@ -822,7 +824,7 @@ class DeIdElement {
     0xfffcfffc: kDataSetTrailingPadding
   };
 
-  static const List keys = const [
+  static const List keys = const <int>[
     0x00001000,
     0x00001001,
     0x00020003,
@@ -1092,7 +1094,7 @@ class DeIdElement {
     0xfffcfffc
   ];
 
-  static const List values = const [
+  static const List values = const <DeIdElement>[
     kAffectedSOPInstanceUID,
     kRequestedSOPInstanceUID,
     kMediaStorageSOPInstanceUID,

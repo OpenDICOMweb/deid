@@ -66,16 +66,16 @@ class ClinicalTrialStudyModule {
     ];
 
   List<String> distributionTypes = const [
-    "NAMED_PROTOCOL",
-    "RESTRICTED_REUSE",
-    "PUBLIC_RELEASE"
+    'NAMED_PROTOCOL',
+    'RESTRICTED_REUSE',
+    'PUBLIC_RELEASE'
     // ACR could define more
   ];
 
   List<String> consentForDistributionFlag = const [
-    "NO",
-    "YES",
-    "WITHDRAWN"
+    'NO',
+    'YES',
+    'WITHDRAWN'
   ];
 
 }

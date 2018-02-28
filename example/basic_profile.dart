@@ -6,32 +6,35 @@
 
 import 'dart:io';
 
+import 'package:convert/convert.dart';
+import 'package:core/core.dart';
 import 'package:deid/deid.dart';
 import 'package:deid/src/deid/deidentifier.dart';
 
-String inputDir = "C:/odw/test_data/sfd/CR/PID_MINT10/1_DICOM_Original/";
-String testOutput = "C:/odw/sdk/deid/example/output";
 
-String file1 = inputDir + "CR.2.16.840.1.114255.393386351.1568457295.17895.5.dcm";
-String file2 = inputDir + "CR.2.16.840.1.114255.393386351.1568457295.48879.7.dcm";
+const inputDir = 'C:/odw/test_data/sfd/CR/PID_MINT10/1_DICOM_Original/';
+const testOutput = 'C:/odw/sdk/deid/example/output';
+
+final file1 = '$inputDir\CR.2.16.840.1.114255.393386351.1568457295.17895.5.dcm';
+final file2 = '$inputDir\CR.2.16.840.1.114255.393386351.1568457295.48879.7.dcm';
 
 List<String> filesList = [file1];
 
 void main() {
-  Logger log = new Logger('example/basic_profile.dart');
+  final log = new Logger('example/basic_profile.dart');
   //var deidentifier = new DeIdentifier();
-  for (String path in filesList) {
-    File file = new File(path);
+  for (var path in filesList) {
+    final file = new File(path);
     print('Reading file: $file');
     log.config('Reading file: $file');
 
-    DeIdentifier deIdentify = new DeIdentifier(null);
-    var rds0 = TagReader.readFile(file);
+    final deIdentify = new DeIdentifier(null);
+    final rds0 = TagReader.readFile(file);
     print('***Identified:\n${rds0.format(new Formatter(maxDepth: 5))}');
 
-    var rds1 = deIdentify(rds0);
+    final rds1 = deIdentify(rds0);
 
-    DSComparison compare = new DSComparison(rds0, rds1);
+    final compare = new DSComparison(rds0, rds1);
 
     print('same: ${compare.same}');
     print('diff: ${compare.diff}');

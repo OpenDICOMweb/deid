@@ -5,7 +5,25 @@
   "Path": "file URL",
   "Quarantine": "quarantine directory URL",
   "SourceLines": [],
-  "DeIdOptions": [],
+  "DeIdOptions": [
+    // DICOM Standard Options
+    "CleanPixelData",
+    "CleanVisualFeatures",
+    "CleanGraphics",
+    "CleanStructuredContent",
+    "CleanDescriptors",
+    "RetainFullDates",
+    "RetainModifiedDates",
+    "RetainPatientCharacteristics",
+    "RetainDeviceIdentity",
+    "RetainUids",
+    "RetainSafePrivate",
+    "RetainInstitutionIdentity",
+    // ACR Options
+    "RetainNormalizedDates"
+
+
+  ],
   "GlobalRules": [
     "keepGroup18",
     "keepGroup20",
